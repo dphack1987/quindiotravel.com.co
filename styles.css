@@ -1,0 +1,234 @@
+:root {
+  --primary: #1b5e20;        /* Verde Bosque / Café */
+  --primary-hover: #123e15;
+  --accent: #e65100;         /* Naranja Atardecer / Jeep Willys */
+  --whatsapp: #25d366;
+  --whatsapp-hover: #1da851;
+  --bg-light: #f4f6f8;
+  --text-dark: #2c3e50;
+  --text-muted: #6c757d;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Topbar */
+.topbar {
+  background-color: #0f3813;
+  color: #d1e7dd;
+  font-size: 0.85rem;
+  padding: 8px 0;
+}
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Header */
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px 0;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+}
+.brand-highlight {
+  color: var(--accent);
+}
+.nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.nav a:hover {
+  color: var(--primary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+.btn-whatsapp {
+  background-color: var(--whatsapp);
+  color: var(--white);
+}
+.btn-whatsapp:hover {
+  background-color: var(--whatsapp-hover);
+}
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.btn-block {
+  width: 100%;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, rgba(27, 94, 32, 0.05) 0%, rgba(230, 81, 0, 0.05) 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+.hero-content {
+  max-width: 800px;
+}
+.badge {
+  background-color: #e8f5e9;
+  color: var(--primary);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.hero h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Section */
+.section {
+  padding: 60px 0;
+}
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+/* Cotizador UI */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
+.cotizador-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.cotizador-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.form-group select, 
+.form-group input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #111827;
+  color: #9ca3af;
+  padding-top: 50px;
+  font-size: 0.9rem;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding-bottom: 40px;
+}
+.footer h3, .footer h4 {
+  color: var(--white);
+  margin-bottom: 15px;
+}
+.footer-bottom {
+  border-top: 1px solid #1f2937;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .header-content { flex-direction: column; gap: 15px; }
+  .nav { display: flex; flex-wrap: wrap; justify-content: center; }
+}

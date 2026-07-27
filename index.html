@@ -1,188 +1,131 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quindío Travel - Muy Pronto</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        body {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            padding: 20px;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        body::before, body::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(90px);
-            opacity: 0.25;
-            z-index: 1;
-        }
-
-        body::before {
-            width: 350px;
-            height: 350px;
-            background: #25d366;
-            top: 10%;
-            left: 15%;
-        }
-
-        body::after {
-            width: 400px;
-            height: 400px;
-            background: #00a896;
-            bottom: 10%;
-            right: 15%;
-        }
-
-        .container {
-            position: relative;
-            z-index: 2;
-            max-width: 650px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 24px;
-            padding: 48px 32px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Contenedor especial con contraste suave para el logo */
-        .logo-wrapper {
-            margin-bottom: 28px;
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.92);
-            padding: 16px 28px;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .logo-wrapper:hover {
-            transform: scale(1.03);
-        }
-
-        .logo {
-            max-width: 220px;
-            height: auto;
-            display: block;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(37, 211, 102, 0.15);
-            border: 1px solid rgba(37, 211, 102, 0.4);
-            color: #25d366;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-
-        .pulse-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #25d366;
-            border-radius: 50%;
-            box-shadow: 0 0 8px #25d366;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(0.95); opacity: 0.8; }
-            50% { transform: scale(1.3); opacity: 1; }
-            100% { transform: scale(0.95); opacity: 0.8; }
-        }
-
-        h1 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 16px;
-            background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            font-size: 1.05rem;
-            color: #cbd5e1;
-            line-height: 1.6;
-            margin-bottom: 36px;
-        }
-
-        .highlight {
-            color: #38bdf8;
-            font-weight: 600;
-        }
-
-        .footer-text {
-            font-size: 0.85rem;
-            color: #94a3b8;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 24px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quindío Travel | Operador Turístico Local - RNT 18152</title>
+  <meta name="description" content="Descubre el Eje Cafetero con Quindío Travel (RNT 18152). Planes turísticos, alojamientos en fincas cafeteras, transporte legal y pasaportes a parques temáticos.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Logo con cápsula de alto contraste -->
-        <div class="logo-wrapper">
-            <img src="logo_quindio_travel.png" alt="Quindío Travel Logo" class="logo">
-        </div>
-
-        <div>
-            <span class="badge">
-                <span class="pulse-dot"></span>
-                En Construcción
-            </span>
-        </div>
-
-        <h1>Estamos preparando algo grande para ti</h1>
-        
-        <p>
-            Estamos trabajando en la nueva plataforma interactiva para explorar lo mejor de nuestro departamento.
-            <br>
-            <span class="highlight">¡Muy pronto el Quindío al alcance de un clic!</span>
-        </p>
-
-        <div class="footer-text">
-            &copy; 2026 Quindío Travel &bull; Todos los derechos reservados.
-        </div>
+  <!-- Topbar Info -->
+  <div class="topbar">
+    <div class="container topbar-content">
+      <span>🛡️ <strong>RNT 18152</strong> | Operador Local Directo - Armenia, Quindío</span>
+      <span>📞 Contacto: (317) 442-6044 | (6) 744-5052</span>
     </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="#" class="logo">
+        <span class="brand-highlight">Quindío</span>Travel
+      </a>
+      <nav class="nav">
+        <a href="#planes">Planes 2026</a>
+        <a href="#alojamientos">Alojamientos</a>
+        <a href="#atractivos">Atractivos</a>
+        <a href="#transporte">Transporte</a>
+      </nav>
+      <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20cotizar%20un%20plan" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        🟢 Cotizar por WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="badge">Experiencias Auténticas en el Eje Cafetero</span>
+      <h1>Vive la magia del Paisaje Cultural Cafetero</h1>
+      <p>Diseñamos tu viaje a la medida: hospedaje en fincas tradicionales, pasaportes a parques temáticos y transporte seguro con sello local.</p>
+      
+      <div class="hero-actions">
+        <a href="#cotizador" class="btn btn-primary">⚡ Cotizar Plan 2026</a>
+        <a href="#planes" class="btn btn-outline">Ver Catálogo de Planes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cotizador Rápido (UI) -->
+  <section id="cotizador" class="section bg-light">
+    <div class="container">
+      <div class="card cotizador-card">
+        <h2>Calcula la tarifa estimada de tu viaje</h2>
+        <form id="calculator-form" class="cotizador-grid">
+          
+          <div class="form-group">
+            <label for="plan">Selecciona un Plan:</label>
+            <select id="plan" required>
+              <option value="" disabled selected>Elige un itinerario...</option>
+              <option value="plan1">Plan 1: Vive el Eje Temático (2D/1N)</option>
+              <option value="plan2">Plan 2: Turismo de Naturaleza y Diversión (3D/2N)</option>
+              <option value="plan3">Plan 3: Cultura y Paisaje Cafetero (4D/3N)</option>
+              <option value="plan4">Plan 4: Experiencia Termal y Parques (4D/3N)</option>
+              <option value="plan5">Plan 5: Ruta Cafetera e Historias (4D/3N)</option>
+              <option value="plan6">Plan 6: Experiencia Gran Quindío (5D/4N)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="alojamiento">Categoría de Alojamiento:</label>
+            <select id="alojamiento" required>
+              <option value="economica">Finca Económica</option>
+              <option value="intermedia">Finca / Cabaña Intermedia</option>
+              <option value="intermedia-vip">Hotel Campestre Intermedio VIP</option>
+              <option value="vip">Resort / Hotel VIP</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="transporte">Modalidad de Transporte:</label>
+            <select id="transporte" required>
+              <option value="propio">Vehículo Propio / No requiere</option>
+              <option value="taxi">Radio Taxi Turístico</option>
+              <option value="placa-blanca">Servicio Especial Placa Blanca</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="personas">Número de Personas:</label>
+            <input type="number" id="personas" min="1" max="30" value="2" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            Solicitar Disponibilidad y Cotización Exacta
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Quindío Travel</h3>
+        <p>Operador Turístico Local Directo. Registro Nacional de Turismo No. 18152.</p>
+        <p>Representante Legal: Álvaro Alzate Ortiz</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>📧 gerencia@quindiotravel.net</p>
+        <p>📧 alvaroalzate@quindiotravel.net</p>
+        <p>📱 +57 (317) 442-6044</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Quindío Travel. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
