@@ -61,5 +61,6 @@
       }
     }
   },
-  "nota": "Los alojamientos con valor null requieren tarifas por definir. Contactar directamente con los hoteles para obtener precios oficiales 2026."
+  "nota": "Los alojamientos con valor null requieren tarifas por definir. Contactar directamente con los hoteles para obtener precios oficiales 2026.",
+  "fuente": "Tarifas extraídas de documentos oficiales PDF TEMPORADA BAJA, MEDIA y ALTA - 2026"
 }

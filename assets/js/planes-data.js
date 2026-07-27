@@ -17,8 +17,8 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA"],
     alojamientosAsociados: ["hotel-campestre-la-tata", "de-la-vega-hotel-campestre", "finca-hotel-dorada"],
-    precioSinTransporte: 320000,
-    precioConTransporte: 450000
+    precioSinTransporte: 450000,
+    precioConTransporte: 580000
   },
   {
     id: "plan-2",
@@ -38,8 +38,8 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Pueblo Tapao"],
     alojamientosAsociados: ["cabanas-la-esmeralda", "hotel-campestre-la-tata"],
-    precioSinTransporte: 580000,
-    precioConTransporte: 790000
+    precioSinTransporte: 680000,
+    precioConTransporte: 820000
   },
   {
     id: "plan-3",
@@ -60,8 +60,8 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Salento", "Valle de Cocora", "Filandia", "RECUCA"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "cabanas-la-esmeralda", "finca-hotel-dorada"],
-    precioSinTransporte: 750000,
-    precioConTransporte: 980000
+    precioSinTransporte: 979000,
+    precioConTransporte: 1152000
   },
   {
     id: "plan-4",
@@ -82,8 +82,8 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa", "Parque Los Arrieros"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "hotel-campestre-cafe-cafe"],
-    precioSinTransporte: 820000,
-    precioConTransporte: 1090000
+    precioSinTransporte: 979000,
+    precioConTransporte: 1273000
   },
   {
     id: "plan-5",
@@ -104,8 +104,8 @@ const planesData = [
     ],
     atractivosIncluidos: ["RECUCA", "Parque Los Arrieros", "Salento", "Finca Cafetera Tradicional"],
     alojamientosAsociados: ["cabanas-la-esmeralda", "finca-hotel-los-girasoles"],
-    precioSinTransporte: 790000,
-    precioConTransporte: 1050000
+    precioSinTransporte: 950000,
+    precioConTransporte: 1200000
   },
   {
     id: "plan-6",
@@ -127,8 +127,8 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Valle de Cocora", "Salento", "Filandia", "RECUCA", "Termales Santa Rosa", "Parque Los Arrieros"],
     alojamientosAsociados: ["hotel-campestre-cafe-cafe", "hotel-campestre-las-camelias", "finca-hotel-los-girasoles"],
-    precioSinTransporte: 990000,
-    precioConTransporte: 1250000
+    precioSinTransporte: 1150000,
+    precioConTransporte: 1473000
   },
   {
     id: "plan-7",
