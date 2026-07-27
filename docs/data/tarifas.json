@@ -1,0 +1,65 @@
+{
+  "tarifasPlan4D3N": {
+    "temporada_baja": {
+      "radio_taxi": {
+        "cabanas-la-esmeralda": { "pax2": 1479000, "pax3": 1261000, "pax4": 1152000 },
+        "finca-hotel-los-girasoles": { "pax2": 1915000, "pax3": 1697000, "pax4": 1588000 },
+        "hotel-campestre-cafe-cafe": { "pax2": 2097000, "pax3": 1879000, "pax4": 1770000 },
+        "de-la-vega-hotel-campestre": { "pax2": null, "pax3": null, "pax4": null },
+        "finca-hotel-dorada": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-la-tata": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-las-camelias": { "pax2": null, "pax3": null, "pax4": null }
+      },
+      "placa_blanca": {
+        "cabanas-la-esmeralda": { "pax2": 2117000, "pax3": 1688000, "pax4": 1473000 },
+        "finca-hotel-los-girasoles": { "pax2": 2553000, "pax3": 2124000, "pax4": 1909000 },
+        "hotel-campestre-cafe-cafe": { "pax2": 2735000, "pax3": 2306000, "pax4": 2091000 },
+        "de-la-vega-hotel-campestre": { "pax2": null, "pax3": null, "pax4": null },
+        "finca-hotel-dorada": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-la-tata": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-las-camelias": { "pax2": null, "pax3": null, "pax4": null }
+      }
+    },
+    "temporada_media": {
+      "radio_taxi": {
+        "cabanas-la-esmeralda": { "pax2": 1600000, "pax3": 1382000, "pax4": 1273000 },
+        "finca-hotel-los-girasoles": { "pax2": 2459000, "pax3": 2241000, "pax4": 2132000 },
+        "hotel-campestre-cafe-cafe": { "pax2": 3508000, "pax3": 3290000, "pax4": 3181000 },
+        "de-la-vega-hotel-campestre": { "pax2": null, "pax3": null, "pax4": null },
+        "finca-hotel-dorada": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-la-tata": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-las-camelias": { "pax2": null, "pax3": null, "pax4": null }
+      },
+      "placa_blanca": {
+        "cabanas-la-esmeralda": { "pax2": 2238000, "pax3": 1809000, "pax4": 1594000 },
+        "finca-hotel-los-girasoles": { "pax2": 3097000, "pax3": 2668000, "pax4": 2453000 },
+        "hotel-campestre-cafe-cafe": { "pax2": 4146000, "pax3": 3717000, "pax4": 3502000 },
+        "de-la-vega-hotel-campestre": { "pax2": null, "pax3": null, "pax4": null },
+        "finca-hotel-dorada": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-la-tata": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-las-camelias": { "pax2": null, "pax3": null, "pax4": null }
+      }
+    },
+    "temporada_alta": {
+      "radio_taxi": {
+        "cabanas-la-esmeralda": { "pax2": 1840000, "pax3": 1589000, "pax4": 1464000 },
+        "finca-hotel-los-girasoles": { "pax2": 2828000, "pax3": 2577000, "pax4": 2452000 },
+        "hotel-campestre-cafe-cafe": { "pax2": 4034000, "pax3": 3784000, "pax4": 3658000 },
+        "de-la-vega-hotel-campestre": { "pax2": null, "pax3": null, "pax4": null },
+        "finca-hotel-dorada": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-la-tata": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-las-camelias": { "pax2": null, "pax3": null, "pax4": null }
+      },
+      "placa_blanca": {
+        "cabanas-la-esmeralda": { "pax2": 2574000, "pax3": 2080000, "pax4": 1833000 },
+        "finca-hotel-los-girasoles": { "pax2": 3562000, "pax3": 3068000, "pax4": 2821000 },
+        "hotel-campestre-cafe-cafe": { "pax2": 4768000, "pax3": 4275000, "pax4": 4027000 },
+        "de-la-vega-hotel-campestre": { "pax2": null, "pax3": null, "pax4": null },
+        "finca-hotel-dorada": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-la-tata": { "pax2": null, "pax3": null, "pax4": null },
+        "hotel-campestre-las-camelias": { "pax2": null, "pax3": null, "pax4": null }
+      }
+    }
+  },
+  "nota": "Los alojamientos con valor null requieren tarifas por definir. Contactar directamente con los hoteles para obtener precios oficiales 2026."
+}

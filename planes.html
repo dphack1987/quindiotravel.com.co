@@ -1,23 +1,41 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planes Turísticos - Quindío Travel</title>
+    <title>Planes Turísticos Quindío 2026 | Quindío Travel - Eje Cafetero</title>
+    <meta name="description" content="Portafolio oficial de 6 planes turísticos en el Eje Cafetero 2026. Desde escapada 2D/1N hasta Gran Quindío Integral 5D/4N. Incluye alojamiento, parques temáticos, transporte y guía certificada. Cotiza en línea.">
+    <meta name="keywords" content="planes turísticos quindio, eje cafetero, parque del café, panaca, valle de cocora, salento, filandia, termales santa rosa, recuca, cotizar viaje 2026">
+    <meta name="author" content="Quindío Travel - Operador Turístico RNT 18152">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Planes Turísticos Quindío 2026 | Quindío Travel">
+    <meta property="og:description" content="6 planes diseñados a tu medida: 2D hasta 5D/4N. Parque del Café, Panaca, Valle de Cocora, Termales y más. Cotiza gratis por WhatsApp.">
+    <meta property="og:url" content="https://quindiotravel.com.co/planes.html">
+    <meta property="og:image" content="https://quindiotravel.com.co/logo_quindio_travel.png">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="Quindío Travel">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Planes Turísticos Quindío 2026 | Quindío Travel">
+    <meta name="twitter:description" content="6 planes con Parque del Café, Panaca, Valle de Cocora y Termales. Incluye alojamiento, alimentación y transporte.">
+    <meta name="twitter:image" content="https://quindiotravel.com.co/logo_quindio_travel.png">
+
+    <link rel="canonical" href="https://quindiotravel.com.co/planes.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Barra Superior -->
     <header class="main-header">
         <div class="container nav-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="logo_quindio_travel.png" alt="Quindío Travel Logo">
+                    <img src="logo_quindio_travel.png" alt="Quindío Travel Logo - Operador Turístico Eje Cafetero">
                 </a>
             </div>
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="planes.html" class="active">Planes</a></li>
@@ -31,78 +49,250 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="https://wa.me/573174426044" target="_blank" class="btn-whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="https://wa.me/573174426044" target="_blank" rel="noopener" class="btn-whatsapp-icon" aria-label="Contacto WhatsApp Quindío Travel">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- Encabezado de la Sección de Planes -->
     <section class="hero" style="height: 50vh; background-image: url('assets/valle_del_cocora.jpg');">
         <div class="hero-overlay"></div>
         <div class="hero-content container">
-            <h1>Nuestros Planes Turísticos</h1>
-            <p>Temporadas Altas, Bajas y Medias diseñadas a tu medida en el Quindío.</p>
+            <h1>Nuestros Planes Turísticos 2026</h1>
+            <p>Temporadas Altas, Bajas y Medias diseñadas a tu medida en el Quindío. RNT 18152.</p>
+            <div class="hero-buttons" style="margin-top: 20px;">
+                <a href="#cotizador" class="btn btn-green"><i class="fas fa-calculator"></i> Cotizar ahora</a>
+                <a href="#catalogo-planes" class="btn btn-outline"><i class="fas fa-list"></i> Ver todos los planes</a>
+            </div>
         </div>
     </section>
 
-    <!-- Listado Completo de los 6 Planes -->
-    <section class="plans-section container">
-        <h2 class="section-title">Portafolio Oficial de Planes (1 al 6)</h2>
-        <p style="margin-bottom: 30px; text-align: center;">Todos nuestros programas cuentan con opciones de transporte en <em>Radio Taxi</em> o <em>Placa Blanca de Turismo</em>[cite: 1].</p>
-
-        <div class="plans-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px;">
-            
-            <div class="plan-card" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <h3>Plan 1: Vive El Eje Cafetero Temático</h3>
-                <p><strong>Duración:</strong> 2 Días / 1 Noche</p>
-                <p>Incluye alojamiento, desayunos, cenas, Parque del Café y Panaca.</p>
-                <a href="plan-1.html" class="btn" style="display:inline-block; margin-top:15px; padding: 8px 15px; background: var(--verde-cafe, #2c5e3b); color: white; text-decoration:none; border-radius:5px;">Ver más detalles</a>
+    <section class="cotizador-section container" id="cotizador" style="margin-top: -40px; position: relative; z-index: 10; margin-bottom: 50px;">
+        <div class="cotizador-box">
+            <div class="cotizador-header">
+                <h2><i class="fas fa-tags"></i> Cotizador Dinámico - Plan 4 Días / 3 Noches</h2>
+                <p>Selecciona temporada, transporte, alojamiento y número de pasajeros para ver tarifa en tiempo real.</p>
             </div>
-
-            <div class="plan-card" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <h3>Plan 2: Naturaleza y Diversión</h3>
-                <p><strong>Duración:</strong> 3 Días / 2 Noches</p>
-                <p>Disfrute holgado con alojamiento y parques temáticos principales.</p>
-                <a href="plan-2.html" class="btn" style="display:inline-block; margin-top:15px; padding: 8px 15px; background: var(--verde-cafe, #2c5e3b); color: white; text-decoration:none; border-radius:5px;">Ver más detalles</a>
+            <div class="cotizador-grid">
+                <div class="cotizador-field">
+                    <label for="select-temporada"><i class="fas fa-sun"></i> Temporada</label>
+                    <select id="select-temporada">
+                        <option value="temporada_baja">Temporada Baja</option>
+                        <option value="temporada_media" selected>Temporada Media (Puentes / Receso)</option>
+                        <option value="temporada_alta">Temporada Alta (Dic 15 - Ene 20 / Semana Santa)</option>
+                    </select>
+                </div>
+                <div class="cotizador-field">
+                    <label for="select-transporte"><i class="fas fa-shuttle-van"></i> Transporte</label>
+                    <select id="select-transporte">
+                        <option value="radio_taxi" selected>Radio Taxi del Quindío</option>
+                        <option value="placa_blanca">Vehículo Placa Blanca (VIP)</option>
+                    </select>
+                </div>
+                <div class="cotizador-field">
+                    <label for="select-hotel"><i class="fas fa-hotel"></i> Alojamiento</label>
+                    <select id="select-hotel">
+                        <option value="cabanas-la-esmeralda">Cabañas La Esmeralda (Intermedia)</option>
+                        <option value="finca-hotel-los-girasoles" selected>Finca Hotel Los Girasoles (Intermedia VIP)</option>
+                        <option value="hotel-campestre-cafe-cafe">Hotel Campestre Café Café (Intermedia VIP)</option>
+                    </select>
+                </div>
+                <div class="cotizador-field">
+                    <label for="select-pax"><i class="fas fa-user-friends"></i> Pasajeros</label>
+                    <select id="select-pax">
+                        <option value="2" selected>2 Personas</option>
+                        <option value="3">3 Personas</option>
+                        <option value="4">4 Personas</option>
+                    </select>
+                </div>
             </div>
-
-            <div class="plan-card" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <h3>Plan 3: La Experiencia Completa</h3>
-                <p><strong>Duración:</strong> 4 Días / 3 Noches</p>
-                <p>Parques, Salento, Valle de Cocora, Filandia y RECUCA.</p>
-                <a href="plan-3.html" class="btn" style="display:inline-block; margin-top:15px; padding: 8px 15px; background: var(--verde-cafe, #2c5e3b); color: white; text-decoration:none; border-radius:5px;">Ver más detalles</a>
+            <div class="cotizador-resultados">
+                <div class="resultado-card">
+                    <span class="resultado-label"><i class="fas fa-user"></i> Precio por persona:</span>
+                    <span class="resultado-valor" id="precio-persona">—</span>
+                </div>
+                <div class="resultado-card destacado">
+                    <span class="resultado-label"><i class="fas fa-coins"></i> TOTAL Plan 4D/3N:</span>
+                    <span class="resultado-valor total" id="precio-total">—</span>
+                </div>
+                <a id="cotizador-whatsapp-btn" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block" style="justify-content:center;">
+                    <i class="fab fa-whatsapp"></i> Solicitar esta cotización por WhatsApp
+                </a>
             </div>
-
-            <div class="plan-card" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <h3>Plan 4: Aventura y Relax Termal</h3>
-                <p><strong>Duración:</strong> 4 Días / 3 Noches</p>
-                <p>Combinación de parques temáticos y termales de Santa Rosa de Cabal.</p>
-                <a href="plan-4.html" class="btn" style="display:inline-block; margin-top:15px; padding: 8px 15px; background: var(--verde-cafe, #2c5e3b); color: white; text-decoration:none; border-radius:5px;">Ver más detalles</a>
-            </div>
-
-            <div class="plan-card" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <h3>Plan 5: Tradición y Arriería</h3>
-                <p><strong>Duración:</strong> 4 Días / 3 Noches</p>
-                <p>Enfoque cultural y vivencial en las raíces de la arriería quindiana.</p>
-                <a href="plan-5.html" class="btn" style="display:inline-block; margin-top:15px; padding: 8px 15px; background: var(--verde-cafe, #2c5e3b); color: white; text-decoration:none; border-radius:5px;">Ver más detalles</a>
-            </div>
-
-            <div class="plan-card" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <h3>Plan 6: Gran Quindío Integral</h3>
-                <p><strong>Duración:</strong> 5 Días / 4 Noches</p>
-                <p>La experiencia definitiva abarcando todos los atractivos de la región.</p>
-                <a href="plan-6.html" class="btn" style="display:inline-block; margin-top:15px; padding: 8px 15px; background: var(--verde-cafe, #2c5e3b); color: white; text-decoration:none; border-radius:5px;">Ver más detalles</a>
-            </div>
-
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="plans-section container" id="planes">
+        <h2 class="section-title">🌿 Portafolio Oficial de Planes (1 al 6)</h2>
+        <p class="section-subtitle" style="text-align:center; margin-bottom: 30px; color: var(--marron-madera); font-weight: 500;">
+            Todos nuestros programas cuentan con opciones de transporte en <em>Radio Taxi</em> o <em>Vehículos Placa Blanca de Turismo</em>.
+            RNT 18152 | Guías certificados | Asistencia médica incluida.
+        </p>
+
+        <div class="filtros-wrapper">
+            <div class="filtros-header">
+                <h3><i class="fas fa-filter"></i> Filtra tu experiencia ideal</h3>
+                <button class="btn btn-outline btn-sm" id="select-todos">
+                    <i class="fas fa-redo"></i> Ver todos
+                </button>
+            </div>
+
+            <div class="filter-group">
+                <label class="filter-label"><i class="fas fa-clock"></i> Por duración:</label>
+                <div class="filter-pills duracion">
+                    <button class="pill active" data-filter="all">Todos</button>
+                    <button class="pill" data-filter="2d">2 Días</button>
+                    <button class="pill" data-filter="3d">3 Días</button>
+                    <button class="pill" data-filter="4d">4 Días</button>
+                    <button class="pill" data-filter="5d">5 Días</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label class="filter-label"><i class="fas fa-map-marker-alt"></i> Por atractivo turístico:</label>
+                <div class="filter-pills atractivos">
+                    <button class="pill" data-filter="Parque del Café">Parque del Café</button>
+                    <button class="pill" data-filter="PANACA">PANACA</button>
+                    <button class="pill" data-filter="Valle de Cocora">Valle de Cocora</button>
+                    <button class="pill" data-filter="Salento">Salento</button>
+                    <button class="pill" data-filter="Filandia">Filandia</button>
+                    <button class="pill" data-filter="Termales Santa Rosa">Termales</button>
+                    <button class="pill" data-filter="RECUCA">RECUCA</button>
+                    <button class="pill" data-filter="Parque Los Arrieros">Los Arrieros</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="plans-grid" id="catalogo-planes" style="margin-top: 30px;"></div>
+    </section>
+
     <footer class="main-footer-section" id="contacto">
-        <div class="container footer-bottom">
-            <p>&copy; 2026 Quindío Travel. Todos los derechos reservados.</p>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Quindío Travel</h3>
+                <p>No solo vendemos viajes; somos la guía oficial para descubrir el Quindío.</p>
+                <p><strong>Gerente:</strong> Álvaro Alzate Ortiz</p>
+                <p><strong>Celular / WhatsApp:</strong> (317) 4426044</p>
+                <p><strong>Correo:</strong> gerencia@quindiotravel.net</p>
+                <p><strong>RNT:</strong> 18152 | NIT Registrado</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="planes.html">Planes Turísticos 2026</a></li>
+                    <li><a href="index.html#hoteles">Alojamientos Aliados</a></li>
+                    <li><a href="index.html#mapa">Mapa Turístico Interactivo</a></li>
+                    <li><a href="index.html#experiencias">Experiencias Vivenciales</a></li>
+                    <li><a href="index.html#blog">Blog de Viajes Eje Cafetero</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Atractivos Principales</h3>
+                <ul>
+                    <li><a href="planes.html?destino=Parque del Café">🏞 Parque del Café</a></li>
+                    <li><a href="planes.html?destino=PANACA">🐄 PANACA</a></li>
+                    <li><a href="planes.html?destino=Valle de Cocora">🌴 Valle de Cocora</a></li>
+                    <li><a href="planes.html?destino=Termales Santa Rosa">♨ Termales Santa Rosa</a></li>
+                    <li><a href="planes.html?destino=RECUCA">☕ RECUCA</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://wa.me/573174426044" target="_blank" rel="noopener" aria-label="WhatsApp Quindío Travel"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Facebook Quindío Travel"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram Quindío Travel"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quindío Travel. Todos los derechos reservados. Diseñado con ❤ para el Eje Cafetero colombiano.</p>
         </div>
     </footer>
 
+    <script>
+        // Fallback: Datos de tarifas cargados desde docs/data/tarifas.json vía cotizador.js
+        // Si falla la carga del JSON, el cotizador.js manejará el error
+
+        const tempLabel = {
+            temporada_baja: "Temporada Baja",
+            temporada_media: "Temporada Media",
+            temporada_alta: "Temporada Alta"
+        };
+        const transpLabel = {
+            radio_taxi: "Radio Taxi del Quindío",
+            placa_blanca: "Vehículo Placa Blanca (VIP)"
+        };
+        const hotelLabelMap = {
+            "cabanas-la-esmeralda": "Cabañas La Esmeralda (Intermedia)",
+            "finca-hotel-los-girasoles": "Finca Hotel Los Girasoles (Intermedia VIP)",
+            "hotel-campestre-cafe-cafe": "Hotel Campestre Café Café (Intermedia VIP)"
+        };
+
+        function actualizarBotonWhatsAppCotizador() {
+            const selT = document.getElementById('select-temporada');
+            const selTr = document.getElementById('select-transporte');
+            const selH = document.getElementById('select-hotel');
+            const selP = document.getElementById('select-pax');
+            const btn = document.getElementById('cotizador-whatsapp-btn');
+            const dispTotal = document.getElementById('precio-total').innerText;
+
+            if (!selT || !btn) return;
+
+            const texto =
+`Hola Quindío Travel 🌿,
+
+Deseo *reservar y confirmar* la siguiente cotización:
+
+📌 *Programa:* Plan 4 Días / 3 Noches Eje Cafetero
+☀️ *Temporada:* ${tempLabel[selT.value]}
+🚐 *Transporte:* ${transpLabel[selTr.value]}
+🏡 *Alojamiento:* ${hotelLabelMap[selH.value] || selH.value}
+👥 *Pasajeros:* ${selP.value} personas
+💰 *Tarifa cotizada (ref):* ${dispTotal}
+
+¿Podrían indicarme disponibilidad para mi fecha de viaje y enviarme la ficha técnica completa? ¡Muchas gracias!`;
+
+            btn.href = `https://wa.me/573174426044?text=${encodeURIComponent(texto)}`;
+        }
+
+        const originalActualizarUI = window.setInterval ? null : null;
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new MutationObserver(() => {
+                actualizarBotonWhatsAppCotizador();
+            });
+            const targetTotal = document.getElementById('precio-total');
+            const targetPersona = document.getElementById('precio-persona');
+            if (targetTotal) observer.observe(targetTotal, { childList: true, characterData: true, subtree: true });
+            if (targetPersona) observer.observe(targetPersona, { childList: true, characterData: true, subtree: true });
+
+            ['select-temporada','select-transporte','select-hotel','select-pax'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.addEventListener('change', actualizarBotonWhatsAppCotizador);
+            });
+
+            const hambBtn = document.getElementById('hamburger-btn');
+            const navMenu = document.getElementById('nav-menu');
+            if (hambBtn && navMenu) {
+                hambBtn.addEventListener('click', () => {
+                    const abierto = navMenu.classList.toggle('nav-menu-open');
+                    hambBtn.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+                    hambBtn.innerHTML = abierto
+                        ? '<i class="fas fa-times"></i>'
+                        : '<i class="fas fa-bars"></i>';
+                });
+                navMenu.querySelectorAll('a').forEach(a => {
+                    a.addEventListener('click', () => {
+                        navMenu.classList.remove('nav-menu-open');
+                        hambBtn.setAttribute('aria-expanded', 'false');
+                        hambBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="assets/js/planes-data.js"></script>
+    <script src="assets/js/cotizador.js"></script>
 </body>
 </html>

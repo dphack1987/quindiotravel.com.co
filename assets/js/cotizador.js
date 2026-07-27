@@ -2,6 +2,19 @@
    QUINDÍO TRAVEL - LÓGICA DEL COTIZADOR DINÁMICO
    ========================================================================== */
 
+// Cargar tarifas desde docs/data/tarifas.json
+fetch('/docs/data/tarifas.json')
+    .then(response => response.json())
+    .then(data => {
+        window.QUINDIO_TRAVEL_DATA = data;
+        actualizarUI(); // Ejecutar cálculo inicial después de cargar datos
+    })
+    .catch(error => {
+        console.error('Error al cargar tarifas:', error);
+        // Usar datos fallback que están en planes.html si falla la carga
+        actualizarUI();
+    });
+
 function calcularCotizacion(temporada, transporte, hotelId, paxCount) {
   if (typeof QUINDIO_TRAVEL_DATA === 'undefined') {
     return { error: "La base de datos de tarifas no está cargada." };
@@ -17,7 +30,7 @@ function calcularCotizacion(temporada, transporte, hotelId, paxCount) {
   const precioPorPersona = data[temporada][transporte][hotelId][keyPax];
 
   if (!precioPorPersona) {
-    return { error: "No hay tarifa disponible para este número de pasajeros." };
+    return { error: "No hay tarifa disponible para este número de pasajeros (tarifa pendiente de definir)." };
   }
 
   const total = precioPorPersona * paxCount;
@@ -65,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const el = document.getElementById(id);
     if (el) el.addEventListener('change', actualizarUI);
   });
-  actualizarUI();
+  // No ejecutar actualizarUI() inmediatamente, esperar a que carguen los datos del JSON
 });
 
 console.log("Módulo de Cotizaciones Quindío Travel cargado y listo para interactuar.");
