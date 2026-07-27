@@ -1,0 +1,21 @@
+﻿{
+  "nombre": "Finca Hotel La Dorada Eje Cafetero",
+  "ubicacion": "Puerto Espejo, Armenia, Quind&iacute;o",
+  "distancias": {
+    "parqueDelCafe": "A unos 7 km",
+    "centroPuertoEspejo": "A 20 minutos a pie",
+    "represaPuertoEspejo": "A unos 10 minutos en coche",
+    "canopyLosCaracolies": "A unos 4 km",
+    "aeropuertoArmenia": "A 15 minutos en coche"
+  },
+  "comodidades": [
+    "Aparcamiento en las instalaciones"
+  ],
+  "puntosCercanosGastronomia": [
+    {
+      "nombre": "Restaurante Avena y Miel",
+      "tipoCocina": "Mediterr&aacute;nea",
+      "distancia": "A unos 600 metros"
+    }
+  ]
+}

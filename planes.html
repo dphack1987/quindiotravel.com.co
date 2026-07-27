@@ -1,85 +1,135 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planes Tur&iacute;sticos 2026 | Quind&iacute;o Travel - RNT 18152</title>
-  <meta name="description" content="Explora nuestro cat&aacute;logo completo de planes tur&iacute;sticos en el Eje Cafetero. Alojamientos en fincas, pasaportes a parques y gu&iacute;a local directa.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes Turísticos - Quindío Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Header / Nav -->
-  <header class="header">
-    <div class="container header-content">
-      <a href="index.html" class="logo">
-        <img src="logo_quindio_travel.png" alt="Quind&iacute;o Travel" class="site-logo">
-      </a>
-      <nav class="nav">
-        <a href="index.html">Inicio</a>
-        <a href="planes.html" class="active">Planes 2026</a>
-        <a href="index.html#alojamientos">Alojamientos</a>
-        <a href="index.html#cotizador">Cotizador</a>
-      </nav>
-      <a href="https://wa.me/573174426044?text=Hola%20Quind&iacute;o%20Travel,%20deseo%20asesor&iacute;a%20para%20mis%20vacaciones" class="btn btn-whatsapp" target="_blank" rel="noopener">
-        💬 Asesor&iacute;a WhatsApp
-      </a>
-    </div>
-  </header>
+    <!-- Barra Superior -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_quindio_travel.png" alt="Quindío Travel Logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="planes.html" class="active">Planes</a></li>
+                    <li><a href="index.html#hoteles">Hoteles</a></li>
+                    <li><a href="index.html#experiencias">Experiencias</a></li>
+                    <li><a href="index.html#mapa">Mapa Turístico</a></li>
+                    <li><a href="index.html#empresas">Empresas</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://wa.me/573174426044" target="_blank" class="btn-whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </header>
 
-  <!-- Hero Subpágina de Planes -->
-  <section class="hero hero-inner">
-    <div class="container hero-content">
-      <span class="badge">Portafolio Autorizado 2026</span>
-      <h1>Cat&aacute;logo de Planes Tur&iacute;sticos</h1>
-      <p>Filtra por duraci&oacute;n y descubre el itinerario perfecto para tu viaje al Eje Cafetero.</p>
+    <!-- Encabezado de la Sección de Planes -->
+    <section class="hero" style="height: 50vh; background-image: url('assets/valle_del_cocora.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1>Nuestros Planes Turísticos</h1>
+            <p>Temporadas Altas, Bajas y Medias diseñadas a tu medida en el Quindío.</p>
+        </div>
+    </section>
 
-      <!-- Filtros Rápidos Estilo Tabs -->
-      <div class="filter-pills">
-        <button class="pill active" data-filter="all">Todos los Planes</button>
-        <button class="pill" data-filter="2d">2 D&iacute;as / 1 Noche</button>
-        <button class="pill" data-filter="3d">3 D&iacute;as / 2 Noches</button>
-        <button class="pill" data-filter="4d">4 D&iacute;as / 3 Noches</button>
-        <button class="pill" data-filter="5d">5 D&iacute;as / 4 Noches</button>
-      </div>
-    </div>
-  </section>
+    <!-- Detalle de Planes y Temporadas -->
+    <section class="plans-section container">
+        <h2 class="section-title">Programas 4 Días / 3 Noches</h2>
+        
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px;">
+            <h3 style="color: var(--verde-cafe); margin-bottom: 15px;"><i class="fas fa-calendar-check"></i> Itinerario General - 4 Días / 3 Noches</h3>
+            <p style="margin-bottom: 15px;"><strong>Incluye:</strong> 3 noches de alojamiento, 3 desayunos, 3 cenas, Pasaporte al Parque del Café, visita al Valle de Cocora, Salento y Filandia (Mirador, Museo del Canasto y la Calle del Tiempo Detenida), Parque PANACA, Parque Recuca y Asistencia Médica.</p>
+            <p style="margin-bottom: 20px;"><strong>Transporte incluido desde el Terminal de Transporte:</strong> Elige entre transporte en <em>Radio Taxi del Quindío</em> (conductores capacitados en turismo) o <em>Vehículos de Turismo Placa Blanca</em>.</p>
+            <a href="https://wa.me/573174426044?text=Hola%20Quindio%20Travel,%20deseo%20cotizar%20el%20plan%20de%204%20dias" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Cotizar este plan por WhatsApp</a>
+        </div>
 
-  <!-- Sección de Listado de Planes -->
-  <section class="section">
-    <div class="container">
-      <div class="planes-grid" id="catalogo-planes">
-        <!-- Las tarjetas se renderizan dinámicamente -->
-      </div>
-    </div>
-  </section>
+        <h2 class="section-title">Alojamientos Aliados Disponibles</h2>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <div class="plan-body">
+                    <h3>Cabañas La Esmeralda</h3>
+                    <p class="price-label">Habitaciones y cabañas con baño privado y T.V. Piscina adultos y niños, jacuzzi, cancha de microfútbol, volleyball playa, juegos infantiles, restaurante, zona de asados, juegos de mesa, ping pong, sapo, hamacas, asador, kiosco, horno de barro y amplias zonas verdes.</p>
+                </div>
+            </div>
+            <div class="plan-card">
+                <div class="plan-body">
+                    <h3>Finca Hotel Los Girasoles</h3>
+                    <p class="price-label">Recepción y lobby, zona de juegos (ping pong, mesa), piscina, jacuzzi, cancha de microfútbol en césped, voleibol grama, parque infantil, salón de lectura, comedor para 100 personas, oratorio, amplios jardines y zona Wi-Fi en recepción.</p>
+                </div>
+            </div>
+            <div class="plan-card">
+                <div class="plan-body">
+                    <h3>Hotel Campestre Café Café</h3>
+                    <p class="price-label">Un lugar mágico donde se mezcla el colorido y el aroma de los cafetales, arquitectura colonial y calidez humana. Wi-Fi, televisión satelital, baño privado, minibar, agua caliente, amplio parqueadero, juegos de mesa, billar y cancha de voleibol.</p>
+                </div>
+            </div>
+            <div class="plan-card">
+                <div class="plan-body">
+                    <h3>Hotel Campestre La Tata</h3>
+                    <p class="price-label">Piscina para niños y adultos, jacuzzi, juegos infantiles, parqueadero, restaurante, lavandería y juegos de mesa. Ubicado a 100 metros del Parque del Café.</p>
+                </div>
+            </div>
+            <div class="plan-card">
+                <div class="plan-body">
+                    <h3>De La Vega Hotel Campestre</h3>
+                    <p class="price-label">Zonas húmedas (piscina, 3 jacuzzis), zona de juegos (billar pool, rana, pin pon), parque infantil y parqueadero. Ubicado a 200 metros del Parque del Café en Montenegro, Quindío.</p>
+                </div>
+            </div>
+            <div class="plan-card">
+                <div class="plan-body">
+                    <h3>Finca Hotel Dorada</h3>
+                    <p class="price-label">Piscina niños y adultos, juegos infantiles, parqueadero, restaurante, lavandería, hamacas y juegos de mesa. Ubicada en el Km 5 Pueblo Tapao, Vía a La Tebaida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div>
-        <h3>Quind&iacute;o Travel</h3>
-        <p>Operador Tur&iacute;stico Local Directo. RNT 18152.</p>
-        <p>Representante Legal: &Aacute;lvaro Alzate Ortiz</p>
-      </div>
-      <div>
-        <h4>Contacto y Canales Oficiales</h4>
-        <p>📧 gerencia@quindiotravel.net</p>
-        <p>📱 +57 (317) 442-6044</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 Quind&iacute;o Travel. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="main-footer-section" id="contacto">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Quindío Travel</h3>
+                <p>No solo vendemos viajes; somos la guía oficial para descubrir el Quindío.</p>
+                <p><strong>Gerente:</strong> Álvaro Alzate Ortiz</p>
+                <p><strong>Celular / WhatsApp:</strong> (317) 4426044</p>
+                <p><strong>Correo:</strong> gerencia@quindiotravel.net</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="planes.html">Planes Turísticos</a></li>
+                    <li><a href="index.html#hoteles">Alojamientos Aliados</a></li>
+                    <li><a href="index.html#mapa">Mapa Turístico</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Legal y Seguridad</h3>
+                <p>RNT | NIT Registrado</p>
+                <p>Políticas de Tratamiento de Datos</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/573174426044" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quindío Travel. Todos los derechos reservados. Diseñado para el Eje Cafetero.</p>
+        </div>
+    </footer>
 
-  <script src="assets/js/planes-data.js"></script>
-  <script src="assets/js/planes-filter.js"></script>
 </body>
 </html>

@@ -1,511 +1,182 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quind&iacute;o Travel | Operador Tur&iacute;stico Local Directo - RNT 18152</title>
-  <meta name="description" content="Descubre el Eje Cafetero con Quind&iacute;o Travel (RNT 18152). Planes tur&iacute;sticos, alojamientos en fincas cafeteras, transporte legal y pasaportes a parques tem&aacute;ticos.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Favicon / Logo en pesta&ntilde;a -->
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
-  <link rel="apple-touch-icon" href="assets/images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quindío Travel - Guía Oficial y Operador Turístico en el Eje Cafetero</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Topbar Info -->
-  <div class="topbar">
-    <div class="container topbar-content">
-      <span>📍 <strong>RNT 18152</strong> | Operador Local Directo - Armenia, Quind&iacute;o</span>
-      <span>⏱️ Respuesta promedio: &lt; 15 min | 📞 (317) 442-6044</span>
-    </div>
-  </div>
-
-  <!-- Header / Nav -->
-  <header class="header">
-    <div class="container header-content">
-      <a href="#" class="logo">
-        <img src="logo_quindio_travel.png" alt="Quind&iacute;o Travel" class="site-logo">
-      </a>
-      <nav class="nav">
-        <a href="#planes">Planes 2026</a>
-        <a href="#alojamientos">Alojamientos</a>
-        <a href="#confianza">Garant&iacute;as</a>
-        <a href="#cotizador">Cotizador</a>
-      </nav>
-      <a href="https://wa.me/573174426044?text=Hola%20Quind&iacute;o%20Travel,%20deseo%20asesor&iacute;a%20personalizada%20para%20un%20viaje" class="btn btn-whatsapp" target="_blank" rel="noopener">
-        💬 Asesor&iacute;a WhatsApp
-      </a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-content">
-      <span class="badge">Experiencias Aut&eacute;nticas sin Intermediarios</span>
-      <h1>Vive la magia del Paisaje Cultural Cafetero</h1>
-      <p>Dise&ntilde;amos tu viaje a la medida: fincas campestres, entradas oficiales a parques sin filas y transporte privado con gu&iacute;as locales.</p>
-      
-      <div class="hero-actions">
-        <a href="#planes" class="btn btn-primary">Ver Planes y Precios 2026</a>
-        <a href="#cotizador" class="btn btn-outline">Calculadora Din&aacute;mica</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Badges de Confianza Operativa -->
-  <section id="confianza" class="section bg-light trust-section">
-    <div class="container trust-grid">
-      <div class="trust-item">
-        <span class="trust-icon">🛡️</span>
-        <div>
-          <h4>Operador 100% Legal</h4>
-          <p>Registro Nacional de Turismo RNT 18152 expedido en Armenia, Quind&iacute;o.</p>
+    <!-- Barra Superior -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_quindio_travel.png" alt="Quindío Travel Logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="planes.html">Planes</a></li>
+                    <li><a href="#hoteles">Hoteles</a></li>
+                    <li><a href="#experiencias">Experiencias</a></li>
+                    <li><a href="#mapa">Mapa Turístico</a></li>
+                    <li><a href="#empresas">Empresas</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://wa.me/573174426044" target="_blank" class="btn-whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
         </div>
-      </div>
-      <div class="trust-item">
-        <span class="trust-icon">🎟️</span>
-        <div>
-          <h4>Entradas Oficiales Directas</h4>
-          <p>Pasaportes a Parque del Caf&eacute;, PANACA y Termales sin filas en taquilla.</p>
+    </header>
+
+    <!-- Sección Inicio (Hero) -->
+    <section class="hero" style="background-image: url('assets/valle_del_cocora.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1>Descubre el Eje Cafetero con los expertos locales</h1>
+            <p>Operador turístico especializado en experiencias auténticas en el Quindío.</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn btn-green">Cotizar ahora</a>
+                <a href="https://wa.me/573174426044" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="planes.html" class="btn btn-outline">Ver planes</a>
+            </div>
         </div>
-      </div>
-      <div class="trust-item">
-        <span class="trust-icon">🚐</span>
-        <div>
-          <h4>Transporte Certificado</h4>
-          <p>Veh&iacute;culos de servicio especial (Placa Blanca) y Radio Taxis autorizados.</p>
+    </section>
+
+    <!-- Buscador Rápido -->
+    <section class="search-section container">
+        <div class="search-box">
+            <div class="search-field">
+                <label><i class="fas fa-map-marker-alt"></i> ¿Dónde quieres ir?</label>
+                <select>
+                    <option>Todos los destinos</option>
+                    <option>Parque del Café</option>
+                    <option>Valle del Cocora / Salento</option>
+                    <option>Filandia</option>
+                    <option>PANACA</option>
+                </select>
+            </div>
+            <div class="search-field">
+                <label><i class="fas fa-calendar-alt"></i> ¿Cuántos días?</label>
+                <select>
+                    <option>3 Días / 2 Noches</option>
+                    <option>4 Días / 3 Noches</option>
+                    <option>5 Días / 4 Noches</option>
+                </select>
+            </div>
+            <div class="search-field">
+                <label><i class="fas fa-user-friends"></i> ¿Cuántas personas?</label>
+                <input type="number" min="1" value="2">
+            </div>
+            <div class="search-field">
+                <label><i class="fas fa-clock"></i> Fecha aproximada</label>
+                <input type="date">
+            </div>
+            <button class="btn btn-green btn-search"><i class="fas fa-search"></i> BUSCAR</button>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Cat&aacute;logo de Planes 2026 Optimizado -->
-  <section id="planes" class="section">
-    <div class="container">
-      <div class="section-title">
-        <span class="badge">Portafolio Oficial 2026</span>
-        <h2>Planes Tur&iacute;sticos Destacados</h2>
-        <p>Selecciona tu itinerario ideal y cotiza en 1 clic directamente con el operador.</p>
-      </div>
-
-      <div class="planes-grid">
-
-        <!-- Card Plan 1 -->
-        <article class="plan-card">
-          <div class="plan-header">
-            <span class="plan-badge">Escapada R&aacute;pida</span>
-            <span class="plan-duration">2 D&iacute;as / 1 Noche</span>
-          </div>
-          <div class="plan-body">
-            <h3>Plan 1: Vive el Eje Tem&aacute;tico</h3>
-            <p class="plan-subtitle">Ideal para conocer lo esencial de los parques en un fin de semana.</p>
-            
-            <div class="plan-checklist">
-              <strong>El plan incluye:</strong>
-              <ul>
-                <li>✔️ 1 Noche en Finca Hotel seleccionada</li>
-                <li>✔️ 1 Desayuno + 1 Cena por persona</li>
-                <li>• Pasaporte M&uacute;ltiple Parque del Caf&eacute;</li>
-                <li>• Pasaporte Terra en Parque PANACA</li>
-                <li>• Tarjeta de asistencia m&eacute;dica nacional</li>
-              </ul>
+    <!-- Los Mejores Planes -->
+    <section class="plans-section container" id="planes">
+        <h2 class="section-title">⭐ Planes Destacados</h2>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <div class="plan-img" style="background-image: url('assets/plan3dias.jpg');"></div>
+                <div class="plan-body">
+                    <h3>Plan 3 Días / 2 Noches</h3>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="price-label">Desde</p>
+                    <p class="price">$890.000 <span class="per">/ persona</span></p>
+                    <a href="planes.html" class="btn btn-green">Ver programa</a>
+                </div>
             </div>
-
-            <details class="plan-itinerary">
-              <summary>📅 Ver itinerario sugerido d&iacute;a a d&iacute;a</summary>
-              <div class="itinerary-content">
-                <p><strong>D&iacute;a 1:</strong> Ingreso al Parque PANACA + Registro en Alojamiento + Cena.</p>
-                <p><strong>D&iacute;a 2:</strong> Desayuno + D&iacute;a de atracciones en Parque del Caf&eacute; + Fin de servicios.</p>
-              </div>
-            </details>
-
-            <div class="plan-price-box">
-              <span class="price-label">Desde (Temporada Baja):</span>
-              <div class="price-amount">$467.500 <small>COP / persona</small></div>
-              <span class="price-note">*Tarifa var&iacute;a en Temporada Media/Alta y seg&uacute;n nro. de viajeros.</span>
+            <div class="plan-card">
+                <div class="plan-img" style="background-image: url('assets/plan4dias.jpg');"></div>
+                <div class="plan-body">
+                    <h3>Plan 4 Días / 3 Noches (Temporada)</h3>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="price-label">Incluye pasaporte, alojamientos y transporte</p>
+                    <a href="planes.html" class="btn btn-green">Ver programa</a>
+                </div>
             </div>
-
-            <div class="plan-actions">
-              <a href="https://wa.me/573174426044?text=Hola%20Quind&iacute;o%20Travel,%20quiero%20cotizar%20el%20Plan%201:%20Vive%20el%20Eje%20Tem&aacute;tico%20(2D/1N)" class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">
-                💬 Cotizar Plan 1 por WhatsApp
-              </a>
+            <div class="plan-card">
+                <div class="plan-img" style="background-image: url('assets/plan_premium.jpg');"></div>
+                <div class="plan-body">
+                    <h3>Plan Premium & Empresarial</h3>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="price-label">Experiencias a la medida</p>
+                    <a href="planes.html" class="btn btn-green">Ver programa</a>
+                </div>
             </div>
-          </div>
-        </article>
+        </div>
+    </section>
 
-        <!-- Card Plan 2 -->
-        <article class="plan-card">
-          <div class="plan-header">
-            <span class="plan-badge badge-nature">Naturaleza</span>
-            <span class="plan-duration">3 D&iacute;as / 2 Noches</span>
-          </div>
-          <div class="plan-body">
-            <h3>Plan 2: Naturaleza y Diversi&oacute;n</h3>
-            <p class="plan-subtitle">El equilibrio entre parques tem&aacute;ticos y el descanso del campo.</p>
-            
-            <div class="plan-checklist">
-              <strong>El plan incluye:</strong>
-              <ul>
-                <li>✔️ 2 Noches de alojamiento campestre</li>
-                <li>✔️ 2 Desayunos + 2 Cenas por persona</li>
-                <li>• Pasaporte M&uacute;ltiple Parque del Caf&eacute;</li>
-                <li>• Pasaporte Terra en Parque PANACA</li>
-                <li>• Tarjeta de asistencia m&eacute;dica nacional</li>
-              </ul>
+    <!-- Por qué viajar con Quindío Travel -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">¿Por qué viajar con Quindío Travel?</h2>
+            <div class="features-grid">
+                <div class="feature-item"><i class="fas fa-award"></i><span>Operador local</span></div>
+                <div class="feature-item"><i class="fas fa-history"></i><span>Más de 15 años de experiencia</span></div>
+                <div class="feature-item"><i class="fas fa-headset"></i><span>Atención personalizada</span></div>
+                <div class="feature-item"><i class="fas fa-user-tie"></i><span>Guías certificados</span></div>
+                <div class="feature-item"><i class="fas fa-bus"></i><span>Transporte legal</span></div>
+                <div class="feature-item"><i class="fas fa-hotel"></i><span>Hoteles seleccionados</span></div>
+                <div class="feature-item"><i class="fas fa-smile-beam"></i><span>Miles de viajeros satisfechos</span></div>
             </div>
+        </div>
+    </section>
 
-            <details class="plan-itinerary">
-              <summary>📅 Ver itinerario sugerido d&iacute;a a d&iacute;a</summary>
-              <div class="itinerary-content">
-                <p><strong>D&iacute;a 1:</strong> Llegada, Check-in y descanso en finca campestre + Cena.</p>
-                <p><strong>D&iacute;a 2:</strong> Desayuno + Experiencia interactiva en PANACA + Cena.</p>
-                <p><strong>D&iacute;a 3:</strong> Desayuno + Recorrido completo Parque del Caf&eacute; + Fin del viaje.</p>
-              </div>
-            </details>
+    <!-- Mapa Turístico Interactivo -->
+    <section class="map-section container" id="mapa">
+        <div class="map-banner">
+            <h2>🗺 Mapa Turístico Interactivo del Quindío</h2>
+            <p>Explora hoteles, restaurantes, cafés, atractivos y rutas por municipio.</p>
+            <a href="#contacto" class="btn btn-outline">Explorar Mapa</a>
+        </div>
+    </section>
 
-            <div class="plan-price-box">
-              <span class="price-label">Desde (Temporada Baja):</span>
-              <div class="price-amount">$618.200 <small>COP / persona</small></div>
-              <span class="price-note">*Tarifa var&iacute;a en Temporada Media/Alta y seg&uacute;n nro. de viajeros.</span>
+    <!-- Footer -->
+    <footer class="main-footer-section" id="contacto">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Quindío Travel</h3>
+                <p>No solo vendemos viajes; somos la guía oficial para descubrir el Quindío.</p>
+                <p><strong>Gerente:</strong> Álvaro Alzate Ortiz</p>
+                <p><strong>Celular / WhatsApp:</strong> (317) 4426044</p>
+                <p><strong>Correo:</strong> gerencia@quindiotravel.net</p>
             </div>
-
-            <div class="plan-actions">
-              <a href="https://wa.me/573174426044?text=Hola%20Quind&iacute;o%20Travel,%20quiero%20cotizar%20el%20Plan%202:%20Naturaleza%20y%20Diversi&oacute;n%20(3D/2N)" class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">
-                💬 Cotizar Plan 2 por WhatsApp
-              </a>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="planes.html">Planes Turísticos</a></li>
+                    <li><a href="#hoteles">Alojamientos Aliados</a></li>
+                    <li><a href="#mapa">Mapa Turístico</a></li>
+                    <li><a href="#blog">Blog de Viajes</a></li>
+                </ul>
             </div>
-          </div>
-        </article>
-
-        <!-- Card Plan 3 -->
-        <article class="plan-card plan-featured">
-          <div class="plan-header">
-            <span class="plan-badge badge-star">⭐ Recomendado</span>
-            <span class="plan-duration">4 D&iacute;as / 3 Noches</span>
-          </div>
-          <div class="plan-body">
-            <h3>Plan 3: Cultura y Paisaje Cafetero</h3>
-            <p class="plan-subtitle">La experiencia m&aacute;s completa: parques, pueblos con encanto y cultura.</p>
-            
-            <div class="plan-checklist">
-              <strong>El plan incluye:</strong>
-              <ul>
-                <li>• 3 Noches de alojamiento + 3 Desayunos + 3 Cenas</li>
-                <li>• Entradas a Parque del Caf&eacute; + PANACA</li>
-                <li>🌟 Tour Salento, Valle del Cocora y Filandia</li>
-                <li>🌟 Vivencia Cafetera interactiva en RECUCA</li>
-                <li>🌟 Asistencia m&eacute;dica garantizada</li>
-              </ul>
+            <div class="footer-col">
+                <h3>Legal y Seguridad</h3>
+                <p>RNT | NIT Registrado</p>
+                <p>Políticas de Tratamiento de Datos</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/573174426044" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quindío Travel. Todos los derechos reservados. Diseñado para el Eje Cafetero.</p>
+        </div>
+    </footer>
 
-            <details class="plan-itinerary">
-              <summary>📅 Ver itinerario sugerido d&iacute;a a d&iacute;a</summary>
-              <div class="itinerary-content">
-                <p><strong>D&iacute;a 1:</strong> Registro + Tour Filandia y Salento / Valle del Cocora + Cena.</p>
-                <p><strong>D&iacute;a 2:</strong> Desayuno + Vivencia Cafetera RECUCA + Tarde libre + Cena.</p>
-                <p><strong>D&iacute;a 3:</strong> Desayuno + Parque del Caf&eacute; + Cena.</p>
-                <p><strong>D&iacute;a 4:</strong> Desayuno + Experiencia PANACA + Check-out.</p>
-              </div>
-            </details>
-
-            <div class="plan-price-box">
-              <span class="price-label">Desde (Temporada Baja):</span>
-              <div class="price-amount">$854.700 <small>COP / persona</small></div>
-              <span class="price-note">*Tarifa var&iacute;a en Temporada Media/Alta y seg&uacute;n nro. de viajeros.</span>
-            </div>
-
-            <div class="plan-actions">
-              <a href="https://wa.me/573174426044?text=Hola%20Quind&iacute;o%20Travel,%20quiero%20cotizar%20el%20Plan%203:%20Cultura%20y%20Paisaje%20Cafetero%20(4D/3N)" class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">
-                💬 Cotizar Plan 3 por WhatsApp
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card Plan 4 -->
-        <article class="plan-card">
-          <div class="plan-header">
-            <span class="plan-badge badge-relax">Relax &amp; Salud</span>
-            <span class="plan-duration">4 D&iacute;as / 3 Noches</span>
-          </div>
-          <div class="plan-body">
-            <h3>Plan 4: Experiencia Termal y Parques</h3>
-            <p class="plan-subtitle">Diversi&oacute;n tem&aacute;tica combinada con relajaci&oacute;n en aguas termales.</p>
-            
-            <div class="plan-checklist">
-              <strong>El plan incluye:</strong>
-              <ul>
-                <li>• 3 Noches de alojamiento + 3 Desayunos + 3 Cenas</li>
-                <li>• Pasaporte M&uacute;ltiple Parque del Caf&eacute;</li>
-                <li>• Pasaporte Terra PANACA</li>
-                <li>• Pasaporte a Termales de Santa Rosa de Cabal</li>
-                <li>• Tarjeta de asistencia m&eacute;dica</li>
-              </ul>
-            </div>
-
-            <details class="plan-itinerary">
-              <summary>📅 Ver itinerario sugerido d&iacute;a a d&iacute;a</summary>
-              <div class="itinerary-content">
-                <p><strong>D&iacute;a 1:</strong> Check-in + Tarde de relajaci&oacute;n en Termales Santa Rosa + Cena.</p>
-                <p><strong>D&iacute;a 2:</strong> Desayuno + Parque del Caf&eacute; + Cena.</p>
-                <p><strong>D&iacute;a 3:</strong> Desayuno + Parque PANACA + Cena.</p>
-                <p><strong>D&iacute;a 4:</strong> Desayuno + Ma&ntilde;ana campestre + Check-out.</p>
-              </div>
-            </details>
-
-            <div class="plan-price-box">
-              <span class="price-label">Desde (Temporada Baja):</span>
-              <div class="price-amount">$877.800 <small>COP / persona</small></div>
-              <span class="price-note">*Tarifa var&iacute;a en Temporada Media/Alta y seg&uacute;n nro. de viajeros.</span>
-            </div>
-
-            <div class="plan-actions">
-              <a href="https://wa.me/573174426044?text=Hola%20Quind&iacute;o%20Travel,%20quiero%20cotizar%20el%20Plan%204:%20Experiencia%20Termal%20(4D/3N)" class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">
-                💬 Cotizar Plan 4 por WhatsApp
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card Plan 5 -->
-        <article class="plan-card">
-          <div class="plan-header">
-            <span class="plan-badge">Tradici&oacute;n</span>
-            <span class="plan-duration">4 D&iacute;as / 3 Noches</span>
-          </div>
-          <div class="plan-body">
-            <h3>Plan 5: Ruta Cafetera e Historias</h3>
-            <p class="plan-subtitle">Sumerge a tu familia en la cultura del campo y la arrier&iacute;a.</p>
-            
-            <div class="plan-checklist">
-              <strong>El plan incluye:</strong>
-              <ul>
-                <li>• 3 Noches de alojamiento + 3 Desayunos + 3 Cenas</li>
-                <li>• Pasaporte Parque del Caf&eacute;</li>
-                <li>• Pasaporte PANACA</li>
-                <li>• Entrada y show en Parque Los Arrieros</li>
-                <li>• Seguro m&eacute;dico de viaje</li>
-              </ul>
-            </div>
-
-            <details class="plan-itinerary">
-              <summary>📅 Ver itinerario sugerido d&iacute;a a d&iacute;a</summary>
-              <div class="itinerary-content">
-                <p><strong>D&iacute;a 1:</strong> Llegada a la finca + Registro + Cena.</p>
-                <p><strong>D&iacute;a 2:</strong> Desayuno + Inmersi&oacute;n en Parque Los Arrieros + Cena.</p>
-                <p><strong>D&iacute;a 3:</strong> Desayuno + Parque del Caf&eacute; + Cena.</p>
-                <p><strong>D&iacute;a 4:</strong> Desayuno + Experiencia en PANACA + Fin de servicios.</p>
-              </div>
-            </details>
-
-            <div class="plan-price-box">
-              <span class="price-label">Desde (Temporada Baja):</span>
-              <div class="price-amount">$866.800 <small>COP / persona</small></div>
-              <span class="price-note">*Tarifa var&iacute;a en Temporada Media/Alta y seg&uacute;n nro. de viajeros.</span>
-            </div>
-
-            <div class="plan-actions">
-              <a href="https://wa.me/573174426044?text=Hola%20Quind&iacute;o%20Travel,%20quiero%20cotizar%20el%20Plan%205:%20Ruta%20Cafetera%20e%20Historias%20(4D/3N)" class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">
-                💬 Cotizar Plan 5 por WhatsApp
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card Plan 6 -->
-        <article class="plan-card">
-          <div class="plan-header">
-            <span class="plan-badge badge-premium">VIP / Completo</span>
-            <span class="plan-duration">5 D&iacute;as / 4 Noches</span>
-          </div>
-          <div class="plan-body">
-            <h3>Plan 6: Experiencia Gran Quind&iacute;o</h3>
-            <p class="plan-subtitle">El itinerario definitivo para no perderte absolutamente nada.</p>
-            
-            <div class="plan-checklist">
-              <strong>El plan incluye:</strong>
-              <ul>
-                <li>• 4 Noches de alojamiento + 4 Desayunos + 4 Cenas</li>
-                <li>• Entradas Parque del Caf&eacute; + PANACA</li>
-                <li>• Experiencia Cafetera RECUCA</li>
-                <li>• Tarde de relajaci&oacute;n en Termales Santa Rosa</li>
-                <li>• Seguro y asistencia m&eacute;dica integral</li>
-              </ul>
-            </div>
-
-            <details class="plan-itinerary">
-              <summary>📅 Ver itinerario sugerido d&iacute;a a d&iacute;a</summary>
-              <div class="itinerary-content">
-                <p><strong>D&iacute;a 1:</strong> Check-in + Tarde libre en instalaciones + Cena.</p>
-                <p><strong>D&iacute;a 2:</strong> Desayuno + Parque del Caf&eacute; + Cena.</p>
-                <p><strong>D&iacute;a 3:</strong> Desayuno + Vivencia RECUCA + Termales Santa Rosa + Cena.</p>
-                <p><strong>D&iacute;a 4:</strong> Desayuno + Parque PANACA + Cena.</p>
-                <p><strong>D&iacute;a 5:</strong> Desayuno + Compras de artesan&iacute;as y Caf&eacute; + Regreso.</p>
-              </div>
-            </details>
-
-            <div class="plan-price-box">
-              <span class="price-label">Desde (Temporada Baja):</span>
-              <div class="price-amount">$1.108.800 <small>COP / persona</small></div>
-              <span class="price-note">*Tarifa var&iacute;a en Temporada Media/Alta y seg&uacute;n nro. de viajeros.</span>
-            </div>
-
-            <div class="plan-actions">
-              <a href="https://wa.me/573174426044?text=Hola%20Quind&iacute;o%20Travel,%20quiero%20cotizar%20el%20Plan%206:%20Experiencia%20Gran%20Quind&iacute;o%20(5D/4N)" class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">
-                💬 Cotizar Plan 6 por WhatsApp
-              </a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Cotizador UI Din&aacute;mico -->
-  <section id="cotizador" class="section bg-light">
-    <div class="container">
-      <div class="card cotizador-card">
-        <h2>Calcula la tarifa estimada de tu viaje</h2>
-        <p class="text-center subtitle-cotizador">Selecciona tus preferencias para recibir una propuesta a la medida.</p>
-        
-        <form id="calculator-form" class="cotizador-grid">
-          
-          <div class="form-group">
-            <label for="plan">Selecciona un Plan:</label>
-            <select id="plan" required>
-              <option value="" disabled selected>Elige un itinerario...</option>
-              <option value="plan1">Plan 1: Vive el Eje Tem&aacute;tico (2D/1N)</option>
-              <option value="plan2">Plan 2: Turismo de Naturaleza y Diversi&oacute;n (3D/2N)</option>
-              <option value="plan3">Plan 3: Cultura y Paisaje Cafetero (4D/3N)</option>
-              <option value="plan4">Plan 4: Experiencia Termal y Parques (4D/3N)</option>
-              <option value="plan5">Plan 5: Ruta Cafetera e Historias (4D/3N)</option>
-              <option value="plan6">Plan 6: Experiencia Gran Quind&iacute;o (5D/4N)</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="alojamiento">Categor&iacute;a de Alojamiento:</label>
-            <select id="alojamiento" required>
-              <option value="economica">Econ&oacute;mica - Finca Hotel (Ej: La Dorada)</option>
-              <option value="intermedia">Finca / Caba&ntilde;a Intermedia (Ej: La Esmeralda)</option>
-              <option value="intermedia-vip">Hotel Campestre Intermedio VIP (Ej: Caf&eacute; Caf&eacute;)</option>
-              <option value="vip">Resort / Hotel VIP (Ej: Las Camelias / Mocawa)</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="transporte">Modalidad de Transporte:</label>
-            <select id="transporte" required>
-              <option value="propio">Veh&iacute;culo Propio / No requiere</option>
-              <option value="taxi">Radio Taxi Tur&iacute;stico Local</option>
-              <option value="placa-blanca">Servicio Especial Placa Blanca (Privado)</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="personas">N&uacute;mero de Personas:</label>
-            <input type="number" id="personas" min="1" max="30" value="2" required>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-block btn-submit-cotizador">
-            ⚙️ Generar Cotizaci&oacute;n Personalizada
-          </button>
-
-        </form>
-        <div id="resultado-cotizacion"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Secci&oacute;n Alojamientos Aliados -->
-  <section id="alojamientos" class="section">
-    <div class="container">
-      <div class="section-title">
-        <span class="badge">Hospedajes Certificados</span>
-        <h2>Alojamientos Campestres Aliados</h2>
-        <p>Selecci&oacute;n exclusiva de fincas, caba&ntilde;as y resorts en el coraz&oacute;n del Quind&iacute;o.</p>
-      </div>
-
-      <div class="alojamientos-grid">
-
-        <!-- Alojamiento 1 -->
-        <article class="alojamiento-card">
-          <div class="alojamiento-tag">Econ&oacute;mica</div>
-          <div class="alojamiento-body">
-            <h3>Finca Hotel La Dorada</h3>
-            <p class="alojamiento-location">📍 Sector Puerto Espejo - Armenia</p>
-            <p class="alojamiento-desc">Ambiente campestre tradicional, piscina, amplias zonas verdes y atenci&oacute;n personalizada.</p>
-            <ul class="alojamiento-features">
-              <li>🏊 Piscina para adultos y ni&ntilde;os</li>
-              <li>☕ Desayuno cafetero incluido</li>
-              <li>📶 Wi-Fi gratuito</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- Alojamiento 2 -->
-        <article class="alojamiento-card">
-          <div class="alojamiento-tag tag-intermedio">Intermedia</div>
-          <div class="alojamiento-body">
-            <h3>Caba&ntilde;as La Esmeralda &amp; Los Girasoles</h3>
-            <p class="alojamiento-location">📍 V&iacute;a Montenegro - Parque del Caf&eacute;</p>
-            <p class="alojamiento-desc">Alojamiento confort con excelente ubicaci&oacute;n estrat&eacutegica cerca de los parques tem&aacute;ticos.</p>
-            <ul class="alojamiento-features">
-              <li>🏊 Piscina y jacuzzi</li>
-              <li>🍽️ Restaurante con saz&oacute;n criolla</li>
-              <li>🚗 Parqueadero privado gratis</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- Alojamiento 3 -->
-        <article class="alojamiento-card">
-          <div class="alojamiento-tag tag-vip">VIP / Campestre Premium</div>
-          <div class="alojamiento-body">
-            <h3>Hotel Campestre Las Camelias &amp; Mocawa</h3>
-            <p class="alojamiento-location">📍 La Tebaida - Quind&iacute;o</p>
-            <p class="alojamiento-desc">Infraestructura de lujo, parques acu&aacute;ticos, spa y gastronom&iacute;a de alto nivel.</p>
-            <ul class="alojamiento-features">
-              <li>💦 Parque acu&aacute;tico y spa</li>
-              <li>⚽ Canchas deportivas y senderos</li>
-              <li>⭐ Experiencia de hospedaje 5 estrellas</li>
-            </ul>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div>
-        <h3>Quind&iacute;o Travel</h3>
-        <p>Operador Tur&iacute;stico Local Directo. Registro Nacional de Turismo No. 18152.</p>
-        <p>Representante Legal: &Aacute;lvaro Alzate Ortiz</p>
-      </div>
-      <div>
-        <h4>Contacto y Canales Oficiales</h4>
-        <p>📧 gerencia@quindiotravel.net</p>
-        <p>📧 alvaroalzate@quindiotravel.net</p>
-        <p>📱 +57 (317) 442-6044 | (6) 744-5052</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 Quind&iacute;o Travel. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts de Datos y Lógica -->
-  <script src="js/calculator.js"></script>
-  <script src="assets/js/planes-data.js"></script>
-  <script src="assets/js/cotizador.js"></script>
 </body>
 </html>
