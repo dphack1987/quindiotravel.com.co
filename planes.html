@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planes Tur&iacute;sticos 2026 | Quind&iacute;o Travel - RNT 18152</title>
+  <meta name="description" content="Explora nuestro cat&aacute;logo completo de planes tur&iacute;sticos en el Eje Cafetero. Alojamientos en fincas, pasaportes a parques y gu&iacute;a local directa.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+        <img src="logo_quindio_travel.png" alt="Quind&iacute;o Travel" class="site-logo">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="planes.html" class="active">Planes 2026</a>
+        <a href="index.html#alojamientos">Alojamientos</a>
+        <a href="index.html#cotizador">Cotizador</a>
+      </nav>
+      <a href="https://wa.me/573174426044?text=Hola%20Quind&iacute;o%20Travel,%20deseo%20asesor&iacute;a%20para%20mis%20vacaciones" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        💬 Asesor&iacute;a WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Subpágina de Planes -->
+  <section class="hero hero-inner">
+    <div class="container hero-content">
+      <span class="badge">Portafolio Autorizado 2026</span>
+      <h1>Cat&aacute;logo de Planes Tur&iacute;sticos</h1>
+      <p>Filtra por duraci&oacute;n y descubre el itinerario perfecto para tu viaje al Eje Cafetero.</p>
+
+      <!-- Filtros Rápidos Estilo Tabs -->
+      <div class="filter-pills">
+        <button class="pill active" data-filter="all">Todos los Planes</button>
+        <button class="pill" data-filter="2d">2 D&iacute;as / 1 Noche</button>
+        <button class="pill" data-filter="3d">3 D&iacute;as / 2 Noches</button>
+        <button class="pill" data-filter="4d">4 D&iacute;as / 3 Noches</button>
+        <button class="pill" data-filter="5d">5 D&iacute;as / 4 Noches</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Listado de Planes -->
+  <section class="section">
+    <div class="container">
+      <div class="planes-grid" id="catalogo-planes">
+        <!-- Las tarjetas se renderizan dinámicamente -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Quind&iacute;o Travel</h3>
+        <p>Operador Tur&iacute;stico Local Directo. RNT 18152.</p>
+        <p>Representante Legal: &Aacute;lvaro Alzate Ortiz</p>
+      </div>
+      <div>
+        <h4>Contacto y Canales Oficiales</h4>
+        <p>📧 gerencia@quindiotravel.net</p>
+        <p>📱 +57 (317) 442-6044</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Quind&iacute;o Travel. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/planes-data.js"></script>
+  <script src="assets/js/planes-filter.js"></script>
+</body>
+</html>
