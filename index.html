@@ -594,6 +594,116 @@
         </div>
     </section>
 
+    <section class="section-white" id="reservas" aria-label="Sistema de reservas Quindío Travel">
+        <div class="container">
+            <h2 class="section-title">📝 Sistema de Reservas Online</h2>
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 40px; color: var(--marron-madera); font-weight: 500;">
+                Reserva tu experiencia al Eje Cafetero en 3 simples pasos. Confirmación inmediata por WhatsApp.
+            </p>
+            
+            <div class="reservas-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                <div class="reservas-form-container" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="color: var(--verde-cafe); margin-bottom: 25px;">📋 Datos de tu Reserva</h3>
+                    <form id="reserva-form" onsubmit="procesarReserva(event)">
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Plan Turístico *</label>
+                            <select id="reserva-plan" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                <option value="">Selecciona un plan</option>
+                                <option value="plan-2">Plan 3 Días / 2 Noches - $820.000</option>
+                                <option value="plan-3">Plan 4 Días / 3 Noches - $1.152.000</option>
+                                <option value="plan-4">Plan 4 Días / 3 Noches - $1.273.000</option>
+                                <option value="plan-5">Plan 4 Días / 3 Noches - $1.200.000</option>
+                                <option value="plan-6">Plan 5 Días / 4 Noches - $1.473.000</option>
+                                <option value="plan-premium">Plan Premium VIP - $1.800.000</option>
+                                <option value="plan-empresarial">Plan Empresarial - Cotizar</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Número de Personas *</label>
+                            <input type="number" id="reserva-personas" min="1" max="30" value="2" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Fecha de Viaje *</label>
+                            <input type="date" id="reserva-fecha" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Nombre Completo *</label>
+                            <input type="text" id="reserva-nombre" required placeholder="Tu nombre completo" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">WhatsApp / Celular *</label>
+                            <input type="tel" id="reserva-whatsapp" required placeholder="+57 3XX XXX XXXX" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Correo Electrónico *</label>
+                            <input type="email" id="reserva-email" required placeholder="tu@correo.com" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Método de Pago Preferido</label>
+                            <select id="reserva-pago" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                <option value="nequi">Nequi / Transferencia Bancaria</option>
+                                <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                                <option value="efectivo">Efectivo (en oficina)</option>
+                                <option value="empresa">Facturación Empresarial</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 25px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Comentarios Adicionales</label>
+                            <textarea id="reserva-comentarios" rows="3" placeholder="Cualquier requerimiento especial, preferencias de alojamiento, etc." style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-green" style="width: 100%; padding: 15px; font-size: 1.1rem; font-weight: 700;">
+                            <i class="fas fa-paper-plane"></i> Enviar Solicitud de Reserva
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="reservas-info" style="background: linear-gradient(135deg, var(--verde-cafe), var(--verde-claro)); padding: 30px; border-radius: 15px; color: white;">
+                    <h3 style="margin-bottom: 25px;">✅ ¿Cómo funciona tu reserva?</h3>
+                    
+                    <div class="reserva-step" style="margin-bottom: 25px; padding-left: 20px; border-left: 3px solid rgba(255,255,255,0.3);">
+                        <h4 style="margin-bottom: 10px;">1. Completa el formulario</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">Selecciona tu plan, fechas y cantidad de personas. Nosotros te contactaremos en menos de 2 horas hábiles.</p>
+                    </div>
+                    
+                    <div class="reserva-step" style="margin-bottom: 25px; padding-left: 20px; border-left: 3px solid rgba(255,255,255,0.3);">
+                        <h4 style="margin-bottom: 10px;">2. Confirmación y Pago</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">Te enviaremos la cotización detallada con disponibilidad real. Realiza el pago del 30% para confirmar tu reserva.</p>
+                    </div>
+                    
+                    <div class="reserva-step" style="margin-bottom: 25px; padding-left: 20px; border-left: 3px solid rgba(255,255,255,0.3);">
+                        <h4 style="margin-bottom: 10px;">3. ¡Viaja y Disfruta!</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">Recibirás tu itinerario completo, detalles de transporte y contactos de emergencia 24/7 durante tu viaje.</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin-top: 30px;">
+                        <h4 style="margin-bottom: 15px;"><i class="fas fa-shield-alt"></i> Garantías Quindío Travel</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Operador RNT 18152 Legal</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Pago Seguro Garantizado</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Asistencia Médica Incluida</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Cancelación Flexible</li>
+                            <li style="margin-bottom: 0;"><i class="fas fa-check" style="margin-right: 10px;"></i> Soporte 24/7</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20hacer%20una%20reserva%20directamente%20por%20WhatsApp" target="_blank" rel="noopener" class="btn btn-white" style="background: white; color: var(--verde-cafe); border: none; padding: 15px 30px; font-weight: 700; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                            <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section-gray" id="blog" aria-label="Blog de viajes y guías del Eje Cafetero">
         <div class="container">
             <h2 class="section-title">📖 Blog del Viajero Cafetero</h2>
@@ -808,7 +918,8 @@
                     <li><a href="#mapa">Mapa Turístico Interactivo</a></li>
                     <li><a href="#experiencias">Experiencias y Atractivos</a></li>
                     <li><a href="#empresas">Planes Empresariales / Grupos</a></li>
-                    <li><a href="#blog">Blog de Viajes Eje Cafetero</a></li>
+                    <li><a href="#reservas">Reservas Online</a></li>
+                <li><a href="#blog">Blog de Viajes Eje Cafetero</a></li>
                     <li><a href="#nosotros">Sobre Quindío Travel</a></li>
                     <li><a href="#contacto">Contacto directo</a></li>
                 </ul>
@@ -901,6 +1012,41 @@
                     hotel.style.display = 'none';
                 }
             });
+        }
+        
+        function procesarReserva(event) {
+            event.preventDefault();
+            
+            const plan = document.getElementById('reserva-plan').value;
+            const personas = document.getElementById('reserva-personas').value;
+            const fecha = document.getElementById('reserva-fecha').value;
+            const nombre = document.getElementById('reserva-nombre').value;
+            const whatsapp = document.getElementById('reserva-whatsapp').value;
+            const email = document.getElementById('reserva-email').value;
+            const pago = document.getElementById('reserva-pago').value;
+            const comentarios = document.getElementById('reserva-comentarios').value;
+            
+            // Obtener nombre del plan seleccionado
+            const planSelect = document.getElementById('reserva-plan');
+            const planNombre = planSelect.options[planSelect.selectedIndex].text;
+            
+            // Construir mensaje de WhatsApp
+            const mensaje = `📝 *NUEVA SOLICITUD DE RESERVA*%0A%0A` +
+                `👤 *Nombre:* ${nombre}%0A` +
+                `📱 *WhatsApp:* ${whatsapp}%0A` +
+                `📧 *Email:* ${email}%0A%0A` +
+                `🎯 *Plan:* ${planNombre}%0A` +
+                `👥 *Personas:* ${personas}%0A` +
+                `📅 *Fecha:* ${fecha}%0A` +
+                `💳 *Pago:* ${pago}%0A%0A` +
+                `📝 *Comentarios:* ${comentarios || 'Ninguno'}%0A%0A` +
+                `✅ *Enviado desde formulario web*`;
+            
+            // Redirigir a WhatsApp
+            window.open(`https://wa.me/573174426044?text=${mensaje}`, '_blank');
+            
+            // Mostrar confirmación visual
+            alert('¡Gracias por tu solicitud de reserva! Te contactaremos en menos de 2 horas hábiles.');
         }
     </script>
     <script src="assets/js/planes-data.js"></script>
