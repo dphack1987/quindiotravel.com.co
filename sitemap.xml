@@ -63,6 +63,21 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- Landing Pages de Destinos -->
+    <url>
+        <loc>https://quindiotravel.com.co/valle-de-cocora.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/parque-del-cafe.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
     <!-- Destinos Principales -->
     <url>
         <loc>https://quindiotravel.com.co/#experiencias</loc>
