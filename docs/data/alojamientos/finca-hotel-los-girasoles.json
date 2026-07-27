@@ -1,0 +1,58 @@
+{
+    "id": "finca-hotel-los-girasoles",
+    "nombre": "Finca Hotel Los Girasoles",
+    "categoria": "Intermedia VIP",
+    "ubicacion": "Quindío, Colombia",
+    "servicios": [
+        "Recepción y lobby",
+        "Zona de juegos ping pong, juegos de mesa",
+        "Piscina",
+        "Jacuzzi",
+        "Cancha de micro fútbol en césped",
+        "Voleibol grama",
+        "Parque infantil",
+        "Salón de lectura, salón comedor con capacidad para 100 personas",
+        "Oratorio",
+        "Amplios jardines y zonas verdes",
+        "Zona WiFi en recepción",
+        "DIRECTV en salón de juegos"
+    ],
+    "tarifas_referencia": {
+        "temporada_baja": {
+            "radio_taxi": {
+                "2_pax": 1915000,
+                "3_pax": 1697000,
+                "4_pax": 1588000
+            },
+            "placa_blanca": {
+                "2_pax": 2553000,
+                "3_pax": 2124000,
+                "4_pax": 1909000
+            }
+        },
+        "temporada_media": {
+            "radio_taxi": {
+                "2_pax": 2459000,
+                "3_pax": 2241000,
+                "4_pax": 2132000
+            },
+            "placa_blanca": {
+                "2_pax": 3097000,
+                "3_pax": 2668000,
+                "4_pax": 2453000
+            }
+        },
+        "temporada_alta": {
+            "radio_taxi": {
+                "2_pax": 2828000,
+                "3_pax": 2577000,
+                "4_pax": 2452000
+            },
+            "placa_blanca": {
+                "2_pax": 3562000,
+                "3_pax": 3068000,
+                "4_pax": 2821000
+            }
+        }
+    }
+}

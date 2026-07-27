@@ -1,0 +1,22 @@
+{
+    "id": "hotel-campestre-las-camelias",
+    "nombre": "Hotel Campestre Las Camelias",
+    "categoria": "VIP",
+    "ubicacion": "Quindío, Colombia",
+    "servicios": [
+        "Capilla",
+        "Tienda de regalos",
+        "Sauna",
+        "Turco",
+        "5 piscinas",
+        "Parque Acualandia",
+        "Canchas de fútbol, voleibol, baloncesto",
+        "Tenis recreativa",
+        "Pista de karts",
+        "Billar, billar pool",
+        "Golfito",
+        "Sendero ecológico",
+        "Parque infantil"
+    ],
+    "tarifas_referencia": {}
+}

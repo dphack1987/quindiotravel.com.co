@@ -1,0 +1,55 @@
+{
+    "id": "hotel-campestre-cafe-cafe",
+    "nombre": "Hotel Campestre Café Café",
+    "categoria": "Intermedia VIP",
+    "ubicacion": "Quindío, Colombia",
+    "servicios": [
+        "Wifi",
+        "Televisión satelital",
+        "Baño privado",
+        "Mini bar",
+        "Agua caliente",
+        "Amplio parqueadero",
+        "Juegos de mesa, billar",
+        "Cancha de voleibol",
+        "Ping pong, sapo y más"
+    ],
+    "tarifas_referencia": {
+        "temporada_baja": {
+            "radio_taxi": {
+                "2_pax": 2097000,
+                "3_pax": 1879000,
+                "4_pax": 1770000
+            },
+            "placa_blanca": {
+                "2_pax": 2735000,
+                "3_pax": 2306000,
+                "4_pax": 2091000
+            }
+        },
+        "temporada_media": {
+            "radio_taxi": {
+                "2_pax": 3508000,
+                "3_pax": 3290000,
+                "4_pax": 3181000
+            },
+            "placa_blanca": {
+                "2_pax": 4146000,
+                "3_pax": 3717000,
+                "4_pax": 3502000
+            }
+        },
+        "temporada_alta": {
+            "radio_taxi": {
+                "2_pax": 4034000,
+                "3_pax": 3784000,
+                "4_pax": 3658000
+            },
+            "placa_blanca": {
+                "2_pax": 4768000,
+                "3_pax": 4275000,
+                "4_pax": 4027000
+            }
+        }
+    }
+}

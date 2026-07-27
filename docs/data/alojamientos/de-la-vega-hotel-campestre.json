@@ -1,0 +1,13 @@
+{
+    "id": "de-la-vega-hotel-campestre",
+    "nombre": "De La Vega Hotel Campestre",
+    "categoria": "Estándar",
+    "ubicacion": "A 200 mts del Parque del Café, Montenegro, Quindío",
+    "servicios": [
+        "Zonas húmedas (Piscina, 3 jacuzzi)",
+        "Zona de juegos (billar pool, rana, pin pon)",
+        "Parque infantil",
+        "Parqueadero"
+    ],
+    "tarifas_referencia": {}
+}

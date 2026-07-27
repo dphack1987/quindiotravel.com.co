@@ -1,0 +1,16 @@
+{
+    "id": "finca-hotel-dorada",
+    "nombre": "Finca Hotel Dorada",
+    "categoria": "Estándar",
+    "ubicacion": "Km. 5 Pueblo Tapao Vía a La Tebaida, Quindío",
+    "servicios": [
+        "Piscina niños y adultos",
+        "Juegos infantiles",
+        "Parqueadero",
+        "Restaurante",
+        "Lavandería",
+        "Hamacas",
+        "Juegos de mesa"
+    ],
+    "tarifas_referencia": {}
+}

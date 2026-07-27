@@ -1,0 +1,61 @@
+{
+    "id": "cabanas-la-esmeralda",
+    "nombre": "Cabañas La Esmeralda",
+    "categoria": "Intermedia",
+    "ubicacion": "Quindío, Colombia",
+    "servicios": [
+        "Habitaciones y Cabañas con baño privado y T.V",
+        "Piscina Adultos - Niños",
+        "Jacuzzy",
+        "Cancha de Microfútbol",
+        "Cancha de Volley Playa",
+        "Juegos Infantiles",
+        "Restaurante",
+        "Zona de Asados",
+        "Juegos de Mesa",
+        "Ping Pong - Sapo",
+        "Hamacas",
+        "Kiosco",
+        "Horno de Barro, Estufa a Gas",
+        "Bar",
+        "Amplias Zonas Verdes"
+    ],
+    "tarifas_referencia": {
+        "temporada_baja": {
+            "radio_taxi": {
+                "2_pax": 1479000,
+                "3_pax": 1261000,
+                "4_pax": 1152000
+            },
+            "placa_blanca": {
+                "2_pax": 2117000,
+                "3_pax": 1688000,
+                "4_pax": 1473000
+            }
+        },
+        "temporada_media": {
+            "radio_taxi": {
+                "2_pax": 1600000,
+                "3_pax": 1382000,
+                "4_pax": 1273000
+            },
+            "placa_blanca": {
+                "2_pax": 2238000,
+                "3_pax": 1809000,
+                "4_pax": 1594000
+            }
+        },
+        "temporada_alta": {
+            "radio_taxi": {
+                "2_pax": 1840000,
+                "3_pax": 1589000,
+                "4_pax": 1464000
+            },
+            "placa_blanca": {
+                "2_pax": 2574000,
+                "3_pax": 2080000,
+                "4_pax": 1833000
+            }
+        }
+    }
+}

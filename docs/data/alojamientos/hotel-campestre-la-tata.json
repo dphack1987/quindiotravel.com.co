@@ -1,0 +1,16 @@
+{
+    "id": "hotel-campestre-la-tata",
+    "nombre": "Hotel Campestre La Tata",
+    "categoria": "Estándar",
+    "ubicacion": "A 100 mts de Parque del Café, Quindío",
+    "servicios": [
+        "Piscina niños y adultos",
+        "Jacuzzi",
+        "Juegos infantiles",
+        "Parqueadero",
+        "Restaurante",
+        "Lavandería",
+        "Juegos de mesa"
+    ],
+    "tarifas_referencia": {}
+}
