@@ -203,6 +203,133 @@ body {
   font-size: 0.95rem;
 }
 
+/* Sección Título General */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-title h2 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin: 10px 0;
+}
+.section-title p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* Grid de Planes */
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Plan Card Style (GetYourGuide / Booking Inspired) */
+.plan-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+.plan-featured {
+  border: 2px solid var(--primary);
+  position: relative;
+}
+
+/* Card Header */
+.plan-header {
+  background-color: var(--bg-light);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.plan-badge {
+  background-color: #e2e8f0;
+  color: var(--text-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+.badge-star { background-color: #fef3c7; color: #b45309; }
+.badge-nature { background-color: #dcfce7; color: #15803d; }
+.badge-relax { background-color: #e0f2fe; color: #0369a1; }
+.badge-premium { background-color: #f3e8ff; color: #6b21a8; }
+
+.plan-duration {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Card Body */
+.plan-body {
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.plan-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+.plan-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  min-height: 40px;
+}
+
+/* Incluye List */
+.plan-includes {
+  list-style: none;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.plan-includes li {
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+/* Pricing Box (Estilo Booking) */
+.plan-price-box {
+  background-color: #f8fafc;
+  border-radius: var(--radius);
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px dashed var(--border);
+}
+.price-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: block;
+}
+.price-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+.price-amount small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
 /* Footer */
 .footer {
   background-color: #111827;
