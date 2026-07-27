@@ -4,9 +4,9 @@
   --accent: #e65100;         /* Naranja Atardecer / Jeep Willys */
   --whatsapp: #25d366;
   --whatsapp-hover: #1da851;
-  --bg-light: #f4f6f8;
-  --text-dark: #2c3e50;
-  --text-muted: #6c757d;
+  --bg-light: #f8fafc;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
   --white: #ffffff;
   --border: #e2e8f0;
   --radius: 8px;
@@ -31,6 +31,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.text-center { text-align: center; }
 
 /* Topbar */
 .topbar {
@@ -85,7 +87,7 @@ body {
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 11px 22px;
   border-radius: var(--radius);
   font-weight: 600;
   text-decoration: none;
@@ -126,7 +128,7 @@ body {
 /* Hero */
 .hero {
   background: linear-gradient(135deg, rgba(27, 94, 32, 0.05) 0%, rgba(230, 81, 0, 0.05) 100%);
-  padding: 80px 0;
+  padding: 70px 0;
   text-align: center;
 }
 .hero-content {
@@ -160,6 +162,35 @@ body {
   flex-wrap: wrap;
 }
 
+/* Trust Section */
+.trust-section {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border);
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.trust-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+.trust-item h4 {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.trust-item p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
 /* Section */
 .section {
   padding: 60px 0;
@@ -168,42 +199,7 @@ body {
   background-color: var(--bg-light);
 }
 
-/* Cotizador UI */
-.card {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 30px;
-}
-.cotizador-card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.cotizador-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.form-group label {
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-.form-group select, 
-.form-group input {
-  padding: 10px 12px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  font-family: inherit;
-  font-size: 0.95rem;
-}
-
-/* Sección Título General */
+/* Section Title */
 .section-title {
   text-align: center;
   margin-bottom: 40px;
@@ -225,7 +221,7 @@ body {
   gap: 30px;
 }
 
-/* Plan Card Style (GetYourGuide / Booking Inspired) */
+/* Plan Card Style */
 .plan-card {
   background-color: var(--white);
   border: 1px solid var(--border);
@@ -290,26 +286,57 @@ body {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 18px;
-  min-height: 40px;
 }
 
-/* Incluye List */
-.plan-includes {
-  list-style: none;
-  margin-bottom: 20px;
-  flex-grow: 1;
+/* Checklist */
+.plan-checklist {
+  margin-bottom: 15px;
 }
-.plan-includes li {
-  font-size: 0.88rem;
+.plan-checklist strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-dark);
   margin-bottom: 8px;
+}
+.plan-checklist ul {
+  list-style: none;
+}
+.plan-checklist li {
+  font-size: 0.88rem;
+  margin-bottom: 6px;
   color: #334155;
 }
 
-/* Pricing Box (Estilo Booking) */
+/* Itinerario Expandible (HTML5 details) */
+.plan-itinerary {
+  background-color: #f1f5f9;
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+}
+.plan-itinerary summary {
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+  user-select: none;
+}
+.itinerary-content {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.itinerary-content p {
+  margin-bottom: 6px;
+  color: #475569;
+}
+
+/* Pricing Box */
 .plan-price-box {
   background-color: #f8fafc;
   border-radius: var(--radius);
   padding: 12px 15px;
+  margin-top: auto;
   margin-bottom: 20px;
   text-align: center;
   border: 1px dashed var(--border);
@@ -329,11 +356,97 @@ body {
   font-weight: 400;
   color: var(--text-muted);
 }
+.price-note {
+  display: block;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+/* Cotizador UI */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
+.cotizador-card h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--primary);
+}
+.subtitle-cotizador {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 25px;
+}
+.cotizador-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.form-group select, 
+.form-group input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+.btn-submit-cotizador {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+
+/* Alojamientos Grid */
+.alojamientos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+.alojamiento-card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s;
+}
+.alojamiento-card:hover { transform: translateY(-4px); }
+.alojamiento-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+.tag-intermedio { background-color: #059669; }
+.tag-vip { background-color: #7c3aed; }
+.alojamiento-body { padding: 25px 20px; }
+.alojamiento-body h3 { font-size: 1.25rem; margin-bottom: 5px; color: var(--text-dark); }
+.alojamiento-location { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 600; }
+.alojamiento-desc { font-size: 0.9rem; color: #475569; margin-bottom: 15px; }
+.alojamiento-features { list-style: none; border-top: 1px solid var(--border); padding-top: 12px; }
+.alojamiento-features li { font-size: 0.85rem; margin-bottom: 6px; color: var(--text-dark); }
 
 /* Footer */
 .footer {
-  background-color: #111827;
-  color: #9ca3af;
+  background-color: #0f172a;
+  color: #94a3b8;
   padding-top: 50px;
   font-size: 0.9rem;
 }
@@ -343,15 +456,8 @@ body {
   gap: 40px;
   padding-bottom: 40px;
 }
-.footer h3, .footer h4 {
-  color: var(--white);
-  margin-bottom: 15px;
-}
-.footer-bottom {
-  border-top: 1px solid #1f2937;
-  padding: 20px 0;
-  text-align: center;
-}
+.footer h3, .footer h4 { color: var(--white); margin-bottom: 15px; }
+.footer-bottom { border-top: 1px solid #1e293b; padding: 20px 0; text-align: center; }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
