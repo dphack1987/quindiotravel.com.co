@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const mensaje = `Hola Quindío Travel 🌿, deseo solicitar una cotización personalizada con los siguientes datos:\n\n` +
-            `📌 *Plan:* ${planText}\n` +
-            `🏡 *Alojamiento:* ${alojamientoText}\n` +
-            `🚗 *Transporte:* ${transporteText}\n` +
-            `👥 *Número de Personas:* ${personas}\n\n` +
-            `Quedo atento a la disponibilidad y tarifa final para nuestra fecha de viaje. ¡Muchas gracias!`;
+        const mensaje = `Hola QuindÃ­o Travel ðŸŒ¿, deseo solicitar una cotizaciÃ³n personalizada con los siguientes datos:\n\n` +
+            `ðŸ“Œ *Plan:* ${planText}\n` +
+            `ðŸ¡ *Alojamiento:* ${alojamientoText}\n` +
+            `ðŸš— *Transporte:* ${transporteText}\n` +
+            `ðŸ‘¥ *NÃºmero de Personas:* ${personas}\n\n` +
+            `Quedo atento a la disponibilidad y tarifa final para nuestra fecha de viaje. Â¡Muchas gracias!`;
 
         const phone = "573174426044";
         const url = `https://wa.me/${phone}?text=${encodeURIComponent(mensaje)}`;
