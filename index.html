@@ -318,9 +318,9 @@
                     <li><a href="planes.html">Planes</a></li>
                     <li><a href="#hoteles">Hoteles</a></li>
                     <li><a href="#experiencias">Experiencias</a></li>
-                    <li><a href="#mapa">Mapa Turístico</a></li>
-                    <li><a href="#empresas">Empresas</a></li>
-                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="salento.html">Salento</a></li>
+                    <li><a href="filandia.html">Filandia</a></li>
+                    <li><a href="blog-mejor-epoca-eje-cafetero.html">Blog</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
@@ -1340,9 +1340,19 @@
                     <li><a href="#experiencias">Experiencias y Atractivos</a></li>
                     <li><a href="#empresas">Planes Empresariales / Grupos</a></li>
                     <li><a href="#reservas">Reservas Online</a></li>
-                <li><a href="#blog">Blog de Viajes Eje Cafetero</a></li>
+                <li><a href="blog-mejor-epoca-eje-cafetero.html">Blog de Viajes Eje Cafetero</a></li>
                     <li><a href="#nosotros">Sobre Quindío Travel</a></li>
                     <li><a href="#contacto">Contacto directo</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Destinos Populares</h3>
+                <ul>
+                    <li><a href="valle-de-cocora.html">Valle de Cocora</a></li>
+                    <li><a href="parque-del-cafe.html">Parque del Café</a></li>
+                    <li><a href="salento.html">Salento</a></li>
+                    <li><a href="filandia.html">Filandia</a></li>
+                    <li><a href="planes.html?destino=Termales Santa Rosa">Termales Santa Rosa</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -1369,7 +1379,149 @@
         </div>
     </footer>
 
+    <!-- Popup de Captura de Leads - Quiz de Viajero -->
+    <div id="lead-capture-popup" class="lead-capture-popup">
+        <div class="popup-overlay" onclick="closePopup()"></div>
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup()" aria-label="Cerrar popup">&times;</button>
+            <div class="popup-header">
+                <h3>🎯 Descubre tu Plan Ideal en 2 Minutos</h3>
+                <p>Responde 4 preguntas y recibe una cotización personalizada con -15% de descuento</p>
+            </div>
+            <div class="quiz-container" id="quiz-container">
+                <!-- Pregunta 1 -->
+                <div class="quiz-step active" data-step="1">
+                    <h4>1. ¿Cuántas personas viajarán?</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="selectOption(1, '1-2')">1-2 personas</button>
+                        <button class="quiz-btn" onclick="selectOption(1, '3-4')">3-4 personas</button>
+                        <button class="quiz-btn" onclick="selectOption(1, '5-10')">5-10 personas</button>
+                        <button class="quiz-btn" onclick="selectOption(1, '10+')">Más de 10 personas</button>
+                    </div>
+                </div>
+                <!-- Pregunta 2 -->
+                <div class="quiz-step" data-step="2">
+                    <h4>2. ¿Cuántos días quieres viajar?</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="selectOption(2, '2d')">2 días / 1 noche</button>
+                        <button class="quiz-btn" onclick="selectOption(2, '3d')">3 días / 2 noches</button>
+                        <button class="quiz-btn" onclick="selectOption(2, '4d')">4 días / 3 noches</button>
+                        <button class="quiz-btn" onclick="selectOption(2, '5d')">5 días / 4 noches</button>
+                    </div>
+                </div>
+                <!-- Pregunta 3 -->
+                <div class="quiz-step" data-step="3">
+                    <h4>3. ¿Qué experiencia te interesa más?</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="selectOption(3, 'parques')">Parques temáticos (Café, PANACA)</button>
+                        <button class="quiz-btn" onclick="selectOption(3, 'naturaleza')">Naturaleza (Valle de Cocora, senderismo)</button>
+                        <button class="quiz-btn" onclick="selectOption(3, 'cultura')">Cultura (pueblos, café tradicional)</button>
+                        <button class="quiz-btn" onclick="selectOption(3, 'todo')">¡Todo lo anterior!</button>
+                    </div>
+                </div>
+                <!-- Pregunta 4 -->
+                <div class="quiz-step" data-step="4">
+                    <h4>4. ¿Cuándo planeas viajar?</h4>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="selectOption(4, 'pronto')">Esta semana</button>
+                        <button class="quiz-btn" onclick="selectOption(4, 'mes')">Próximo mes</button>
+                        <button class="quiz-btn" onclick="selectOption(4, 'temporada')">Temporada alta (diciembre-enero)</button>
+                        <button class="quiz-btn" onclick="selectOption(4, 'flexible')">Fecha flexible</button>
+                    </div>
+                </div>
+                <!-- Formulario Final -->
+                <div class="quiz-step" data-step="5">
+                    <h4>🎉 ¡Excelente! Último paso:</h4>
+                    <p>Ingresa tus datos para recibir tu cotización personalizada con -15% de descuento</p>
+                    <form class="quiz-form" onsubmit="submitQuiz(event)">
+                        <input type="text" id="quiz-nombre" placeholder="Tu nombre" required>
+                        <input type="email" id="quiz-email" placeholder="Tu correo electrónico" required>
+                        <input type="tel" id="quiz-whatsapp" placeholder="Tu WhatsApp" required>
+                        <button type="submit" class="btn btn-whatsapp-hero">
+                            <i class="fab fa-whatsapp"></i> Recibir Cotización con Descuento
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text">Pregunta <span id="current-step">1</span> de 4</div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Variables del quiz
+        let quizAnswers = {};
+        let currentStep = 1;
+        const totalSteps = 4;
+
+        // Mostrar popup después de 30 segundos
+        setTimeout(() => {
+            if (!localStorage.getItem('quizCompleted')) {
+                document.getElementById('lead-capture-popup').style.display = 'block';
+            }
+        }, 30000);
+
+        function closePopup() {
+            document.getElementById('lead-capture-popup').style.display = 'none';
+        }
+
+        function selectOption(step, value) {
+            quizAnswers[`step${step}`] = value;
+            
+            // Ocultar step actual
+            document.querySelector(`.quiz-step[data-step="${step}"]`).classList.remove('active');
+            
+            // Mostrar siguiente step
+            if (step < totalSteps) {
+                currentStep = step + 1;
+                document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.add('active');
+                updateProgress();
+            } else {
+                // Mostrar formulario final
+                document.querySelector(`.quiz-step[data-step="5"]`).classList.add('active');
+                updateProgress();
+            }
+        }
+
+        function updateProgress() {
+            const progress = (currentStep / totalSteps) * 100;
+            document.getElementById('progress-fill').style.width = `${progress}%`;
+            document.getElementById('current-step').textContent = currentStep;
+        }
+
+        function submitQuiz(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('quiz-nombre').value;
+            const email = document.getElementById('quiz-email').value;
+            const whatsapp = document.getElementById('quiz-whatsapp').value;
+            
+            // Construir mensaje de WhatsApp con respuestas
+            const mensaje = `Hola Quindío Travel! Soy ${nombre} y completé tu quiz de viajero:📊 Mis respuestas:
+- Personas: ${quizAnswers.step1}
+- Duración: ${quizAnswers.step2}
+- Interés: ${quizAnswers.step3}
+- Fecha: ${quizAnswers.step4}
+📱 Contacto: ${email} | ${whatsapp}
+Quiero mi cotización personalizada con el 15% de descuento para el plan ideal para mí.`;
+            
+            // Redirigir a WhatsApp
+            window.open(`https://wa.me/573174426044?text=${encodeURIComponent(mensaje)}`, '_blank');
+            
+            // Marcar quiz como completado
+            localStorage.setItem('quizCompleted', 'true');
+            
+            // Cerrar popup
+            closePopup();
+            
+            // Mostrar confirmación
+            alert('¡Gracias! En minutos recibirás tu cotización personalizada con 15% de descuento.');
+        }
+
         function manejarBusqueda() {
             const destino = document.getElementById('buscador-destino').value;
             const duracion = document.getElementById('buscador-duracion').value;
