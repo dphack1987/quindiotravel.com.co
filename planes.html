@@ -233,6 +233,9 @@
             </div>
             
             <div class="atractivo-header">
+                <div class="atractivo-logo-container">
+                    <img id="atractivo-logo" src="" alt="" class="atractivo-logo">
+                </div>
                 <span class="atractivo-categoria" id="atractivo-categoria"></span>
                 <h1 class="atractivo-titulo" id="atractivo-titulo"></h1>
                 <p class="atractivo-ubicacion"><i class="fas fa-map-marker-alt"></i> <span id="atractivo-ubicacion"></span></p>
@@ -586,6 +589,16 @@ Deseo *reservar y confirmar* la siguiente cotización:
                     document.getElementById('atractivo-dificultad').textContent = atractivo.nivelDificultad;
                     document.getElementById('atractivo-accesibilidad').textContent = atractivo.accesibilidad;
                     document.getElementById('atractivo-precio').textContent = atractivo.precioEntrada;
+                    
+                    // Logo del atractivo si está disponible
+                    const logoElement = document.getElementById('atractivo-logo');
+                    if (atractivo.logo) {
+                        logoElement.src = atractivo.logo;
+                        logoElement.alt = `Logo de ${atractivo.nombre}`;
+                        logoElement.style.display = 'block';
+                    } else {
+                        logoElement.style.display = 'none';
+                    }
                     
                     // Imagen principal
                     const imagenPrincipal = document.getElementById('atractivo-imagen-principal');

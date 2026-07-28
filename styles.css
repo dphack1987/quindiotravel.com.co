@@ -2997,6 +2997,23 @@ body {
     margin-bottom: 40px;
 }
 
+.atractivo-logo-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.atractivo-logo {
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: white;
+    padding: 10px;
+}
+
 .atractivo-categoria {
     display: inline-block;
     background: linear-gradient(135deg, var(--naranja-brillante), var(--amarillo-suave));

@@ -32,6 +32,7 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año",
     nivelDificultad: "Fácil",
     accesibilidad: "Totalmente accesible",
+    logo: "assets/images/destinos/logo_parque_del_cafe.jpg",
     imagenes: [
       "assets/images/atractivos/parque-del-cafe.jpg",
       "parque-del-cafe/PDC_ParqueDelCafe_001.jpg",
@@ -74,6 +75,7 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año",
     nivelDificultad: "Fácil",
     accesibilidad: "Totalmente accesible",
+    logo: "assets/images/destinos/logo_panaca.png",
     imagenes: [
       "assets/images/atractivos/panaca.jpg",
       "panaca/panaca-imagen.jpg",
@@ -115,6 +117,7 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año (mejor en seco)",
     nivelDificultad: "Moderado",
     accesibilidad: "Parcialmente accesible",
+    logo: null,
     imagenes: [
       "assets/images/paisajes/foto_hero1.jpg",
       "assets/images/planes/plan-3.jpg"
@@ -155,6 +158,7 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año",
     nivelDificultad: "Fácil",
     accesibilidad: "Parcialmente accesible",
+    logo: null,
     imagenes: [
       "assets/images/paisajes/foto_hero1.jpg"
     ],
@@ -194,6 +198,7 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año",
     nivelDificultad: "Fácil",
     accesibilidad: "Parcialmente accesible",
+    logo: null,
     imagenes: [
       "assets/images/paisajes/foto_hero1.jpg"
     ],
@@ -233,6 +238,7 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año",
     nivelDificultad: "Fácil",
     accesibilidad: "Totalmente accesible",
+    logo: null,
     imagenes: [
       "assets/images/atractivos/termales-santa-rosa.jpg",
       "termales-de-santa-rosa/termales-santa-rosa-cabal-hotel-2k1-scaled.jpg",
@@ -274,6 +280,7 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año (mejor en cosecha)",
     nivelDificultad: "Moderado",
     accesibilidad: "Parcialmente accesible",
+    logo: "assets/images/destinos/logo_recuca.png",
     imagenes: [
       "assets/images/atractivos/recuca.jpg",
       "recuca/recuca-sendero-cafetero.jpg",
@@ -282,6 +289,47 @@ const atractivosData = [
     precioEntrada: "Desde $60,000 COP",
     planesAsociados: ["plan-2", "plan-3", "plan-5"],
     keywords: ["café", "cultura", "sendero", "cata", "tradición"]
+  },
+  {
+    id: "quinti-patas-arriba",
+    nombre: "Quinti Patas Arriba",
+    nombreCorto: "Quinti Patas Arriba",
+    categoria: "Experiencia Cultural",
+    ubicacion: "Pereira, Risaralda",
+    descripcion: "Parque temático de la cultura arriería y ganadera con shows tradicionales, paseo en mulas y experiencias vivenciales de la tradición.",
+    descripcionDetallada: "Quinti Patas Arriba es un parque temático dedicado a la cultura arriería y ganadera del Eje Cafetero. Los visitantes pueden experimentar la tradición de los arrieros a través de shows tradicionales, paseo en mulas, demostraciones de técnicas ganaderas y experiencias vivenciales que reviven la historia de los arrieros que conectaban las regiones.",
+    caracteristicas: [
+      "Cultura arriería tradicional",
+      "Shows tradicionales de arrieros",
+      "Paseo en mulas",
+      "Experiencias vivenciales",
+      "Historia de los arrieros",
+      "Cultura ganadera",
+      "Demostraciones tradicionales",
+      "Ambiente histórico"
+    ],
+    actividades: [
+      "Paseo en mulas por senderos",
+      "Shows tradicionales de arrieros",
+      "Demostraciones de técnicas ganaderas",
+      "Experiencia vivencial arriería",
+      "Fotografía con arrieros tradicionales",
+      "Recorridos históricos",
+      "Interacción con animales"
+    ],
+    horario: "Todos los días 9:00 AM - 5:00 PM",
+    duracionRecomendada: "4 horas",
+    temporadaRecomendada: "Todo el año",
+    nivelDificultad: "Fácil",
+    accesibilidad: "Parcialmente accesible",
+    logo: null,
+    imagenes: [
+      "assets/images/atractivos/quinti-patas-arriba.jpg",
+      "quinti-patas-arriba/qintiparque.jpg"
+    ],
+    precioEntrada: "Desde $55,000 COP",
+    planesAsociados: ["plan-5"],
+    keywords: ["arrieros", "mulas", "cultura", "tradición", "ganadería"]
   },
   {
     id: "parque-los-arrieros",
@@ -315,12 +363,54 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año",
     nivelDificultad: "Fácil",
     accesibilidad: "Parcialmente accesible",
+    logo: "assets/images/destinos/logo_parque_los_arrieros.png",
     imagenes: [
       "assets/images/destinos/logo_parque_los_arrieros.png",
       "quinti-patas-arriba/qintiparque.jpg"
     ],
     precioEntrada: "Desde $55,000 COP",
     planesAsociados: [],
+    keywords: ["arrieros", "mulas", "cultura", "tradición", "ganadería"]
+  },
+  {
+    id: "quinti-patas-arriba",
+    nombre: "Quinti Patas Arriba",
+    nombreCorto: "Quinti Patas Arriba",
+    categoria: "Experiencia Cultural",
+    ubicacion: "Pereira, Risaralda",
+    descripcion: "Parque temático de la cultura arriería y ganadera con shows tradicionales, paseo en mulas y experiencias vivenciales de la tradición.",
+    descripcionDetallada: "Quinti Patas Arriba es un parque temático dedicado a la cultura arriería y ganadera del Eje Cafetero. Los visitantes pueden experimentar la tradición de los arrieros a través de shows tradicionales, paseo en mulas, demostraciones de técnicas ganaderas y experiencias vivenciales que reviven la historia de los arrieros que conectaban las regiones.",
+    caracteristicas: [
+      "Cultura arriería tradicional",
+      "Shows tradicionales de arrieros",
+      "Paseo en mulas",
+      "Experiencias vivenciales",
+      "Historia de los arrieros",
+      "Cultura ganadera",
+      "Demostraciones tradicionales",
+      "Ambiente histórico"
+    ],
+    actividades: [
+      "Paseo en mulas por senderos",
+      "Shows tradicionales de arrieros",
+      "Demostraciones de técnicas ganaderas",
+      "Experiencia vivencial arriería",
+      "Fotografía con arrieros tradicionales",
+      "Recorridos históricos",
+      "Interacción con animales"
+    ],
+    horario: "Todos los días 9:00 AM - 5:00 PM",
+    duracionRecomendada: "4 horas",
+    temporadaRecomendada: "Todo el año",
+    nivelDificultad: "Fácil",
+    accesibilidad: "Parcialmente accesible",
+    logo: null,
+    imagenes: [
+      "assets/images/atractivos/quinti-patas-arriba.jpg",
+      "quinti-patas-arriba/qintiparque.jpg"
+    ],
+    precioEntrada: "Desde $55,000 COP",
+    planesAsociados: ["plan-5"],
     keywords: ["arrieros", "mulas", "cultura", "tradición", "ganadería"]
   },
   {
@@ -355,6 +445,7 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año",
     nivelDificultad: "Fácil",
     accesibilidad: "Totalmente accesible",
+    logo: null,
     imagenes: [
       "assets/images/atractivos/mariposario.jpg",
       "mariposario/contamos-con-el-mariposario.jpg"
