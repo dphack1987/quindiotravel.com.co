@@ -1,151 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-    <!-- Página Principal -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://quindiotravel.com.co/</loc>
         <lastmod>2026-07-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-
-    <!-- Promoción del Mes (Nueva sección) -->
-    <url>
-        <loc>https://quindiotravel.com.co/#promo-mes</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <!-- Planes Turísticos -->
     <url>
         <loc>https://quindiotravel.com.co/planes.html</loc>
         <lastmod>2026-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
-    <!-- Planes Específicos -->
     <url>
         <loc>https://quindiotravel.com.co/plan-1.html</loc>
         <lastmod>2026-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://quindiotravel.com.co/plan-2.html</loc>
         <lastmod>2026-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://quindiotravel.com.co/plan-3.html</loc>
         <lastmod>2026-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://quindiotravel.com.co/plan-4.html</loc>
         <lastmod>2026-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://quindiotravel.com.co/plan-5.html</loc>
         <lastmod>2026-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://quindiotravel.com.co/plan-6.html</loc>
         <lastmod>2026-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-
-    <!-- Landing Pages de Destinos -->
     <url>
         <loc>https://quindiotravel.com.co/valle-de-cocora.html</loc>
         <lastmod>2026-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
     <url>
         <loc>https://quindiotravel.com.co/parque-del-cafe.html</loc>
         <lastmod>2026-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
-    <!-- Secciones Importantes del Index -->
-    <url>
-        <loc>https://quindiotravel.com.co/#experiencias</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.75</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/#hoteles</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.75</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/#empresas</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <!-- Recursos de Imágenes -->
-    <url>
-        <loc>https://quindiotravel.com.co/assets/images/</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <!-- Contacto -->
-    <url>
-        <loc>https://quindiotravel.com.co/#contacto</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <!-- Blog -->
-    <url>
-        <loc>https://quindiotravel.com.co/#blog</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <!-- Mapa Turístico -->
-    <url>
-        <loc>https://quindiotravel.com.co/#mapa</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <!-- Sobre Nosotros -->
-    <url>
-        <loc>https://quindiotravel.com.co/#nosotros</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
 </urlset>
