@@ -1,11 +1,13 @@
 # Robots.txt para Quindío Travel
 # Optimizado para SEO y mejor posicionamiento en buscadores
+# Última actualización: 2026-07-28
 
 User-agent: *
 Allow: /
 
 # Permitir acceso a todos los recursos importantes
 Allow: /assets/
+Allow: /assets/images/
 Allow: /docs/
 Allow: /css/
 Allow: /js/
@@ -25,15 +27,33 @@ Disallow: /read_docx.py
 # Especificar ubicación del sitemap
 Sitemap: https://quindiotravel.com.co/sitemap.xml
 
-# Tiempo de rastreo (opcional)
-Crawl-delay: 1
-
 # User-agent específico para Googlebot
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
+Allow: /assets/images/
+
+# User-agent específico para Googlebot-Image (importante para SEO de imágenes)
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Disallow: /assets/images/placeholder.html
 
 # User-agent específico para Bingbot
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
+
+# User-agent específico para Facebook (importante para turismo)
+User-agent: facebookexternalhit
+Allow: /
+
+# User-agent específico para LinkedIn (importante para turismo empresarial)
+User-agent: LinkedInBot
+Allow: /
+
+# User-agent específico para Twitter
+User-agent: Twitterbot
+Allow: /
+
+# Optimización para rastreadores específicos de redes sociales
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
