@@ -3233,11 +3233,6 @@ body {
     text-align: right;
 }
 
-.info-valor.destacado {
-    color: var(--verde-cafe);
-    font-size: 1.1rem;
-}
-
 .planes-relacionados {
     display: flex;
     flex-direction: column;

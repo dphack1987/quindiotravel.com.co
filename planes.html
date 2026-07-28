@@ -296,10 +296,6 @@
                             <span class="info-label"><i class="fas fa-wheelchair"></i> Accesibilidad:</span>
                             <span class="info-valor" id="atractivo-accesibilidad"></span>
                         </div>
-                        <div class="info-item">
-                            <span class="info-label"><i class="fas fa-ticket-alt"></i> Precio entrada:</span>
-                            <span class="info-valor destacado" id="atractivo-precio"></span>
-                        </div>
                     </div>
                     
                     <div class="sidebar-card">
@@ -309,8 +305,8 @@
                         </div>
                     </div>
                     
-                    <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20informaci%C3%B3n%20sobre%20tours%20a%20" class="btn-whatsapp-full btn-atractivo-cta">
-                        <i class="fab fa-whatsapp"></i> Cotizar tour a este atractivo
+                    <a id="atractivo-whatsapp-btn" href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20informaci%C3%B3n%20sobre%20planes%20que%20incluyan%20" class="btn-whatsapp-full btn-atractivo-cta">
+                        <i class="fab fa-whatsapp"></i> Cotizar plan que incluye este atractivo
                     </a>
                 </div>
             </div>
@@ -588,7 +584,6 @@ Deseo *reservar y confirmar* la siguiente cotización:
                     document.getElementById('atractivo-temporada').textContent = atractivo.temporadaRecomendada;
                     document.getElementById('atractivo-dificultad').textContent = atractivo.nivelDificultad;
                     document.getElementById('atractivo-accesibilidad').textContent = atractivo.accesibilidad;
-                    document.getElementById('atractivo-precio').textContent = atractivo.precioEntrada;
                     
                     // Logo del atractivo si está disponible
                     const logoElement = document.getElementById('atractivo-logo');
@@ -659,8 +654,8 @@ Deseo *reservar y confirmar* la siguiente cotización:
                     });
                     
                     // Actualizar botón de WhatsApp específico
-                    const whatsappBtn = document.querySelector('.btn-atractivo-cta');
-                    whatsappBtn.href = `https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20informaci%C3%B3n%20sobre%20tours%20a%20${encodeURIComponent(atractivo.nombre)}`;
+                    const whatsappBtn = document.getElementById('atractivo-whatsapp-btn');
+                    whatsappBtn.href = `https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20informaci%C3%B3n%20sobre%20planes%20que%20incluyan%20${encodeURIComponent(atractivo.nombre)}`;
                     
                     // Scroll hacia la sección de detalle
                     document.getElementById('atractivo-detalle').scrollIntoView({ behavior: 'smooth' });
