@@ -853,6 +853,15 @@ body {
     box-shadow: 0 3px 12px rgba(0,0,0,0.06);
     transition: transform 0.3s;
     border-top: 3px solid var(--verde-claro);
+    overflow: hidden;
+}
+.hotel-img {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 .hotel-card:hover {
     transform: translateY(-4px);
