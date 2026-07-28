@@ -1,0 +1,58 @@
+{
+  "name": "Quindío Travel - Operador Turístico Eje Cafetero",
+  "short_name": "Quindío Travel",
+  "description": "Líder en turismo del Eje Cafetero. Operador turístico local RNT 18152 con más de 15 años de experiencia. Planes turísticos 2D-5D todo incluido.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2E5E36",
+  "theme_color": "#2E5E36",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo_quindio_travel.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["travel", "tourism", "business"],
+  "screenshots": [
+    {
+      "src": "assets/images/paisajes/foto_hero1.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "label": "Paisaje del Eje Cafetero - Valle de Cocora"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Ver Planes Turísticos",
+      "short_name": "Planes",
+      "description": "Explora nuestros 6 planes turísticos del Eje Cafetero",
+      "url": "/planes.html",
+      "icons": [{ "src": "logo_quindio_travel.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Cotizar Viaje",
+      "short_name": "Cotizar",
+      "description": "Obtén una cotización personalizada para tu viaje",
+      "url": "/#cotizador",
+      "icons": [{ "src": "logo_quindio_travel.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contactar WhatsApp",
+      "short_name": "WhatsApp",
+      "description": "Contáctanos directamente por WhatsApp",
+      "url": "https://wa.me/573174426044",
+      "icons": [{ "src": "logo_quindio_travel.png", "sizes": "96x96" }]
+    }
+  ]
+}

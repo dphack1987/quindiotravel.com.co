@@ -1,59 +1,44 @@
-# Robots.txt para Quindío Travel
-# Optimizado para SEO y mejor posicionamiento en buscadores
-# Última actualización: 2026-07-28
+# robots.txt para Quindío Travel - Optimizado para SEO
+# Permite a los motores de búsqueda rastrear todo el sitio
+# Bloquea contenido duplicado y áreas sensibles
 
 User-agent: *
 Allow: /
 
-# Permitir acceso a todos los recursos importantes
-Allow: /assets/
-Allow: /assets/images/
-Allow: /docs/
-Allow: /css/
-Allow: /js/
-
-# Bloquear archivos temporales y de configuración
+# Bloquear directorios temporales y de desarrollo
+Disallow: /Finca-Hotel-La-Dorada/
 Disallow: /temp/
-Disallow: /logs/
-Disallow: /config/
-Disallow: /.git/
-Disallow: /node_modules/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /don-chucho-backend/test/
 
-# Bloquear archivos de documentación técnica
-Disallow: /docs/informacion-de-precios/
-Disallow: /read_pdf.py
-Disallow: /read_docx.py
-
-# Especificar ubicación del sitemap
+# Permitir sitemaps
 Sitemap: https://quindiotravel.com.co/sitemap.xml
 
-# User-agent específico para Googlebot
+# Optimización para diferentes crawlers
 User-agent: Googlebot
 Allow: /
-Allow: /assets/images/
+Crawl-delay: 1
 
-# User-agent específico para Googlebot-Image (importante para SEO de imágenes)
-User-agent: Googlebot-Image
-Allow: /assets/images/
-Disallow: /assets/images/placeholder.html
-
-# User-agent específico para Bingbot
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
-# User-agent específico para Facebook (importante para turismo)
-User-agent: facebookexternalhit
+# Bloquear bots maliciosos
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Permitir imágenes para búsqueda de imágenes
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# Optimización para mobile
+User-agent: Googlebot-Mobile
 Allow: /
-
-# User-agent específico para LinkedIn (importante para turismo empresarial)
-User-agent: LinkedInBot
-Allow: /
-
-# User-agent específico para Twitter
-User-agent: Twitterbot
-Allow: /
-
-# Optimización para rastreadores específicos de redes sociales
-User-agent: *
-Disallow: /admin/
-Disallow: /private/
