@@ -1724,6 +1724,863 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
         }
     </style>
     
+    <!-- Chatbot Don Chucho - Arriero Guía Turístico -->
+    <div id="don-chucho-chat" class="don-chucho-chat">
+        <div class="don-chucho-widget" id="don-chucho-widget">
+            <div class="don-chucho-avatar" onclick="toggleChat()">
+                <div class="arriero-avatar">
+                    <div class="sombrero">
+                        <div class="sombrero-copa"></div>
+                        <div class="sombrero-ala"></div>
+                    </div>
+                    <div class="rostro">
+                        <div class="bigote"></div>
+                        <div class="sonrisa"></div>
+                    </div>
+                </div>
+                <div class="don-chucho-badge">
+                    <span>🤠 Don Chucho</span>
+                    <small>Guía Local</small>
+                </div>
+                <div class="chat-indicator">
+                    <span class="online-dot"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="don-chucho-window" id="don-chucho-window">
+            <div class="chat-header">
+                <div class="chat-avatar">
+                    <div class="sombrero-mini">
+                        <div class="sombrero-copa-mini"></div>
+                        <div class="sombrero-ala-mini"></div>
+                    </div>
+                </div>
+                <div class="chat-info">
+                    <h4>🤠 Don Chucho</h4>
+                    <p>Arriero guía local - RNT 18152</p>
+                    <span class="typing-indicator">Escribiendo...</span>
+                </div>
+                <button class="chat-close" onclick="toggleChat()" aria-label="Cerrar chat">&times;</button>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <div class="sombrero-micro">
+                            <div class="sombrero-copa-micro"></div>
+                            <div class="sombrero-ala-micro"></div>
+                        </div>
+                    </div>
+                    <div class="message-content">
+                        <p>¡Buenos días, viajero! 👋 Soy Don Chucho, tu arriero guía local del Eje Cafetero. ¿En qué puedo ayudarte hoy?</p>
+                        <div class="quick-replies">
+                            <button class="quick-reply" onclick="sendQuickReply('planes')">🗺️ Ver planes turísticos</button>
+                            <button class="quick-reply" onclick="sendQuickReply('destinos')">🏛️ Destinos populares</button>
+                            <button class="quick-reply" onclick="sendQuickReply('cotizar')">💰 Cotizar viaje</button>
+                            <button class="quick-reply" onclick="sendQuickReply('consejos')">💡 Consejos locales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-area">
+                <div class="suggestions">
+                    <span class="suggestion-chip" onclick="sendQuickReply('mejor epoca')">🌤️ Mejor época para viajar</span>
+                    <span class="suggestion-chip" onclick="sendQuickReply('precios')">💎 Precios 2026</span>
+                    <span class="suggestion-chip" onclick="sendQuickReply('familias')">👨‍👩‍👧‍👦 Viajes familiares</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="chat-input" placeholder="Escribe tu pregunta..." onkeypress="handleKeyPress(event)">
+                    <button class="send-btn" onclick="sendMessage()" aria-label="Enviar mensaje">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sistema de Chat Don Chucho
+        let chatOpen = false;
+        let conversationState = 'initial';
+        
+        // Respuestas de Don Chucho
+        const donChuchoResponses = {
+            initial: {
+                greeting: "¡Buenos días, viajero! 👋 Soy Don Chucho, tu arriero guía local del Eje Cafetero. ¿En qué puedo ayudarte hoy?",
+                quickReplies: ['planes', 'destinos', 'cotizar', 'consejos']
+            },
+            planes: {
+                message: "¡Excelente elección! Tenemos planes para todos los gustos: 🗺️ Plan 3D/2N: Parque del Café + PANACA desde $820.000 🌴 Plan 4D/3N: Valle de Cocora + Salento desde $1.152.000 ☕ Plan 5D/4N: Experiencia completa desde $1.473.000 ¿Cuál te interesa más?",
+                quickReplies: ['3d', '4d', '5d', 'premium']
+            },
+            destinos: {
+                message: "El Eje Cafetero tiene maravillas para todos: 🏛️ Salento - Pueblo patrimonio 🌴 Valle de Cocora - Palmas de cera ☕ Parque del Café - Cultura cafetera ♨ Termales Santa Rosa - Relax natural ¿Cuál destino te llama más?",
+                quickReplies: ['salento', 'valle', 'cafe', 'termales']
+            },
+            cotizar: {
+                message: "¡Claro que sí! Para darte la mejor cotización, necesito saber: 👤 ¿Cuántas personas viajan? 📅 ¿Cuándo planean viajar? 🎯 ¿Qué experiencias les interesan más? Cuéntame estos detalles y te preparo una cotización especial.",
+                quickReplies: ['1-2 personas', '3-4 personas', '5+ personas', 'empresas']
+            },
+            consejos: {
+                message: "Como buen arriero del Quindío, te doy mis mejores consejos: ☀️ La mejor época es enero-febrero (seco) o julio-agosto 🧴 Lleva protector solar y repelente 👟 Zapatos cómodos para caminar 📸 No olvides tu cámara para los paisajes ¿Necesitas más consejos específicos?",
+                quickReplies: ['clima', 'que llevar', 'seguridad', 'fotos']
+            },
+            'mejor epoca': {
+                message: "¡Buenísima pregunta! 🌤️ **Mejor época**: Enero-febrero y julio-agosto (seco) 🌧️ **Temporada lluviosa**: Abril-mayo y octubre-noviembre 💰 **Más económico**: Marzo-mayo y septiembre-noviembre Yo recomiendo enero-febrero para clima perfecto, o septiembre para menos turistas.",
+                quickReplies: ['planes enero', 'planes septiembre', 'mas detalles']
+            },
+            precios: {
+                message: "¡Te cuento los precios 2026! 💰 **Plan económico**: 3D/2N desde $820.000 💎 **Plan completo**: 4D/3N desde $1.152.000 ⭐ **Plan premium**: 5D/4N desde $1.473.000 🏢 **Empresas**: Cotización personalizada Todos incluyen transporte, guía y alojamiento. ¿Te interesa ver detalles de alguno?",
+                quickReplies: ['detalles 3d', 'detalles 4d', 'detalles 5d', 'cotizar personalizada']
+            },
+            familias: {
+                message: "¡Los viajes familiares son lo mejor! 👨‍👩‍👧‍👦 Recomiendo el Plan 4D/3N porque incluye: 🎢 Parque del Café (niños aman) 🐄 PANACA (animales y diversión) 🏛️ Pueblos coloridos para fotos Tenemos descuentos especiales para familias. ¿Cuántos viajan?",
+                quickReplies: ['2-3 personas', '4-6 personas', '7+ personas', 'mas info']
+            },
+            salento: {
+                message: "¡Salento es un tesoro! 🏛️ Es un pueblo patrimonio con balcones coloridos y arquitectura tradicional. Desde allí puedes ir al Valle de Cocora en Willys (¡experiencia única!). Mis recomendaciones: 📸 Subir al mirador para fotos 🧵 Comprar artesanías locales ☕ Probar el café del municipio ¿Quieres que te cuente más?",
+                quickReplies: ['valle cocora', 'artesanias', 'hoteles salento', 'cotizar salento']
+            },
+            valle: {
+                message: "¡El Valle de Cocora es sagrado! 🌴 Allí están las palmas de cera más altas del mundo (hasta 60 metros). Senderismo espectacular con vistas impresionantes. Tips: 🥾 Lleva calzado cómodo 💧 Lleva agua 🧴 Protector solar ¿Quieres incluirlo en tu viaje?",
+                quickReplies: ['si incluir', 'mas info', 'dificultad caminata', 'mejor epoca']
+            },
+            cafe: {
+                message: "¡El Parque del Café es imperdible! ☕ Allí aprenderás todo sobre el café colombiano: desde la semilla hasta la taza. Tiene atracciones mecánicas, shows culturales y museo. Tips: 🎟️ Compra pasaporte múltiple ⏰ Dedica todo el día 🍽️ Prueba el café típico ¿Te interesa?",
+                quickReplies: ['planes con cafe', 'horarios', 'precios entradas', 'cotizar']
+            },
+            termales: {
+                message: "¡Los Termales Santa Rosa son puro relax! ♨️ Aguas termales naturales con propiedades medicinales. Perfecto después de caminar por el Valle de Cocora. Tips: 🧴 Lleva toalla 👙 Traje de baño 🕒 Dedica 3-4 horas ¿Quieres un plan que incluya termales?",
+                quickReplies: ['planes termales', 'mas info', 'ubicacion', 'cotizar']
+            },
+            '3d': {
+                message: "¡Perfecto! El Plan 3D/2N incluye: 🎢 Parque del Café + entradas 🐄 PANACA + almuerzo 🏨 Alojamiento 2 noches en finca hotel 🚐 Transporte desde tu ciudad 📱 Guía local desde $820.000 por persona. ¿Te gustaría cotizar?",
+                quickReplies: ['cotizar 3d', 'mas detalles', 'hoteles disponibles', 'contactar humano']
+            },
+            '4d': {
+                message: "¡Excelente elección! El Plan 4D/3N es nuestro favorito: 🌴 Valle de Cocora (senderismo) 🏛️ Salento y Filandia 🎢 Parque del Café 🏨 Alojamiento 3 noches VIP 🚐 Transporte privado desde $1.152.000 por persona. ¿Te interesa?",
+                quickReplies: ['cotizar 4d', 'itinerario detallado', 'hoteles vip', 'contactar humano']
+            },
+            '5d': {
+                message: "¡La experiencia definitiva! El Plan 5D/4N incluye TODO: 🌴 Valle de Cocora + senderismo ♨ Termales Santa Rosa 🎢 Parque del Café + PANACA 🏛️ Todos los pueblos 🏨 Alojamiento 4 noches premium 🚐 Transporte exclusivo desde $1.473.000 por persona. ¿Cotizamos?",
+                quickReplies: ['cotizar 5d', 'itinerario completo', 'servicios premium', 'contactar humano']
+            },
+            default: {
+                message: "¡Interesante pregunta! Como buen arriero del Quindío, conozco cada rincón de estas tierras. Para darte la mejor respuesta, ¿podrías ser más específico? Puedo ayudarte con: 🗺️ Planes turísticos 🏛️ Destinos 📅 Mejor época 💰 Precios ¿Qué prefieres?",
+                quickReplies: ['planes', 'destinos', 'cotizar', 'consejos']
+            }
+        };
+        
+        function toggleChat() {
+            chatOpen = !chatOpen;
+            const chatWindow = document.getElementById('don-chucho-window');
+            const widget = document.getElementById('don-chucho-widget');
+            
+            if (chatOpen) {
+                chatWindow.style.display = 'block';
+                widget.style.display = 'none';
+                setTimeout(() => {
+                    chatWindow.classList.add('chat-open');
+                }, 10);
+            } else {
+                chatWindow.classList.remove('chat-open');
+                setTimeout(() => {
+                    chatWindow.style.display = 'none';
+                    widget.style.display = 'block';
+                }, 300);
+            }
+        }
+        
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            
+            if (message) {
+                addUserMessage(message);
+                input.value = '';
+                processUserMessage(message);
+            }
+        }
+        
+        function sendQuickReply(intent) {
+            addUserMessage(intent);
+            processUserMessage(intent);
+        }
+        
+        function addUserMessage(message) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message user-message';
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    <p>${formatMessage(message)}</p>
+                </div>
+            `;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        function addBotMessage(message, quickReplies = []) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message bot-message';
+            
+            let quickRepliesHTML = '';
+            if (quickReplies.length > 0) {
+                quickRepliesHTML = '<div class="quick-replies">';
+                quickReplies.forEach(reply => {
+                    quickRepliesHTML += `<button class="quick-reply" onclick="sendQuickReply('${reply}')">${formatQuickReply(reply)}</button>`;
+                });
+                quickRepliesHTML += '</div>';
+            }
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">
+                    <div class="sombrero-micro">
+                        <div class="sombrero-copa-micro"></div>
+                        <div class="sombrero-ala-micro"></div>
+                    </div>
+                </div>
+                <div class="message-content">
+                    <p>${formatMessage(message)}</p>
+                    ${quickRepliesHTML}
+                </div>
+            `;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        function formatMessage(message) {
+            // Convertir formato markdown simple a HTML
+            return message
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>');
+        }
+        
+        function formatQuickReply(reply) {
+            const quickReplyTexts = {
+                'planes': '🗺️ Ver planes',
+                'destinos': '🏛️ Destinos',
+                'cotizar': '💰 Cotizar',
+                'consejos': '💡 Consejos',
+                '3d': 'Plan 3D/2N',
+                '4d': 'Plan 4D/3N',
+                '5d': 'Plan 5D/4N',
+                'premium': 'Premium VIP',
+                'salento': 'Salento',
+                'valle': 'Valle de Cocora',
+                'cafe': 'Parque del Café',
+                'termales': 'Termales',
+                'mejor epoca': 'Mejor época',
+                'precios': 'Precios',
+                'familias': 'Familias',
+                '1-2 personas': '1-2 personas',
+                '3-4 personas': '3-4 personas',
+                '5+ personas': '5+ personas',
+                'empresas': 'Empresas',
+                'clima': 'Clima',
+                'que llevar': 'Qué llevar',
+                'seguridad': 'Seguridad',
+                'fotos': 'Fotos',
+                'planes enero': 'Planes enero',
+                'planes septiembre': 'Planes septiembre',
+                'mas detalles': 'Más detalles',
+                'detalles 3d': 'Detalles 3D',
+                'detalles 4d': 'Detalles 4D',
+                'detalles 5d': 'Detalles 5D',
+                'cotizar personalizada': 'Cotizar personalizada',
+                '2-3 personas': '2-3 personas',
+                '4-6 personas': '4-6 personas',
+                '7+ personas': '7+ personas',
+                'mas info': 'Más info',
+                'valle cocora': 'Valle de Cocora',
+                'artesanias': 'Artesanías',
+                'hoteles salento': 'Hoteles Salento',
+                'cotizar salento': 'Cotizar Salento',
+                'si incluir': 'Sí, incluir',
+                'mas info': 'Más info',
+                'dificultad caminata': 'Dificultad caminata',
+                'mejor epoca': 'Mejor época',
+                'planes con cafe': 'Planes con café',
+                'horarios': 'Horarios',
+                'precios entradas': 'Precios entradas',
+                'cotizar': 'Cotizar',
+                'planes termales': 'Planes termales',
+                'mas info': 'Más info',
+                'ubicacion': 'Ubicación',
+                'cotizar': 'Cotizar',
+                'cotizar 3d': 'Cotizar 3D',
+                'mas detalles': 'Más detalles',
+                'hoteles disponibles': 'Hoteles disponibles',
+                'contactar humano': 'Contactar humano',
+                'cotizar 4d': 'Cotizar 4D',
+                'itinerario detallado': 'Itinerario detallado',
+                'hoteles vip': 'Hoteles VIP',
+                'contactar humano': 'Contactar humano',
+                'cotizar 5d': 'Cotizar 5D',
+                'itinerario completo': 'Itinerario completo',
+                'servicios premium': 'Servicios premium',
+                'contactar humano': 'Contactar humano'
+            };
+            return quickReplyTexts[reply] || reply;
+        }
+        
+        function processUserMessage(message) {
+            // Mostrar indicador de escritura
+            showTypingIndicator();
+            
+            // Simular tiempo de respuesta
+            setTimeout(() => {
+                hideTypingIndicator();
+                
+                // Buscar respuesta en el sistema
+                let response = donChuchoResponses.default;
+                let messageLower = message.toLowerCase();
+                
+                // Búsqueda de palabras clave
+                for (const [key, value] of Object.entries(donChuchoResponses)) {
+                    if (key !== 'default' && messageLower.includes(key)) {
+                        response = value;
+                        break;
+                    }
+                }
+                
+                // Respuestas específicas por palabras clave
+                if (messageLower.includes('hola') || messageLower.includes('buenos') || messageLower.includes('buenas')) {
+                    response = donChuchoResponses.initial;
+                }
+                
+                if (messageLower.includes('gracias') || messageLower.includes('muchas gracias')) {
+                    response = {
+                        message: "¡De nada, viajero! 😊 Es un placer ayudarte. Si necesitas más información sobre el Eje Cafetero, aquí estoy. ¿Algo más en lo que pueda ayudarte?",
+                        quickReplies: ['planes', 'destinos', 'cotizar', 'adios']
+                    };
+                }
+                
+                if (messageLower.includes('adios') || messageLower.includes('chao') || messageLower.includes('hasta luego')) {
+                    response = {
+                        message: "¡Hasta luego, viajero! 🤠 Espero verte pronto en el Eje Cafetero. ¡Buen viaje y que vaya bonito! 👋",
+                        quickReplies: []
+                    };
+                }
+                
+                if (messageLower.includes('humano') || messageLower.includes('agente') || messageLower.includes('persona')) {
+                    response = {
+                        message: "¡Claro que sí! Te conecto con un agente humano de Quindío Travel. Son expertos y te ayudarán con todo. 📞",
+                        quickReplies: ['contactar whatsapp', 'seguir aqui']
+                    };
+                }
+                
+                if (messageLower.includes('whatsapp') || messageLower.includes('contactar')) {
+                    response = {
+                        message: "Perfecto, te conecto con WhatsApp directamente: 📱",
+                        quickReplies: []
+                    };
+                    // Redirigir a WhatsApp después de mostrar el mensaje
+                    setTimeout(() => {
+                        window.open('https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20habl%C3%A9%20con%20Don%20Chucho%20y%20necesito%20ayuda%20de%20un%20agente%20humano', '_blank');
+                    }, 2000);
+                }
+                
+                addBotMessage(response.message, response.quickReplies);
+                
+            }, 1500);
+        }
+        
+        function showTypingIndicator() {
+            const typingIndicator = document.querySelector('.typing-indicator');
+            if (typingIndicator) {
+                typingIndicator.style.display = 'block';
+            }
+        }
+        
+        function hideTypingIndicator() {
+            const typingIndicator = document.querySelector('.typing-indicator');
+            if (typingIndicator) {
+                typingIndicator.style.display = 'none';
+            }
+        }
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+        
+        // Iniciar chat después de 60 segundos
+        setTimeout(() => {
+            if (!chatOpen && !localStorage.getItem('donChuchoOpened')) {
+                const widget = document.getElementById('don-chucho-widget');
+                widget.classList.add('bounce-animation');
+                setTimeout(() => {
+                    widget.classList.remove('bounce-animation');
+                }, 3000);
+            }
+        }, 60000);
+    </script>
+    
+    <style>
+        /* ============================================================
+           DON CHUCHO CHATBOT STYLES
+           ============================================================ */
+        .don-chucho-chat {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 1500;
+        }
+        
+        .don-chucho-widget {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .don-chucho-widget:hover {
+            transform: scale(1.05);
+        }
+        
+        .don-chucho-widget.bounce-animation {
+            animation: bounce 0.5s ease-in-out 3;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .don-chucho-avatar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            padding: 12px 16px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
+            position: relative;
+        }
+        
+        .arriero-avatar {
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+        
+        .sombrero {
+            position: relative;
+            width: 40px;
+            height: 30px;
+            margin: 0 auto;
+        }
+        
+        .sombrero-copa {
+            position: absolute;
+            width: 25px;
+            height: 15px;
+            background: #4a2c2a;
+            border-radius: 50% 50% 0 0;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .sombrero-ala {
+            position: absolute;
+            width: 40px;
+            height: 8px;
+            background: #3d2422;
+            border-radius: 50%;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .rostro {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 20px;
+            background: #d4a574;
+            border-radius: 50%;
+        }
+        
+        .bigote {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 4px;
+            background: #2c1810;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .sonrisa {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 4px;
+            background: #8B4513;
+            border-radius: 0 0 50% 50%;
+        }
+        
+        .don-chucho-badge {
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .don-chucho-badge span {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        
+        .don-chucho-badge small {
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+        
+        .chat-indicator {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+        
+        .online-dot {
+            display: block;
+            width: 12px;
+            height: 12px;
+            background: #25D366;
+            border: 2px solid white;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .don-chucho-window {
+            display: none;
+            width: 380px;
+            height: 550px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease-in;
+        }
+        
+        .don-chucho-window.chat-open {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+        }
+        
+        .chat-avatar {
+            width: 40px;
+            height: 40px;
+            position: relative;
+        }
+        
+        .sombrero-mini {
+            position: relative;
+            width: 35px;
+            height: 25px;
+            margin: 0 auto;
+        }
+        
+        .sombrero-copa-mini {
+            position: absolute;
+            width: 20px;
+            height: 12px;
+            background: #4a2c2a;
+            border-radius: 50% 50% 0 0;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .sombrero-ala-mini {
+            position: absolute;
+            width: 35px;
+            height: 6px;
+            background: #3d2422;
+            border-radius: 50%;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .chat-info h4 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        
+        .chat-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .typing-indicator {
+            display: none;
+            font-size: 0.75rem;
+            color: #90EE90;
+            margin-top: 2px;
+        }
+        
+        .chat-close {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-left: auto;
+            transition: background 0.3s;
+        }
+        
+        .chat-close:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .chat-messages {
+            height: 380px;
+            overflow-y: auto;
+            padding: 15px;
+            background: #f8f9fa;
+        }
+        
+        .message {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .bot-message {
+            flex-direction: row;
+        }
+        
+        .user-message {
+            flex-direction: row-reverse;
+        }
+        
+        .message-avatar {
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .sombrero-micro {
+            position: relative;
+            width: 25px;
+            height: 18px;
+            margin: 0 auto;
+        }
+        
+        .sombrero-copa-micro {
+            position: absolute;
+            width: 15px;
+            height: 9px;
+            background: #4a2c2a;
+            border-radius: 50% 50% 0 0;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .sombrero-ala-micro {
+            position: absolute;
+            width: 25px;
+            height: 5px;
+            background: #3d2422;
+            border-radius: 50%;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .message-content {
+            max-width: 75%;
+            padding: 12px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .bot-message .message-content {
+            background: white;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .user-message .message-content {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .quick-replies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .quick-reply {
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        
+        .quick-reply:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
+        
+        .chat-input-area {
+            padding: 15px;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+        
+        .suggestions {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+        
+        .suggestion-chip {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+        
+        .suggestion-chip:hover {
+            background: #e9ecef;
+            border-color: #ccc;
+        }
+        
+        .input-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+        
+        #chat-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        #chat-input:focus {
+            border-color: #8B4513;
+        }
+        
+        .send-btn {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .send-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Responsive para chat */
+        @media (max-width: 768px) {
+            .don-chucho-chat {
+                bottom: 80px;
+                right: 20px;
+            }
+            
+            .don-chucho-window {
+                width: 320px;
+                height: 500px;
+                right: -10px;
+            }
+            
+            .don-chucho-avatar {
+                padding: 10px 12px;
+            }
+            
+            .arriero-avatar {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .sombrero {
+                width: 32px;
+                height: 24px;
+            }
+            
+            .sombrero-copa {
+                width: 20px;
+                height: 12px;
+            }
+            
+            .sombrero-ala {
+                width: 32px;
+                height: 6px;
+            }
+            
+            .don-chucho-badge span {
+                font-size: 0.85rem;
+            }
+            
+            .don-chucho-badge small {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+    
     <script src="assets/js/planes-data.js"></script>
     <script src="assets/js/cotizador.js"></script>
 </body>
