@@ -64,7 +64,14 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Optimización de imágenes -->
+    <link rel="preload" href="assets/images/paisajes/foto_hero1.jpg" as="image">
+    <link rel="preload" href="logo_quindio_travel.png" as="image">
 
     <script type="application/ld+json">
     {
@@ -359,12 +366,19 @@
     <section class="hero" style="background-image: url('assets/images/paisajes/foto_hero1.jpg');" aria-label="Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia">
         <div class="hero-overlay"></div>
         <div class="hero-content container">
-            <h1>Descubre el Eje Cafetero con los expertos locales - #1 Operador Turístico del Quindío</h1>
-            <p>Operador turístico RNT 18152 · +15 años de experiencia · Guías certificados MINCIT · Hoteles finca seleccionados · Precios temporada baja/alta 2026</p>
+            <div class="hero-trust-badges">
+                <span class="trust-badge"><i class="fas fa-award"></i> RNT 18152</span>
+                <span class="trust-badge"><i class="fas fa-shield-alt"></i> Operador Local</span>
+                <span class="trust-badge"><i class="fas fa-star"></i> +1,200 Viajeros</span>
+            </div>
+            <h1>Planes Turísticos Quindío Todo Incluido - Reserva en 48 horas</h1>
+            <p>Operador turístico Eje Cafetero RNT 18152. Parque del Café, Valle de Cocora, Termales. Transporte, hoteles finca, guías certificados. Cotiza ahora y viaja esta semana.</p>
             <div class="hero-buttons">
-                <a href="#contacto" class="btn btn-green"><i class="fas fa-headset"></i> Cotizar ahora</a>
-                <a href="https://wa.me/573174426044" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="planes.html" class="btn btn-outline"><i class="fas fa-list"></i> Ver planes 2026</a>
+                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20un%20plan%20tur%C3%ADstico%20todo%20incluido%20para%20viajar%20en%20menos%20de%2048%20horas" target="_blank" rel="noopener" class="btn btn-whatsapp-hero"><i class="fab fa-whatsapp"></i> <strong>Cotizar WhatsApp - Respuesta Inmediata</strong></a>
+                <a href="planes.html" class="btn btn-green-hero"><i class="fas fa-calendar-check"></i> <strong>Ver Planes Disponibles</strong></a>
+            </div>
+            <div class="hero-urgency">
+                <p><i class="fas fa-clock"></i> <strong>Reserva hoy y viaja esta semana</strong> - Cupos limitados para temporada alta</p>
             </div>
         </div>
     </section>
@@ -422,7 +436,10 @@
                     <p class="price-label">Desde (por persona)</p>
                     <p class="price">$820.000 <span class="per">/ Con transporte</span></p>
                     <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Parque del Café · PANACA · Alojamiento 2 noches · Alimentación</p>
-                    <a href="plan-2.html" class="btn btn-green">Ver programa</a>
+                    <div class="plan-cta-buttons">
+                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20el%20Plan%203%20D%C3%ADas%202%20Noches%20para%20viajar%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+                        <a href="plan-2.html" class="btn btn-green-plan">Ver programa</a>
+                    </div>
                 </div>
             </div>
             <div class="plan-card">
@@ -433,7 +450,10 @@
                     <p class="price-label">Experiencia Completa</p>
                     <p class="price">$1.152.000 <span class="per">/ Con transporte</span></p>
                     <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Valle de Cocora · Salento · Filandia · Parques · Alojamiento</p>
-                    <a href="plan-3.html" class="btn btn-green">Ver programa</a>
+                    <div class="plan-cta-buttons">
+                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20el%20Plan%204%20D%C3%ADas%203%20Noches%20para%20viajar%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+                        <a href="plan-3.html" class="btn btn-green-plan">Ver programa</a>
+                    </div>
                 </div>
             </div>
             <div class="plan-card">
@@ -444,7 +464,10 @@
                     <p class="price-label">Experiencia Definitiva</p>
                     <p class="price">$1.473.000 <span class="per">/ Con transporte</span></p>
                     <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">TODOS los atractivos · Valle de Cocora · Termales · Pueblos</p>
-                    <a href="plan-6.html" class="btn btn-green">Ver programa</a>
+                    <div class="plan-cta-buttons">
+                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20el%20Plan%205%20D%C3%ADas%204%20Noches%20para%20viajar%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+                        <a href="plan-6.html" class="btn btn-green-plan">Ver programa</a>
+                    </div>
                 </div>
             </div>
             <div class="plan-card">
@@ -455,7 +478,10 @@
                     <p class="price-label">Experiencia Exclusiva</p>
                     <p class="price">$1.800.000 <span class="per">/ Con transporte</span></p>
                     <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Alojamiento VIP · Transporte exclusivo · Guías bilingües</p>
-                    <a href="planes.html?categoria=Premium" class="btn btn-green">Ver programa</a>
+                    <div class="plan-cta-buttons">
+                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20el%20Plan%20Premium%20VIP%20para%20viajar%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+                        <a href="planes.html?categoria=Premium" class="btn btn-green-plan">Ver programa</a>
+                    </div>
                 </div>
             </div>
             <div class="plan-card">
@@ -466,7 +492,10 @@
                     <p class="price-label">Team Building</p>
                     <p class="price">$1.450.000 <span class="per">/ Con transporte</span></p>
                     <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Conferencias · Actividades corporativas · Alimentación ejecutiva</p>
-                    <a href="planes.html?categoria=Empresarial" class="btn btn-green">Ver programa</a>
+                    <div class="plan-cta-buttons">
+                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20el%20Plan%20Empresarial%20para%20viajar%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+                        <a href="planes.html?categoria=Empresarial" class="btn btn-green-plan">Ver programa</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -487,9 +516,22 @@
                     </div>
                 </div>
                 <div class="promo-details">
-                    <div class="promo-timer">
-                        <i class="fas fa-clock"></i>
-                        <span>¡Oferta válida por tiempo limitado!</span>
+                    <div class="promo-timer-countdown">
+                        <i class="fas fa-hourglass-half"></i>
+                        <span>⏰ Oferta termina en:</span>
+                        <div class="countdown-timer" id="countdown">
+                            <span class="time-block"><span class="time-value" id="days">02</span><span class="time-label">Días</span></span>
+                            <span class="time-separator">:</span>
+                            <span class="time-block"><span class="time-value" id="hours">18</span><span class="time-label">Horas</span></span>
+                            <span class="time-separator">:</span>
+                            <span class="time-block"><span class="time-value" id="minutes">45</span><span class="time-label">Min</span></span>
+                            <span class="time-separator">:</span>
+                            <span class="time-block"><span class="time-value" id="seconds">30</span><span class="time-label">Seg</span></span>
+                        </div>
+                    </div>
+                    <div class="promo-scarcity">
+                        <i class="fas fa-fire"></i>
+                        <span><strong>¡Solo 7 cupos disponibles!</strong> - Esta semana se han vendido 15 planes</span>
                     </div>
                     <h2 class="promo-title">Plan Especial Valle de Cocora + Termales</h2>
                     <p class="promo-description">Disfruta de la experiencia completa del Eje Cafetero con nuestro plan especial del mes. Incluye Valle de Cocora, Termales Santa Rosa, alojamiento en finca hotel VIP, alimentación completa y transporte privado.</p>
@@ -798,6 +840,56 @@
         </div>
     </section>
 
+    <!-- Trust Signals Section -->
+    <section class="trust-signals" aria-label="Sellos de confianza y garantías Quindío Travel">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>RNT 18152</h4>
+                    <p>Operador turístico legal registrado ante MINCIT</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Garantía de Calidad</h4>
+                    <p>+15 años de experiencia sin quejas registradas</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>Soporte 24/7</h4>
+                    <p>Atención directa con el gerente durante tu viaje</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h4>Precios Transparentes</h4>
+                    <p>Sin costos ocultos, todo incluido en la cotización</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h4>Cancelación Flexible</h4>
+                    <p>Reembolso del 100% hasta 48 horas antes</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h4>Conocimiento Local</h4>
+                    <p>Guías nativos del Quindío con certificación MINCIT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section-white" id="testimonios" aria-label="Testimonios y reseñas de viajeros Quindío Travel">
         <div class="container">
             <h2 class="section-title">⭐ Qué Dicen Nuestros Viajeros</h2>
@@ -809,7 +901,7 @@
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <span class="testimonial-date">Marzo 2026</span>
+                        <span class="testimonial-date">Julio 2026</span>
                     </div>
                     <p class="testimonial-text">"Increíble experiencia en el Valle de Cocora. La finca hotel que nos recomendaron fue perfecta y los guías súper amables. Definitivamente volveremos con Quindío Travel."</p>
                     <div class="testimonial-author">
@@ -824,7 +916,7 @@
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <span class="testimonial-date">Febrero 2026</span>
+                        <span class="testimonial-date">Julio 2026</span>
                     </div>
                     <p class="testimonial-text">"Plan 4 días familiar con nuestros hijos. Todo perfectamente organizado, desde el transporte hasta las entradas a los parques. Los niños disfrutaron muchísimo PANACA y el Parque del Café."</p>
                     <div class="testimonial-author">
@@ -839,7 +931,7 @@
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <span class="testimonial-date">Enero 2026</span>
+                        <span class="testimonial-date">Junio 2026</span>
                     </div>
                     <p class="testimonial-text">"Viaje corporativo con 15 personas. Quindío Travel manejó todo con profesionalidad, desde la cotización hasta la ejecución. Excelente servicio para empresas."</p>
                     <div class="testimonial-author">
@@ -1377,7 +1469,109 @@
             // Mostrar confirmación visual
             alert('¡Gracias por tu solicitud de reserva! Te contactaremos en menos de 2 horas hábiles.');
         }
+
+        // Countdown Timer para Promoción
+        function startCountdown() {
+            // Establecer fecha límite (3 días desde ahora)
+            const deadline = new Date();
+            deadline.setDate(deadline.getDate() + 3);
+            deadline.setHours(23, 59, 59, 999);
+
+            function updateTimer() {
+                const now = new Date();
+                const diff = deadline - now;
+
+                if (diff <= 0) {
+                    // Reiniciar countdown cuando llegue a cero
+                    deadline.setDate(deadline.getDate() + 7);
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        // Iniciar countdown cuando cargue la página
+        document.addEventListener('DOMContentLoaded', startCountdown);
     </script>
+    
+    <!-- Botón flotante de WhatsApp para contacto inmediato -->
+    <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20un%20plan%20tur%C3%ADstico%20para%20viajar%20en%20menos%20de%2048%20horas" 
+       target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Cotizar Ahora</span>
+    </a>
+    
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            background: #25D366;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+            }
+            
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+    
     <script src="assets/js/planes-data.js"></script>
     <script src="assets/js/cotizador.js"></script>
 </body>
