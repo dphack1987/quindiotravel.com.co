@@ -30,6 +30,15 @@
 
     <link rel="canonical" href="https://quindiotravel.com.co/planes.html">
     
+    <!-- Script de datos de atractivos -->
+    <script src="assets/js/atractivos-data.js"></script>
+    
+    <!-- Script de datos de planes -->
+    <script src="assets/js/planes-data.js"></script>
+    
+    <!-- Script de cotizador -->
+    <script src="assets/js/cotizador.js"></script>
+    
     <!-- Enhanced Schema.org para página de planes -->
     <script type="application/ld+json">
     {
@@ -214,6 +223,97 @@
         </div>
     </section>
 
+    <!-- Sección de Detalle de Atractivo (se muestra cuando hay parámetro destino) -->
+    <section class="atractivo-detalle-section container" id="atractivo-detalle" style="display: none;">
+        <div class="atractivo-detalle-container">
+            <div class="atractivo-back-link">
+                <a href="planes.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Volver a todos los planes
+                </a>
+            </div>
+            
+            <div class="atractivo-header">
+                <span class="atractivo-categoria" id="atractivo-categoria"></span>
+                <h1 class="atractivo-titulo" id="atractivo-titulo"></h1>
+                <p class="atractivo-ubicacion"><i class="fas fa-map-marker-alt"></i> <span id="atractivo-ubicacion"></span></p>
+            </div>
+            
+            <div class="atractivo-galeria">
+                <div class="galeria-principal">
+                    <img id="atractivo-imagen-principal" src="" alt="" class="imagen-principal">
+                </div>
+                <div class="galeria-miniaturas" id="atractivo-miniaturas">
+                    <!-- Miniaturas se generan dinámicamente -->
+                </div>
+            </div>
+            
+            <div class="atractivo-contenido">
+                <div class="atractivo-info">
+                    <div class="info-principal">
+                        <h2 class="info-titulo">Descripción</h2>
+                        <p class="info-texto" id="atractivo-descripcion"></p>
+                        <p class="info-texto-detallado" id="atractivo-descripcion-detallada"></p>
+                    </div>
+                    
+                    <div class="info-caracteristicas">
+                        <h2 class="info-titulo">Características</h2>
+                        <ul class="caracteristicas-lista" id="atractivo-caracteristicas">
+                            <!-- Características se generan dinámicamente -->
+                        </ul>
+                    </div>
+                    
+                    <div class="info-actividades">
+                        <h2 class="info-titulo">Actividades</h2>
+                        <ul class="actividades-lista" id="atractivo-actividades">
+                            <!-- Actividades se generan dinámicamente -->
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="atractivo-sidebar">
+                    <div class="sidebar-card">
+                        <h3 class="sidebar-titulo">Información Práctica</h3>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-clock"></i> Horario:</span>
+                            <span class="info-valor" id="atractivo-horario"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-hourglass-half"></i> Duración:</span>
+                            <span class="info-valor" id="atractivo-duracion"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-calendar-alt"></i> Temporada:</span>
+                            <span class="info-valor" id="atractivo-temporada"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-mountain"></i> Dificultad:</span>
+                            <span class="info-valor" id="atractivo-dificultad"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-wheelchair"></i> Accesibilidad:</span>
+                            <span class="info-valor" id="atractivo-accesibilidad"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-ticket-alt"></i> Precio entrada:</span>
+                            <span class="info-valor destacado" id="atractivo-precio"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3 class="sidebar-titulo">Planes que incluyen este atractivo</h3>
+                        <div class="planes-relacionados" id="atractivo-planes">
+                            <!-- Planes se generan dinámicamente -->
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20informaci%C3%B3n%20sobre%20tours%20a%20" class="btn-whatsapp-full btn-atractivo-cta">
+                        <i class="fab fa-whatsapp"></i> Cotizar tour a este atractivo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="cotizador-section container" id="cotizador">
         <div class="cotizador-enhanced">
             <div class="cotizador-header-enhanced">
@@ -365,7 +465,7 @@
                     <button class="pill-enhanced" data-filter="Filandia">Filandia</button>
                     <button class="pill-enhanced" data-filter="Termales Santa Rosa">Termales</button>
                     <button class="pill-enhanced" data-filter="RECUCA">RECUCA</button>
-                    <button class="pill-enhanced" data-filter="Parque Los Arrieros">Los Arrieros</button>
+                    <button class="pill-enhanced" data-filter="Quinti Patas Arriba">Quinti Patas Arriba</button>
                 </div>
             </div>
         </div>
@@ -399,8 +499,11 @@
                     <li><a href="planes.html?destino=Parque del Café">🏞 Parque del Café</a></li>
                     <li><a href="planes.html?destino=PANACA">🐄 PANACA</a></li>
                     <li><a href="planes.html?destino=Valle de Cocora">🌴 Valle de Cocora</a></li>
+                    <li><a href="planes.html?destino=Salento">🏛 Salento</a></li>
+                    <li><a href="planes.html?destino=Filandia">🏘 Filandia</a></li>
                     <li><a href="planes.html?destino=Termales Santa Rosa">♨ Termales Santa Rosa</a></li>
                     <li><a href="planes.html?destino=RECUCA">☕ RECUCA</a></li>
+                    <li><a href="planes.html?destino=Quinti Patas Arriba">🐴 Quinti Patas Arriba</a></li>
                 </ul>
                 <div class="social-icons">
                     <a href="https://wa.me/573174426044" target="_blank" rel="noopener" aria-label="WhatsApp Quindío Travel"><i class="fab fa-whatsapp"></i></a>
@@ -459,6 +562,120 @@ Deseo *reservar y confirmar* la siguiente cotización:
 
             btn.href = `https://wa.me/573174426044?text=${encodeURIComponent(texto)}`;
         }
+
+        // Funcionalidad para mostrar detalle de atractivo cuando hay parámetro destino
+        function mostrarDetalleAtractivo() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const destino = urlParams.get('destino');
+            
+            if (destino) {
+                const atractivo = getAtractivoPorNombre(destino);
+                if (atractivo) {
+                    // Mostrar sección de detalle
+                    document.getElementById('atractivo-detalle').style.display = 'block';
+                    
+                    // Poblar datos del atractivo
+                    document.getElementById('atractivo-categoria').textContent = atractivo.categoria;
+                    document.getElementById('atractivo-titulo').textContent = atractivo.nombre;
+                    document.getElementById('atractivo-ubicacion').textContent = atractivo.ubicacion;
+                    document.getElementById('atractivo-descripcion').textContent = atractivo.descripcion;
+                    document.getElementById('atractivo-descripcion-detallada').textContent = atractivo.descripcionDetallada;
+                    document.getElementById('atractivo-horario').textContent = atractivo.horario;
+                    document.getElementById('atractivo-duracion').textContent = atractivo.duracionRecomendada;
+                    document.getElementById('atractivo-temporada').textContent = atractivo.temporadaRecomendada;
+                    document.getElementById('atractivo-dificultad').textContent = atractivo.nivelDificultad;
+                    document.getElementById('atractivo-accesibilidad').textContent = atractivo.accesibilidad;
+                    document.getElementById('atractivo-precio').textContent = atractivo.precioEntrada;
+                    
+                    // Imagen principal
+                    const imagenPrincipal = document.getElementById('atractivo-imagen-principal');
+                    imagenPrincipal.src = atractivo.imagenes[0];
+                    imagenPrincipal.alt = atractivo.nombre;
+                    
+                    // Generar miniaturas
+                    const miniaturasContainer = document.getElementById('atractivo-miniaturas');
+                    miniaturasContainer.innerHTML = '';
+                    atractivo.imagenes.forEach((imagen, index) => {
+                        const miniatura = document.createElement('div');
+                        miniatura.className = 'miniatura';
+                        miniatura.innerHTML = `<img src="${imagen}" alt="${atractivo.nombre} - Imagen ${index + 1}">`;
+                        miniatura.addEventListener('click', () => {
+                            imagenPrincipal.src = imagen;
+                        });
+                        miniaturasContainer.appendChild(miniatura);
+                    });
+                    
+                    // Generar características
+                    const caracteristicasContainer = document.getElementById('atractivo-caracteristicas');
+                    caracteristicasContainer.innerHTML = '';
+                    atractivo.caracteristicas.forEach(caracteristica => {
+                        const li = document.createElement('li');
+                        li.textContent = caracteristica;
+                        caracteristicasContainer.appendChild(li);
+                    });
+                    
+                    // Generar actividades
+                    const actividadesContainer = document.getElementById('atractivo-actividades');
+                    actividadesContainer.innerHTML = '';
+                    atractivo.actividades.forEach(actividad => {
+                        const li = document.createElement('li');
+                        li.textContent = actividad;
+                        actividadesContainer.appendChild(li);
+                    });
+                    
+                    // Generar planes relacionados
+                    const planesContainer = document.getElementById('atractivo-planes');
+                    planesContainer.innerHTML = '';
+                    atractivo.planesAsociados.forEach(planId => {
+                        const plan = planesData.find(p => p.id === planId);
+                        if (plan) {
+                            const planCard = document.createElement('div');
+                            planCard.className = 'plan-relacionado-card';
+                            planCard.innerHTML = `
+                                <a href="${plan.detalleUrl}" class="plan-relacionado-link">
+                                    <div class="plan-relacionado-info">
+                                        <span class="plan-relacionado-badge">${plan.badge}</span>
+                                        <h4 class="plan-relacionado-titulo">${plan.titulo}</h4>
+                                        <p class="plan-relacionado-precio">Desde $${plan.precioConTransporte.toLocaleString()} COP</p>
+                                    </div>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            `;
+                            planesContainer.appendChild(planCard);
+                        }
+                    });
+                    
+                    // Actualizar botón de WhatsApp específico
+                    const whatsappBtn = document.querySelector('.btn-atractivo-cta');
+                    whatsappBtn.href = `https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20informaci%C3%B3n%20sobre%20tours%20a%20${encodeURIComponent(atractivo.nombre)}`;
+                    
+                    // Scroll hacia la sección de detalle
+                    document.getElementById('atractivo-detalle').scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Ocultar cotizador y grid de planes para foco en el atractivo
+                    document.getElementById('cotizador').style.display = 'none';
+                    document.getElementById('planes').style.display = 'none';
+                }
+            }
+        }
+
+        // Convertir botones de atractivos en enlaces a detalles
+        function configurarBotonesAtractivos() {
+            const botonesAtractivos = document.querySelectorAll('.filter-pills-enhanced.atractivos .pill-enhanced');
+            botonesAtractivos.forEach(boton => {
+                boton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const atractivo = this.getAttribute('data-filter');
+                    window.location.href = `planes.html?destino=${encodeURIComponent(atractivo)}`;
+                });
+            });
+        }
+
+        // Ejecutar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            mostrarDetalleAtractivo();
+            configurarBotonesAtractivos();
+        });
 
         const originalActualizarUI = window.setInterval ? null : null;
         document.addEventListener('DOMContentLoaded', () => {
