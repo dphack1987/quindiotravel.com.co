@@ -274,11 +274,31 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all") {
   }
 
   planesFiltrados.forEach(plan => {
+    // Obtener foto del primer alojamiento asociado
+    const primerAlojamiento = plan.alojamientosAsociados[0];
+    const fotosAlojamiento = {
+      "hotel-campestre-la-tata": "assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata.jpg",
+      "de-la-vega-hotel-campestre": "assets/images/alojamientos/hotel-de-la-vega/hotel-campestre-de-la-vega-3.webp",
+      "finca-hotel-dorada": "assets/images/alojamientos/finca-hotel-la-dorada/1414317914.webp",
+      "cabanas-la-esmeralda": "assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.jpg",
+      "finca-hotel-los-girasoles": "assets/images/alojamientos/finca-hotel-los-girasoles/Finca-los-Girasoles-7.jpg",
+      "hotel-campestre-cafe-cafe": "assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.jpg",
+      "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.jpg"
+    };
+    
+    const fotoAlojamiento = fotosAlojamiento[primerAlojamiento] || "assets/images/alojamientos/cafetal.jpg";
+    
     const card = document.createElement("div");
     card.className = "plan-card-enhanced";
     card.innerHTML = `
+      <div class="plan-card-image-enhanced">
+        <img src="${fotoAlojamiento}" alt="${plan.titulo}">
+        <div class="plan-badge-overlay">
+          <div class="plan-badge-enhanced">${plan.badge}</div>
+        </div>
+      </div>
+      
       <div class="plan-card-header-enhanced">
-        <div class="plan-badge-enhanced">${plan.badge}</div>
         <div class="plan-duration-enhanced">
           <i class="fas fa-clock"></i>
           <span>${plan.dias}D/${plan.noches}N</span>
