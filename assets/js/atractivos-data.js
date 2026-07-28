@@ -284,13 +284,13 @@ const atractivosData = [
     keywords: ["café", "cultura", "sendero", "cata", "tradición"]
   },
   {
-    id: "quinti-patas-arriba",
-    nombre: "Quinti Patas Arriba",
-    nombreCorto: "Quinti Patas Arriba",
+    id: "parque-los-arrieros",
+    nombre: "Parque Los Arrieros",
+    nombreCorto: "Parque Los Arrieros",
     categoria: "Experiencia Cultural",
-    ubicacion: "Pereira, Risaralda",
+    ubicacion: "Buenavista, Quindío",
     descripcion: "Parque temático de la cultura arriería y ganadera con shows tradicionales, paseo en mulas y experiencias vivenciales de la tradición.",
-    descripcionDetallada: "Quinti Patas Arriba es un parque temático dedicado a la cultura arriería y ganadera del Eje Cafetero. Los visitantes pueden experimentar la tradición de los arrieros a través de shows tradicionales, paseo en mulas, demostraciones de técnicas ganaderas y experiencias vivenciales que reviven la historia de los arrieros que conectaban las regiones.",
+    descripcionDetallada: "Parque Los Arrieros es un parque temático dedicado a la cultura arriería y ganadera del Eje Cafetero. Los visitantes pueden experimentar la tradición de los arrieros a través de shows tradicionales, paseo en mulas, demostraciones de técnicas ganaderas y experiencias vivenciales que reviven la historia de los arrieros que conectaban las regiones.",
     caracteristicas: [
       "Cultura arriería tradicional",
       "Shows tradicionales de arrieros",
@@ -316,11 +316,11 @@ const atractivosData = [
     nivelDificultad: "Fácil",
     accesibilidad: "Parcialmente accesible",
     imagenes: [
-      "assets/images/atractivos/quinti-patas-arriba.jpg",
+      "assets/images/destinos/logo_parque_los_arrieros.png",
       "quinti-patas-arriba/qintiparque.jpg"
     ],
     precioEntrada: "Desde $55,000 COP",
-    planesAsociados: ["plan-5"],
+    planesAsociados: [],
     keywords: ["arrieros", "mulas", "cultura", "tradición", "ganadería"]
   },
   {
