@@ -259,10 +259,15 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all") {
 
   if (planesFiltrados.length === 0) {
     contenedor.innerHTML = `
-      <div class="no-results" style="text-align:center;padding:60px 20px;background:white;border-radius:10px;grid-column:1/-1;">
-        <i class="fas fa-search" style="font-size:3rem;color:var(--marron-madera);margin-bottom:15px;"></i>
-        <h3 style="color:var(--verde-cafe);margin-bottom:10px;">No hay planes para este filtro</h3>
+      <div class="no-results-enhanced">
+        <div class="no-results-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <h3>No hay planes para este filtro</h3>
         <p>Prueba combinando otra duración u otro destino turístico.</p>
+        <button onclick="renderizarPlanes('all', 'all')" class="btn-reset-enhanced-inline">
+          <i class="fas fa-redo"></i> Ver todos los planes
+        </button>
       </div>
     `;
     return;
@@ -270,51 +275,66 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all") {
 
   planesFiltrados.forEach(plan => {
     const card = document.createElement("div");
-    card.className = "plan-card plan-card-dynamic";
+    card.className = "plan-card-enhanced";
     card.innerHTML = `
-      <div class="plan-header">
-        <span class="badge-plan">${plan.badge}</span>
-        <h3>${plan.titulo}</h3>
-        <div class="plan-meta" style="font-size:0.9rem;color:var(--marron-madera);font-weight:600;margin-bottom:10px;">
-          <i class="fas fa-clock"></i> ${plan.dias} Días / ${plan.noches} Noches
-          &nbsp;&nbsp;
-          <i class="fas fa-flag"></i> ${plan.categoria}
+      <div class="plan-card-header-enhanced">
+        <div class="plan-badge-enhanced">${plan.badge}</div>
+        <div class="plan-duration-enhanced">
+          <i class="fas fa-clock"></i>
+          <span>${plan.dias}D/${plan.noches}N</span>
         </div>
       </div>
-      <div class="plan-body">
-        <p class="plan-descripcion">${plan.descripcion}</p>
-
-        <div class="plan-atractivos" style="margin:15px 0;">
-          <strong style="color:var(--verde-cafe);"><i class="fas fa-map-marker-alt"></i> Atractivos:</strong>
-          <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:6px;">
-            ${plan.atractivosIncluidos.map(a => `<span class="tag-atractivo">${a}</span>`).join("")}
+      
+      <div class="plan-card-body-enhanced">
+        <h3 class="plan-title-enhanced">${plan.titulo}</h3>
+        <p class="plan-description-enhanced">${plan.descripcion}</p>
+        
+        <div class="plan-features-enhanced">
+          <div class="feature-item-enhanced">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>${plan.atractivosIncluidos.length} destinos</span>
+          </div>
+          <div class="feature-item-enhanced">
+            <i class="fas fa-utensils"></i>
+            <span>Alimentación incluida</span>
+          </div>
+          <div class="feature-item-enhanced">
+            <i class="fas fa-shield-alt"></i>
+            <span>Asistencia médica</span>
           </div>
         </div>
-
-        <div class="plan-programa-resumen" style="margin:15px 0;padding:12px;background:var(--gris-claro);border-radius:8px;">
-          <strong style="color:var(--verde-cafe);"><i class="fas fa-list-ol"></i> Programa rápido:</strong>
-          <ul style="margin-top:8px;padding-left:20px;font-size:0.9rem;">
+        
+        <div class="plan-destinations-enhanced">
+          ${plan.atractivosIncluidos.map(a => `<span class="destination-tag-enhanced">${a}</span>`).join("")}
+        </div>
+        
+        <div class="plan-programa-enhanced">
+          <h4><i class="fas fa-list-ol"></i> Itinerario</h4>
+          <ul>
             ${plan.resumenPrograma.map(dia => `<li>${dia}</li>`).join("")}
           </ul>
         </div>
-
-        <div class="plan-prices">
-          <div class="price-row">
-            <span><i class="fas fa-door-open"></i> Sin Transporte (por persona):</span>
-            <strong>$ ${plan.precioSinTransporte.toLocaleString('es-CO')} COP</strong>
+        
+        <div class="plan-pricing-enhanced">
+          <div class="price-item-enhanced">
+            <span class="price-label-enhanced">Sin transporte</span>
+            <span class="price-value-enhanced">$${plan.precioSinTransporte.toLocaleString('es-CO')}</span>
           </div>
-          <div class="price-row">
-            <span><i class="fas fa-shuttle-van"></i> Con Transporte (por persona):</span>
-            <strong>$ ${plan.precioConTransporte.toLocaleString('es-CO')} COP</strong>
+          <div class="price-item-enhanced featured">
+            <span class="price-label-enhanced">Con transporte</span>
+            <span class="price-value-enhanced">$${plan.precioConTransporte.toLocaleString('es-CO')}</span>
           </div>
         </div>
       </div>
-      <div class="plan-footer" style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a href="${plan.detalleUrl}" class="btn btn-outline btn-outline-green" style="flex:1;min-width:120px;">
-          <i class="fas fa-file-alt"></i> Programa completo
+      
+      <div class="plan-card-footer-enhanced">
+        <a href="${plan.detalleUrl}" class="btn-plan-enhanced btn-outline-plan">
+          <i class="fas fa-file-alt"></i>
+          <span>Ver detalles</span>
         </a>
-        <a href="https://wa.me/573174426044?text=${encodeURIComponent('Hola Quindío Travel 🌿, deseo cotizar el ' + plan.titulo + ' para ' + (obtenerParametroURL('personas') || 2) + ' personas. Fecha aproximada: ' + (obtenerParametroURL('fecha') || 'Por confirmar') + '. ¿Podrían ayudarme con la disponibilidad?')}" class="btn btn-whatsapp" target="_blank" rel="noopener" style="flex:1;min-width:120px;">
-          <i class="fab fa-whatsapp"></i> Cotizar
+        <a href="https://wa.me/573174426044?text=${encodeURIComponent('Hola Quindío Travel 🌿, deseo cotizar el ' + plan.titulo + ' para ' + (obtenerParametroURL('personas') || 2) + ' personas. Fecha aproximada: ' + (obtenerParametroURL('fecha') || 'Por confirmar') + '. ¿Podrían ayudarme con la disponibilidad?')}" class="btn-plan-enhanced btn-whatsapp-plan" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          <span>Cotizar ahora</span>
         </a>
       </div>
     `;
@@ -329,13 +349,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderizarPlanes(filtroInicialDuracion, filtroInicialAtractivo);
 
-  const pillsDuracion = document.querySelectorAll(".filter-pills.duracion .pill");
+  const pillsDuracion = document.querySelectorAll(".filter-pills-enhanced.duracion .pill-enhanced");
   pillsDuracion.forEach(pill => {
     pill.addEventListener("click", () => {
       pillsDuracion.forEach(p => p.classList.remove("active"));
       pill.classList.add("active");
       const filtro = pill.getAttribute("data-filter");
-      const filtroActivoAtractivo = document.querySelector(".filter-pills.atractivos .pill.active")?.getAttribute("data-filter") || "all";
+      const filtroActivoAtractivo = document.querySelector(".filter-pills-enhanced.atractivos .pill-enhanced.active")?.getAttribute("data-filter") || "all";
       renderizarPlanes(filtro, filtroActivoAtractivo);
     });
     if (pill.getAttribute("data-filter") === filtroInicialDuracion) {
@@ -343,14 +363,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const pillsAtractivos = document.querySelectorAll(".filter-pills.atractivos .pill");
+  const pillsAtractivos = document.querySelectorAll(".filter-pills-enhanced.atractivos .pill-enhanced");
   pillsAtractivos.forEach(pill => {
     pill.addEventListener("click", () => {
       const estabaActivo = pill.classList.contains("active");
       pillsAtractivos.forEach(p => p.classList.remove("active"));
       if (!estabaActivo) pill.classList.add("active");
       const filtro = estabaActivo ? "all" : pill.getAttribute("data-filter");
-      const filtroActivoDuracion = document.querySelector(".filter-pills.duracion .pill.active")?.getAttribute("data-filter") || "all";
+      const filtroActivoDuracion = document.querySelector(".filter-pills-enhanced.duracion .pill-enhanced.active")?.getAttribute("data-filter") || "all";
       renderizarPlanes(filtroActivoDuracion, filtro);
     });
     if (pill.getAttribute("data-filter") === filtroInicialAtractivo && filtroInicialAtractivo !== "all") {
@@ -363,7 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
     selectTodos.addEventListener("click", () => {
       pillsDuracion.forEach(p => p.classList.remove("active"));
       pillsAtractivos.forEach(p => p.classList.remove("active"));
-      const pillTodos = document.querySelector('.filter-pills.duracion .pill[data-filter="all"]');
+      const pillTodos = document.querySelector('.filter-pills-enhanced.duracion .pill-enhanced[data-filter="all"]');
       if (pillTodos) pillTodos.classList.add("active");
       renderizarPlanes("all", "all");
     });
