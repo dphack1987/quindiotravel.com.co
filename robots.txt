@@ -1,4 +1,4 @@
-# robots.txt para Quindío Travel - Optimizado para SEO
+# robots.txt para Quindío Travel - Optimizado para SEO avanzado
 # Permite a los motores de búsqueda rastrear todo el sitio
 # Bloquea contenido duplicado y áreas sensibles
 
@@ -12,6 +12,9 @@ Disallow: /tmp/
 Disallow: /private/
 Disallow: /admin/
 Disallow: /don-chucho-backend/test/
+Disallow: /docs/
+Disallow: /.devin/
+Disallow: /agents/
 
 # Permitir sitemaps
 Sitemap: https://quindiotravel.com.co/sitemap.xml
@@ -25,6 +28,10 @@ User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
 # Bloquear bots maliciosos
 User-agent: SemrushBot
 Disallow: /
@@ -35,10 +42,39 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
+User-agent: DotBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
 # Permitir imágenes para búsqueda de imágenes
 User-agent: Googlebot-Image
+Allow: /assets/images/
+
+User-agent: Bingbot-Image
 Allow: /assets/images/
 
 # Optimización para mobile
 User-agent: Googlebot-Mobile
 Allow: /
+
+# Optimización para video (si aplica)
+User-agent: Googlebot-Video
+Allow: /
+
+# Optimización para noticias (si aplica)
+User-agent: Googlebot-News
+Allow: /
+
+# Optimización para JavaScript y CSS
+User-agent: Googlebot
+Allow: *.js
+Allow: *.css
+Allow: /assets/js/
+Allow: /assets/css/
+
+# Optimización para structured data
+User-agent: *
+Allow: /assets/js/atractivos-data.js
+Allow: /assets/js/planes-data.js
