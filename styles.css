@@ -3348,4 +3348,41 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(46, 90, 54, 0.3);
 }
+
+/* Estilos para selector de idioma */
+.language-selector-container {
+    margin-right: 15px;
+}
+
+.language-selector {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 2px solid var(--verde-cafe);
+    background: var(--blanco);
+    color: var(--texto-oscuro);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.language-selector:hover {
+    background: var(--verde-cafe);
+    color: var(--blanco);
+}
+
+.language-selector:focus {
+    box-shadow: 0 0 0 3px rgba(46, 90, 54, 0.3);
+}
+
+@media (max-width: 768px) {
+    .language-selector-container {
+        margin-right: 10px;
+    }
+    
+    .language-selector {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
 }
