@@ -4,15 +4,30 @@
     <!-- Página Principal -->
     <url>
         <loc>https://quindiotravel.com.co/</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+    </url>
+    
+    <!-- Multiidioma -->
+    <url>
+        <loc>https://quindiotravel.com.co/?lang=en</loc>
+        <lastmod>2026-07-29</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://quindiotravel.com.co/?lang=pt</loc>
+        <lastmod>2026-07-29</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
     </url>
     
     <!-- Planes Turísticos -->
     <url>
         <loc>https://quindiotravel.com.co/planes.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
@@ -20,42 +35,42 @@
     <!-- Planes Individuales -->
     <url>
         <loc>https://quindiotravel.com.co/plan-1.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/plan-2.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/plan-3.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/plan-4.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/plan-5.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/plan-6.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -63,28 +78,28 @@
     <!-- Destinos -->
     <url>
         <loc>https://quindiotravel.com.co/salento.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/filandia.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/parque-del-cafe.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/valle-de-cocora.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -92,7 +107,7 @@
     <!-- Blog -->
     <url>
         <loc>https://quindiotravel.com.co/blog-mejor-epoca-eje-cafetero.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -100,49 +115,49 @@
     <!-- Hoteles -->
     <url>
         <loc>https://quindiotravel.com.co/hotel-campestre-cafe-cafe.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/hotel-campestre-la-tata.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/hotel-campestre-las-camelias.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/hotel-de-la-vega.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/finca-hotel-la-dorada.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/finca-hotel-los-girasoles.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/cabanas-la-esmeralda.html</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -150,56 +165,56 @@
     <!-- Planes con filtros (atractivos) -->
     <url>
         <loc>https://quindiotravel.com.co/planes.html?destino=Parque%20del%20Café</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/planes.html?destino=PANACA</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/planes.html?destino=Valle%20de%20Cocora</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/planes.html?destino=Salento</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/planes.html?destino=Filandia</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/planes.html?destino=Termales%20Santa%20Rosa</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/planes.html?destino=RECUCA</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>https://quindiotravel.com.co/planes.html?destino=Quinti%20Patas%20Arriba</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>

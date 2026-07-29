@@ -1,6 +1,7 @@
 # robots.txt para Quindío Travel - Optimizado para SEO avanzado
 # Permite a los motores de búsqueda rastrear todo el sitio
 # Bloquea contenido duplicado y áreas sensibles
+# Actualizado: 2026-07-29 - Soporte multiidioma
 
 User-agent: *
 Allow: /

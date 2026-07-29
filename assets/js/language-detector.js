@@ -252,7 +252,31 @@ function createLanguageSelector() {
         setLanguage(this.value);
     });
     
-    headerActions.insertBefore(selectorContainer, headerActions.firstChild);
+    // Insertar antes del botón hamburguesa para mejor UX móvil
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    if (hamburgerBtn && window.innerWidth <= 768) {
+        headerActions.insertBefore(selectorContainer, hamburgerBtn);
+    } else {
+        headerActions.insertBefore(selectorContainer, headerActions.firstChild);
+    }
+    
+    // Asegurar que funcione en redimensionamiento
+    window.addEventListener('resize', function() {
+        const existingSelector = document.getElementById('language-selector');
+        if (existingSelector) {
+            const container = existingSelector.parentElement;
+            if (window.innerWidth <= 768) {
+                const hamburgerBtn = document.getElementById('hamburger-btn');
+                if (hamburgerBtn && container.nextElementSibling !== hamburgerBtn) {
+                    headerActions.insertBefore(container, hamburgerBtn);
+                }
+            } else {
+                if (container !== headerActions.firstChild) {
+                    headerActions.insertBefore(container, headerActions.firstChild);
+                }
+            }
+        }
+    });
 }
 
 // Inicializar cuando el DOM esté listo
