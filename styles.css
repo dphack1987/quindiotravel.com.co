@@ -3425,4 +3425,639 @@ body {
         padding: 15px;
         display: block;
     }
+    
+    /* Mejoras adicionales para móviles */
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .search-box {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .plans-grid-enhanced {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .why-us {
+        padding: 40px 0;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .cotizador-box {
+        padding: 20px;
+    }
+    
+    .cotizador-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .cotizador-resultados {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .plan-card-dynamic {
+        margin-bottom: 15px;
+    }
+    
+    .filtros-wrapper {
+        padding: 20px;
+    }
+    
+    .filter-pills {
+        gap: 8px;
+    }
+    
+    .filter-pills .pill {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .map-banner {
+        padding: 30px 15px;
+    }
+    
+    .map-banner h2 {
+        font-size: 1.6rem;
+    }
+    
+    .map-banner p {
+        font-size: 1rem;
+    }
+    
+    /* Mejoras para touch targets */
+    a, button, select, input {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Evitar zoom en inputs */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
+    
+    /* Mejoras de scroll */
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Optimización de imágenes */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Mejoras para el header móvil */
+    .nav-container {
+        padding: 10px 0;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .hamburger-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Ajustes para el popup en móvil */
+    .popup-content {
+        margin: 10px;
+        padding: 20px;
+        max-height: 90vh;
+    }
+    
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Mejoras para las cards de planes */
+    .plan-card {
+        margin-bottom: 20px;
+    }
+    
+    .plan-body {
+        padding: 15px;
+    }
+    
+    /* Optimización para badges de confianza */
+    .hero-trust-badges {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .trust-badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    /* Mejoras para botones de WhatsApp */
+    .btn-whatsapp-hero,
+    .btn-green-hero {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+    
+    /* Ajustes para el footer móvil */
+    .main-footer-section {
+        padding: 30px 0 15px 0;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    /* Mejoras para los cards de atractivos */
+    .atractivo-contenido {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .atractivo-titulo {
+        font-size: 1.5rem;
+    }
+    
+    .galeria-principal {
+        height: 200px;
+    }
+    
+    /* Optimización para hotel cards */
+    .hotel-card {
+        margin-bottom: 20px;
+    }
+    
+    .hotel-body {
+        padding: 15px;
+    }
+    
+    /* Mejoras para formularios */
+    .form {
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    /* Ajustes para la tabla de precios */
+    .price-table {
+        font-size: 0.85rem;
+    }
+    
+    .price-table th,
+    .price-table td {
+        padding: 8px 4px;
+    }
+    
+    /* Optimización para el chatbot móvil */
+    .chatbot-container {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    /* Mejoras para botones de navegación */
+    .btn-back {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
+    /* Ajustes para el hero section */
+    .hero {
+        height: 60vh;
+    }
+    
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Optimización para las promociones */
+    .promo-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .promo-img-wrapper {
+        height: 200px;
+    }
+    
+    .promo-title {
+        font-size: 1.3rem;
+    }
+    
+    /* Mejoras para el timeline o itinerarios */
+    .timeline-item {
+        padding: 15px;
+    }
+    
+    .timeline-content {
+        font-size: 0.9rem;
+    }
+    
+    /* Ajustes para los iconos de redes sociales */
+    .social-icons a {
+        padding: 8px;
+        font-size: 1rem;
+    }
+    
+    /* Optimización para galerías */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    /* Mejoras para testimonios */
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+    
+    /* Ajustes para FAQ */
+    .faq-item {
+        padding: 15px;
+    }
+    
+    .faq-question {
+        font-size: 0.95rem;
+    }
+    
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+    
+    /* Optimización para los filtros de planes */
+    .filtros-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    /* Mejoras para el mapa interactivo */
+    .map-interactive {
+        height: 300px;
+    }
+    
+    /* Ajustes para las tarjetas de características */
+    .feature-item {
+        padding: 15px;
+    }
+    
+    .feature-item i {
+        font-size: 2rem;
+    }
+    
+    /* Optimización para las tabs de navegación */
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Mejoras para los badges */
+    .badge {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    
+    /* Ajustes para los alertas */
+    .alert {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    /* Optimización para los modales */
+    .modal-content {
+        margin: 10px;
+        padding: 20px;
+        max-height: 90vh;
+    }
+    
+    /* Mejoras para las tooltips */
+    .tooltip {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+    
+    /* Ajustes para las listas */
+    ul, ol {
+        padding-left: 20px;
+    }
+    
+    li {
+        margin-bottom: 8px;
+    }
+    
+    /* Optimización para las tablas */
+    table {
+        font-size: 0.85rem;
+    }
+    
+    th, td {
+        padding: 8px 6px;
+    }
+    
+    /* Mejoras para los cards de información */
+    .info-card {
+        padding: 15px;
+    }
+    
+    .info-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .info-card p {
+        font-size: 0.9rem;
+    }
+    
+    /* Ajustes para los contadores */
+    .counter {
+        font-size: 2rem;
+    }
+    
+    /* Optimización para los progress bars */
+    .progress-bar {
+        height: 8px;
+    }
+    
+    /* Mejoras para los tags */
+    .tag {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    
+    /* Ajustes para los avatares */
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Optimización para los breadcrumbs */
+    .breadcrumb {
+        font-size: 0.85rem;
+    }
+    
+    /* Mejoras para la paginación */
+    .pagination {
+        flex-wrap: wrap;
+    }
+    
+    .page-link {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    /* Ajustes para los ratings */
+    .rating {
+        font-size: 0.9rem;
+    }
+    
+    /* Optimización para los chips */
+    .chip {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    /* Mejoras para los divider */
+    .divider {
+        margin: 15px 0;
+    }
+    
+    /* Ajustes para los skeleton loaders */
+    .skeleton {
+        height: 40px;
+    }
+    
+    /* Optimización para los empty states */
+    .empty-state {
+        padding: 30px 20px;
+    }
+    
+    .empty-state p {
+        font-size: 0.9rem;
+    }
+    
+    /* Mejoras para los estados de carga */
+    .loading {
+        font-size: 0.9rem;
+    }
+    
+    /* Ajustes para los mensajes de error */
+    .error-message {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+    
+    /* Optimización para los success messages */
+    .success-message {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+    
+    /* Mejoras para los warning messages */
+    .warning-message {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+    
+    /* Ajustes para los info messages */
+    .info-message {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}
+
+/* Tablet optimizations */
+@media (min-width: 481px) and (max-width: 768px) {
+    .plans-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .plans-grid-enhanced {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile optimizations < 480px */
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    
+    .container {
+        width: 96%;
+        padding: 0 8px;
+    }
+    
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .plans-grid-enhanced {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .cotizador-box {
+        padding: 15px;
+    }
+    
+    .cotizador-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .cotizador-resultados {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 15px;
+    }
+    
+    .filtros-wrapper {
+        padding: 15px;
+    }
+    
+    .filter-pills {
+        gap: 6px;
+    }
+    
+    .filter-pills .pill {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .map-banner {
+        padding: 20px 12px;
+    }
+    
+    .map-banner h2 {
+        font-size: 1.4rem;
+    }
+    
+    .map-banner p {
+        font-size: 0.9rem;
+    }
+    
+    /* Safe area insets para dispositivos con notch */
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+    
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
 }

@@ -22,12 +22,15 @@ function calcularCotizacion(temporada, transporte, hotelId, paxCount) {
 
   const data = QUINDIO_TRAVEL_DATA.tarifasPlan4D3N;
   
-  if (!data[temporada] || !data[temporada][transporte] || !data[temporada][transporte][hotelId]) {
+  // Usar solo sin_transporte para cotizaciones básicas
+  const transportType = "sin_transporte";
+  
+  if (!data[transportType] || !data[transportType][hotelId]) {
     return { error: "Datos no encontrados para la combinación seleccionada." };
   }
 
   const keyPax = "pax" + paxCount;
-  const precioPorPersona = data[temporada][transporte][hotelId][keyPax];
+  const precioPorPersona = data[transportType][hotelId][keyPax];
 
   if (!precioPorPersona) {
     return { error: "No hay tarifa disponible para este número de pasajeros (tarifa pendiente de definir)." };
@@ -46,20 +49,18 @@ function calcularCotizacion(temporada, transporte, hotelId, paxCount) {
 
 // Actualizar la interfaz si los elementos existen en el DOM
 function actualizarUI() {
-  const selectTemporada = document.getElementById('select-temporada');
-  const selectTransporte = document.getElementById('select-transporte');
-  const selectHotel = document.getElementById('select-hotel');
+  const selectCategoria = document.getElementById('select-categoria');
   const selectPax = document.getElementById('select-pax');
 
   const displayPersona = document.getElementById('precio-persona');
   const displayTotal = document.getElementById('precio-total');
 
-  if (!selectTemporada || !selectTransporte || !selectHotel || !selectPax) return;
+  if (!selectCategoria || !selectPax) return;
 
   const res = calcularCotizacion(
-    selectTemporada.value,
-    selectTransporte.value,
-    selectHotel.value,
+    'sin_transporte',
+    'sin_transporte',
+    selectCategoria.value,
     parseInt(selectPax.value)
   );
 
@@ -73,7 +74,7 @@ function actualizarUI() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const inputs = ['select-temporada', 'select-transporte', 'select-hotel', 'select-pax'];
+  const inputs = ['select-categoria', 'select-pax'];
   inputs.forEach(id => {
     const el = document.getElementById(id);
     if (el) el.addEventListener('change', actualizarUI);
