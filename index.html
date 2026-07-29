@@ -1719,69 +1719,187 @@
 
     <section class="section-white" id="reservas" aria-label="Sistema de reservas Quindío Travel">
         <div class="container">
-            <h2 class="section-title">📝 Sistema de Reservas Online</h2>
+            <h2 class="section-title">📝 Sistema de Reservas Inteligente</h2>
             <p class="section-subtitle" style="text-align:center; margin-bottom: 40px; color: var(--marron-madera); font-weight: 500;">
-                Reserva tu experiencia al Eje Cafetero en 3 simples pasos. Confirmación inmediata por WhatsApp.
+                Cotiza y reserva tu experiencia al Eje Cafetero en tiempo real. Precios actualizados 2026.
             </p>
             
             <div class="reservas-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
                 <div class="reservas-form-container" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <h3 style="color: var(--verde-cafe); margin-bottom: 25px;">📋 Datos de tu Reserva</h3>
+                    <h3 style="color: var(--verde-cafe); margin-bottom: 25px;">📋 Cotizador Inteligente</h3>
+                    
+                    <!-- Barra de progreso -->
+                    <div class="progress-bar-container" style="margin-bottom: 25px;">
+                        <div class="progress-bar" style="height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden;">
+                            <div class="progress-fill" style="height: 100%; background: var(--verde-cafe); width: 0%; transition: width 0.3s ease;"></div>
+                        </div>
+                        <div class="progress-steps" style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; color: #666;">
+                            <span class="step active" data-step="1">1. Plan</span>
+                            <span class="step" data-step="2">2. Fechas</span>
+                            <span class="step" data-step="3">3. Datos</span>
+                            <span class="step" data-step="4">4. Confirmar</span>
+                        </div>
+                    </div>
+                    
                     <form id="reserva-form" onsubmit="procesarReserva(event)">
-                        <div class="form-group" style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Plan Turístico *</label>
-                            <select id="reserva-plan" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
-                                <option value="">Selecciona un plan</option>
-                                <option value="plan-4">Plan 4 Días / 3 Noches - Desde $1.152.000</option>
-                                <option value="plan-5">Plan 5 Días / 4 Noches - Desde $1.473.000</option>
-                                <option value="plan-premium">Plan Premium VIP - Desde $4.768.000</option>
-                                <option value="plan-empresarial">Plan Empresarial - Cotizar</option>
-                            </select>
+                        <!-- Paso 1: Selección de Plan -->
+                        <div class="form-step active" data-step="1">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Plan Turístico *</label>
+                                <select id="reserva-plan" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="">Selecciona un plan</option>
+                                    <option value="plan-1">Plan 1 - 2 Días / 1 Noche - Desde $425.000</option>
+                                    <option value="plan-2">Plan 2 - 3 Días / 2 Noches - Desde $430.000</option>
+                                    <option value="plan-3">Plan 3 - 4 Días / 3 Noches - Desde $570.000</option>
+                                    <option value="plan-4">Plan 4 - 4 Días / 3 Noches - Desde $570.000</option>
+                                    <option value="plan-5">Plan 5 - 4 Días / 3 Noches - Desde $777.000</option>
+                                    <option value="plan-6">Plan 6 - 5 Días / 4 Noches - Desde $820.000</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Categoría de Alojamiento *</label>
+                                <select id="reserva-categoria" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="">Selecciona categoría</option>
+                                    <option value="economica">Económico - Quinta del Café, Dorada</option>
+                                    <option value="intermedia">Intermedio - Cabañas La Esmeralda, Los Aperos</option>
+                                    <option value="intermedia_vip">Intermedio VIP - Los Girasoles, La Tata, Combia</option>
+                                    <option value="vip">VIP - Hotel Campestre Camellias, Mocawa Resort</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Tipo de Transporte *</label>
+                                <select id="reserva-transporte" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="sin_transporte">Sin Transporte (Precios base)</option>
+                                    <option value="radio_taxi">Radio Taxi</option>
+                                    <option value="placa_blanca">Placa Blanca</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="btn btn-green" onclick="nextStep(2)" style="width: 100%; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                Continuar <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
                         
-                        <div class="form-group" style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Número de Personas *</label>
-                            <input type="number" id="reserva-personas" min="1" max="30" value="2" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <!-- Paso 2: Fechas y Personas -->
+                        <div class="form-step" data-step="2" style="display: none;">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Fecha de Viaje *</label>
+                                <input type="date" id="reserva-fecha" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Número de Adultos *</label>
+                                <input type="number" id="reserva-adultos" min="1" max="30" value="2" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Número de Niños (2-10 años)</label>
+                                <input type="number" id="reserva-ninos" min="0" max="20" value="0" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <!-- Resumen de precio en tiempo real -->
+                            <div class="price-summary" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--verde-cafe);">
+                                <h4 style="color: var(--verde-cafe); margin-bottom: 10px; font-size: 0.9rem;">💰 Estimación de Precio</h4>
+                                <div class="price-details">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #666;">Precio por persona:</span>
+                                        <span id="precio-persona" style="font-weight: 700; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #666;">Total adultos:</span>
+                                        <span id="total-adultos" style="font-weight: 700; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #666;">Total niños:</span>
+                                        <span id="total-ninos" style="font-weight: 700; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                    <div style="border-top: 1px solid #ddd; margin-top: 10px; padding-top: 10px; display: flex; justify-content: space-between;">
+                                        <span style="font-weight: 700; color: var(--texto-oscuro);">Total estimado:</span>
+                                        <span id="total-estimado" style="font-weight: 800; font-size: 1.2rem; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.75rem; color: #888; margin-top: 8px; margin-bottom: 0;">* Precios SIN TRANSPORTE según portafolio oficial 2026</p>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px;">
+                                <button type="button" class="btn btn-outline-green" onclick="prevStep(1)" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fas fa-arrow-left"></i> Atrás
+                                </button>
+                                <button type="button" class="btn btn-green" onclick="nextStep(3)" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    Continuar <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
                         
-                        <div class="form-group" style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Fecha de Viaje *</label>
-                            <input type="date" id="reserva-fecha" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <!-- Paso 3: Datos Personales -->
+                        <div class="form-step" data-step="3" style="display: none;">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Nombre Completo *</label>
+                                <input type="text" id="reserva-nombre" required placeholder="Tu nombre completo" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">WhatsApp / Celular *</label>
+                                <input type="tel" id="reserva-whatsapp" required placeholder="+57 3XX XXX XXXX" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Correo Electrónico *</label>
+                                <input type="email" id="reserva-email" required placeholder="tu@correo.com" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Método de Pago Preferido</label>
+                                <select id="reserva-pago" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="nequi">Nequi / Transferencia Bancaria</option>
+                                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                                    <option value="efectivo">Efectivo (en oficina)</option>
+                                    <option value="empresa">Facturación Empresarial</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 25px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Comentarios Adicionales</label>
+                                <textarea id="reserva-comentarios" rows="3" placeholder="Cualquier requerimiento especial, preferencias de alojamiento, etc." style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px;">
+                                <button type="button" class="btn btn-outline-green" onclick="prevStep(2)" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fas fa-arrow-left"></i> Atrás
+                                </button>
+                                <button type="button" class="btn btn-green" onclick="nextStep(4)" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    Revisar <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
                         
-                        <div class="form-group" style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Nombre Completo *</label>
-                            <input type="text" id="reserva-nombre" required placeholder="Tu nombre completo" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <!-- Paso 4: Confirmación -->
+                        <div class="form-step" data-step="4" style="display: none;">
+                            <div class="confirmation-summary" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                                <h4 style="color: var(--verde-cafe); margin-bottom: 15px; font-size: 1rem;">📋 Resumen de tu Reserva</h4>
+                                <div id="resumen-detallado" style="font-size: 0.9rem; line-height: 1.8;">
+                                    <!-- Se llena dinámicamente -->
+                                </div>
+                            </div>
+                            
+                            <div class="terms-accept" style="margin-bottom: 20px;">
+                                <label style="display: flex; align-items: start; gap: 10px; font-size: 0.85rem; color: #666;">
+                                    <input type="checkbox" id="aceptar-terminos" required style="margin-top: 3px;">
+                                    <span>Acepto los <a href="#" style="color: var(--verde-cafe);">términos y condiciones</a> y la <a href="#" style="color: var(--verde-cafe);">política de privacidad</a> de Quindío Travel RNT 18152</span>
+                                </label>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px;">
+                                <button type="button" class="btn btn-outline-green" onclick="prevStep(3)" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fas fa-arrow-left"></i> Atrás
+                                </button>
+                                <button type="submit" class="btn btn-green" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fab fa-whatsapp"></i> Enviar a WhatsApp
+                                </button>
+                            </div>
                         </div>
-                        
-                        <div class="form-group" style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">WhatsApp / Celular *</label>
-                            <input type="tel" id="reserva-whatsapp" required placeholder="+57 3XX XXX XXXX" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
-                        </div>
-                        
-                        <div class="form-group" style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Correo Electrónico *</label>
-                            <input type="email" id="reserva-email" required placeholder="tu@correo.com" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
-                        </div>
-                        
-                        <div class="form-group" style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Método de Pago Preferido</label>
-                            <select id="reserva-pago" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
-                                <option value="nequi">Nequi / Transferencia Bancaria</option>
-                                <option value="tarjeta">Tarjeta de Crédito/Débito</option>
-                                <option value="efectivo">Efectivo (en oficina)</option>
-                                <option value="empresa">Facturación Empresarial</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group" style="margin-bottom: 25px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Comentarios Adicionales</label>
-                            <textarea id="reserva-comentarios" rows="3" placeholder="Cualquier requerimiento especial, preferencias de alojamiento, etc." style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-green" style="width: 100%; padding: 15px; font-size: 1.1rem; font-weight: 700;">
-                            <i class="fas fa-paper-plane"></i> Enviar Solicitud de Reserva
-                        </button>
                     </form>
                 </div>
                 
@@ -2290,37 +2408,270 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
         function procesarReserva(event) {
             event.preventDefault();
             
+            // Obtener valores del formulario
             const plan = document.getElementById('reserva-plan').value;
-            const personas = document.getElementById('reserva-personas').value;
+            const categoria = document.getElementById('reserva-categoria').value;
+            const transporte = document.getElementById('reserva-transporte').value;
             const fecha = document.getElementById('reserva-fecha').value;
+            const adultos = document.getElementById('reserva-adultos').value;
+            const ninos = document.getElementById('reserva-ninos').value;
             const nombre = document.getElementById('reserva-nombre').value;
             const whatsapp = document.getElementById('reserva-whatsapp').value;
             const email = document.getElementById('reserva-email').value;
             const pago = document.getElementById('reserva-pago').value;
             const comentarios = document.getElementById('reserva-comentarios').value;
             
-            // Obtener nombre del plan seleccionado
+            // Obtener nombres seleccionados
             const planSelect = document.getElementById('reserva-plan');
             const planNombre = planSelect.options[planSelect.selectedIndex].text;
             
-            // Construir mensaje de WhatsApp
-            const mensaje = `📝 *NUEVA SOLICITUD DE RESERVA*%0A%0A` +
-                `👤 *Nombre:* ${nombre}%0A` +
+            const categoriaSelect = document.getElementById('reserva-categoria');
+            const categoriaNombre = categoriaSelect.options[categoriaSelect.selectedIndex].text;
+            
+            const transporteSelect = document.getElementById('reserva-transporte');
+            const transporteNombre = transporteSelect.options[transporteSelect.selectedIndex].text;
+            
+            // Obtener precios calculados
+            const precioPersona = document.getElementById('precio-persona').textContent;
+            const totalEstimado = document.getElementById('total-estimado').textContent;
+            
+            // Construir mensaje de WhatsApp estructurado
+            const mensaje = `📝 *NUEVA COTIZACIÓN INTELIGENTE*%0A%0A` +
+                `👤 *Cliente:* ${nombre}%0A` +
                 `📱 *WhatsApp:* ${whatsapp}%0A` +
                 `📧 *Email:* ${email}%0A%0A` +
                 `🎯 *Plan:* ${planNombre}%0A` +
-                `👥 *Personas:* ${personas}%0A` +
+                `🏨 *Categoría:* ${categoriaNombre}%0A` +
+                `🚗 *Transporte:* ${transporteNombre}%0A%0A` +
                 `📅 *Fecha:* ${fecha}%0A` +
+                `👥 *Adultos:* ${adultos}%0A` +
+                `👶 *Niños:* ${ninos}%0A%0A` +
+                `💰 *Cotización:*%0A` +
+                `   Precio por persona: ${precioPersona}%0A` +
+                `   Total estimado: ${totalEstimado}%0A%0A` +
                 `💳 *Pago:* ${pago}%0A%0A` +
                 `📝 *Comentarios:* ${comentarios || 'Ninguno'}%0A%0A` +
-                `✅ *Enviado desde formulario web*`;
+                `✅ *Enviado desde cotizador inteligente Quindío Travel*`;
             
             // Redirigir a WhatsApp
             window.open(`https://wa.me/573174426044?text=${mensaje}`, '_blank');
             
             // Mostrar confirmación visual
-            alert('¡Gracias por tu solicitud de reserva! Te contactaremos en menos de 2 horas hábiles.');
+            alert('¡Cotización enviada! Te contactaremos en menos de 2 horas hábiles con disponibilidad real y confirmación.');
         }
+        
+        // Funciones para el formulario multi-step
+        let currentStepForm = 1;
+        const totalStepsForm = 4;
+        
+        function nextStep(step) {
+            // Validar paso actual antes de continuar
+            if (!validateStep(currentStepForm)) {
+                return;
+            }
+            
+            // Ocultar paso actual
+            document.querySelector(`.form-step[data-step="${currentStepForm}"]`).style.display = 'none';
+            
+            // Mostrar siguiente paso
+            currentStepForm = step;
+            document.querySelector(`.form-step[data-step="${currentStepForm}"]`).style.display = 'block';
+            
+            // Actualizar barra de progreso
+            updateProgressBar();
+            
+            // Si llegamos al paso 4, generar resumen
+            if (currentStepForm === 4) {
+                generateSummary();
+            }
+            
+            // Si llegamos al paso 2, calcular precios
+            if (currentStepForm === 2) {
+                calculatePrice();
+            }
+        }
+        
+        function prevStep(step) {
+            // Ocultar paso actual
+            document.querySelector(`.form-step[data-step="${currentStepForm}"]`).style.display = 'none';
+            
+            // Mostrar paso anterior
+            currentStepForm = step;
+            document.querySelector(`.form-step[data-step="${currentStepForm}"]`).style.display = 'block';
+            
+            // Actualizar barra de progreso
+            updateProgressBar();
+        }
+        
+        function validateStep(step) {
+            if (step === 1) {
+                const plan = document.getElementById('reserva-plan').value;
+                const categoria = document.getElementById('reserva-categoria').value;
+                const transporte = document.getElementById('reserva-transporte').value;
+                
+                if (!plan || !categoria || !transporte) {
+                    alert('Por favor completa todos los campos requeridos');
+                    return false;
+                }
+            }
+            
+            if (step === 2) {
+                const fecha = document.getElementById('reserva-fecha').value;
+                const adultos = document.getElementById('reserva-adultos').value;
+                
+                if (!fecha || !adultos) {
+                    alert('Por favor completa todos los campos requeridos');
+                    return false;
+                }
+            }
+            
+            if (step === 3) {
+                const nombre = document.getElementById('reserva-nombre').value;
+                const whatsapp = document.getElementById('reserva-whatsapp').value;
+                const email = document.getElementById('reserva-email').value;
+                
+                if (!nombre || !whatsapp || !email) {
+                    alert('Por favor completa todos los campos requeridos');
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+        
+        function updateProgressBar() {
+            const progress = ((currentStepForm - 1) / (totalStepsForm - 1)) * 100;
+            document.querySelector('.progress-fill').style.width = `${progress}%`;
+            
+            // Actualizar indicadores de pasos
+            document.querySelectorAll('.step').forEach((step, index) => {
+                const stepNumber = index + 1;
+                if (stepNumber <= currentStepForm) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+        }
+        
+        function calculatePrice() {
+            const categoria = document.getElementById('reserva-categoria').value;
+            const transporte = document.getElementById('reserva-transporte').value;
+            const adultos = parseInt(document.getElementById('reserva-adultos').value) || 0;
+            const ninos = parseInt(document.getElementById('reserva-ninos').value) || 0;
+            
+            // Precios base SIN TRANSPORTE del portafolio oficial
+            const preciosBase = {
+                'economica': 570000,
+                'intermedia': 615000,
+                'intermedia_vip': 1000000,
+                'vip': 2305000
+            };
+            
+            // Multiplicadores por tipo de transporte
+            const multiplicadoresTransporte = {
+                'sin_transporte': 1,
+                'radio_taxi': 1.8,
+                'placa_blanca': 2.0
+            };
+            
+            const precioBase = preciosBase[categoria] || 570000;
+            const multiplicador = multiplicadoresTransporte[transporte] || 1;
+            const precioPersona = Math.round(precioBase * multiplicador);
+            
+            // Niños pagan 70% del precio de adultos
+            const precioNino = Math.round(precioPersona * 0.7);
+            
+            const totalAdultos = precioPersona * adultos;
+            const totalNinos = precioNino * ninos;
+            const totalEstimado = totalAdultos + totalNinos;
+            
+            // Actualizar DOM
+            document.getElementById('precio-persona').textContent = formatCurrency(precioPersona);
+            document.getElementById('total-adultos').textContent = formatCurrency(totalAdultos);
+            document.getElementById('total-ninos').textContent = formatCurrency(totalNinos);
+            document.getElementById('total-estimado').textContent = formatCurrency(totalEstimado);
+        }
+        
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('es-CO', {
+                style: 'currency',
+                currency: 'COP',
+                maximumFractionDigits: 0
+            }).format(amount);
+        }
+        
+        function generateSummary() {
+            const planSelect = document.getElementById('reserva-plan');
+            const planNombre = planSelect.options[planSelect.selectedIndex].text;
+            
+            const categoriaSelect = document.getElementById('reserva-categoria');
+            const categoriaNombre = categoriaSelect.options[categoriaSelect.selectedIndex].text;
+            
+            const transporteSelect = document.getElementById('reserva-transporte');
+            const transporteNombre = transporteSelect.options[transporteSelect.selectedIndex].text;
+            
+            const fecha = document.getElementById('reserva-fecha').value;
+            const adultos = document.getElementById('reserva-adultos').value;
+            const ninos = document.getElementById('reserva-ninos').value;
+            const nombre = document.getElementById('reserva-nombre').value;
+            const whatsapp = document.getElementById('reserva-whatsapp').value;
+            const email = document.getElementById('reserva-email').value;
+            const pago = document.getElementById('reserva-pago').value;
+            const comentarios = document.getElementById('reserva-comentarios').value;
+            
+            const precioPersona = document.getElementById('precio-persona').textContent;
+            const totalEstimado = document.getElementById('total-estimado').textContent;
+            
+            const resumenHTML = `
+                <div style="margin-bottom: 10px;">
+                    <strong>🎯 Plan:</strong> ${planNombre}
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>🏨 Categoría:</strong> ${categoriaNombre}
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>🚗 Transporte:</strong> ${transporteNombre}
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>📅 Fecha:</strong> ${fecha}
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>👥 Viajeros:</strong> ${adultos} adultos, ${ninos} niños
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>👤 Cliente:</strong> ${nombre}
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>📱 Contacto:</strong> ${whatsapp} | ${email}
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>💳 Pago:</strong> ${pago}
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>💰 Total:</strong> ${totalEstimado}
+                </div>
+                ${comentarios ? `<div style="margin-bottom: 0;"><strong>📝 Comentarios:</strong> ${comentarios}</div>` : ''}
+            `;
+            
+            document.getElementById('resumen-detallado').innerHTML = resumenHTML;
+        }
+        
+        // Event listeners para cálculo en tiempo real
+        document.addEventListener('DOMContentLoaded', function() {
+            const adultosInput = document.getElementById('reserva-adultos');
+            const ninosInput = document.getElementById('reserva-ninos');
+            
+            if (adultosInput) {
+                adultosInput.addEventListener('change', calculatePrice);
+                adultosInput.addEventListener('input', calculatePrice);
+            }
+            
+            if (ninosInput) {
+                ninosInput.addEventListener('change', calculatePrice);
+                ninosInput.addEventListener('input', calculatePrice);
+            }
+        });
 
         // Countdown Timer para Promoción
         function startCountdown() {
