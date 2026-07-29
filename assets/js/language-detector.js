@@ -27,7 +27,7 @@ const translations = {
             whatsapp: "Solicitar cotización por WhatsApp"
         },
         experiences: {
-            title: "✨ Experiencias Inolvidables del Eje Cafetero",
+            title: "Guía de turismo en Quindío: experiencias y rutas",
             subtitle: "Vive los atractivos más icónicos con la compañía de guías locales que conocen cada rincón del Quindío."
         },
         footer: {
@@ -69,7 +69,7 @@ const translations = {
             whatsapp: "Request quote via WhatsApp"
         },
         experiences: {
-            title: "✨ Unforgettable Coffee Axis Experiences",
+            title: "Quindío tourism guide: experiences and routes",
             subtitle: "Experience the most iconic attractions with local guides who know every corner of Quindío."
         },
         footer: {
@@ -111,7 +111,7 @@ const translations = {
             whatsapp: "Solicitar cotação via WhatsApp"
         },
         experiences: {
-            title: "✨ Experiências Inesquecíveis do Eixo Cafeeiro",
+            title: "Guia de turismo em Quindío: experiências e rotas",
             subtitle: "Viva os atrativos mais icônicos com guias locais que conhecem cada canto de Quindío."
         },
         footer: {
