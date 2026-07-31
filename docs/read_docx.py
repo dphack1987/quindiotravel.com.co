@@ -1,14 +1,21 @@
 from docx import Document
 import sys
 import traceback
+from pathlib import Path
 
 def read_docx(file_path):
     try:
-        print("Opening file: " + file_path)
-        doc = Document(file_path)
+        # Convertir a Path y validar que existe
+        file_path = Path(file_path)
+        if not file_path.exists():
+            print(f"Error: El archivo no existe: {file_path}")
+            return False
+        
+        print("Opening file: " + str(file_path))
+        doc = Document(str(file_path))
         
         print("=" * 80)
-        print("FILE: " + file_path)
+        print("FILE: " + str(file_path))
         print("=" * 80)
         print("Paragraphs: " + str(len(doc.paragraphs)))
         print("Tables: " + str(len(doc.tables)))
@@ -44,5 +51,21 @@ def read_docx(file_path):
         return False
 
 if __name__ == "__main__":
-    file_path = r"C:\Users\user\Documents\www.quindiotravel.com\docs\Pagina www.quindiotravel.com.co.docx"
+    # Usar ruta relativa al directorio del script
+    script_dir = Path(__file__).parent
+    file_path = script_dir / "Pagina www.quindiotravel.com.co.docx"
+    
+    # Si no existe el archivo específico, mostrar ayuda
+    if not file_path.exists():
+        print("Uso: python read_docx.py [ruta_archivo]")
+        print("Por defecto busca: Pagina www.quindiotravel.com.co.docx")
+        print(f"Directorio actual: {script_dir}")
+        
+        # Intentar usar argumento de línea de comandos si se proporciona
+        if len(sys.argv) > 1:
+            file_path = Path(sys.argv[1])
+        else:
+            print("Por favor proporciona la ruta del archivo .docx como argumento")
+            sys.exit(1)
+    
     read_docx(file_path)

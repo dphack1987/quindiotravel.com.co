@@ -51,20 +51,31 @@ class PerformanceOptimizer {
     const criticalResources = [
       { href: '/assets/css/critical.css', as: 'style' },
       { href: '/assets/js/whatsapp-payload-builder.js', as: 'script' },
-      { href: '/logo_quindio_travel.png', as: 'image' }
+      { href: '/assets/images/logo_quindio_travel.png', as: 'image' }
     ];
 
     criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource.href;
-      link.as = resource.as;
-      
-      if (resource.as === 'style') {
-        link.onload = () => link.rel = 'stylesheet';
-      }
-      
-      document.head.appendChild(link);
+      // Validar que el recurso existe antes de intentar preload
+      fetch(resource.href, { method: 'HEAD' })
+        .then(response => {
+          if (response.ok) {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.href = resource.href;
+            link.as = resource.as;
+            
+            if (resource.as === 'style') {
+              link.onload = () => link.rel = 'stylesheet';
+            }
+            
+            document.head.appendChild(link);
+          } else {
+            console.warn(`Recurso no encontrado para preload: ${resource.href}`);
+          }
+        })
+        .catch(error => {
+          console.warn(`Error validando recurso ${resource.href}:`, error);
+        });
     });
   }
 

@@ -1,12 +1,20 @@
 import docx2txt
+from pathlib import Path
+import sys
 
 def read_docx_simple(file_path):
     try:
-        print("Opening file: " + file_path)
-        text = docx2txt.process(file_path)
+        # Convertir a Path y validar que existe
+        file_path = Path(file_path)
+        if not file_path.exists():
+            print(f"Error: El archivo no existe: {file_path}")
+            return False
         
-        # Save to file instead of printing to avoid encoding issues
-        output_file = r"C:\Users\user\Documents\www.quindiotravel.com\docs\Pagina_www_quindiotravel_com_co_content.txt"
+        print("Opening file: " + str(file_path))
+        text = docx2txt.process(str(file_path))
+        
+        # Guardar en archivo con nombre dinámico basado en el input
+        output_file = file_path.parent / f"{file_path.stem}_content.txt"
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write(text)
         
@@ -25,5 +33,21 @@ def read_docx_simple(file_path):
         return False
 
 if __name__ == "__main__":
-    file_path = r"C:\Users\user\Documents\www.quindiotravel.com\docs\Pagina www.quindiotravel.com.co.docx"
+    # Usar ruta relativa al directorio del script
+    script_dir = Path(__file__).parent
+    file_path = script_dir / "Pagina www.quindiotravel.com.co.docx"
+    
+    # Si no existe el archivo específico, mostrar ayuda
+    if not file_path.exists():
+        print("Uso: python read_docx_simple.py [ruta_archivo]")
+        print("Por defecto busca: Pagina www.quindiotravel.com.co.docx")
+        print(f"Directorio actual: {script_dir}")
+        
+        # Intentar usar argumento de línea de comandos si se proporciona
+        if len(sys.argv) > 1:
+            file_path = Path(sys.argv[1])
+        else:
+            print("Por favor proporciona la ruta del archivo .docx como argumento")
+            sys.exit(1)
+    
     read_docx_simple(file_path)
