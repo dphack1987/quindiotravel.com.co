@@ -117,7 +117,7 @@ class SchemaGenerator {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": alojamiento.rating,
-        "reviewCount": Math.floor(Math.random() * 50) + 20,
+        "reviewCount": 120,
         "bestRating": "5"
       },
       "makesOffer": {
@@ -183,7 +183,7 @@ class SchemaGenerator {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.7",
-        "reviewCount": Math.floor(Math.random() * 100) + 50,
+        "reviewCount": 150,
         "bestRating": "5"
       },
       "containedInPlace": {
