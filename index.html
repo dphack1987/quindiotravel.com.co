@@ -257,10 +257,7 @@
                     "itemOffered": {
                         "@type": "Trip",
                         "name": "Plan 3 Días / 2 Noches",
-                        "description": "Parque del Café, PANACA, alojamiento 2 noches, alimentación, transporte",
-                        "price": "820000",
-                        "priceCurrency": "COP",
-                        "availability": "https://schema.org/InStock"
+                        "description": "Parque del Café, PANACA, alojamiento 2 noches, alimentación, transporte"
                     },
                     "price": "820000",
                     "priceCurrency": "COP",
@@ -272,10 +269,7 @@
                     "itemOffered": {
                         "@type": "Trip",
                         "name": "Plan 4 Días / 3 Noches",
-                        "description": "Valle de Cocora, Salento, Filandia, parques, alojamiento 3 noches, alimentación, transporte",
-                        "price": "1152000",
-                        "priceCurrency": "COP",
-                        "availability": "https://schema.org/InStock"
+                        "description": "Valle de Cocora, Salento, Filandia, parques, alojamiento 3 noches, alimentación, transporte"
                     },
                     "price": "1152000",
                     "priceCurrency": "COP",
@@ -287,10 +281,7 @@
                     "itemOffered": {
                         "@type": "Trip",
                         "name": "Plan 5 Días / 4 Noches",
-                        "description": "Todos los atractivos, Valle de Cocora, Termales, pueblos, alojamiento 4 noches, alimentación, transporte",
-                        "price": "1473000",
-                        "priceCurrency": "COP",
-                        "availability": "https://schema.org/InStock"
+                        "description": "Todos los atractivos, Valle de Cocora, Termales, pueblos, alojamiento 4 noches, alimentación, transporte"
                     },
                     "price": "1473000",
                     "priceCurrency": "COP",
@@ -452,8 +443,8 @@
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "4.5351",
-            "longitude": "-75.6754"
+            "latitude": 4.5351,
+            "longitude": -75.6754
         },
         "openingHoursSpecification": [
             {
@@ -503,7 +494,12 @@
                     "itemOffered": {
                         "@type": "TouristTrip",
                         "name": "Turismo Quindío",
-                        "description": "Experiencias turísticas en el departamento del Quindío"
+                        "description": "Experiencias turísticas en el departamento del Quindío",
+                        "touristType": ["Cultural", "Adventure", "Nature"],
+                        "provider": {
+                            "@type": "TravelAgency",
+                            "name": "Quindío Travel"
+                        }
                     }
                 },
                 {
@@ -511,7 +507,12 @@
                     "itemOffered": {
                         "@type": "TouristTrip",
                         "name": "Turismo Termales",
-                        "description": "Tours a termales Santa Rosa y zonas wellness"
+                        "description": "Tours a termales Santa Rosa y zonas wellness",
+                        "touristType": ["Wellness", "Health"],
+                        "provider": {
+                            "@type": "TravelAgency",
+                            "name": "Quindío Travel"
+                        }
                     }
                 }
             ]
@@ -605,6 +606,7 @@
         "@type": "TouristTrip",
         "name": "Turismo Eje Cafetero Colombia",
         "description": "Experiencias completas de turismo en el Eje Cafetero colombiano con Quindío Travel, operador turístico RNT 18152 especializado en planes turísticos del Quindío, Salento, Filandia, Parque del Café, PANACA, Valle de Cocora y Termales Santa Rosa.",
+        "image": "https://quindiotravel.com.co/assets/images/paisajes/foto_hero1.jpg",
         "provider": {
             "@type": "TravelAgency",
             "name": "Quindío Travel",
@@ -639,34 +641,39 @@
         "description": "Región turística del Eje Cafetero colombiano que incluye los departamentos de Quindío, Risaralda y Caldas, famosa por su cultura cafetera, paisajes naturales, pueblos patrimonio y experiencias turísticas únicas.",
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "4.6351",
-            "longitude": "-75.5754"
+            "latitude": 4.6351,
+            "longitude": -75.5754
         },
         "containsPlace": [
             {
                 "@type": "Place",
                 "name": "Armenia Quindío",
-                "description": "Capital del departamento del Quindío, punto de acceso principal al Eje Cafetero"
+                "description": "Capital del departamento del Quindío, punto de acceso principal al Eje Cafetero",
+                "url": "https://quindiotravel.com.co/#destinos"
             },
             {
                 "@type": "Place",
                 "name": "Salento Quindío",
-                "description": "Pueblo patrimonio histórico, punto de acceso al Valle de Cocora"
+                "description": "Pueblo patrimonio histórico, punto de acceso al Valle de Cocora",
+                "url": "https://quindiotravel.com.co/#destinos"
             },
             {
                 "@type": "Place",
                 "name": "Filandia Quindío",
-                "description": "Pueblo patrimonio conocido por sus artesanías en guadua y mirador cóndor"
+                "description": "Pueblo patrimonio conocido por sus artesanías en guadua y mirador cóndor",
+                "url": "https://quindiotravel.com.co/#destinos"
             },
             {
                 "@type": "Place",
                 "name": "Valle de Cocora",
-                "description": "Valle sagrado con las palmas de cera más altas del mundo"
+                "description": "Valle sagrado con las palmas de cera más altas del mundo",
+                "url": "https://quindiotravel.com.co/#destinos"
             },
             {
                 "@type": "Place",
                 "name": "Termales Santa Rosa",
-                "description": "Complejo termal en Santa Rosa de Cabal, Risaralda"
+                "description": "Complejo termal en Santa Rosa de Cabal, Risaralda",
+                "url": "https://quindiotravel.com.co/#destinos"
             }
         ]
     }
@@ -874,6 +881,10 @@
         "review": [
             {
                 "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Servicio de turismo Quindío Travel"
+                },
                 "author": {
                     "@type": "Person",
                     "name": "Ana María López"
@@ -889,6 +900,10 @@
             },
             {
                 "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Servicio de turismo Quindío Travel"
+                },
                 "author": {
                     "@type": "Person",
                     "name": "Javier Martínez"
@@ -904,6 +919,10 @@
             },
             {
                 "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Servicio de turismo Quindío Travel"
+                },
                 "author": {
                     "@type": "Person",
                     "name": "Laura Díaz"
@@ -919,6 +938,10 @@
             },
             {
                 "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Servicio de turismo Quindío Travel"
+                },
                 "author": {
                     "@type": "Person",
                     "name": "Roberto Sánchez"
@@ -934,6 +957,10 @@
             },
             {
                 "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Servicio de turismo Quindío Travel"
+                },
                 "author": {
                     "@type": "Person",
                     "name": "Carmen Vega"
@@ -1000,8 +1027,11 @@
         "name": "Quindío Travel",
         "legalName": "Quindío Travel S.A.",
         "foundingDate": "2010",
-        "taxId": "RNT 18152",
-        "duns": "RNT 18152",
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "name": "RNT",
+            "value": "18152"
+        },
         "url": "https://quindiotravel.com.co",
         "logo": "https://quindiotravel.com.co/logo_quindio_travel.png",
         "description": "Operador turístico especializado en el Eje Cafetero colombiano. RNT 18152.",
@@ -1123,50 +1153,47 @@
                 }
             }
         ],
-        "itinerary": [
-            {
-                "@type": "TouristTrip",
-                "name": "Día 1: Llegada y Alojamiento",
-                "description": "Traslado desde terminal de transporte, check-in en finca hotel seleccionada, cena incluida"
-            },
-            {
-                "@type": "TouristTrip",
-                "name": "Día 2: Valle de Cocora y Salento",
-                "description": "Visita al Valle de Cocora, paseo por Salento, Museo del Canasto y Calle del Tiempo Detenida"
-            },
-            {
-                "@type": "TouristTrip",
-                "name": "Día 3: Filandia y Parques Temáticos",
-                "description": "Recorrido por Filandia, visita al Parque del Café y PANACA"
-            },
-            {
-                "@type": "TouristTrip",
-                "name": "Día 4: Parque Recuca y Regreso",
-                "description": "Experiencia en RECUCA Tradición Cafetera, almuerzo típico, transporte de regreso"
-            }
-        ],
-        "includedIn": [
-            {
-                "@type": "Ticket",
-                "name": "Pasaporte Parque del Café",
-                "description": "Entrada completa al parque temático del café"
-            },
-            {
-                "@type": "Ticket",
-                "name": "Entrada PANACA",
-                "description": "Acceso al parque de la naturaleza y cultura cafetera"
-            },
-            {
-                "@type": "LodgingReservation",
-                "name": "3 Noches de Alojamiento",
-                "description": "3 opciones de hotel: Cabañas La Esmeralda, Hotel Los Girasoles, Hotel Café Café"
-            },
-            {
-                "@type": "FoodService",
-                "name": "Alimentación Completa",
-                "description": "3 desayunos y 3 cenas incluidas"
-            }
-        ],
+        "itinerary": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "Place",
+                        "name": "Día 1: Llegada y Alojamiento",
+                        "description": "Traslado desde terminal de transporte, check-in en finca hotel seleccionada, cena incluida"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "Place",
+                        "name": "Día 2: Valle de Cocora y Salento",
+                        "description": "Visita al Valle de Cocora, paseo por Salento, Museo del Canasto y Calle del Tiempo Detenida"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@type": "Place",
+                        "name": "Día 3: Filandia y Parques Temáticos",
+                        "description": "Recorrido por Filandia, visita al Parque del Café y PANACA"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@type": "Place",
+                        "name": "Día 4: Parque Recuca y Regreso",
+                        "description": "Experiencia en RECUCA Tradición Cafetera, almuerzo típico, transporte de regreso"
+                    }
+                }
+            ]
+        },
         "potentialAction": {
             "@type": "ReserveAction",
             "target": {
@@ -1267,11 +1294,7 @@
                 "name": "¿Cuál es la fecha válida para la Promoción Vientos de Agosto 2026?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "La promoción Plan Vientos de Agosto 2026 es válida durante todo el mes de agosto de 2026, desde el 1 hasta el 31 de agosto. Es una oferta exclusiva de temporada alta con cupos limitados.",
-                    "author": {
-                        "@type": "Organization",
-                        "name": "Quindío Travel"
-                    }
+                    "text": "La promoción Plan Vientos de Agosto 2026 es válida durante todo el mes de agosto de 2026, desde el 1 hasta el 31 de agosto. Es una oferta exclusiva de temporada alta con cupos limitados."
                 }
             },
             {
@@ -1279,11 +1302,7 @@
                 "name": "¿Qué incluye exactamente el Plan Vientos de Agosto 2026?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "El plan incluye 4 días/3 noches todo incluido: 3 noches de alojamiento en 3 opciones de hotel (Cabañas La Esmeralda, Hotel Los Girasoles, Hotel Café Café), 3 desayunos y 3 cenas, pasaporte Parque del Café, entradas a PANACA y RECUCA, transporte desde terminal de transporte, visita a Valle de Cocora, Salento, Filandia con Museo del Canasto y Calle del Tiempo Detenida, y asistencia médica incluida.",
-                    "author": {
-                        "@type": "Organization",
-                        "name": "Quindío Travel"
-                    }
+                    "text": "El plan incluye 4 días/3 noches todo incluido: 3 noches de alojamiento en 3 opciones de hotel (Cabañas La Esmeralda, Hotel Los Girasoles, Hotel Café Café), 3 desayunos y 3 cenas, pasaporte Parque del Café, entradas a PANACA y RECUCA, transporte desde terminal de transporte, visita a Valle de Cocora, Salento, Filandia con Museo del Canasto y Calle del Tiempo Detenida, y asistencia médica incluida."
                 }
             },
             {
@@ -1291,11 +1310,7 @@
                 "name": "¿Cuál es el precio del Plan Vientos de Agosto 2026 según el tipo de habitación?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Los precios varían según el alojamiento y tipo de habitación: Cabañas La Esmeralda ($1.152.000 cuádruple, $1.261.000 triple, $1.479.000 doble), Hotel Los Girasoles ($1.588.000 cuádruple, $1.697.000 triple, $1.915.000 doble), Hotel Café Café ($1.770.000 cuádruple, $1.879.000 triple, $2.097.000 doble). Todos los precios son por persona en COP.",
-                    "author": {
-                        "@type": "Organization",
-                        "name": "Quindío Travel"
-                    }
+                    "text": "Los precios varían según el alojamiento y tipo de habitación: Cabañas La Esmeralda ($1.152.000 cuádruple, $1.261.000 triple, $1.479.000 doble), Hotel Los Girasoles ($1.588.000 cuádruple, $1.697.000 triple, $1.915.000 doble), Hotel Café Café ($1.770.000 cuádruple, $1.879.000 triple, $2.097.000 doble). Todos los precios son por persona en COP."
                 }
             },
             {
@@ -1303,11 +1318,7 @@
                 "name": "¿Cuántos cupos disponibles hay para la Promoción Vientos de Agosto 2026?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Actualmente hay solo 15 cupos disponibles a este precio promocional. Esta limitación asegura una experiencia de calidad y atención personalizada. Se recomienda reservar con anticipación para garantizar disponibilidad.",
-                    "author": {
-                        "@type": "Organization",
-                        "name": "Quindío Travel"
-                    }
+                    "text": "Actualmente hay solo 15 cupos disponibles a este precio promocional. Esta limitación asegura una experiencia de calidad y atención personalizada. Se recomienda reservar con anticipación para garantizar disponibilidad."
                 }
             },
             {
@@ -1315,11 +1326,7 @@
                 "name": "¿El Plan Vientos de Agosto 2026 incluye transporte?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sí, el plan incluye transporte desde el terminal de transporte hasta el alojamiento elegido y entre los diferentes atractivos turísticos (Valle de Cocora, Salento, Filandia, Parque del Café, PANACA, RECUCA). El transporte es seguro y certificado.",
-                    "author": {
-                        "@type": "Organization",
-                        "name": "Quindío Travel"
-                    }
+                    "text": "Sí, el plan incluye transporte desde el terminal de transporte hasta el alojamiento elegido y entre los diferentes atractivos turísticos (Valle de Cocora, Salento, Filandia, Parque del Café, PANACA, RECUCA). El transporte es seguro y certificado."
                 }
             },
             {
@@ -1327,11 +1334,7 @@
                 "name": "¿Es la Promoción Vientos de Agosto 2026 adecuada para familias?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Absolutamente. El plan está diseñado para familias, parejas y grupos. Incluye experiencias familiares como PANACA, Parque del Café, y los alojamientos tienen piscinas, zonas infantiles y servicios adecuados para niños. También es ideal para parejas que buscan experiencias románticas en el Eje Cafetero.",
-                    "author": {
-                        "@type": "Organization",
-                        "name": "Quindío Travel"
-                    }
+                    "text": "Absolutamente. El plan está diseñado para familias, parejas y grupos. Incluye experiencias familiares como PANACA, Parque del Café, y los alojamientos tienen piscinas, zonas infantiles y servicios adecuados para niños. También es ideal para parejas que buscan experiencias románticas en el Eje Cafetero."
                 }
             }
         ]
