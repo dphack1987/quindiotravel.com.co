@@ -1,81 +1,41 @@
-# robots.txt para Quindío Travel - Optimizado para SEO avanzado
-# Permite a los motores de búsqueda rastrear todo el sitio
-# Bloquea contenido duplicado y áreas sensibles
-# Actualizado: 2026-07-29 - Soporte multiidioma
+# Quindío Travel Robots.txt
+# Optimizado para SEO técnico y crawlers
 
 User-agent: *
 Allow: /
 
-# Bloquear directorios temporales y de desarrollo
-Disallow: /Finca-Hotel-La-Dorada/
-Disallow: /temp/
-Disallow: /tmp/
-Disallow: /private/
-Disallow: /admin/
-Disallow: /don-chucho-backend/test/
-Disallow: /docs/
-Disallow: /.devin/
-Disallow: /agents/
-
-# Permitir sitemaps
+# Sitemaps
 Sitemap: https://quindiotravel.com.co/sitemap.xml
+Sitemap: https://quindiotravel.com.co/sitemap-main.xml
+Sitemap: https://quindiotravel.com.co/sitemap-municipios.xml
+Sitemap: https://quindiotravel.com.co/sitemap-alojamientos.xml
+Sitemap: https://quindiotravel.com.co/sitemap-atractivos.xml
+Sitemap: https://quindiotravel.com.co/sitemap-tipos-viaje.xml
+Sitemap: https://quindiotravel.com.co/sitemap-amenidades.xml
 
-# Optimización para diferentes crawlers
+# Disallow directories específicos
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /generated-pages/
+Disallow: /pseo-engine/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Crawl-delay para no sobrecargar el servidor
+Crawl-delay: 1
+
+# Optimización para Googlebot
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 
+# Optimización para Bingbot
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 1
-
-# Bloquear bots maliciosos
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: Baiduspider
-Disallow: /
-
-# Permitir imágenes para búsqueda de imágenes
+# Optimización para crawlers de imágenes
 User-agent: Googlebot-Image
 Allow: /assets/images/
 
 User-agent: Bingbot-Image
 Allow: /assets/images/
-
-# Optimización para mobile
-User-agent: Googlebot-Mobile
-Allow: /
-
-# Optimización para video (si aplica)
-User-agent: Googlebot-Video
-Allow: /
-
-# Optimización para noticias (si aplica)
-User-agent: Googlebot-News
-Allow: /
-
-# Optimización para JavaScript y CSS
-User-agent: Googlebot
-Allow: *.js
-Allow: *.css
-Allow: /assets/js/
-Allow: /assets/css/
-
-# Optimización para structured data
-User-agent: *
-Allow: /assets/js/atractivos-data.js
-Allow: /assets/js/planes-data.js

@@ -1,0 +1,39 @@
+{
+  "baseUrl": "https://quindiotravel.com.co",
+  "canonicalUrls": {
+    "main": {
+      "home": "https://quindiotravel.com.co/",
+      "planes": "https://quindiotravel.com.co/planes.html",
+      "blog": "https://quindiotravel.com.co/blog-mejor-epoca-eje-cafetero.html"
+    },
+    "municipios": {
+      "armenia": "https://quindiotravel.com.co/armenia",
+      "salento": "https://quindiotravel.com.co/salento",
+      "filandia": "https://quindiotravel.com.co/filandia",
+      "montenegro": "https://quindiotravel.com.co/montenegro",
+      "calarca": "https://quindiotravel.com.co/calarca",
+      "buenavista": "https://quindiotravel.com.co/buenavista",
+      "cordoba": "https://quindiotravel.com.co/cordoba",
+      "pijao": "https://quindiotravel.com.co/pijao",
+      "genova": "https://quindiotravel.com.co/genova",
+      "tebaida": "https://quindiotravel.com.co/la-tebaida"
+    },
+    "alojamientos": {
+      "cabanas-la-esmeralda": "https://quindiotravel.com.co/alojamiento/cabanas-la-esmeralda",
+      "hotel-campestre-los-girasoles": "https://quindiotravel.com.co/alojamiento/hotel-campestre-los-girasoles",
+      "hotel-campestre-cafe-cafe": "https://quindiotravel.com.co/alojamiento/hotel-campestre-cafe-cafe",
+      "hotel-campestre-la-tata": "https://quindiotravel.com.co/alojamiento/hotel-campestre-la-tata",
+      "hotel-campestre-las-camelias": "https://quindiotravel.com.co/alojamiento/hotel-campestre-las-camelias",
+      "hotel-de-la-vega": "https://quindiotravel.com.co/alojamiento/hotel-de-la-vega",
+      "finca-hotel-la-dorada": "https://quindiotravel.com.co/alojamiento/finca-hotel-la-dorada"
+    },
+    "atractivos": {
+      "parque-del-cafe": "https://quindiotravel.com.co/atractivo/parque-del-cafe",
+      "panaca": "https://quindiotravel.com.co/atractivo/panaca",
+      "valle-de-cocora": "https://quindiotravel.com.co/atractivo/valle-de-cocora",
+      "termales-santa-rosa": "https://quindiotravel.com.co/atractivo/termales-santa-rosa",
+      "recuca": "https://quindiotravel.com.co/atractivo/recuca",
+      "mariposario": "https://quindiotravel.com.co/atractivo/mariposario"
+    }
+  }
+}
