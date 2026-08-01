@@ -1,0 +1,10 @@
+# Motor de Ventajas Competitivas Asimétricas - Requisitos
+
+# Dependencias principales
+requests>=2.31.0
+networkx>=3.2.1
+Pillow>=10.0.0
+
+# Dependencias opcionales para funcionalidades avanzadas
+# numpy>=1.24.0  # Para análisis estadístico avanzado
+# matplotlib>=3.7.0  # Para visualización de grafos de autoridad

@@ -195,37 +195,12 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(strategy);
 });
 
-// Background Sync para funcionalidad offline
+// Background Sync reservado para flujos propios del dominio.
+// Se desactiva la sincronización a WhatsApp porque `wa.me` no expone
+// un endpoint POST compatible con Background Sync del navegador.
 self.addEventListener('sync', (event) => {
-  console.log('Service Worker: Background Sync:', event.tag);
-  
-  if (event.tag === 'sync-whatsapp-messages') {
-    event.waitUntil(syncWhatsAppMessages());
-  }
+  console.log('Service Worker: Background Sync ignorado:', event.tag);
 });
-
-async function syncWhatsAppMessages() {
-  // Sincronizar mensajes de WhatsApp pendientes
-  const cache = await caches.open(DYNAMIC_CACHE);
-  const pendingMessages = await cache.match('/pending-whatsapp-messages');
-  
-  if (pendingMessages) {
-    const messages = await pendingMessages.json();
-    
-    for (const message of messages) {
-      try {
-        await fetch('https://wa.me/api/send', {
-          method: 'POST',
-          body: JSON.stringify(message)
-        });
-      } catch (error) {
-        console.error('Error al sincronizar mensaje:', error);
-      }
-    }
-    
-    await cache.delete('/pending-whatsapp-messages');
-  }
-}
 
 // Push Notifications
 self.addEventListener('push', (event) => {

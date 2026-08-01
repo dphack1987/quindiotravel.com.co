@@ -215,12 +215,8 @@ def main():
         
         print(f"Schema guardado en {schema_file}")
         
-        # Inyectar en index.html
-        try:
-            output_file = generator.inject_schema_to_html("index.html", schema, "index_enhanced.html")
-            print(f"Schema inyectado en HTML: {output_file}")
-        except Exception as e:
-            print(f"Error inyectando en HTML: {e}")
+        print("Home oficial consolidado en index.html")
+        print("No se genera index_enhanced.html para evitar duplicidad de homepage")
     else:
         print("Errores de validación:")
         for error in validation["errors"]:

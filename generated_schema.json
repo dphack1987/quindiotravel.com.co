@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Expedición Premium Eje Cafetero",
+  "description": "Tour exclusivo 4D/3N con guía privada, experiencias VIP y acceso premium a los mejores destinos del Quindío",
+  "touristType": [
+    "Lujo",
+    "Parejas",
+    "Cultural"
+  ],
+  "duration": "P4D",
+  "startDate": "2026-07-31",
+  "endDate": "2026-08-30",
+  "provider": {
+    "@type": "TravelAgency",
+    "name": "Quindío Travel",
+    "telephone": "+57-317-4426044",
+    "url": "https://quindiotravel.com.co",
+    "priceRange": "$$ - $$$",
+    "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1200",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Salento",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 4.6378,
+      "longitude": -75.5702
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Salento",
+      "addressRegion": "Quindío",
+      "addressCountry": {
+        "@type": "Country",
+        "name": "CO"
+      }
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "name": "Plan Expedición Premium Eje Cafetero",
+    "description": "Tour exclusivo 4D/3N con guía privada, experiencias VIP y acceso premium a los mejores destinos del Quindío",
+    "price": 1890000,
+    "priceCurrency": "COP",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2026-07-31",
+    "validThrough": "2026-12-31",
+    "seller": {
+      "@type": "TravelAgency",
+      "name": "Quindío Travel",
+      "telephone": "+57-317-4426044"
+    },
+    "inventoryLevel": {
+      "@type": "QuantitativeValue",
+      "value": "15",
+      "unitText": "spaces"
+    }
+  },
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "WiFi",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Desayuno incluido",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Guía certificado",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Transporte privado",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Spa",
+      "value": "True"
+    }
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://wa.me/573174426044?text=Hola, estoy interesado en Expedición%20Premium%20Eje%20Cafetero",
+      "actionPlatform": "http://schema.org/MobileWebPlatform"
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Expedición Premium Eje Cafetero"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "RNT",
+      "value": "18152"
+    }
+  ]
+}
