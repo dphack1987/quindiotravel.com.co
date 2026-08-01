@@ -522,27 +522,27 @@ function injectSchema(schemaObject) {
   schemaGenerator.injectSchema(schemaObject);
 }
 
-// Inicialización automática con datos existentes
-document.addEventListener('DOMContentLoaded', function() {
-  // Cargar datos existentes si están disponibles
-  let data = {};
-  
-  if (typeof planesData !== 'undefined') {
-    data.planes = planesData;
-  }
-  
-  if (typeof atractivosData !== 'undefined') {
-    data.atractivos = atractivosData;
-  }
-  
-  // Inyectar schemas masivos
-  if (data.planes || data.atractivos) {
-    schemaGenerator.injectAllSchemas(data);
-  }
-  
-  // Inyectar organization schema siempre
-  schemaGenerator.injectSchema(schemaGenerator.organization);
-});
+// Inicialización automática con datos existentes - DESACTIVADO para evitar conflictos
+// document.addEventListener('DOMContentLoaded', function() {
+//   // Cargar datos existentes si están disponibles
+//   let data = {};
+//   
+//   if (typeof planesData !== 'undefined') {
+//     data.planes = planesData;
+//   }
+//   
+//   if (typeof atractivosData !== 'undefined') {
+//     data.atractivos = atractivosData;
+//   }
+//   
+//   // Inyectar schemas masivos
+//   if (data.planes || data.atractivos) {
+//     schemaGenerator.injectAllSchemas(data);
+//   }
+//   
+//   // Inyectar organization schema siempre
+//   schemaGenerator.injectSchema(schemaGenerator.organization);
+// });
 
 // Exportar para uso en módulos
 if (typeof module !== 'undefined' && module.exports) {

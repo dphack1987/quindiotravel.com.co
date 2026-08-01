@@ -159,15 +159,6 @@
     <!-- WhatsApp Payload Builder -->
     <script src="assets/js/whatsapp-payload-builder.js" defer></script>
     
-    <!-- Countdown Urgency Timer -->
-    <script src="assets/js/countdown-urgency.js" defer></script>
-    
-    <!-- Quick Quote Form -->
-    <script src="assets/js/quick-quote-form.js" defer></script>
-    
-    <!-- WhatsApp Auto Followup -->
-    <script src="assets/js/whatsapp-auto-followup.js" defer></script>
-    
     <!-- Service Worker Registration -->
     <script>
         if ('serviceWorker' in navigator) {
@@ -191,14 +182,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
-    <!-- Optimización de imágenes - Resource Hints Avanzados -->
+    <!-- Optimización de imágenes -->
     <link rel="preload" href="assets/images/paisajes/foto_hero1.jpg" as="image" fetchpriority="high">
     <link rel="preload" href="logo_quindio_travel.png" as="image" fetchpriority="high">
-    <link rel="preload" href="assets/images/promocion-mes/promo-hero.png" as="image" fetchpriority="high">
-    <link rel="preload" href="assets/css/styles.css" as="style">
-    <link rel="preconnect" href="https://wa.me">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Nota: Convertir imágenes principales a WebP para mejor rendimiento - Pendiente de implementación -->
 
     <!-- Enhanced Schema.org Structured Data for Rich Snippets -->
     <script type="application/ld+json">
@@ -511,10 +499,7 @@
                         "touristType": ["Cultural", "Adventure", "Nature"],
                         "provider": {
                             "@type": "TravelAgency",
-                            "name": "Quindío Travel",
-                            "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
-                            "telephone": "+57-317-4426044",
-                            "url": "https://quindiotravel.com.co"
+                            "name": "Quindío Travel"
                         }
                     }
                 },
@@ -527,10 +512,7 @@
                         "touristType": ["Wellness", "Health"],
                         "provider": {
                             "@type": "TravelAgency",
-                            "name": "Quindío Travel",
-                            "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
-                            "telephone": "+57-317-4426044",
-                            "url": "https://quindiotravel.com.co"
+                            "name": "Quindío Travel"
                         }
                     }
                 }
@@ -658,7 +640,6 @@
         "@type": "Place",
         "name": "Eje Cafetero Colombia",
         "description": "Región turística del Eje Cafetero colombiano que incluye los departamentos de Quindío, Risaralda y Caldas, famosa por su cultura cafetera, paisajes naturales, pueblos patrimonio y experiencias turísticas únicas.",
-        "image": "https://quindiotravel.com.co/assets/images/paisajes/foto_hero1.jpg",
         "geo": {
             "@type": "GeoCoordinates",
             "latitude": 4.6351,
@@ -708,8 +689,6 @@
         "legalName": "Quindío Travel S.A.",
         "url": "https://quindiotravel.com.co",
         "logo": "https://quindiotravel.com.co/logo_quindio_travel.png",
-        "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
-        "telephone": "+57-317-4426044",
         "foundingDate": "2010",
         "founders": [
             {
@@ -853,9 +832,7 @@
             "availability": "https://schema.org/InStock",
             "seller": {
                 "@type": "TravelAgency",
-                "name": "Quindío Travel",
-                "telephone": "+57-317-4426044",
-                "priceRange": "$$ - $$$"
+                "name": "Quindío Travel"
             }
         },
         "aggregateRating": {
@@ -1059,8 +1036,6 @@
         },
         "url": "https://quindiotravel.com.co",
         "logo": "https://quindiotravel.com.co/logo_quindio_travel.png",
-        "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
-        "telephone": "+57-317-4426044",
         "description": "Operador turístico especializado en el Eje Cafetero colombiano. RNT 18152.",
         "address": {
             "@type": "PostalAddress",
@@ -1163,34 +1138,7 @@
                 "seller": {
                     "@type": "TravelAgency",
                     "name": "Quindío Travel",
-                    "telephone": "+57-317-4426044",
-                    "url": "https://quindiotravel.com.co"
-                }
-            }
-        ],
-        "provider": {
-            "@type": "TravelAgency",
-            "name": "Quindío Travel",
-            "telephone": "+57-317-4426044",
-            "url": "https://quindiotravel.com.co",
-            "image": "https://quindiotravel.com.co/logo_quindio_travel.png"
-        },
-        "offers": [
-            {
-                "@type": "Offer",
-                "name": "Plan Cuádruple - Cabañas La Esmeralda",
-                "description": "Precio promocional desde $1.152.000 por persona en acomodación cuádruple",
-                "price": "1152000",
-                "priceCurrency": "COP",
-                "availability": "https://schema.org/InStock",
-                "validFrom": "2026-08-01",
-                "validThrough": "2026-08-31",
-                "url": "https://quindiotravel.com.co/#promo-mes",
-                "seller": {
-                    "@type": "TravelAgency",
-                    "name": "Quindío Travel",
-                    "telephone": "+57-317-4426044",
-                    "url": "https://quindiotravel.com.co"
+                    "telephone": "+57-317-4426044"
                 }
             },
             {
@@ -1347,6 +1295,122 @@
         ]
     }
     </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Expedición Premium Eje Cafetero",
+  "description": "Tour exclusivo 4D/3N con guía privada, experiencias VIP y acceso premium a los mejores destinos del Quindío",
+  "touristType": [
+    "Lujo",
+    "Parejas",
+    "Cultural"
+  ],
+  "duration": "P4D",
+  "startDate": "2026-07-31",
+  "endDate": "2026-08-30",
+  "provider": {
+    "@type": "TravelAgency",
+    "name": "Quindío Travel",
+    "telephone": "+57-317-4426044",
+    "url": "https://quindiotravel.com.co",
+    "priceRange": "$$ - $$$",
+    "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1200",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Salento",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 4.6378,
+      "longitude": -75.5702
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Salento",
+      "addressRegion": "Quindío",
+      "addressCountry": {
+        "@type": "Country",
+        "name": "CO"
+      }
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "name": "Plan Expedición Premium Eje Cafetero",
+    "description": "Tour exclusivo 4D/3N con guía privada, experiencias VIP y acceso premium a los mejores destinos del Quindío",
+    "price": 1890000,
+    "priceCurrency": "COP",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2026-07-31",
+    "validThrough": "2026-12-31",
+    "seller": {
+      "@type": "TravelAgency",
+      "name": "Quindío Travel",
+      "telephone": "+57-317-4426044"
+    },
+    "inventoryLevel": {
+      "@type": "QuantitativeValue",
+      "value": "15",
+      "unitText": "spaces"
+    }
+  },
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "WiFi",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Desayuno incluido",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Guía certificado",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Transporte privado",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Spa",
+      "value": "True"
+    }
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://wa.me/573174426044?text=Hola, estoy interesado en Expedición%20Premium%20Eje%20Cafetero",
+      "actionPlatform": "http://schema.org/MobileWebPlatform"
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Expedición Premium Eje Cafetero"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "RNT",
+      "value": "18152"
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
@@ -1364,7 +1428,6 @@
                     <li><a href="planes.html" data-i18n="nav.planes">Planes</a></li>
                     <li><a href="#hoteles" data-i18n="nav.hoteles">Hoteles</a></li>
                     <li><a href="#experiencias" data-i18n="nav.experiencias">Experiencias</a></li>
-                    <li><a href="#destinos" data-i18n="nav.destinos">Destinos</a></li>
                     <li><a href="salento.html">Salento</a></li>
                     <li><a href="filandia.html">Filandia</a></li>
                     <li><a href="blog-mejor-epoca-eje-cafetero.html" data-i18n="nav.blog">Blog</a></li>
@@ -1383,28 +1446,6 @@
             </div>
         </div>
     </header>
-
-    <!-- Banner de Urgencia y Countdown Timer -->
-    <div class="urgency-banner" id="urgency-banner" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 12px 20px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <div style="display: flex; align-items: center; gap: 8px;">
-                <i class="fas fa-fire" style="color: #f39c12; font-size: 1.2em;"></i>
-                <span style="font-weight: 700; font-size: 0.95rem;">¡SOLO 3 CUPOS DISPONIBLES PARA ESTA SEMANA!</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px;">
-                <i class="fas fa-clock"></i>
-                <span style="font-family: monospace; font-weight: 700; font-size: 1.1rem;" id="countdown-timer">02:34:56</span>
-                <span style="font-size: 0.85rem;">para actualizar cupos</span>
-            </div>
-            <a href="https://wa.me/573174426044?text=URGENTE%20Quiero%20reservar%20uno%20de%20los%20ultimos%203%20cupos%20disponibles" 
-               target="_blank" rel="noopener" 
-               style="background: #2ecc71; color: white; padding: 8px 20px; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 0.9rem; white-space: nowrap; transition: all 0.3s ease;"
-               onmouseover="this.style.background='#27ae60'; this.style.transform='scale(1.05)';"
-               onmouseout="this.style.background='#2ecc71'; this.style.transform='scale(1)';">
-                <i class="fab fa-whatsapp"></i> RESERVAR AHORA
-            </a>
-        </div>
-    </div>
 
     <!-- Breadcrumbs SEO -->
     <nav class="breadcrumbs" aria-label="Breadcrumbs de navegación">
@@ -1443,11 +1484,11 @@
             <h1>Planes Turísticos Quindío Todo Incluido - Reserva en 48 horas</h1>
             <p>Operador turístico Eje Cafetero RNT 18152. Parque del Café, Valle de Cocora, Termales. Transporte, hoteles finca, guías certificados. Cotiza ahora y viaja esta semana.</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/573174426044?text=URGENTE%20Quiero%20reservar%20uno%20de%20los%20ultimos%203%20cupos%20disponibles%20para%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-hero" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); border: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transform: scale(1.05);"><i class="fab fa-whatsapp"></i> <strong>🔥 RESERVAR AHORA - ÚLTIMOS 3 CUPOS</strong></a>
-                <a href="planes.html#promo-mes" class="btn btn-green-hero" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border: none; box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);"><i class="fas fa-calendar-check"></i> <strong>⏰ VER PROMOCIÓN SEMANAL</strong></a>
+                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20un%20plan%20tur%C3%ADstico%20todo%20incluido%20para%20viajar%20en%20menos%20de%2048%20horas" target="_blank" rel="noopener" class="btn btn-whatsapp-hero"><i class="fab fa-whatsapp"></i> <strong>Cotizar WhatsApp - Respuesta Inmediata</strong></a>
+                <a href="planes.html" class="btn btn-green-hero"><i class="fas fa-calendar-check"></i> <strong>Ver Planes Disponibles</strong></a>
             </div>
-            <div class="hero-urgency" style="background: rgba(231, 76, 60, 0.1); border-left: 4px solid #e74c3c; padding: 15px; border-radius: 8px; margin-top: 20px;">
-                <p style="margin: 0; font-size: 0.95rem; color: #e74c3c; font-weight: 600;"><i class="fas fa-exclamation-triangle"></i> <strong>ALERTA DE DISPONIBILIDAD:</strong> Solo 3 cupos restantes para esta semana. <span style="color: #333;">Los precios aumentarán el próximo lunes.</span></p>
+            <div class="hero-urgency">
+                <p><i class="fas fa-clock"></i> <strong>Reserva hoy y viaja esta semana</strong> - Cupos limitados para temporada alta</p>
             </div>
         </div>
     </section>
@@ -2084,47 +2125,18 @@
             </div>
             
             <div style="text-align:center; margin-top: 35px;">
-                <div class="google-reviews-badge" style="background: white; padding: 25px 35px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: inline-block; max-width: 100%;">
-                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; justify-content: center;">
-                        <div class="stars" style="color: #4285F4; font-size: 1.8rem;">
+                <div class="google-reviews-badge" style="background: white; padding: 20px 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: inline-block;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                        <div class="stars" style="color: #4285F4; font-size: 1.5rem;">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                         <div>
-                            <p style="font-weight: bold; color: #202124; margin: 0; font-size: 1.3rem;">4.9/5</p>
+                            <p style="font-weight: bold; color: #202124; margin: 0;">4.9/5</p>
                             <p style="font-size: 0.85rem; color: #5f6368; margin: 0;">Google Reviews</p>
                         </div>
                     </div>
-                    
-                    <!-- Social Proof Avanzado -->
-                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #4285F4;">
-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                            <i class="fas fa-users" style="color: #4285F4; font-size: 1.2rem;"></i>
-                            <span style="font-weight: 700; color: #202124;">+1,200 VIAJEROS SATISFECHOS</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                            <i class="fas fa-check-circle" style="color: #34A853; font-size: 1.2rem;"></i>
-                            <span style="font-weight: 600; color: #202124;">98% RECOMIENDAN NUESTROS SERVICIOS</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <i class="fas fa-award" style="color: #FBBC05; font-size: 1.2rem;"></i>
-                            <span style="font-weight: 600; color: #202124;">15+ AÑOS DE EXPERIENCIA EN EJE CAFETERO</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonio Reciente -->
-                    <div style="background: #e8f0fe; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: left;">
-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                            <div style="width: 40px; height: 40px; background: #4285F4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">MC</div>
-                            <div>
-                                <p style="font-weight: 700; color: #202124; margin: 0;">María Carolina</p>
-                                <p style="font-size: 0.75rem; color: #5f6368; margin: 0;">Bogotá - Viajó hace 3 días</p>
-                            </div>
-                        </div>
-                        <p style="font-size: 0.9rem; color: #202124; margin: 0; font-style: italic;">"¡Increíble experiencia! El plan al Valle de Cocora fue perfecto. Guías muy profesionales y hoteles excelentes. Definitivamente volveremos."</p>
-                    </div>
-                    
-                    <a href="https://g.page/r/quindiotravel/review" target="_blank" rel="noopener" style="color: #4285F4; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-block; background: #e8f0fe; padding: 10px 20px; border-radius: 25px; transition: all 0.3s ease;" onmouseover="this.style.background='#d2e3fc';" onmouseout="this.style.background='#e8f0fe';">
-                        <i class="fab fa-google"></i> Ver +150 reseñas en Google
+                    <a href="https://g.page/r/quindiotravel/review" target="_blank" rel="noopener" style="color: #4285F4; text-decoration: none; font-weight: 600; font-size: 0.9rem;">
+                        <i class="fab fa-google"></i> Ver reseñas en Google
                     </a>
                 </div>
             </div>
@@ -2627,16 +2639,6 @@
                 <li><a href="blog-mejor-epoca-eje-cafetero.html">Blog de Viajes Eje Cafetero</a></li>
                     <li><a href="#nosotros">Sobre Quindío Travel</a></li>
                     <li><a href="#contacto">Contacto directo</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Topic Clusters Eje Cafetero</h3>
-                <ul>
-                    <li><a href="planes.html?tema=cultura">Turismo Cultural Cafetero</a></li>
-                    <li><a href="planes.html?tema=naturaleza">Ecoturismo y Naturaleza</a></li>
-                    <li><a href="planes.html?tema=aventura">Aventura y Deportes</a></li>
-                    <li><a href="planes.html?tema=bienestar">Bienestar y Termales</a></li>
-                    <li><a href="planes.html?tema=familiar">Turismo Familiar</a></li>
                 </ul>
             </div>
             <div class="footer-col">
