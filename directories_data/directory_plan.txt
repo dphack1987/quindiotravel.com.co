@@ -1,0 +1,20 @@
+PLAN DE DIRECTORIOS GRATUITOS
+==================================================
+
+Total directorios: 10
+
+PRIORIDAD ALTA:
+- Google My Business: https://business.google.com
+- TripAdvisor Colombia: https://www.tripadvisor.com.co
+- Ministerio de Turismo: https://www.mincit.gov.co
+- Turismo Quindío: https://www.quindio.gov.co
+
+PRIORIDAD MEDIA:
+- Bing Places: https://www.bingplaces.com
+- Yelp Colombia: https://www.yelp.com.co
+- Foursquare: https://foursquare.com
+
+PRIORIDAD BAJA:
+- Booking.com: https://www.booking.com
+- Expedia: https://www.expedia.com.co
+- Despegar: https://www.despegar.com.co
