@@ -1,38 +1,46 @@
-# Quindío Travel Robots.txt
-# Optimizado para SEO técnico y crawlers
+# Robots.txt para Quindío Travel
+# Optimizado para crawlers de Google y LLMs
 
 User-agent: *
 Allow: /
 
-# Sitemaps
+# Permitir acceso a sitemap
+Allow: /sitemap.xml
+Allow: /llms.txt
+
+# Permitir acceso a contenido programático
+Allow: /programmatic-pages/
+Allow: /blog/
+
+# Bloquear archivos temporales y scripts
+Disallow: /add_*.py
+Disallow: /audit_*.py
+Disallow: /blog_*.py
+Disallow: /additional_*.py
+Disallow: /check_*.py
+Disallow: /gemini_*.py
+Disallow: /list_*.py
+Disallow: /optimize_*.py
+Disallow: /programmatic_*.py
+Disallow: /simple_*.py
+Disallow: /topic_*.py
+Disallow: /*_generator.py
+Disallow: /llms_expanded.py
+Disallow: /authority_content_generator.py
+Disallow: /sitemap_generator.py
+Disallow: /robots_generator.py
+
+# Bloquear archivos de trabajo
+Disallow: /interlinking_strategy.txt
+Disallow: /TASKS_MANUALES_SEO_AVANZADO.md
+Disallow: /FINAL_REPORT_SEO_AVANZADO.md
+Disallow: /GEMINI_OPTIMIZATION_GUIDE.md
+Disallow: /PROJECT_COMPLETION_REPORT.md
+Disallow: /outreach_data/
+Disallow: /directories_data/
+
+# Sitemap
 Sitemap: https://quindiotravel.com.co/sitemap.xml
-Sitemap: https://quindiotravel.com.co/sitemap-main.xml
-Sitemap: https://quindiotravel.com.co/sitemap-municipios.xml
-Sitemap: https://quindiotravel.com.co/sitemap-alojamientos.xml
-Sitemap: https://quindiotravel.com.co/sitemap-atractivos.xml
-Sitemap: https://quindiotravel.com.co/sitemap-tipos-viaje.xml
-Sitemap: https://quindiotravel.com.co/sitemap-amenidades.xml
 
-# Disallow directories específicos
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-Disallow: /generated-pages/
-Disallow: /pseo-engine/
-Disallow: /node_modules/
-Disallow: /.git/
-
-# Optimización para Googlebot
-User-agent: Googlebot
-Allow: /
-
-# Optimización para Bingbot
-User-agent: Bingbot
-Allow: /
-
-# Optimización para crawlers de imágenes
-User-agent: Googlebot-Image
-Allow: /assets/images/
-
-User-agent: Bingbot-Image
-Allow: /assets/images/
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 1
