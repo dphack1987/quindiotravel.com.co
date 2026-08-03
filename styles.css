@@ -5555,21 +5555,88 @@ body {
 #video .video-placeholder {
     border: 1px solid rgba(255, 255, 255, 0.16);
     box-shadow: 0 28px 60px rgba(19, 36, 24, 0.2) !important;
-    border-radius: 24px;
+    border-radius: 28px;
     overflow: hidden;
+    position: relative;
+    min-height: 420px;
+    display: grid;
+    align-items: center;
 }
 
 #video .video-placeholder::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(46, 90, 54, 0.26) 0%, rgba(0, 0, 0, 0.25) 100%);
+    background: linear-gradient(135deg, rgba(46, 90, 54, 0.32) 0%, rgba(0, 0, 0, 0.32) 100%);
     z-index: 1;
     pointer-events: none;
 }
 
 #video .video-placeholder > div {
+    position: relative;
     z-index: 2 !important;
+}
+
+#video .video-placeholder h3 {
+    font-size: clamp(1.85rem, 3vw, 2.25rem);
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
+}
+
+#video .video-placeholder p {
+    font-size: 1.02rem;
+    opacity: 0.95;
+    margin-bottom: 26px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#video .video-placeholder .btn-white {
+    background: rgba(255, 255, 255, 0.98);
+    color: var(--verde-cafe);
+    border-radius: 999px;
+    padding: 16px 32px;
+    box-shadow: 0 18px 35px rgba(11, 24, 16, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+#video .video-placeholder .btn-white:hover {
+    background: var(--blanco);
+    transform: translateY(-2px);
+    box-shadow: 0 22px 42px rgba(11, 24, 16, 0.2);
+}
+
+.video-play-circle {
+    width: 104px;
+    height: 104px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 34px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.video-play-circle:hover {
+    transform: scale(1.08);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.video-play-circle i {
+    font-size: 2.4rem;
+    color: var(--blanco);
+}
+
+.video-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 22px;
+    margin-top: 38px;
 }
 
 #video .highlight-item {
@@ -5577,17 +5644,97 @@ body {
     box-shadow: 0 16px 30px rgba(16, 31, 20, 0.1);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(46, 90, 54, 0.08);
 }
 
 #video .highlight-item:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 36px rgba(16, 31, 20, 0.14);
+    box-shadow: 0 22px 42px rgba(16, 31, 20, 0.14);
 }
 
 .reservas-wrapper {
     display: grid;
-    gap: 30px !important;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.05fr 0.95fr !important;
+    gap: 32px !important;
+    align-items: start;
+}
+
+.reservas-form-container,
+.reservas-info {
+    border-radius: 28px !important;
+    padding: 36px !important;
+}
+
+.reservas-form-container {
+    background: linear-gradient(180deg, #ffffff 0%, #f9f9f7 100%);
+}
+
+.reservas-info {
+    background: linear-gradient(180deg, #eef6ed 0%, #f8fbf7 100%);
+}
+
+.reservas-form-container::before,
+.reservas-info::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--verde-cafe), var(--verde-claro), var(--amarillo-suave));
+    opacity: 0.95;
+}
+
+.reservas-form-container h3,
+.reservas-info h3 {
+    margin-top: 0;
+}
+
+.reservas-form-container input,
+.reservas-form-container select,
+.reservas-form-container textarea {
+    border-radius: 16px !important;
+    border-color: rgba(46, 90, 54, 0.16) !important;
+    background: rgba(252, 253, 252, 0.98);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.reservas-form-container input:focus,
+.reservas-form-container select:focus,
+.reservas-form-container textarea:focus {
+    border-color: rgba(46, 90, 54, 0.6) !important;
+    box-shadow: 0 0 0 4px rgba(78, 135, 85, 0.12);
+    transform: translateY(-1px);
+}
+
+.progress-bar-container {
+    background: rgba(46, 90, 54, 0.04);
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.progress-bar {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.progress-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+.progress-steps .step {
+    background: rgba(78, 135, 85, 0.1);
+    padding: 10px 12px;
+    border-radius: 999px;
+    text-align: center;
+    font-size: 0.78rem;
+    color: #556a52;
+}
+
+.progress-steps .step.active {
+    background: var(--verde-cafe);
+    color: white;
+    box-shadow: 0 10px 20px rgba(46, 90, 54, 0.18);
 }
 
 .reservas-form-container,
@@ -6280,5 +6427,65 @@ body {
     .hotel-info .info-description,
     .hotel-info .info-services {
         padding: 22px;
+    }
+}
+
+/* Breadcrumb Navigation Styles */
+.breadcrumb-nav {
+    background: var(--gris-claro);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(46, 90, 54, 0.1);
+}
+
+.breadcrumb {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li::after {
+    content: '/';
+    margin: 0 8px;
+    color: var(--verde-cafe);
+    font-weight: 500;
+}
+
+.breadcrumb li:last-child::after {
+    content: '';
+}
+
+.breadcrumb a {
+    color: var(--verde-cafe);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    color: var(--naranja-brillante);
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: var(--texto-oscuro);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+    
+    .breadcrumb li::after {
+        margin: 0 6px;
     }
 }

@@ -112,6 +112,64 @@
         ]
     }
     </script>
+
+    <!-- FAQPage Schema para preguntas frecuentes del plan -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué incluye el Plan 6: Experiencia Definitiva Premium?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El Plan 6 incluye transporte VIP, alojamiento 4 noches en hotel campestre premium, alimentación gourmet completa, entrada a todos los parques temáticos, Valle de Cocora, Termales Santa Rosa, todos los pueblos patrimonio, guía experto, seguro médico premium y asistencia 24/7. Es la experiencia definitiva del Eje Cafetero."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuál es la política de cancelación del Plan 6?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cancelación gratuita hasta 20 días antes del viaje. 75% reembolso de 10-19 días antes. 50% reembolso de 7-9 días antes. Sin reembolso menos de 7 días antes. En caso de fuerza mayor, ofrecemos reprogramación sin costo adicional con certificado médico."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué debo llevar para el Plan 6?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Recomendamos llevar ropa elegante para cenas, ropa cómoda para caminar, calzado deportivo resistente, protector solar, sombrero, cámara, chaqueta ligera, cambio de ropa para 5 días, documentos de identificación, dinero en efectivo, medicamentos básicos, ropa de baño y accesorios VIP."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Hay restricciones de edad para el Plan 6?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El Plan 6 es recomendado para mayores de 18 años por su naturaleza premium. Excepciones para familias con adolescentes mayores de 14 años. Es ideal para parejas, grupos de amigos y eventos corporativos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo funciona el transporte en el Plan 6?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El transporte es en vehículo VIP premium con aire acondicionado, wifi y comodidades adicionales. Ofrecemos transporte privado desde tu ubicación sin costo adicional. Incluye traslado VIP a todos los destinos del itinerario completo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo personalizar el Plan 6?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, ofrecemos personalización completa del Plan 6. Puedes elegir hotel 5 estrellas, agregar destinos exclusivos, modificar itinerario detalladamente, incluir actividades especiales como helicóptero o experiencias culinarias gourmet. Los precios varían según las personalizaciones."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <header class="main-header">
@@ -138,6 +196,26 @@
             </div>
         </div>
     </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="index.html" itemprop="item"><span itemprop="name">Inicio</span></a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="planes.html" itemprop="item"><span itemprop="name">Planes</span></a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Plan 6: Experiencia Definitiva Premium</span>
+                    <meta itemprop="position" content="3" />
+                </li>
+            </ol>
+        </div>
+    </nav>
 
     <section class="hero" style="height: 50vh; background: linear-gradient(135deg, rgba(46, 90, 54, 0.85), rgba(141, 91, 76, 0.75)), url('assets/images/paisajes/istockphoto-1347870326-612x612.jpg') center/cover no-repeat;">
         <div class="hero-overlay"></div>

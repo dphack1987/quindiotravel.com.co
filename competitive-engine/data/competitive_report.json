@@ -1,68 +1,34 @@
 {
-  "timestamp": "2026-08-03T11:07:40.926715",
+  "timestamp": "2026-08-03T17:04:24.958485",
   "domain": "https://quindiotravel.com.co",
-  "engine_configuration": {
-    "schema_generation": {
-      "enabled": true,
-      "auto_validate": true,
-      "cache_enabled": true
-    },
-    "performance_optimization": {
-      "enabled": true,
-      "image_quality": 85,
-      "minify_html": true,
-      "generate_critical_css": true
-    },
-    "authority_building": {
-      "enabled": true,
-      "auto_link_optimization": true,
-      "topic_cluster_analysis": true
-    },
-    "ab_testing": {
-      "enabled": true,
-      "auto_traffic_split": true,
-      "min_sample_size": 100
-    }
-  },
   "engine_statistics": {
-    "schemas_generated": 2,
-    "pages_optimized": 0,
-    "authority_links_created": 0,
-    "ab_tests_conducted": 2,
-    "total_improvements": 50
+    "schemas_generated": 1,
+    "pages_optimized": 1,
+    "bytes_saved": 21,
+    "keywords_analyzed": 4
   },
   "competitive_advantages": {
     "schema_advantage": {
       "score": 85,
       "status": "high",
-      "description": "Esquemas hiper-localizados con datos geoespaciales reales",
-      "advantage_level": "competitor_differentiation"
+      "description": "Esquemas hiper-localizados con datos del Quindío"
     },
     "performance_advantage": {
       "score": 90,
       "status": "very_high",
-      "description": "Optimización quirúrgica de HTML y recursos multimedia",
-      "advantage_level": "user_experience_superiority"
+      "description": "Optimización de HTML y resource hints"
     },
     "authority_advantage": {
       "score": 75,
       "status": "medium",
-      "description": "Estructura de autoridad semántica con topic clusters",
-      "advantage_level": "long_tail_dominance"
-    },
-    "testing_advantage": {
-      "score": 80,
-      "status": "high",
-      "description": "Sistema de A/B testing para optimización continua",
-      "advantage_level": "data_driven_optimization"
+      "description": "Análisis de keywords y long-tails geolocalizadas"
     }
   },
   "recommendations": [
-    "Implementar variante de Schema con social proof en páginas principales",
-    "Priorizar optimización de imágenes a WebP para Core Web Vitals",
-    "Expandir estructura silo con contenido sobre long-tails identificadas",
-    "Monitorear resultados de A/B testing y ajustar según datos",
-    "Actualizar esquemas mensualmente con nuevos datos geoespaciales"
+    "Implementar esquemas generados en páginas principales",
+    "Aplicar optimización HTML en archivos críticos",
+    "Expandir análisis de autoridad a más páginas",
+    "Monitorear Core Web Vitals en Search Console"
   ],
-  "overall_score": 82.5
+  "overall_score": 83.3
 }

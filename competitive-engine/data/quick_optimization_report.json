@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-08-03T17:06:35.058818",
+  "optimization_summary": {
+    "schemas_generated": 2,
+    "pages_optimized": 2,
+    "total_bytes_saved": 90076
+  },
+  "schemas": [
+    {
+      "plan": "Plan 1: Vive El Eje Cafetero Temático",
+      "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"TouristTrip\",\n  \"name\": \"Plan 1: Vive El Eje Cafetero Temático\",\n  \"description\": \"Escapada de 2 días con Parque del Café y PANACA\",\n  \"touristType\": [\n    \"Parejas\",\n    \"Familias\"\n  ],\n  \"duration\": \"P2D\",\n  \"startDate\": \"2026-08-03\",\n  \"endDate\": \"2026-12-31\",\n  \"provider\": {\n    \"@type\": \"TravelAgency\",\n    \"name\": \"Quindío Travel\",\n    \"telephone\": \"+57-317-4426044\",\n    \"url\": \"https://quindiotravel.com.co\",\n    \"priceRange\": \"$$ - $$$\",\n    \"image\": \"https://quindiotravel.com.co/logo_quindio_travel.png\",\n    \"aggregateRating\": {\n      \"@type\": \"AggregateRating\",\n      \"ratingValue\": \"4.9\",\n      \"reviewCount\": \"1200\",\n      \"bestRating\": \"5\",\n      \"worstRating\": \"1\"\n    }\n  },\n  \"location\": {\n    \"@type\": \"Place\",\n    \"name\": \"Armenia, Quindío\",\n    \"geo\": {\n      \"@type\": \"GeoCoordinates\",\n      \"latitude\": 4.5338,\n      \"longitude\": -75.6811\n    },\n    \"address\": {\n      \"@type\": \"PostalAddress\",\n      \"addressLocality\": \"Armenia, Quindío\",\n      \"addressRegion\": \"Quindío\",\n      \"addressCountry\": {\n        \"@type\": \"Country\",\n        \"name\": \"CO\"\n      }\n    }\n  },\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"name\": \"Plan Plan 1: Vive El Eje Cafetero Temático\",\n    \"description\": \"Escapada de 2 días con Parque del Café y PANACA\",\n    \"price\": 580000,\n    \"priceCurrency\": \"COP\",\n    \"availability\": \"https://schema.org/InStock\",\n    \"validFrom\": \"2026-08-03\",\n    \"validThrough\": \"2026-12-31\",\n    \"seller\": {\n      \"@type\": \"TravelAgency\",\n      \"name\": \"Quindío Travel\",\n      \"telephone\": \"+57-317-4426044\"\n    },\n    \"inventoryLevel\": {\n      \"@type\": \"QuantitativeValue\",\n      \"value\": \"15\",\n      \"unitText\": \"spaces\"\n    }\n  },\n  \"amenityFeature\": [\n    {\n      \"@type\": \"LocationFeatureSpecification\",\n      \"name\": \"Transporte\",\n      \"value\": \"True\"\n    },\n    {\n      \"@type\": \"LocationFeatureSpecification\",\n      \"name\": \"Alojamiento\",\n      \"value\": \"True\"\n    },\n    {\n      \"@type\": \"LocationFeatureSpecification\",\n      \"name\": \"Alimentación\",\n      \"value\": \"True\"\n    },\n    {\n      \"@type\": \"LocationFeatureSpecification\",\n      \"name\": \"Guía\",\n      \"value\": \"True\"\n    }\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"https://wa.me/573174426044?text=Hola, estoy interesado en Plan%201:%20Vive%20El%20Eje%20Cafetero%20Temático\",\n      \"actionPlatform\": \"http://schema.org/MobileWebPlatform\"\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Plan 1: Vive El Eje Cafetero Temático\"\n    }\n  },\n  \"additionalProperty\": [\n    {\n      \"@type\": \"PropertyValue\",\n      \"name\": \"RNT\",\n      \"value\": \"18152\"\n    }\n  ]\n}"
+    },
+    {
+      "plan": "Plan 2: Naturaleza y Diversión Cafetera",
+      "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"TouristTrip\",\n  \"name\": \"Plan 2: Naturaleza y Diversión Cafetera\",\n  \"description\": \"Escapada de 3 días con Parque del Café, PANACA y pueblos\",\n  \"touristType\": [\n    \"Parejas\",\n    \"Familias\",\n    \"Grupos\"\n  ],\n  \"duration\": \"P3D\",\n  \"startDate\": \"2026-08-03\",\n  \"endDate\": \"2026-12-31\",\n  \"provider\": {\n    \"@type\": \"TravelAgency\",\n    \"name\": \"Quindío Travel\",\n    \"telephone\": \"+57-317-4426044\",\n    \"url\": \"https://quindiotravel.com.co\",\n    \"priceRange\": \"$$ - $$$\",\n    \"image\": \"https://quindiotravel.com.co/logo_quindio_travel.png\",\n    \"aggregateRating\": {\n      \"@type\": \"AggregateRating\",\n      \"ratingValue\": \"4.9\",\n      \"reviewCount\": \"1200\",\n      \"bestRating\": \"5\",\n      \"worstRating\": \"1\"\n    }\n  },\n  \"location\": {\n    \"@type\": \"Place\",\n    \"name\": \"Salento, Quindío\",\n    \"geo\": {\n      \"@type\": \"GeoCoordinates\",\n      \"latitude\": 4.5338,\n      \"longitude\": -75.6811\n    },\n    \"address\": {\n      \"@type\": \"PostalAddress\",\n      \"addressLocality\": \"Salento, Quindío\",\n      \"addressRegion\": \"Quindío\",\n      \"addressCountry\": {\n        \"@type\": \"Country\",\n        \"name\": \"CO\"\n      }\n    }\n  },\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"name\": \"Plan Plan 2: Naturaleza y Diversión Cafetera\",\n    \"description\": \"Escapada de 3 días con Parque del Café, PANACA y pueblos\",\n    \"price\": 820000,\n    \"priceCurrency\": \"COP\",\n    \"availability\": \"https://schema.org/InStock\",\n    \"validFrom\": \"2026-08-03\",\n    \"validThrough\": \"2026-12-31\",\n    \"seller\": {\n      \"@type\": \"TravelAgency\",\n      \"name\": \"Quindío Travel\",\n      \"telephone\": \"+57-317-4426044\"\n    },\n    \"inventoryLevel\": {\n      \"@type\": \"QuantitativeValue\",\n      \"value\": \"15\",\n      \"unitText\": \"spaces\"\n    }\n  },\n  \"amenityFeature\": [\n    {\n      \"@type\": \"LocationFeatureSpecification\",\n      \"name\": \"Transporte\",\n      \"value\": \"True\"\n    },\n    {\n      \"@type\": \"LocationFeatureSpecification\",\n      \"name\": \"Alojamiento\",\n      \"value\": \"True\"\n    },\n    {\n      \"@type\": \"LocationFeatureSpecification\",\n      \"name\": \"Alimentación\",\n      \"value\": \"True\"\n    },\n    {\n      \"@type\": \"LocationFeatureSpecification\",\n      \"name\": \"Guía\",\n      \"value\": \"True\"\n    }\n  ],\n  \"potentialAction\": {\n    \"@type\": \"ReserveAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"https://wa.me/573174426044?text=Hola, estoy interesado en Plan%202:%20Naturaleza%20y%20Diversión%20Cafetera\",\n      \"actionPlatform\": \"http://schema.org/MobileWebPlatform\"\n    },\n    \"result\": {\n      \"@type\": \"Reservation\",\n      \"name\": \"Plan 2: Naturaleza y Diversión Cafetera\"\n    }\n  },\n  \"additionalProperty\": [\n    {\n      \"@type\": \"PropertyValue\",\n      \"name\": \"RNT\",\n      \"value\": \"18152\"\n    }\n  ]\n}"
+    }
+  ],
+  "performance": [
+    {
+      "page": "index.html",
+      "original_size": 272331,
+      "optimized_size": 195029,
+      "bytes_saved": 77646,
+      "backup": "index.html.backup"
+    },
+    {
+      "page": "planes.html",
+      "original_size": 38344,
+      "optimized_size": 26258,
+      "bytes_saved": 12430,
+      "backup": "planes.html.backup"
+    }
+  ],
+  "overall_score": 9.9
+}
