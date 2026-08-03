@@ -107,6 +107,9 @@
                 </ul>
             </nav>
             <div class="header-actions">
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20informaci%C3%B3n%20sobre%20tours%20a%20Filandia" 
                    target="_blank" rel="noopener" class="btn-whatsapp-icon" aria-label="Contacto WhatsApp Quindío Travel">
                     <i class="fab fa-whatsapp"></i>
@@ -404,5 +407,29 @@
             }
         }
     </style>
+</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hambBtn = document.getElementById('hamburger-btn');
+            const navMenu = document.getElementById('nav-menu');
+            if (!hambBtn || !navMenu) return;
+
+            hambBtn.addEventListener('click', () => {
+                const abierto = navMenu.classList.toggle('nav-menu-open');
+                hambBtn.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+                hambBtn.innerHTML = abierto
+                    ? '<i class="fas fa-times"></i>'
+                    : '<i class="fas fa-bars"></i>';
+            });
+
+            navMenu.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    navMenu.classList.remove('nav-menu-open');
+                    hambBtn.setAttribute('aria-expanded', 'false');
+                    hambBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        });
+    </script>
 </body>
 </html>

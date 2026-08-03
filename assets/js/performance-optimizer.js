@@ -210,8 +210,7 @@ class PerformanceOptimizer {
   // Diferir scripts no críticos
   setupScriptDeferral() {
     const nonCriticalScripts = [
-      '/assets/js/cotizador.js',
-      '/assets/js/language-detector.js'
+      '/assets/js/cotizador.js'
     ];
 
     nonCriticalScripts.forEach(src => {

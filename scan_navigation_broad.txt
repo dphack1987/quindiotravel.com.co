@@ -1,0 +1,8 @@
+TOTAL_HTML=2173
+MISSING_NAV=2
+MISSING_NAV:assets\images\placeholder.html
+MISSING_NAV:index_enhanced.html
+MISSING_HOME=1
+MISSING_HOME:assets\images\placeholder.html
+MISSING_BOTH=1
+MISSING_BOTH:assets\images\placeholder.html
