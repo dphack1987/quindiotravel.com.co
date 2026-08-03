@@ -1,6 +1,7 @@
 const { ObjectId } = require('mongodb');
 const { getDatabase } = require('../config/database');
 const whatsappService = require('./whatsappService');
+const emailService = require('./emailService');
 
 const DEFAULT_DEPOSIT_PERCENTAGE = Number(process.env.RESERVATION_DEPOSIT_PERCENTAGE || 30);
 
@@ -119,6 +120,14 @@ async function createReservation(payload) {
     const children = Number(payload.children || 0);
     const normalizedWhatsApp = normalizePhoneNumber(payload.whatsapp);
 
+    // Idempotency: si envían idempotencyKey y ya existe, devolver la reserva existente
+    if (payload.idempotencyKey) {
+        const existing = await reservations.findOne({ idempotencyKey: payload.idempotencyKey });
+        if (existing) {
+            return existing;
+        }
+    }
+
     const priceData = calculateAmounts(payload.category, payload.transportation, adults, children);
     const availability = await checkAvailability({ travelDate: payload.date, category: payload.category });
 
@@ -134,6 +143,7 @@ async function createReservation(payload) {
         email: payload.email,
         paymentMethod: payload.paymentMethod,
         comments: payload.comments || '',
+        idempotencyKey: payload.idempotencyKey || null,
         pricePerPerson: priceData.precioPersona,
         totalAdults: priceData.totalAdultos,
         totalChildren: priceData.totalNinos,
@@ -155,6 +165,18 @@ async function createReservation(payload) {
     reservation._id = result.insertedId;
 
     await notifyAdmin(reservation);
+
+    // Enviar email de confirmación/recibo al cliente si está configurado
+    try {
+        const clientSubject = `Recibimos tu solicitud de reserva - Quindío Travel (#${reservation._id})`;
+        const clientText = `Hola ${reservation.name},\n\nHemos recibido tu solicitud de reserva para ${reservation.travelDate.toISOString().split('T')[0]}. ` +
+            `Total estimado: COP ${reservation.totalEstimated.toLocaleString('es-CO')}. Anticipo sugerido: COP ${reservation.depositAmount.toLocaleString('es-CO')}.\n\n` +
+            `Te contactaremos pronto para confirmar disponibilidad y el método de pago.\n\nID de reserva: ${reservation._id}`;
+
+        await emailService.sendEmail(reservation.email, clientSubject, clientText, null);
+    } catch (err) {
+        console.warn('No se pudo enviar email al cliente:', err.message || err);
+    }
 
     return reservation;
 }

@@ -1,25 +1,31 @@
 const express = require('express');
 const router = express.Router();
+const { body, validationResult } = require('express-validator');
 const reservationService = require('../services/reservationService');
 
-function validateReservationPayload(payload) {
-    const requiredFields = ['plan', 'category', 'transportation', 'date', 'adults', 'name', 'whatsapp', 'email', 'paymentMethod'];
-    const missing = requiredFields.filter((field) => !payload[field]);
-    return missing;
-}
+const reservationValidation = [
+    body('plan').notEmpty().withMessage('Plan is required'),
+    body('category').notEmpty().withMessage('Category is required'),
+    body('transportation').notEmpty().withMessage('Transportation is required'),
+    body('date').isISO8601().withMessage('Date must be valid ISO8601'),
+    body('adults').isInt({ min: 1 }).withMessage('Adults must be at least 1'),
+    body('name').trim().notEmpty().withMessage('Name is required'),
+    body('whatsapp').trim().notEmpty().withMessage('WhatsApp is required'),
+    body('email').isEmail().withMessage('Valid email is required'),
+    body('paymentMethod').notEmpty().withMessage('Payment method is required')
+];
 
-router.post('/', async (req, res) => {
+router.post('/', reservationValidation, async (req, res) => {
     try {
-        const missingFields = validateReservationPayload(req.body);
-        if (missingFields.length > 0) {
-            return res.status(400).json({
-                success: false,
-                error: 'Missing required reservation fields',
-                missingFields
-            });
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ success: false, errors: errors.array() });
         }
 
-        const reservation = await reservationService.createReservation(req.body);
+        // Optional idempotencyKey in body to prevent duplicates
+        const payload = req.body;
+
+        const reservation = await reservationService.createReservation(payload);
 
         res.json({
             success: true,

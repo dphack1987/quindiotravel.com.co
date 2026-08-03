@@ -46,6 +46,8 @@ async function createIndexes() {
         await reservations.createIndex({ travelDate: 1, category: 1, status: 1 });
         await reservations.createIndex({ whatsapp: 1 });
         await reservations.createIndex({ createdAt: -1 });
+        // Soporte para idempotencia
+        await reservations.createIndex({ idempotencyKey: 1 }, { sparse: true });
         
         console.log('✅ Database indexes created');
     } catch (error) {
