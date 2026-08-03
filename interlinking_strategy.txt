@@ -1,0 +1,92 @@
+ESTRATEGIA DE INTERLINKING TEMÁTICO - TOPIC CLUSTERS
+============================================================
+
+Total páginas programáticas: 93
+Total artículos blog: 13
+Total páginas: 106
+
+TOPIC CLUSTERS DEFINIDOS:
+
+CLÚSTER: SALENTO
+Página Pilar: paquetes-salento-2-dias-economicos-2026.html
+Páginas Relacionadas: 8
+----------------------------------------
+- hoteles-economicos-salento-familias-2026.html
+- diferencias-salento-filandia-destino-2026.html
+- valle-cocora-una-dia-2026.html
+- miradores-salento-2026.html
+- guia-turistica-salento-2026.html
+- hoteles-piscina-salento-2026.html
+- hoteles-familiares-salento-2026.html
+- restaurantes-armenia-gastronomia-2026.html
+
+============================================================
+
+CLÚSTER: FILANDIA
+Página Pilar: mejor-epoca-visitar-filandia-2026.html
+Páginas Relacionadas: 5
+----------------------------------------
+- diferencias-salento-filandia-destino-2026.html
+- vistas-panoramicas-filandia-2026.html
+- mejores-miradores-filandia-2026.html
+- mirador-filandia-360-grados-2026.html
+- compras-artesania-filandia-2026.html
+
+============================================================
+
+CLÚSTER: VALLE-COCORA
+Página Pilar: valle-cocora-una-dia-2026.html
+Páginas Relacionadas: 5
+----------------------------------------
+- valle-cocora-caminata-2026.html
+- valle-cocora-cerro-murillo-2026.html
+- valle-cocora-pajaros-2026.html
+- caminata-nocturna-valle-cocora-2026.html
+- valle-cocora-estado-actual-2026.html
+
+============================================================
+
+CLÚSTER: EJE-CAFETERO
+Página Pilar: tour-eje-cafetero-sin-transporte-2026.html
+Páginas Relacionadas: 6
+----------------------------------------
+- guia-transporte-eje-cafetero-bogota-2026.html
+- transporte-barato-eje-cafetero-2026.html
+- clima-quindio-meses-2026.html
+- presupuesto-viaje-eje-cafetero-2026.html
+- seguridad-turismo-eje-cafetero-2026.html
+- cultura-paisa-eje-cafetero-2026.html
+
+============================================================
+
+CLÚSTER: HOTELES
+Página Pilar: hoteles-cerca-parque-cafe-2026.html
+Páginas Relacionadas: 6
+----------------------------------------
+- hoteles-piscina-salento-2026.html
+- hoteles-familiares-salento-2026.html
+- hoteles-boutique-quindio-2026.html
+- hoteles-campestres-eje-cafetero-2026.html
+- alojamiento-economico-salento-2026.html
+- alojamiento-lujo-quindio-2026.html
+
+============================================================
+
+CLÚSTER: EXPERIENCIAS
+Página Pilar: experiencias-cafeteras-autenticas-quindio-2026.html
+Páginas Relacionadas: 5
+----------------------------------------
+- finca-cafe-salento-2026.html
+- cafeteria-tradicional-quindio-2026.html
+- artesanias-salento-filandia-2026.html
+- festival-tradicional-quindio-2026.html
+- fiestas-diciembre-quindio-2026.html
+
+============================================================
+
+RECOMENDACIONES DE IMPLEMENTACIÓN:
+1. Cada página pilar debe enlazar a todas sus páginas relacionadas
+2. Cada página relacionada debe enlazar de vuelta a la página pilar
+3. Cross-linking entre clústeres cuando sea natural
+4. Anchor text debe descriptivo y contener keywords semánticas
+5. Priorizar enlaces internos sobre externos cuando sea posible
