@@ -40,6 +40,12 @@ async function createIndexes() {
         // Índices para escalaciones
         await escalations.createIndex({ timestamp: -1 });
         await escalations.createIndex({ status: 1 });
+
+        // Índices para reservas
+        const reservations = db.collection('reservations');
+        await reservations.createIndex({ travelDate: 1, category: 1, status: 1 });
+        await reservations.createIndex({ whatsapp: 1 });
+        await reservations.createIndex({ createdAt: -1 });
         
         console.log('✅ Database indexes created');
     } catch (error) {

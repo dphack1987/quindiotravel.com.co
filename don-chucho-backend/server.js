@@ -36,6 +36,7 @@ connectToDatabase().catch(console.error);
 // Routes
 app.use('/webhook', webhookRoutes);
 app.use('/api/chat', chatRoutes);
+app.use('/api/reservations', require('./routes/reservations'));
 
 // Health check
 app.get('/health', (req, res) => {

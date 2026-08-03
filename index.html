@@ -81,37 +81,9 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://quindiotravel.com.co/">
     
-    <!-- Open Graph Avanzado para Promoción del Mes - Plan Vientos de Agosto 2026 -->
-    <meta property="og:title" content="Promoción Exclusiva Eje Cafetero: Plan Vientos de Agosto 2026 - Desde $1.152.000 | Quindío Travel">
-    <meta property="og:description" content="4 Días/3 Noches en el Quindío con Valle de Cocora, Salento, Filandia, Parque del Café, PANACA y RECUCA. Alojamiento en cabañas y hoteles campestres. Solo 15 cupos disponibles. RNT 18152.">
-    <meta property="og:url" content="https://quindiotravel.com.co/#promo-mes">
-    <meta property="og:image" content="https://quindiotravel.com.co/assets/images/promocion-mes/promo-hero.png">
-    <meta property="og:image:alt" content="Plan turístico Vientos de Agosto 2026 en el Quindío con hospedaje en cabañas y hoteles campestres, Valle de Cocora y experiencias culturales">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:locale" content="es_CO">
-    <meta property="og:site_name" content="Quindío Travel">
-    <meta property="og:type" content="travel.travel_agency">
-    <meta property="travel:destination:country" content="Colombia">
-    <meta property="travel:destination:region" content="Quindío">
-    <meta property="travel:destination:city" content="Armenia">
-    <meta property="travel:activity_type" content="sightseeing">
-    <meta property="travel:availability_starts" content="2026-08-01">
-    <meta property="travel:availability_ends" content="2026-08-31">
-    <meta property="travel:price_range" content="$1.152.000 - $2.097.000 COP">
-    <meta property="og:availability" content="https://schema.org/InStock">
-    <meta property="og:limited_availability" content="true">
-    
-    <!-- Twitter Card Avanzado para Promoción -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Promoción Exclusiva Eje Cafetero: Plan Vientos de Agosto 2026 - Desde $1.152.000">
-    <meta name="twitter:description" content="4 Días/3 Noches en el Quindío con Valle de Cocora, Salento, Filandia, Parque del Café, PANACA y RECUCA. Solo 15 cupos disponibles. RNT 18152.">
-    <meta name="twitter:image" content="https://quindiotravel.com.co/assets/images/promocion-mes/promo-hero.png">
-    <meta name="twitter:image:alt" content="Plan turístico Vientos de Agosto 2026 en el Quindío con hospedaje en cabañas y hoteles campestres">
-    <meta name="twitter:site" content="@quindiotravel">
-    <meta name="twitter:creator" content="@quindiotravel">
-    <meta name="twitter:domain" content="quindiotravel.com.co">
+    <!-- No duplicar Open Graph ni Twitter cards: solo etiqueta principal para la home -->
+    <meta property="article:published_time" content="2026-08-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-08-03T00:00:00+00:00">
     <meta name="twitter:label1" content="Promoción Agosto 2026">
     <meta name="twitter:data1" content="Vientos de Agosto">
     <meta name="twitter:label2" content="Precio desde">
@@ -1350,8 +1322,7 @@
                 <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
                     <i class="fas fa-bars"></i>
                 </button>
-                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel%20%F0%9F%8C%BF,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20planes%20tur%C3%ADsticos%202026"
-                   target="_blank" rel="noopener" class="btn-whatsapp-icon" aria-label="Contacto WhatsApp Quindío Travel">
+                <a href="#" data-wa-template="header_contacto" target="_blank" rel="noopener" class="btn-whatsapp-icon wa-cta-link" aria-label="Contacto WhatsApp Quindío Travel">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
@@ -1367,15 +1338,12 @@
             </div>
             <div class="urgency-banner-timer" style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px;">
                 <i class="fas fa-clock"></i>
-                <span style="font-family: monospace; font-weight: 700; font-size: 1.1rem;" id="countdown-timer">02:34:56</span>
+                <span style="font-family: monospace; font-weight: 700; font-size: 1.1rem;" id="countdown-timer">
+                    <span id="banner-hours">02</span>:<span id="banner-minutes">34</span>:<span id="banner-seconds">56</span>
+                </span>
                 <span style="font-size: 0.85rem;">para actualizar cupos</span>
             </div>
-            <a href="https://wa.me/573174426044?text=URGENTE%20Quiero%20reservar%20uno%20de%20los%20ultimos%203%20cupos%20disponibles" 
-               target="_blank" rel="noopener" 
-               class="urgency-banner-cta"
-               style="background: #2ecc71; color: white; padding: 8px 20px; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 0.9rem; white-space: nowrap; transition: all 0.3s ease;"
-               onmouseover="this.style.background='#27ae60'; this.style.transform='scale(1.05)';"
-               onmouseout="this.style.background='#2ecc71'; this.style.transform='scale(1)';">
+            <a href="#" data-wa-template="urgency_reservar" target="_blank" rel="noopener" class="urgency-banner-cta wa-cta-link" style="background: #2ecc71; color: white; padding: 8px 20px; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 0.9rem; white-space: nowrap; transition: all 0.3s ease;">
                 <i class="fab fa-whatsapp"></i> RESERVAR AHORA
             </a>
         </div>
@@ -1418,7 +1386,7 @@
             <h1>Planes Turísticos Quindío Todo Incluido - Reserva en 48 horas</h1>
             <p>Operador turístico Eje Cafetero RNT 18152. Parque del Café, Valle de Cocora, Termales. Transporte, hoteles finca, guías certificados. Cotiza ahora y viaja esta semana.</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/573174426044?text=URGENTE%20Quiero%20reservar%20uno%20de%20los%20ultimos%203%20cupos%20disponibles%20para%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-hero" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); border: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transform: scale(1.05);"><i class="fab fa-whatsapp"></i> <strong>🔥 RESERVAR AHORA - ÚLTIMOS 3 CUPOS</strong></a>
+                <a href="#" data-wa-template="hero_reservar" target="_blank" rel="noopener" class="btn btn-whatsapp-hero wa-cta-link" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); border: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transform: scale(1.05);"><i class="fab fa-whatsapp"></i> <strong>🔥 RESERVAR AHORA - ÚLTIMOS 3 CUPOS</strong></a>
                 <a href="planes.html#promo-mes" class="btn btn-green-hero" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); border: none; box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);"><i class="fas fa-calendar-check"></i> <strong>⏰ VER PROMOCIÓN SEMANAL</strong></a>
             </div>
             <div class="hero-urgency" style="background: rgba(231, 76, 60, 0.1); border-left: 4px solid #e74c3c; padding: 15px; border-radius: 8px; margin-top: 20px;">
@@ -1428,7 +1396,7 @@
     </section>
 
     <section class="search-section container" aria-label="Buscador rápido de planes">
-        <form class="search-box" id="form-buscador" onsubmit="event.preventDefault(); manejarBusqueda();">
+        <form class="search-box" id="form-buscador">
             <div class="search-field">
                 <label for="buscador-destino"><i class="fas fa-map-marker-alt"></i> ¿Dónde quieres ir?</label>
                 <select id="buscador-destino">
@@ -1487,7 +1455,7 @@
                     <p class="price">$430.000 <span class="per">/ Económico (sin transporte)</span></p>
                     <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Parque del Café · PANACA · Alojamiento 2 noches · Alimentación</p>
                     <div class="plan-cta-buttons">
-                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20el%20Plan%203%20D%C3%ADas%202%20Noches%20para%20viajar%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+                        <a href="#" data-wa-message="Hola Quindío Travel, quiero cotizar el Plan 3 Días 2 Noches para viajar esta semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan wa-cta-link"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
                         <a href="plan-2.html" class="btn btn-green-plan">Ver programa</a>
                     </div>
                 </div>
@@ -1501,7 +1469,7 @@
                     <p class="price">$570.000 <span class="per">/ Económico (sin transporte)</span></p>
                     <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Valle de Cocora · Salento · Filandia · Parques · Alojamiento</p>
                     <div class="plan-cta-buttons">
-                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20el%20Plan%204%20D%C3%ADas%203%20Noches%20para%20viajar%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+                        <a href="#" data-wa-message="Hola Quindío Travel, quiero cotizar el Plan 4 Días 3 Noches para viajar esta semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan wa-cta-link"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
                         <a href="plan-3.html" class="btn btn-green-plan">Ver programa</a>
                     </div>
                 </div>
@@ -1515,7 +1483,7 @@
                     <p class="price">$777.000 <span class="per">/ Económico (sin transporte)</span></p>
                     <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">TODOS los atractivos · Valle de Cocora · Termales · Pueblos</p>
                     <div class="plan-cta-buttons">
-                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20el%20Plan%205%20D%C3%ADas%204%20Noches%20para%20viajar%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+                        <a href="#" data-wa-message="Hola Quindío Travel, quiero cotizar el Plan 5 Días 4 Noches para viajar esta semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan wa-cta-link"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
                         <a href="plan-6.html" class="btn btn-green-plan">Ver programa</a>
                     </div>
                 </div>
@@ -1529,7 +1497,7 @@
                     <p class="price">$3.420.000 <span class="per">/ VIP (sin transporte)</span></p>
                     <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Alojamiento VIP · Transporte exclusivo · Guías bilingües</p>
                     <div class="plan-cta-buttons">
-                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20el%20Plan%20Premium%20VIP%20para%20viajar%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+                        <a href="#" data-wa-message="Hola Quindío Travel, quiero cotizar el Plan Premium VIP para viajar esta semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan wa-cta-link"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
                         <a href="planes.html?categoria=Premium" class="btn btn-green-plan">Ver programa</a>
                     </div>
                 </div>
@@ -1543,7 +1511,7 @@
                     <p class="price">Cotizar <span class="per">/ Según grupo</span></p>
                     <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Conferencias · Actividades corporativas · Alimentación ejecutiva</p>
                     <div class="plan-cta-buttons">
-                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20el%20Plan%20Empresarial%20para%20viajar%20esta%20semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+                        <a href="#" data-wa-message="Hola Quindío Travel, quiero cotizar el Plan Empresarial para viajar esta semana" target="_blank" rel="noopener" class="btn btn-whatsapp-plan wa-cta-link"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
                         <a href="planes.html?categoria=Empresarial" class="btn btn-green-plan">Ver programa</a>
                     </div>
                 </div>
@@ -1570,9 +1538,13 @@
                         <i class="fas fa-calendar-alt"></i>
                         <span>🌬️ Vientos de Agosto 2026</span>
                         <div class="countdown-timer" id="countdown">
-                            <span class="time-block"><span class="time-value">4</span><span class="time-label">Días</span></span>
+                            <span class="time-block"><span class="time-value" id="promo-days">4</span><span class="time-label">Días</span></span>
                             <span class="time-separator">/</span>
-                            <span class="time-block"><span class="time-value">3</span><span class="time-label">Noches</span></span>
+                            <span class="time-block"><span class="time-value" id="promo-hours">03</span><span class="time-label">Horas</span></span>
+                            <span class="time-separator">/</span>
+                            <span class="time-block"><span class="time-value" id="promo-minutes">00</span><span class="time-label">Min</span></span>
+                            <span class="time-separator">/</span>
+                            <span class="time-block"><span class="time-value" id="promo-seconds">00</span><span class="time-label">Seg</span></span>
                         </div>
                     </div>
                     <div class="promo-scarcity">
@@ -1629,11 +1601,10 @@
                     </div>
                     
                     <div class="promo-cta">
-                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20estoy%20interesado%20en%20la%20PROMOCI%C3%93N%20DEL%20MES%20-%20Plan%20Vientos%20de%20Agosto%202026" 
-                           target="_blank" rel="noopener" class="btn btn-promo" 
+                        <a href="#" data-wa-template="promo_reservar" 
+                           target="_blank" rel="noopener" class="btn btn-promo wa-cta-link" 
                            data-plan-id="promo-vientos-agosto-2026" 
-                           data-type="promo"
-                           onclick="if(typeof openWhatsApp === 'function') { openWhatsApp('promo', 'promo-vientos-agosto-2026', { precio: 1152000, nombre: 'Plan Vientos de Agosto 2026', detalles: '4 Días/3 Noches desde $1.152.000 por persona' }); }">
+                           data-type="promo">
                             <i class="fab fa-whatsapp"></i> Reservar Promoción Ahora
                         </a>
                         <a href="planes.html" class="btn btn-outline-promo">
@@ -1705,10 +1676,10 @@
             </p>
             
             <div class="hotel-filters" style="text-align: center; margin-bottom: 30px;">
-                <button class="filter-btn active" data-filter="all" onclick="filtrarHoteles('all')">Todos</button>
-                <button class="filter-btn" data-filter="estandar" onclick="filtrarHoteles('estandar')">⭐⭐⭐ Estándar</button>
-                <button class="filter-btn" data-filter="intermedia" onclick="filtrarHoteles('intermedia')">⭐⭐⭐⭐ Intermedia</button>
-                <button class="filter-btn" data-filter="vip" onclick="filtrarHoteles('vip')">⭐⭐⭐⭐⭐ VIP</button>
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="estandar">⭐⭐⭐ Estándar</button>
+                <button class="filter-btn" data-filter="intermedia">⭐⭐⭐⭐ Intermedia</button>
+                <button class="filter-btn" data-filter="vip">⭐⭐⭐⭐⭐ VIP</button>
             </div>
             
             <div class="hoteles-grid" id="grid-hoteles">
@@ -1952,8 +1923,7 @@
                 </div>
             </div>
             <div style="text-align:center; margin-top: 35px;">
-                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20requerimos%20una%20cotizaci%C3%B3n%20para%20grupo%20empresarial%20o%20familiar.%20%C2%BFPodr%C3%ADan%20apoyarnos%3F"
-                   target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <a href="#" data-wa-message="Hola Quindío Travel, requerimos una cotización para grupo empresarial o familiar. ¿Podrían apoyarnos?" target="_blank" rel="noopener" class="btn btn-whatsapp wa-cta-link">
                     <i class="fab fa-whatsapp"></i> Solicitar cotización empresarial
                 </a>
             </div>
@@ -2104,7 +2074,7 @@
                         <p style="font-size: 0.9rem; color: #202124; margin: 0; font-style: italic;">"¡Increíble experiencia! El plan al Valle de Cocora fue perfecto. Guías muy profesionales y hoteles excelentes. Definitivamente volveremos."</p>
                     </div>
                     
-                    <a href="https://g.page/r/quindiotravel/review" target="_blank" rel="noopener" style="color: #4285F4; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-block; background: #e8f0fe; padding: 10px 20px; border-radius: 25px; transition: all 0.3s ease;" onmouseover="this.style.background='#d2e3fc';" onmouseout="this.style.background='#e8f0fe';">
+                    <a href="https://g.page/r/quindiotravel/review" target="_blank" rel="noopener" class="google-review-button" style="color: #4285F4; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-block; background: #e8f0fe; padding: 10px 20px; border-radius: 25px; transition: background 0.3s ease;">
                         <i class="fab fa-google"></i> Ver +150 reseñas en Google
                     </a>
                 </div>
@@ -2122,12 +2092,12 @@
             <div class="video-container">
                 <div class="video-placeholder" style="background: linear-gradient(rgba(46,90,54,0.7), rgba(46,90,54,0.5)), url('assets/images/paisajes/foto_hero1.jpg'); background-size: cover; background-position: center; border-radius: 20px; padding: 60px 40px; text-align: center; color: white; position: relative; overflow: hidden;">
                     <div style="position: relative; z-index: 2;">
-                        <div style="width: 100px; height: 100px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        <div class="video-play-circle" style="width: 100px; height: 100px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; cursor: pointer; transition: transform 0.3s;">
                             <i class="fas fa-play" style="font-size: 2.5rem; margin-left: 5px;"></i>
                         </div>
                         <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Quindío Travel: Experiencias Auténticas</h3>
                         <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 20px;">Drone · Paisajes · Caballos · Jeep Willys · Café · Hoteles · Parques</p>
-                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20planes%20tur%C3%ADsticos" target="_blank" rel="noopener" class="btn btn-white" style="background: white; color: var(--verde-cafe); border: none; padding: 15px 30px; font-weight: 700; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                        <a href="#" data-wa-message="Hola Quindío Travel, deseo obtener más información sobre sus planes turísticos" target="_blank" rel="noopener" class="btn btn-white wa-cta-link" style="background: white; color: var(--verde-cafe); border: none; padding: 15px 30px; font-weight: 700; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
                             <i class="fas fa-info-circle"></i> Cotizar mi experiencia
                         </a>
                     </div>
@@ -2188,7 +2158,7 @@
                         </div>
                     </div>
                     
-                    <form id="reserva-form" onsubmit="procesarReserva(event)">
+                    <form id="reserva-form">
                         <!-- Paso 1: Selección de Plan -->
                         <div class="form-step active" data-step="1">
                             <div class="form-group" style="margin-bottom: 20px;">
@@ -2224,7 +2194,7 @@
                                 </select>
                             </div>
                             
-                            <button type="button" class="btn btn-green" onclick="nextStep(2)" style="width: 100%; padding: 12px; font-size: 1rem; font-weight: 700;">
+                            <button type="button" class="btn btn-green" data-step-button="next" data-target-step="2" style="width: 100%; padding: 12px; font-size: 1rem; font-weight: 700;">
                                 Continuar <i class="fas fa-arrow-right"></i>
                             </button>
                         </div>
@@ -2271,10 +2241,10 @@
                             </div>
                             
                             <div style="display: flex; gap: 10px;">
-                                <button type="button" class="btn btn-outline-green" onclick="prevStep(1)" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                <button type="button" class="btn btn-outline-green" data-step-button="prev" data-target-step="1" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
                                     <i class="fas fa-arrow-left"></i> Atrás
                                 </button>
-                                <button type="button" class="btn btn-green" onclick="nextStep(3)" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                <button type="button" class="btn btn-green" data-step-button="next" data-target-step="3" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
                                     Continuar <i class="fas fa-arrow-right"></i>
                                 </button>
                             </div>
@@ -2313,10 +2283,10 @@
                             </div>
                             
                             <div style="display: flex; gap: 10px;">
-                                <button type="button" class="btn btn-outline-green" onclick="prevStep(2)" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                <button type="button" class="btn btn-outline-green" data-step-button="prev" data-target-step="2" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
                                     <i class="fas fa-arrow-left"></i> Atrás
                                 </button>
-                                <button type="button" class="btn btn-green" onclick="nextStep(4)" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                <button type="button" class="btn btn-green" data-step-button="next" data-target-step="4" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
                                     Revisar <i class="fas fa-arrow-right"></i>
                                 </button>
                             </div>
@@ -2339,7 +2309,7 @@
                             </div>
                             
                             <div style="display: flex; gap: 10px;">
-                                <button type="button" class="btn btn-outline-green" onclick="prevStep(3)" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                <button type="button" class="btn btn-outline-green" data-step-button="prev" data-target-step="3" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
                                     <i class="fas fa-arrow-left"></i> Atrás
                                 </button>
                                 <button type="submit" class="btn btn-green" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
@@ -2380,7 +2350,7 @@
                     </div>
                     
                     <div style="text-align: center; margin-top: 30px;">
-                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20hacer%20una%20reserva%20directamente%20por%20WhatsApp" target="_blank" rel="noopener" class="btn btn-white" style="background: white; color: var(--verde-cafe); border: none; padding: 15px 30px; font-weight: 700; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                        <a href="#" data-wa-message="Hola Quindío Travel, deseo hacer una reserva directamente por WhatsApp" target="_blank" rel="noopener" class="btn btn-white wa-cta-link" style="background: white; color: var(--verde-cafe); border: none; padding: 15px 30px; font-weight: 700; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
                             <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
                         </a>
                     </div>
@@ -2506,8 +2476,7 @@
                         <a href="https://www.mapaturisticodelquindio.com/" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: var(--blanco); color: var(--blanco);">
                             <i class="fas fa-map-marked-alt"></i> Abrir Mapa Turístico Oficial
                         </a>
-                        <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quisiera%20asesor%C3%ADa%20sobre%20el%20mapa%20tur%C3%ADstico%20del%20Quind%C3%ADo%20y%20recomendaciones%20de%20rutas"
-                           target="_blank" rel="noopener" class="btn btn-whatsapp">
+                        <a href="#" data-wa-message="Hola Quindío Travel, quisiera asesoría sobre el mapa turístico del Quindío y recomendaciones de rutas" target="_blank" rel="noopener" class="btn btn-whatsapp wa-cta-link">
                             <i class="fab fa-whatsapp"></i> Pide tu ruta en WhatsApp
                         </a>
                     </div>
@@ -2643,7 +2612,7 @@
                     <li><a href="planes.html?destino=Parque Los Arrieros">🐴 Parque Los Arrieros</a></li>
                 </ul>
                 <div class="social-icons" style="margin-top: 18px;">
-                    <a href="https://wa.me/573174426044" target="_blank" rel="noopener" aria-label="WhatsApp Quindío Travel"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" data-wa-template="footer_contacto" target="_blank" rel="noopener" aria-label="WhatsApp Quindío Travel" class="wa-cta-link"><i class="fab fa-whatsapp"></i></a>
                     <a href="#" aria-label="Facebook Quindío Travel"><i class="fab fa-facebook"></i></a>
                     <a href="#" aria-label="Instagram Quindío Travel"><i class="fab fa-instagram"></i></a>
                 </div>
@@ -2656,9 +2625,9 @@
 
     <!-- Popup de Captura de Leads - Quiz de Viajero -->
     <div id="lead-capture-popup" class="lead-capture-popup">
-        <div class="popup-overlay" onclick="closePopup()"></div>
+        <div class="popup-overlay" data-popup-close></div>
         <div class="popup-content">
-            <button class="popup-close" onclick="closePopup()" aria-label="Cerrar popup">&times;</button>
+            <button class="popup-close" data-popup-close aria-label="Cerrar popup">&times;</button>
             <div class="popup-header">
                 <h3>🎯 Descubre tu Plan Ideal en 2 Minutos</h3>
                 <p>Responde 4 preguntas y recibe una cotización personalizada con -15% de descuento</p>
@@ -2668,47 +2637,47 @@
                 <div class="quiz-step active" data-step="1">
                     <h4>1. ¿Cuántas personas viajarán?</h4>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="selectOption(1, '1-2')">1-2 personas</button>
-                        <button class="quiz-btn" onclick="selectOption(1, '3-4')">3-4 personas</button>
-                        <button class="quiz-btn" onclick="selectOption(1, '5-10')">5-10 personas</button>
-                        <button class="quiz-btn" onclick="selectOption(1, '10+')">Más de 10 personas</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="1" data-quiz-value="1-2">1-2 personas</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="1" data-quiz-value="3-4">3-4 personas</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="1" data-quiz-value="5-10">5-10 personas</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="1" data-quiz-value="10+">Más de 10 personas</button>
                     </div>
                 </div>
                 <!-- Pregunta 2 -->
                 <div class="quiz-step" data-step="2">
                     <h4>2. ¿Cuántos días quieres viajar?</h4>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="selectOption(2, '2d')">2 días / 1 noche</button>
-                        <button class="quiz-btn" onclick="selectOption(2, '3d')">3 días / 2 noches</button>
-                        <button class="quiz-btn" onclick="selectOption(2, '4d')">4 días / 3 noches</button>
-                        <button class="quiz-btn" onclick="selectOption(2, '5d')">5 días / 4 noches</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="2" data-quiz-value="2d">2 días / 1 noche</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="2" data-quiz-value="3d">3 días / 2 noches</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="2" data-quiz-value="4d">4 días / 3 noches</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="2" data-quiz-value="5d">5 días / 4 noches</button>
                     </div>
                 </div>
                 <!-- Pregunta 3 -->
                 <div class="quiz-step" data-step="3">
                     <h4>3. ¿Qué experiencia te interesa más?</h4>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="selectOption(3, 'parques')">Parques temáticos (Café, PANACA)</button>
-                        <button class="quiz-btn" onclick="selectOption(3, 'naturaleza')">Naturaleza (Valle de Cocora, senderismo)</button>
-                        <button class="quiz-btn" onclick="selectOption(3, 'cultura')">Cultura (pueblos, café tradicional)</button>
-                        <button class="quiz-btn" onclick="selectOption(3, 'todo')">¡Todo lo anterior!</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="3" data-quiz-value="parques">Parques temáticos (Café, PANACA)</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="3" data-quiz-value="naturaleza">Naturaleza (Valle de Cocora, senderismo)</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="3" data-quiz-value="cultura">Cultura (pueblos, café tradicional)</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="3" data-quiz-value="todo">¡Todo lo anterior!</button>
                     </div>
                 </div>
                 <!-- Pregunta 4 -->
                 <div class="quiz-step" data-step="4">
                     <h4>4. ¿Cuándo planeas viajar?</h4>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="selectOption(4, 'pronto')">Esta semana</button>
-                        <button class="quiz-btn" onclick="selectOption(4, 'mes')">Próximo mes</button>
-                        <button class="quiz-btn" onclick="selectOption(4, 'temporada')">Temporada alta (diciembre-enero)</button>
-                        <button class="quiz-btn" onclick="selectOption(4, 'flexible')">Fecha flexible</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="4" data-quiz-value="pronto">Esta semana</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="4" data-quiz-value="mes">Próximo mes</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="4" data-quiz-value="temporada">Temporada alta (diciembre-enero)</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="4" data-quiz-value="flexible">Fecha flexible</button>
                     </div>
                 </div>
                 <!-- Formulario Final -->
                 <div class="quiz-step" data-step="5">
                     <h4>🎉 ¡Excelente! Último paso:</h4>
                     <p>Ingresa tus datos para recibir tu cotización personalizada con -15% de descuento</p>
-                    <form class="quiz-form" onsubmit="submitQuiz(event)">
+                    <form class="quiz-form" id="quiz-form">
                         <input type="text" id="quiz-nombre" placeholder="Tu nombre" required>
                         <input type="email" id="quiz-email" placeholder="Tu correo electrónico" required>
                         <input type="tel" id="quiz-whatsapp" placeholder="Tu WhatsApp" required>
@@ -2785,7 +2754,7 @@
 Quiero mi cotización personalizada con el 15% de descuento para el plan ideal para mí.`;
             
             // Redirigir a WhatsApp
-            window.open(`https://wa.me/573174426044?text=${encodeURIComponent(mensaje)}`, '_blank');
+            openWhatsApp(mensaje);
             
             // Marcar quiz como completado
             localStorage.setItem('quizCompleted', 'true');
@@ -2838,6 +2807,9 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
                 const d = String(hoy.getDate()).padStart(2, '0');
                 dateInput.min = `${y}-${m}-${d}`;
             }
+
+            setupPopupAndQuizHandlers();
+            setupChatInteractions();
         });
         
         function filtrarHoteles(categoria) {
@@ -2862,59 +2834,71 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
             });
         }
         
-        function procesarReserva(event) {
+        async function procesarReserva(event) {
             event.preventDefault();
-            
-            // Obtener valores del formulario
+
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Enviando...';
+            }
+
             const plan = document.getElementById('reserva-plan').value;
             const categoria = document.getElementById('reserva-categoria').value;
             const transporte = document.getElementById('reserva-transporte').value;
             const fecha = document.getElementById('reserva-fecha').value;
-            const adultos = document.getElementById('reserva-adultos').value;
-            const ninos = document.getElementById('reserva-ninos').value;
+            const adultos = Number(document.getElementById('reserva-adultos').value);
+            const ninos = Number(document.getElementById('reserva-ninos').value);
             const nombre = document.getElementById('reserva-nombre').value;
             const whatsapp = document.getElementById('reserva-whatsapp').value;
             const email = document.getElementById('reserva-email').value;
             const pago = document.getElementById('reserva-pago').value;
             const comentarios = document.getElementById('reserva-comentarios').value;
-            
-            // Obtener nombres seleccionados
-            const planSelect = document.getElementById('reserva-plan');
-            const planNombre = planSelect.options[planSelect.selectedIndex].text;
-            
-            const categoriaSelect = document.getElementById('reserva-categoria');
-            const categoriaNombre = categoriaSelect.options[categoriaSelect.selectedIndex].text;
-            
-            const transporteSelect = document.getElementById('reserva-transporte');
-            const transporteNombre = transporteSelect.options[transporteSelect.selectedIndex].text;
-            
-            // Obtener precios calculados
-            const precioPersona = document.getElementById('precio-persona').textContent;
-            const totalEstimado = document.getElementById('total-estimado').textContent;
-            
-            // Construir mensaje de WhatsApp estructurado
-            const mensaje = `📝 *NUEVA COTIZACIÓN INTELIGENTE*%0A%0A` +
-                `👤 *Cliente:* ${nombre}%0A` +
-                `📱 *WhatsApp:* ${whatsapp}%0A` +
-                `📧 *Email:* ${email}%0A%0A` +
-                `🎯 *Plan:* ${planNombre}%0A` +
-                `🏨 *Categoría:* ${categoriaNombre}%0A` +
-                `🚗 *Transporte:* ${transporteNombre}%0A%0A` +
-                `📅 *Fecha:* ${fecha}%0A` +
-                `👥 *Adultos:* ${adultos}%0A` +
-                `👶 *Niños:* ${ninos}%0A%0A` +
-                `💰 *Cotización:*%0A` +
-                `   Precio por persona: ${precioPersona}%0A` +
-                `   Total estimado: ${totalEstimado}%0A%0A` +
-                `💳 *Pago:* ${pago}%0A%0A` +
-                `📝 *Comentarios:* ${comentarios || 'Ninguno'}%0A%0A` +
-                `✅ *Enviado desde cotizador inteligente Quindío Travel*`;
-            
-            // Redirigir a WhatsApp
-            window.open(`https://wa.me/573174426044?text=${mensaje}`, '_blank');
-            
-            // Mostrar confirmación visual
-            alert('¡Cotización enviada! Te contactaremos en menos de 2 horas hábiles con disponibilidad real y confirmación.');
+
+            const payload = {
+                plan,
+                category: categoria,
+                transportation: transporte,
+                date: fecha,
+                adults,
+                children: ninos,
+                name: nombre,
+                whatsapp,
+                email,
+                paymentMethod: pago,
+                comments: comentarios
+            };
+
+            try {
+                const response = await fetch(RESERVATION_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+                if (!response.ok) {
+                    throw new Error(data.error || 'No se pudo procesar la reserva.');
+                }
+
+                alert(data.message || 'Tu solicitud ha sido enviada. Nuestro equipo te contactará pronto.');
+
+                const followUpMessage = `Hola Quindío Travel, ya envié mi solicitud de reserva inteligente. Mi ID de reserva es ${data.reservationId}. Por favor contáctenme cuando confirmen la disponibilidad.`;
+                openWhatsApp(followUpMessage);
+            } catch (error) {
+                console.error('Reservation submit error:', error);
+                alert('No se pudo enviar la reserva. Por favor intenta nuevamente o contáctanos por WhatsApp.');
+
+                const fallbackMessage = `Hola Quindío Travel, necesito reservar un plan turístico y tuve un problema técnico en el sitio. Por favor contáctenme.`;
+                openWhatsApp(fallbackMessage);
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Enviar a WhatsApp';
+                }
+            }
         }
         
         // Funciones para el formulario multi-step
@@ -3128,23 +3112,29 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
                 ninosInput.addEventListener('change', calculatePrice);
                 ninosInput.addEventListener('input', calculatePrice);
             }
+
+            setupWhatsAppCTAs();
+            setupStepNavigation();
+            setupSearchForm();
+            setupReservationForm();
         });
 
         // Countdown Timer para Promoción
         function startCountdown() {
-            // Establecer fecha límite (3 días desde ahora)
-            const deadline = new Date();
+            // Establecer fecha límite para la promoción (3 días desde ahora)
+            let deadline = new Date();
             deadline.setDate(deadline.getDate() + 3);
             deadline.setHours(23, 59, 59, 999);
 
             function updateTimer() {
                 const now = new Date();
-                const diff = deadline - now;
+                let diff = deadline - now;
 
                 if (diff <= 0) {
-                    // Reiniciar countdown cuando llegue a cero
-                    deadline.setDate(deadline.getDate() + 7);
-                    return;
+                    deadline = new Date();
+                    deadline.setDate(deadline.getDate() + 3);
+                    deadline.setHours(23, 59, 59, 999);
+                    diff = deadline - now;
                 }
 
                 const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -3152,10 +3142,22 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
                 const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-                document.getElementById('days').textContent = String(days).padStart(2, '0');
-                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+                const bannerHours = document.getElementById('banner-hours');
+                const bannerMinutes = document.getElementById('banner-minutes');
+                const bannerSeconds = document.getElementById('banner-seconds');
+                const promoDays = document.getElementById('promo-days');
+                const promoHours = document.getElementById('promo-hours');
+                const promoMinutes = document.getElementById('promo-minutes');
+                const promoSeconds = document.getElementById('promo-seconds');
+
+                if (bannerHours) bannerHours.textContent = String(hours).padStart(2, '0');
+                if (bannerMinutes) bannerMinutes.textContent = String(minutes).padStart(2, '0');
+                if (bannerSeconds) bannerSeconds.textContent = String(seconds).padStart(2, '0');
+
+                if (promoDays) promoDays.textContent = String(days).padStart(2, '0');
+                if (promoHours) promoHours.textContent = String(hours).padStart(2, '0');
+                if (promoMinutes) promoMinutes.textContent = String(minutes).padStart(2, '0');
+                if (promoSeconds) promoSeconds.textContent = String(seconds).padStart(2, '0');
             }
 
             updateTimer();
@@ -3167,8 +3169,8 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
     </script>
     
     <!-- Botón flotante de WhatsApp para contacto inmediato -->
-    <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20un%20plan%20tur%C3%ADstico%20para%20viajar%20en%20menos%20de%2048%20horas" 
-       target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <a href="#" data-wa-template="whatsapp_flotante" 
+       target="_blank" rel="noopener" class="whatsapp-float wa-cta-link" aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-tooltip">Cotizar Ahora</span>
     </a>
@@ -3235,7 +3237,7 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
     <!-- Chatbot Don Chucho - Arriero Guía Turístico -->
     <div id="don-chucho-chat" class="don-chucho-chat">
         <div class="don-chucho-widget" id="don-chucho-widget">
-            <div class="don-chucho-avatar" onclick="toggleChat()">
+            <div class="don-chucho-avatar" data-chat-toggle>
                 <div class="arriero-avatar">
                     <div class="sombrero">
                         <div class="sombrero-copa"></div>
@@ -3269,7 +3271,7 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
                     <p>Arriero guía local - RNT 18152</p>
                     <span class="typing-indicator">Escribiendo...</span>
                 </div>
-                <button class="chat-close" onclick="toggleChat()" aria-label="Cerrar chat">&times;</button>
+                <button class="chat-close" data-chat-close aria-label="Cerrar chat">&times;</button>
             </div>
             
             <div class="chat-messages" id="chat-messages">
@@ -3283,10 +3285,10 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
                     <div class="message-content">
                         <p>¡Buenos días, viajero! 👋 Soy Don Chucho, tu arriero guía local del Eje Cafetero. ¿En qué puedo ayudarte hoy?</p>
                         <div class="quick-replies">
-                            <button class="quick-reply" onclick="sendQuickReply('planes')">🗺️ Ver planes turísticos</button>
-                            <button class="quick-reply" onclick="sendQuickReply('destinos')">🏛️ Destinos populares</button>
-                            <button class="quick-reply" onclick="sendQuickReply('cotizar')">💰 Cotizar viaje</button>
-                            <button class="quick-reply" onclick="sendQuickReply('consejos')">💡 Consejos locales</button>
+                            <button class="quick-reply" data-quick-reply="planes">🗺️ Ver planes turísticos</button>
+                            <button class="quick-reply" data-quick-reply="destinos">🏛️ Destinos populares</button>
+                            <button class="quick-reply" data-quick-reply="cotizar">💰 Cotizar viaje</button>
+                            <button class="quick-reply" data-quick-reply="consejos">💡 Consejos locales</button>
                         </div>
                     </div>
                 </div>
@@ -3294,13 +3296,13 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
             
             <div class="chat-input-area">
                 <div class="suggestions">
-                    <span class="suggestion-chip" onclick="sendQuickReply('mejor epoca')">🌤️ Mejor época para viajar</span>
-                    <span class="suggestion-chip" onclick="sendQuickReply('precios')">💎 Precios 2026</span>
-                    <span class="suggestion-chip" onclick="sendQuickReply('familias')">👨‍👩‍👧‍👦 Viajes familiares</span>
+                    <span class="suggestion-chip" data-quick-reply="mejor epoca">🌤️ Mejor época para viajar</span>
+                    <span class="suggestion-chip" data-quick-reply="precios">💎 Precios 2026</span>
+                    <span class="suggestion-chip" data-quick-reply="familias">👨‍👩‍👧‍👦 Viajes familiares</span>
                 </div>
                 <div class="input-wrapper">
-                    <input type="text" id="chat-input" placeholder="Escribe tu pregunta..." onkeypress="handleKeyPress(event)">
-                    <button class="send-btn" onclick="sendMessage()" aria-label="Enviar mensaje">
+                    <input type="text" id="chat-input" placeholder="Escribe tu pregunta...">
+                    <button type="button" class="send-btn" data-chat-send aria-label="Enviar mensaje">
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
@@ -3315,7 +3317,156 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
         let sessionId = null;
         let conversationHistory = [];
         const API_BASE_URL = 'https://don-chucho-backend.herokuapp.com/api/chat'; // URL de producción
-        
+        const RESERVATION_API_URL = 'https://don-chucho-backend.herokuapp.com/api/reservations';
+        const WA_BASE_URL = 'https://wa.me/573174426044';
+
+        function openWhatsApp(message) {
+            const safeMessage = message || 'Hola Quindío Travel, necesito más información sobre sus planes turísticos.';
+            const encodedMessage = encodeURIComponent(safeMessage);
+            window.open(`${WA_BASE_URL}?text=${encodedMessage}`, '_blank');
+        }
+
+        function buildWhatsAppMessageFromElement(element) {
+            if (!element) return 'Hola Quindío Travel, necesito más información sobre sus planes turísticos.';
+
+            if (element.dataset.waMessage) {
+                return element.dataset.waMessage;
+            }
+
+            const template = element.dataset.waTemplate;
+            const planId = element.dataset.planId;
+            const type = element.dataset.type;
+
+            const templates = {
+                hero_reservar: 'Hola Quindío Travel, quiero reservar ahora y aprovechar los últimos 3 cupos disponibles. Confírmame disponibilidad y precio inmediato.',
+                urgency_reservar: 'Hola Quindío Travel, quiero reservar uno de los últimos 3 cupos disponibles para esta semana. Confírmame disponibilidad por favor.',
+                header_contacto: 'Hola Quindío Travel, quiero información y cotización de sus planes turísticos en el Quindío.',
+                promo_reservar: 'Hola Quindío Travel, estoy interesado en la promoción Vientos de Agosto 2026. Por favor envíame detalles y disponibilidad.',
+                whatsapp_flotante: 'Hola Quindío Travel, deseo cotizar un plan turístico rápido y viajar esta semana. ¿Me ayudas?',
+                footer_contacto: 'Hola Quindío Travel, deseo cotizar un plan turístico en el Quindío. ¿Me pueden enviar opciones y precios?'
+            };
+
+            if (template && templates[template]) {
+                return templates[template];
+            }
+
+            if (planId) {
+                return `Hola Quindío Travel, estoy interesado en ${planId}. Por favor envíame detalles y precio.`;
+            }
+
+            if (type === 'promo') {
+                return 'Hola Quindío Travel, quiero información sobre la promoción actual y disponibilidad.';
+            }
+
+            return 'Hola Quindío Travel, necesito más información sobre sus planes turísticos.';
+        }
+
+        function setupWhatsAppCTAs() {
+            document.querySelectorAll('.wa-cta-link').forEach(link => {
+                link.addEventListener('click', event => {
+                    const href = link.getAttribute('href');
+                    const hasTemplate = typeof link.dataset.waTemplate !== 'undefined';
+                    const hasMessage = typeof link.dataset.waMessage !== 'undefined';
+
+                    if (href === '#' || hasTemplate || hasMessage) {
+                        event.preventDefault();
+                        const message = buildWhatsAppMessageFromElement(link);
+                        openWhatsApp(message);
+                    }
+                });
+            });
+        }
+
+        function setupStepNavigation() {
+            document.querySelectorAll('[data-step-button]').forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = Number(button.dataset.targetStep);
+                    if (Number.isNaN(target)) return;
+                    if (button.dataset.stepButton === 'next') {
+                        nextStep(target);
+                    } else if (button.dataset.stepButton === 'prev') {
+                        prevStep(target);
+                    }
+                });
+            });
+        }
+
+        function setupSearchForm() {
+            const searchForm = document.getElementById('form-buscador');
+            if (searchForm) {
+                searchForm.addEventListener('submit', event => {
+                    event.preventDefault();
+                    manejarBusqueda();
+                });
+            }
+        }
+
+        function setupReservationForm() {
+            const reservaForm = document.getElementById('reserva-form');
+            if (reservaForm) {
+                reservaForm.addEventListener('submit', procesarReserva);
+            }
+        }
+
+        function setupPopupAndQuizHandlers() {
+            document.querySelectorAll('[data-popup-close]').forEach(element => {
+                element.addEventListener('click', closePopup);
+            });
+
+            document.querySelectorAll('[data-quiz-step]').forEach(button => {
+                button.addEventListener('click', () => {
+                    const step = Number(button.dataset.quizStep);
+                    const value = button.dataset.quizValue;
+                    if (!Number.isNaN(step) && value) {
+                        selectOption(step, value);
+                    }
+                });
+            });
+
+            const quizForm = document.getElementById('quiz-form');
+            if (quizForm) {
+                quizForm.addEventListener('submit', submitQuiz);
+            }
+        }
+
+        function setupChatInteractions() {
+            document.querySelectorAll('[data-chat-toggle]').forEach(element => {
+                element.addEventListener('click', toggleChat);
+            });
+
+            document.querySelectorAll('[data-chat-close]').forEach(element => {
+                element.addEventListener('click', toggleChat);
+            });
+
+            const chatContainer = document.getElementById('don-chucho-chat');
+            if (chatContainer) {
+                chatContainer.addEventListener('click', event => {
+                    const button = event.target.closest('[data-quick-reply]');
+                    if (button) {
+                        const intent = button.dataset.quickReply;
+                        if (intent) {
+                            sendQuickReply(intent);
+                        }
+                    }
+                });
+            }
+
+            const chatInput = document.getElementById('chat-input');
+            if (chatInput) {
+                chatInput.addEventListener('keydown', event => {
+                    if (event.key === 'Enter') {
+                        event.preventDefault();
+                        sendMessage();
+                    }
+                });
+            }
+
+            const sendButton = document.querySelector('[data-chat-send]');
+            if (sendButton) {
+                sendButton.addEventListener('click', sendMessage);
+            }
+        }
+
         // Inicializar sesión de chat
         async function initializeChatSession() {
             try {
@@ -3411,7 +3562,7 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
                 quickReplies.forEach(reply => {
                     const replyText = typeof reply === 'string' ? reply : reply.title;
                     const replyId = typeof reply === 'string' ? reply : reply.id;
-                    quickRepliesHTML += `<button class="quick-reply" onclick="sendQuickReply('${replyId}')">${formatQuickReply(replyText)}</button>`;
+                    quickRepliesHTML += `<button class="quick-reply" data-quick-reply="${replyId}">${formatQuickReply(replyText)}</button>`;
                 });
                 quickRepliesHTML += '</div>';
             }
@@ -3430,6 +3581,15 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
             `;
             messagesContainer.appendChild(messageDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+            messageDiv.querySelectorAll('.quick-reply').forEach(button => {
+                button.addEventListener('click', () => {
+                    const intent = button.dataset.quickReply;
+                    if (intent) {
+                        sendQuickReply(intent);
+                    }
+                });
+            });
             
             // Agregar al historial
             conversationHistory.push({
@@ -3475,7 +3635,7 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
                     setTimeout(() => {
                         addBotMessage("📞 Te conecto con WhatsApp de Quindío Travel:", []);
                         setTimeout(() => {
-                            window.open('https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20necesito%20ayuda%20de%20un%20agente%20humano', '_blank');
+                            openWhatsApp('Hola Quindío Travel, necesito ayuda de un agente humano');
                         }, 2000);
                     }, 2000);
                 }
@@ -4068,7 +4228,7 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
                 <div style="background: var(--verde-cafe); color: white; border-radius: 12px; padding: 30px; text-align: center;">
                     <h3 style="margin-bottom: 15px;">💡 ¿Necesitas una cotización exacta?</h3>
                     <p style="margin-bottom: 20px;">Contáctanos por WhatsApp para recibir una cotización personalizada según tus necesidades específicas.</p>
-                    <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20necesito%20una%20cotizaci%C3%B3n%20personalizada" target="_blank" rel="noopener" style="background: white; color: var(--verde-cafe); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">
+                    <a href="#" data-wa-message="Hola Quindío Travel, necesito una cotización personalizada" target="_blank" rel="noopener" class="wa-cta-link" style="background: white; color: var(--verde-cafe); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">
                         <i class="fab fa-whatsapp"></i> Solicitar Cotización Personalizada
                     </a>
                 </div>
