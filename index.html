@@ -1360,18 +1360,19 @@
 
     <!-- Banner de Urgencia y Countdown Timer -->
     <div class="urgency-banner" id="urgency-banner" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 12px 20px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="urgency-banner-inner" style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <div class="urgency-banner-message" style="display: flex; align-items: center; gap: 8px;">
                 <i class="fas fa-fire" style="color: #f39c12; font-size: 1.2em;"></i>
                 <span style="font-weight: 700; font-size: 0.95rem;">¡SOLO 3 CUPOS DISPONIBLES PARA ESTA SEMANA!</span>
             </div>
-            <div style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px;">
+            <div class="urgency-banner-timer" style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px;">
                 <i class="fas fa-clock"></i>
                 <span style="font-family: monospace; font-weight: 700; font-size: 1.1rem;" id="countdown-timer">02:34:56</span>
                 <span style="font-size: 0.85rem;">para actualizar cupos</span>
             </div>
             <a href="https://wa.me/573174426044?text=URGENTE%20Quiero%20reservar%20uno%20de%20los%20ultimos%203%20cupos%20disponibles" 
                target="_blank" rel="noopener" 
+               class="urgency-banner-cta"
                style="background: #2ecc71; color: white; padding: 8px 20px; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 0.9rem; white-space: nowrap; transition: all 0.3s ease;"
                onmouseover="this.style.background='#27ae60'; this.style.transform='scale(1.05)';"
                onmouseout="this.style.background='#2ecc71'; this.style.transform='scale(1)';">
@@ -1383,23 +1384,23 @@
     <!-- Breadcrumbs SEO -->
     <nav class="breadcrumbs" aria-label="Breadcrumbs de navegación">
         <div class="container">
-            <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; margin: 0; display: flex; gap: 8px; font-size: 0.9rem;">
+            <ol class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; margin: 0; display: flex; gap: 8px; font-size: 0.9rem;">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="display: flex; align-items: center;">
-                    <a href="https://quindiotravel.com.co/" itemprop="item" style="color: var(--verde-cafe); text-decoration: none; font-weight: 500;">
+                    <a href="https://quindiotravel.com.co/" itemprop="item" class="breadcrumb-link" style="color: var(--verde-cafe); text-decoration: none; font-weight: 500;">
                         <span itemprop="name">Inicio</span>
                     </a>
                     <meta itemprop="position" content="1">
                 </li>
                 <li style="color: #999;">›</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="display: flex; align-items: center;">
-                    <a href="https://quindiotravel.com.co/planes.html" itemprop="item" style="color: var(--verde-cafe); text-decoration: none; font-weight: 500;">
+                    <a href="https://quindiotravel.com.co/planes.html" itemprop="item" class="breadcrumb-link" style="color: var(--verde-cafe); text-decoration: none; font-weight: 500;">
                         <span itemprop="name">Planes Turísticos</span>
                     </a>
                     <meta itemprop="position" content="2">
                 </li>
                 <li style="color: #999;">›</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="display: flex; align-items: center;">
-                    <span itemprop="name" style="color: var(--marron-madera); font-weight: 600;">Eje Cafetero 2026</span>
+                    <span itemprop="name" class="breadcrumb-current" style="color: var(--marron-madera); font-weight: 600;">Eje Cafetero 2026</span>
                     <meta itemprop="position" content="3">
                 </li>
             </ol>
@@ -1470,10 +1471,10 @@
         <p class="section-subtitle" style="text-align:center; margin-bottom: 30px; color: var(--marron-madera); font-weight: 500;">
             Los favoritos de miles de viajeros cada año. Todos con asistencia médica y guía local certificada.
         </p>
-        <div style="background: #f8f9fa; border-left: 4px solid var(--verde-cafe); padding: 15px; margin-bottom: 25px; border-radius: 8px;">
+        <div class="plans-note" style="background: #f8f9fa; border-left: 4px solid var(--verde-cafe); padding: 15px; margin-bottom: 25px; border-radius: 8px;">
             <p style="margin: 0; font-size: 0.9rem; color: #333;">
                 <strong>💰 Precios según categoría:</strong> Los precios varían según categoría de alojamiento (Económico/Intermedio/Intermedio VIP/VIP), temporada (baja/media/alta) y tipo de transporte (sin transporte/radio taxi/placa blanca). Los precios mostrados son referenciales para economía sin transporte. 
-                <a href="#condiciones-precios" style="color: var(--verde-cafe); text-decoration: underline;">Ver condiciones completas</a>
+                <a href="#condiciones-precios" class="plans-note-link" style="color: var(--verde-cafe); text-decoration: underline;">Ver condiciones completas</a>
             </p>
         </div>
         <div class="plans-grid">

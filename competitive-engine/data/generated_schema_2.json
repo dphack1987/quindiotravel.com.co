@@ -1,0 +1,168 @@
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Aventura Café y Naturaleza",
+  "description": "Tour inmersivo en cultura cafetera con visitas a fincas tradicionales y experiencias ecológicas",
+  "touristType": [
+    "Aventureros",
+    "Ecoturismo",
+    "Familias"
+  ],
+  "duration": "P3D",
+  "startDate": "2026-08-03",
+  "endDate": "2026-09-02",
+  "provider": {
+    "@type": "TravelAgency",
+    "name": "Quindío Travel",
+    "telephone": "+57-317-4426044",
+    "url": "https://quindiotravel.com.co",
+    "priceRange": "$$ - $$$",
+    "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1200",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Salento, Quindío",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 4.6373012,
+      "longitude": -75.569799
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Salento, Quindío",
+      "addressRegion": "Quindío",
+      "addressCountry": {
+        "@type": "Country",
+        "name": "CO"
+      }
+    },
+    "containedInPlace": [
+      {
+        "@type": "Place",
+        "name": "Valle de Cocora"
+      },
+      {
+        "@type": "Place",
+        "name": "Reserva Natural"
+      },
+      {
+        "@type": "Place",
+        "name": "Fincas Cafeteras"
+      }
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "name": "Plan Aventura Café y Naturaleza",
+    "description": "Tour inmersivo en cultura cafetera con visitas a fincas tradicionales y experiencias ecológicas",
+    "price": 1152000,
+    "priceCurrency": "COP",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2026-08-03",
+    "validThrough": "2026-12-31",
+    "seller": {
+      "@type": "TravelAgency",
+      "name": "Quindío Travel",
+      "telephone": "+57-317-4426044"
+    },
+    "inventoryLevel": {
+      "@type": "QuantitativeValue",
+      "value": "15",
+      "unitText": "spaces"
+    }
+  },
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Guía certificado",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Alimentación incluida",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Transporte",
+      "value": "True"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Equipamiento profesional",
+      "value": "True"
+    }
+  ],
+  "itinerary": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Place",
+          "name": "Llegada y check-in en Salento, Quindío",
+          "description": "Traslado desde terminal de transporte, alojamiento en hotel seleccionado"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Place",
+          "name": "Experiencia principal en Salento, Quindío",
+          "description": "Tour guiado por atracciones principales y cultura local"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Place",
+          "name": "Actividades especiales",
+          "description": "Experiencias exclusivas según el tipo de tour seleccionado"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Place",
+          "name": "Regreso y despedida",
+          "description": "Transporte de regreso y conclusiones del viaje"
+        }
+      }
+    ]
+  },
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://wa.me/573174426044?text=Hola, estoy interesado en Aventura%20Café%20y%20Naturaleza",
+      "actionPlatform": "http://schema.org/MobileWebPlatform"
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Aventura Café y Naturaleza"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "RNT",
+      "value": "18152"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Temporada",
+      "value": "Alta demanda"
+    }
+  ]
+}

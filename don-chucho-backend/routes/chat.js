@@ -29,15 +29,28 @@ router.post('/message', async (req, res) => {
         // Guardar conversación en base de datos
         const db = getDatabase();
         const conversations = db.collection('web_conversations');
-        
+        const now = new Date();
+        const savedHistory = Array.isArray(conversationHistory) ? conversationHistory : [];
+
+        const historyEntries = savedHistory.map(item => ({
+            role: item.role || 'user',
+            content: item.content || '',
+            timestamp: item.timestamp ? new Date(item.timestamp) : now
+        }));
+
+        historyEntries.push({ role: 'user', content: message, timestamp: now });
+        historyEntries.push({ role: 'assistant', content: aiResponse, timestamp: now });
+
         await conversations.updateOne(
             { sessionId: sessionId },
             {
                 $set: {
+                    sessionId,
                     lastMessage: message,
                     lastResponse: aiResponse,
-                    lastUpdate: new Date(),
-                    messageCount: 1
+                    lastUpdate: now,
+                    source: 'web',
+                    history: historyEntries
                 },
                 $inc: { messageCount: 1 }
             },
@@ -48,7 +61,7 @@ router.post('/message', async (req, res) => {
         res.json({
             response: aiResponse,
             additionalInfo: additionalInfo,
-            timestamp: new Date()
+            timestamp: now
         });
 
     } catch (error) {
