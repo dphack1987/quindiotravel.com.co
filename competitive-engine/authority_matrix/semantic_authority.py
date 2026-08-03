@@ -153,12 +153,31 @@ class SemanticAuthorityMatrix:
             self.logger.warning("⚠️ Grafo sin enlaces, usando autoridad base")
             return self.authority_scores
         
-        pagerank = nx.pagerank(
-            self.graph, 
-            alpha=damping, 
-            max_iter=iterations, 
-            weight='weight'
-        )
+        try:
+            pagerank = nx.pagerank(
+                self.graph,
+                alpha=damping,
+                max_iter=iterations,
+                weight='weight'
+            )
+        except Exception as e:
+            self.logger.warning(f"⚠️ PageRank default failed: {e}")
+            self.logger.info("🔧 Usando fallback de PageRank iterativo en Python")
+            pagerank = {node: 1.0 / self.graph.number_of_nodes() for node in self.graph.nodes()}
+            for _ in range(iterations):
+                new_pagerank = {}
+                for node in self.graph.nodes():
+                    rank_sum = 0.0
+                    for predecessor in self.graph.predecessors(node):
+                        edge_weight = self.graph[predecessor][node].get('weight', 1.0)
+                        outgoing_weight = sum(
+                            self.graph[predecessor][nbr].get('weight', 1.0)
+                            for nbr in self.graph.successors(predecessor)
+                        )
+                        if outgoing_weight > 0:
+                            rank_sum += pagerank[predecessor] * edge_weight / outgoing_weight
+                    new_pagerank[node] = (1 - damping) / self.graph.number_of_nodes() + damping * rank_sum
+                pagerank = new_pagerank
         
         # Combinar con autoridad base
         combined_scores = {}

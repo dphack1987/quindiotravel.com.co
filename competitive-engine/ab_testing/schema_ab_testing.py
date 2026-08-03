@@ -294,7 +294,11 @@ class SchemaABTestSystem:
             return "No hay suficientes datos para generar recomendación"
         
         winner_id, winner_data = winner
-        improvement = winner_data['improvement']
+        if 'improvement' in winner_data:
+            improvement = winner_data['improvement']
+        else:
+            min_ctr = min([r['avg_ctr'] for r in results.values()]) if results else 0
+            improvement = winner_data.get('avg_ctr', 0) - min_ctr
         
         if improvement > 0.05:  # 5% de mejora
             return f"Recomendamos implementar la variante '{winner_data['name']}' - Mejora del {improvement:.2%} en CTR"

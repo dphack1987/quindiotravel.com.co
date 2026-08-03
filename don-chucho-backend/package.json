@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
+    "check": "node --check server.js routes/chat.js routes/webhook.js services/openaiService.js services/whatsappService.js",
+    "validate": "npm run check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

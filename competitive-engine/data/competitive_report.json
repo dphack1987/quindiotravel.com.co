@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-03T11:04:34.381828",
+  "timestamp": "2026-08-03T11:07:40.926715",
   "domain": "https://quindiotravel.com.co",
   "engine_configuration": {
     "schema_generation": {
@@ -28,8 +28,8 @@
     "schemas_generated": 2,
     "pages_optimized": 0,
     "authority_links_created": 0,
-    "ab_tests_conducted": 0,
-    "total_improvements": 0
+    "ab_tests_conducted": 2,
+    "total_improvements": 50
   },
   "competitive_advantages": {
     "schema_advantage": {

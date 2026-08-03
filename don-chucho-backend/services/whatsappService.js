@@ -2,7 +2,16 @@ const axios = require('axios');
 const openaiService = require('./openaiService');
 const { getDatabase } = require('../config/database');
 
+const WHATSAPP_API_VERSION = process.env.WHATSAPP_API_VERSION;
+const WHATSAPP_PHONE_NUMBER_ID = process.env.WHATSAPP_PHONE_NUMBER_ID;
+const WHATSAPP_ACCESS_TOKEN = process.env.WHATSAPP_ACCESS_TOKEN;
+const QUINDIO_WHATSAPP = process.env.QUINDIO_WHATSAPP;
+
 class WhatsAppService {
+    isWhatsAppConfigured() {
+        return Boolean(WHATSAPP_API_VERSION && WHATSAPP_PHONE_NUMBER_ID && WHATSAPP_ACCESS_TOKEN);
+    }
+
     async processMessage(phoneNumber, message) {
         try {
             // Obtener historial de conversación
@@ -66,12 +75,15 @@ class WhatsAppService {
                 }
             );
             
-            // Enviar respuesta por WhatsApp
-            await this.sendMessage(phoneNumber, aiResponse);
-            
-            // Detectar si necesita escalar a humano
-            if (this.shouldEscalateToHuman(message, aiResponse)) {
-                await this.escalateToHuman(phoneNumber, message, aiResponse);
+            // Enviar respuesta por WhatsApp si está configurado
+            if (this.isWhatsAppConfigured()) {
+                await this.sendMessage(phoneNumber, aiResponse);
+                // Detectar si necesita escalar a humano
+                if (this.shouldEscalateToHuman(message, aiResponse)) {
+                    await this.escalateToHuman(phoneNumber, message, aiResponse);
+                }
+            } else {
+                console.warn('WhatsApp credentials no configuradas. La respuesta no será enviada.');
             }
             
         } catch (error) {
@@ -83,7 +95,12 @@ class WhatsAppService {
 
     async sendMessage(phoneNumber, message) {
         try {
-            const url = `https://graph.facebook.com/${process.env.WHATSAPP_API_VERSION}/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`;
+            if (!this.isWhatsAppConfigured()) {
+                console.warn('WhatsApp credentials missing. Skipping message send.');
+                return null;
+            }
+
+            const url = `https://graph.facebook.com/${WHATSAPP_API_VERSION}/${WHATSAPP_PHONE_NUMBER_ID}/messages`;
             
             const response = await axios.post(url, {
                 messaging_product: 'whatsapp',
@@ -93,7 +110,7 @@ class WhatsAppService {
                 }
             }, {
                 headers: {
-                    'Authorization': `Bearer ${process.env.WHATSAPP_ACCESS_TOKEN}`,
+                    'Authorization': `Bearer ${WHATSAPP_ACCESS_TOKEN}`,
                     'Content-Type': 'application/json'
                 }
             });
@@ -125,7 +142,7 @@ class WhatsAppService {
             
             // Enviar mensaje final con opción de contacto directo
             setTimeout(async () => {
-                const finalMessage = `🤠 *Don Chucho - Arriero Guía*\n\nTe conecto directamente con WhatsApp de Quindío Travel:\n\n📱 https://wa.me/${process.env.QUINDIO_WHATSAPP}?text=Hola%20Quind%C3%ADo%20Travel,%20habl%C3%A9%20con%20Don%20Chucho%20y%20necesito%20ayuda%20urgente`;
+                const finalMessage = `🤠 *Don Chucho - Arriero Guía*\n\nTe conecto directamente con WhatsApp de Quindío Travel:\n\n📱 https://wa.me/${QUINDIO_WHATSAPP}?text=Hola%20Quind%C3%ADo%20Travel,%20habl%C3%A9%20con%20Don%20Chucho%20y%20necesito%20ayuda%20urgente`;
                 
                 await this.sendMessage(phoneNumber, finalMessage);
             }, 2000);
@@ -137,7 +154,12 @@ class WhatsAppService {
 
     async sendQuickReplyMessage(phoneNumber, message, quickReplies) {
         try {
-            const url = `https://graph.facebook.com/${process.env.WHATSAPP_API_VERSION}/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`;
+            if (!this.isWhatsAppConfigured()) {
+                console.warn('WhatsApp credentials missing. Skipping quick reply send.');
+                return null;
+            }
+
+            const url = `https://graph.facebook.com/${WHATSAPP_API_VERSION}/${WHATSAPP_PHONE_NUMBER_ID}/messages`;
             
             const buttons = quickReplies.map(reply => ({
                 type: 'reply',
@@ -162,7 +184,7 @@ class WhatsAppService {
                 }
             }, {
                 headers: {
-                    'Authorization': `Bearer ${process.env.WHATSAPP_ACCESS_TOKEN}`,
+                    'Authorization': `Bearer ${WHATSAPP_ACCESS_TOKEN}`,
                     'Content-Type': 'application/json'
                 }
             });

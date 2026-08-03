@@ -8,6 +8,7 @@ generación de CSS crítico y sistema de caché inteligente para Core Web Vitals
 import re
 import gzip
 import hashlib
+import json
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 import shutil

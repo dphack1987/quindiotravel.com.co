@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 require('dotenv').config();
 
@@ -8,12 +7,26 @@ const webhookRoutes = require('./routes/webhook');
 const chatRoutes = require('./routes/chat');
 const { rateLimitMiddleware } = require('./middleware/auth');
 
+const requiredEnv = [
+    'MONGODB_URI',
+    'DB_NAME',
+    'API_KEY',
+    'QUINDIO_WHATSAPP'
+];
+
+const missingEnv = requiredEnv.filter((key) => !process.env[key]);
+
+if (missingEnv.length > 0) {
+    console.error('❌ Missing required environment variables:', missingEnv.join(', '));
+    process.exit(1);
+}
+
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT || 3000);
 
 // Middleware
-app.use(cors());
-app.use(bodyParser.json());
+app.use(cors({ origin: process.env.FRONTEND_URL || '*' }));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(rateLimitMiddleware);
 

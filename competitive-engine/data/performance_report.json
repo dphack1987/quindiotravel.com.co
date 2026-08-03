@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-08-03T11:07:41.598715",
+  "statistics": {
+    "images_optimized": 0,
+    "html_minified": 1,
+    "bytes_saved": 121,
+    "css_extracted": 0
+  },
+  "efficiency": {
+    "bytes_saved_mb": 0.00011539459228515625,
+    "images_per_mb_saved": 0.0
+  }
+}

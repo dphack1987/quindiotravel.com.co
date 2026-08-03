@@ -1,0 +1,48 @@
+{
+  "pages_analyzed": 2,
+  "total_keywords": 4,
+  "unique_keywords": 4,
+  "long_tail_opportunities": 120,
+  "page_analysis": {
+    "index.html": {
+      "keywords": [
+        "tour eje cafetero",
+        "planes quind\u00edo"
+      ],
+      "keyword_count": 2,
+      "content_length": 5000,
+      "authority_score": 10.0
+    },
+    "valle-de-cocora.html": {
+      "keywords": [
+        "valle de cocora",
+        "palmas de cera"
+      ],
+      "keyword_count": 2,
+      "content_length": 3000,
+      "authority_score": 6.0
+    }
+  },
+  "long_tail_sample": [
+    "tour eje cafetero Quind\u00edo barato",
+    "tour eje cafetero Quind\u00edo econ\u00f3mico",
+    "tour eje cafetero Quind\u00edo familiar",
+    "tour eje cafetero Quind\u00edo lujo",
+    "tour eje cafetero Quind\u00edo tour",
+    "tour eje cafetero Quind\u00edo viaje",
+    "tour eje cafetero Salento barato",
+    "tour eje cafetero Salento econ\u00f3mico",
+    "tour eje cafetero Salento familiar",
+    "tour eje cafetero Salento lujo",
+    "tour eje cafetero Salento tour",
+    "tour eje cafetero Salento viaje",
+    "tour eje cafetero Armenia barato",
+    "tour eje cafetero Armenia econ\u00f3mico",
+    "tour eje cafetero Armenia familiar",
+    "tour eje cafetero Armenia lujo",
+    "tour eje cafetero Armenia tour",
+    "tour eje cafetero Armenia viaje",
+    "tour eje cafetero Filandia barato",
+    "tour eje cafetero Filandia econ\u00f3mico"
+  ]
+}

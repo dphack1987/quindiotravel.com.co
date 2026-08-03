@@ -8,7 +8,7 @@ funcionar sin dependencias complejas como NetworkX.
 import json
 import logging
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 import hashlib
 import re
@@ -69,7 +69,7 @@ class CompetitiveAsymmetryEngineSimple:
             "touristType": plan_data.get("tourist_types", ["General"]),
             "duration": plan_data.get("duration", "P4D"),
             "startDate": plan_data.get("start_date", datetime.now().strftime("%Y-%m-%d")),
-            "endDate": plan_data.get("end_date", (datetime.now() + datetime.timedelta(days=30)).strftime("%Y-%m-%d")),
+            "endDate": plan_data.get("end_date", (datetime.now() + timedelta(days=30)).strftime("%Y-%m-%d")),
             "provider": {
                 "@type": "TravelAgency",
                 "name": "Quindío Travel",

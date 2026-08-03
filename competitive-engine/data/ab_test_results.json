@@ -1,0 +1,131 @@
+{
+  "test_id": "default",
+  "timestamp": "2026-08-03T11:07:35.802231",
+  "results": {
+    "bb3a9320": {
+      "name": "Con aggregateRating",
+      "description": "Schema con calificaciones agregadas para prueba social",
+      "statistics": {
+        "ctr": {
+          "count": 50,
+          "mean": 0.04900895600080613,
+          "min": 0.04000622128826173,
+          "max": 0.059797159507746375,
+          "total": 2.4504478000403065
+        },
+        "position": {
+          "count": 50,
+          "mean": 5.275653194563932,
+          "min": 1.2677350732207409,
+          "max": 9.77353513090045,
+          "total": 263.7826597281966
+        },
+        "impressions": {
+          "count": 10,
+          "mean": 553.2,
+          "min": 280,
+          "max": 876,
+          "total": 5532
+        }
+      },
+      "avg_ctr": 0.04900895600080613,
+      "avg_position": 5.275653194563932,
+      "total_impressions": 5532,
+      "total_clicks": 0,
+      "conversions": 0
+    },
+    "e49c8e35": {
+      "name": "Con review array",
+      "description": "Schema con reviews individuales para mayor detalle",
+      "statistics": {
+        "ctr": {
+          "count": 50,
+          "mean": 0.040174778431316775,
+          "min": 0.03005847942796036,
+          "max": 0.04988078237727221,
+          "total": 2.008738921565839
+        },
+        "position": {
+          "count": 50,
+          "mean": 5.608035864099626,
+          "min": 1.4511738879450728,
+          "max": 9.779537021447059,
+          "total": 280.4017932049813
+        },
+        "impressions": {
+          "count": 10,
+          "mean": 572.8,
+          "min": 131,
+          "max": 994,
+          "total": 5728
+        }
+      },
+      "avg_ctr": 0.040174778431316775,
+      "avg_position": 5.608035864099626,
+      "total_impressions": 5728,
+      "total_clicks": 0,
+      "conversions": 0
+    },
+    "92f52f4a": {
+      "name": "Con precio urgente",
+      "description": "Schema con disponibilidad limitada para urgencia",
+      "statistics": {
+        "ctr": {
+          "count": 50,
+          "mean": 0.041237633300345286,
+          "min": 0.031040109174164478,
+          "max": 0.049827480349263056,
+          "total": 2.0618816650172644
+        },
+        "position": {
+          "count": 50,
+          "mean": 5.153531975818662,
+          "min": 1.2688916722328052,
+          "max": 9.930867586933912,
+          "total": 257.6765987909331
+        },
+        "impressions": {
+          "count": 10,
+          "mean": 697.4,
+          "min": 300,
+          "max": 908,
+          "total": 6974
+        }
+      },
+      "avg_ctr": 0.041237633300345286,
+      "avg_position": 5.153531975818662,
+      "total_impressions": 6974,
+      "total_clicks": 0,
+      "conversions": 0
+    }
+  },
+  "winner": "bb3a9320",
+  "winner_name": "Con aggregateRating",
+  "winner_stats": {
+    "ctr": {
+      "count": 50,
+      "mean": 0.04900895600080613,
+      "min": 0.04000622128826173,
+      "max": 0.059797159507746375,
+      "total": 2.4504478000403065
+    },
+    "position": {
+      "count": 50,
+      "mean": 5.275653194563932,
+      "min": 1.2677350732207409,
+      "max": 9.77353513090045,
+      "total": 263.7826597281966
+    },
+    "impressions": {
+      "count": 10,
+      "mean": 553.2,
+      "min": 280,
+      "max": 876,
+      "total": 5532
+    }
+  },
+  "improvement": 0.008834177569489357,
+  "improvement_percent": 21.989362267653473,
+  "total_variants": 3,
+  "recommendation": "No hay diferencia significativa entre variantes - Continuar con schema actual"
+}

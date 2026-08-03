@@ -1,16 +1,14 @@
 const { Configuration, OpenAIApi } = require('openai');
 require('dotenv').config();
 
-const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY
-});
-
-const openai = new OpenAIApi(configuration);
+const apiKey = process.env.OPENAI_API_KEY;
+const configuration = new Configuration({ apiKey });
+const openai = apiKey ? new OpenAIApi(configuration) : null;
 
 class OpenAIService {
     async generateResponse(message, conversationHistory = []) {
         try {
-            if (!process.env.OPENAI_API_KEY) {
+            if (!apiKey || !openai) {
                 console.warn('OpenAI API key not configured. Returning fallback response.');
                 return 'Perdón, viajero. El servicio de IA no está disponible en este momento. Intenta más tarde.';
             }
