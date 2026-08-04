@@ -527,6 +527,198 @@
         }
     }
 
+
+    
+    /* Chatbot Styles */
+    .chatbot-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .chatbot-toggle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        transition: all 0.3s ease;
+    }
+    
+    .chatbot-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    }
+    
+    .chatbot-header {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        padding: 15px;
+        border-radius: 15px 15px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .chatbot-header-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .chatbot-header i {
+        font-size: 20px;
+    }
+    
+    .chatbot-close {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+    
+    .chatbot-close:hover {
+        opacity: 1;
+    }
+    
+    .chatbot-body {
+        display: none;
+        background: white;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        overflow: hidden;
+        max-width: 350px;
+        max-height: 450px;
+    }
+    
+    .chatbot-open .chatbot-body {
+        display: block;
+    }
+    
+    .chatbot-messages {
+        height: 350px;
+        overflow-y: auto;
+        padding: 15px;
+        background: #f8f9fa;
+    }
+    
+    .message {
+        margin-bottom: 15px;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .message-content {
+        padding: 12px 15px;
+        border-radius: 15px;
+        max-width: 85%;
+        line-height: 1.4;
+    }
+    
+    .bot-message .message-content {
+        background: white;
+        border-bottom-left-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .user-message .message-content {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        border-bottom-right-radius: 5px;
+        margin-left: auto;
+    }
+    
+    .quick-replies {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+    }
+    
+    .quick-reply {
+        background: white;
+        border: 1px solid #25D366;
+        color: #25D366;
+        padding: 8px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+    
+    .quick-reply:hover {
+        background: #25D366;
+        color: white;
+    }
+    
+    .chatbot-input {
+        display: flex;
+        padding: 15px;
+        background: white;
+        border-top: 1px solid #e9ecef;
+    }
+    
+    .chatbot-input input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 1px solid #e9ecef;
+        border-radius: 20px;
+        outline: none;
+        font-size: 14px;
+    }
+    
+    .chatbot-input input:focus {
+        border-color: #25D366;
+    }
+    
+    .chatbot-input button {
+        background: #25D366;
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    .chatbot-input button:hover {
+        background: #128C7E;
+    }
+    
+    @media (max-width: 768px) {
+        .chatbot-container {
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        .chatbot-body {
+            max-width: 300px;
+            max-height: 400px;
+        }
+        
+        .chatbot-messages {
+            height: 300px;
+        }
+    }
+
 </style>
     
     <!-- Preconnect for Edge Computing -->
@@ -4041,6 +4233,42 @@
         </div>
     </section>
 
+
+    <!-- Chatbot Flotante -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <div class="chatbot-header-content">
+                <i class="fas fa-robot"></i>
+                <span>Asistente Quindío Travel</span>
+            </div>
+            <button class="chatbot-close"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>¡Hola! 👋 Soy el asistente virtual de Quindío Travel. ¿En qué puedo ayudarte hoy?</p>
+                        <div class="quick-replies">
+                            <button class="quick-reply" onclick="sendQuickReply('planes')">🗺️ Ver Planes</button>
+                            <button class="quick-reply" onclick="sendQuickReply('precios')">💰 Precios</button>
+                            <button class="quick-reply" onclick="sendQuickReply('contacto')">📞 Contacto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        
+        <div class="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </div>
+
 <footer class="main-footer-section" id="contacto">
         <div class="container footer-grid">
             <div class="footer-col">
@@ -5143,6 +5371,198 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
         
         .reviews-cta {
             flex-direction: column;
+        }
+    }
+
+
+    
+    /* Chatbot Styles */
+    .chatbot-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .chatbot-toggle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        transition: all 0.3s ease;
+    }
+    
+    .chatbot-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    }
+    
+    .chatbot-header {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        padding: 15px;
+        border-radius: 15px 15px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .chatbot-header-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .chatbot-header i {
+        font-size: 20px;
+    }
+    
+    .chatbot-close {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+    
+    .chatbot-close:hover {
+        opacity: 1;
+    }
+    
+    .chatbot-body {
+        display: none;
+        background: white;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        overflow: hidden;
+        max-width: 350px;
+        max-height: 450px;
+    }
+    
+    .chatbot-open .chatbot-body {
+        display: block;
+    }
+    
+    .chatbot-messages {
+        height: 350px;
+        overflow-y: auto;
+        padding: 15px;
+        background: #f8f9fa;
+    }
+    
+    .message {
+        margin-bottom: 15px;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .message-content {
+        padding: 12px 15px;
+        border-radius: 15px;
+        max-width: 85%;
+        line-height: 1.4;
+    }
+    
+    .bot-message .message-content {
+        background: white;
+        border-bottom-left-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .user-message .message-content {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        border-bottom-right-radius: 5px;
+        margin-left: auto;
+    }
+    
+    .quick-replies {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+    }
+    
+    .quick-reply {
+        background: white;
+        border: 1px solid #25D366;
+        color: #25D366;
+        padding: 8px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+    
+    .quick-reply:hover {
+        background: #25D366;
+        color: white;
+    }
+    
+    .chatbot-input {
+        display: flex;
+        padding: 15px;
+        background: white;
+        border-top: 1px solid #e9ecef;
+    }
+    
+    .chatbot-input input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 1px solid #e9ecef;
+        border-radius: 20px;
+        outline: none;
+        font-size: 14px;
+    }
+    
+    .chatbot-input input:focus {
+        border-color: #25D366;
+    }
+    
+    .chatbot-input button {
+        background: #25D366;
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    .chatbot-input button:hover {
+        background: #128C7E;
+    }
+    
+    @media (max-width: 768px) {
+        .chatbot-container {
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        .chatbot-body {
+            max-width: 300px;
+            max-height: 400px;
+        }
+        
+        .chatbot-messages {
+            height: 300px;
         }
     }
 
@@ -6520,6 +6940,198 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
         }
     }
 
+
+    
+    /* Chatbot Styles */
+    .chatbot-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .chatbot-toggle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        transition: all 0.3s ease;
+    }
+    
+    .chatbot-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    }
+    
+    .chatbot-header {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        padding: 15px;
+        border-radius: 15px 15px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .chatbot-header-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .chatbot-header i {
+        font-size: 20px;
+    }
+    
+    .chatbot-close {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+    
+    .chatbot-close:hover {
+        opacity: 1;
+    }
+    
+    .chatbot-body {
+        display: none;
+        background: white;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        overflow: hidden;
+        max-width: 350px;
+        max-height: 450px;
+    }
+    
+    .chatbot-open .chatbot-body {
+        display: block;
+    }
+    
+    .chatbot-messages {
+        height: 350px;
+        overflow-y: auto;
+        padding: 15px;
+        background: #f8f9fa;
+    }
+    
+    .message {
+        margin-bottom: 15px;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .message-content {
+        padding: 12px 15px;
+        border-radius: 15px;
+        max-width: 85%;
+        line-height: 1.4;
+    }
+    
+    .bot-message .message-content {
+        background: white;
+        border-bottom-left-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .user-message .message-content {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        border-bottom-right-radius: 5px;
+        margin-left: auto;
+    }
+    
+    .quick-replies {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+    }
+    
+    .quick-reply {
+        background: white;
+        border: 1px solid #25D366;
+        color: #25D366;
+        padding: 8px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+    
+    .quick-reply:hover {
+        background: #25D366;
+        color: white;
+    }
+    
+    .chatbot-input {
+        display: flex;
+        padding: 15px;
+        background: white;
+        border-top: 1px solid #e9ecef;
+    }
+    
+    .chatbot-input input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 1px solid #e9ecef;
+        border-radius: 20px;
+        outline: none;
+        font-size: 14px;
+    }
+    
+    .chatbot-input input:focus {
+        border-color: #25D366;
+    }
+    
+    .chatbot-input button {
+        background: #25D366;
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    .chatbot-input button:hover {
+        background: #128C7E;
+    }
+    
+    @media (max-width: 768px) {
+        .chatbot-container {
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        .chatbot-body {
+            max-width: 300px;
+            max-height: 400px;
+        }
+        
+        .chatbot-messages {
+            height: 300px;
+        }
+    }
+
 </style>
     
     <!-- Sección de condiciones de precios -->
@@ -6653,5 +7265,104 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
         </div>
     </div>
     
+
+    <script>
+    let chatbotOpen = false;
+    
+    function toggleChatbot() {
+        const chatbot = document.getElementById('chatbot');
+        const chatbotBody = document.getElementById('chatbot-body');
+        chatbotOpen = !chatbotOpen;
+        
+        if (chatbotOpen) {
+            chatbotBody.style.display = 'block';
+            chatbot.classList.add('chatbot-open');
+        } else {
+            chatbotBody.style.display = 'none';
+            chatbot.classList.remove('chatbot-open');
+        }
+    }
+    
+    function sendMessage() {
+        const input = document.getElementById('chatbot-input');
+        const message = input.value.trim();
+        
+        if (message) {
+            addMessage(message, 'user-message');
+            input.value = '';
+            
+            // Simular respuesta del bot
+            setTimeout(() => {
+                const response = getBotResponse(message);
+                addMessage(response, 'bot-message');
+            }, 1000);
+        }
+    }
+    
+    function sendQuickReply(type) {
+        let message = '';
+        let response = '';
+        
+        switch(type) {
+            case 'planes':
+                message = 'Quiero ver los planes disponibles';
+                response = 'Tenemos 6 planes increíbles desde 2 días hasta 5 días. Puedes ver todos los planes en nuestra sección de <a href="planes.html">Planes Turísticos</a>. ¿Te gustaría información sobre algún plan específico?';
+                break;
+            case 'precios':
+                message = '¿Cuáles son los precios?';
+                response = 'Nuestros precios varían según el plan, categoría de alojamiento y temporada. Desde $430.000 COP por persona para planes económicos hasta $3.420.000 COP para experiencias VIP. ¿Te gustaría cotizar un plan específico?';
+                break;
+            case 'contacto':
+                message = 'Información de contacto';
+                response = 'Puedes contactarnos por WhatsApp al +57 317 442 6044 o por email a gerencia@quindiotravel.net. También estamos disponibles 24/7 para atender tus consultas.';
+                break;
+        }
+        
+        addMessage(message, 'user-message');
+        setTimeout(() => {
+            addMessage(response, 'bot-message');
+        }, 500);
+    }
+    
+    function addMessage(text, className) {
+        const messagesContainer = document.getElementById('chatbot-messages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${className}`;
+        
+        const messageContent = document.createElement('div');
+        messageContent.className = 'message-content';
+        messageContent.innerHTML = `<p>${text}</p>`;
+        
+        messageDiv.appendChild(messageContent);
+        messagesContainer.appendChild(messageDiv);
+        
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+    
+    function getBotResponse(message) {
+        const lowerMessage = message.toLowerCase();
+        
+        if (lowerMessage.includes('precio') || lowerMessage.includes('costo') || lowerMessage.includes('tarifa')) {
+            return 'Nuestros precios varían según el plan y categoría. Desde $430.000 COP hasta $3.420.000 COP por persona. Para una cotización exacta, te recomiendo usar nuestro <a href="https://wa.me/573174426044">WhatsApp</a> para atención personalizada.';
+        } else if (lowerMessage.includes('plan') || lowerMessage.includes('paquete')) {
+            return 'Tenemos 6 planes increíbles: Escapada Cafetera (2D/1N), Aventura Natural (3D/2N), Experiencia Completa (4D/3N), Relax y Aventura (4D/3N), Experiencia Premium (4D/3N) y La Experiencia Definitiva (5D/4N). ¿Te gustaría más detalles sobre alguno?';
+        } else if (lowerMessage.includes('hotel') || lowerMessage.includes('alojamiento')) {
+            return 'Trabajamos con hoteles certificados de diferentes categorías: estándar, intermedia y VIP. Algunos de nuestros alojamientos son Cabañas La Esmeralda, Finca Hotel Los Girasoles y Hotel Campestre Café Café.';
+        } else if (lowerMessage.includes('contacto') || lowerMessage.includes('whatsapp')) {
+            return 'Puedes contactarnos directamente por WhatsApp al +57 317 442 6044 para atención personalizada 24/7.';
+        } else if (lowerMessage.includes('reserva') || lowerMessage.includes('cotizar')) {
+            return 'Para realizar una reserva o cotización, te recomiendo usar nuestro <a href="https://wa.me/573174426044">WhatsApp</a> para atención inmediata con nuestros asesores.';
+        } else {
+            return 'Gracias por tu mensaje. Para una respuesta más detallada, te recomiendo contactarnos por WhatsApp al +57 317 442 6044 donde nuestros asesores te ayudarán personalmente.';
+        }
+    }
+    
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    }
+    </script>
+
 </body>
 </html>
