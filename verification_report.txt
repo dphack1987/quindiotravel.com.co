@@ -1,0 +1,22 @@
+VERIFICACIÓN DE PÁGINAS - RESULTADOS:
+
+✅ VISUALIZACIÓN CORRECTA:
+- index.html: Funciona con imágenes de paisajes
+- plan-1.html: Funciona con galería de imágenes (3 fotos)
+- plan-2.html: Funciona con galería de imágenes (3 fotos)
+- planes.html: Funciona con filtros avanzados
+
+⚠️ PLANES.HTML: Cards dinámicas cargadas vía JavaScript
+- Contenedor vacío: <div class="plans-grid-enhanced" id="catalogo-planes"></div>
+- Necesita verificar que JavaScript cargue las cards con imágenes
+
+✅ SIN NÚMEROS DE PLANES EN CONTENIDO VISIBLE:
+- plan-1.html: Título "Escapada Cafetera de Fin de Semana" (sin números)
+- plan-2.html: Título "Aventura Natural en el Eje Cafetero" (sin números)
+- FAQ schema: Referencias a "Plan 1" reemplazadas con nombres atractivos
+- WhatsApp links: Referencias a números eliminadas
+
+📋 PRÓXIMOS PASOS:
+1. Verificar que JavaScript en planes.html cargue cards con imágenes
+2. Verificar que cada card tenga foto individual
+3. Verificar las demás páginas de planes (3-6)
