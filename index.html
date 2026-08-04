@@ -781,6 +781,350 @@
         }
     }
 
+
+    
+    /* Flexible Plans Section */
+    .flexible-plans-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 4rem 0;
+        margin: 3rem 0;
+        color: white;
+    }
+    
+    .flexible-plans-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .flexible-plans-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .flexible-plans-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    
+    .flexible-plans-container {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+    }
+    
+    .flexible-step {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 15px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        color: #667eea;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .step-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    
+    .attractions-grid,
+    .duration-options,
+    .accommodation-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .attraction-checkbox,
+    .duration-radio,
+    .accommodation-radio {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .attraction-checkbox:hover,
+    .duration-radio:hover,
+    .accommodation-radio:hover {
+        background: rgba(255,255,255,0.2);
+    }
+    
+    .attraction-checkbox input,
+    .duration-radio input,
+    .accommodation-radio input {
+        accent-color: #fff;
+    }
+    
+    .flexible-cta {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    
+    .btn-custom-plan {
+        background: white;
+        color: #667eea;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-custom-plan:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    @media (max-width: 768px) {
+        .attractions-grid,
+        .duration-options,
+        .accommodation-options {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    
+    /* Loyalty Program Section */
+    .loyalty-program-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 4rem 0;
+        margin: 3rem 0;
+    }
+    
+    .loyalty-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .loyalty-header h2 {
+        font-size: 2.5rem;
+        color: var(--texto-oscuro);
+        margin-bottom: 1rem;
+    }
+    
+    .loyalty-header p {
+        font-size: 1.2rem;
+        color: var(--marron-madera);
+    }
+    
+    .loyalty-tiers {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .loyalty-tier {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .loyalty-tier:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .loyalty-tier.bronze {
+        border-top: 4px solid #cd7f32;
+    }
+    
+    .loyalty-tier.silver {
+        border-top: 4px solid #c0c0c0;
+    }
+    
+    .loyalty-tier.gold {
+        border-top: 4px solid #ffd700;
+    }
+    
+    .tier-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tier-title {
+        font-size: 1.5rem;
+        color: var(--texto-oscuro);
+        margin-bottom: 0.5rem;
+    }
+    
+    .tier-description {
+        color: var(--marron-madera);
+        margin-bottom: 1rem;
+    }
+    
+    .tier-benefits {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+    }
+    
+    .tier-benefits li {
+        padding: 0.5rem 0;
+        color: var(--texto-oscuro);
+    }
+    
+    .loyalty-cta {
+        text-align: center;
+        background: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .loyalty-cta-text {
+        font-size: 1.1rem;
+        color: var(--texto-oscuro);
+    }
+    
+    .loyalty-link {
+        color: var(--verde-cafe);
+        font-weight: 700;
+        text-decoration: none;
+    }
+    
+    .loyalty-link:hover {
+        text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+        .loyalty-tiers {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    
+    /* Multi-Origin Transport Section */
+    .multi-origin-transport-section {
+        background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        padding: 4rem 0;
+        margin: 3rem 0;
+        color: white;
+    }
+    
+    .transport-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .transport-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .transport-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    
+    .transport-origins {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .origin-card {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .origin-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255,255,255,0.15);
+    }
+    
+    .origin-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .origin-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .origin-description {
+        opacity: 0.9;
+        margin-bottom: 1rem;
+    }
+    
+    .origin-details {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+    
+    .origin-details li {
+        padding: 0.5rem 0;
+        opacity: 0.9;
+    }
+    
+    .btn-origin-select {
+        background: white;
+        color: #3498db;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-origin-select:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .transport-info {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        padding: 1.5rem;
+        border-radius: 15px;
+        text-align: center;
+    }
+    
+    .transport-note {
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+    
+    @media (max-width: 768px) {
+        .transport-origins {
+            grid-template-columns: 1fr;
+        }
+    }
+
 </style>
     
     <!-- Preconnect for Edge Computing -->
@@ -6578,6 +6922,350 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
         }
     }
 
+
+    
+    /* Flexible Plans Section */
+    .flexible-plans-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 4rem 0;
+        margin: 3rem 0;
+        color: white;
+    }
+    
+    .flexible-plans-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .flexible-plans-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .flexible-plans-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    
+    .flexible-plans-container {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+    }
+    
+    .flexible-step {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 15px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        color: #667eea;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .step-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    
+    .attractions-grid,
+    .duration-options,
+    .accommodation-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .attraction-checkbox,
+    .duration-radio,
+    .accommodation-radio {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .attraction-checkbox:hover,
+    .duration-radio:hover,
+    .accommodation-radio:hover {
+        background: rgba(255,255,255,0.2);
+    }
+    
+    .attraction-checkbox input,
+    .duration-radio input,
+    .accommodation-radio input {
+        accent-color: #fff;
+    }
+    
+    .flexible-cta {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    
+    .btn-custom-plan {
+        background: white;
+        color: #667eea;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-custom-plan:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    @media (max-width: 768px) {
+        .attractions-grid,
+        .duration-options,
+        .accommodation-options {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    
+    /* Loyalty Program Section */
+    .loyalty-program-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 4rem 0;
+        margin: 3rem 0;
+    }
+    
+    .loyalty-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .loyalty-header h2 {
+        font-size: 2.5rem;
+        color: var(--texto-oscuro);
+        margin-bottom: 1rem;
+    }
+    
+    .loyalty-header p {
+        font-size: 1.2rem;
+        color: var(--marron-madera);
+    }
+    
+    .loyalty-tiers {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .loyalty-tier {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .loyalty-tier:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .loyalty-tier.bronze {
+        border-top: 4px solid #cd7f32;
+    }
+    
+    .loyalty-tier.silver {
+        border-top: 4px solid #c0c0c0;
+    }
+    
+    .loyalty-tier.gold {
+        border-top: 4px solid #ffd700;
+    }
+    
+    .tier-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tier-title {
+        font-size: 1.5rem;
+        color: var(--texto-oscuro);
+        margin-bottom: 0.5rem;
+    }
+    
+    .tier-description {
+        color: var(--marron-madera);
+        margin-bottom: 1rem;
+    }
+    
+    .tier-benefits {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+    }
+    
+    .tier-benefits li {
+        padding: 0.5rem 0;
+        color: var(--texto-oscuro);
+    }
+    
+    .loyalty-cta {
+        text-align: center;
+        background: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .loyalty-cta-text {
+        font-size: 1.1rem;
+        color: var(--texto-oscuro);
+    }
+    
+    .loyalty-link {
+        color: var(--verde-cafe);
+        font-weight: 700;
+        text-decoration: none;
+    }
+    
+    .loyalty-link:hover {
+        text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+        .loyalty-tiers {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    
+    /* Multi-Origin Transport Section */
+    .multi-origin-transport-section {
+        background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        padding: 4rem 0;
+        margin: 3rem 0;
+        color: white;
+    }
+    
+    .transport-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .transport-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .transport-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    
+    .transport-origins {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .origin-card {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .origin-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255,255,255,0.15);
+    }
+    
+    .origin-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .origin-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .origin-description {
+        opacity: 0.9;
+        margin-bottom: 1rem;
+    }
+    
+    .origin-details {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+    
+    .origin-details li {
+        padding: 0.5rem 0;
+        opacity: 0.9;
+    }
+    
+    .btn-origin-select {
+        background: white;
+        color: #3498db;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-origin-select:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .transport-info {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        padding: 1.5rem;
+        border-radius: 15px;
+        text-align: center;
+    }
+    
+    .transport-note {
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+    
+    @media (max-width: 768px) {
+        .transport-origins {
+            grid-template-columns: 1fr;
+        }
+    }
+
 </style>
     
     <!-- Sección de condiciones de precios -->
@@ -6850,6 +7538,42 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
                 element.textContent = value;
             }
         }
+    }
+    </script>
+
+
+    <script>
+    function generateCustomPlan() {
+        const selectedAttractions = [];
+        document.querySelectorAll('.attraction-checkbox input:checked').forEach(checkbox => {
+            selectedAttractions.push(checkbox.dataset.name);
+        });
+        
+        const duration = document.querySelector('input[name="duration"]:checked')?.value;
+        const accommodation = document.querySelector('input[name="accommodation"]:checked')?.value;
+        
+        if (selectedAttractions.length === 0 || !duration || !accommodation) {
+            alert('Por favor selecciona al menos un atractivo, duración y categoría de alojamiento');
+            return;
+        }
+        
+        const message = `Hola Quindío Travel, quiero armar mi propio plan personalizado:\n\n` +
+            `🎯 Atractivos: ${selectedAttractions.join(', ')}\n` +
+            `📅 Duración: ${duration}\n` +
+            `🏨 Alojamiento: ${accommodation}\n\n` +
+            `¿Podrían cotizarme este plan personalizado?`;
+        
+        const whatsappUrl = `https://wa.me/573174426044?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    }
+    </script>
+
+
+    <script>
+    function selectOrigin(origin) {
+        const message = `Hola Quindío Travel, deseo cotizar un plan con transporte desde ${origin.charAt(0).toUpperCase() + origin.slice(1)}. ¿Podrían enviarme las tarifas y disponibilidad?`;
+        const whatsappUrl = `https://wa.me/573174426044?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
     }
     </script>
 
