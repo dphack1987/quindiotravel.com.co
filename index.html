@@ -741,6 +741,46 @@
         border-color: var(--verde-cafe);
     }
 
+
+    
+    /* Don Chucho Sidebar */
+    .don-chucho-sidebar {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        padding: 5px;
+        transition: all 0.3s ease;
+    }
+    
+    .don-chucho-sidebar:hover {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    
+    .don-chucho-small-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    @media (max-width: 768px) {
+        .don-chucho-sidebar {
+            left: 10px;
+        }
+        
+        .don-chucho-small-avatar {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
 </style>
     
     <!-- Preconnect for Edge Computing -->
@@ -2779,6 +2819,11 @@
 
 </head>
 <body>
+
+    <!-- Don Chucho Avatar - Left Side Fixed -->
+    <div class="don-chucho-sidebar">
+        <img src="assets/images/don-chucho-avatar.png" alt="Don Chucho" class="don-chucho-small-avatar">
+    </div>
 
     <header class="main-header">
         <div class="container nav-container">
@@ -5610,6 +5655,46 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
         border-color: var(--verde-cafe);
     }
 
+
+    
+    /* Don Chucho Sidebar */
+    .don-chucho-sidebar {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        padding: 5px;
+        transition: all 0.3s ease;
+    }
+    
+    .don-chucho-sidebar:hover {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    
+    .don-chucho-small-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    @media (max-width: 768px) {
+        .don-chucho-sidebar {
+            left: 10px;
+        }
+        
+        .don-chucho-small-avatar {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
 </style>
     
     <!-- Chatbot Don Chucho - Arriero Guía Turístico -->
@@ -7196,6 +7281,46 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
     .lang-btn:hover, .lang-btn.active {
         background: var(--verde-cafe);
         border-color: var(--verde-cafe);
+    }
+
+
+    
+    /* Don Chucho Sidebar */
+    .don-chucho-sidebar {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        padding: 5px;
+        transition: all 0.3s ease;
+    }
+    
+    .don-chucho-sidebar:hover {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    
+    .don-chucho-small-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    @media (max-width: 768px) {
+        .don-chucho-sidebar {
+            left: 10px;
+        }
+        
+        .don-chucho-small-avatar {
+            width: 40px;
+            height: 40px;
+        }
     }
 
 </style>
