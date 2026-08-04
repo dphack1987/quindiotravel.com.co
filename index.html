@@ -5060,8 +5060,11 @@
             }
         }
 
-        function selectOption(step, value) {
+        // Hacer las funciones del quiz globales para que puedan ser llamadas desde otros scripts
+        window.selectOption = function(step, value) {
             quizAnswers[`step${step}`] = value;
+            
+            console.log(`Seleccionado paso ${step}, valor: ${value}`);
             
             // Ocultar step actual
             document.querySelector(`.quiz-step[data-step="${step}"]`).classList.remove('active');
@@ -5076,42 +5079,49 @@
                 document.querySelector(`.quiz-step[data-step="5"]`).classList.add('active');
                 updateProgress();
             }
-        }
-
-        function updateProgress() {
-            const progress = (currentStep / totalSteps) * 100;
-            document.getElementById('progress-fill').style.width = `${progress}%`;
-            document.getElementById('current-step').textContent = currentStep;
-        }
-
-        function submitQuiz(event) {
+        };
+        
+        window.submitQuiz = function(event) {
             event.preventDefault();
             
             const nombre = document.getElementById('quiz-nombre').value;
             const email = document.getElementById('quiz-email').value;
             const whatsapp = document.getElementById('quiz-whatsapp').value;
             
-            // Construir mensaje de WhatsApp con respuestas
-            const mensaje = `Hola Quindío Travel! Soy ${nombre} y completé tu quiz de viajero:📊 Mis respuestas:
-- Personas: ${quizAnswers.step1}
-- Duración: ${quizAnswers.step2}
-- Interés: ${quizAnswers.step3}
-- Fecha: ${quizAnswers.step4}
-📱 Contacto: ${email} | ${whatsapp}
-Quiero mi cotización personalizada con el 15% de descuento para el plan ideal para mí.`;
+            console.log('Quiz submit:', nombre, email, whatsapp);
             
+            // Construir mensaje para WhatsApp
+            const mensaje = `Hola Quindío Travel, completé tu quiz de viajero y quiero mi cotización con 15% de descuento:\n\n` +
+                `👤 Nombre: ${nombre}\n` +
+                `📧 Email: ${email}\n` +
+                `📱 WhatsApp: ${whatsapp}\n` +
+                `👥 Personas: ${quizAnswers.step1}\n` +
+                `📅 Duración: ${quizAnswers.step2}\n` +
+                `🎯 Interés: ${quizAnswers.step3}\n` +
+                `📆 Fecha: ${quizAnswers.step4}\n\n` +
+                `Quiero mi cotización personalizada con el 15% de descuento para el plan ideal para mí.`;
+
             // Redirigir a WhatsApp
-            openWhatsApp(mensaje);
-            
+            const whatsappUrl = `https://wa.me/573174426044?text=${encodeURIComponent(mensaje)}`;
+            window.open(whatsappUrl, '_blank');
+
             // Marcar quiz como completado
             localStorage.setItem('quizCompleted', 'true');
-            
+
             // Cerrar popup
             closePopup();
-            
+
             // Mostrar confirmación
             alert('¡Gracias! En minutos recibirás tu cotización personalizada con 15% de descuento.');
+        };
+
+        function updateProgress() {
+            const progress = (currentStep / totalSteps) * 100;
+            document.getElementById('progress-fill').style.width = `${progress}%`;
+            document.getElementById('current-step').textContent = currentStep;
         }
+        
+        // Función submitQuiz duplicada eliminada - usando la versión global window.submitQuiz
 
         function manejarBusqueda() {
             const destino = document.getElementById('buscador-destino').value;
@@ -5892,7 +5902,46 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
             popup.style.zIndex = '9999';
         }
         
-        console.log('Script de cierre de popup inicializado correctamente');
+        // ===========================
+        // FUNCIONALIDAD DEL QUIZ
+        // ===========================
+        
+        // Inicializar event listeners para los botones del quiz
+        const quizButtons = document.querySelectorAll('.quiz-btn');
+        quizButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const step = this.getAttribute('data-quiz-step');
+                const value = this.getAttribute('data-quiz-value');
+                console.log('Botón quiz clickeado:', step, value);
+                
+                // Llamar a la función selectOption del scope global
+                if (typeof selectOption === 'function') {
+                    selectOption(parseInt(step), value);
+                } else {
+                    console.error('La función selectOption no está disponible');
+                }
+            });
+        });
+        
+        // Añadir event listener al formulario
+        const quizForm = document.getElementById('quiz-form');
+        if (quizForm) {
+            quizForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                console.log('Formulario quiz submit');
+                
+                // Llamar a la función submitQuiz del scope global
+                if (typeof submitQuiz === 'function') {
+                    submitQuiz(e);
+                } else {
+                    console.error('La función submitQuiz no está disponible');
+                }
+            });
+        }
+        
+        console.log('Script de cierre de popup y quiz inicializado correctamente');
     });
     </script>
 
