@@ -99,7 +99,24 @@
     <!-- Critical CSS inline for Core Web Vitals -->
     <style>
         /* Critical CSS - Above the fold styles */
-        :root{--verde-cafe:#2E5A36;--verde-claro:#4E8755;--blanco:#FFFFFF;--amarillo-suave:#F4D35E;--marron-madera:#8D5B4C;--gris-claro:#F4F6F4;--texto-oscuro:#2C3E35}*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}body{background-color:var(--gris-claro);color:var(--texto-oscuro);line-height:1.6;overflow-x:hidden}header{background:linear-gradient(135deg,var(--verde-cafe),var(--verde-claro));padding:1rem 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.1)}.container{width:90%;max-width:1200px;margin:0 auto}.nav-container{display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.5rem;font-weight:700;color:var(--blanco);text-decoration:none}.nav-menu{display:flex;gap:1.5rem;list-style:none;align-items:center}.nav-menu a{color:var(--blanco);text-decoration:none;font-weight:500;transition:color 0.3s}.btn{display:inline-block;padding:1rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;transition:all 0.3s;border:none;cursor:pointer}.btn-primary{background:var(--naranja-brillante);color:var(--blanco)}.btn-whatsapp{background:#25D366;color:var(--blanco);display:inline-flex;align-items:center;gap:0.5rem}.hero{position:relative;overflow:hidden;min-height:72vh;display:flex;align-items:center;text-align:center;color:var(--blanco)}.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45)}.hero-content{position:relative;z-index:2}.hero-content h1{font-size:2.8rem;margin-bottom:15px;text-shadow:2px 2px 4px rgba(0,0,0,0.6)}@media (max-width:768px){.nav-menu{display:none}.nav-menu.nav-menu-open{display:block;}}
+        :root{--verde-cafe:#2E5A36;--verde-claro:#4E8755;--blanco:#FFFFFF;--amarillo-suave:#F4D35E;--marron-madera:#8D5B4C;--gris-claro:#F4F6F4;--texto-oscuro:#2C3E35}*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}body{background-color:var(--gris-claro);color:var(--texto-oscuro);line-height:1.6;overflow-x:hidden}header{background:linear-gradient(135deg,var(--verde-cafe),var(--verde-claro));padding:1rem 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.1)}.container{width:90%;max-width:1200px;margin:0 auto}.nav-container{display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.5rem;font-weight:700;color:var(--blanco);text-decoration:none}.nav-menu{display:flex;gap:1.5rem;list-style:none;align-items:center}.nav-menu a{color:var(--blanco);text-decoration:none;font-weight:500;transition:color 0.3s}.btn{display:inline-block;padding:1rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;transition:all 0.3s;border:none;cursor:pointer}.btn-primary{background:var(--naranja-brillante);color:var(--blanco)}.btn-whatsapp{background:#25D366;color:var(--blanco);display:inline-flex;align-items:center;gap:0.5rem}.hero{position:relative;overflow:hidden;min-height:80vh;max-height:600px;display:flex;align-items:center;text-align:center;color:var(--blanco);padding:2rem 0}.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45)}.hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:0 20px}.hero-content h1{font-size:2.5rem;margin-bottom:1rem;text-shadow:2px 2px 4px rgba(0,0,0,0.6);line-height:1.3;font-weight:700}.hero-content p{font-size:1.2rem;margin-bottom:1.5rem;text-shadow:1px 1px 3px rgba(0,0,0,0.5);line-height:1.5;max-width:700px;margin-left:auto;margin-right:auto}@media (max-width:768px){.nav-menu{display:none}.nav-menu.nav-menu-open{display:block;}
+        .hero {
+            min-height: 70vh;
+            max-height: 500px;
+            padding: 1.5rem 0;
+        }
+        
+        .hero-content h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .hero-content p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            max-width: 90%;
+        }
+}
     
     
     /* Modern Promotion Section Styles */
@@ -4947,7 +4964,7 @@
     <div id="lead-capture-popup" class="lead-capture-popup">
         <div class="popup-overlay" data-popup-close></div>
         <div class="popup-content">
-            <button class="popup-close" data-popup-close aria-label="Cerrar popup">&times;</button>
+            <button class="popup-close" data-popup-close aria-label="Cerrar popup" onclick="closePopup(); return false;">&times;</button>
             <div class="popup-header">
                 <h3>🎯 Descubre tu Plan Ideal en 2 Minutos</h3>
                 <p>Responde 4 preguntas y recibe una cotización personalizada con -15% de descuento</p>
@@ -5029,8 +5046,14 @@
             }
         }, 30000);
 
+        // Función closePopup será sobrescrita por el script robusto más abajo
+        // Esta función temporal asegura compatibilidad si el script principal no carga
         function closePopup() {
-            document.getElementById('lead-capture-popup').style.display = 'none';
+            const popup = document.getElementById('lead-capture-popup');
+            if (popup) {
+                popup.style.display = 'none';
+                document.body.style.overflow = '';
+            }
         }
 
         function selectOption(step, value) {
@@ -5800,47 +5823,72 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
 
 
     <script>
-    // Asegurar que el popup se pueda cerrar correctamente
+    // Script CORREGIDO para asegurar que el popup se pueda cerrar correctamente
     document.addEventListener('DOMContentLoaded', function() {
         const popup = document.getElementById('lead-capture-popup');
-        const closeButtons = document.querySelectorAll('[data-popup-close]');
         
-        // Función para cerrar popup
+        // Función robusta para cerrar popup
         function closePopup() {
             if (popup) {
                 popup.style.display = 'none';
-                document.body.style.overflow = ''; // Restaurar scroll
+                document.body.style.overflow = ''; // Restaurar scroll del body
+                console.log('Popup cerrado correctamente');
             }
         }
         
-        // Añadir event listeners a todos los botones de cierre
+        // Hacer la función global para que pueda ser llamada desde otros scripts
+        window.closePopup = closePopup;
+        
+        // Añadir event listeners a todos los botones de cierre usando múltiples métodos
+        const closeButtons = document.querySelectorAll('[data-popup-close], .popup-close');
+        
         closeButtons.forEach(button => {
+            // Usar addEventListener con captura para asegurar que se ejecute
             button.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
+                console.log('Botón de cierre clickeado');
                 closePopup();
-            });
+            }, true); // true = capture phase
+            
+            // También añadir onclick directo como respaldo
+            button.onclick = function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Botón de cierre clickeado (onclick)');
+                closePopup();
+            };
         });
         
-        // También cerrar al hacer click en el overlay
+        // Cerrar al hacer click en el overlay (fuera del contenido)
         const overlay = document.querySelector('.popup-overlay');
         if (overlay) {
             overlay.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                closePopup();
-            });
+                // Solo cerrar si el clic es directamente en el overlay, no en elementos hijos
+                if (e.target === overlay) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Overlay clickeado');
+                    closePopup();
+                }
+            }, true);
         }
         
         // Permitir cerrar con tecla ESC
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && popup.style.display === 'block') {
+            if (e.key === 'Escape' && popup && popup.style.display === 'block') {
+                e.preventDefault();
+                console.log('Tecla ESC presionada');
                 closePopup();
             }
         });
         
-        // Sobrescribir la función closePopup existente
-        window.closePopup = closePopup;
+        // Asegurar que el popup tenga z-index suficiente
+        if (popup) {
+            popup.style.zIndex = '9999';
+        }
+        
+        console.log('Script de cierre de popup inicializado correctamente');
     });
     </script>
 
