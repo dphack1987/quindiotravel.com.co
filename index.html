@@ -3351,8 +3351,12 @@
                 <p style="margin: 0; font-size: 0.95rem; color: #b23b2f; font-weight: 600;"><i class="fas fa-exclamation-triangle"></i> <strong>Disponibilidad limitada:</strong> solo quedan 3 cupos para esta semana.</p>
             </div>
         </div>
-    <img src="assets/images/paisajes/coffee-plantation-sunset-colombia.jpg" alt="coffee plantation sunset colombia" class="content-image" loading="lazy">
     </section>
+
+    <!-- Botón flotante de WhatsApp bien posicionado -->
+    <a href="#" data-wa-template="hero_reservar" target="_blank" rel="noopener" class="whatsapp-float-btn wa-cta-link" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <section class="search-section container" aria-label="Buscador rápido de planes">
         <form class="search-box" id="form-buscador">
@@ -4962,7 +4966,7 @@
 
     <!-- Popup de Captura de Leads - Quiz de Viajero -->
     <div id="lead-capture-popup" class="lead-capture-popup">
-        <div class="popup-overlay" data-popup-close></div>
+        <div class="popup-overlay" data-popup-close onclick="closePopup(); return false;"></div>
         <div class="popup-content">
             <button class="popup-close" data-popup-close aria-label="Cerrar popup" onclick="closePopup(); return false;">&times;</button>
             <div class="popup-header">
