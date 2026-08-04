@@ -936,4 +936,10 @@
             <changefreq>monthly</changefreq>
             <priority>0.6</priority>
         </url>
+  <url>
+    <loc>https://quindiotravel.com.co/blog.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
