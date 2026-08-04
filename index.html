@@ -719,6 +719,28 @@
         }
     }
 
+
+    .language-selector {
+        display: flex;
+        gap: 5px;
+        margin-left: 20px;
+    }
+    
+    .lang-btn {
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.3);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .lang-btn:hover, .lang-btn.active {
+        background: var(--verde-cafe);
+        border-color: var(--verde-cafe);
+    }
+
 </style>
     
     <!-- Preconnect for Edge Computing -->
@@ -5566,6 +5588,28 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
         }
     }
 
+
+    .language-selector {
+        display: flex;
+        gap: 5px;
+        margin-left: 20px;
+    }
+    
+    .lang-btn {
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.3);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .lang-btn:hover, .lang-btn.active {
+        background: var(--verde-cafe);
+        border-color: var(--verde-cafe);
+    }
+
 </style>
     
     <!-- Chatbot Don Chucho - Arriero Guía Turístico -->
@@ -7132,6 +7176,28 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
         }
     }
 
+
+    .language-selector {
+        display: flex;
+        gap: 5px;
+        margin-left: 20px;
+    }
+    
+    .lang-btn {
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.3);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .lang-btn:hover, .lang-btn.active {
+        background: var(--verde-cafe);
+        border-color: var(--verde-cafe);
+    }
+
 </style>
     
     <!-- Sección de condiciones de precios -->
@@ -7360,6 +7426,49 @@ Quiero mi cotización personalizada con el 15% de descuento para el plan ideal p
     function handleKeyPress(event) {
         if (event.key === 'Enter') {
             sendMessage();
+        }
+    }
+    </script>
+
+
+    <script>
+    const translations = {
+        es: {
+            'hero_title': 'Conectamos tu corazón con el Eje Cafetero: Experiencias auténticas que quedarán en tu memoria',
+            'hero_subtitle': 'No somos solo una guía de viajes; somos narradores de la cultura cafetera',
+            'plans_title': 'Planes turísticos en el Quindío (Eje Cafetero)',
+            'contact_title': 'Contáctenos',
+            'about_title': 'Nosotros'
+        },
+        en: {
+            'hero_title': 'Connect your heart with the Coffee Region: Authentic experiences that will stay in your memory',
+            'hero_subtitle': 'We are not just a travel guide; we are storytellers of coffee culture',
+            'plans_title': 'Tourism Plans in Quindío (Coffee Region)',
+            'contact_title': 'Contact Us',
+            'about_title': 'About Us'
+        }
+    };
+    
+    let currentLang = 'es';
+    
+    function changeLanguage(lang) {
+        currentLang = lang;
+        
+        // Actualizar botones
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.lang === lang) {
+                btn.classList.add('active');
+            }
+        });
+        
+        // Actualizar textos
+        const texts = translations[lang];
+        for (const [key, value] of Object.entries(texts)) {
+            const element = document.querySelector(`[data-i18n="${key}"]`);
+            if (element) {
+                element.textContent = value;
+            }
         }
     }
     </script>
