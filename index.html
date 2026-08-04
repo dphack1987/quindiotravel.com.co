@@ -753,124 +753,7 @@
 
 
     
-    /* Flexible Plans Section */
-    .flexible-plans-section {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 4rem 0;
-        margin: 3rem 0;
-        color: white;
-    }
     
-    .flexible-plans-header {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-    
-    .flexible-plans-header h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-    
-    .flexible-plans-header p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-    }
-    
-    .flexible-plans-container {
-        background: rgba(255,255,255,0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 2rem;
-    }
-    
-    .flexible-step {
-        margin-bottom: 2rem;
-        padding: 1.5rem;
-        background: rgba(255,255,255,0.1);
-        border-radius: 15px;
-    }
-    
-    .step-number {
-        width: 40px;
-        height: 40px;
-        background: #fff;
-        color: #667eea;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
-    
-    .step-title {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-    }
-    
-    .attractions-grid,
-    .duration-options,
-    .accommodation-options {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-    }
-    
-    .attraction-checkbox,
-    .duration-radio,
-    .accommodation-radio {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.75rem;
-        background: rgba(255,255,255,0.1);
-        border-radius: 10px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    
-    .attraction-checkbox:hover,
-    .duration-radio:hover,
-    .accommodation-radio:hover {
-        background: rgba(255,255,255,0.2);
-    }
-    
-    .attraction-checkbox input,
-    .duration-radio input,
-    .accommodation-radio input {
-        accent-color: #fff;
-    }
-    
-    .flexible-cta {
-        text-align: center;
-        margin-top: 2rem;
-    }
-    
-    .btn-custom-plan {
-        background: white;
-        color: #667eea;
-        border: none;
-        padding: 1rem 2rem;
-        border-radius: 50px;
-        font-size: 1.1rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    
-    .btn-custom-plan:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    
-    @media (max-width: 768px) {
-        .attractions-grid,
-        .duration-options,
-        .accommodation-options {
-            grid-template-columns: 1fr;
-        }
     }
 
 
@@ -1097,68 +980,7 @@
 
 
     
-    /* Don Chucho Perfect Button */
-    .don-chucho-perfect-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 999;
-    }
     
-    .don-chucho-link {
-        display: block;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #8B4513, #D2691E);
-        box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: visible;
-    }
-    
-    .don-chucho-link:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
-    }
-    
-    .don-chucho-avatar-perfect {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid rgba(255,255,255,0.3);
-        display: block;
-    }
-    
-    .don-chucho-tooltip {
-        position: absolute;
-        right: 70px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: linear-gradient(135deg, #8B4513, #D2691E);
-        color: white;
-        padding: 8px 15px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        white-space: nowrap;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    
-    .don-chucho-link:hover .don-chucho-tooltip {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    @media (max-width: 768px) {
-        .don-chucho-perfect-button {
-            bottom: 15px;
-            right: 15px;
-        }
         
         .don-chucho-link {
             width: 50px;
@@ -1174,6 +996,196 @@
             right: 60px;
             font-size: 0.75rem;
             padding: 6px 12px;
+        }
+    }
+
+
+    
+    /* Don Chucho Bottom Left Button */
+    .don-chucho-bottom-left {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 998;
+    }
+    
+    .don-chucho-link-left {
+        display: block;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #8B4513, #D2691E);
+        box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: visible;
+    }
+    
+    .don-chucho-link-left:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+    }
+    
+    .don-chucho-avatar-left {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid rgba(255,255,255,0.3);
+        display: block;
+    }
+    
+    .don-chucho-tooltip-left {
+        position: absolute;
+        left: 75px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(135deg, #8B4513, #D2691E);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .don-chucho-link-left:hover .don-chucho-tooltip-left {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Improved Flexible Plans Section */
+    .flexible-plans-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 4rem 0;
+        margin: 3rem 0;
+        color: white;
+    }
+    
+    .flexible-plans-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .flexible-plans-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .flexible-plans-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    
+    .flexible-plans-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .flexible-step-card {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .flexible-step-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255,255,255,0.15);
+    }
+    
+    .step-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .step-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+    }
+    
+    .attractions-grid-clean,
+    .duration-options-clean,
+    .accommodation-options-clean {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: left;
+    }
+    
+    .attraction-item,
+    .duration-item,
+    .accommodation-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .attraction-item:hover,
+    .duration-item:hover,
+    .accommodation-item:hover {
+        background: rgba(255,255,255,0.2);
+    }
+    
+    .flexible-cta {
+        text-align: center;
+    }
+    
+    .btn-generate-plan {
+        background: white;
+        color: #667eea;
+        border: none;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-generate-plan:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    @media (max-width: 768px) {
+        .don-chucho-bottom-left {
+            bottom: 15px;
+            left: 15px;
+        }
+        
+        .don-chucho-link-left {
+            width: 55px;
+            height: 55px;
+        }
+        
+        .don-chucho-avatar-left {
+            width: 55px;
+            height: 55px;
+        }
+        
+        .don-chucho-tooltip-left {
+            left: 65px;
+            font-size: 0.8rem;
+            padding: 8px 12px;
+        }
+        
+        .flexible-plans-grid {
+            grid-template-columns: 1fr;
         }
     }
 
@@ -3364,54 +3376,58 @@
         </form>
     </section>
 
-    <!-- Plans Flexibles Section -->
+    
+    <!-- Planes Flexibles Section -->
     <section class="flexible-plans-section" id="planes-flexibles" aria-label="Arma tu propio plan">
         <div class="container">
             <div class="flexible-plans-header">
-                <h2 class="section-title">🔧 Arma tu Propio Plan</h2>
-                <p class="section-subtitle">Personaliza tu experiencia seleccionando atractivos, duración y alojamiento</p>
+                <h2 class="section-title">🔧 Personaliza tu Experiencia</h2>
+                <p class="section-subtitle">Crea tu plan ideal según tus preferencias</p>
             </div>
             
-            <div class="flexible-plans-container">
-                <div class="flexible-step">
-                    <div class="step-number">1</div>
+            <div class="flexible-plans-grid">
+                <div class="flexible-step-card">
+                    <div class="step-icon">🎯</div>
                     <h3 class="step-title">Selecciona Atractivos</h3>
-                    <div class="attractions-grid">
-                        <label class="attraction-checkbox"><input type="checkbox" value="parque-cafe" data-name="Parque del Café"><span>🎢 Parque del Café</span></label>
-                        <label class="attraction-checkbox"><input type="checkbox" value="panaca" data-name="PANACA"><span>🐄 PANACA</span></label>
-                        <label class="attraction-checkbox"><input type="checkbox" value="valle-cocora" data-name="Valle de Cocora"><span>🌴 Valle de Cocora</span></label>
-                        <label class="attraction-checkbox"><input type="checkbox" value="salento" data-name="Salento"><span>🏘 Salento</span></label>
-                        <label class="attraction-checkbox"><input type="checkbox" value="filandia" data-name="Filandia"><span>🏛 Filandia</span></label>
-                        <label class="attraction-checkbox"><input type="checkbox" value="termales" data-name="Termales Santa Rosa"><span>♨ Termales</span></label>
+                    <div class="attractions-grid-clean">
+                        <label class="attraction-item"><input type="checkbox" value="parque-cafe" data-name="Parque del Café">🎢 Parque del Café</label>
+                        <label class="attraction-item"><input type="checkbox" value="panaca" data-name="PANACA">🐄 PANACA</label>
+                        <label class="attraction-item"><input type="checkbox" value="valle-cocora" data-name="Valle de Cocora">🌴 Valle de Cocora</label>
+                        <label class="attraction-item"><input type="checkbox" value="salento" data-name="Salento">🏘 Salento</label>
+                        <label class="attraction-item"><input type="checkbox" value="filandia" data-name="Filandia">🏛 Filandia</label>
+                        <label class="attraction-item"><input type="checkbox" value="termales" data-name="Termales">♨ Termales</label>
                     </div>
                 </div>
                 
-                <div class="flexible-step">
-                    <div class="step-number">2</div>
+                <div class="flexible-step-card">
+                    <div class="step-icon">📅</div>
                     <h3 class="step-title">Duración</h3>
-                    <div class="duration-options">
-                        <label class="duration-radio"><input type="radio" name="duration" value="2d1n"><span>2 Días / 1 Noche</span></label>
-                        <label class="duration-radio"><input type="radio" name="duration" value="3d2n"><span>3 Días / 2 Noches</span></label>
-                        <label class="duration-radio"><input type="radio" name="duration" value="4d3n"><span>4 Días / 3 Noches</span></label>
+                    <div class="duration-options-clean">
+                        <label class="duration-item"><input type="radio" name="duration" value="2d1n">2 Días / 1 Noche</label>
+                        <label class="duration-item"><input type="radio" name="duration" value="3d2n">3 Días / 2 Noches</label>
+                        <label class="duration-item"><input type="radio" name="duration" value="4d3n">4 Días / 3 Noches</label>
                     </div>
                 </div>
                 
-                <div class="flexible-step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Categoría de Alojamiento</h3>
-                    <div class="accommodation-options">
-                        <label class="accommodation-radio"><input type="radio" name="accommodation" value="economico"><span>💰 Económico</span></label>
-                        <label class="accommodation-radio"><input type="radio" name="accommodation" value="intermedio"><span>⭐⭐⭐ Intermedio</span></label>
-                        <label class="accommodation-radio"><input type="radio" name="accommodation" value="vip"><span>⭐⭐⭐⭐⭐ VIP</span></label>
+                <div class="flexible-step-card">
+                    <div class="step-icon">🏨</div>
+                    <h3 class="step-title">Alojamiento</h3>
+                    <div class="accommodation-options-clean">
+                        <label class="accommodation-item"><input type="radio" name="accommodation" value="economico">💰 Económico</label>
+                        <label class="accommodation-item"><input type="radio" name="accommodation" value="intermedio">⭐⭐⭐ Intermedio</label>
+                        <label class="accommodation-item"><input type="radio" name="accommodation" value="vip">⭐⭐⭐⭐⭐ VIP</label>
                     </div>
                 </div>
-                
-                <div class="flexible-cta">
-                    <button class="btn-custom-plan" onclick="generateCustomPlan()"><i class="fas fa-magic"></i> Generar mi Plan Personalizado</button>
-                </div>
+            </div>
+            
+            <div class="flexible-cta">
+                <button class="btn-generate-plan" onclick="generateCustomPlan()">
+                    <i class="fas fa-magic"></i> Generar mi Plan Personalizado
+                </button>
             </div>
         </div>
     </section>
+
 
     <!-- Programa de Lealtad Section -->
     <section class="loyalty-program-section" id="programa-lealtad" aria-label="Programa de Lealtad">
@@ -4834,13 +4850,15 @@
 
 
     
-    <!-- Don Chucho Perfect Button -->
-    <div class="don-chucho-perfect-button">
-        <a href="#" data-wa-message="Hola Don Chucho, necesito asesoría sobre planes de viaje al Eje Cafetero" target="_blank" rel="noopener" class="don-chucho-link">
-            <img src="assets/images/don-chucho-avatar.png" alt="Don Chucho - Guía Local" class="don-chucho-avatar-perfect">
-            <span class="don-chucho-tooltip">Hola, soy Don Chucho</span>
+    
+    <!-- Don Chucho Avatar - Bottom Left -->
+    <div class="don-chucho-bottom-left">
+        <a href="#" data-wa-message="Hola Don Chucho, necesito asesoría sobre planes de viaje al Eje Cafetero" target="_blank" rel="noopener" class="don-chucho-link-left">
+            <img src="assets/images/don-chucho-avatar.png" alt="Don Chucho - Guía Local" class="don-chucho-avatar-left">
+            <span class="don-chucho-tooltip-left">🤠 Hola, soy Don Chucho</span>
         </a>
     </div>
+
 
                 </div>
             </div>
