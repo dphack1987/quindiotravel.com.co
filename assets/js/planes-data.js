@@ -3,7 +3,7 @@ const planesData = [
   {
     id: "plan-1",
     slug: "plan-vive-eje-cafetero-tematico",
-    titulo: "Plan 1: Vive El Eje Cafetero Temático",
+    titulo: "Escapada Cafetera de Fin de Semana",
     duracion: "2d",
     noches: 1,
     dias: 2,
@@ -23,7 +23,7 @@ const planesData = [
   {
     id: "plan-2",
     slug: "plan-naturaleza-y-diversion-cafetera",
-    titulo: "Plan 2: Naturaleza y Diversión Cafetera",
+    titulo: "Aventura Natural en el Eje Cafetero",
     duracion: "3d",
     noches: 2,
     dias: 3,
@@ -44,7 +44,7 @@ const planesData = [
   {
     id: "plan-3",
     slug: "plan-experiencia-completa-eje",
-    titulo: "Plan 3: La Experiencia Completa del Eje",
+    titulo: "Experiencia Completa del Eje Cafetero",
     duracion: "4d",
     noches: 3,
     dias: 4,
@@ -66,7 +66,7 @@ const planesData = [
   {
     id: "plan-4",
     slug: "plan-aventura-y-relax-termal",
-    titulo: "Plan 4: Aventura y Relax Termal",
+    titulo: "Relax y Aventura en Termales del Eje",
     duracion: "4d",
     noches: 3,
     dias: 4,
@@ -88,7 +88,7 @@ const planesData = [
   {
     id: "plan-5",
     slug: "plan-tradicion-y-raices-arrieria",
-    titulo: "Plan 5: Tradición y Raíces de la Arriería",
+    titulo: "Experiencia Premium del Eje Cafetero",
     duracion: "4d",
     noches: 3,
     dias: 4,
@@ -110,7 +110,7 @@ const planesData = [
   {
     id: "plan-6",
     slug: "plan-gran-quindio-integral",
-    titulo: "Plan 6: Gran Quindío Integral",
+    titulo: "La Experiencia Definitiva del Eje Cafetero",
     duracion: "5d",
     noches: 4,
     dias: 5,
