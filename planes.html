@@ -322,9 +322,9 @@
         <div class="cotizador-enhanced">
             <div class="cotizador-header-enhanced">
                 <div class="cotizador-title-section">
-                    <span class="cotizador-badge">🧮 Cotizador Inteligente</span>
-                    <h2>Personaliza tu experiencia ideal</h2>
-                    <p>Selecciona tus preferencias y obtén una cotización instantánea para el Plan 4D/3N</p>
+                    <span class="cotizador-badge">🧮 Cotizador Oficial</span>
+                    <h2>Cotizador de Precios Autorizados</h2>
+                    <p>Calcula tu cotización usando únicamente los precios oficiales del PORTAFOLIO PLANES NACIONALES 2026</p>
                 </div>
                 <div class="cotizador-icon">
                     <i class="fas fa-calculator"></i>
@@ -337,24 +337,14 @@
                         <i class="fas fa-calendar-alt"></i>
                     </div>
                     <div class="cotizador-field-content">
-                        <label for="select-temporada">Temporada</label>
-                        <select id="select-temporada" class="cotizador-select-enhanced">
-                            <option value="temporada_baja">Temporada Baja</option>
-                            <option value="temporada_media" selected>Temporada Media (Puentes / Receso)</option>
-                            <option value="temporada_alta">Temporada Alta (Dic 15 - Ene 20 / Semana Santa)</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="cotizador-card-enhanced">
-                    <div class="cotizador-field-icon">
-                        <i class="fas fa-shuttle-van"></i>
-                    </div>
-                    <div class="cotizador-field-content">
-                        <label for="select-transporte">Transporte</label>
-                        <select id="select-transporte" class="cotizador-select-enhanced">
-                            <option value="radio_taxi" selected>Radio Taxi del Quindío</option>
-                            <option value="placa_blanca">Vehículo Placa Blanca (VIP)</option>
+                        <label for="select-plan">Plan</label>
+                        <select id="select-plan" class="cotizador-select-enhanced">
+                            <option value="plan1_2d1n">Plan 1 (2D/1N)</option>
+                            <option value="plan2_3d2n">Plan 2 (3D/2N)</option>
+                            <option value="plan3_4d3n">Plan 3 (4D/3N)</option>
+                            <option value="plan4_4d3n" selected>Plan 4 (4D/3N)</option>
+                            <option value="plan5_4d3n">Plan 5 (4D/3N)</option>
+                            <option value="plan6_5d4n">Plan 6 (5D/4N)</option>
                         </select>
                     </div>
                 </div>
@@ -364,12 +354,12 @@
                         <i class="fas fa-hotel"></i>
                     </div>
                     <div class="cotizador-field-content">
-                        <label for="select-hotel">Alojamiento</label>
+                        <label for="select-categoria">Alojamiento</label>
                         <select id="select-categoria" class="cotizador-select-enhanced">
-                            <option value="economica">Económica (Dorada, De La Vega)</option>
-                            <option value="intermedia">Intermedia (Cabañas La Esmeralda)</option>
-                            <option value="intermedia_vip" selected>Intermedia VIP (Los Girasoles, Café Café)</option>
-                            <option value="vip">VIP (Las Camelias)</option>
+                            <option value="economica">Económica (Quinta del Café, Dorada)</option>
+                            <option value="intermedia">Intermedia (Cabañas La Esmeralda, Los Aperos)</option>
+                            <option value="intermedia_vip" selected>Intermedia VIP (Los Girasoles, La Tata, Combia)</option>
+                            <option value="vip">VIP (Hotel Campestre Camellias, Mocawa Resort, Mocawa Plaza)</option>
                         </select>
                     </div>
                 </div>
@@ -432,7 +422,7 @@
                         <i class="fas fa-coins"></i>
                     </div>
                     <div class="result-content">
-                        <span class="result-label">TOTAL Plan 4D/3N</span>
+                        <span class="result-label">TOTAL</span>
                         <span class="result-value total-value" id="precio-total">—</span>
                     </div>
                 </div>
@@ -529,40 +519,28 @@
         // Fallback: Datos de tarifas cargados desde docs/data/tarifas.json vía cotizador.js
         // Si falla la carga del JSON, el cotizador.js manejará el error
 
-        const tempLabel = {
-            temporada_baja: "Temporada Baja",
-            temporada_media: "Temporada Media",
-            temporada_alta: "Temporada Alta"
-        };
-        const transpLabel = {
-            radio_taxi: "Radio Taxi del Quindío",
-            placa_blanca: "Vehículo Placa Blanca (VIP)"
-        };
         const hotelLabelMap = {
-            "economica": "Económica (Dorada, De La Vega)",
-            "intermedia": "Intermedia (Cabañas La Esmeralda)",
-            "intermedia_vip": "Intermedia VIP (Los Girasoles, Café Café)",
-            "vip": "VIP (Las Camelias)"
+            "economica": "Económica (Quinta del Café, Dorada)",
+            "intermedia": "Intermedia (Cabañas La Esmeralda, Los Aperos)",
+            "intermedia_vip": "Intermedia VIP (Los Girasoles, La Tata, Combia)",
+            "vip": "VIP (Hotel Campestre Camellias, Mocawa Resort, Mocawa Plaza)"
         };
 
         function actualizarBotonWhatsAppCotizador() {
-            const selT = document.getElementById('select-temporada');
-            const selTr = document.getElementById('select-transporte');
+            const selPlan = document.getElementById('select-plan');
             const selH = document.getElementById('select-categoria');
             const selP = document.getElementById('select-pax');
             const btn = document.getElementById('cotizador-whatsapp-btn');
             const dispTotal = document.getElementById('precio-total').innerText;
 
-            if (!selT || !btn) return;
+            if (!selPlan || !btn) return;
 
             const texto =
 `Hola Quindío Travel 🌿,
 
 Deseo *reservar y confirmar* la siguiente cotización:
 
-📌 *Programa:* Plan 4 Días / 3 Noches Eje Cafetero
-☀️ *Temporada:* ${tempLabel[selT.value]}
-🚐 *Transporte:* ${transpLabel[selTr.value]}
+📌 *Programa:* ${selPlan.options[selPlan.selectedIndex].text}
 🏡 *Alojamiento:* ${hotelLabelMap[selH.value] || selH.value}
 👥 *Pasajeros:* ${selP.value} personas
 💰 *Tarifa cotizada (ref):* ${dispTotal}
@@ -692,10 +670,14 @@ Deseo *reservar y confirmar* la siguiente cotización:
             if (targetTotal) observer.observe(targetTotal, { childList: true, characterData: true, subtree: true });
             if (targetPersona) observer.observe(targetPersona, { childList: true, characterData: true, subtree: true });
 
-            ['select-temporada','select-transporte','select-hotel','select-pax'].forEach(id => {
+            ['select-plan','select-categoria','select-pax'].forEach(id => {
                 const el = document.getElementById(id);
                 if (el) el.addEventListener('change', actualizarBotonWhatsAppCotizador);
             });
+
+            if (typeof actualizarBotonWhatsAppCotizador === 'function') {
+                actualizarBotonWhatsAppCotizador();
+            }
 
             const hambBtn = document.getElementById('hamburger-btn');
             const navMenu = document.getElementById('nav-menu');
@@ -716,10 +698,6 @@ Deseo *reservar y confirmar* la siguiente cotización:
                 });
             }
         });
-    </script>
-    <script src="assets/js/planes-data.js"></script>
-    <script src="assets/js/cotizador.js"></script>
-
     </script>
 </body>
 </html>
