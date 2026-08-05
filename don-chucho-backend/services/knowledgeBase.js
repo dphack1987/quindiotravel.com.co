@@ -9,7 +9,7 @@ class KnowledgeBase {
                         'Parque del Café + entradas',
                         'PANACA + almuerzo',
                         'Alojamiento 2 noches en finca hotel',
-                        'Transporte desde tu ciudad',
+                        'Transporte privado en Quindío',
                         'Guía local'
                     ],
                     duracion: '3 días / 2 noches',

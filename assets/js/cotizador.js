@@ -2,17 +2,6 @@
    QUINDÍO TRAVEL - LÓGICA DEL COTIZADOR DINÁMICO MEJORADO
    ========================================================================== */
 
-const DESTINOS_PRECIOS = {
-  'valle-cocora': 85000,
-  'salento': 45000,
-  'filandia': 40000,
-  'panaca': 65000,
-  'recuca': 55000,
-  'termales': 75000,
-  'mariposario': 35000,
-  'cafe-tour': 50000
-};
-
 function runWhenReady(callback) {
     if (document.readyState === 'complete' || document.readyState === 'interactive') {
         callback();
@@ -63,18 +52,7 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados) {
   }
 
   const totalPlan = precioPorPersona * paxCount;
-  let totalDestinos = 0;
-
-  if (destinosSeleccionados && destinosSeleccionados.length > 0) {
-    destinosSeleccionados.forEach(destino => {
-      const precioDestino = DESTINOS_PRECIOS[destino];
-      if (typeof precioDestino === 'number') {
-        totalDestinos += precioDestino * paxCount;
-      }
-    });
-  }
-
-  const total = totalPlan + totalDestinos;
+  const total = totalPlan;
 
   return {
     precioPorPersona: precioPorPersona,
@@ -82,7 +60,7 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados) {
     moneda: "COP",
     formateadoPersona: new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(precioPorPersona),
     formateadoTotal: new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(total),
-    destinosExtra: destinosSeleccionados ? destinosSeleccionados.length : 0
+    destinosExtra: 0
   };
 }
 
@@ -100,25 +78,11 @@ function actualizarUI() {
   if (!selectPlan || !selectCategoria || !selectPax) return;
 
   // Obtener destinos seleccionados si el elemento existe
-  let destinosSeleccionados = [];
-  if (selectDestinos) {
-    if (selectDestinos.tagName === 'SELECT') {
-      for (let i = 0; i < selectDestinos.options.length; i++) {
-        if (selectDestinos.options[i].selected) {
-          destinosSeleccionados.push(selectDestinos.options[i].value);
-        }
-      }
-    } else {
-      const checks = selectDestinos.querySelectorAll('input[type="checkbox"]:checked');
-      checks.forEach(check => destinosSeleccionados.push(check.value));
-    }
-  }
-
   const res = calcularCotizacion(
     selectPlan.value,
     selectCategoria.value,
     parseInt(selectPax.value),
-    destinosSeleccionados
+    []
   );
 
   if (res.error) {
@@ -128,11 +92,7 @@ function actualizarUI() {
   } else {
     if (displayPersona) displayPersona.innerText = res.formateadoPersona;
     if (displayTotal) displayTotal.innerText = res.formateadoTotal;
-    if (displayDestinos && res.destinosExtra > 0) {
-      displayDestinos.innerText = `+ ${res.destinosExtra} destinos adicionales`;
-    } else if (displayDestinos) {
-      displayDestinos.innerText = "";
-    }
+    if (displayDestinos) displayDestinos.innerText = "";
   }
 }
 
