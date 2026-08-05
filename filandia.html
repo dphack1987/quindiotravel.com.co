@@ -23,6 +23,14 @@
     <meta property="og:locale" content="es_CO">
     <meta property="og:site_name" content="Quindío Travel">
 
+    <!-- Alternate Language -->
+    <link rel="alternate" hreflang="es" href="https://quindiotravel.com.co/filandia.html">
+    <link rel="alternate" hreflang="es-CO" href="https://quindiotravel.com.co/filandia.html">
+    <link rel="alternate" hreflang="en" href="https://quindiotravel.com.co/filandia.html?lang=en">
+    <link rel="alternate" hreflang="pt" href="https://quindiotravel.com.co/filandia.html?lang=pt">
+    <link rel="alternate" hreflang="fr" href="https://quindiotravel.com.co/filandia.html?lang=fr">
+    <link rel="alternate" hreflang="x-default" href="https://quindiotravel.com.co/filandia.html">
+
     <link rel="canonical" href="https://quindiotravel.com.co/filandia.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -100,12 +108,12 @@
             </div>
             <nav class="nav-menu" id="nav-menu" aria-label="Menú principal">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="planes.html">Planes</a></li>
-                    <li><a href="index.html#hoteles">Hoteles</a></li>
-                    <li><a href="index.html#experiencias">Experiencias</a></li>
+                    <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
+                    <li><a href="planes.html" data-i18n="nav.planes">Planes</a></li>
+                    <li><a href="index.html#hoteles" data-i18n="nav.hoteles">Hoteles</a></li>
+                    <li><a href="index.html#experiencias" data-i18n="nav.experiencias">Experiencias</a></li>
                     <li><a href="filandia.html" class="active">Filandia</a></li>
-                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -413,7 +421,10 @@
             }
         }
     </style>
-</body>
+    
+    <!-- Language Detector -->
+    <script src="assets/js/language-detector.js" defer></script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const hambBtn = document.getElementById('hamburger-btn');

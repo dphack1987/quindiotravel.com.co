@@ -232,7 +232,21 @@ function initLanguageSystem() {
 // Crear selector de idioma en el header
 function createLanguageSelector() {
     const headerActions = document.querySelector('.header-actions');
-    if (!headerActions || document.getElementById('language-selector')) {
+    if (!headerActions) {
+        console.log('header-actions not found, trying alternative method');
+        // Try to find header and append there
+        const header = document.querySelector('.main-header');
+        if (header) {
+            const navContainer = header.querySelector('.nav-container, .container');
+            if (navContainer) {
+                createLanguageSelectorInContainer(navContainer);
+                return;
+            }
+        }
+        return;
+    }
+    
+    if (document.getElementById('language-selector')) {
         return;
     }
     
@@ -245,6 +259,7 @@ function createLanguageSelector() {
             <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 Español</option>
             <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 English</option>
             <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 Português</option>
+            <option value="fr" ${currentLang === 'fr' ? 'selected' : ''}>🇫🇷 Français</option>
         </select>
     `;
     
@@ -260,23 +275,36 @@ function createLanguageSelector() {
         headerActions.insertBefore(selectorContainer, headerActions.firstChild);
     }
     
-    // Asegurar que funcione en redimensionamiento
-    window.addEventListener('resize', function() {
-        const existingSelector = document.getElementById('language-selector');
-        if (existingSelector) {
-            const container = existingSelector.parentElement;
-            if (window.innerWidth <= 768) {
-                const hamburgerBtn = document.getElementById('hamburger-btn');
-                if (hamburgerBtn && container.nextElementSibling !== hamburgerBtn) {
-                    headerActions.insertBefore(container, hamburgerBtn);
-                }
-            } else {
-                if (container !== headerActions.firstChild) {
-                    headerActions.insertBefore(container, headerActions.firstChild);
-                }
-            }
-        }
+    console.log('Language selector created successfully');
+}
+
+function createLanguageSelectorInContainer(container) {
+    if (document.getElementById('language-selector')) {
+        return;
+    }
+    
+    const currentLang = getLanguage();
+    
+    const selectorContainer = document.createElement('div');
+    selectorContainer.className = 'language-selector-container';
+    selectorContainer.style.marginRight = '15px';
+    selectorContainer.innerHTML = `
+        <select id="language-selector" class="language-selector" aria-label="Seleccionar idioma / Select language">
+            <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 Español</option>
+            <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 English</option>
+            <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 Português</option>
+            <option value="fr" ${currentLang === 'fr' ? 'selected' : ''}>🇫🇷 Français</option>
+        </select>
+    `;
+    
+    selectorContainer.querySelector('#language-selector').addEventListener('change', function() {
+        setLanguage(this.value);
     });
+    
+    // Insert at the beginning of container
+    container.insertBefore(selectorContainer, container.firstChild);
+    
+    console.log('Language selector created in container');
 }
 
 // Inicializar cuando el DOM esté listo

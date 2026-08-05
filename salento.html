@@ -24,6 +24,14 @@
     <meta property="og:locale" content="es_CO">
     <meta property="og:site_name" content="Quindío Travel">
 
+    <!-- Alternate Language -->
+    <link rel="alternate" hreflang="es" href="https://quindiotravel.com.co/salento.html">
+    <link rel="alternate" hreflang="es-CO" href="https://quindiotravel.com.co/salento.html">
+    <link rel="alternate" hreflang="en" href="https://quindiotravel.com.co/salento.html?lang=en">
+    <link rel="alternate" hreflang="pt" href="https://quindiotravel.com.co/salento.html?lang=pt">
+    <link rel="alternate" hreflang="fr" href="https://quindiotravel.com.co/salento.html?lang=fr">
+    <link rel="alternate" hreflang="x-default" href="https://quindiotravel.com.co/salento.html">
+
     <!-- Enhanced Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="🌈 Salento 2026 | Tours Todo Incluido | Pueblo Patrimonio">
@@ -153,12 +161,12 @@
             </div>
             <nav class="nav-menu" id="nav-menu" aria-label="Menú principal">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="planes.html">Planes</a></li>
-                    <li><a href="index.html#hoteles">Hoteles</a></li>
-                    <li><a href="index.html#experiencias">Experiencias</a></li>
+                    <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
+                    <li><a href="planes.html" data-i18n="nav.planes">Planes</a></li>
+                    <li><a href="index.html#hoteles" data-i18n="nav.hoteles">Hoteles</a></li>
+                    <li><a href="index.html#experiencias" data-i18n="nav.experiencias">Experiencias</a></li>
                     <li><a href="salento.html" class="active">Salento</a></li>
-                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -178,11 +186,11 @@
         <div class="container">
             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a href="index.html" itemprop="item"><span itemprop="name">Inicio</span></a>
+                    <a href="index.html" itemprop="item"><span itemprop="name" data-i18n="breadcrumb.home">Inicio</span></a>
                     <meta itemprop="position" content="1" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a href="index.html#destinos" itemprop="item"><span itemprop="name">Destinos</span></a>
+                    <a href="index.html#destinos" itemprop="item"><span itemprop="name" data-i18n="nav.destinos">Destinos</span></a>
                     <meta itemprop="position" content="2" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -466,7 +474,10 @@
             }
         }
     </style>
-</body>
+    
+    <!-- Language Detector -->
+    <script src="assets/js/language-detector.js" defer></script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const hambBtn = document.getElementById('hamburger-btn');
