@@ -380,10 +380,37 @@
                     <div class="cotizador-field-content">
                         <label for="select-pax">Pasajeros</label>
                         <select id="select-pax" class="cotizador-select-enhanced">
+                            <option value="1">1 Persona</option>
                             <option value="2" selected>2 Personas</option>
                             <option value="3">3 Personas</option>
                             <option value="4">4 Personas</option>
+                            <option value="5">5 Personas</option>
+                            <option value="6">6 Personas</option>
+                            <option value="7">7 Personas</option>
+                            <option value="8">8 Personas</option>
+                            <option value="9">9 Personas</option>
+                            <option value="10">10+ Personas</option>
                         </select>
+                    </div>
+                </div>
+                
+                <div class="cotizador-card-enhanced">
+                    <div class="cotizador-field-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="cotizador-field-content">
+                        <label for="select-destinos">Destinos Adicionales</label>
+                        <select id="select-destinos" class="cotizador-select-enhanced" multiple style="height: 100px;">
+                            <option value="valle-cocora">Valle de Cocora (+$85.000/pax)</option>
+                            <option value="salento">Salento (+$45.000/pax)</option>
+                            <option value="filandia">Filandia (+$40.000/pax)</option>
+                            <option value="panaca">PANACA (+$65.000/pax)</option>
+                            <option value="recuca">RECUCA (+$55.000/pax)</option>
+                            <option value="termales">Termales de Santa Rosa (+$75.000/pax)</option>
+                            <option value="mariposario">Mariposario (+$35.000/pax)</option>
+                            <option value="cafe-tour">Tour del Café (+$50.000/pax)</option>
+                        </select>
+                        <small style="color: #666; font-size: 0.8rem;">Ctrl+Clic para seleccionar múltiples</small>
                     </div>
                 </div>
             </div>
@@ -409,107 +436,21 @@
                     </div>
                 </div>
                 
+                <div class="result-card-enhanced">
+                    <div class="result-icon">
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+                    <div class="result-content">
+                        <span class="result-label">Destinos adicionales</span>
+                        <span class="result-value" id="destinos-extra">—</span>
+                    </div>
+                </div>
+                
                 <a id="cotizador-whatsapp-btn" href="#" target="_blank" rel="noopener" class="btn-whatsapp-enhanced">
                     <i class="fab fa-whatsapp"></i>
                     <span>Solicitar cotización por WhatsApp</span>
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Advanced Filters Section -->
-    <section class="filters-section container" id="filtros" aria-label="Filtros Avanzados de Planes">
-        <div class="filters-header">
-            <h2 class="filters-title">Encuentra tu Plan Perfecto</h2>
-            <p class="filters-subtitle">Filtra por tipo, duración, precio y capacidad</p>
-        </div>
-        
-        <div class="filters-container">
-            <!-- Filter by Type -->
-            <div class="filter-group">
-                <label class="filter-label">Tipo de Experiencia</label>
-                <select class="filter-select" id="filter-type" onchange="filterPlans()">
-                    <option value="all">Todos los tipos</option>
-                    <option value="cultural">Turismo Cultural</option>
-                    <option value="aventura">Turismo de Aventura</option>
-                    <option value="relax">Turismo de Relaj</option>
-                    <option value="gastronomico">Turismo Gastronómico</option>
-                    <option value="naturaleza">Turismo de Naturaleza</option>
-                </select>
-            </div>
-            
-            <!-- Filter by Duration -->
-            <div class="filter-group">
-                <label class="filter-label">Duración</label>
-                <select class="filter-select" id="filter-duration" onchange="filterPlans()">
-                    <option value="all">Todas las duraciones</option>
-                    <option value="2d1n">2 Días / 1 Noche</option>
-                    <option value="3d2n">3 Días / 2 Noches</option>
-                    <option value="4d3n">4 Días / 3 Noches</option>
-                    <option value="5d4n">5 Días / 4 Noches</option>
-                    <option value="6d5n">6 Días / 5 Noches</option>
-                </select>
-            </div>
-            
-            <!-- Filter by Price -->
-            <div class="filter-group">
-                <label class="filter-label">Rango de Precio</label>
-                <select class="filter-select" id="filter-price" onchange="filterPlans()">
-                    <option value="all">Todos los precios</option>
-                    <option value="economico">Económico ($500k - $1M)</option>
-                    <option value="intermedio">Intermedio ($1M - $1.5M)</option>
-                    <option value="premium">Premium ($1.5M+)</option>
-                </select>
-            </div>
-            
-            <!-- Filter by Capacity -->
-            <div class="filter-group">
-                <label class="filter-label">Capacidad</label>
-                <select class="filter-select" id="filter-capacity" onchange="filterPlans()">
-                    <option value="all">Todas las capacidades</option>
-                    <option value="individual">Individual</option>
-                    <option value="pareja">Pareja</option>
-                    <option value="familia">Familia (3-6)</option>
-                    <option value="grupo">Grupo (7+)</option>
-                </select>
-            </div>
-            
-            <!-- Filter by Transport -->
-            <div class="filter-group">
-                <label class="filter-label">Transporte</label>
-                <select class="filter-select" id="filter-transport" onchange="filterPlans()">
-                    <option value="all">Todos</option>
-                    <option value="con-transporte">Con Transporte</option>
-                    <option value="sin-transporte">Sin Transporte</option>
-                </select>
-            </div>
-            
-            <!-- Filter by Attractions -->
-            <div class="filter-group">
-                <label class="filter-label">Atractivos</label>
-                <select class="filter-select" id="filter-attraction" onchange="filterPlans()">
-                    <option value="all">Todos los atractivos</option>
-                    <option value="parque-cafe">Parque del Café</option>
-                    <option value="panaca">PANACA</option>
-                    <option value="valle-cocora">Valle de Cocora</option>
-                    <option value="termales">Termales</option>
-                    <option value="salento">Salento</option>
-                    <option value="filandia">Filandia</option>
-                </select>
-            </div>
-            
-            <!-- Reset Filters -->
-            <div class="filter-group">
-                <button class="filter-reset" onclick="resetFilters()">
-                    <i class="fas fa-undo"></i> Limpiar Filtros
-                </button>
-            </div>
-        </div>
-        
-        <!-- Results Count -->
-        <div class="filters-results">
-            <span id="results-count">Mostrando 6 planes</span>
-            <span class="results-label">de 6 disponibles</span>
         </div>
     </section>
 
@@ -532,40 +473,6 @@
                 <div class="trust-badge-mini">
                     <i class="fas fa-heartbeat"></i>
                     <span>Asistencia Médica</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="filtros-enhanced">
-            <div class="filtros-header-enhanced">
-                <h3><i class="fas fa-filter"></i> Filtra tu experiencia ideal</h3>
-                <button class="btn-reset-enhanced" id="select-todos">
-                    <i class="fas fa-redo"></i> Ver todos
-                </button>
-            </div>
-
-            <div class="filter-group-enhanced">
-                <label class="filter-label-enhanced"><i class="fas fa-clock"></i> Por duración:</label>
-                <div class="filter-pills-enhanced duracion">
-                    <button class="pill-enhanced active" data-filter="all">Todos</button>
-                    <button class="pill-enhanced" data-filter="2d">2 Días</button>
-                    <button class="pill-enhanced" data-filter="3d">3 Días</button>
-                    <button class="pill-enhanced" data-filter="4d">4 Días</button>
-                    <button class="pill-enhanced" data-filter="5d">5 Días</button>
-                </div>
-            </div>
-
-            <div class="filter-group-enhanced">
-                <label class="filter-label-enhanced"><i class="fas fa-map-marker-alt"></i> Por atractivo turístico:</label>
-                <div class="filter-pills-enhanced atractivos">
-                    <button class="pill-enhanced" data-filter="Parque del Café">Parque del Café</button>
-                    <button class="pill-enhanced" data-filter="PANACA">PANACA</button>
-                    <button class="pill-enhanced" data-filter="Valle de Cocora">Valle de Cocora</button>
-                    <button class="pill-enhanced" data-filter="Salento">Salento</button>
-                    <button class="pill-enhanced" data-filter="Filandia">Filandia</button>
-                    <button class="pill-enhanced" data-filter="Termales Santa Rosa">Termales</button>
-                    <button class="pill-enhanced" data-filter="RECUCA">RECUCA</button>
-                    <button class="pill-enhanced" data-filter="Quinti Patas Arriba">Quinti Patas Arriba</button>
                 </div>
             </div>
         </div>
@@ -768,22 +675,9 @@ Deseo *reservar y confirmar* la siguiente cotización:
             }
         }
 
-        // Convertir botones de atractivos en enlaces a detalles
-        function configurarBotonesAtractivos() {
-            const botonesAtractivos = document.querySelectorAll('.filter-pills-enhanced.atractivos .pill-enhanced');
-            botonesAtractivos.forEach(boton => {
-                boton.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const atractivo = this.getAttribute('data-filter');
-                    window.location.href = `planes.html?destino=${encodeURIComponent(atractivo)}`;
-                });
-            });
-        }
-
         // Ejecutar cuando el DOM esté listo
         document.addEventListener('DOMContentLoaded', function() {
             mostrarDetalleAtractivo();
-            configurarBotonesAtractivos();
         });
 
         const originalActualizarUI = window.setInterval ? null : null;
@@ -824,124 +718,6 @@ Deseo *reservar y confirmar* la siguiente cotización:
     <script src="assets/js/planes-data.js"></script>
     <script src="assets/js/cotizador.js"></script>
 
-    <script>
-    function filterPlans() {
-        const typeFilter = document.getElementById('filter-type').value;
-        const durationFilter = document.getElementById('filter-duration').value;
-        const priceFilter = document.getElementById('filter-price').value;
-        const capacityFilter = document.getElementById('filter-capacity').value;
-        const transportFilter = document.getElementById('filter-transport').value;
-        const attractionFilter = document.getElementById('filter-attraction').value;
-        
-        // Get all plan cards
-        const planCards = document.querySelectorAll('.plan-card');
-        let visibleCount = 0;
-        
-        planCards.forEach(card => {
-            let isVisible = true;
-            
-            // Apply filters (simplified logic - should be enhanced with actual data attributes)
-            if (typeFilter !== 'all' && !card.dataset.type?.includes(typeFilter)) {
-                isVisible = false;
-            }
-            
-            if (durationFilter !== 'all' && !card.dataset.duration?.includes(durationFilter)) {
-                isVisible = false;
-            }
-            
-            if (priceFilter !== 'all' && !card.dataset.price?.includes(priceFilter)) {
-                isVisible = false;
-            }
-            
-            if (capacityFilter !== 'all' && !card.dataset.capacity?.includes(capacityFilter)) {
-                isVisible = false;
-            }
-            
-            if (transportFilter !== 'all' && !card.dataset.transport?.includes(transportFilter)) {
-                isVisible = false;
-            }
-            
-            if (attractionFilter !== 'all' && !card.dataset.attraction?.includes(attractionFilter)) {
-                isVisible = false;
-            }
-            
-            card.style.display = isVisible ? 'block' : 'none';
-            if (isVisible) visibleCount++;
-        });
-        
-        // Update results count
-        document.getElementById('results-count').textContent = `Mostrando ${visibleCount} planes`;
-    }
-    
-    function resetFilters() {
-        document.getElementById('filter-type').value = 'all';
-        document.getElementById('filter-duration').value = 'all';
-        document.getElementById('filter-price').value = 'all';
-        document.getElementById('filter-capacity').value = 'all';
-        document.getElementById('filter-transport').value = 'all';
-        document.getElementById('filter-attraction').value = 'all';
-        filterPlans();
-    }
-    </script>
-
-    <script>
-    function filterPlans() {
-        const typeFilter = document.getElementById('filter-type').value;
-        const durationFilter = document.getElementById('filter-duration').value;
-        const priceFilter = document.getElementById('filter-price').value;
-        const capacityFilter = document.getElementById('filter-capacity').value;
-        const transportFilter = document.getElementById('filter-transport').value;
-        const attractionFilter = document.getElementById('filter-attraction').value;
-        
-        // Get all plan cards
-        const planCards = document.querySelectorAll('.plan-card');
-        let visibleCount = 0;
-        
-        planCards.forEach(card => {
-            let isVisible = true;
-            
-            // Apply filters (simplified logic - should be enhanced with actual data attributes)
-            if (typeFilter !== 'all' && !card.dataset.type?.includes(typeFilter)) {
-                isVisible = false;
-            }
-            
-            if (durationFilter !== 'all' && !card.dataset.duration?.includes(durationFilter)) {
-                isVisible = false;
-            }
-            
-            if (priceFilter !== 'all' && !card.dataset.price?.includes(priceFilter)) {
-                isVisible = false;
-            }
-            
-            if (capacityFilter !== 'all' && !card.dataset.capacity?.includes(capacityFilter)) {
-                isVisible = false;
-            }
-            
-            if (transportFilter !== 'all' && !card.dataset.transport?.includes(transportFilter)) {
-                isVisible = false;
-            }
-            
-            if (attractionFilter !== 'all' && !card.dataset.attraction?.includes(attractionFilter)) {
-                isVisible = false;
-            }
-            
-            card.style.display = isVisible ? 'block' : 'none';
-            if (isVisible) visibleCount++;
-        });
-        
-        // Update results count
-        document.getElementById('results-count').textContent = `Mostrando ${visibleCount} planes`;
-    }
-    
-    function resetFilters() {
-        document.getElementById('filter-type').value = 'all';
-        document.getElementById('filter-duration').value = 'all';
-        document.getElementById('filter-price').value = 'all';
-        document.getElementById('filter-capacity').value = 'all';
-        document.getElementById('filter-transport').value = 'all';
-        document.getElementById('filter-attraction').value = 'all';
-        filterPlans();
-    }
     </script>
 </body>
 </html>

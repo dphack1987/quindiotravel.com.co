@@ -950,7 +950,7 @@ body {
 
 .btn-whatsapp-hero {
     background: #25D366;
-    color: white;
+    color: #FFFFFF;
     padding: 18px 40px;
     border-radius: 30px;
     text-decoration: none;
@@ -967,11 +967,12 @@ body {
 .btn-whatsapp-hero:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    color: #FFFFFF;
 }
 
 .btn-green-hero {
     background: var(--verde-cafe);
-    color: white;
+    color: #FFFFFF;
     padding: 18px 40px;
     border-radius: 30px;
     text-decoration: none;
@@ -1017,31 +1018,36 @@ body {
 
 .btn-green {
     background-color: var(--verde-claro);
-    color: var(--blanco);
+    color: #FFFFFF;
+    font-weight: 600;
 }
 
 .btn-green:hover {
     background-color: var(--verde-cafe);
+    color: #FFFFFF;
 }
 
 .btn-whatsapp {
     background-color: #25D366;
-    color: var(--blanco);
+    color: #FFFFFF;
+    font-weight: 600;
 }
 
 .btn-whatsapp:hover {
     background-color: #1EBE5D;
+    color: #FFFFFF;
 }
 
 .btn-outline {
     background-color: transparent;
     border: 2px solid var(--blanco);
-    color: var(--blanco);
+    color: #FFFFFF;
+    font-weight: 600;
 }
 
 .btn-outline:hover {
     background-color: var(--blanco);
-    color: var(--texto-oscuro);
+    color: #1a1a1a;
 }
 
 /* Buscador Rápido */
@@ -1303,10 +1309,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    font-weight: 600;
 }
 .btn-outline-green:hover {
     background-color: var(--verde-cafe);
-    color: var(--blanco);
+    color: #FFFFFF;
 }
 
 .btn-block {
@@ -1627,7 +1634,7 @@ body {
 
 .btn-whatsapp-plan {
     background: #25D366;
-    color: white;
+    color: #FFFFFF;
     padding: 12px 20px;
     border-radius: 25px;
     text-decoration: none;
@@ -1645,11 +1652,12 @@ body {
 .btn-whatsapp-plan:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    color: #FFFFFF;
 }
 
 .btn-green-plan {
     background: var(--verde-cafe);
-    color: white;
+    color: #FFFFFF;
     padding: 12px 20px;
     border-radius: 25px;
     text-decoration: none;
@@ -1667,6 +1675,7 @@ body {
 .btn-green-plan:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(46, 90, 54, 0.4);
+    color: #FFFFFF;
 }
 
 /* ============================================================
@@ -2601,7 +2610,7 @@ body {
 
 .btn-promo {
     background: linear-gradient(135deg, #23c85b 0%, #139f46 100%);
-    color: white;
+    color: #FFFFFF;
     padding: 16px 30px;
     border-radius: 16px;
     text-decoration: none;
@@ -2618,6 +2627,7 @@ body {
 .btn-promo:hover {
     transform: translateY(-3px);
     box-shadow: 0 20px 34px rgba(26, 157, 69, 0.34);
+    color: #FFFFFF;
 }
 
 .btn-outline-promo {
@@ -2638,7 +2648,7 @@ body {
 
 .btn-outline-promo:hover {
     background: var(--verde-cafe);
-    color: white;
+    color: #FFFFFF;
 }
 
 .promo-urgency {
