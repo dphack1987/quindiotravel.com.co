@@ -1,4 +1,5 @@
 // Sistema de detección y selección de idioma - Quindío Travel
+// Updated: 2026-08-05 - Added fallback for header-actions and French language support
 
 const translations = {
     es: {
