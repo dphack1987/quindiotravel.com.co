@@ -1055,6 +1055,81 @@ body {
     color: #1a1a1a;
 }
 
+.btn-origin-select {
+    background: var(--blanco);
+    color: var(--azul-profundo);
+    border: 2px solid rgba(46, 90, 54, 0.18);
+    padding: 0.9rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn-origin-select:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(46, 90, 54, 0.12);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.btn-generate-plan {
+    background: var(--blanco);
+    color: var(--azul-profundo);
+    border: 2px solid rgba(46, 90, 54, 0.18);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-generate-plan:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.btn-cta,
+.btn-review-cta,
+.btn-ver-mas {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #2E5A36, #4CAF50);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn-cta:hover,
+.btn-review-cta:hover,
+.btn-ver-mas:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(46, 90, 54, 0.2);
+    background: linear-gradient(135deg, #20512c, #3c8a3f);
+}
+
+.btn-google-review {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1a1a1a;
+    background: #fbbc05;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn-google-review:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    background: #e0a307;
+}
+
 /* Buscador Rápido */
 .search-section {
     margin-top: -40px;
@@ -5201,21 +5276,6 @@ body {
         min-height: 44px; /* Tamaño mínimo para touch-friendly */
     }
     
-    .btn-whatsapp {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-    }
-    
     .form input, .form select, .form textarea {
         font-size: 16px; /* Evita zoom automático en iOS */
         padding: 12px;
@@ -7063,6 +7123,129 @@ body {
     .hotel-info .info-description,
     .hotel-info .info-services {
         padding: 22px;
+    }
+}
+
+/* ============================================================
+   HERO VISUAL FIX
+   ============================================================ */
+.hero {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 60vh !important;
+    max-height: 720px !important;
+    width: 100%;
+    overflow: hidden !important;
+    text-align: center !important;
+    color: var(--blanco) !important;
+    padding: 2rem 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top left, rgba(244, 211, 94, 0.18), transparent 28%),
+        radial-gradient(circle at right center, rgba(78, 135, 85, 0.24), transparent 22%),
+        linear-gradient(180deg, rgba(8, 14, 11, 0.08) 0%, rgba(8, 14, 11, 0.14) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 16, 12, 0.38) 0%, rgba(10, 16, 12, 0.62) 100%);
+    z-index: 2;
+}
+
+.hero img.hero-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero > img.content-image,
+.hero > img:not(.hero-bg-img) {
+    display: none !important;
+}
+
+.hero-content {
+    position: relative !important;
+    z-index: 3 !important;
+    max-width: 980px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.hero-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    flex-wrap: wrap !important;
+    margin-top: 1.2rem !important;
+    z-index: 3 !important;
+}
+
+.hero-buttons .btn {
+    min-height: 50px !important;
+}
+
+@media (max-width: 992px) {
+    .hero {
+        min-height: 55vh !important;
+        max-height: 650px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 66vh !important;
+        padding: 40px 0 60px !important;
+    }
+    .hero-content {
+        padding: 0 18px !important;
+    }
+    .hero-buttons {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .hero-buttons .btn,
+    .btn-whatsapp-hero,
+    .btn-green-hero,
+    .btn-whatsapp,
+    .btn-green,
+    .btn-outline {
+        width: 100% !important;
+        max-width: 420px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 60vh !important;
+    }
+    .hero-content h1 {
+        font-size: 1.7rem !important;
+    }
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+    .hero-buttons {
+        gap: 12px !important;
     }
 }
 
