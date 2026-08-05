@@ -3310,7 +3310,7 @@
     </nav>
 
     <section class="hero" aria-label="Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia">
-        <img class="hero-bg-img" src="assets/images/paisajes/valle-cocora-hero-banner.jpg" alt="Valle del Cocora Quindío, palma de cera y paisajes del Eje Cafetero" loading="eager" fetchpriority="high">
+        <img id="hero-bg-img" class="hero-bg-img" src="assets/images/paisajes/valle-cocora-hero-banner.jpg" alt="Valle del Cocora Quindío, palma de cera y paisajes del Eje Cafetero" loading="eager" fetchpriority="high">
         <div class="hero-overlay"></div>
         <div class="hero-content container">
             <div class="hero-trust-badges">
@@ -3418,6 +3418,24 @@
                         <label class="accommodation-item"><input type="radio" name="accommodation" value="intermedio">⭐⭐⭐ Intermedio</label>
                         <label class="accommodation-item"><input type="radio" name="accommodation" value="vip">⭐⭐⭐⭐⭐ VIP</label>
                     </div>
+                </div>
+                
+                <div class="flexible-step-card">
+                    <div class="step-icon">👥</div>
+                    <h3 class="step-title">Número de Personas</h3>
+                    <div class="people-input-clean">
+                        <input type="number" id="custom-plan-personas" min="1" max="20" value="2" style="width:100%; padding: 12px 14px; border-radius: 10px; border: 2px solid #e0e0e0; background: white; color: #333; font-size: 0.95rem;" />
+                        <small style="display:block; margin-top:8px; color:#f0f0f0; font-size:0.85rem;">Indica cuántas personas viajan</small>
+                    </div>
+                </div>
+                <div class="flexible-step-card">
+                    <div class="step-icon">🚐</div>
+                    <h3 class="step-title">Transporte</h3>
+                    <div class="accommodation-options-clean">
+                        <label class="accommodation-item"><input type="radio" name="transport" value="Sin transporte" checked>❌ Sin transporte</label>
+                        <label class="accommodation-item"><input type="radio" name="transport" value="Con transporte">🚍 Con transporte</label>
+                    </div>
+                    <small style="display:block; margin-top:8px; color:#f0f0f0; font-size:0.85rem;">Elige si deseas transporte incluido</small>
                 </div>
             </div>
             
@@ -5861,16 +5879,20 @@
         
         const duration = document.querySelector('input[name="duration"]:checked')?.value;
         const accommodation = document.querySelector('input[name="accommodation"]:checked')?.value;
+        const personas = document.getElementById('custom-plan-personas')?.value;
+        const transport = document.querySelector('input[name="transport"]:checked')?.value;
         
-        if (selectedAttractions.length === 0 || !duration || !accommodation) {
-            alert('Por favor selecciona al menos un atractivo, duración y categoría de alojamiento.');
+        if (selectedAttractions.length === 0 || !duration || !accommodation || !personas || !transport) {
+            alert('Por favor selecciona al menos un atractivo, duración, categoría de alojamiento, tipo de transporte y número de personas.');
             return;
         }
         
         const message = `Hola Quindío Travel, quiero armar mi propio plan personalizado:\n\n` +
             `🎯 Atractivos: ${selectedAttractions.join(', ')}\n` +
             `📅 Duración: ${duration}\n` +
-            `🏨 Alojamiento: ${accommodation}\n\n` +
+            `🏨 Alojamiento: ${accommodation}\n` +
+            `👥 Personas: ${personas}\n` +
+            `🚍 Transporte: ${transport}\n\n` +
             `¿Podrían cotizarme este plan personalizado?`;
         
         const whatsappUrl = `https://wa.me/573174426044?text=${encodeURIComponent(message)}`;
@@ -5882,6 +5904,38 @@
         const whatsappUrl = `https://wa.me/573174426044?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     }
+    
+    const heroImages = [
+        {
+            src: 'assets/images/paisajes/valle-cocora-hero-banner.jpg',
+            alt: 'Valle de Cocora, palma de cera y paisajes del Eje Cafetero'
+        },
+        {
+            src: 'assets/images/paisajes/palm-trees-misty-valley.jpg',
+            alt: 'Paisaje neblinoso del Quindío con palmas de cera'
+        },
+        {
+            src: 'assets/images/paisajes/filandia-colonial-architecture.jfif',
+            alt: 'Filandia con arquitectura colonial colorida'
+        },
+        {
+            src: 'assets/images/paisajes/eje-cafetero-green-mountains.jpg',
+            alt: 'Montañas verdes del Eje Cafetero'
+        }
+    ];
+    let heroIndex = 0;
+    
+    function rotateHeroImages() {
+        heroIndex = (heroIndex + 1) % heroImages.length;
+        const heroImg = document.getElementById('hero-bg-img');
+        if (!heroImg) return;
+        heroImg.src = heroImages[heroIndex].src;
+        heroImg.alt = heroImages[heroIndex].alt;
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        setInterval(rotateHeroImages, 5500);
+    });
     </script>
 
 
