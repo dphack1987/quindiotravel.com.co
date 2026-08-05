@@ -1003,4 +1003,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://quindiotravel.com.co/promo-agosto-2026.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
