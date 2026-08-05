@@ -1237,14 +1237,14 @@
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
     
     <!-- Performance Optimizer -->
-    <script src="assets/js/performance-optimizer.min.js" defer></script>
-    <script src="assets/js/language-detector.min.js" defer></script>
+    <script src="assets/js/performance-optimizer.js" defer></script>
+    <script src="assets/js/language-detector.js" defer></script>
     
     <!-- WhatsApp Template Handler -->
     <script src="assets/js/whatsapp-template-handler.js" defer></script>
     
     <!-- WhatsApp Payload Builder -->
-    <script src="assets/js/whatsapp-payload-builder.min.js" defer></script>
+    <script src="assets/js/whatsapp-payload-builder.js" defer></script>
     
     <!-- Countdown Urgency Timer -->
     <script src="assets/js/countdown-urgency.js" defer></script>
@@ -3269,6 +3269,15 @@
                 </ul>
             </nav>
             <div class="header-actions">
+                <!-- Language Selector -->
+                <div class="language-selector-container" style="margin-right: 15px; display: inline-block;">
+                    <select id="language-selector" class="language-selector" aria-label="Seleccionar idioma / Select language" style="padding: 8px 12px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); color: white; font-size: 14px; cursor: pointer; backdrop-filter: blur(10px);">
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="pt">🇧🇷 Português</option>
+                        <option value="fr">🇫🇷 Français</option>
+                    </select>
+                </div>
                 <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
                     <i class="fas fa-bars"></i>
                 </button>

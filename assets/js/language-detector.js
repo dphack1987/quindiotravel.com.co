@@ -232,9 +232,17 @@ function initLanguageSystem() {
 
 // Crear selector de idioma en el header
 function createLanguageSelector() {
-    // Evitar duplicados
+    // Si ya existe en el HTML, no crear uno nuevo
     if (document.getElementById('language-selector')) {
-        console.log('Language selector already exists');
+        console.log('Language selector already exists in HTML');
+        // Agregar event listener si no existe
+        const selector = document.getElementById('language-selector');
+        if (!selector.hasAttribute('data-initialized')) {
+            selector.addEventListener('change', function() {
+                setLanguage(this.value);
+            });
+            selector.setAttribute('data-initialized', 'true');
+        }
         return;
     }
     
