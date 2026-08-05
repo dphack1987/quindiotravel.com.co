@@ -232,22 +232,9 @@ function initLanguageSystem() {
 
 // Crear selector de idioma en el header
 function createLanguageSelector() {
-    const headerActions = document.querySelector('.header-actions');
-    if (!headerActions) {
-        console.log('header-actions not found, trying alternative method');
-        // Try to find header and append there
-        const header = document.querySelector('.main-header');
-        if (header) {
-            const navContainer = header.querySelector('.nav-container, .container');
-            if (navContainer) {
-                createLanguageSelectorInContainer(navContainer);
-                return;
-            }
-        }
-        return;
-    }
-    
+    // Evitar duplicados
     if (document.getElementById('language-selector')) {
+        console.log('Language selector already exists');
         return;
     }
     
@@ -255,8 +242,9 @@ function createLanguageSelector() {
     
     const selectorContainer = document.createElement('div');
     selectorContainer.className = 'language-selector-container';
+    selectorContainer.style.cssText = 'margin-right: 15px; display: inline-block;';
     selectorContainer.innerHTML = `
-        <select id="language-selector" class="language-selector" aria-label="Seleccionar idioma / Select language">
+        <select id="language-selector" class="language-selector" aria-label="Seleccionar idioma / Select language" style="padding: 8px 12px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); color: white; font-size: 14px; cursor: pointer; backdrop-filter: blur(10px);">
             <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 Español</option>
             <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 English</option>
             <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 Português</option>
@@ -268,15 +256,63 @@ function createLanguageSelector() {
         setLanguage(this.value);
     });
     
-    // Insertar antes del botón hamburguesa para mejor UX móvil
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    if (hamburgerBtn && window.innerWidth <= 768) {
-        headerActions.insertBefore(selectorContainer, hamburgerBtn);
-    } else {
-        headerActions.insertBefore(selectorContainer, headerActions.firstChild);
+    // Intentar múltiples estrategias de inserción
+    const strategies = [
+        () => {
+            const headerActions = document.querySelector('.header-actions');
+            if (headerActions) {
+                const hamburgerBtn = document.getElementById('hamburger-btn');
+                if (hamburgerBtn && window.innerWidth <= 768) {
+                    headerActions.insertBefore(selectorContainer, hamburgerBtn);
+                } else {
+                    headerActions.insertBefore(selectorContainer, headerActions.firstChild);
+                }
+                return true;
+            }
+            return false;
+        },
+        () => {
+            const header = document.querySelector('.main-header');
+            if (header) {
+                const navContainer = header.querySelector('.nav-container, .container');
+                if (navContainer) {
+                    navContainer.insertBefore(selectorContainer, navContainer.firstChild);
+                    return true;
+                }
+            }
+            return false;
+        },
+        () => {
+            const nav = document.querySelector('.main-nav');
+            if (nav) {
+                nav.parentElement.insertBefore(selectorContainer, nav);
+                return true;
+            }
+            return false;
+        },
+        () => {
+            const body = document.body;
+            if (body) {
+                body.prepend(selectorContainer);
+                selectorContainer.style.position = 'fixed';
+                selectorContainer.style.top = '20px';
+                selectorContainer.style.right = '20px';
+                selectorContainer.style.zIndex = '9999';
+                return true;
+            }
+            return false;
+        }
+    ];
+    
+    // Intentar cada estrategia hasta que una funcione
+    for (const strategy of strategies) {
+        if (strategy()) {
+            console.log('Language selector created successfully');
+            return;
+        }
     }
     
-    console.log('Language selector created successfully');
+    console.error('Failed to create language selector');
 }
 
 function createLanguageSelectorInContainer(container) {
