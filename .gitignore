@@ -20,6 +20,12 @@ wheels/
 .installed.cfg
 *.egg
 
+# Maintenance scripts
+add_*.py
+process_*.py
+clean_*.py
+simple_*.py
+
 # Virtual environments
 venv/
 ENV/
