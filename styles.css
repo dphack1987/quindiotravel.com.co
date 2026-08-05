@@ -33,6 +33,9 @@
 }
 
 #urgency-banner {
+    position: relative;
+    top: auto;
+    z-index: 999;
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: 0 14px 26px rgba(126, 23, 18, 0.18) !important;
@@ -258,7 +261,7 @@
 }
 
 .search-section {
-    margin-top: -58px;
+    margin-top: 30px;
     margin-bottom: 72px;
 }
 
@@ -4136,6 +4139,47 @@ body {
 .cotizador-select-enhanced:focus {
     outline: none;
     border-color: var(--verde-cafe);
+}
+
+.destinos-checkbox-list {
+    display: grid;
+    gap: 10px;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background: var(--blanco);
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.destinos-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--texto-oscuro);
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.destinos-checkbox:hover {
+    background: #f6f8f7;
+    transform: translateX(2px);
+}
+
+.destinos-checkbox input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--verde-cafe);
+}
+
+.destinos-hint {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #666;
 }
 
 .cotizador-results-enhanced {

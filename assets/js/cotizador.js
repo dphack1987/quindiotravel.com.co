@@ -70,10 +70,15 @@ function actualizarUI() {
   // Obtener destinos seleccionados si el elemento existe
   let destinosSeleccionados = [];
   if (selectDestinos) {
-    for (let i = 0; i < selectDestinos.options.length; i++) {
-      if (selectDestinos.options[i].selected) {
-        destinosSeleccionados.push(selectDestinos.options[i].value);
+    if (selectDestinos.tagName === 'SELECT') {
+      for (let i = 0; i < selectDestinos.options.length; i++) {
+        if (selectDestinos.options[i].selected) {
+          destinosSeleccionados.push(selectDestinos.options[i].value);
+        }
       }
+    } else {
+      const checks = selectDestinos.querySelectorAll('input[type="checkbox"]:checked');
+      checks.forEach(check => destinosSeleccionados.push(check.value));
     }
   }
 
