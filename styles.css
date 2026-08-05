@@ -315,10 +315,12 @@
 
 .section-white {
     background: linear-gradient(180deg, #ffffff 0%, #fbfcfb 100%);
+    color: var(--texto-oscuro);
 }
 
 .section-gray {
     background: linear-gradient(180deg, #f3f6f3 0%, #eef3ef 100%);
+    color: var(--texto-oscuro);
 }
 
 .section-title {
@@ -2115,6 +2117,7 @@ body {
     border: 1px solid rgba(46, 90, 54, 0.08);
     border-top: 4px solid var(--verde-cafe);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--texto-oscuro);
 }
 .testimonial-card:hover {
     transform: translateY(-6px);
@@ -2713,6 +2716,7 @@ body {
     border-radius: 18px;
     border: 1px solid rgba(46, 90, 54, 0.1);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    color: var(--texto-oscuro);
 }
 
 .accommodation-card h5 {
@@ -3549,6 +3553,7 @@ body {
     border: 1px solid rgba(46, 90, 54, 0.08);
     border-top: 3px solid var(--amarillo-suave);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    color: var(--texto-oscuro);
 }
 .stat-card:hover {
     transform: translateY(-4px);
@@ -4158,6 +4163,7 @@ body {
     background: linear-gradient(135deg, #f8f9fa, #ffffff);
     padding: 25px 30px;
     border-top: 1px solid #e0e0e0;
+    color: var(--texto-oscuro);
 }
 
 .result-card-enhanced {
@@ -4608,6 +4614,7 @@ body {
     padding: 15px;
     border-radius: 12px;
     border: 1px solid #e0e0e0;
+    color: var(--texto-oscuro);
 }
 
 .price-item-enhanced {
@@ -6379,6 +6386,7 @@ body {
 
 .reservas-form-container {
     background: linear-gradient(180deg, #ffffff 0%, #f9f9f7 100%);
+    color: var(--texto-oscuro);
 }
 
 .reservas-info {
@@ -6460,6 +6468,7 @@ body {
 
 .reservas-form-container {
     background: linear-gradient(180deg, #ffffff 0%, #fbfcfb 100%);
+    color: var(--texto-oscuro);
 }
 
 .reservas-info {
