@@ -3,7 +3,7 @@
    ========================================================================== */
 
 // Cargar tarifas desde docs/data/tarifas.json
-fetch('/docs/data/tarifas.json')
+fetch('docs/data/tarifas.json')
     .then(response => response.json())
     .then(data => {
         window.QUINDIO_TRAVEL_DATA = data;
