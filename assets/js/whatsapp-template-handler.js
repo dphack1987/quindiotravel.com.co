@@ -1,0 +1,66 @@
+/**
+ * WhatsApp Template Handler
+ * Sistema para manejar botones con data-wa-template
+ */
+
+(function() {
+    'use strict';
+
+    const phoneNumber = '573174426044';
+    const baseUrl = 'https://wa.me/';
+
+    // Plantillas de mensajes
+    const templates = {
+        header_contacto: 'Hola%20Quindío%20Travel,%20quiero%20información%20sobre%20sus%20planes%20turísticos',
+        urgency_reservar: '¡Hola!%20Quiero%20reservar%20uno%20de%20los%20últimos%20cupos%20disponibles%20para%20esta%20semana',
+        hero_reservar: 'Hola%20Quindío%20Travel,%20quiero%20reservar%20un%20plan%20turístico%20del%20Eje%20Cafetero',
+        review: 'Hola%20Quindío%20Travel,%20quiero%20dejar%20una%20review%20de%20su%20servicio',
+        footer_contacto: 'Hola%20Quindío%20Travel,%20tengo%20preguntas%20sobre%20sus%20planes%20turísticos'
+    };
+
+    function getWhatsAppMessage(templateName) {
+        return templates[templateName] || 'Hola%20Quindío%20Travel,%20quiero%20información%20sobre%20planes%20turísticos';
+    }
+
+    function handleWhatsAppClick(e) {
+        const link = e.target.closest('[data-wa-template]');
+        if (!link) return;
+
+        const template = link.getAttribute('data-wa-template');
+        const message = getWhatsAppMessage(template);
+        const whatsappUrl = `${baseUrl}${phoneNumber}?text=${message}`;
+
+        link.setAttribute('href', whatsappUrl);
+        
+        // Tracking opcional
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'whatsapp_click', {
+                'event_category': 'engagement',
+                'event_label': template
+            });
+        }
+    }
+
+    function init() {
+        // Encontrar todos los botones con data-wa-template
+        const whatsappButtons = document.querySelectorAll('[data-wa-template]');
+        
+        whatsappButtons.forEach(button => {
+            // Remover preventDefault para permitir navegación normal
+            button.addEventListener('click', handleWhatsAppClick);
+            
+            // Establecer href inicial
+            const template = button.getAttribute('data-wa-template');
+            const message = getWhatsAppMessage(template);
+            button.setAttribute('href', `${baseUrl}${phoneNumber}?text=${message}`);
+        });
+    }
+
+    // Inicializar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+})();
