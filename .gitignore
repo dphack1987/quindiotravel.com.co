@@ -58,6 +58,13 @@ verification_report.txt
 scan_nav_results.txt
 scan_navigation_broad.txt
 
+# Screenshots and images for debugging
+capturas/
+*.png
+*.jpg
+*.jpeg
+*.webp
+
 # Node modules (if added later)
 node_modules/
 
