@@ -140,7 +140,7 @@ const planesData = [
     categoria: "Premium",
     badge: "VIP",
     detalleUrl: "planes.html",
-    descripcion: "Experiencia premium con alojamientos VIP, transporte exclusivo placa blanca, guías bilingües y acceso prioritario a atractivos. Incluye experiencias exclusivas.",
+    descripcion: "Experiencia premium con alojamientos VIP, transporte exclusivo placa blanca, asistencia bilingüe y acceso prioritario a atractivos. Incluye experiencias exclusivas.",
     resumenPrograma: [
       "Día 1: Llegada VIP, check-in en hotel 5 estrellas",
       "Día 2: Parque del Café con acceso prioritario",
