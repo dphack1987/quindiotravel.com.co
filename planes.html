@@ -365,10 +365,11 @@
                     </div>
                     <div class="cotizador-field-content">
                         <label for="select-hotel">Alojamiento</label>
-                        <select id="select-hotel" class="cotizador-select-enhanced">
-                            <option value="cabanas-la-esmeralda">Cabañas La Esmeralda (Intermedia)</option>
-                            <option value="finca-hotel-los-girasoles" selected>Finca Hotel Los Girasoles (Intermedia VIP)</option>
-                            <option value="hotel-campestre-cafe-cafe">Hotel Campestre Café Café (Intermedia VIP)</option>
+                        <select id="select-categoria" class="cotizador-select-enhanced">
+                            <option value="economica">Económica (Dorada, De La Vega)</option>
+                            <option value="intermedia">Intermedia (Cabañas La Esmeralda)</option>
+                            <option value="intermedia_vip" selected>Intermedia VIP (Los Girasoles, Café Café)</option>
+                            <option value="vip">VIP (Las Camelias)</option>
                         </select>
                     </div>
                 </div>
@@ -538,15 +539,16 @@
             placa_blanca: "Vehículo Placa Blanca (VIP)"
         };
         const hotelLabelMap = {
-            "cabanas-la-esmeralda": "Cabañas La Esmeralda (Intermedia)",
-            "finca-hotel-los-girasoles": "Finca Hotel Los Girasoles (Intermedia VIP)",
-            "hotel-campestre-cafe-cafe": "Hotel Campestre Café Café (Intermedia VIP)"
+            "economica": "Económica (Dorada, De La Vega)",
+            "intermedia": "Intermedia (Cabañas La Esmeralda)",
+            "intermedia_vip": "Intermedia VIP (Los Girasoles, Café Café)",
+            "vip": "VIP (Las Camelias)"
         };
 
         function actualizarBotonWhatsAppCotizador() {
             const selT = document.getElementById('select-temporada');
             const selTr = document.getElementById('select-transporte');
-            const selH = document.getElementById('select-hotel');
+            const selH = document.getElementById('select-categoria');
             const selP = document.getElementById('select-pax');
             const btn = document.getElementById('cotizador-whatsapp-btn');
             const dispTotal = document.getElementById('precio-total').innerText;

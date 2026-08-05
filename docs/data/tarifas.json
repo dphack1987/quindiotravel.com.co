@@ -1,30 +1,30 @@
 {
   "tarifasPlan4D3N": {
     "sin_transporte": {
-      "economica": { "pax2": 615000, "pax3": 570000, "pax4": 570000 },
-      "intermedia": { "pax2": 667000, "pax3": 640000, "pax4": 615000 },
-      "intermedia_vip": { "pax2": 1235000, "pax3": 1085000, "pax4": 1000000 },
-      "vip": { "pax2": 2805000, "pax3": 2505000, "pax4": 2305000 }
+      "economica": { "pax1": 450000, "pax2": 425000, "pax3": 385000, "pax4": 345000, "pax5": 320000, "pax6": 300000, "pax7": 280000, "pax8": 265000, "pax9": 250000, "pax10": 240000 },
+      "intermedia": { "pax1": 500000, "pax2": 475000, "pax3": 435000, "pax4": 395000, "pax5": 370000, "pax6": 350000, "pax7": 330000, "pax8": 315000, "pax9": 300000, "pax10": 290000 },
+      "intermedia_vip": { "pax1": 620000, "pax2": 590000, "pax3": 540000, "pax4": 490000, "pax5": 460000, "pax6": 440000, "pax7": 420000, "pax8": 405000, "pax9": 390000, "pax10": 380000 },
+      "vip": { "pax1": 850000, "pax2": 820000, "pax3": 750000, "pax4": 680000, "pax5": 640000, "pax6": 610000, "pax7": 590000, "pax8": 570000, "pax9": 550000, "pax10": 540000 }
     },
     "radio_taxi": {
-      "economica": { "pax2": 1495000, "pax3": 1150000, "pax4": 995000 },
-      "intermedia": { "pax2": 1547000, "pax3": 1218000, "pax4": 1020000 },
-      "intermedia_vip": { "pax2": 1935000, "pax3": 1580000, "pax4": 1405000 },
-      "vip": { "pax2": 3505000, "pax3": 3000000, "pax4": 2700000 }
+      "economica": { "pax1": 650000, "pax2": 625000, "pax3": 585000, "pax4": 545000, "pax5": 520000, "pax6": 500000, "pax7": 480000, "pax8": 465000, "pax9": 450000, "pax10": 440000 },
+      "intermedia": { "pax1": 700000, "pax2": 675000, "pax3": 635000, "pax4": 595000, "pax5": 570000, "pax6": 550000, "pax7": 530000, "pax8": 515000, "pax9": 500000, "pax10": 490000 },
+      "intermedia_vip": { "pax1": 820000, "pax2": 790000, "pax3": 740000, "pax4": 690000, "pax5": 660000, "pax6": 640000, "pax7": 620000, "pax8": 605000, "pax9": 590000, "pax10": 580000 },
+      "vip": { "pax1": 1050000, "pax2": 1020000, "pax3": 950000, "pax4": 880000, "pax5": 840000, "pax6": 810000, "pax7": 790000, "pax8": 770000, "pax9": 750000, "pax10": 740000 }
     },
     "placa_blanca": {
-      "economica": { "pax2": 1520000, "pax3": 1170000, "pax4": 1050000 },
-      "intermedia": { "pax2": 1570000, "pax3": 1235000, "pax4": 1150000 },
-      "intermedia_vip": { "pax2": 1985000, "pax3": 1650000, "pax4": 1530000 },
-      "vip": { "pax2": 3600000, "pax3": 3100000, "pax4": 2900000 }
+      "economica": { "pax1": 700000, "pax2": 675000, "pax3": 635000, "pax4": 595000, "pax5": 570000, "pax6": 550000, "pax7": 530000, "pax8": 515000, "pax9": 500000, "pax10": 490000 },
+      "intermedia": { "pax1": 750000, "pax2": 725000, "pax3": 685000, "pax4": 645000, "pax5": 620000, "pax6": 600000, "pax7": 580000, "pax8": 565000, "pax9": 550000, "pax10": 540000 },
+      "intermedia_vip": { "pax1": 870000, "pax2": 840000, "pax3": 790000, "pax4": 740000, "pax5": 710000, "pax6": 690000, "pax7": 670000, "pax8": 655000, "pax9": 640000, "pax10": 630000 },
+      "vip": { "pax1": 1100000, "pax2": 1070000, "pax3": 1000000, "pax4": 930000, "pax5": 890000, "pax6": 860000, "pax7": 840000, "pax8": 820000, "pax9": 800000, "pax10": 790000 }
     }
   },
   "categorias": {
-    "economica": ["quinta-del-cafe", "finca-hotel-dorada"],
-    "intermedia": ["cabanas-la-esmeralda", "los-aperos"],
-    "intermedia_vip": ["finca-hotel-los-girisoles", "hotel-campestre-la-tata", "combia"],
-    "vip": ["hotel-campestre-camellias", "mocawa-resort", "mocawa-plaza"]
+    "economica": ["finca-hotel-la-dorada", "de-la-vega-hotel-campestre"],
+    "intermedia": ["cabanas-la-esmeralda"],
+    "intermedia_vip": ["finca-hotel-los-girasoles", "hotel-campestre-cafe-cafe", "hotel-campestre-la-tata"],
+    "vip": ["hotel-campestre-las-camelias"]
   },
-  "nota": "Precios actualizados según PORTAFOLIO PLANES NACIONALES 2026.docx - Valores SIN TRANSPORTE como base",
+  "nota": "Precios actualizados según PORTAFOLIO PLANES NACIONALES 2026.docx - Valores SIN TRANSPORTE como base. Precios por persona según acomodación.",
   "fuente": "PORTAFOLIO PLANES NACIONALES 2026.docx - Precios oficiales sin transporte"
 }
