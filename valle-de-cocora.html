@@ -44,6 +44,368 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Attraction Page Styles -->
+    <style>
+        /* Attraction Hero Section */
+        .attraction-hero {
+            position: relative;
+            min-height: 60vh;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            padding: 4rem 0;
+        }
+        
+        .attraction-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(46, 90, 54, 0.8) 0%, rgba(139, 69, 19, 0.7) 100%);
+        }
+        
+        .attraction-hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+        }
+        
+        .attraction-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .attraction-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .attraction-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .attraction-description {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        
+        .attraction-cta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        /* Photo Gallery */
+        .attraction-gallery {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .gallery-preview {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-preview img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+        }
+        
+        .gallery-thumbs img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-thumbs img:hover {
+            transform: scale(1.05);
+        }
+        
+        .expand-gallery {
+            display: block;
+            text-align: center;
+            color: var(--verde-cafe);
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .expand-gallery:hover {
+            color: var(--marron-madera);
+        }
+        
+        /* Pricing Section */
+        .attraction-pricing {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .price-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 2px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .price-card.featured {
+            border-color: var(--verde-cafe);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(46, 90, 54, 0.2);
+        }
+        
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .price-card h3 {
+            color: var(--verde-cafe);
+            margin-bottom: 1rem;
+        }
+        
+        .price-card .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--marron-madera);
+            margin-bottom: 0.5rem;
+        }
+        
+        .price-card .included-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        
+        .price-card .included-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .price-card .included-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Safety Table */
+        .attraction-safety {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .safety-table {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .safety-table th,
+        .safety-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .safety-table th {
+            background: var(--verde-cafe);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .safety-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        /* Hours Section */
+        .attraction-hours {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .hours-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .season-hours {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--verde-cafe);
+        }
+        
+        .season-hours h3 {
+            color: var(--verde-cafe);
+            margin-bottom: 1rem;
+        }
+        
+        /* Transport Section */
+        .attraction-transport {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .transport-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .transport-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--marron-madera);
+        }
+        
+        .transport-card h4 {
+            color: var(--marron-madera);
+            margin-bottom: 1rem;
+        }
+        
+        /* Tips Section */
+        .attraction-tips {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .tip-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tip-card i {
+            font-size: 2rem;
+            color: var(--verde-cafe);
+            margin-bottom: 1rem;
+        }
+        
+        .tip-card h4 {
+            color: var(--marron-madera);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Contact Section */
+        .attraction-contact {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--verde-cafe), var(--marron-madera));
+            color: white;
+        }
+        
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-options a,
+        .contact-options button {
+            background: white;
+            color: var(--verde-cafe);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .contact-options a:hover,
+        .contact-options button:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .attraction-title {
+                font-size: 2rem;
+            }
+            
+            .attraction-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .safety-table {
+                font-size: 0.8rem;
+            }
+            
+            .safety-table th,
+            .safety-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+    
     <!-- WhatsApp Template Handler -->
     <script src="assets/js/whatsapp-template-handler.js" defer></script>
 
