@@ -63,15 +63,14 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados) {
   }
 
   const totalPlan = precioPorPersona * paxCount;
+  
+  // Los destinos adicionales ahora son solo para selección visual, no afectan el precio
   let totalDestinos = 0;
-
+  let destinosCount = 0;
+  
   if (destinosSeleccionados && destinosSeleccionados.length > 0) {
-    destinosSeleccionados.forEach(destino => {
-      const precioDestino = DESTINOS_PRECIOS[destino];
-      if (typeof precioDestino === 'number') {
-        totalDestinos += precioDestino * paxCount;
-      }
-    });
+    destinosCount = destinosSeleccionados.length;
+    // Ya no se calculan precios de destinos adicionales
   }
 
   const total = totalPlan + totalDestinos;
@@ -82,7 +81,7 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados) {
     moneda: "COP",
     formateadoPersona: new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(precioPorPersona),
     formateadoTotal: new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(total),
-    destinosExtra: destinosSeleccionados ? destinosSeleccionados.length : 0
+    destinosExtra: destinosCount
   };
 }
 
