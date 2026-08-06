@@ -1,0 +1,207 @@
+// Don Chucho Chat System - Frontend Integration
+// Conecta el chat web con el backend de Don Chucho
+
+class DonChuchoChat {
+    constructor() {
+        this.chatOpen = false;
+        this.sessionId = null;
+        this.conversationHistory = [];
+        this.backendUrl = 'http://localhost:3000'; // Backend URL por defecto
+        this.apiKey = 'don-chucho-secret-key-2024'; // API key por defecto
+        
+        this.init();
+    }
+    
+    async init() {
+        try {
+            // Crear sesión
+            const response = await fetch(`${this.backendUrl}/api/chat/session`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-api-key': this.apiKey
+                },
+                body: JSON.stringify({ source: 'web' })
+            });
+            
+            if (response.ok) {
+                const data = await response.json();
+                this.sessionId = data.sessionId;
+                console.log('Don Chucho session created:', this.sessionId);
+            } else {
+                console.error('Failed to create Don Chucho session');
+                this.useFallbackMode();
+            }
+        } catch (error) {
+            console.error('Don Chucho backend not available, using fallback mode:', error);
+            this.useFallbackMode();
+        }
+    }
+    
+    useFallbackMode() {
+        this.fallbackMode = true;
+        this.sessionId = 'fallback-' + Date.now();
+        console.log('Don Chucho running in fallback mode');
+    }
+    
+    async sendMessage(message) {
+        if (!message.trim()) return;
+        
+        // Agregar mensaje del usuario
+        this.addMessage(message, 'user-message');
+        
+        try {
+            let response;
+            
+            if (this.fallbackMode) {
+                response = await this.getFallbackResponse(message);
+            } else {
+                const apiResponse = await fetch(`${this.backendUrl}/api/chat/message`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'x-api-key': this.apiKey
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        sessionId: this.sessionId,
+                        conversationHistory: this.conversationHistory
+                    })
+                });
+                
+                if (apiResponse.ok) {
+                    const data = await apiResponse.json();
+                    response = data.response;
+                } else {
+                    throw new Error('Backend error');
+                }
+            }
+            
+            // Agregar respuesta del bot
+            setTimeout(() => {
+                this.addMessage(response, 'bot-message');
+            }, 500);
+            
+        } catch (error) {
+            console.error('Error sending message:', error);
+            const fallbackResponse = await this.getFallbackResponse(message);
+            this.addMessage(fallbackResponse, 'bot-message');
+        }
+    }
+    
+    async getFallbackResponse(message) {
+        const lowerMessage = message.toLowerCase();
+        
+        // Respuestas de Don Chucho basadas en conocimiento local
+        if (lowerMessage.includes('precio') || lowerMessage.includes('costo') || lowerMessage.includes('tarifa')) {
+            return '🤠 ¡Vaya, viajero! Nuestros precios varían según el plan:\n\n• Plan 3D/2N: $820.000 COP\n• Plan 4D/3N: $1.152.000 COP\n• Plan 5D/4N: $1.473.000 COP\n• Plan Premium: $1.800.000 COP\n\nTodo incluye alojamiento, transporte y guías locales. ¿Te gustaría cotizar un plan específico?';
+        } else if (lowerMessage.includes('plan') || lowerMessage.includes('paquete')) {
+            return '🤠 ¡Excelente elección, compadre! Tenemos varios planes:\n\n🗺️ **Plan 3D/2N**: Ideal para principiantes\n🗺️ **Plan 4D/3N**: Experiencia completa\n🗺️ **Plan 5D/4N**: La experiencia definitiva\n🗺️ **Plan Premium**: Para viajeros exigentes\n\n¿Cuál te llama más la atención?';
+        } else if (lowerMessage.includes('hotel') || lowerMessage.includes('alojamiento')) {
+            return '🤠 ¡Para descansar como en casa! Trabajamos con fincas hoteles certificadas:\n\n🏡 Cabañas La Esmeralda (Estándar)\n🏡 Finca Hotel Los Girasoles (Intermedia)\n🏡 Hotel Campestre Café Café (VIP)\n\nTodas con desayuno incluido y guías locales. ¿Prefieres categoría estándar, intermedia o VIP?';
+        } else if (lowerMessage.includes('salento')) {
+            return '🤠 ¡Salento es joya del Quindío! Pueblo patrimonio con balcones coloridos y mirador al Valle de Cocora.\n\n✨ Must-see: Mirador, Calle Real, artesanías\n💡 Tips: Sube al mirador al atardecer, lleva cámara\n\n¿Quieres incluir Salento en tu viaje?';
+        } else if (lowerMessage.includes('valle') || lowerMessage.includes('cocora')) {
+            return '🤠 ¡El Valle de Cocora es espectacular! Palmas de cera de hasta 60 metros de altura.\n\n✨ Actividades: Senderismo, fotografía, naturaleza\n💡 Tips: Lleva botas antideslizantes, agua y protector solar\n\n¿Te gustaría caminar por el bosque nuboso?';
+        } else if (lowerMessage.includes('cafe') || lowerMessage.includes('parque')) {
+            return '🤠 ¡El Parque del Café es imperdible! Atracciones, shows culturales y el mejor café del mundo.\n\n✨ Incluye: Museo interactivo, shows, atracciones\n💡 Tips: Dedica todo el día, compra pasaporte múltiple\n\n¿Eres amante del café, compadre?';
+        } else if (lowerMessage.includes('contacto') || lowerMessage.includes('whatsapp')) {
+            return '🤠 ¡Para atención personalizada, compadre! Contáctanos:\n\n📱 WhatsApp: +57 317 442 6044\n📧 Email: gerencia@quindiotravel.net\n\nEstamos disponibles 24/7 para ayudarte a planear tu viaje al Eje Cafetero.';
+        } else if (lowerMessage.includes('reserva') || lowerMessage.includes('cotizar')) {
+            return '🤠 ¡Perfecto, viajero! Para cotizar tu viaje necesito:\n\n👤 ¿Cuántas personas?\n📅 ¿Cuándo quieres viajar?\n🎯 ¿Qué te interesa más? (café, naturaleza, pueblos, termales)\n\nCuéntame estos detalles y te preparo una cotización especial con descuento.';
+        } else if (lowerMessage.includes('hola') || lowerMessage.includes('buenos') || lowerMessage.includes('buenas')) {
+            return '🤠 ¡Hola, compadre! Soy Don Chucho, tu guía del Eje Cafetero. Estoy aquí para ayudarte a planear el viaje perfecto al Quindío.\n\n¿Qué te gustaría saber sobre nuestros planes turísticos?';
+        } else {
+            return '🤠 ¡Gracias por escribir, compadre! Para darte la mejor respuesta, cuéntame:\n\n• ¿Buscas información sobre planes, destinos o precios?\n• ¿Tienes alguna fecha en mente?\n• ¿Cuántas personas viajan?\n\nO contáctanos directamente por WhatsApp al +57 317 442 6044 para atención inmediata.';
+        }
+    }
+    
+    addMessage(text, className) {
+        const messagesContainer = document.getElementById('don-chucho-messages');
+        if (!messagesContainer) return;
+        
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${className}`;
+        
+        const messageContent = document.createElement('div');
+        messageContent.className = 'message-content';
+        
+        // Procesar formato markdown simple
+        let formattedText = text
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\n/g, '<br>');
+        
+        messageContent.innerHTML = `<p>${formattedText}</p>`;
+        
+        messageDiv.appendChild(messageContent);
+        messagesContainer.appendChild(messageDiv);
+        
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        
+        // Guardar en historial
+        this.conversationHistory.push({
+            role: className === 'user-message' ? 'user' : 'assistant',
+            content: text
+        });
+    }
+    
+    toggleChat() {
+        this.chatOpen = !this.chatOpen;
+        const chatContainer = document.getElementById('don-chucho-chat');
+        const chatBody = document.getElementById('don-chucho-body');
+        
+        if (chatContainer) {
+            if (this.chatOpen) {
+                chatBody.style.display = 'block';
+                chatContainer.classList.add('don-chucho-open');
+            } else {
+                chatBody.style.display = 'none';
+                chatContainer.classList.remove('don-chucho-open');
+            }
+        }
+    }
+    
+    sendQuickReply(type) {
+        let message = '';
+        
+        switch(type) {
+            case 'planes':
+                message = 'Quiero ver los planes disponibles';
+                break;
+            case 'precios':
+                message = '¿Cuáles son los precios?';
+                break;
+            case 'contacto':
+                message = 'Información de contacto';
+                break;
+            case 'destinos':
+                message = '¿Qué destinos puedo visitar?';
+                break;
+        }
+        
+        this.sendMessage(message);
+    }
+}
+
+// Inicializar Don Chucho cuando el DOM esté listo
+let donChucho;
+
+document.addEventListener('DOMContentLoaded', () => {
+    donChucho = new DonChuchoChat();
+    
+    // Exponer funciones globalmente para los onclick del HTML
+    window.toggleDonChucho = () => donChucho.toggleChat();
+    window.sendDonChuchoMessage = (message) => donChucho.sendMessage(message);
+    window.sendDonChuchoQuickReply = (type) => donChucho.sendQuickReply(type);
+    window.handleDonChuchoKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            const input = document.getElementById('don-chucho-input');
+            if (input) {
+                donChucho.sendMessage(input.value);
+                input.value = '';
+            }
+        }
+    };
+});
+
+console.log('Don Chucho chat system loaded');

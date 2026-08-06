@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#8B4513" stroke="#D2691E" stroke-width="2"/>
+  
+  <!-- Face -->
+  <circle cx="50" cy="50" r="40" fill="#FFDAB9"/>
+  
+  <!-- Hat (sombrero vueltiao) -->
+  <ellipse cx="50" cy="25" rx="30" ry="8" fill="#F4A460"/>
+  <ellipse cx="50" cy="22" rx="25" ry="6" fill="#8B4513"/>
+  <rect x="25" y="18" width="50" height="8" fill="#F4A460"/>
+  
+  <!-- Hat band -->
+  <rect x="35" y="20" width="30" height="3" fill="#2E5A36"/>
+  
+  <!-- Eyes -->
+  <circle cx="40" cy="45" r="4" fill="#4A3728"/>
+  <circle cx="60" cy="45" r="4" fill="#4A3728"/>
+  <circle cx="41" cy="44" r="1.5" fill="white"/>
+  <circle cx="61" cy="44" r="1.5" fill="white"/>
+  
+  <!-- Eyebrows -->
+  <path d="M 35 40 Q 40 38 45 40" stroke="#4A3728" stroke-width="2" fill="none"/>
+  <path d="M 55 40 Q 60 38 65 40" stroke="#4A3728" stroke-width="2" fill="none"/>
+  
+  <!-- Nose -->
+  <ellipse cx="50" cy="52" rx="3" ry="4" fill="#DEB887"/>
+  
+  <!-- Mustache -->
+  <path d="M 40 58 Q 45 62 50 58 Q 55 62 60 58" stroke="#4A3728" stroke-width="3" fill="none"/>
+  
+  <!-- Smile -->
+  <path d="M 42 65 Q 50 72 58 65" stroke="#4A3728" stroke-width="2" fill="none"/>
+  
+  <!-- Coffee cup -->
+  <rect x="72" y="55" width="12" height="15" rx="2" fill="#8B4513"/>
+  <path d="M 84 58 Q 88 60 84 65" stroke="#8B4513" stroke-width="2" fill="none"/>
+  <ellipse cx="78" cy="55" rx="6" ry="2" fill="#6B3E26"/>
+  
+  <!-- Steam -->
+  <path d="M 75 52 Q 77 48 75 44" stroke="#E0E0E0" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M 81 52 Q 83 48 81 44" stroke="#E0E0E0" stroke-width="1.5" fill="none" opacity="0.7"/>
+</svg>

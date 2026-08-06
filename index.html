@@ -559,14 +559,199 @@
 
 
     
-    /* Chatbot Styles (Deshabilitado temporalmente para evitar conflictos) */
-    .chatbot-container {
+    /* Don Chucho Chat Styles */
+    .don-chucho-chat-container {
         position: fixed;
         bottom: 100px;
-        right: 20px;
+        left: 20px;
         z-index: 1000;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        display: none; /* Deshabilitado temporalmente */
+    }
+
+    .don-chucho-toggle {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #8B4513, #D2691E);
+        color: white;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .don-chucho-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(139, 69, 19, 0.6);
+    }
+
+    .don-chucho-toggle img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .don-chucho-header {
+        background: linear-gradient(135deg, #8B4513, #D2691E);
+        color: white;
+        padding: 15px;
+        border-radius: 15px 15px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .don-chucho-header-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .don-chucho-header i {
+        font-size: 20px;
+    }
+
+    .don-chucho-close {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    .don-chucho-close:hover {
+        opacity: 1;
+    }
+
+    .don-chucho-body {
+        display: none;
+        background: white;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        overflow: hidden;
+        max-width: 350px;
+        max-height: 450px;
+    }
+
+    .don-chucho-open .don-chucho-body {
+        display: block;
+    }
+
+    .don-chucho-messages {
+        height: 350px;
+        overflow-y: auto;
+        padding: 15px;
+        background: #f8f9fa;
+    }
+
+    .message {
+        margin-bottom: 15px;
+    }
+
+    .message-content {
+        padding: 12px 16px;
+        border-radius: 15px;
+        max-width: 80%;
+    }
+
+    .user-message {
+        text-align: right;
+    }
+
+    .user-message .message-content {
+        background: #8B4513;
+        color: white;
+        margin-left: auto;
+    }
+
+    .bot-message .message-content {
+        background: white;
+        border: 1px solid #e9ecef;
+    }
+
+    .quick-replies {
+        padding: 10px 15px;
+        background: white;
+        border-top: 1px solid #e9ecef;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .quick-reply {
+        padding: 8px 12px;
+        border: 1px solid #8B4513;
+        background: white;
+        color: #8B4513;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .quick-reply:hover {
+        background: #8B4513;
+        color: white;
+    }
+
+    .don-chucho-input {
+        display: flex;
+        padding: 15px;
+        background: white;
+        border-top: 1px solid #e9ecef;
+    }
+
+    .don-chucho-input input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 1px solid #e9ecef;
+        border-radius: 20px;
+        outline: none;
+        font-size: 14px;
+    }
+
+    .don-chucho-input input:focus {
+        border-color: #8B4513;
+    }
+
+    .don-chucho-input button {
+        background: #8B4513;
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .don-chucho-input button:hover {
+        background: #D2691E;
+    }
+
+    @media (max-width: 768px) {
+        .don-chucho-chat-container {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .don-chucho-body {
+            max-width: 300px;
+            max-height: 400px;
+        }
+
+        .don-chucho-messages {
+            height: 300px;
+        }
     }
     
     .chatbot-toggle {
@@ -1239,6 +1424,9 @@
     <!-- Performance Optimizer -->
     <script src="assets/js/performance-optimizer.js" defer></script>
     <script src="assets/js/language-detector.js" defer></script>
+    
+    <!-- Don Chucho Chat System -->
+    <script src="assets/js/don-chucho-chat.min.js" defer></script>
     
     <!-- WhatsApp Template Handler -->
     <script src="assets/js/whatsapp-template-handler.js" defer></script>
@@ -4870,9 +5058,44 @@
 
     
     
-    <!-- Don Chucho Avatar - Bottom Left (Simplificado sin imagen) -->
+    <!-- Don Chucho Chat Container -->
+    <div class="don-chucho-chat-container" id="don-chucho-chat">
+        <div class="don-chucho-header" onclick="toggleDonChucho()">
+            <div class="don-chucho-header-content">
+                <img src="assets/images/don-chucho-avatar.svg" alt="Don Chucho" style="width: 30px; height: 30px; border-radius: 50%;">
+                <span>🤠 Don Chucho</span>
+            </div>
+            <button class="don-chucho-close" onclick="event.stopPropagation(); toggleDonChucho()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="don-chucho-body" id="don-chucho-body">
+            <div class="don-chucho-messages" id="don-chucho-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>🤠 ¡Hola, compadre! Soy Don Chucho, tu guía del Eje Cafetero. Estoy aquí para ayudarte a planear el viaje perfecto al Quindío. ¿Qué te gustaría saber?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="quick-replies">
+                <button class="quick-reply" onclick="sendDonChuchoQuickReply('planes')">🗺️ Ver Planes</button>
+                <button class="quick-reply" onclick="sendDonChuchoQuickReply('precios')">💰 Precios</button>
+                <button class="quick-reply" onclick="sendDonChuchoQuickReply('destinos')">🏛️ Destinos</button>
+                <button class="quick-reply" onclick="sendDonChuchoQuickReply('contacto')">📞 Contacto</button>
+            </div>
+            <div class="don-chucho-input">
+                <input type="text" id="don-chucho-input" placeholder="Escribe tu mensaje..." onkeypress="handleDonChuchoKeyPress(event)">
+                <button onclick="sendDonChuchoMessage(document.getElementById('don-chucho-input').value); document.getElementById('don-chucho-input').value = '';"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button class="don-chucho-toggle" onclick="toggleDonChucho()">
+            <img src="assets/images/don-chucho-avatar.svg" alt="Don Chucho">
+        </button>
+    </div>
+
+    <!-- Don Chucho Avatar - Bottom Left (Botón rápido) -->
     <div class="don-chucho-bottom-left">
-        <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20necesito%20asesoría%20sobre%20planes%20de%20viaje%20al%20Eje%20Cafetero" target="_blank" rel="noopener" class="don-chucho-link-left">
+        <a href="https://wa.me/573174426044?text=Hola%20Don%20Chucho,%20necesito%20asesoría%20sobre%20planes%20de%20viaje%20al%20Eje%20Cafetero" target="_blank" rel="noopener" class="don-chucho-link-left">
             <span class="don-chucho-icon-left">🤠</span>
             <span class="don-chucho-tooltip-left">🤠 Hola, soy Don Chucho</span>
         </a>
@@ -5704,105 +5927,6 @@
         </div>
     </div>
     
-
-    <script>
-    let chatbotOpen = false;
-    
-    function toggleChatbot() {
-        const chatbot = document.getElementById('chatbot');
-        const chatbotBody = document.getElementById('chatbot-body');
-        chatbotOpen = !chatbotOpen;
-        
-        if (chatbotOpen) {
-            chatbotBody.style.display = 'block';
-            chatbot.classList.add('chatbot-open');
-        } else {
-            chatbotBody.style.display = 'none';
-            chatbot.classList.remove('chatbot-open');
-        }
-    }
-    
-    function sendMessage() {
-        const input = document.getElementById('chatbot-input');
-        const message = input.value.trim();
-        
-        if (message) {
-            addMessage(message, 'user-message');
-            input.value = '';
-            
-            // Simular respuesta del bot
-            setTimeout(() => {
-                const response = getBotResponse(message);
-                addMessage(response, 'bot-message');
-            }, 1000);
-        }
-    }
-    
-    function sendQuickReply(type) {
-        let message = '';
-        let response = '';
-        
-        switch(type) {
-            case 'planes':
-                message = 'Quiero ver los planes disponibles';
-                response = 'Tenemos 6 planes increíbles desde 2 días hasta 5 días. Puedes ver todos los planes en nuestra sección de <a href="planes.html">Planes Turísticos</a>. ¿Te gustaría información sobre algún plan específico?';
-                break;
-            case 'precios':
-                message = '¿Cuáles son los precios?';
-                response = 'Nuestros precios varían según el plan, categoría de alojamiento y temporada. Desde $430.000 COP por persona para planes económicos hasta $3.420.000 COP para experiencias VIP. ¿Te gustaría cotizar un plan específico?';
-                break;
-            case 'contacto':
-                message = 'Información de contacto';
-                response = 'Puedes contactarnos por WhatsApp al +57 317 442 6044 o por email a gerencia@quindiotravel.net. También estamos disponibles 24/7 para atender tus consultas.';
-                break;
-        }
-        
-        addMessage(message, 'user-message');
-        setTimeout(() => {
-            addMessage(response, 'bot-message');
-        }, 500);
-    }
-    
-    function addMessage(text, className) {
-        const messagesContainer = document.getElementById('chatbot-messages');
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `message ${className}`;
-        
-        const messageContent = document.createElement('div');
-        messageContent.className = 'message-content';
-        messageContent.innerHTML = `<p>${text}</p>`;
-        
-        messageDiv.appendChild(messageContent);
-        messagesContainer.appendChild(messageDiv);
-        
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    }
-    
-    function getBotResponse(message) {
-        const lowerMessage = message.toLowerCase();
-        
-        if (lowerMessage.includes('precio') || lowerMessage.includes('costo') || lowerMessage.includes('tarifa')) {
-            return 'Nuestros precios varían según el plan y categoría. Desde $430.000 COP hasta $3.420.000 COP por persona. Para una cotización exacta, te recomiendo usar nuestro <a href="https://wa.me/573174426044">WhatsApp</a> para atención personalizada.';
-        } else if (lowerMessage.includes('plan') || lowerMessage.includes('paquete')) {
-            return 'Tenemos 6 planes increíbles: Escapada Cafetera (2D/1N), Aventura Natural (3D/2N), Experiencia Completa (4D/3N), Relax y Aventura (4D/3N), Experiencia Premium (4D/3N) y La Experiencia Definitiva (5D/4N). ¿Te gustaría más detalles sobre alguno?';
-        } else if (lowerMessage.includes('hotel') || lowerMessage.includes('alojamiento')) {
-            return 'Trabajamos con hoteles certificados de diferentes categorías: estándar, intermedia y VIP. Algunos de nuestros alojamientos son Cabañas La Esmeralda, Finca Hotel Los Girasoles y Hotel Campestre Café Café.';
-        } else if (lowerMessage.includes('contacto') || lowerMessage.includes('whatsapp')) {
-            return 'Puedes contactarnos directamente por WhatsApp al +57 317 442 6044 para atención personalizada 24/7.';
-        } else if (lowerMessage.includes('reserva') || lowerMessage.includes('cotizar')) {
-            return 'Para realizar una reserva o cotización, te recomiendo usar nuestro <a href="https://wa.me/573174426044">WhatsApp</a> para atención inmediata con nuestros asesores.';
-        } else {
-            return 'Gracias por tu mensaje. Para una respuesta más detallada, te recomiendo contactarnos por WhatsApp al +57 317 442 6044 donde nuestros asesores te ayudarán personalmente.';
-        }
-    }
-    
-    function handleKeyPress(event) {
-        if (event.key === 'Enter') {
-            sendMessage();
-        }
-    }
-    </script>
-
 
     <script>
     const translations = {
