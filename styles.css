@@ -2668,17 +2668,19 @@ body {
 .btn-promo {
     background: linear-gradient(135deg, #23c85b 0%, #139f46 100%);
     color: #FFFFFF;
-    padding: 16px 30px;
-    border-radius: 16px;
+    padding: 12px 20px;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 0.95rem;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 16px 30px rgba(26, 157, 69, 0.28);
-    flex: 1 1 260px;
+    flex: 0 0 auto;
     justify-content: center;
+    max-width: 200px;
 }
 
 .btn-promo:hover {
@@ -3146,10 +3148,13 @@ body {
     background: transparent;
     color: #2E5A36;
     border: 2px solid #2E5A36;
-    padding: 15px 30px;
-    border-radius: 25px;
-    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
+    flex: 0 0 auto;
+    max-width: 200px;
 }
 
 .btn-outline-promo:hover {
