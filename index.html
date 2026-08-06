@@ -559,13 +559,14 @@
 
 
     
-    /* Chatbot Styles */
+    /* Chatbot Styles (Deshabilitado temporalmente para evitar conflictos) */
     .chatbot-container {
         position: fixed;
         bottom: 100px;
         right: 20px;
         z-index: 1000;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: none; /* Deshabilitado temporalmente */
     }
     
     .chatbot-toggle {
@@ -1025,7 +1026,9 @@
     }
     
     .don-chucho-link-left {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 65px;
         height: 65px;
         border-radius: 50%;
@@ -1034,6 +1037,7 @@
         transition: all 0.3s ease;
         position: relative;
         overflow: visible;
+        text-decoration: none;
     }
     
     .don-chucho-link-left:hover {
@@ -1041,13 +1045,10 @@
         box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
     }
     
-    .don-chucho-avatar-left {
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid rgba(255,255,255,0.3);
-        display: block;
+    .don-chucho-icon-left {
+        font-size: 32px;
+        color: white;
+        line-height: 1;
     }
     
     .don-chucho-tooltip-left {
@@ -1188,9 +1189,8 @@
             height: 55px;
         }
         
-        .don-chucho-avatar-left {
-            width: 55px;
-            height: 55px;
+        .don-chucho-icon-left {
+            font-size: 28px;
         }
         
         .don-chucho-tooltip-left {
@@ -4870,10 +4870,10 @@
 
     
     
-    <!-- Don Chucho Avatar - Bottom Left -->
+    <!-- Don Chucho Avatar - Bottom Left (Simplificado sin imagen) -->
     <div class="don-chucho-bottom-left">
-        <a href="#" data-wa-message="Hola Don Chucho, necesito asesoría sobre planes de viaje al Eje Cafetero" target="_blank" rel="noopener" class="don-chucho-link-left">
-            <img src="assets/images/don-chucho-avatar.png" alt="Don Chucho - Guía Local" class="don-chucho-avatar-left">
+        <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20necesito%20asesoría%20sobre%20planes%20de%20viaje%20al%20Eje%20Cafetero" target="_blank" rel="noopener" class="don-chucho-link-left">
+            <span class="don-chucho-icon-left">🤠</span>
             <span class="don-chucho-tooltip-left">🤠 Hola, soy Don Chucho</span>
         </a>
     </div>

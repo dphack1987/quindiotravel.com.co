@@ -1,132 +1,94 @@
 // Sistema de detección y selección de idioma - Quindío Travel
-// Updated: 2026-08-05 - Added fallback for header-actions and French language support
+// Updated: 2026-08-06 - Simplificado para mejor funcionamiento
 
 const translations = {
     es: {
-        nav: {
-            inicio: "Inicio",
-            planes: "Planes",
-            hoteles: "Hoteles",
-            experiencias: "Experiencias",
-            mapa: "Mapa Turístico",
-            empresas: "Empresas",
-            blog: "Blog",
-            nosotros: "Nosotros",
-            contacto: "Contacto",
-            promo: "🔥 Promoción"
-        },
-        hero: {
-            badge: "🌿 Experiencias Auténticas 2026",
-            title: "Planes Turísticos del Eje Cafetero",
-            subtitle: "Descubre la magia del Quindío con nuestros 6 planes diseñados a tu medida. Desde escapadas cortas hasta experiencias completas de 5 días.",
-            feature1: "Guías Certificados RNT 18152",
-            feature2: "Transporte Incluido",
-            feature3: "Asistencia Médica"
-        },
-        cta: {
-            cotizar: "Cotizar Plan 4D/3N con alojamiento",
-            whatsapp: "Solicitar cotización por WhatsApp"
-        },
-        experiences: {
-            title: "Guía de turismo en Quindío: experiencias y rutas",
-            subtitle: "Vive los atractivos más icónicos con la compañía de guías locales que conocen cada rincón del Quindío."
-        },
-        footer: {
-            quindio_travel: "Quindío Travel",
-            description: "No solo vendemos viajes; somos la guía oficial para descubrir el Quindío.",
-            manager: "Gerente:",
-            phone: "Celular / WhatsApp:",
-            email: "Correo:",
-            rnt: "RNT:",
-            location: "Ubicación:",
-            quick_links: "Enlaces Rápidos",
-            destinations: "Destinos Populares",
-            attractions: "Atractivos Principales"
-        }
+        'nav.inicio': "Inicio",
+        'nav.promo': "🔥 Promoción",
+        'nav.planes': "Planes",
+        'nav.hoteles': "Hoteles",
+        'nav.experiencias': "Experiencias",
+        'nav.destinos': "Destinos",
+        'nav.blog': "Blog",
+        'nav.nosotros': "Nosotros",
+        'nav.contacto': "Contacto",
+        'experiencias.title': "✨ Experiencias Inolvidables del Eje Cafetero",
+        'experiencias.subtitle': "Vive los atractivos más icónicos con la compañía de guías locales que conocen cada rincón del Quindío.",
+        'footer.quindio_travel': "Quindío Travel",
+        'footer.description': "No solo vendemos viajes; somos la guía oficial para descubrir el Quindío auténtico.",
+        'footer.manager': "Gerente:",
+        'footer.phone': "Celular / WhatsApp:",
+        'footer.email': "Correo:",
+        'footer.rnt': "RNT:",
+        'footer.location': "Ubicación:",
+        'footer.quick_links': "Enlaces Rápidos",
+        'footer.destinations': "Destinos Populares"
     },
     en: {
-        nav: {
-            inicio: "Home",
-            planes: "Plans",
-            hoteles: "Hotels",
-            experiencias: "Experiences",
-            mapa: "Tourist Map",
-            empresas: "Corporate",
-            blog: "Blog",
-            nosotros: "About Us",
-            contacto: "Contact",
-            promo: "🔥 Promotion"
-        },
-        hero: {
-            badge: "🌿 Authentic Experiences 2026",
-            title: "Coffee Axis Tour Plans",
-            subtitle: "Discover the magic of Quindío with our 6 plans designed to your measure. From short getaways to complete 5-day experiences.",
-            feature1: "RNT 18152 Certified Guides",
-            feature2: "Transport Included",
-            feature3: "Medical Assistance"
-        },
-        cta: {
-            cotizar: "Quote 4D/3N Plan with accommodation",
-            whatsapp: "Request quote via WhatsApp"
-        },
-        experiences: {
-            title: "Quindío tourism guide: experiences and routes",
-            subtitle: "Experience the most iconic attractions with local guides who know every corner of Quindío."
-        },
-        footer: {
-            quindio_travel: "Quindío Travel",
-            description: "We don't just sell trips; we are the official guide to discover Quindío.",
-            manager: "Manager:",
-            phone: "Cell / WhatsApp:",
-            email: "Email:",
-            rnt: "RNT:",
-            location: "Location:",
-            quick_links: "Quick Links",
-            destinations: "Popular Destinations",
-            attractions: "Main Attractions"
-        }
+        'nav.inicio': "Home",
+        'nav.promo': "🔥 Promotion",
+        'nav.planes': "Plans",
+        'nav.hoteles': "Hotels",
+        'nav.experiencias': "Experiences",
+        'nav.destinos': "Destinations",
+        'nav.blog': "Blog",
+        'nav.nosotros': "About Us",
+        'nav.contacto': "Contact",
+        'experiencias.title': "✨ Unforgettable Experiences of the Coffee Axis",
+        'experiencias.subtitle': "Experience the most iconic attractions with local guides who know every corner of Quindío.",
+        'footer.quindio_travel': "Quindío Travel",
+        'footer.description': "We don't just sell trips; we are the official guide to discover Quindío.",
+        'footer.manager': "Manager:",
+        'footer.phone': "Cell / WhatsApp:",
+        'footer.email': "Email:",
+        'footer.rnt': "RNT:",
+        'footer.location': "Location:",
+        'footer.quick_links': "Quick Links",
+        'footer.destinations': "Popular Destinations"
     },
     pt: {
-        nav: {
-            inicio: "Início",
-            planes: "Planos",
-            hoteles: "Hotéis",
-            experiencias: "Experiências",
-            mapa: "Mapa Turístico",
-            empresas: "Empresas",
-            blog: "Blog",
-            nosotros: "Sobre Nós",
-            contacto: "Contato",
-            promo: "🔥 Promoção"
-        },
-        hero: {
-            badge: "🌿 Experiências Autênticas 2026",
-            title: "Planos Turísticos do Eixo Cafeeiro",
-            subtitle: "Descubra a magia de Quindío com nossos 6 planos desenhados para você. De escapadas curtas até experiências completas de 5 dias.",
-            feature1: "Guias Certificados RNT 18152",
-            feature2: "Transporte Incluído",
-            feature3: "Assistência Médica"
-        },
-        cta: {
-            cotizar: "Cotizar Plano 4D/3N com acomodação",
-            whatsapp: "Solicitar cotação via WhatsApp"
-        },
-        experiences: {
-            title: "Guia de turismo em Quindío: experiências e rotas",
-            subtitle: "Viva os atrativos mais icônicos com guias locais que conhecem cada canto de Quindío."
-        },
-        footer: {
-            quindio_travel: "Quindío Travel",
-            description: "Não apenas vendemos viagens; somos o guia oficial para descobrir Quindío.",
-            manager: "Gerente:",
-            phone: "Celular / WhatsApp:",
-            email: "E-mail:",
-            rnt: "RNT:",
-            location: "Localização:",
-            quick_links: "Links Rápidos",
-            destinations: "Destinos Populares",
-            attractions: "Atrações Principais"
-        }
+        'nav.inicio': "Início",
+        'nav.promo': "🔥 Promoção",
+        'nav.planes': "Planos",
+        'nav.hoteles': "Hotéis",
+        'nav.experiencias': "Experiências",
+        'nav.destinos': "Destinos",
+        'nav.blog': "Blog",
+        'nav.nosotros': "Sobre Nós",
+        'nav.contacto': "Contato",
+        'experiencias.title': "✨ Experiências Inesquecíveis do Eixo Cafeeiro",
+        'experiencias.subtitle': "Viva os atrativos mais icônicos com guias locais que conhecem cada canto de Quindío.",
+        'footer.quindio_travel': "Quindío Travel",
+        'footer.description': "Não apenas vendemos viagens; somos o guia oficial para descobrir Quindío.",
+        'footer.manager': "Gerente:",
+        'footer.phone': "Celular / WhatsApp:",
+        'footer.email': "E-mail:",
+        'footer.rnt': "RNT:",
+        'footer.location': "Localização:",
+        'footer.quick_links': "Links Rápidos",
+        'footer.destinations': "Destinos Populares"
+    },
+    fr: {
+        'nav.inicio': "Accueil",
+        'nav.promo': "🔥 Promotion",
+        'nav.planes': "Plans",
+        'nav.hoteles': "Hôtels",
+        'nav.experiencias': "Expériences",
+        'nav.destinos': "Destinations",
+        'nav.blog': "Blog",
+        'nav.nosotros': "À propos",
+        'nav.contacto': "Contact",
+        'experiencias.title': "✨ Expériences Inoubliables de l'Axes du Café",
+        'experiencias.subtitle': "Vivez les attractions les plus emblématiques avec des guides locaux qui connaissent chaque coin de Quindío.",
+        'footer.quindio_travel': "Quindío Travel",
+        'footer.description': "Nous ne vendons pas seulement des voyages; nous sommes le guide officiel pour découvrir Quindío.",
+        'footer.manager': "Gérant:",
+        'footer.phone': "Cellulaire / WhatsApp:",
+        'footer.email': "E-mail:",
+        'footer.rnt': "RNT:",
+        'footer.location': "Emplacement:",
+        'footer.quick_links': "Liens Rapides",
+        'footer.destinations': "Destinations Populaires"
     }
 };
 
@@ -169,26 +131,28 @@ function setLanguage(lang) {
 function applyLanguage(lang) {
     const t = translations[lang];
     
-    // Traducir navegación
+    if (!t) {
+        console.error('No translations found for language:', lang);
+        return;
+    }
+    
+    // Traducir elementos con data-i18n
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        const keys = key.split('.');
-        let value = t;
-        
-        keys.forEach(k => {
-            value = value[k];
-        });
+        const value = t[key];
         
         if (value) {
             element.textContent = value;
+            console.log(`Translated ${key} to: ${value}`);
+        } else {
+            console.warn(`No translation found for key: ${key}`);
         }
     });
     
     // Actualizar atributo lang del HTML
-    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en' : 'es';
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en' : lang === 'fr' ? 'fr' : 'es';
     
-    // Actualizar meta tags para SEO
-    updateMetaTags(lang);
+    console.log(`Language applied: ${lang}`);
 }
 
 // Actualizar selector de idioma visual
@@ -223,134 +187,44 @@ function updateMetaTags(lang) {
 // Inicializar sistema de idioma
 function initLanguageSystem() {
     const currentLang = getLanguage();
-    applyLanguage(currentLang);
-    updateLanguageSelector(currentLang);
+    console.log('Initializing language system with:', currentLang);
     
-    // Crear selector de idioma si no existe
-    createLanguageSelector();
+    // Esperar a que el DOM esté completamente cargado
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            applyLanguage(currentLang);
+            updateLanguageSelector(currentLang);
+            setupLanguageSelector();
+        });
+    } else {
+        applyLanguage(currentLang);
+        updateLanguageSelector(currentLang);
+        setupLanguageSelector();
+    }
 }
 
-// Crear selector de idioma en el header
-function createLanguageSelector() {
-    // Si ya existe en el HTML, no crear uno nuevo
-    if (document.getElementById('language-selector')) {
-        console.log('Language selector already exists in HTML');
-        // Agregar event listener si no existe
-        const selector = document.getElementById('language-selector');
-        if (!selector.hasAttribute('data-initialized')) {
-            selector.addEventListener('change', function() {
-                setLanguage(this.value);
-            });
-            selector.setAttribute('data-initialized', 'true');
-        }
-        return;
+// Configurar selector de idioma existente
+function setupLanguageSelector() {
+    const selector = document.getElementById('language-selector');
+    if (selector) {
+        // Remover event listeners anteriores
+        const newSelector = selector.cloneNode(true);
+        selector.parentNode.replaceChild(newSelector, selector);
+        
+        // Agregar nuevo event listener
+        newSelector.addEventListener('change', function() {
+            const newLang = this.value;
+            console.log('Language changed to:', newLang);
+            setLanguage(newLang);
+        });
+        
+        console.log('Language selector setup complete');
+    } else {
+        console.warn('Language selector not found');
     }
-    
-    const currentLang = getLanguage();
-    
-    const selectorContainer = document.createElement('div');
-    selectorContainer.className = 'language-selector-container';
-    selectorContainer.style.cssText = 'margin-right: 15px; display: inline-block;';
-    selectorContainer.innerHTML = `
-        <select id="language-selector" class="language-selector" aria-label="Seleccionar idioma / Select language" style="padding: 8px 12px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); color: white; font-size: 14px; cursor: pointer; backdrop-filter: blur(10px);">
-            <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 Español</option>
-            <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 English</option>
-            <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 Português</option>
-            <option value="fr" ${currentLang === 'fr' ? 'selected' : ''}>🇫🇷 Français</option>
-        </select>
-    `;
-    
-    selectorContainer.querySelector('#language-selector').addEventListener('change', function() {
-        setLanguage(this.value);
-    });
-    
-    // Intentar múltiples estrategias de inserción
-    const strategies = [
-        () => {
-            const headerActions = document.querySelector('.header-actions');
-            if (headerActions) {
-                const hamburgerBtn = document.getElementById('hamburger-btn');
-                if (hamburgerBtn && window.innerWidth <= 768) {
-                    headerActions.insertBefore(selectorContainer, hamburgerBtn);
-                } else {
-                    headerActions.insertBefore(selectorContainer, headerActions.firstChild);
-                }
-                return true;
-            }
-            return false;
-        },
-        () => {
-            const header = document.querySelector('.main-header');
-            if (header) {
-                const navContainer = header.querySelector('.nav-container, .container');
-                if (navContainer) {
-                    navContainer.insertBefore(selectorContainer, navContainer.firstChild);
-                    return true;
-                }
-            }
-            return false;
-        },
-        () => {
-            const nav = document.querySelector('.main-nav');
-            if (nav) {
-                nav.parentElement.insertBefore(selectorContainer, nav);
-                return true;
-            }
-            return false;
-        },
-        () => {
-            const body = document.body;
-            if (body) {
-                body.prepend(selectorContainer);
-                selectorContainer.style.position = 'fixed';
-                selectorContainer.style.top = '20px';
-                selectorContainer.style.right = '20px';
-                selectorContainer.style.zIndex = '9999';
-                return true;
-            }
-            return false;
-        }
-    ];
-    
-    // Intentar cada estrategia hasta que una funcione
-    for (const strategy of strategies) {
-        if (strategy()) {
-            console.log('Language selector created successfully');
-            return;
-        }
-    }
-    
-    console.error('Failed to create language selector');
-}
-
-function createLanguageSelectorInContainer(container) {
-    if (document.getElementById('language-selector')) {
-        return;
-    }
-    
-    const currentLang = getLanguage();
-    
-    const selectorContainer = document.createElement('div');
-    selectorContainer.className = 'language-selector-container';
-    selectorContainer.style.marginRight = '15px';
-    selectorContainer.innerHTML = `
-        <select id="language-selector" class="language-selector" aria-label="Seleccionar idioma / Select language">
-            <option value="es" ${currentLang === 'es' ? 'selected' : ''}>🇪🇸 Español</option>
-            <option value="en" ${currentLang === 'en' ? 'selected' : ''}>🇺🇸 English</option>
-            <option value="pt" ${currentLang === 'pt' ? 'selected' : ''}>🇧🇷 Português</option>
-            <option value="fr" ${currentLang === 'fr' ? 'selected' : ''}>🇫🇷 Français</option>
-        </select>
-    `;
-    
-    selectorContainer.querySelector('#language-selector').addEventListener('change', function() {
-        setLanguage(this.value);
-    });
-    
-    // Insert at the beginning of container
-    container.insertBefore(selectorContainer, container.firstChild);
-    
-    console.log('Language selector created in container');
 }
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', initLanguageSystem);
+
+console.log("Language detector script loaded");
