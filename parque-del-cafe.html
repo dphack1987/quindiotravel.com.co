@@ -165,67 +165,6 @@
             color: var(--marron-madera);
         }
         
-        /* Pricing Section */
-        .attraction-pricing {
-            padding: 4rem 0;
-            background: white;
-        }
-        
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .price-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border: 2px solid #e9ecef;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .price-card.featured {
-            border-color: var(--verde-cafe);
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(46, 90, 54, 0.2);
-        }
-        
-        .price-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-        
-        .price-card h3 {
-            color: var(--verde-cafe);
-            margin-bottom: 1rem;
-        }
-        
-        .price-card .price {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--marron-madera);
-            margin-bottom: 0.5rem;
-        }
-        
-        .price-card .included-list {
-            list-style: none;
-            padding: 0;
-            margin: 1.5rem 0;
-        }
-        
-        .price-card .included-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #e9ecef;
-        }
-        
-        .price-card .included-list li:last-child {
-            border-bottom: none;
-        }
-        
         /* Safety Table */
         .attraction-safety {
             padding: 4rem 0;
@@ -346,6 +285,44 @@
         }
         
         .tip-card h4 {
+            color: var(--marron-madera);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Experiences Section */
+        .attraction-experiences {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .experience-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border-top: 4px solid var(--verde-cafe);
+            transition: transform 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .experience-card i {
+            font-size: 2.5rem;
+            color: var(--verde-cafe);
+            margin-bottom: 1rem;
+        }
+        
+        .experience-card h3 {
             color: var(--marron-madera);
             margin-bottom: 0.5rem;
         }
@@ -581,54 +558,30 @@
         </div>
     </section>
 
-    <!-- Sistema de Precios Desglosado -->
-    <section class="attraction-pricing">
+    <!-- Experiencias y Atracciones -->
+    <section class="attraction-experiences">
         <div class="container">
-            <h2 class="section-title">💰 Precios y Pasaportes</h2>
-            <div class="pricing-cards">
-                <div class="price-card featured">
-                    <h3>Pasaporte Múltiple</h3>
-                    <p class="price">COP $99.000</p>
-                    <p>Incluye entrada + 26 atracciones</p>
-                    <ul class="included-list">
-                        <li>✓ Teleférico (Ida y regreso ilimitado)</li>
-                        <li>✓ Trén del Café (Ida y regreso ilimitado)</li>
-                        <li>✓ Show del Café (Ilimitado)</li>
-                        <li>✓ Montaña Rusa (Ilimitado)</li>
-                        <li>✓ Montaña Acuática (Ilimitado)</li>
-                        <li>✓ Museo Interactivo del Café (Ilimitado)</li>
-                        <li>✓ Y 20 atracciones más</li>
-                    </ul>
-                    <p style="font-size: 0.9rem; color: #666;">No incluye: Paseo a caballo ($12.000)</p>
-                    <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20comprar%20pasaporte%20m%C3%BAltiple" target="_blank" rel="noopener" class="btn btn-green" style="display: block; text-align: center; margin-top: 1rem;">Comprar aquí</a>
+            <h2 class="section-title">🎢 Experiencias Incluidas en Nuestros Planes</h2>
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <i class="fas fa-roller-coaster"></i>
+                    <h3>Atracciones Mecánicas</h3>
+                    <p>Montaña rusa, montaña acuática, ciclón, krater y más de 20 atracciones emocionantes.</p>
                 </div>
-                <div class="price-card">
-                    <h3>Pasaporte Junior</h3>
-                    <p class="price">COP $69.000</p>
-                    <p>Estatura 90-124 cm</p>
-                    <ul class="included-list">
-                        <li>✓ Entrada al parque</li>
-                        <li>✓ Teleférico (Ilimitado)</li>
-                        <li>✓ Trén del Café (Ilimitado)</li>
-                        <li>✓ Museo Interactivo (Ilimitado)</li>
-                        <li>✓ Show del Café (Ilimitado)</li>
-                        <li>✓ Atracciones adaptadas</li>
-                    </ul>
-                    <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20comprar%20pasaporte%20junior" target="_blank" rel="noopener" class="btn btn-green" style="display: block; text-align: center; margin-top: 1rem;">Comprar aquí</a>
+                <div class="experience-card">
+                    <i class="fas fa-theater-masks"></i>
+                    <h3>Shows Culturales</h3>
+                    <p>Show del Café con música y danza tradicional, presentaciones sobre cultura cafetera.</p>
                 </div>
-                <div class="price-card">
-                    <h3>Pasaporte Senior</h3>
-                    <p class="price">COP $69.000</p>
-                    <p>Mayores de 70 años</p>
-                    <ul class="included-list">
-                        <li>✓ Entrada al parque</li>
-                        <li>✓ Teleférico (Ilimitado)</li>
-                        <li>✓ Trén del Café (Ilimitado)</li>
-                        <li>✓ Museo Interactivo (Ilimitado)</li>
-                        <li>✓ Show del Café (Ilimitado)</li>
-                        <li>✓ Atracciones seguras</li>
-                    </ul>
-                    <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20comprar%20pasaporte%20senior" target="_blank" rel="noopener" class="btn btn-green" style="display: block; text-align: center; margin-top: 1rem;">Comprar aquí</a>
+                <div class="experience-card">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Museo Interactivo</h3>
+                    <p>Museo del café con experiencias sensoriales y educativas sobre el proceso del café.</p>
+                </div>
+                <div class="experience-card">
+                    <i class="fas fa-cable-car"></i>
+                    <h3>Teleférico y Tren</h3>
+                    <p>Teleférico con vistas panorámicas y tren del café con recorrido temático.</p>
                 </div>
             </div>
         </div>
@@ -637,7 +590,7 @@
     <!-- Tablas de Seguridad -->
     <section class="attraction-safety">
         <div class="container">
-            <h2 class="section-title">⚠️ Restricciones de Seguridad</h2>
+            <h2 class="section-title">⚠️ Información de Seguridad</h2>
             <div style="overflow-x: auto;">
                 <table class="safety-table">
                     <thead>
@@ -724,11 +677,12 @@
                 </div>
             </div>
             <div style="margin-top: 2rem; padding: 1rem; background: #e8f5e9; border-radius: 8px; border-left: 4px solid #2E5A36;">
-                <p><strong>🎁 Promociones especiales:</strong></p>
+                <p><strong>🎁 Información importante:</strong></p>
                 <ul>
                     <li>✨ Niños con estatura inferior a 90 cm entran GRATIS</li>
                     <li>🎂 Si es tu cumpleaños, ¡te regalamos el pasaporte múltiple GRATIS!</li>
                     <li>🚫 No se permite el ingreso de alimentos ni de mascotas</li>
+                    <li>🅿️ Tarifa Parqueadero: $8.000 COP (todo el día)</li>
                 </ul>
             </div>
         </div>
@@ -760,9 +714,6 @@
                     <p><strong>Tiempo:</strong> 3.5 horas aprox.</p>
                 </div>
             </div>
-            <div style="margin-top: 2rem; padding: 1rem; background: #fff3e0; border-radius: 8px; border-left: 4px solid #ff9800;">
-                <p><strong>🅿️ Tarifa Parqueadero:</strong> $8.000 COP (todo el día)</p>
-            </div>
         </div>
     </section>
 
@@ -788,8 +739,8 @@
                 </div>
                 <div class="tip-card">
                     <i class="fas fa-mobile-alt"></i>
-                    <h4>Compra Online</h4>
-                    <p>Para ahorrar tiempo y evitar filas, compre entradas ONLINE con nosotros.</p>
+                    <h4>Reserva con Nosotros</h4>
+                    <p>Para ahorrar tiempo y evitar filas, reserva tu experiencia completa con Quindío Travel.</p>
                 </div>
                 <div class="tip-card">
                     <i class="fas fa-utensils"></i>
@@ -805,19 +756,19 @@
         </div>
     </section>
 
-    <!-- Contacto Local Contextual -->
+    <!-- Información para Reserva -->
     <section class="attraction-contact">
         <div class="container">
-            <h2 class="section-title" style="color: white;">📞 Contacto y Reservas</h2>
-            <p style="text-align: center; margin-bottom: 2rem; color: rgba(255,255,255,0.9);">Reserva tus tickets para el Parque del Café con Quindío Travel RNT 18152</p>
+            <h2 class="section-title" style="color: white;">📞 Reserva tu Experiencia Completa</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: rgba(255,255,255,0.9);">El Parque del Café se incluye en varios de nuestros planes turísticos. Contáctanos para cotizar tu experiencia completa.</p>
             <div class="contact-options">
-                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20tickets%20para%20el%20Parque%20del%20Caf%C3%A9" target="_blank" rel="noopener">
+                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20un%20plan%20que%20incluya%20el%20Parque%20del%20Caf%C3%A9" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i> WhatsApp: 317 442 6044
                 </a>
-                <button onclick="alert('Función de llamada en desarrollo')">
-                    <i class="fas fa-phone"></i> Lo llamamos
-                </button>
-                <a href="mailto:gerencia@quindiotravel.net">
+                <a href="planes.html" style="background: white; color: var(--verde-cafe); padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease;">
+                    <i class="fas fa-list"></i> Ver Planes que incluyen Parque del Café
+                </a>
+                <a href="mailto:gerencia@quindiotravel.net" style="background: white; color: var(--verde-cafe); padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease;">
                     <i class="fas fa-envelope"></i> Email
                 </a>
             </div>
