@@ -73,7 +73,29 @@
             color: white;
             text-align: center;
         }
-        
+
+        .attraction-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .attraction-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .attraction-logo span:first-child {
+            color: var(--verde-cafe);
+        }
+
+        .attraction-logo span:last-child {
+            color: var(--marron-madera);
+        }
+
         .attraction-title {
             font-size: 3rem;
             font-weight: 800;
@@ -329,10 +351,19 @@
         }
         
         @media (max-width: 768px) {
+            .attraction-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .attraction-logo {
+                font-size: 1.5rem;
+            }
+
             .attraction-title {
                 font-size: 2rem;
             }
-            
+
             .attraction-badges {
                 flex-direction: column;
                 align-items: center;
@@ -455,21 +486,24 @@
         <div class="attraction-hero-overlay"></div>
         <div class="attraction-hero-content container">
             <div class="attraction-header">
-                <h1 class="attraction-title">🦋 Mariposario Jardín Botánico del Quindío</h1>
-                <div class="attraction-badges">
-                    <span class="attraction-badge">
-                        <i class="fas fa-clock"></i> 4 horas aprox.
-                    </span>
-                    <span class="attraction-badge">
-                        <i class="fas fa-map-marker-alt"></i> Armenia, Quindío
-                    </span>
-                    <span class="attraction-badge">
-                        <i class="fas fa-star"></i> 4.5/5 (1,200 reseñas)
-                    </span>
-                    <span class="attraction-badge">
-                        <i class="fas fa-certificate"></i> RNT 18152
-                    </span>
+                <div class="attraction-logo">
+                    <span>QUINDÍO</span><span>TRAVEL</span>
                 </div>
+                <h1 class="attraction-title">🦋 Mariposario Jardín Botánico del Quindío</h1>
+            </div>
+            <div class="attraction-badges">
+                <span class="attraction-badge">
+                    <i class="fas fa-clock"></i> 4 horas aprox.
+                </span>
+                <span class="attraction-badge">
+                    <i class="fas fa-map-marker-alt"></i> Armenia, Quindío
+                </span>
+                <span class="attraction-badge">
+                    <i class="fas fa-star"></i> 4.5/5 (1,200 reseñas)
+                </span>
+                <span class="attraction-badge">
+                    <i class="fas fa-certificate"></i> RNT 18152
+                </span>
             </div>
             <div class="attraction-description">
                 <p>¿Has estado en un recinto en forma de mariposa de 680 m2, entre jardines y caminos de agua donde vuelan más de 2000 mariposas de 50 especies diferentes? Visita el Mariposario y Jardín Botánico del Quindío para una experiencia de naturaleza y educación inolvidable.</p>

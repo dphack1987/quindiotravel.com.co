@@ -73,7 +73,29 @@
             color: white;
             text-align: center;
         }
-        
+
+        .attraction-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .attraction-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .attraction-logo span:first-child {
+            color: var(--verde-cafe);
+        }
+
+        .attraction-logo span:last-child {
+            color: var(--marron-madera);
+        }
+
         .attraction-title {
             font-size: 3rem;
             font-weight: 800;
@@ -363,10 +385,19 @@
         }
         
         @media (max-width: 768px) {
+            .attraction-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .attraction-logo {
+                font-size: 1.5rem;
+            }
+
             .attraction-title {
                 font-size: 2rem;
             }
-            
+
             .attraction-badges {
                 flex-direction: column;
                 align-items: center;
@@ -498,21 +529,24 @@
         <div class="attraction-hero-overlay"></div>
         <div class="attraction-hero-content container">
             <div class="attraction-header">
-                <h1 class="attraction-title">🚣 Balsaje por el Río La Vieja</h1>
-                <div class="attraction-badges">
-                    <span class="attraction-badge">
-                        <i class="fas fa-clock"></i> 5 horas
-                    </span>
-                    <span class="attraction-badge">
-                        <i class="fas fa-map-marker-alt"></i> Quimbaya - Montenegro, Quindío
-                    </span>
-                    <span class="attraction-badge">
-                        <i class="fas fa-star"></i> 4.8/5 (1,100 reseñas)
-                    </span>
-                    <span class="attraction-badge">
-                        <i class="fas fa-certificate"></i> RNT 18152
-                    </span>
+                <div class="attraction-logo">
+                    <span>QUINDÍO</span><span>TRAVEL</span>
                 </div>
+                <h1 class="attraction-title">🚣 Balsaje por el Río La Vieja</h1>
+            </div>
+            <div class="attraction-badges">
+                <span class="attraction-badge">
+                    <i class="fas fa-clock"></i> 5 horas
+                </span>
+                <span class="attraction-badge">
+                    <i class="fas fa-map-marker-alt"></i> Quimbaya - Montenegro, Quindío
+                </span>
+                <span class="attraction-badge">
+                    <i class="fas fa-star"></i> 4.8/5 (1,100 reseñas)
+                </span>
+                <span class="attraction-badge">
+                    <i class="fas fa-certificate"></i> RNT 18152
+                </span>
             </div>
             <div class="attraction-description">
                 <p>Experiencia cultural única en balsas de guadua por las aguas cristalinas del Río La Vieja. Recorrido de 5 horas con almuerzo campesino, guianza y observación de flora y fauna. Plan familiar apto para todas las edades.</p>
