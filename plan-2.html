@@ -25,6 +25,39 @@
     <link rel="canonical" href="https://quindiotravel.com.co/plan-2.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Script de detección de idioma -->
+    <script src="assets/js/language-detector.js" defer></script>
+    
+    <!-- WhatsApp Template Handler -->
+    <script src="assets/js/whatsapp-template-handler.js" defer></script>
+    
+    <style>
+    .language-selector {
+        display: flex;
+        gap: 5px;
+        margin-left: 20px;
+    }
+
+    .lang-btn {
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.3);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover {
+        background: rgba(255,255,255,0.2);
+    }
+
+    .lang-btn.active {
+        background: rgba(46, 90, 54, 0.9);
+        border-color: #2E5E36;
+    }
+    </style>
 
     <script type="application/ld+json">
     {
@@ -181,18 +214,27 @@
             </div>
             <nav class="nav-menu" id="nav-menu">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="planes.html" class="active">Planes</a></li>
-                    <li><a href="index.html#hoteles">Hoteles</a></li>
-                    <li><a href="index.html#experiencias">Experiencias</a></li>
+                    <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
+                    <li><a href="planes.html" class="active" data-i18n="nav.planes">Planes</a></li>
+                    <li><a href="index.html#hoteles" data-i18n="nav.hoteles">Hoteles</a></li>
+                    <li><a href="index.html#experiencias" data-i18n="nav.experiencias">Experiencias</a></li>
                     <li><a href="index.html#mapa">Mapa Turístico</a></li>
                     <li><a href="index.html#empresas">Empresas</a></li>
-                    <li><a href="index.html#blog">Blog</a></li>
-                    <li><a href="index.html#nosotros">Nosotros</a></li>
-                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="index.html#blog" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="index.html#nosotros" data-i18n="nav.nosotros">Nosotros</a></li>
+                    <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
+                <!-- Language Selector -->
+                <div class="language-selector-container" style="margin-right: 15px; display: inline-block; max-width: 180px;">
+                    <select id="language-selector" class="language-selector" aria-label="Seleccionar idioma / Select language" style="padding: 8px 12px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.5); background: rgba(46, 90, 54, 0.9); color: white; font-size: 14px; cursor: pointer; font-weight: 600; backdrop-filter: blur(10px); box-shadow: 0 2px 8px rgba(0,0,0,0.2); max-width: 100%; width: auto;">
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="pt">🇧🇷 Português</option>
+                        <option value="fr">🇫🇷 Français</option>
+                    </select>
+                </div>
                 <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
                 <a href="https://wa.me/573174426044" target="_blank" rel="noopener" class="btn-whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
             </div>
@@ -231,30 +273,30 @@
                 <a href="planes.html" class="btn btn-outline"><i class="fas fa-list"></i> Todos los planes</a>
             </div>
         </div>
-    <img src="assets/images/paisajes/palm-trees-misty-valley.jpg" alt="palm trees misty valley" class="content-image" loading="lazy">
-    <img src="assets/images/paisajes/valle-cocora-river-reflection.jpg" alt="valle cocora river reflection" class="content-image" loading="lazy">
-    <img src="assets/images/paisajes/colombian-coffee-fields.jpg" alt="colombian coffee fields" class="content-image" loading="lazy">
+    <img src="assets/images/paisajes/palm-trees-misty-valley.jpg" alt="Valle brumoso con palmas del Quindío" class="content-image" loading="lazy">
+    <img src="assets/images/paisajes/valle-cocora-river-reflection.jpg" alt="Reflejo del río en Valle de Cocora" class="content-image" loading="lazy">
+    <img src="assets/images/paisajes/colombian-coffee-fields.jpg" alt="Cafetales colombianos verdes" class="content-image" loading="lazy">
     </section>
 
     <section class="container section-white" style="padding: 40px 20px;">
         <h2 style="color: var(--verde-cafe); margin-bottom: 25px; text-align: center;"><i class="fas fa-camera"></i> Galería del Plan</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px;">
             <div style="position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <img src="assets/images/paisajes/56855.jpg" alt="Parque del Café" style="width: 100%; height: 200px; object-fit: cover;">
+                <img src="assets/images/alojamientos/finca-hotel-la-esmeralda/fachada.jpg" alt="Finca Hotel La Esmeralda - Fachada principal" style="width: 100%; height: 200px; object-fit: cover;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 15px; color: white;">
-                    <strong>Parque del Café</strong>
+                    <strong>Finca Hotel La Esmeralda</strong>
                 </div>
             </div>
             <div style="position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <img src="assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.jpg" alt="Cabañas La Esmeralda" style="width: 100%; height: 200px; object-fit: cover;">
+                <img src="assets/images/alojamientos/hotel-campestre-la-tata/habitacion-1.jpg" alt="Hotel Campestre La Tata - Habitaciones" style="width: 100%; height: 200px; object-fit: cover;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 15px; color: white;">
-                    <strong>Cabañas La Esmeralda</strong>
+                    <strong>Hotel Campestre La Tata</strong>
                 </div>
             </div>
             <div style="position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <img src="assets/images/alojamientos/finca-hotel-los-girasoles/Finca-los-Girasoles-7.jpg" alt="Finca Hotel Los Girasoles" style="width: 100%; height: 200px; object-fit: cover;">
+                <img src="assets/images/paisajes/coffee-plantation-sunset-colombia.jpg" alt="Atardecer en cafetales" style="width: 100%; height: 200px; object-fit: cover;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 15px; color: white;">
-                    <strong>Finca Hotel Los Girasoles</strong>
+                    <strong>Atardecer en Cafetales</strong>
                 </div>
             </div>
         </div>
