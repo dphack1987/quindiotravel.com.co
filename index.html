@@ -563,7 +563,7 @@
     /* Don Chucho Chat Styles */
     .don-chucho-chat-container {
         position: fixed;
-        bottom: 100px;
+        bottom: 20px;
         left: 20px;
         z-index: 1000;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -755,25 +755,7 @@
         }
     }
     
-    .chatbot-toggle {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-        cursor: pointer;
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-        transition: all 0.3s ease;
-    }
     
-    .chatbot-toggle:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-    }
     
     .chatbot-header {
         background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
@@ -1203,62 +1185,7 @@
         padding: 6px 12px;
     }
 
-    /* Don Chucho Bottom Left Button */
-    .don-chucho-bottom-left {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        z-index: 998;
-    }
     
-    .don-chucho-link-left {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #8B4513, #D2691E);
-        box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: visible;
-        text-decoration: none;
-    }
-    
-    .don-chucho-link-left:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
-    }
-    
-    .don-chucho-icon-left {
-        font-size: 32px;
-        color: white;
-        line-height: 1;
-    }
-    
-    .don-chucho-tooltip-left {
-        position: absolute;
-        left: 75px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: linear-gradient(135deg, #8B4513, #D2691E);
-        color: white;
-        padding: 10px 15px;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        white-space: nowrap;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    
-    .don-chucho-link-left:hover .don-chucho-tooltip-left {
-        opacity: 1;
-        visibility: visible;
-    }
     
     /* Improved Flexible Plans Section */
     .flexible-plans-section {
@@ -1427,7 +1354,7 @@
     <script src="assets/js/language-detector.js" defer></script>
     
     <!-- Don Chucho Chat System -->
-    <script src="assets/js/don-chucho-chat.min.js" defer></script>
+    <script src="assets/js/don-chucho-chat.js" defer></script>
     
     <!-- WhatsApp Template Handler -->
     <script src="assets/js/whatsapp-template-handler.js" defer></script>
