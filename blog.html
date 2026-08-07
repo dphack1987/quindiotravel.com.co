@@ -19,6 +19,9 @@
     
     <!-- WhatsApp Template Handler -->
     <script src="assets/js/whatsapp-template-handler.js" defer></script>
+    
+    <!-- Script de detección de idioma -->
+    <script src="assets/js/language-detector.js" defer></script>
 </head>
 <body>
     <header class="main-header">
@@ -29,18 +32,27 @@
                 </a>
             </div>
             <nav class="main-nav">
-                <a href="index.html">Inicio data-i18n="nav.inicio"</a>
-                <a href="planes.html">Planes data-i18n="nav.planes"</a>
-                <a href="index.html#hoteles">Hoteles data-i18n="nav.hoteles"</a>
+                <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+                <a href="planes.html" data-i18n="nav.planes">Planes</a>
+                <a href="index.html#hoteles" data-i18n="nav.hoteles">Hoteles</a>
                 <a href="blog.html" class="active">Blog</a>
             </nav>
+            <!-- Language Selector -->
+            <div class="language-selector-container" style="margin-left: 15px; display: inline-block; max-width: 180px;">
+                <select id="language-selector" class="language-selector" aria-label="Seleccionar idioma / Select language" style="padding: 8px 12px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.5); background: rgba(46, 90, 54, 0.9); color: white; font-size: 14px; cursor: pointer; font-weight: 600; backdrop-filter: blur(10px); box-shadow: 0 2px 8px rgba(0,0,0,0.2); max-width: 100%; width: auto;">
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="pt">🇧🇷 Português</option>
+                    <option value="fr">🇫🇷 Français</option>
+                </select>
+            </div>
         </div>
     </header>
 
     <nav class="breadcrumb-nav" aria-label="Breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
-                <li><a href="index.html">Inicio data-i18n="nav.inicio"</a></li>
+                <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
                 <li>Blog</li>
             </ol>
         </div>
