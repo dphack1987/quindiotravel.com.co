@@ -10,7 +10,7 @@ const planesData = [
     categoria: "Escapada",
     badge: "Escapada Rápida",
     detalleUrl: "plan-1.html",
-    descripcion: "1 noche de alojamiento en finca hotel, desayunos y cenas, Pasaporte Múltiple al Parque del Café y Pasaporte Terra a PANACA. Ideal para fin de semana corto.",
+    descripcion: "2 días / 1 noche de alojamiento en finca hotel, desayuno y cena incluidos, Pasaporte Múltiple al Parque del Café y Pasaporte Terra a PANACA. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia. Ideal para fin de semana corto.",
     resumenPrograma: [
       "Día 1: Llegada a Armenia, check-in, tarde en PANACA",
       "Día 2: Parque del Café completo con pasaporte múltiple, regreso"
@@ -18,7 +18,12 @@ const planesData = [
     atractivosIncluidos: ["Parque del Café", "PANACA"],
     alojamientosAsociados: ["hotel-campestre-la-tata", "de-la-vega-hotel-campestre", "finca-hotel-dorada"],
     precioSinTransporte: 450000,
-    precioConTransporte: 580000
+    precioConTransporte: 580000,
+    preciosOcupacion: {
+      doble: 520000,
+      triple: 480000,
+      cuadruple: 450000
+    }
   },
   {
     id: "plan-2",
@@ -30,7 +35,7 @@ const planesData = [
     categoria: "Económico",
     badge: "Más Popular",
     detalleUrl: "plan-2.html",
-    descripcion: "2 noches de alojamiento en finca hotel tradicional, alimentación completa (desayunos y cenas), acceso a los parques temáticos principales y recorrido por pueblos tradicionales.",
+    descripcion: "3 días / 2 noches de alojamiento en finca hotel tradicional, desayunos y cenas incluidos, acceso a los parques temáticos principales y recorrido por pueblos tradicionales. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia.",
     resumenPrograma: [
       "Día 1: Llegada, check-in, recorrido por Pueblo Tapao o Montenegro",
       "Día 2: Parque del Café día completo + show de café",
@@ -39,7 +44,12 @@ const planesData = [
     atractivosIncluidos: ["Parque del Café", "PANACA", "Pueblo Tapao"],
     alojamientosAsociados: ["cabanas-la-esmeralda", "hotel-campestre-la-tata"],
     precioSinTransporte: 680000,
-    precioConTransporte: 820000
+    precioConTransporte: 820000,
+    preciosOcupacion: {
+      doble: 750000,
+      triple: 700000,
+      cuadruple: 680000
+    }
   },
   {
     id: "plan-3",
@@ -51,7 +61,7 @@ const planesData = [
     categoria: "Estándar",
     badge: "Experiencia Completa",
     detalleUrl: "plan-3.html",
-    descripcion: "3 noches de alojamiento, Parques del Café y PANACA, Valle de Cocora, Salento, Filandia y RECUCA. El programa favorito para conocer lo esencial del Quindío.",
+    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Parques del Café y PANACA, Valle de Cocora, Salento, Filandia y RECUCA. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia. El programa favorito para conocer lo esencial del Quindío.",
     resumenPrograma: [
       "Día 1: Llegada Armenia, check-in, bienvenida",
       "Día 2: Salento, Valle de Cocora con palma de cera, caminata",
@@ -61,7 +71,12 @@ const planesData = [
     atractivosIncluidos: ["Parque del Café", "PANACA", "Salento", "Valle de Cocora", "Filandia", "RECUCA"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "cabanas-la-esmeralda", "finca-hotel-dorada"],
     precioSinTransporte: 979000,
-    precioConTransporte: 1152000
+    precioConTransporte: 1152000,
+    preciosOcupacion: {
+      doble: 1150000,
+      triple: 1050000,
+      cuadruple: 979000
+    }
   },
   {
     id: "plan-4",
@@ -73,7 +88,7 @@ const planesData = [
     categoria: "Estándar Plus",
     badge: "Termales Incluidos",
     detalleUrl: "plan-4.html",
-    descripcion: "3 noches de alojamiento, parques temáticos combinados con un día completo de relajación en los Termales de Santa Rosa de Cabal. Ideal para familias y parejas.",
+    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, parques temáticos combinados con un día completo de relajación en los Termales de Santa Rosa de Cabal. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia. Ideal para familias y parejas.",
     resumenPrograma: [
       "Día 1: Llegada, check-in, bienvenida y descanso",
       "Día 2: Termales de Santa Rosa de Cabal todo el día",
@@ -83,7 +98,12 @@ const planesData = [
     atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa", "Parque Los Arrieros"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "hotel-campestre-cafe-cafe"],
     precioSinTransporte: 979000,
-    precioConTransporte: 1273000
+    precioConTransporte: 1273000,
+    preciosOcupacion: {
+      doble: 1270000,
+      triple: 1120000,
+      cuadruple: 979000
+    }
   },
   {
     id: "plan-5",
@@ -95,7 +115,7 @@ const planesData = [
     categoria: "Cultural",
     badge: "Vivencial Cultural",
     detalleUrl: "plan-5.html",
-    descripcion: "3 noches con enfoque cultural vivencial en las raíces de la arriería quindiana. Incluye experiencias con mulas, Finca tradicional, Recuca y Parque Los Arrieros.",
+    descripcion: "4 días / 3 noches con enfoque cultural vivencial en las raíces de la arriería quindiana, desayunos y cenas incluidos. Incluye experiencias con mulas, Finca tradicional, Recuca y Parque Los Arrieros. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia.",
     resumenPrograma: [
       "Día 1: Llegada y check-in, charla cultura cafetera",
       "Día 2: Parque Los Arrieros + experiencia de arriería con mulas",
@@ -105,7 +125,12 @@ const planesData = [
     atractivosIncluidos: ["RECUCA", "Parque Los Arrieros", "Salento", "Finca Cafetera Tradicional"],
     alojamientosAsociados: ["cabanas-la-esmeralda", "finca-hotel-los-girasoles"],
     precioSinTransporte: 950000,
-    precioConTransporte: 1200000
+    precioConTransporte: 1200000,
+    preciosOcupacion: {
+      doble: 1200000,
+      triple: 1080000,
+      cuadruple: 950000
+    }
   },
   {
     id: "plan-6",
@@ -128,7 +153,12 @@ const planesData = [
     atractivosIncluidos: ["Parque del Café", "PANACA", "Valle de Cocora", "Salento", "Filandia", "RECUCA", "Termales Santa Rosa", "Parque Los Arrieros"],
     alojamientosAsociados: ["hotel-campestre-cafe-cafe", "hotel-campestre-las-camelias", "finca-hotel-los-girasoles"],
     precioSinTransporte: 1150000,
-    precioConTransporte: 1473000
+    precioConTransporte: 1473000,
+    preciosOcupacion: {
+      doble: 1650000,
+      triple: 1550000,
+      cuadruple: 1473000
+    }
   },
   {
     id: "plan-7",
@@ -140,7 +170,7 @@ const planesData = [
     categoria: "Premium",
     badge: "VIP",
     detalleUrl: "planes.html",
-    descripcion: "Experiencia premium con alojamientos VIP, transporte exclusivo placa blanca, asistencia bilingüe y acceso prioritario a atractivos. Incluye experiencias exclusivas.",
+    descripcion: "4 días / 3 noches con desayunos y cenas incluidos. Experiencia premium con alojamientos VIP, transporte exclusivo placa blanca desde Aeropuerto Edén o Terminal de Transportes de Armenia, asistencia bilingüe y acceso prioritario a atractivos. Incluye experiencias exclusivas.",
     resumenPrograma: [
       "Día 1: Llegada VIP, check-in en hotel 5 estrellas",
       "Día 2: Parque del Café con acceso prioritario",
@@ -162,7 +192,7 @@ const planesData = [
     categoria: "Empresarial",
     badge: "Corporativo",
     detalleUrl: "planes.html",
-    descripcion: "Programa especial para empresas y grupos. Incluye actividades de team building, salas de conferencias, alimentación ejecutiva y transporte corporativo.",
+    descripcion: "3 días / 2 noches con desayunos y cenas incluidos. Programa especial para empresas y grupos desde Aeropuerto Edén o Terminal de Transportes de Armenia. Incluye actividades de team building, salas de conferencias, alimentación ejecutiva y transporte corporativo.",
     resumenPrograma: [
       "Día 1: Llegada, check-in corporativo, conferencia inaugural",
       "Día 2: Actividades team building en finca cafetera",

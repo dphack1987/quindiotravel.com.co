@@ -4249,14 +4249,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     background: linear-gradient(135deg, #25D366, #128C7E);
     color: var(--blanco);
-    padding: 15px 30px;
-    border-radius: 12px;
+    padding: 10px 20px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: all 0.3s;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }

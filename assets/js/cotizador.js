@@ -95,21 +95,27 @@ function actualizarUI() {
   const displayPersona = document.getElementById('precio-persona');
   const displayTotal = document.getElementById('precio-total');
   const displayDestinos = document.getElementById('destinos-extra');
+  const whatsappBtn = document.getElementById('cotizador-whatsapp-btn');
 
   if (!selectPlan || !selectCategoria || !selectPax) return;
 
   // Obtener destinos seleccionados si el elemento existe
   let destinosSeleccionados = [];
+  let destinosNombres = [];
   if (selectDestinos) {
     if (selectDestinos.tagName === 'SELECT') {
       for (let i = 0; i < selectDestinos.options.length; i++) {
         if (selectDestinos.options[i].selected) {
           destinosSeleccionados.push(selectDestinos.options[i].value);
+          destinosNombres.push(selectDestinos.options[i].text);
         }
       }
     } else {
       const checks = selectDestinos.querySelectorAll('input[type="checkbox"]:checked');
-      checks.forEach(check => destinosSeleccionados.push(check.value));
+      checks.forEach(check => {
+        destinosSeleccionados.push(check.value);
+        destinosNombres.push(check.nextElementSibling.textContent);
+      });
     }
   }
 
@@ -132,6 +138,25 @@ function actualizarUI() {
     } else if (displayDestinos) {
       displayDestinos.innerText = "";
     }
+  }
+
+  // Actualizar mensaje de WhatsApp con destinos seleccionados
+  if (whatsappBtn) {
+    const planNombre = selectPlan.options[selectPlan.selectedIndex].text;
+    const categoriaNombre = selectCategoria.options[selectCategoria.selectedIndex].text;
+    const paxCount = selectPax.value;
+    
+    let mensaje = `Hola Quindío Travel 🌿, deseo cotizar el ${planNombre} para ${paxCount} personas.\n`;
+    mensaje += `Categoría de alojamiento: ${categoriaNombre}\n`;
+    
+    if (destinosNombres.length > 0) {
+      mensaje += `Destinos adicionales seleccionados: ${destinosNombres.join(', ')}\n`;
+    }
+    
+    mensaje += `Precio estimado: ${res.formateadoTotal}\n`;
+    mensaje += `¿Podrían ayudarme con la disponibilidad y confirmación?`;
+    
+    whatsappBtn.href = `https://wa.me/573174426044?text=${encodeURIComponent(mensaje)}`;
   }
 }
 
