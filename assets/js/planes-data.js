@@ -142,7 +142,7 @@ const planesData = [
     categoria: "Premium",
     badge: "Todo Incluido VIP",
     detalleUrl: "plan-6.html",
-    descripcion: "La experiencia definitiva de 5 días y 4 noches. Abrarca TODOS los atractivos del Quindío: parques temáticos, termales, RECUCA, pueblos patrimonio, y el Valle de Cocora con caminata guiada.",
+    descripcion: "La experiencia definitiva de 5 días y 4 noches. Abrarca TODOS los atractivos del Quindío: parques temáticos, termales, RECUCA, pueblos patrimonio, y el Valle de Cocora con caminata guiada. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia.",
     resumenPrograma: [
       "Día 1: Llegada Armenia, check-in, noche de bienvenida",
       "Día 2: Parque del Café completo + show nocturno",
