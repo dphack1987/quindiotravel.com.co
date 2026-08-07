@@ -1645,7 +1645,7 @@
         "@context": "https://schema.org",
         "@type": "TravelAgency",
         "name": "Quindío Travel",
-        "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
+        "image": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
         "url": "https://quindiotravel.com.co",
         "telephone": "+57-317-4426044",
         "address": {
@@ -1715,7 +1715,7 @@
                         "provider": {
                             "@type": "TravelAgency",
                             "name": "Quindío Travel",
-                            "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
+                            "image": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
                             "telephone": "+57-317-4426044",
                             "url": "https://quindiotravel.com.co"
                         }
@@ -1731,7 +1731,7 @@
                         "provider": {
                             "@type": "TravelAgency",
                             "name": "Quindío Travel",
-                            "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
+                            "image": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
                             "telephone": "+57-317-4426044",
                             "url": "https://quindiotravel.com.co"
                         }
@@ -1832,7 +1832,7 @@
         "provider": {
             "@type": "TravelAgency",
             "name": "Quindío Travel",
-            "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
+            "image": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
             "telephone": "+57-317-4426044",
             "url": "https://quindiotravel.com.co"
         },
@@ -1911,8 +1911,8 @@
         "name": "Quindío Travel",
         "legalName": "Quindío Travel S.A.",
         "url": "https://quindiotravel.com.co",
-        "logo": "https://quindiotravel.com.co/logo_quindio_travel.png",
-        "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
+        "logo": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
+        "image": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
         "telephone": "+57-317-4426044",
         "foundingDate": "2010",
         "founders": [
@@ -2106,7 +2106,7 @@
         "@context": "https://schema.org",
         "@type": "TravelAgency",
         "name": "Quindío Travel",
-        "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
+        "image": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
         "review": [
             {
                 "@type": "Review",
@@ -2262,8 +2262,8 @@
             "value": "18152"
         },
         "url": "https://quindiotravel.com.co",
-        "logo": "https://quindiotravel.com.co/logo_quindio_travel.png",
-        "image": "https://quindiotravel.com.co/logo_quindio_travel.png",
+        "logo": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
+        "image": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
         "telephone": "+57-317-4426044",
         "description": "Operador turístico especializado en el Eje Cafetero colombiano. RNT 18152.",
         "address": {
@@ -3364,7 +3364,7 @@
         <div class="container nav-container">
             <div class="logo">
                 <a href="index.html" aria-label="Inicio Quindío Travel" style="display: flex; align-items: center; text-decoration: none;">
-                    <span style="font-size: 1.8rem; font-weight: 700; color: white; text-decoration: none;">🌿 Quindío Travel</span>
+                    <img src="assets/images/logo_quindio_travel.png" alt="Quindío Travel Logo" style="height: 50px; width: auto; max-width: 200px;">
                 </a>
             </div>
             <nav class="nav-menu" id="nav-menu" aria-label="Menú principal">
@@ -5383,7 +5383,24 @@
         // Funciones para el formulario multi-step
         let currentStepForm = 1;
         const totalStepsForm = 4;
-        
+
+        // Agregar event listeners a los botones de pasos
+        document.addEventListener('DOMContentLoaded', function() {
+            const stepButtons = document.querySelectorAll('[data-step-button]');
+            stepButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const action = this.getAttribute('data-step-button');
+                    const targetStep = parseInt(this.getAttribute('data-target-step'));
+                    
+                    if (action === 'next') {
+                        nextStep(targetStep);
+                    } else if (action === 'prev') {
+                        prevStep(targetStep);
+                    }
+                });
+            });
+        });
+
         function nextStep(step) {
             // Validar paso actual antes de continuar
             if (!validateStep(currentStepForm)) {
