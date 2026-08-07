@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://quindiotravel.com.co</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -504,6 +504,72 @@
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/panaca.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/termales-santa-rosa.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/recuca.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/coffee-tour-armenia.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/mariposario-jardin-botanico.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/cabalgatas-quindio.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/parque-los-arrieros.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/balsaje-rio-la-vieja.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/laberinto-mil-caminos.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/granja-mama-lulu.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/jeep-panoramico.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://quindiotravel.com.co/programmatic-pages/tour-eje-cafetero-ciclismo-2026.html</loc>
