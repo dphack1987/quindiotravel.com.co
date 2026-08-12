@@ -265,8 +265,8 @@ function obtenerParametroURL(nombre) {
 }
 
 // Función para renderizar los planes dinámicamente en el DOM
-function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all") {
-  const contenedor = document.getElementById("catalogo-planes");
+function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", contenedorId = "catalogo-planes") {
+  const contenedor = document.getElementById(contenedorId);
   if (!contenedor) return;
 
   contenedor.innerHTML = "";

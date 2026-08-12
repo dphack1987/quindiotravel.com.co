@@ -22,7 +22,13 @@ const translations = {
         'footer.rnt': "RNT:",
         'footer.location': "Ubicación:",
         'footer.quick_links': "Enlaces Rápidos",
-        'footer.destinations': "Destinos Populares"
+        'footer.destinations': "Destinos Populares",
+        'chat.greeting': "🤠 ¡Hola, compadre! Soy Don Chucho, tu guía del Eje Cafetero. Estoy aquí para ayudarte a planear el viaje perfecto al Quindío. ¿Qué te gustaría saber?",
+        'chat.placeholder': "Escribe tu mensaje...",
+        'chat.quick.planes': "🗺️ Ver Planes",
+        'chat.quick.precios': "💰 Precios",
+        'chat.quick.destinos': "🏛️ Destinos",
+        'chat.quick.contacto': "📞 Contacto"
     },
     en: {
         'nav.inicio': "Home",
@@ -44,7 +50,13 @@ const translations = {
         'footer.rnt': "RNT:",
         'footer.location': "Location:",
         'footer.quick_links': "Quick Links",
-        'footer.destinations': "Popular Destinations"
+        'footer.destinations': "Popular Destinations",
+        'chat.greeting': "🤠 Hello, traveler! I'm Don Chucho, your Coffee Axis guide. I'm here to help you plan the perfect trip to Quindío. What would you like to know?",
+        'chat.placeholder': "Type your message...",
+        'chat.quick.planes': "🗺️ View Plans",
+        'chat.quick.precios': "💰 Prices",
+        'chat.quick.destinos': "🏛️ Destinations",
+        'chat.quick.contacto': "📞 Contact"
     },
     pt: {
         'nav.inicio': "Início",
@@ -66,7 +78,13 @@ const translations = {
         'footer.rnt': "RNT:",
         'footer.location': "Localização:",
         'footer.quick_links': "Links Rápidos",
-        'footer.destinations': "Destinos Populares"
+        'footer.destinations': "Destinos Populares",
+        'chat.greeting': "🤠 Olá, viajante! Sou Don Chucho, seu guia do Eixo Cafeeiro. Estou aqui para ajudar a planejar a viagem perfeita para Quindío. O que você gostaria de saber?",
+        'chat.placeholder': "Escreva sua mensagem...",
+        'chat.quick.planes': "🗺️ Ver Planos",
+        'chat.quick.precios': "💰 Preços",
+        'chat.quick.destinos': "🏛️ Destinos",
+        'chat.quick.contacto': "📞 Contato"
     },
     fr: {
         'nav.inicio': "Accueil",
@@ -78,7 +96,7 @@ const translations = {
         'nav.blog': "Blog",
         'nav.nosotros': "À propos",
         'nav.contacto': "Contact",
-        'experiencias.title': "✨ Expériences Inoubliables de l'Axes du Café",
+        'experiencias.title': "✨ Expériences Inoubliables de l'Axe du Café",
         'experiencias.subtitle': "Vivez les attractions les plus emblématiques avec des guides locaux qui connaissent chaque coin de Quindío.",
         'footer.quindio_travel': "Quindío Travel",
         'footer.description': "Nous ne vendons pas seulement des voyages; nous sommes le guide officiel pour découvrir Quindío.",
@@ -88,17 +106,22 @@ const translations = {
         'footer.rnt': "RNT:",
         'footer.location': "Emplacement:",
         'footer.quick_links': "Liens Rapides",
-        'footer.destinations': "Destinations Populaires"
+        'footer.destinations': "Destinations Populaires",
+        'chat.greeting': "🤠 Bonjour, voyageur ! Je suis Don Chucho, ton guide de l'Axe du Café. Je suis là pour t'aider à planifier le voyage parfait à Quindío. Que souhaites-tu savoir ?",
+        'chat.placeholder': "Tapez votre message...",
+        'chat.quick.planes': "🗺️ Voir les plans",
+        'chat.quick.precios': "💰 Tarifs",
+        'chat.quick.destinos': "🏛️ Destinations",
+        'chat.quick.contacto': "📞 Contact"
     }
 };
+
+const supportedLangs = ['es', 'en', 'pt', 'fr'];
 
 // Detectar idioma del navegador
 function detectBrowserLanguage() {
     const browserLang = navigator.language || navigator.userLanguage;
-    const langCode = browserLang.split('-')[0]; // Obtener solo el código de idioma (es, en, pt)
-    
-    // Mapeo de idiomas soportados
-    const supportedLangs = ['es', 'en', 'pt'];
+    const langCode = browserLang.split('-')[0]; // Obtener solo el código de idioma
     
     if (supportedLangs.includes(langCode)) {
         return langCode;
@@ -108,10 +131,17 @@ function detectBrowserLanguage() {
     return 'es';
 }
 
-// Obtener idioma almacenado o detectar
+// Obtener idioma almacenado, query param o detectar
 function getLanguage() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const requestedLang = urlParams.get('lang');
+    if (requestedLang && supportedLangs.includes(requestedLang)) {
+        localStorage.setItem('quindio-language', requestedLang);
+        return requestedLang;
+    }
+
     const storedLang = localStorage.getItem('quindio-language');
-    if (storedLang) {
+    if (storedLang && supportedLangs.includes(storedLang)) {
         return storedLang;
     }
     

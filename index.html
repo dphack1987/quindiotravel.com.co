@@ -626,19 +626,6 @@
         font-size: 20px;
     }
 
-    .don-chucho-close {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        opacity: 0.8;
-        transition: opacity 0.3s ease;
-    }
-
-    .don-chucho-close:hover {
-        opacity: 1;
-    }
 
     .don-chucho-body {
         display: none;
@@ -1197,106 +1184,144 @@
     
     /* Improved Flexible Plans Section */
     .flexible-plans-section {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #f4f7fb;
         padding: 4rem 0;
         margin: 3rem 0;
-        color: white;
+        color: #1f3d2d;
     }
     
     .flexible-plans-header {
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
     }
     
     .flexible-plans-header h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-size: 2.2rem;
+        margin-bottom: 0.75rem;
+        color: #1f3d2d;
     }
     
     .flexible-plans-header p {
-        font-size: 1.2rem;
-        opacity: 0.9;
+        font-size: 1rem;
+        color: #455a53;
+        max-width: 720px;
+        margin: 0 auto;
+        line-height: 1.7;
     }
     
     .flexible-plans-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
         margin-bottom: 2rem;
     }
     
     .flexible-step-card {
-        background: rgba(255,255,255,0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
+        background: white;
+        border: 1px solid rgba(46, 90, 54, 0.08);
+        border-radius: 24px;
         padding: 2rem;
-        text-align: center;
-        transition: all 0.3s ease;
+        text-align: left;
+        box-shadow: 0 16px 35px rgba(24, 57, 38, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
     .flexible-step-card:hover {
-        transform: translateY(-5px);
-        background: rgba(255,255,255,0.15);
+        transform: translateY(-8px);
+        box-shadow: 0 24px 45px rgba(24, 57, 38, 0.12);
     }
     
     .step-icon {
-        font-size: 3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        background: #e8f1ea;
+        color: #2e5a36;
+        font-size: 1.9rem;
         margin-bottom: 1rem;
     }
     
     .step-title {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
+        font-size: 1.4rem;
+        margin-bottom: 1.25rem;
+        font-weight: 700;
+        color: #1f3d2d;
     }
     
     .attractions-grid-clean,
     .duration-options-clean,
     .accommodation-options-clean {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        text-align: left;
+        display: grid;
+        gap: 0.85rem;
     }
     
     .attraction-item,
     .duration-item,
     .accommodation-item {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
         align-items: center;
-        gap: 0.75rem;
-        padding: 0.75rem;
-        background: rgba(255,255,255,0.1);
-        border-radius: 10px;
+        padding: 1rem 1.1rem;
+        background: #f8fbf8;
+        border: 1px solid rgba(46, 90, 54, 0.08);
+        border-radius: 16px;
+        color: #2e5a36;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: background 0.25s ease, border-color 0.25s ease;
     }
     
     .attraction-item:hover,
     .duration-item:hover,
     .accommodation-item:hover {
-        background: rgba(255,255,255,0.2);
+        background: #eef6ef;
+        border-color: rgba(46, 90, 54, 0.18);
+    }
+    
+    .attraction-item input,
+    .duration-item input,
+    .accommodation-item input {
+        accent-color: #2e5a36;
+    }
+    
+    .people-input-clean input {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 16px;
+        border: 1px solid rgba(46, 90, 54, 0.16);
+        background: white;
+        color: #1f3d2d;
+        font-size: 1rem;
+    }
+    
+    .people-input-clean small {
+        color: #66756b;
     }
     
     .flexible-cta {
         text-align: center;
+        margin-top: 10px;
     }
     
     .btn-generate-plan {
-        background: white;
-        color: #667eea;
+        background: #2e5a36;
+        color: white;
         border: none;
         padding: 1rem 2.5rem;
-        border-radius: 50px;
-        font-size: 1.1rem;
+        border-radius: 999px;
+        font-size: 1.05rem;
         font-weight: 700;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 12px 30px rgba(46, 90, 54, 0.18);
     }
     
     .btn-generate-plan:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transform: translateY(-3px);
+        box-shadow: 0 18px 35px rgba(46, 90, 54, 0.22);
     }
     
     @media (max-width: 768px) {
@@ -3579,11 +3604,12 @@
         </div>
         
         <script>
-            // Cargar planes desde planes.html al home
+            // Cargar planes desde planes.html al home con las mismas cards de planes
             document.addEventListener('DOMContentLoaded', function() {
                 const homePlansGrid = document.getElementById('planes-home-grid');
-                if (homePlansGrid) {
-                    // Agregar enlace a planes.html
+                if (homePlansGrid && typeof renderizarPlanes === 'function') {
+                    renderizarPlanes('all', 'all', 'planes-home-grid');
+
                     const viewAllLink = document.createElement('div');
                     viewAllLink.className = 'view-all-plans';
                     viewAllLink.style.textAlign = 'center';
@@ -4915,9 +4941,6 @@
                 <span style="font-size: 24px;">🤠</span>
                 <span>🤠 Don Chucho</span>
             </div>
-            <button class="don-chucho-close" onclick="event.stopPropagation(); toggleDonChucho()">
-                <i class="fas fa-times"></i>
-            </button>
         </div>
         <div class="don-chucho-body" id="don-chucho-body">
             <div class="don-chucho-messages" id="don-chucho-messages">
