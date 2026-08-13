@@ -2,28 +2,28 @@ const fs = require('fs');
 
 const preciosPorPlan = {
     'plan-3.html': {
-        economico: { doble: 1150000, triple: 1050000, cuadruple: 979000 },
-        intermedio: { doble: 1150000, triple: 1050000, cuadruple: 979000 },
-        intermedio_vip: { doble: 1150000, triple: 1050000, cuadruple: 979000 },
-        vip: { doble: 1150000, triple: 1050000, cuadruple: 979000 }
+        economico: { doble: 1385000, triple: 1170000, cuadruple: 1050000 },
+        intermedio: { doble: 1440000, triple: 1215000, cuadruple: 1150000 },
+        intermedio_vip: { doble: 1865000, triple: 1650000, cuadruple: 1530000 },
+        vip: { doble: 3000000, triple: 2660000, cuadruple: 2490000 }
     },
     'plan-4.html': {
-        economico: { doble: 1270000, triple: 1120000, cuadruple: 979000 },
-        intermedio: { doble: 1270000, triple: 1120000, cuadruple: 979000 },
-        intermedio_vip: { doble: 1270000, triple: 1120000, cuadruple: 979000 },
-        vip: { doble: 1270000, triple: 1120000, cuadruple: 979000 }
+        economico: { doble: 1495000, triple: 1250000, cuadruple: 1125000 },
+        intermedio: { doble: 1550000, triple: 1295000, cuadruple: 1160000 },
+        intermedio_vip: { doble: 1990000, triple: 1730000, cuadruple: 1590000 },
+        vip: { doble: 3120000, triple: 2740000, cuadruple: 2550000 }
     },
     'plan-5.html': {
-        economico: { doble: 1200000, triple: 1080000, cuadruple: 950000 },
-        intermedio: { doble: 1200000, triple: 1080000, cuadruple: 950000 },
-        intermedio_vip: { doble: 1200000, triple: 1080000, cuadruple: 950000 },
-        vip: { doble: 1200000, triple: 1080000, cuadruple: 950000 }
+        economico: { doble: 1297000, triple: 1120000, cuadruple: 1020000 },
+        intermedio: { doble: 1260000, triple: 1160000, cuadruple: 1060000 },
+        intermedio_vip: { doble: 1795000, triple: 1590000, cuadruple: 1490000 },
+        vip: { doble: 2920000, triple: 2600000, cuadruple: 2450000 }
     },
     'plan-6.html': {
-        economico: { doble: 1650000, triple: 1550000, cuadruple: 1473000 },
-        intermedio: { doble: 1650000, triple: 1550000, cuadruple: 1473000 },
-        intermedio_vip: { doble: 1650000, triple: 1550000, cuadruple: 1473000 },
-        vip: { doble: 1650000, triple: 1550000, cuadruple: 1473000 }
+        economico: { doble: 1800000, triple: 1520000, cuadruple: 1380000 },
+        intermedio: { doble: 1880000, triple: 1580000, cuadruple: 1430000 },
+        intermedio_vip: { doble: 2465000, triple: 2150000, cuadruple: 1995000 },
+        vip: { doble: 3960000, triple: 3510000, cuadruple: 3280000 }
     }
 };
 
