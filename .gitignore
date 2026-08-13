@@ -47,6 +47,7 @@ Thumbs.db
 *.bak
 *.backup
 *~
+*~$*
 
 # Logs
 *.log
