@@ -4,37 +4,73 @@
       "economica": 425000,
       "intermedia": 442000,
       "intermedia_vip": 590000,
-      "vip": 645000
+      "vip": 645000,
+      "ninos_2_10": {
+        "economica": 596000,
+        "intermedia": 610000,
+        "intermedia_vip": 748000,
+        "vip": 935000
+      }
     },
     "plan2_3d2n": {
       "economica": 562000,
       "intermedia": 598000,
       "intermedia_vip": 895000,
-      "vip": 1650000
+      "vip": 1650000,
+      "ninos_2_10": {
+        "economica": 729000,
+        "intermedia": 759000,
+        "intermedia_vip": 1034000,
+        "vip": 1674000
+      }
     },
     "plan3_4d3n": {
       "economica": 777000,
       "intermedia": 835000,
       "intermedia_vip": 1280000,
-      "vip": 2400000
+      "vip": 2400000,
+      "ninos_2_10": {
+        "economica": 1038000,
+        "intermedia": 1138000,
+        "intermedia_vip": 1515000,
+        "vip": 2470000
+      }
     },
     "plan4_4d3n": {
       "economica": 798000,
       "intermedia": 860000,
       "intermedia_vip": 1297000,
-      "vip": 2415000
+      "vip": 2415000,
+      "ninos_2_10": {
+        "economica": 1110000,
+        "intermedia": 1145000,
+        "intermedia_vip": 1570000,
+        "vip": 2510000
+      }
     },
     "plan5_4d3n": {
       "economica": 788000,
       "intermedia": 845000,
       "intermedia_vip": 1285000,
-      "vip": 2400000
+      "vip": 2400000,
+      "ninos_2_10": {
+        "economica": 998000,
+        "intermedia": 1040000,
+        "intermedia_vip": 1460000,
+        "vip": 2430000
+      }
     },
     "plan6_5d4n": {
       "economica": 1008000,
       "intermedia": 1090000,
       "intermedia_vip": 1670000,
-      "vip": 3180000
+      "vip": 3180000,
+      "ninos_2_10": {
+        "economica": 1360000,
+        "intermedia": 1400000,
+        "intermedia_vip": 1950000,
+        "vip": 3240000
+      }
     }
   },
   "categorias": {
