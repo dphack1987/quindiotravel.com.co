@@ -45,18 +45,32 @@ function obtenerPrecioOficial(planKey, categoria) {
 
 window.obtenerPrecioOficial = obtenerPrecioOficial;
 
-function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados) {
+function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, ocupacion = 'individual', incluirTransporte = false) {
   if (!window.QUINDIO_TRAVEL_DATA || !window.QUINDIO_TRAVEL_DATA.tarifasOficiales) {
     return { error: "La base de datos de tarifas no está cargada." };
   }
 
   const data = window.QUINDIO_TRAVEL_DATA.tarifasOficiales;
   
-  if (!data[plan] || !data[plan][categoria]) {
-    return { error: "Datos no encontrados para la combinación seleccionada." };
+  if (!data[plan]) {
+    return { error: "Datos no encontrados para el plan seleccionado." };
   }
 
-  const precioPorPersona = data[plan][categoria];
+  let precioPorPersona;
+  
+  // Si se incluye transporte y no es individual, usar precios con transporte
+  if (incluirTransporte && ocupacion !== 'individual' && data[plan].precios_con_transporte) {
+    const preciosTransporte = data[plan].precios_con_transporte[categoria];
+    if (preciosTransporte && preciosTransporte[ocupacion]) {
+      precioPorPersona = preciosTransporte[ocupacion];
+    } else {
+      // Fallback a precio sin transporte si no hay precio con transporte disponible
+      precioPorPersona = data[plan][categoria];
+    }
+  } else {
+    // Usar precio sin transporte
+    precioPorPersona = data[plan][categoria];
+  }
 
   if (!precioPorPersona) {
     return { error: "No hay tarifa disponible para esta combinación." };
@@ -81,7 +95,9 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados) {
     moneda: "COP",
     formateadoPersona: new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(precioPorPersona),
     formateadoTotal: new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(total),
-    destinosExtra: destinosCount
+    destinosExtra: destinosCount,
+    ocupacion: ocupacion,
+    incluyeTransporte: incluirTransporte
   };
 }
 
@@ -91,6 +107,8 @@ function actualizarUI() {
   const selectCategoria = document.getElementById('select-categoria');
   const selectPax = document.getElementById('select-pax');
   const selectDestinos = document.getElementById('select-destinos');
+  const selectOcupacion = document.getElementById('select-ocupacion');
+  const checkTransporte = document.getElementById('check-transporte');
 
   const displayPersona = document.getElementById('precio-persona');
   const displayTotal = document.getElementById('precio-total');
@@ -98,6 +116,12 @@ function actualizarUI() {
   const whatsappBtn = document.getElementById('cotizador-whatsapp-btn');
 
   if (!selectPlan || !selectCategoria || !selectPax) return;
+
+  // Obtener ocupación (por defecto individual)
+  const ocupacion = selectOcupacion ? selectOcupacion.value : 'individual';
+  
+  // Obtener si incluye transporte (por defecto false)
+  const incluirTransporte = checkTransporte ? checkTransporte.checked : false;
 
   // Obtener destinos seleccionados si el elemento existe
   let destinosSeleccionados = [];
@@ -123,7 +147,9 @@ function actualizarUI() {
     selectPlan.value,
     selectCategoria.value,
     parseInt(selectPax.value),
-    destinosSeleccionados
+    destinosSeleccionados,
+    ocupacion,
+    incluirTransporte
   );
 
   if (res.error) {
@@ -145,9 +171,15 @@ function actualizarUI() {
     const planNombre = selectPlan.options[selectPlan.selectedIndex].text;
     const categoriaNombre = selectCategoria.options[selectCategoria.selectedIndex].text;
     const paxCount = selectPax.value;
+    const ocupacionNombre = selectOcupacion ? selectOcupacion.options[selectOcupacion.selectedIndex].text : 'Individual';
     
     let mensaje = `Hola Quindío Travel 🌿, deseo cotizar el ${planNombre} para ${paxCount} personas.\n`;
     mensaje += `Categoría de alojamiento: ${categoriaNombre}\n`;
+    mensaje += `Ocupación: ${ocupacionNombre}\n`;
+    
+    if (incluirTransporte) {
+      mensaje += `✅ Incluye transporte completo\n`;
+    }
     
     if (destinosNombres.length > 0) {
       mensaje += `Destinos adicionales seleccionados: ${destinosNombres.join(', ')}\n`;
@@ -161,7 +193,7 @@ function actualizarUI() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const inputs = ['select-plan', 'select-categoria', 'select-pax', 'select-destinos'];
+  const inputs = ['select-plan', 'select-categoria', 'select-pax', 'select-destinos', 'select-ocupacion', 'check-transporte'];
   inputs.forEach(id => {
     const el = document.getElementById(id);
     if (el) el.addEventListener('change', actualizarUI);

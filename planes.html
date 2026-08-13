@@ -428,6 +428,34 @@
                 
                 <div class="cotizador-card-enhanced">
                     <div class="cotizador-field-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div class="cotizador-field-content">
+                        <label for="select-ocupacion">Ocupación</label>
+                        <select id="select-ocupacion" class="cotizador-select-enhanced">
+                            <option value="individual" selected>Individual (Sin transporte)</option>
+                            <option value="doble">Doble (Con transporte)</option>
+                            <option value="triple">Triple (Con transporte)</option>
+                            <option value="cuadruple">Cuádruple (Con transporte)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="cotizador-card-enhanced">
+                    <div class="cotizador-field-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="cotizador-field-content">
+                        <label>
+                            <input type="checkbox" id="check-transporte" style="margin-right: 10px;">
+                            Incluir transporte completo
+                        </label>
+                        <small style="color: #666; display: block; margin-top: 5px;">Solo disponible para ocupación doble, triple o cuádruple</small>
+                    </div>
+                </div>
+                
+                <div class="cotizador-card-enhanced">
+                    <div class="cotizador-field-icon">
                         <i class="fas fa-map-marked-alt"></i>
                     </div>
                     <div class="cotizador-field-content">

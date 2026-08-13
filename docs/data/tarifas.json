@@ -5,6 +5,28 @@
       "intermedia": 442000,
       "intermedia_vip": 590000,
       "vip": 645000,
+      "precios_con_transporte": {
+        "economica": {
+          "doble": 796000,
+          "triple": 668000,
+          "cuadruple": 602000
+        },
+        "intermedia": {
+          "doble": 815000,
+          "triple": 682000,
+          "cuadruple": 613000
+        },
+        "intermedia_vip": {
+          "doble": 962000,
+          "triple": 825000,
+          "cuadruple": 758000
+        },
+        "vip": {
+          "doble": 1020000,
+          "triple": 1164000,
+          "cuadruple": 1078000
+        }
+      },
       "ninos_2_10": {
         "economica": 596000,
         "intermedia": 610000,
@@ -17,6 +39,28 @@
       "intermedia": 598000,
       "intermedia_vip": 895000,
       "vip": 1650000,
+      "precios_con_transporte": {
+        "economica": {
+          "doble": 935000,
+          "triple": 805000,
+          "cuadruple": 735000
+        },
+        "intermedia": {
+          "doble": 972000,
+          "triple": 835000,
+          "cuadruple": 760000
+        },
+        "intermedia_vip": {
+          "doble": 1268000,
+          "triple": 1120000,
+          "cuadruple": 1045000
+        },
+        "vip": {
+          "doble": 2015000,
+          "triple": 1800000,
+          "cuadruple": 1685000
+        }
+      },
       "ninos_2_10": {
         "economica": 729000,
         "intermedia": 759000,
@@ -29,6 +73,28 @@
       "intermedia": 835000,
       "intermedia_vip": 1280000,
       "vip": 2400000,
+      "precios_con_transporte": {
+        "economica": {
+          "doble": 1385000,
+          "triple": 1170000,
+          "cuadruple": 1050000
+        },
+        "intermedia": {
+          "doble": 1440000,
+          "triple": 1215000,
+          "cuadruple": 1150000
+        },
+        "intermedia_vip": {
+          "doble": 1885000,
+          "triple": 1650000,
+          "cuadruple": 1530000
+        },
+        "vip": {
+          "doble": 3000000,
+          "triple": 2660000,
+          "cuadruple": 2490000
+        }
+      },
       "ninos_2_10": {
         "economica": 1038000,
         "intermedia": 1138000,
@@ -41,6 +107,28 @@
       "intermedia": 860000,
       "intermedia_vip": 1297000,
       "vip": 2415000,
+      "precios_con_transporte": {
+        "economica": {
+          "doble": 1495000,
+          "triple": 1250000,
+          "cuadruple": 1125000
+        },
+        "intermedia": {
+          "doble": 1550000,
+          "triple": 1295000,
+          "cuadruple": 1160000
+        },
+        "intermedia_vip": {
+          "doble": 1990000,
+          "triple": 1730000,
+          "cuadruple": 1590000
+        },
+        "vip": {
+          "doble": 3120000,
+          "triple": 2740000,
+          "cuadruple": 2550000
+        }
+      },
       "ninos_2_10": {
         "economica": 1110000,
         "intermedia": 1145000,
@@ -53,6 +141,28 @@
       "intermedia": 845000,
       "intermedia_vip": 1285000,
       "vip": 2400000,
+      "precios_con_transporte": {
+        "economica": {
+          "doble": 1297000,
+          "triple": 1120000,
+          "cuadruple": 1020000
+        },
+        "intermedia": {
+          "doble": 1360000,
+          "triple": 1170000,
+          "cuadruple": 1060000
+        },
+        "intermedia_vip": {
+          "doble": 1795000,
+          "triple": 1590000,
+          "cuadruple": 1490000
+        },
+        "vip": {
+          "doble": 2920000,
+          "triple": 2600000,
+          "cuadruple": 2450000
+        }
+      },
       "ninos_2_10": {
         "economica": 998000,
         "intermedia": 1040000,
@@ -65,6 +175,28 @@
       "intermedia": 1090000,
       "intermedia_vip": 1670000,
       "vip": 3180000,
+      "precios_con_transporte": {
+        "economica": {
+          "doble": 1800000,
+          "triple": 1520000,
+          "cuadruple": 1380000
+        },
+        "intermedia": {
+          "doble": 1880000,
+          "triple": 1580000,
+          "cuadruple": 1430000
+        },
+        "intermedia_vip": {
+          "doble": 2465000,
+          "triple": 2150000,
+          "cuadruple": 1995000
+        },
+        "vip": {
+          "doble": 3960000,
+          "triple": 3510000,
+          "cuadruple": 3280000
+        }
+      },
       "ninos_2_10": {
         "economica": 1360000,
         "intermedia": 1400000,
