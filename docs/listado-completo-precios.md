@@ -2,17 +2,18 @@
 
 ## 📊 Precios Oficiales del Portafolio 2026 (Planes 1-6)
 
-### Documento PORTAFOLIO PLANES NACIONALES 2026.docx
+### Documento PORTAFOLIO PLANES NACIONALES 2026.docx (Fuente de Verdad Autorizada)
 
-**Estructura de precios oficial:** Planes 1-6 acomodacion por persona,doble,triple y cuadruple, todas incluyen trasnporte, excluyendo el valor  por persona que corresponde a el precio del plan por persona sin trasporte, tambien se incluye la categoria de alojamiento, temporadas baja y alta,
+**⚠️ TABLAS AUTORIZADAS:** Solo Tablas 0, 4, 8, 12, 16, 20 (Radio Taxi - Temporada Baja)  
+**❌ TABLAS ELIMINADAS:** Tablas de Temporada Alta y Placa Blanca (disponibles solo por cotización especial)
 
-#### PRECIOS CON TRASNPORTE TEMPORADA BAJA (Valores Base)
+#### PRECIOS CON TRASNPORTE TEMPORADA BAJA (Valores Base - Radio Taxi)
 
-**PLAN 1 - 2 Días / 1 Noche ( Temporada Baja):**
-- Económico: $425.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $796.000, TRIPLE: $668.000, CUADRUPLE :$602.000, NIÑOS DE 2 A 10 AÑOS: $596.000
-- Intermedio: $442.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $815.000, TRIPLE: $682.000, CUADRUPLE: $613.000 NIÑOS DE 2 A 10 AÑOS : $610.000
-- Intermedio VIP: $590.000,ACOMODACION DOBLE: $962.000, TRIPLE: $825.000, CUADRUPLE :$758.000, NIÑOS DE 2 A 10 AÑOS: $748.000
-- VIP: $645.000,ACOMODACION DOBLE: $1020.000, TRIPLE: $1164.000, CUADRUPLE :$1078.000, NIÑOS DE 2 A 10 AÑOS: $935.000
+**PLAN 1 - 2 Días / 1 Noche (Temporada Baja - Radio Taxi):**
+- Económico: $425.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $796.000, TRIPLE: $668.000, CUADRUPLE: $602.000, NIÑOS DE 2 A 10 AÑOS: $596.000
+- Intermedio: $442.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $815.000, TRIPLE: $682.000, CUADRUPLE: $613.000, NIÑOS DE 2 A 10 AÑOS: $610.000
+- Intermedio VIP: $590.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $962.000, TRIPLE: $825.000, CUADRUPLE: $758.000, NIÑOS DE 2 A 10 AÑOS: $748.000
+- VIP: $645.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $1.020.000, TRIPLE: $1.164.000, CUADRUPLE: $1.078.000, NIÑOS DE 2 A 10 AÑOS: $935.000
 
 **PLAN 2 - 3 Días / 2 Noches (Temporada Baja):**
 - - Económico: $562.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $935.000, TRIPLE: $805.000, CUADRUPLE :$735.000, NIÑOS DE 2 A 10 AÑOS: $729.000
