@@ -37,46 +37,46 @@ const planesEspeciales = {
       {
         hotel: "Cabañas La Esmeralda",
         categoria: "Intermedia",
-        pax_2: 1290000,
-        pax_3: 1200000,
-        pax_4: 1160000
+        pax_2: 1840000,
+        pax_3: 1589000,
+        pax_4: 1464000
       },
       {
         hotel: "Finca Hotel Los Girasoles",
         categoria: "Intermedia VIP",
-        pax_2: 1850000,
-        pax_3: 1650000,
-        pax_4: 1530000
+        pax_2: 2828000,
+        pax_3: 2577000,
+        pax_4: 2452000
       },
       {
         hotel: "Hotel Campestre Café Café",
         categoria: "Intermedia VIP",
-        pax_2: 1990000,
-        pax_3: 1730000,
-        pax_4: 1590000
+        pax_2: 4034000,
+        pax_3: 3784000,
+        pax_4: 3658000
       }
     ],
     placa_blanca: [
       {
         hotel: "Cabañas La Esmeralda",
         categoria: "Intermedia",
-        pax_2: 1550000,
-        pax_3: 1295000,
-        pax_4: 1160000
+        pax_2: 2574000,
+        pax_3: 2080000,
+        pax_4: 1833000
       },
       {
         hotel: "Finca Hotel Los Girasoles",
         categoria: "Intermedia VIP",
-        pax_2: 2060000,
-        pax_3: 1850000,
-        pax_4: 1690000
+        pax_2: 3562000,
+        pax_3: 3068000,
+        pax_4: 2821000
       },
       {
         hotel: "Hotel Campestre Café Café",
         categoria: "Intermedia VIP",
-        pax_2: 2160000,
-        pax_3: 1920000,
-        pax_4: 1750000
+        pax_2: 4768000,
+        pax_3: 4275000,
+        pax_4: 4027000
       }
     ]
   },
