@@ -76,8 +76,9 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, in
     const ocupacion = 'cuadruple';
     if (preciosTransporte && preciosTransporte[ocupacion]) {
       precioPorPersona = preciosTransporte[ocupacion];
+      console.log(`Cálculo: Plan=${plan}, Categoria=${categoria}, Temporada=${temporada}, Ocupación=${ocupacion}, PrecioPorPersona=${precioPorPersona}, Pax=${paxCount}`);
     } else {
-      return { error: "No hay tarifa de transporte disponible." };
+      return { error: "No hay tarifa de transporte disponible para esta ocupación." };
     }
   } else {
     return { error: "No hay precios con transporte disponibles para este plan." };
@@ -88,6 +89,7 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, in
   }
 
   const totalPlan = precioPorPersona * paxCount;
+  console.log(`Total calculado: ${totalPlan} (${precioPorPersona} × ${paxCount})`);
   
   // Los destinos adicionales ahora son solo para selección visual, no afectan el precio
   let totalDestinos = 0;
@@ -191,7 +193,8 @@ function actualizarUI() {
       mensaje += `Destinos adicionales seleccionados: ${destinosNombres.join(', ')}\n`;
     }
     
-    mensaje += `Precio estimado: ${res.formateadoTotal}\n`;
+    mensaje += `Precio por persona: ${res.formateadoPersona}\n`;
+    mensaje += `Precio total: ${res.formateadoTotal}\n`;
     mensaje += `¿Podrían ayudarme con la disponibilidad y confirmación?`;
     
     whatsappBtn.href = `https://wa.me/573174426044?text=${encodeURIComponent(mensaje)}`;
