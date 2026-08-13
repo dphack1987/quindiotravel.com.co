@@ -582,29 +582,7 @@
             "vip": "VIP (Hotel Campestre Camellias, Mocawa Resort, Mocawa Plaza)"
         };
 
-        function actualizarBotonWhatsAppCotizador() {
-            const selPlan = document.getElementById('select-plan');
-            const selH = document.getElementById('select-categoria');
-            const selP = document.getElementById('select-pax');
-            const btn = document.getElementById('cotizador-whatsapp-btn');
-            const dispTotal = document.getElementById('precio-total').innerText;
 
-            if (!selPlan || !btn) return;
-
-            const texto =
-`Hola Quindío Travel 🌿,
-
-Deseo *reservar y confirmar* la siguiente cotización:
-
-📌 *Programa:* ${selPlan.options[selPlan.selectedIndex].text}
-🏡 *Alojamiento:* ${hotelLabelMap[selH.value] || selH.value}
-👥 *Pasajeros:* ${selP.value} personas
-💰 *Tarifa cotizada (ref):* ${dispTotal}
-
-¿Podrían indicarme disponibilidad para mi fecha de viaje y enviarme la ficha técnica completa? ¡Muchas gracias!`;
-
-            btn.href = `https://wa.me/573174426044?text=${encodeURIComponent(texto)}`;
-        }
 
         // Funcionalidad para mostrar detalle de atractivo cuando hay parámetro destino
         function mostrarDetalleAtractivo() {
@@ -716,25 +694,7 @@ Deseo *reservar y confirmar* la siguiente cotización:
             mostrarDetalleAtractivo();
         });
 
-        const originalActualizarUI = window.setInterval ? null : null;
         document.addEventListener('DOMContentLoaded', () => {
-            const observer = new MutationObserver(() => {
-                actualizarBotonWhatsAppCotizador();
-            });
-            const targetTotal = document.getElementById('precio-total');
-            const targetPersona = document.getElementById('precio-persona');
-            if (targetTotal) observer.observe(targetTotal, { childList: true, characterData: true, subtree: true });
-            if (targetPersona) observer.observe(targetPersona, { childList: true, characterData: true, subtree: true });
-
-            ['select-plan','select-categoria','select-pax','select-temporada'].forEach(id => {
-                const el = document.getElementById(id);
-                if (el) el.addEventListener('change', actualizarBotonWhatsAppCotizador);
-            });
-
-            if (typeof actualizarBotonWhatsAppCotizador === 'function') {
-                actualizarBotonWhatsAppCotizador();
-            }
-
             const hambBtn = document.getElementById('hamburger-btn');
             const navMenu = document.getElementById('nav-menu');
             if (hambBtn && navMenu) {
@@ -743,7 +703,7 @@ Deseo *reservar y confirmar* la siguiente cotización:
                     hambBtn.setAttribute('aria-expanded', abierto ? 'true' : 'false');
                     hambBtn.innerHTML = abierto
                         ? '<i class="fas fa-times"></i>'
-                        : '<i class="fas fa-bars"></i>';
+                        : '<i class://fas fa-bars"></i>';
                 });
                 navMenu.querySelectorAll('a').forEach(a => {
                     a.addEventListener('click', () => {
