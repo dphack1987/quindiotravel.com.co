@@ -175,12 +175,12 @@
 - ✅ Imágenes específicas por plan (enriquecidas 2026-08-13)
 
 **Asignación actual por plan:**
-- **Plan 1 (2D/1N):** Parque del Café + PANACA + Hotel La Tata ✅ Galería enriquecida
-- **Plan 2 (3D/2N):** Parque del Café + PANACA + Cabañas La Esmeralda ✅ Galería enriquecida
-- **Plan 3 (4D/3N):** Valle de Cocora + Salento + Filandia + Finca Hotel Los Girasoles ✅ Galería enriquecida
-- **Plan 4 (4D/3N):** Termales Santa Rosa + Hotel Campestre Café Café ✅ Galería enriquecida
-- **Plan 5 (4D/3N):** RECUCA + Quintí Patas Arriba + Cabañas La Esmeralda ⏳ Pendiente
-- **Plan 6 (5D/4N):** Todos los atractivos + Hotel Campestre Las Camellias ⏳ Pendiente
+- **Plan 1 (2D/1N):** Parque del Café + PANACA + Hotel La Tata ✅ Galería enriquecida (6 imágenes)
+- **Plan 2 (3D/2N):** Parque del Café + PANACA + Cabañas La Esmeralda ✅ Galería enriquecida (6 imágenes)
+- **Plan 3 (4D/3N):** Valle de Cocora + Salento + Filandia + Finca Hotel Los Girasoles ✅ Galería enriquecida (8 imágenes)
+- **Plan 4 (4D/3N):** Termales Santa Rosa + Hotel Campestre Café Café ✅ Galería enriquecida (9 imágenes)
+- **Plan 5 (4D/3N):** RECUCA + Quintí Patas Arriba + Cabañas La Esmeralda ✅ Galería enriquecida (8 imágenes)
+- **Plan 6 (5D/4N):** Todos los atractivos + Hotel Campestre Las Camellias ✅ Galería enriquecida (10 imágenes)
 
 **Nota:** Plan Premium (plan-7) y Plan Empresarial (plan-8) fueron eliminados del proyecto.
 
