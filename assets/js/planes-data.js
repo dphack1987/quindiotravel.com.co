@@ -23,6 +23,9 @@ const planesData = [
       doble: 796000,
       triple: 668000,
       cuadruple: 602000
+    },
+    preciosNinos: {
+      ninos_2_10: 596000
     }
   },
   {
@@ -49,6 +52,9 @@ const planesData = [
       doble: 935000,
       triple: 805000,
       cuadruple: 735000
+    },
+    preciosNinos: {
+      ninos_2_10: 729000
     }
   },
   {
@@ -76,6 +82,9 @@ const planesData = [
       doble: 1385000,
       triple: 1170000,
       cuadruple: 1050000
+    },
+    preciosNinos: {
+      ninos_2_10: 1038000
     }
   },
   {
@@ -103,6 +112,9 @@ const planesData = [
       doble: 1495000,
       triple: 1250000,
       cuadruple: 1125000
+    },
+    preciosNinos: {
+      ninos_2_10: 1110000
     }
   },
   {
@@ -130,6 +142,9 @@ const planesData = [
       doble: 1297000,
       triple: 1120000,
       cuadruple: 1020000
+    },
+    preciosNinos: {
+      ninos_2_10: 998000
     }
   },
   {
@@ -158,6 +173,9 @@ const planesData = [
       doble: 1800000,
       triple: 1520000,
       cuadruple: 1380000
+    },
+    preciosNinos: {
+      ninos_2_10: 1360000
     }
   },
   {
