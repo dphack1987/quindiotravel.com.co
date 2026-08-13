@@ -585,7 +585,7 @@
         border: none;
         cursor: pointer;
         box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
-        transition: all 0.3s ease;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -630,11 +630,14 @@
     .don-chucho-body {
         display: none;
         background: white;
-        border-radius: 0 0 15px 15px;
+        border-radius: 18px;
         box-shadow: 0 5px 25px rgba(0,0,0,0.15);
         overflow: hidden;
         max-width: 350px;
         max-height: 450px;
+    }
+    .don-chucho-body.opened {
+        display: block;
     }
 
     .don-chucho-open .don-chucho-body {
@@ -4936,29 +4939,23 @@
     
     <!-- Don Chucho Chat Container -->
     <div class="don-chucho-chat-container" id="don-chucho-chat">
-        <div class="don-chucho-header" onclick="toggleDonChucho()">
-            <div class="don-chucho-header-content">
-                <span style="font-size: 24px;">🤠</span>
-                <span>🤠 Don Chucho</span>
-            </div>
-        </div>
         <div class="don-chucho-body" id="don-chucho-body">
             <div class="don-chucho-messages" id="don-chucho-messages">
                 <div class="message bot-message">
                     <div class="message-content">
-                        <p>🤠 ¡Hola, compadre! Soy Don Chucho, tu guía del Eje Cafetero. Estoy aquí para ayudarte a planear el viaje perfecto al Quindío. ¿Qué te gustaría saber?</p>
+                        <p>🤠 ¡Hola, compadre! Soy Don Chucho, tu guía del Eje Cafetero. Aquí te ayudo a encontrar el mejor plan, precio y plan de viaje para tu ruta en el Quindío.</p>
                     </div>
                 </div>
             </div>
             <div class="quick-replies">
-                <button class="quick-reply" onclick="sendDonChuchoQuickReply('planes')">🗺️ Ver Planes</button>
-                <button class="quick-reply" onclick="sendDonChuchoQuickReply('precios')">💰 Precios</button>
-                <button class="quick-reply" onclick="sendDonChuchoQuickReply('destinos')">🏛️ Destinos</button>
-                <button class="quick-reply" onclick="sendDonChuchoQuickReply('contacto')">📞 Contacto</button>
+                <button class="quick-reply" onclick="sendDonChuchoQuickReply('planes')">Ver Planes</button>
+                <button class="quick-reply" onclick="sendDonChuchoQuickReply('precios')">Precios</button>
+                <button class="quick-reply" onclick="sendDonChuchoQuickReply('destinos')">Destinos</button>
+                <button class="quick-reply" onclick="sendDonChuchoQuickReply('contacto')">Contacto</button>
             </div>
             <div class="don-chucho-input">
-                <input type="text" id="don-chucho-input" placeholder="Escribe tu mensaje..." onkeypress="handleDonChuchoKeyPress(event)">
-                <button onclick="sendDonChuchoMessage(document.getElementById('don-chucho-input').value); document.getElementById('don-chucho-input').value = '';"><i class="fas fa-paper-plane"></i></button>
+                <input type="text" id="don-chucho-input" placeholder="Pregunta algo sobre tu viaje..." onkeypress="handleDonChuchoKeyPress(event)">
+                <button onclick="sendDonChuchoMessage(document.getElementById('don-chucho-input').value); document.getElementById('don-chucho-input').value = ''; "><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
         <button class="don-chucho-toggle" onclick="toggleDonChucho()">

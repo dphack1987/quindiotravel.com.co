@@ -45,10 +45,18 @@ class DonChuchoChat {
     }
     
     async sendMessage(message) {
-        if (!message.trim()) return;
+        if (!message || !message.trim()) return;
         
+        // Abrir chat si se envía desde un quick reply o input cuando está cerrado
+        if (!this.chatOpen) {
+            this.toggleChat();
+        }
+
         // Agregar mensaje del usuario
         this.addMessage(message, 'user-message');
+        
+        // Mostrar indicador de escritura
+        const typingIndicator = this.addTypingIndicator();
         
         try {
             let response;
@@ -71,22 +79,44 @@ class DonChuchoChat {
                 
                 if (apiResponse.ok) {
                     const data = await apiResponse.json();
-                    response = data.response;
+                    response = data.response || await this.getFallbackResponse(message);
                 } else {
                     throw new Error('Backend error');
                 }
             }
             
             // Agregar respuesta del bot
-            setTimeout(() => {
-                this.addMessage(response, 'bot-message');
-            }, 500);
+            await new Promise(resolve => setTimeout(resolve, 700));
+            if (typingIndicator && typingIndicator.parentNode) {
+                typingIndicator.remove();
+            }
+            this.addMessage(response, 'bot-message');
             
         } catch (error) {
             console.error('Error sending message:', error);
+            if (typingIndicator && typingIndicator.parentNode) {
+                typingIndicator.remove();
+            }
             const fallbackResponse = await this.getFallbackResponse(message);
             this.addMessage(fallbackResponse, 'bot-message');
         }
+    }
+
+    addTypingIndicator() {
+        const messagesContainer = document.getElementById('don-chucho-messages');
+        if (!messagesContainer) return null;
+
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'message bot-message typing-indicator';
+        typingDiv.innerHTML = `
+            <div class="message-content">
+                <p>🤠 Don Chucho está escribiendo...</p>
+            </div>
+        `;
+
+        messagesContainer.appendChild(typingDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        return typingDiv;
     }
     
     async getFallbackResponse(message) {
@@ -165,19 +195,39 @@ class DonChuchoChat {
         this.chatOpen = !this.chatOpen;
         const chatContainer = document.getElementById('don-chucho-chat');
         const chatBody = document.getElementById('don-chucho-body');
+        const chatInput = document.getElementById('don-chucho-input');
         
-        if (chatContainer) {
-            if (this.chatOpen) {
-                chatBody.style.display = 'block';
-                chatContainer.classList.add('don-chucho-open');
-            } else {
-                chatBody.style.display = 'none';
-                chatContainer.classList.remove('don-chucho-open');
+        if (chatContainer && chatBody) {
+            chatBody.style.display = this.chatOpen ? 'block' : 'none';
+            chatBody.classList.toggle('opened', this.chatOpen);
+            chatContainer.classList.toggle('don-chucho-open', this.chatOpen);
+
+            if (this.chatOpen && chatInput) {
+                setTimeout(() => chatInput.focus(), 120);
             }
+        }
+    }
+
+    handleDocumentClick(event) {
+        const chatContainer = document.getElementById('don-chucho-chat');
+        if (!this.chatOpen || !chatContainer) return;
+
+        if (!chatContainer.contains(event.target)) {
+            this.toggleChat();
+        }
+    }
+
+    handleKeyDown(event) {
+        if (event.key === 'Escape' && this.chatOpen) {
+            this.toggleChat();
         }
     }
     
     sendQuickReply(type) {
+        if (!this.chatOpen) {
+            this.toggleChat();
+        }
+
         let message = '';
         
         switch(type) {
@@ -218,6 +268,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     };
+
+    document.addEventListener('click', (event) => donChucho.handleDocumentClick(event));
+    document.addEventListener('keydown', (event) => donChucho.handleKeyDown(event));
 });
 
 console.log('Don Chucho chat system loaded');

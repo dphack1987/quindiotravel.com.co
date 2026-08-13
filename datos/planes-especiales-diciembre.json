@@ -1,0 +1,214 @@
+{
+  "plan": {
+    "nombre": "Planes Especiales Temporada Alta - Diciembre a Enero",
+    "temporada": "15 DICIEMBRE AL 20 ENERO",
+    "duracion": {
+      "dias": 4,
+      "noches": 3
+    },
+    "tarifa_por_persona": true,
+    "descripcion": "Plan especial para la temporada alta del Eje Cafetero",
+    "max_cupos": 30,
+    "incluye": [
+      "3 noches de alojamiento",
+      "3 desayunos",
+      "3 cenas",
+      "Pasaporte al Parque del Café",
+      "Visita a Valle de Cocora",
+      "Visita a Salento y Filandia",
+      "Mirador de Filandia",
+      "Museo del Canasto",
+      "Calle del Tiempo Detenida",
+      "Parque PANACA",
+      "Parque RECUCA",
+      "Asistencia médica",
+      "Transporte desde terminal hasta alojamiento",
+      "Transporte a los atractivos propuestos"
+    ],
+    "nota_transporte": "La diferencia entre radio taxi y placa blanca es que radio taxi los conductores son capacitados en turismo y placa blanca son vehículos de turismo"
+  },
+  "tarifas": {
+    "radio_taxi": {
+      "titulo": "TEMPORADA ALTA - RADIO TAXI DEL QUINDÍO",
+      "planes": [
+        {
+          "hotel": "Cabañas La Esmeralda",
+          "categoria": "Intermedia",
+          "pax_2": 1840000,
+          "pax_3": 1589000,
+          "pax_4": 1464000
+        },
+        {
+          "hotel": "Finca Hotel Los Girasoles",
+          "categoria": "Intermedia VIP",
+          "pax_2": 2828000,
+          "pax_3": 2577000,
+          "pax_4": 2452000
+        },
+        {
+          "hotel": "Hotel Campestre Café Café",
+          "categoria": "Intermedia VIP",
+          "pax_2": 4034000,
+          "pax_3": 3784000,
+          "pax_4": 3658000
+        }
+      ]
+    },
+    "placa_blanca": {
+      "titulo": "TEMPORADA ALTA - TRANSPORTE TURÍSTICO PLACA BLANCA",
+      "planes": [
+        {
+          "hotel": "Cabañas La Esmeralda",
+          "categoria": "Intermedia",
+          "pax_2": 2574000,
+          "pax_3": 2080000,
+          "pax_4": 1833000
+        },
+        {
+          "hotel": "Finca Hotel Los Girasoles",
+          "categoria": "Intermedia VIP",
+          "pax_2": 3562000,
+          "pax_3": 3068000,
+          "pax_4": 2821000
+        },
+        {
+          "hotel": "Hotel Campestre Café Café",
+          "categoria": "Intermedia VIP",
+          "pax_2": 4768000,
+          "pax_3": 4275000,
+          "pax_4": 4027000
+        }
+      ]
+    }
+  },
+  "hoteles_incluidos": {
+    "cabanas_la_esmeralda": {
+      "nombre": "CABAÑAS LA ESMERALDA",
+      "categoria": "Intermedia",
+      "servicios": [
+        "Habitaciones y Cabañas con baño privado y T.V",
+        "Piscina Adultos - Niños",
+        "Jacuzzi",
+        "Cancha de Microfútbol",
+        "Cancha de Volley Playa",
+        "Juegos Infantiles",
+        "Restaurante",
+        "Zona de Asados",
+        "Juegos de Mesa",
+        "Ping Pong - Sapo",
+        "Hamacas",
+        "Asador",
+        "Kiosco",
+        "Horno de Barro, Estufa a Gas",
+        "Bar",
+        "Amplias Zonas Verdes"
+      ]
+    },
+    "finca_hotel_los_girasoles": {
+      "nombre": "FINCA HOTEL LOS GIRASOLES",
+      "categoria": "Intermedia VIP",
+      "servicios": [
+        "Recepción y lobby",
+        "Zona de juegos ping pong",
+        "Juegos de mesa",
+        "Piscina",
+        "Jacuzzi",
+        "Cancha de micro fútbol en césped",
+        "Voleibol grama",
+        "Parque infantil",
+        "Salón de lectura",
+        "Salón comedor con capacidad para 100 personas",
+        "Oratorio",
+        "Amplios jardines y zonas verde",
+        "Zona WiFi en recepción",
+        "DIRECTV en salón de juegos"
+      ]
+    },
+    "hotel_campestre_cafe_cafe": {
+      "nombre": "HOTEL CAMPESTRE CAFÉ CAFÉ",
+      "categoria": "Intermedia VIP",
+      "descripcion": "Un lugar mágico donde se mezcla el colorido y el aroma de nuestros cafetales, las costumbres de la cultura Quindiana, la arquitectura colonial y la calidez de nuestra gente. Un sitio enmarcado por bellos colores inspirados en la naturaleza, con amplios, cómodos y apacibles espacios que hacen del hotel el mejor lugar para descansar.",
+      "servicios": [
+        "WiFi",
+        "Televisión satelital",
+        "Baño privado",
+        "Mini bar",
+        "Agua caliente",
+        "Amplio parqueadero",
+        "Juegos de mesa",
+        "Billar",
+        "Cancha de voleibol",
+        "Ping pong",
+        "Sapo y más"
+      ]
+    },
+    "hotel_campestre_la_tata": {
+      "nombre": "HOTEL CAMPESTRE LA TATA",
+      "categoria": "Intermedia",
+      "ubicacion": "A 100 mts de Parque del Café",
+      "servicios": [
+        "Piscina niños y adultos",
+        "Jacuzzi",
+        "Juegos infantiles",
+        "Parqueadero",
+        "Restaurante",
+        "Lavandería",
+        "Juegos de mesa"
+      ]
+    },
+    "de_la_vega_hotel_campestre": {
+      "nombre": "DE LA VEGA HOTEL CAMPESTRE",
+      "categoria": "Intermedia",
+      "ubicacion": "A 200 mts del Parque el Café en Montenegro, Quindío",
+      "servicios": [
+        "Zonas húmedas (Piscina, 3 jacuzzi)",
+        "Zona de juegos (billar pool, rana, pin pon, entre otros)",
+        "Parque infantil",
+        "Parqueadero"
+      ]
+    },
+    "finca_hotel_dorada": {
+      "nombre": "FINCA HOTEL DORADA",
+      "categoria": "Económica",
+      "ubicacion": "Km. 5 Pueblo Tapao, Vía a la Tebadia",
+      "servicios": [
+        "Piscina niños y adultos",
+        "Juegos infantiles",
+        "Parqueadero",
+        "Restaurante",
+        "Lavandería",
+        "Hamacas",
+        "Juegos de mesa"
+      ]
+    },
+    "hotel_campestre_las_camelias": {
+      "nombre": "HOTEL CAMPESTRE LAS CAMELIAS",
+      "categoria": "VIP",
+      "servicios": [
+        "Capilla",
+        "Tienda de regalos",
+        "Sauna",
+        "Turco",
+        "5 piscinas",
+        "Parque acualandia",
+        "Canchas de fútbol",
+        "Voleibol",
+        "Baloncesto",
+        "Tenis",
+        "Recreativa",
+        "Pista de karts",
+        "Billar",
+        "Billar pool",
+        "Golfito",
+        "Sendero ecológico",
+        "Parque infantil"
+      ]
+    }
+  },
+  "contacto": {
+    "nombre": "ÁLVARO ALZATE ORTIZ",
+    "empresa": "QUINDÍO TRAVEL",
+    "telefono": "(317) 4426044",
+    "correo": "gerencia@quindiotravel.net"
+  }
+}

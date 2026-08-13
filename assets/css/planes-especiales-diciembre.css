@@ -1,0 +1,363 @@
+/**
+ * Estilos para Planes Especiales de Diciembre
+ * Temporada Alta: 15 Dic - 20 Ene
+ */
+
+.planes-especiales-diciembre {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8f5e9 100%);
+  padding: 60px 0;
+  margin: 60px 0;
+  border-top: 4px solid #2E5E36;
+  border-bottom: 4px solid #2E5E36;
+}
+
+.planes-especiales-diciembre .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header de Planes */
+.planes-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.planes-header h2 {
+  font-size: 2.5rem;
+  color: #1b5e20;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.planes-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.badge-cupos {
+  display: inline-block;
+  background: #2E5E36;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Detalles del Plan */
+.plan-details {
+  background: white;
+  border-left: 5px solid #2E5E36;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.plan-details h3 {
+  font-size: 1.5rem;
+  color: #2E5E36;
+  margin-bottom: 20px;
+}
+
+/* Sección Incluye */
+.incluye-section-diciembre h3 {
+  color: #1b5e20;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.incluye-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.incluye-list li {
+  background: rgba(46, 94, 54, 0.08);
+  padding: 12px 15px;
+  border-radius: 6px;
+  color: #333;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.incluye-list i {
+  color: #2E5E36;
+  font-weight: bold;
+}
+
+/* Contenedor de Tarifas */
+.tarifas-container {
+  margin-bottom: 50px;
+}
+
+.tarifas-section-diciembre {
+  background: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tarifas-section-diciembre h3 {
+  color: #2E5E36;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Tabla de Tarifas */
+.tarifas-table-diciembre {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.tarifas-table-diciembre thead {
+  background: #2E5E36;
+  color: white;
+}
+
+.tarifas-table-diciembre th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #1b5e20;
+}
+
+.tarifas-table-diciembre td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+.tarifas-table-diciembre tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.tarifas-table-diciembre tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+.tarifas-table-diciembre td:nth-child(n+3) {
+  text-align: right;
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+/* Nota de Transporte */
+.nota-transporte {
+  background: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.nota-transporte p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Hoteles Incluidos */
+.hoteles-incluidos {
+  margin-bottom: 50px;
+}
+
+.hoteles-incluidos h3 {
+  color: #1b5e20;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.hoteles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Tarjeta de Hotel */
+.hotel-card-diciembre {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #2E5E36;
+}
+
+.hotel-card-diciembre:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.hotel-card-diciembre h4 {
+  color: #1b5e20;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.categoria-badge {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2E5E36;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.ubicacion {
+  color: #ff6f00;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.descripcion {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.servicios-list {
+  list-style: none;
+  padding: 0;
+}
+
+.servicios-list li {
+  color: #555;
+  font-size: 0.9rem;
+  padding: 8px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.servicios-list i {
+  color: #2E5E36;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* CTA de Contacto */
+.contacto-cta {
+  background: linear-gradient(135deg, #1b5e20 0%, #2E5E36 100%);
+  color: white;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contacto-cta h3 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.btn-whatsapp-grande {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #25d366;
+  color: white;
+  padding: 18px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #25d366;
+  cursor: pointer;
+}
+
+.btn-whatsapp-grande:hover {
+  background: white;
+  color: #25d366;
+  transform: scale(1.05);
+}
+
+.btn-whatsapp-grande i {
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .planes-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .incluye-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .tarifas-table-diciembre {
+    font-size: 0.85rem;
+  }
+  
+  .tarifas-table-diciembre th,
+  .tarifas-table-diciembre td {
+    padding: 10px;
+  }
+  
+  .hoteles-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contacto-cta {
+    padding: 30px 20px;
+  }
+  
+  .contacto-cta h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Animaciones */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.planes-especiales-diciembre {
+  animation: slideIn 0.6s ease-out;
+}
+
+.hotel-card-diciembre {
+  animation: slideIn 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.hotel-card-diciembre:nth-child(1) { animation-delay: 0.1s; }
+.hotel-card-diciembre:nth-child(2) { animation-delay: 0.2s; }
+.hotel-card-diciembre:nth-child(3) { animation-delay: 0.3s; }
+.hotel-card-diciembre:nth-child(4) { animation-delay: 0.4s; }
+.hotel-card-diciembre:nth-child(5) { animation-delay: 0.5s; }
+.hotel-card-diciembre:nth-child(6) { animation-delay: 0.6s; }
+.hotel-card-diciembre:nth-child(7) { animation-delay: 0.7s; }

@@ -4,45 +4,86 @@
 
 ### Documento PORTAFOLIO PLANES NACIONALES 2026.docx
 
-**Estructura de precios oficial:** Planes 1-6 por persona, sin transporte, por categoría de alojamiento
+**Estructura de precios oficial:** Planes 1-6 acomodacion por persona,doble,triple y cuadruple, todas incluyen trasnporte, excluyendo el valor  por persona que corresponde a el precio del plan por persona sin trasporte, tambien se incluye la categoria de alojamiento, temporadas baja y alta,
 
-#### PRECIOS SIN TRANSPORTE (Valores Base)
+#### PRECIOS CON TRASNPORTE TEMPORADA BAJA (Valores Base)
 
-**PLAN 1 - 2 Días / 1 Noche (Radio Taxi - Temporada Baja):**
-- Económico: $425.000
-- Intermedio: $442.000
-- Intermedio VIP: $590.000
-- VIP: $645.000
+**PLAN 1 - 2 Días / 1 Noche ( Temporada Baja):**
+- Económico: $425.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $796.000, TRIPLE: $668.000, CUADRUPLE :$602.000, NIÑOS DE 2 A 10 AÑOS: $596.000
+- Intermedio: $442.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $815.000, TRIPLE: $682.000, CUADRUPLE: $613.000 NIÑOS DE 2 A 10 AÑOS : $610.000
+- Intermedio VIP: $590.000,ACOMODACION DOBLE: $962.000, TRIPLE: $825.000, CUADRUPLE :$758.000, NIÑOS DE 2 A 10 AÑOS: $748.000
+- VIP: $645.000,ACOMODACION DOBLE: $1020.000, TRIPLE: $1164.000, CUADRUPLE :$1078.000, NIÑOS DE 2 A 10 AÑOS: $935.000
 
-**PLAN 2 - 3 Días / 2 Noches (Radio Taxi - Temporada Baja):**
-- Económico: $430.000
-- Intermedio: $450.000
-- Intermedio VIP: $645.000
-- VIP: $1.295.000
+**PLAN 2 - 3 Días / 2 Noches (Temporada Baja):**
+- - Económico: $562.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $935.000, TRIPLE: $805.000, CUADRUPLE :$735.000, NIÑOS DE 2 A 10 AÑOS: $729.000
+- Intermedio: $598.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $972.000, TRIPLE: $835.000, CUADRUPLE: $760.000 NIÑOS DE 2 A 10 AÑOS : $759.000
+- Intermedio VIP: $895.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $1.268.000, TRIPLE: $1120.000, CUADRUPLE :$1.045.000, NIÑOS DE 2 A 10 AÑOS: $1.034.000
+- VIP: $1.650.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $2.015.000, TRIPLE: $1.800.000, CUADRUPLE :$1685.000, NIÑOS DE 2 A 10 AÑOS: $1.674.000
 
-**PLAN 3 - 4 Días / 3 Noches (Radio Taxi - Temporada Baja):**
-- Económico: $570.000
-- Intermedio: $613.000
-- Intermedio VIP: $1.070.000
-- VIP: $2.310.000
+**PLAN 3 - 4 Días / 3 Noches ( Temporada Baja):**
+- - Económico: $777.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $1.385.000, TRIPLE: $1.170.000, CUADRUPLE :$1.050.000, NIÑOS DE 2 A 10 AÑOS: $1038.000
+- Intermedio: $835.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $1.440.000, TRIPLE: $1.215.000, CUADRUPLE: $1.150.000 NIÑOS DE 2 A 10 AÑOS : $1.138.000
+- Intermedio VIP: $1.280.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $1.865.000, TRIPLE: $1650.000, CUADRUPLE :$1.530.000, NIÑOS DE 2 A 10 AÑOS: $1.515.000
+- VIP: $2.400.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $3.000.000, TRIPLE: $2.660.000, CUADRUPLE :$2490.000, NIÑOS DE 2 A 10 AÑOS: $2.470.000
 
-**PLAN 4 - 4 Días / 3 Noches (Radio Taxi - Temporada Alta):**
-- Económico: $570.000
-- Intermedio: $615.000
-- Intermedio VIP: $1.000.000
-- VIP: $2.305.000
+**PLAN 4 - 4 Días / 3 Noches (Temporada Baja):**
+- - Económico: $798.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $1.495.000, TRIPLE: $1.250.000, CUADRUPLE :$1.125.000, NIÑOS DE 2 A 10 AÑOS: $1.110.000
+- Intermedio: $860.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $1.550.000, TRIPLE: $1.295.000, CUADRUPLE: $1.160.000 NIÑOS DE 2 A 10 AÑOS : $1.145.000
+- Intermedio VIP: $1.297.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $1.990.000, TRIPLE: $1.730.000, CUADRUPLE :$1.590.000, NIÑOS DE 2 A 10 AÑOS: $1.160.000
+- VIP: $2.415.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $3.120.000, TRIPLE: $2.740.000, CUADRUPLE :$2.550.000, NIÑOS DE 2 A 10 AÑOS: $1.510.000
 
-**PLAN 5 - 4 Días / 3 Noches (Radio Taxi - Temporada Alta):**
-- Económico: $777.000
-- Intermedio: $835.000
-- Intermedio VIP: $1.278.000
-- VIP: $2.395.000
+**PLAN 5 - 4 Días / 3 Noches ( Temporada Baja):**
+- - Económico: $788.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $1.297.000, TRIPLE: $1.120.000, CUADRUPLE :$1.020.000, NIÑOS DE 2 A 10 AÑOS: $998.000
+- Intermedio: $845.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $1.260.000, TRIPLE: $1.160.000, CUADRUPLE: $1.060.000 NIÑOS DE 2 A 10 AÑOS : $1.040.000
+- Intermedio VIP: $1.285.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $1.795.000, TRIPLE: $1.590.000, CUADRUPLE :$1.490.000, NIÑOS DE 2 A 10 AÑOS: $1.460.000
+- VIP: $2.400.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $2.920.000, TRIPLE: $2.600.000, CUADRUPLE :$2.450.000, NIÑOS DE 2 A 10 AÑOS: $2.430.000
 
-**PLAN 6 - 5 Días / 4 Noches (Radio Taxi - Temporada Alta):**
-- Económico: $820.000
-- Intermedio: $880.000
-- Intermedio VIP: $1.470.000
-- VIP: $3.420.000
+
+**PLAN 6 - 5 Días / 4 Noches (Temporada Baja):**
+- - Económico: $1.008.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $1.800.000, TRIPLE: $1.520.000, CUADRUPLE :$1.380.000, NIÑOS DE 2 A 10 AÑOS: $1.360.000
+- Intermedio: $1.090.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $1.880.000, TRIPLE: $1.580.000, CUADRUPLE: $1.430.000 NIÑOS DE 2 A 10 AÑOS : $1.400.000
+- Intermedio VIP: $1.670.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $2.465.000, TRIPLE: $2.150.000, CUADRUPLE :$1.995.000, NIÑOS DE 2 A 10 AÑOS: $1.950.000
+- VIP: $3.180.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $3.960.000, TRIPLE: $3.510.000, CUADRUPLE :$3.280.000, NIÑOS DE 2 A 10 AÑOS: $3.240.000
+
+#### PRECIOS CON TRASNPORTE TEMPORADA Alta (Valores Base)
+
+**PLAN 1 - 2 Días / 1 Noche ( Temporada Alta):**
+- Económico: $430.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $800.000, TRIPLE: $672.000, CUADRUPLE :$605.000, NIÑOS DE 2 A 10 AÑOS: $599.000
+- Intermedio: $450.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $822.000, TRIPLE: $690.000, CUADRUPLE: $620.000 NIÑOS DE 2 A 10 AÑOS : $616.000
+- Intermedio VIP: $962.000,ACOMODACION DOBLE: $1.335.000, TRIPLE: $888.000, CUADRUPLE :$810.000, NIÑOS DE 2 A 10 AÑOS: $795.000
+- VIP: $1.235.000, ACOMODACION DOBLE: $1.667.000, TRIPLE: $1.448.000, CUADRUPLE :$1.340.000, NIÑOS DE 2 A 10 AÑOS: $1.016.000
+
+**PLAN 2 - 3 Días / 2 Noches (Temporada Alta):**
+- - Económico: $570.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $945.000, TRIPLE: $815.000, CUADRUPLE :$745.000, NIÑOS DE 2 A 10 AÑOS: $734.000
+- Intermedio: $613.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $990.000, TRIPLE: $850.000, CUADRUPLE: $775.000 NIÑOS DE 2 A 10 AÑOS : $764.000
+- Intermedio VIP: $1.070.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $1.380.000, TRIPLE: $1.245.000, CUADRUPLE :$1.150.000, NIÑOS DE 2 A 10 AÑOS: $1.139.000
+- VIP: $2.310.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $2.680.000, TRIPLE: $2.370.000, CUADRUPLE :$2.210.000, NIÑOS DE 2 A 10 AÑOS: $2.198.000
+
+**PLAN 3 - 4 Días / 3 Noches ( Temporada Alta):**
+- - Económico: $790.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $1.410.000, TRIPLE: $1.185.000, CUADRUPLE :$1.100.000, NIÑOS DE 2 A 10 AÑOS: $1.088.000
+- Intermedio: $860.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $1.485.000, TRIPLE: $1.290.000, CUADRUPLE: $1.200.000 NIÑOS DE 2 A 10 AÑOS : $1.180.000
+- Intermedio VIP: $1.450.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $2.060.000, TRIPLE: $1.850.000, CUADRUPLE :$1.690.000, NIÑOS DE 2 A 10 AÑOS: $1.670.000
+- VIP: $3.395.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $3.998.000, TRIPLE: $3.520.000, CUADRUPLE :$3.290.000, NIÑOS DE 2 A 10 AÑOS: $3.270.000
+
+**PLAN 4 - 4 Días / 3 Noches (Temporada Alta):**
+- - Económico: $820.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $1.514.000, TRIPLE: $2.270.000, CUADRUPLE :$1.135.000, NIÑOS DE 2 A 10 AÑOS: $1.120.000
+- Intermedio: $880.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $1.575.000, TRIPLE: $1.320.000, CUADRUPLE: $1.180.000 NIÑOS DE 2 A 10 AÑOS : $1.160.000
+- Intermedio VIP: $1.470.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $2.160.000, TRIPLE: $1.920.000, CUADRUPLE :$1.750.000, NIÑOS DE 2 A 10 AÑOS: $1.735.000
+- VIP: $3.420.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $4.131.000, TRIPLE: $3.525.000, CUADRUPLE :$3.350.000, NIÑOS DE 2 A 10 AÑOS: $3.335.000
+
+**PLAN 5 - 4 Días / 3 Noches ( Temporada Alta):**
+- - Económico: $798.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $1.310.000, TRIPLE: $1.135.000, CUADRUPLE :$1.040.000, NIÑOS DE 2 A 10 AÑOS: $1.010.000
+- Intermedio: $870.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $1.390.000, TRIPLE: $1.190.000, CUADRUPLE: $1.080.000 NIÑOS DE 2 A 10 AÑOS : $1.050.000
+- Intermedio VIP: $1.460.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $1.965.000, TRIPLE: $1.780.000, CUADRUPLE :$1.645.000, NIÑOS DE 2 A 10 AÑOS: $1.630.000
+- VIP: $3.398.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $3.910.000, TRIPLE: $3.460.000, CUADRUPLE :$3.250.000, NIÑOS DE 2 A 10 AÑOS: $3.230.000
+
+
+**PLAN 6 - 5 Días / 4 Noches (Temporada Alta):**
+- - Económico: $1.020.000 (SIN TRASNPORTE), ACOMODACION DOBLE: $1.820.000, TRIPLE: $1.550.000, CUADRUPLE :$1.410.000, NIÑOS DE 2 A 10 AÑOS: $1.385.000
+- Intermedio: $1.120.000 (SIN TRANSPORTE), ACOMODACION DOBLE: $1.920.000, TRIPLE: $1.610.000, CUADRUPLE: $1.460.000 NIÑOS DE 2 A 10 AÑOS : $1.410.000
+- Intermedio VIP: $1.898.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $2.690.000, TRIPLE: $2.430.000, CUADRUPLE :$2.210.000, NIÑOS DE 2 A 10 AÑOS: $2.180.000
+- VIP: $4.490.000 (SIN TRANSPORTE),ACOMODACION DOBLE: $5.290.000, TRIPLE: $4.650.000, CUADRUPLE :$4.330.000, NIÑOS DE 2 A 10 AÑOS: $4.325.000
+
 
 **Categorías de Alojamiento:**
 - **Económico**: Quinta del Café, Dorada
@@ -50,105 +91,8 @@
 - **Intermedio VIP**: Los Girasoles, La Tata, Combia
 - **VIP**: Hotel Campestre Camellias, Mocawa Resort y Mocawa Plaza
 
+
 **Temporadas:**
 - **Temporada Baja**: Lo que no es temporada media o alta
-- **Temporada Media**: Fin de semana con puente y temporada receso escolar
+
 - **Temporada Alta**: Semana Santa, semana receso escolar, 10 junio a 30 julio, puentes y días de fiesta, 20 dic al 20 enero
-
-## 📊 Precios Actualizados en el Sitio Web
-
-### Index.html (Principal)
-- **Rango general**: $425.000 - $3.420.000 COP
-- **Plan 3 Días / 2 Noches**: $430.000 / Económico (sin transporte)
-- **Plan 4 Días / 3 Noches**: $570.000 / Económico (sin transporte)
-- **Plan 5 Días / 4 Noches**: $777.000 / Económico (sin transporte)
-- **Plan Premium VIP**: $3.420.000 / VIP (sin transporte)
-- **Plan Empresarial**: Cotizar / Según grupo
-- **Promoción**: $2.550.000 (Precio regular: $3.420.000)
-
-### Planes.html (Schema.org)
-- **Plan 1**: 425.000 COP
-- **Plan 2**: 430.000 COP
-- **Plan 3**: 570.000 COP
-- **Plan 4**: 570.000 COP
-- **Plan 5**: 777.000 COP
-- **Plan 6**: 820.000 COP
-
-### Páginas de Planes Individuales (Schema.org AggregateOffer)
-- **plan-1.html**: $425.000 - $645.000 COP (6 ofertas, válido hasta 2027-01-20)
-- **plan-2.html**: $430.000 - $1.295.000 COP (6 ofertas, válido hasta 2027-01-20)
-- **plan-3.html**: $570.000 - $2.310.000 COP (6 ofertas, válido hasta 2027-01-20)
-- **plan-4.html**: $570.000 - $2.305.000 COP (6 ofertas, válido hasta 2027-01-20)
-- **plan-5.html**: $777.000 - $2.395.000 COP (6 ofertas, válido hasta 2027-01-20)
-- **plan-6.html**: $820.000 - $3.420.000 COP (6 ofertas, válido hasta 2027-01-20)
-
-## 🏨 Precios Actualizados en Páginas de Hoteles
-
-### Hotel Campestre Café Café
-- **Plan 3**: $1.000.000
-- **Plan 4**: $615.000
-- **Plan 6**: $880.000
-
-### Hotel Campestre La Tata
-- **Plan 1**: $442.000
-
-### Hotel Campestre Las Camelias
-- **Plan 6**: $1.473.000
-
-### De La Vega Hotel Campestre
-- **Plan 1**: $425.000
-
-### Finca Hotel Dorada
-- **Plan 2**: $450.000
-- **Plan 3**: $613.000
-
-### Finca Hotel Los Girasoles
-- **Plan 3**: $1.070.000
-- **Plan 4**: $1.000.000
-- **Plan 5**: $1.278.000
-
-### Cabañas La Esmeralda
-- **Plan 2**: $450.000
-- **Plan 3**: $613.000
-- **Plan 5**: $835.000
-
-## 🏛️ Precios Actualizados en Destinos
-
-### Salento
-- **Plan 4D/3N**: $613.000 / Intermedio (sin transporte)
-- **Plan 5D/4N**: $880.000 / Intermedio (sin transporte)
-
-## 📋 Resumen de Precios por Categoría
-
-### Planes Turísticos (por persona) - PRECIOS OFICIALES PORTAFOLIO
-- **Mínimo**: $425.000 (Económico, sin transporte)
-- **Máximo**: $3.420.000 (VIP, sin transporte)
-- **Promedio Económico**: ~$595.000 COP
-- **Promedio Intermedio**: ~$690.000 COP
-- **Promedio Intermedio VIP**: ~$1.200.000 COP
-- **Promedio VIP**: ~$2.200.000 COP
-
-### Sistema de Transporte
-- **Sin transporte**: Precios base del portafolio (usados en el sitio)
-- **Radio taxi**: Precio adicional según plan y temporada
-- **Placa blanca**: Precio adicional según plan y temporada
-
-## ✅ Correcciones Implementadas
-
-1. **Sincronización completa**: Todos los precios actualizados según PORTAFOLIO PLANES NACIONALES 2026.docx
-2. **Formato estandarizado**: Uniforme a $X.XXX.XXX (puntos de miles)
-3. **Especificación de condiciones**: Sección de condiciones de precios actualizada
-4. **Schema.org actualizado**: Todos los esquemas sincronizados con precios oficiales
-5. **Transparencia**: Indicación clara de categoría, temporada y tipo de transporte
-6. **Condiciones documentadas**: Categorías de alojamiento, tipos de ocupación, temporadas, tipos de transporte
-7. **Precios sin transporte**: Todos los precios mostrados son sin transporte según portafolio oficial
-
-## 📝 Estado Final
-
-- ✅ **Index.html**: Precios actualizados con condiciones de precios
-- ✅ **Planes.html**: Schema.org actualizado
-- ✅ **Planes individuales**: Schema.org AggregateOffer actualizado
-- ✅ **Hoteles**: Precios de planes relacionados actualizados
-- ✅ **Destinos**: Precios actualizados
-- ✅ **Formato**: Estandarizado a $X.XXX.XXX
-- ✅ **Documentación**: Condiciones de precios actualizadas

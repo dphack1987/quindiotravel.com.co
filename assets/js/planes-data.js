@@ -17,7 +17,7 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA"],
     alojamientosAsociados: ["hotel-campestre-la-tata", "de-la-vega-hotel-campestre", "finca-hotel-dorada"],
-    precioSinTransporte: 450000,
+    precioSinTransporte: 425000,
     precioConTransporte: 580000,
     preciosOcupacion: {
       doble: 520000,
@@ -43,7 +43,7 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Pueblo Tapao"],
     alojamientosAsociados: ["cabanas-la-esmeralda", "hotel-campestre-la-tata"],
-    precioSinTransporte: 680000,
+    precioSinTransporte: 430000,
     precioConTransporte: 820000,
     preciosOcupacion: {
       doble: 750000,
@@ -70,7 +70,7 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Salento", "Valle de Cocora", "Filandia", "RECUCA"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "cabanas-la-esmeralda", "finca-hotel-dorada"],
-    precioSinTransporte: 979000,
+    precioSinTransporte: 570000,
     precioConTransporte: 1152000,
     preciosOcupacion: {
       doble: 1150000,
@@ -97,7 +97,7 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa", "Parque Los Arrieros"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "hotel-campestre-cafe-cafe"],
-    precioSinTransporte: 979000,
+    precioSinTransporte: 570000,
     precioConTransporte: 1273000,
     preciosOcupacion: {
       doble: 1270000,
@@ -124,7 +124,7 @@ const planesData = [
     ],
     atractivosIncluidos: ["RECUCA", "Parque Los Arrieros", "Salento", "Finca Cafetera Tradicional"],
     alojamientosAsociados: ["cabanas-la-esmeralda", "finca-hotel-los-girasoles"],
-    precioSinTransporte: 950000,
+    precioSinTransporte: 777000,
     precioConTransporte: 1200000,
     preciosOcupacion: {
       doble: 1200000,
@@ -152,7 +152,7 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Valle de Cocora", "Salento", "Filandia", "RECUCA", "Termales Santa Rosa", "Parque Los Arrieros"],
     alojamientosAsociados: ["hotel-campestre-cafe-cafe", "hotel-campestre-las-camelias", "finca-hotel-los-girasoles"],
-    precioSinTransporte: 1150000,
+    precioSinTransporte: 820000,
     precioConTransporte: 1473000,
     preciosOcupacion: {
       doble: 1650000,
@@ -313,7 +313,7 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
       "cabanas-la-esmeralda": "assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.jpg",
       "finca-hotel-los-girasoles": "assets/images/alojamientos/finca-hotel-los-girasoles/Finca-los-Girasoles-7.jpg",
       "hotel-campestre-cafe-cafe": "assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.jpg",
-      "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.jpg"
+      "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-las-camelias.jpg"
     };
     
     const fotoAlojamiento = fotosAlojamiento[primerAlojamiento] || "assets/images/alojamientos/cafetal.jpg";

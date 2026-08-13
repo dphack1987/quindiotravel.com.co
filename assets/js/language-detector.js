@@ -28,7 +28,9 @@ const translations = {
         'chat.quick.planes': "🗺️ Ver Planes",
         'chat.quick.precios': "💰 Precios",
         'chat.quick.destinos': "🏛️ Destinos",
-        'chat.quick.contacto': "📞 Contacto"
+        'chat.quick.contacto': "📞 Contacto",
+        'breadcrumb.home': "Inicio",
+        'breadcrumb.hotels': "Hoteles"
     },
     en: {
         'nav.inicio': "Home",
@@ -56,7 +58,9 @@ const translations = {
         'chat.quick.planes': "🗺️ View Plans",
         'chat.quick.precios': "💰 Prices",
         'chat.quick.destinos': "🏛️ Destinations",
-        'chat.quick.contacto': "📞 Contact"
+        'chat.quick.contacto': "📞 Contact",
+        'breadcrumb.home': "Home",
+        'breadcrumb.hotels': "Hotels"
     },
     pt: {
         'nav.inicio': "Início",
@@ -84,7 +88,9 @@ const translations = {
         'chat.quick.planes': "🗺️ Ver Planos",
         'chat.quick.precios': "💰 Preços",
         'chat.quick.destinos': "🏛️ Destinos",
-        'chat.quick.contacto': "📞 Contato"
+        'chat.quick.contacto': "📞 Contato",
+        'breadcrumb.home': "Início",
+        'breadcrumb.hotels': "Hotéis"
     },
     fr: {
         'nav.inicio': "Accueil",
@@ -112,7 +118,9 @@ const translations = {
         'chat.quick.planes': "🗺️ Voir les plans",
         'chat.quick.precios': "💰 Tarifs",
         'chat.quick.destinos': "🏛️ Destinations",
-        'chat.quick.contacto': "📞 Contact"
+        'chat.quick.contacto': "📞 Contact",
+        'breadcrumb.home': "Accueil",
+        'breadcrumb.hotels': "Hôtels"
     }
 };
 
@@ -166,23 +174,38 @@ function applyLanguage(lang) {
         return;
     }
     
-    // Traducir elementos con data-i18n
+    const translateAttribute = (selector, attr, prop) => {
+        document.querySelectorAll(selector).forEach(element => {
+            const key = element.getAttribute(attr);
+            const value = t[key];
+            if (value) {
+                element[prop] = value;
+            } else {
+                console.warn(`No translation found for key: ${key}`);
+            }
+        });
+    };
+
+    // Traducir elementos con data-i18n (texto)
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         const value = t[key];
-        
         if (value) {
             element.textContent = value;
-            console.log(`Translated ${key} to: ${value}`);
         } else {
             console.warn(`No translation found for key: ${key}`);
         }
     });
-    
-    // Actualizar atributo lang del HTML
+
+    // Traducir atributos comunes
+    translateAttribute('[data-i18n-placeholder]', 'data-i18n-placeholder', 'placeholder');
+    translateAttribute('[data-i18n-title]', 'data-i18n-title', 'title');
+    translateAttribute('[data-i18n-value]', 'data-i18n-value', 'value');
+    translateAttribute('[data-i18n-alt]', 'data-i18n-alt', 'alt');
+    translateAttribute('[data-i18n-href]', 'data-i18n-href', 'href');
+    translateAttribute('[data-i18n-src]', 'data-i18n-src', 'src');
+
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en' : lang === 'fr' ? 'fr' : 'es';
-    
-    console.log(`Language applied: ${lang}`);
 }
 
 // Actualizar selector de idioma visual

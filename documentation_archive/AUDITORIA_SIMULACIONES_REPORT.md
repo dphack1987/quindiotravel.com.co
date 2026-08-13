@@ -264,7 +264,7 @@ const planesData = [
   {
     id: "plan-1",
     titulo: "Plan 1: Vive El Eje Cafetero Temático",
-    precioSinTransporte: 450000,
+    precioSinTransporte: 425000,
     precioConTransporte: 580000
   }
 ];
