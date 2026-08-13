@@ -1,0 +1,1339 @@
+Attached Element Context from Integrated Browser
+
+Element: main#main-content
+
+URL: https://quindiotravel.com.co/index.html
+
+HTML Path: main#main-content
+
+Outer HTML:
+```html
+<main id="main-content">
+    <!-- Banner de Urgencia y Countdown Timer -->
+    <div class="urgency-banner" id="urgency-banner" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 12px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div class="urgency-banner-inner" style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <div class="urgency-banner-message" style="display: flex; align-items: center; gap: 8px;">
+                <i class="fas fa-fire" style="color: #f39c12; font-size: 1.2em;"></i>
+                <span style="font-weight: 700; font-size: 0.95rem;">¡SOLO 30 CUPOS DISPONIBLES PARA ESTA SEMANA!</span>
+            </div>
+            <div class="urgency-banner-timer" style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px;">
+                <i class="fas fa-clock"></i>
+                <span style="font-family: monospace; font-weight: 700; font-size: 1.1rem;" id="countdown-timer" aria-live="polite">02:34:32</span>
+                <span style="font-size: 0.85rem;">para actualizar cupos</span>
+            </div>
+            <a href="https://wa.me/573174426044?text=¡Hola!%20Quiero%20reservar%20uno%20de%20los%20últimos%20cupos%20disponibles%20para%20esta%20semana&amp;timestamp=1786544467950" data-wa-template="urgency_reservar" target="_blank" rel="noopener" class="urgency-banner-cta wa-cta-link" style="background: #2ecc71; color: white; padding: 8px 20px; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 0.9rem; white-space: nowrap; transition: all 0.3s ease;" data-whatsapp-tracking="true" aria-label="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i> RESERVAR AHORA
+            </a>
+        </div>
+    </div>
+
+    <!-- Breadcrumbs SEO -->
+    <nav class="breadcrumbs" aria-label="Breadcrumbs de navegación">
+        <div class="container">
+            <ol class="breadcrumbs-list" itemscope="" itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; margin: 0; display: flex; gap: 8px; font-size: 0.9rem;">
+                <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" style="display: flex; align-items: center;">
+                    <a href="https://quindiotravel.com.co/" itemprop="item" class="breadcrumb-link" style="color: var(--verde-cafe); text-decoration: none; font-weight: 500;">
+                        <span itemprop="name">Inicio</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <li style="color: #999;">›</li>
+                <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" style="display: flex; align-items: center;">
+                    <a href="https://quindiotravel.com.co/planes.html" itemprop="item" class="breadcrumb-link" style="color: var(--verde-cafe); text-decoration: none; font-weight: 500;">
+                        <span itemprop="name">Planes Turísticos</span>
+                    </a>
+                    <meta itemprop="position" content="2">
+                </li>
+                <li style="color: #999;">›</li>
+                <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" style="display: flex; align-items: center;">
+                    <span itemprop="name" class="breadcrumb-current" style="color: var(--marron-madera); font-weight: 600;">Eje Cafetero 2026</span>
+                    <meta itemprop="position" content="3">
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="hero" aria-label="Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia">
+        <img id="hero-bg-img" class="hero-bg-img" src="assets/images/paisajes/valle-cocora-hero-banner.jpg" alt="Valle de Cocora, palma de cera y paisajes del Eje Cafetero" loading="eager" fetchpriority="high" style="aspect-ratio: 16 / 9; width: 100%; height: auto; opacity: 1;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <div class="hero-trust-badges">
+                <span class="trust-badge"><i class="fas fa-award"></i> RNT 18152</span>
+                <span class="trust-badge"><i class="fas fa-shield-alt"></i> Operador Local</span>
+                <span class="trust-badge"><i class="fas fa-star"></i> +1,200 viajeros</span>
+            </div>
+            <h1>Conectamos tu corazón con el Eje Cafetero: Experiencias auténticas que quedarán en tu memoria</h1>
+            <p>No somos solo una guía de viajes; somos narradores de la cultura cafetera. Conectamos tu corazón con el Eje Cafetero a través de experiencias auténticas, grupos pequeños y conexiones reales con la tierra del mejor café del mundo.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20quiero%20reservar%20un%20plan%20turístico%20del%20Eje%20Cafetero&amp;timestamp=1786544467950" data-wa-template="hero_reservar" target="_blank" rel="noopener" class="btn btn-whatsapp-hero wa-cta-link" data-whatsapp-tracking="true" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp"></i> <strong>RESERVAR AHORA</strong></a>
+                <a href="promo-agosto-2026.html" class="btn btn-green-hero"><i class="fas fa-calendar-check"></i> <strong>VER PROMOCIÓN</strong></a>
+            </div>
+            <div class="hero-highlights">
+                <div class="hero-highlight-card"><i class="fas fa-route"></i><span>Planes todo incluido</span></div>
+                <div class="hero-highlight-card"><i class="fas fa-hotel"></i><span>Hoteles y fincas</span></div>
+                <div class="hero-highlight-card"><i class="fas fa-users"></i><span>Grupos pequeños - Máximo 8 personas</span></div>
+                <div class="hero-highlight-card"><i class="fas fa-headset"></i><span>Asistencia local</span></div>
+                <div class="hero-highlight-card"><i class="fas fa-heart"></i><span>Experiencias auténticas</span></div>
+                <div class="hero-highlight-card"><i class="fas fa-certificate"></i><span>Operador certificado RNT 18152</span></div>
+            </div>
+            <div class="hero-urgency" style="border-left: 4px solid #e74c3c;">
+                <p style="margin: 0; font-size: 0.95rem; color: #b23b2f; font-weight: 600;"><i class="fas fa-exclamation-triangle"></i> <strong>Disponibilidad limitada:</strong> solo quedan 30 cupos para esta semana.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Planes Flexibles Section -->
+    <section class="flexible-plans-section" id="planes-flexibles" aria-label="Arma tu propio plan">
+        <div class="container">
+            <div class="flexible-plans-header">
+                <h2 class="section-title">🔧 Personaliza tu Experiencia</h2>
+                <p class="section-subtitle">Crea tu plan ideal según tus preferencias</p>
+            </div>
+            
+            <div class="flexible-plans-grid">
+                <div class="flexible-step-card">
+                    <div class="step-icon">🎯</div>
+                    <h3 class="step-title">Selecciona Atractivos</h3>
+                    <div class="attractions-grid-clean">
+                        <label class="attraction-item"><input type="checkbox" value="parque-cafe" data-name="Parque del Café">🎢 Parque del Café</label>
+                        <label class="attraction-item"><input type="checkbox" value="panaca" data-name="PANACA">🐄 PANACA</label>
+                        <label class="attraction-item"><input type="checkbox" value="valle-cocora" data-name="Valle de Cocora">🌴 Valle de Cocora</label>
+                        <label class="attraction-item"><input type="checkbox" value="salento" data-name="Salento">🏘 Salento</label>
+                        <label class="attraction-item"><input type="checkbox" value="filandia" data-name="Filandia">🏛 Filandia</label>
+                        <label class="attraction-item"><input type="checkbox" value="termales" data-name="Termales">♨ Termales</label>
+                        <label class="attraction-item"><input type="checkbox" value="recuca" data-name="RECUCA">☕ RECUCA</label>
+                        <label class="attraction-item"><input type="checkbox" value="coffee-tour" data-name="Coffee Tour Armenia">☕ Coffee Tour Armenia</label>
+                        <label class="attraction-item"><input type="checkbox" value="mariposario" data-name="Mariposario del Quindío">🦋 Mariposario del Quindío</label>
+                        <label class="attraction-item"><input type="checkbox" value="cabalgatas" data-name="Cabalgatas en el Quindío">🐴 Cabalgatas en el Quindío</label>
+                        <label class="attraction-item"><input type="checkbox" value="parque-los-arrieros" data-name="Parque Los Arrieros">🎭 Parque Los Arrieros</label>
+                        <label class="attraction-item"><input type="checkbox" value="balsaje" data-name="Balsaje Río La Vieja">🚣 Balsaje Río La Vieja</label>
+                        <label class="attraction-item"><input type="checkbox" value="laberinto" data-name="Laberinto Mil Caminos">🌿 Laberinto Mil Caminos</label>
+                        <label class="attraction-item"><input type="checkbox" value="granja-mama-lulu" data-name="Granja Mamá Lulú">🐷 Granja Mamá Lulú</label>
+                        <label class="attraction-item"><input type="checkbox" value="jeep-panoramico" data-name="Jeep Panorámico">🚙 Jeep Panorámico</label>
+                    </div>
+                </div>
+                
+                <div class="flexible-step-card">
+                    <div class="step-icon">📅</div>
+                    <h3 class="step-title">Duración</h3>
+                    <div class="duration-options-clean">
+                        <label class="duration-item"><input type="radio" name="duration" value="2d1n">2 Días / 1 Noche</label>
+                        <label class="duration-item"><input type="radio" name="duration" value="3d2n">3 Días / 2 Noches</label>
+                        <label class="duration-item"><input type="radio" name="duration" value="4d3n">4 Días / 3 Noches</label>
+                    </div>
+                </div>
+                
+                <div class="flexible-step-card">
+                    <div class="step-icon">🏨</div>
+                    <h3 class="step-title">Alojamiento</h3>
+                    <div class="accommodation-options-clean">
+                        <label class="accommodation-item"><input type="radio" name="accommodation" value="economico">💰 Económico</label>
+                        <label class="accommodation-item"><input type="radio" name="accommodation" value="intermedio">⭐⭐⭐ Intermedio</label>
+                        <label class="accommodation-item"><input type="radio" name="accommodation" value="vip">⭐⭐⭐⭐⭐ VIP</label>
+                    </div>
+                </div>
+                
+                <div class="flexible-step-card">
+                    <div class="step-icon">👥</div>
+                    <h3 class="step-title">Número de Personas</h3>
+                    <div class="people-input-clean">
+                        <input type="number" id="custom-plan-personas" min="1" max="20" value="2" style="width:100%; padding: 12px 14px; border-radius: 10px; border: 2px solid #e0e0e0; background: white; color: #333; font-size: 0.95rem;">
+                        <small style="display:block; margin-top:8px; color:#f0f0f0; font-size:0.85rem;">Indica cuántas personas viajan</small>
+                    </div>
+                </div>
+                <div class="flexible-step-card">
+                    <div class="step-icon">🚐</div>
+                    <h3 class="step-title">Transporte</h3>
+                    <div class="accommodation-options-clean">
+                        <label class="accommodation-item"><input type="radio" name="transport" value="Sin transporte" checked="">❌ Sin transporte</label>
+                        <label class="accommodation-item"><input type="radio" name="transport" value="Con transporte">🚍 Con transporte</label>
+                    </div>
+                    <small style="display:block; margin-top:8px; color:#f0f0f0; font-size:0.85rem;">Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia</small>
+                </div>
+            </div>
+            
+            <div class="flexible-cta">
+                <button class="btn-generate-plan" onclick="generateCustomPlan()">
+                    <i class="fas fa-magic"></i> Generar mi Plan Personalizado
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="plans-section container" id="planes-destacados">
+        <h2 class="section-title">Planes turísticos en el Quindío (Eje Cafetero)</h2>
+        <p class="section-subtitle" style="text-align:center; margin-bottom: 30px; color: var(--marron-madera); font-weight: 500;">
+            Los favoritos de miles de viajeros cada año. Todos con asistencia médica y guía local certificada.
+        </p>
+        <div class="plans-note" style="background: #f8f9fa; border-left: 4px solid var(--verde-cafe); padding: 15px; margin-bottom: 25px; border-radius: 8px;">
+            <p style="margin: 0; font-size: 0.9rem; color: #333;">
+                <strong>💰 Precios según categoría:</strong> Los precios varían según categoría de alojamiento (Económico/Intermedio/Intermedio VIP/VIP), temporada (baja/media/alta) y tipo de transporte (sin transporte/radio taxi/placa blanca). Los precios mostrados son referenciales para economía sin transporte. 
+                <a href="planes.html" class="plans-note-link" style="color: var(--verde-cafe); text-decoration: underline;">Ver planes completos</a>
+            </p>
+        </div>
+        <div class="plans-grid" id="planes-home-grid">
+            <!-- Los planes se cargarán dinámicamente desde planes.html -->
+        <div class="view-all-plans" style="text-align: center; margin-top: 30px;"><a href="planes.html" class="btn btn-green" style="padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600;">Ver todos los planes completos</a></div></div>
+        
+        <script>
+            // Cargar planes desde planes.html al home
+            document.addEventListener('DOMContentLoaded', function() {
+                const homePlansGrid = document.getElementById('planes-home-grid');
+                if (homePlansGrid) {
+                    // Agregar enlace a planes.html
+                    const viewAllLink = document.createElement('div');
+                    viewAllLink.className = 'view-all-plans';
+                    viewAllLink.style.textAlign = 'center';
+                    viewAllLink.style.marginTop = '30px';
+                    viewAllLink.innerHTML = '<a href="planes.html" class="btn btn-green" style="padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600;">Ver todos los planes completos</a>';
+                    homePlansGrid.appendChild(viewAllLink);
+                }
+            });
+        </script>
+    </section>
+
+    <!-- Sección Promoción del Mes -->
+    <section class="promo-month" id="promo-mes" aria-label="Promoción del Mes - Plan Vientos de Agosto 2026">
+        <div class="container">
+            <div class="promo-badge">
+        <span class="badge-icon">🔥</span>
+        <span class="badge-text">PROMOCIÓN DEL MES</span>
+        <span class="badge-urgent">SOLO 30 CUPOS</span>
+    </div>
+            <div class="promo-content">
+                <div class="promo-image">
+                    <div class="promo-img-wrapper" style="background-image: url('assets/images/paisajes/eje-cafetero-aerial-view.jpg');" alt="Plan turístico Vientos de Agosto 2026 en el Quindío con hospedaje en cabañas y hoteles campestres, Valle de Cocora y experiencias culturales">
+                        <div class="promo-overlay"></div>
+                        <div class="promo-discount">
+                            <span class="discount-text">AGO</span>
+                            <span class="discount-label">2026</span>
+                        </div>
+                    </div>
+                    <!-- Galería de imágenes de la promoción -->
+                    <div class="promo-gallery">
+                        <div class="promo-gallery-item">
+                            <img src="assets/images/paisajes/colombian-coffee-fields.jpg" alt="Hospedaje en cabañas y hoteles campestres del Quindío" style="aspect-ratio: 16 / 9; width: 100%; height: auto;">
+                            <div class="gallery-overlay">
+                                <span>Hospedaje Premium</span>
+                            </div>
+                        </div>
+                        <div class="promo-gallery-item">
+                            <img src="assets/images/paisajes/coffee-plantation-sunset-colombia.jpg" alt="Experiencias gastronómicas en el Eje Cafetero" style="aspect-ratio: 16 / 9; width: 100%; height: auto;">
+                            <div class="gallery-overlay">
+                                <span>Gastronomía Local</span>
+                            </div>
+                        </div>
+                        <div class="promo-gallery-item">
+                            <img src="assets/images/paisajes/valle-cocora-hero-banner.jpg" alt="Valle de Cocora - Palma de Cera" loading="lazy" decoding="async" style="aspect-ratio: 16 / 9; width: 100%; height: auto;">
+                            <div class="gallery-overlay">
+                                <span>Valle de Cocora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo-details">
+                    <div class="promo-timer-countdown">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>🌬️ Vientos de Agosto 2026</span>
+                        <div class="countdown-timer" id="countdown">
+                            <span class="time-block"><span class="time-value" id="promo-days">03</span><span class="time-label">Días</span></span>
+                            <span class="time-separator">/</span>
+                            <span class="time-block"><span class="time-value" id="promo-hours">14</span><span class="time-label">Horas</span></span>
+                            <span class="time-separator">/</span>
+                            <span class="time-block"><span class="time-value" id="promo-minutes">38</span><span class="time-label">Min</span></span>
+                            <span class="time-separator">/</span>
+                            <span class="time-block"><span class="time-value" id="promo-seconds">28</span><span class="time-label">Seg</span></span>
+                        </div>
+                    </div>
+                    <div class="promo-scarcity">
+                        <i class="fas fa-fire"></i>
+                        <span><strong>¡Plan exclusivo de temporada!</strong> - Disfruta los mejores destinos del Eje Cafetero</span>
+                    </div>
+                    <h2 class="promo-title">Promoción Exclusiva Eje Cafetero 2026: Plan Vientos de Agosto - Cupos Limitados</h2>
+                    <h3 class="promo-subtitle">🌟 Experiencia Completa del Eje Cafetero en Temporada Alta - Tour 4 Días 3 Noches Todo Incluido</h3>
+                    <h4 class="promo-destinations">Destinos Principales: Valle de Cocora, Salento, Filandia, Parque del Café, PANACA y RECUCA</h4>
+                    <p class="promo-description">Descubre la magia del Eje Cafetero con nuestro plan especial de agosto. Incluye Valle de Cocora, Salento, Filandia, Parque del Café, Panaca, Recuca, alojamiento, alimentación completa y transporte.</p>
+                    
+                    <div class="promo-includes">
+                        <h4>✨ Este plan incluye:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 4 Días / 3 Noches todo incluido</li>
+                            <li><i class="fas fa-check"></i> 3 noches de alojamiento (3 opciones de hotel)</li>
+                            <li><i class="fas fa-check"></i> 3 desayunos y 3 cenas incluidos</li>
+                            <li><i class="fas fa-check"></i> Pasaporte Parque del Café</li>
+                            <li><i class="fas fa-check"></i> Valle de Cocora + Salento + Filandia</li>
+                            <li><i class="fas fa-check"></i> Museo del Canasto y Calle del Tiempo Detenida</li>
+                            <li><i class="fas fa-check"></i> Parque Panaca y Parque Recuca</li>
+                            <li><i class="fas fa-check"></i> Transporte desde terminal de transporte</li>
+                            <li><i class="fas fa-check"></i> Asistencia médica incluida</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="promo-price" itemscope="" itemtype="https://schema.org/Offer">
+                        <meta itemprop="name" content="Promoción Exclusiva Eje Cafetero: Plan Vientos de Agosto 2026">
+                        <meta itemprop="url" content="https://quindiotravel.com.co/promo-agosto-2026.html">
+                        <meta itemprop="priceCurrency" content="COP">
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                        <div itemprop="seller" itemscope="" itemtype="https://schema.org/TravelAgency">
+                            <meta itemprop="name" content="Quindío Travel">
+                            <meta itemprop="image" content="https://quindiotravel.com.co/logo_quindio_travel.png">
+                            <meta itemprop="telephone" content="+57-317-4426044">
+                            <meta itemprop="priceRange" content="$$ - $$$">
+                            <meta itemprop="url" content="https://quindiotravel.com.co">
+                        </div>
+                        <div class="price-range">
+                            <span class="price-label">Rango de precios:</span>
+                            <span class="price-from" itemprop="lowPrice" content="1152000">$1.152.000</span>
+                            <span class="price-separator">-</span>
+                            <span class="price-to" itemprop="highPrice" content="2097000">$2.097.000</span>
+                            <span class="price-per">/ por persona</span>
+                        </div>
+                        <div class="price-special">
+                            <span class="price-label">Desde:</span>
+                            <span class="price-highlight" itemprop="price" content="1152000">$1.152.000</span>
+                            <span class="price-per">/ cuádruple (Cabañas La Esmeralda)</span>
+                        </div>
+                        <div class="price-note">
+                            <small>* Precios según alojamiento y tipo de habitación</small>
+                        </div>
+                    </div>
+                    
+                    <div class="promo-cta">
+                        <a href="promo-agosto-2026.html" class="btn btn-promo" data-type="promo">
+                            <i class="fas fa-eye"></i> Ver Promoción Completa
+                        </a>
+                        <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20quiero%20reservar%20la%20Promoción%20Vientos%20de%20Agosto%202026&amp;timestamp=1786544467950" target="_blank" rel="noopener" class="btn btn-outline-promo" data-whatsapp-tracking="true" aria-label="Contactar por WhatsApp">
+                            <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div class="promo-urgency" itemscope="" itemtype="https://schema.org/Offer">
+                        <link itemprop="availability" href="https://schema.org/LimitedAvailability">
+                        <meta itemprop="inventoryLevel" content="30">
+                        <p><i class="fas fa-exclamation-triangle"></i> Solo <strong itemprop="availability" content="https://schema.org/LimitedAvailability">30 cupos</strong> disponibles a este precio</p>
+                    </div>
+                    
+                    <div class="promo-accommodation">
+                        <h4>🏨 Opciones de Alojamiento:</h4>
+                        <div class="accommodation-options">
+                            <div class="accommodation-card">
+                                <h5>Cabañas La Esmeralda</h5>
+                                <ul>
+                                    <li>Doble: $1.479.000</li>
+                                    <li>Triple: $1.261.000</li>
+                                    <li>Cuádruple: $1.152.000</li>
+                                </ul>
+                            </div>
+                            <div class="accommodation-card">
+                                <h5>Hotel Los Girasoles</h5>
+                                <ul>
+                                    <li>Doble: $1.915.000</li>
+                                    <li>Triple: $1.697.000</li>
+                                    <li>Cuádruple: $1.588.000</li>
+                                </ul>
+                            </div>
+                            <div class="accommodation-card">
+                                <h5>Hotel Café Café</h5>
+                                <ul>
+                                    <li>Doble: $2.097.000</li>
+                                    <li>Triple: $1.879.000</li>
+                                    <li>Cuádruple: $1.770.000</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us" aria-label="Razones para viajar con Quindío Travel">
+        <div class="container">
+            <h2 class="section-title">¿Por qué viajar con Quindío Travel?</h2>
+            <div class="features-grid">
+                <div class="feature-item"><i class="fas fa-award"></i><span>Operador local RNT 18152</span></div>
+                <div class="feature-item"><i class="fas fa-history"></i><span>Más de 15 años de experiencia</span></div>
+                <div class="feature-item"><i class="fas fa-headset"></i><span>Atención personalizada 24/7</span></div>
+                <div class="feature-item"><i class="fas fa-user-tie"></i><span>Guías certificados MINCIT</span></div>
+                <div class="feature-item"><i class="fas fa-bus"></i><span>Transporte legal asegurado</span></div>
+                <div class="feature-item"><i class="fas fa-hotel"></i><span>Hoteles seleccionados</span></div>
+                <div class="feature-item"><i class="fas fa-smile-beam"></i><span>+1.200 viajeros satisfechos</span></div>
+                <div class="feature-item"><i class="fas fa-heartbeat"></i><span>Asistencia médica incluida</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white" id="hoteles" aria-label="Hoteles y alojamientos aliados Quindío">
+        <div class="container">
+            <h2 class="section-title">Finca Hoteles en el Quindío</h2>
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 30px; color: var(--marron-madera); font-weight: 500;">
+                Paquetes turísticos con guía para recorrer Quindío: alojamientos verificados personalmente por nuestro equipo. Piscinas, zonas verdes, restaurante y servicio de calidad.
+            </p>
+            
+            <div class="hotel-filters" style="text-align: center; margin-bottom: 30px;">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="estandar">⭐⭐⭐ Estándar</button>
+                <button class="filter-btn" data-filter="intermedia">⭐⭐⭐⭐ Intermedia</button>
+                <button class="filter-btn" data-filter="vip">⭐⭐⭐⭐⭐ VIP</button>
+            </div>
+            
+            <div class="hoteles-grid" id="grid-hoteles">
+                <div class="hotel-card" data-category="intermedia">
+                    <div class="hotel-img" style="background-image: url('assets/images/alojamientos/finca-hotel-los-girasoles/Finca-los-Girasoles-7.jpg');"></div>
+                    <span class="hotel-categoria">Intermedia VIP</span>
+                    <h3>Finca Hotel Los Girasoles</h3>
+                    <p class="hotel-ubicacion"><i class="fas fa-map-marker-alt"></i> Quindío, Colombia</p>
+                    <ul class="hotel-servicios">
+                        <li><i class="fas fa-check"></i> Piscina y Jacuzzi</li>
+                        <li><i class="fas fa-check"></i> Canchas de microfútbol y Voleibol</li>
+                        <li><i class="fas fa-check"></i> Recepcion 24h y WiFi</li>
+                        <li><i class="fas fa-check"></i> Amplios jardines y parque infantil</li>
+                    </ul>
+                    <a href="finca-hotel-los-girasoles.html" class="btn btn-hotel-card">Ver detalles</a>
+                </div>
+                <div class="hotel-card" data-category="intermedia">
+                    <div class="hotel-img" style="background-image: url('assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.jpg');"></div>
+                    <span class="hotel-categoria">Intermedia</span>
+                    <h3>Cabañas La Esmeralda</h3>
+                    <p class="hotel-ubicacion"><i class="fas fa-map-marker-alt"></i> Quindío, Colombia</p>
+                    <ul class="hotel-servicios">
+                        <li><i class="fas fa-check"></i> Piscina Adultos y Niños</li>
+                        <li><i class="fas fa-check"></i> Jacuzzy y Kiosco</li>
+                        <li><i class="fas fa-check"></i> Zonas de asados y Bar</li>
+                        <li><i class="fas fa-check"></i> Canchas deportivas</li>
+                    </ul>
+                    <a href="cabanas-la-esmeralda.html" class="btn btn-hotel-card">Ver detalles</a>
+                </div>
+                <div class="hotel-card" data-category="vip">
+                    <div class="hotel-img" style="background-image: url('assets/images/alojamientos/hotel-las-camelias.jpg');"></div>
+                    <span class="hotel-categoria">VIP</span>
+                    <h3>Hotel Campestre Las Camelias</h3>
+                    <p class="hotel-ubicacion"><i class="fas fa-map-marker-alt"></i> Quindío, Colombia</p>
+                    <ul class="hotel-servicios">
+                        <li><i class="fas fa-check"></i> 5 Piscinas + Parque Acualandia</li>
+                        <li><i class="fas fa-check"></i> Sauna y Turco</li>
+                        <li><i class="fas fa-check"></i> Pista de Karts y Golfito</li>
+                        <li><i class="fas fa-check"></i> Sendero ecológico</li>
+                    </ul>
+                    <a href="hotel-campestre-las-camelias.html" class="btn btn-hotel-card">Ver detalles</a>
+                </div>
+                <div class="hotel-card" data-category="estandar">
+                    <div class="hotel-img" style="background-image: url('assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata.jpg');"></div>
+                    <span class="hotel-categoria">Estándar</span>
+                    <h3>Hotel Campestre La Tata</h3>
+                    <p class="hotel-ubicacion"><i class="fas fa-map-marker-alt"></i> A 100mts del Parque del Café</p>
+                    <ul class="hotel-servicios">
+                        <li><i class="fas fa-check"></i> Piscina niños y adultos</li>
+                        <li><i class="fas fa-check"></i> Jacuzzi</li>
+                        <li><i class="fas fa-check"></i> Restaurante y Lavandería</li>
+                        <li><i class="fas fa-check"></i> Parqueadero gratuito</li>
+                    </ul>
+                    <a href="hotel-campestre-la-tata.html" class="btn btn-hotel-card">Ver detalles</a>
+                </div>
+                <div class="hotel-card" data-category="intermedia">
+                    <div class="hotel-img" style="background-image: url('assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.jpg');"></div>
+                    <span class="hotel-categoria">Intermedia VIP</span>
+                    <h3>Hotel Campestre Café Café</h3>
+                    <p class="hotel-ubicacion"><i class="fas fa-map-marker-alt"></i> Quindío, Colombia</p>
+                    <ul class="hotel-servicios">
+                        <li><i class="fas fa-check"></i> Wifi habitaciones</li>
+                        <li><i class="fas fa-check"></i> Mini bar y TV satelital</li>
+                        <li><i class="fas fa-check"></i> Billar, Voleibol, Ping Pong</li>
+                        <li><i class="fas fa-check"></i> Amplio parqueadero</li>
+                    </ul>
+                    <a href="hotel-campestre-cafe-cafe.html" class="btn btn-hotel-card">Ver detalles</a>
+                </div>
+                <div class="hotel-card" data-category="estandar">
+                    <div class="hotel-img" style="background-image: url('assets/images/alojamientos/hotel-de-la-vega/857575437.jpg');"></div>
+                    <span class="hotel-categoria">Estándar</span>
+                    <h3>De La Vega Hotel Campestre</h3>
+                    <p class="hotel-ubicacion"><i class="fas fa-map-marker-alt"></i> A 200mts del Parque del Café, Montenegro</p>
+                    <ul class="hotel-servicios">
+                        <li><i class="fas fa-check"></i> 3 Jacuzzis + Piscina</li>
+                        <li><i class="fas fa-check"></i> Billar pool y Rana</li>
+                        <li><i class="fas fa-check"></i> Parque infantil</li>
+                        <li><i class="fas fa-check"></i> Ubicación privilegiada</li>
+                    </ul>
+                    <a href="hotel-de-la-vega.html" class="btn btn-hotel-card">Ver detalles</a>
+                </div>
+                <div class="hotel-card" data-category="estandar">
+                    <div class="hotel-img" style="background-image: url('assets/images/alojamientos/finca-hotel-la-dorada/1414317914.webp');"></div>
+                    <span class="hotel-categoria">Estándar</span>
+                    <h3>Finca Hotel Dorada</h3>
+                    <p class="hotel-ubicacion"><i class="fas fa-map-marker-alt"></i> Km. 5 Pueblo Tapao Vía a La Tebaida</p>
+                    <ul class="hotel-servicios">
+                        <li><i class="fas fa-check"></i> Piscina niños y adultos</li>
+                        <li><i class="fas fa-check"></i> Juegos infantiles</li>
+                        <li><i class="fas fa-check"></i> Restaurante y Lavandería</li>
+                        <li><i class="fas fa-check"></i> Zonas verdes</li>
+                    </ul>
+                    <a href="finca-hotel-la-dorada.html" class="btn btn-hotel-card">Ver detalles</a>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top: 30px;">
+                <a href="planes.html#cotizador" class="btn btn-outline btn-outline-green" style="border-color: var(--verde-cafe); color: var(--verde-cafe);">
+                    <i class="fas fa-calculator"></i> Cotizar Plan 4D/3N con alojamiento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-gray" id="experiencias" aria-label="Experiencias y atractivos turísticos del Quindío">
+        <div class="container">
+            <h2 class="section-title" data-i18n="experiencias.title">✨ Experiencias Inolvidables del Eje Cafetero</h2>
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 40px; color: var(--marron-madera); font-weight: 500;" data-i18n="experiencias.subtitle">Vive los atractivos más icónicos con la compañía de guías locales que conocen cada rincón del Quindío.</p>
+            <div class="experiencias-grid">
+                <a href="planes.html?destino=Parque del Café" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('assets/images/destinos/logo_parque_del_cafe.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🎢 Parque del Café</h3>
+                            <p>24 atracciones mecánicas, shows culturales y museo del café</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="salento.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background: linear-gradient(135deg, var(--verde-cafe), var(--marron-madera));">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🏘 Salento Pueblo Patrimonio</h3>
+                            <p>Pueblo patrimonial con calles empedradas, miradores y artesanías</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="salento.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background: linear-gradient(135deg, var(--verde-cafe), var(--marron-madera));">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🏘 Salento Pueblo Patrimonio</h3>
+                            <p>Pueblo patrimonial con calles empedradas, miradores y artesanías</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="filandia.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('assets/images/atractivos/filandia/mirador-filandia.jpg'); background-size: cover; background-position: center;">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🏛 Filandia Pueblo Patrimonio</h3>
+                            <p>Pueblo patrimonial con mirador 360° y artesanías en guadua premium</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="panaca.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('assets/images/destinos/logo_panaca.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🐄 PANACA</h3>
+                            <p>Parque temático agropecuario con 4.500 animales y 10 estaciones</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="termales-santa-rosa.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background: linear-gradient(135deg, #1e5799 0%, #2989d8 40%, #207cca 70%, #7db9e8 100%);">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>♨ Termales Santa Rosa</h3>
+                            <p>Aguas termales de 45°C ricas en minerales, piscinas y spa</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="filandia.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('assets/images/atractivos/filandia/mirador-filandia.jpg'); background-size: cover; background-position: center;">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🏛 Filandia Pueblo Patrimonio</h3>
+                            <p>Pueblo patrimonial con mirador 360° y artesanías en guadua premium</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="recuca.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('assets/images/destinos/logo_recuca.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>☕ RECUCA Tradición Cafetera</h3>
+                            <p>Experiencia del proceso del café desde la siembra hasta la taza</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="coffee-tour-armenia.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background: linear-gradient(135deg, #8B4513, #D2691E);">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>☕ Coffee Tour Armenia</h3>
+                            <p>Recorrido profesional por fincas cafeteras con guía certificado</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="cabalgatas-quindio.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('assets/images/experiencias/parapente-1.jpg'); background-size: cover; background-position: center;">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🐴 Cabalgatas en el Quindío</h3>
+                            <p>Recorridos a caballo por paisajes cafeteros</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="parque-los-arrieros.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('assets/images/destinos/logo_parque_los_arrieros.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🎭 Parque Los Arrieros</h3>
+                            <p>Espectáculos en vivo, animales y experiencias de entretenimiento familiar</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="balsaje-rio-la-vieja.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('assets/images/experiencias/balsaje-rio-la-vieja.jpg'); background-size: cover; background-position: center;">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🚣 Balsaje Río La Vieja</h3>
+                            <p>Descenso en balsa tradicional por el río La Vieja con paisajes naturales</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="laberinto-mil-caminos.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background: linear-gradient(135deg, #9370DB, #8A2BE2);">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🌿 Laberinto Mil Caminos</h3>
+                            <p>Laberinto de 5.000m² con jardines y experiencias divertidas en familia</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="granja-mama-lulu.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background: linear-gradient(135deg, #FF69B4, #FFB6C1);">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🐷 Granja Mamá Lulú</h3>
+                            <p>Granja interactiva con animales, juegos educativos y recreación familiar</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="jeep-panoramico.html" style="text-decoration:none;" class="experiencia-link">
+                    <div class="experiencia-card" style="background: linear-gradient(135deg, #FF6347, #DC143C);">
+                        <div class="experiencia-overlay"></div>
+                        <div class="experiencia-texto">
+                            <h3>🚙 Jeep Panorámico</h3>
+                            <p>Recorridos en Willys por paisajes cafeteros con guías locales</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white" id="empresas" aria-label="Planes corporativos y empresariales Quindío Travel">
+        <div class="container">
+            <h2 class="section-title">🏢 Soluciones Corporativas y Empresariales</h2>
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 40px; color: var(--marron-madera); font-weight: 500;">
+                Diseñamos planes a medida para incentivos empresariales, retiros, integración de equipos y grupos familiares numerosos.
+            </p>
+            <div class="corp-grid">
+                <div class="corp-feature">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Incentivos Empresariales</h3>
+                    <p>Reconozca a sus colaboradores con experiencias premium en el Eje Cafetero. Programas todo incluido con opciones de team building.</p>
+                </div>
+                <div class="corp-feature">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>Team Building</h3>
+                    <p>Dinámicas grupales, talleres de cultura cafetera, competencias deportivas y actividades vivenciales para fortalecer su equipo.</p>
+                </div>
+                <div class="corp-feature">
+                    <i class="fas fa-church"></i>
+                    <h3>Grupos Familiares</h3>
+                    <p>Programas especiales para cumpleaños, bodas, aniversarios y reuniones familiares con alojamientos múltiples y transporte dedicado.</p>
+                </div>
+                <div class="corp-feature">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Tours Educativos</h3>
+                    <p>Paseos pedagógicos a colegios y universidades con recorrido cultural por la Ruta del Café y parques temáticos. Rutas didácticas certificadas.</p>
+                </div>
+                <div class="corp-feature">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>Facturación Oficial</h3>
+                    <p>Emitimos factura con RNT 18152 para su empresa. Cotizaciones personalizadas con detalle de servicios, impuestos y legalidad turística.</p>
+                </div>
+                <div class="corp-feature">
+                    <i class="fas fa-shuttle-van"></i>
+                    <h3>Transporte Exclusivo</h3>
+                    <p>Vehículos tipo buseta, microbús y bus a partir de 10 personas. Conductores especializados y seguros de responsabilidad civil.</p>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top: 35px;">
+                <a href="#" data-wa-message="Hola Quindío Travel, requerimos una cotización para grupo empresarial o familiar. ¿Podrían apoyarnos?" target="_blank" rel="noopener" class="btn btn-whatsapp wa-cta-link">
+                    <i class="fab fa-whatsapp"></i> Solicitar cotización empresarial
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals Section -->
+    <section class="trust-signals" aria-label="Sellos de confianza y garantías Quindío Travel">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>RNT 18152</h4>
+                    <p>Operador turístico legal registrado ante MINCIT</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Garantía de Calidad</h4>
+                    <p>+15 años de experiencia sin quejas registradas</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>Soporte 24/7</h4>
+                    <p>Atención directa con el gerente durante tu viaje</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h4>Precios Transparentes</h4>
+                    <p>Sin costos ocultos, todo incluido en la cotización</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h4>Cancelación Flexible</h4>
+                    <p>Reembolso del 100% hasta 48 horas antes</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h4>Conocimiento Local</h4>
+                    <p>Guías nativos del Quindío con certificación MINCIT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white" id="testimonios" aria-label="Testimonios y reseñas de viajeros Quindío Travel">
+        <div class="container">
+            <h2 class="section-title">⭐ Qué Dicen Nuestros Viajeros</h2>
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 40px; color: var(--marron-madera); font-weight: 500;">
+                Más de 1.200 familias y grupos nos han confiado su experiencia en el Eje Cafetero.
+            </p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <span class="testimonial-date">Julio 2026</span>
+                    </div>
+                    <p class="testimonial-text">"Increíble experiencia en el Valle de Cocora. La finca hotel que nos recomendaron fue perfecta y los guías súper amables. Definitivamente volveremos con Quindío Travel."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, var(--verde-cafe), var(--verde-claro)); color: white; font-weight: bold;">MC</div>
+                        <div class="author-info">
+                            <p class="author-name">María Camila Rodríguez</p>
+                            <p class="author-location">Bogotá, Colombia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <span class="testimonial-date">Julio 2026</span>
+                    </div>
+                    <p class="testimonial-text">"Plan 4 días familiar con nuestros hijos. Todo perfectamente organizado, desde el transporte hasta las entradas a los parques. Los niños disfrutaron muchísimo PANACA y el Parque del Café."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, var(--amarillo-suave), var(--verde-cafe)); color: white; font-weight: bold;">CG</div>
+                        <div class="author-info">
+                            <p class="author-name">Carlos Gómez Martínez</p>
+                            <p class="author-location">Medellín, Colombia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <span class="testimonial-date">Junio 2026</span>
+                    </div>
+                    <p class="testimonial-text">"Viaje corporativo con 15 personas. Quindío Travel manejó todo con profesionalidad, desde la cotización hasta la ejecución. Excelente servicio para empresas."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, var(--marron-madera), var(--verde-cafe)); color: white; font-weight: bold;">LP</div>
+                        <div class="author-info">
+                            <p class="author-name">Laura Patricia Henao</p>
+                            <p class="author-location">Cali, Colombia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align:center; margin-top: 35px;">
+                <div class="google-reviews-badge" style="background: white; padding: 25px 35px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: inline-block; max-width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; justify-content: center;">
+                        <div class="stars" style="color: #4285F4; font-size: 1.8rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            <p style="font-weight: bold; color: #202124; margin: 0; font-size: 1.3rem;">4.9/5</p>
+                            <p style="font-size: 0.85rem; color: #5f6368; margin: 0;">Google Reviews</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Proof Avanzado -->
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #4285F4;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-users" style="color: #4285F4; font-size: 1.2rem;"></i>
+                            <span style="font-weight: 700; color: #202124;">+1,200 VIAJEROS SATISFECHOS</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-check-circle" style="color: #34A853; font-size: 1.2rem;"></i>
+                            <span style="font-weight: 600; color: #202124;">98% RECOMIENDAN NUESTROS SERVICIOS</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-award" style="color: #FBBC05; font-size: 1.2rem;"></i>
+                            <span style="font-weight: 600; color: #202124;">15+ AÑOS DE EXPERIENCIA EN EJE CAFETERO</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio Reciente -->
+                    <div style="background: #e8f0fe; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: left;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <div style="width: 40px; height: 40px; background: #4285F4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">MC</div>
+                            <div>
+                                <p style="font-weight: 700; color: #202124; margin: 0;">María Carolina</p>
+                                <p style="font-size: 0.75rem; color: #5f6368; margin: 0;">Bogotá - Viajó hace 3 días</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #202124; margin: 0; font-style: italic;">"¡Increíble experiencia! El plan al Valle de Cocora fue perfecto. Guías muy profesionales y hoteles excelentes. Definitivamente volveremos."</p>
+                    </div>
+                    
+                    <a href="https://g.page/r/quindiotravel/review" target="_blank" rel="noopener" class="google-review-button" style="color: #4285F4; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-block; background: #e8f0fe; padding: 10px 20px; border-radius: 25px; transition: background 0.3s ease;">
+                        <i class="fab fa-google"></i> Ver +150 reseñas en Google
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white" id="video" aria-label="Video promocional Quindío Travel">
+        <div class="container">
+            <h2 class="section-title">🎬 Vive el Eje Cafetero</h2>
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 40px; color: var(--marron-madera); font-weight: 500;">
+                Un minuto para descubrir por qué miles de viajeros eligen Quindío Travel cada año.
+            </p>
+            
+            <div class="video-container">
+                <div class="video-placeholder" style="background: linear-gradient(rgba(46,90,54,0.7), rgba(46,90,54,0.5)), url('assets/images/paisajes/valle-cocora-hero-banner.jpg'); background-size: cover; background-position: center; border-radius: 20px; padding: 60px 40px; text-align: center; color: white; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2;">
+                        <div class="video-play-circle" style="width: 100px; height: 100px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; cursor: pointer; transition: transform 0.3s;">
+                            <i class="fas fa-play" style="font-size: 2.5rem; margin-left: 5px;"></i>
+                        </div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Quindío Travel: Experiencias Auténticas</h3>
+                        <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 20px;">Drone · Paisajes · Caballos · Jeep Willys · Café · Hoteles · Parques</p>
+                        <a href="#" data-wa-message="Hola Quindío Travel, deseo obtener más información sobre sus planes turísticos" target="_blank" rel="noopener" class="btn btn-white wa-cta-link" style="background: white; color: var(--verde-cafe); border: none; padding: 15px 30px; font-weight: 700; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                            <i class="fas fa-info-circle"></i> Cotizar mi experiencia
+                        </a>
+                    </div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('assets/images/hero/valle-del-cocora-placeholder.svg') center/cover; opacity: 0.15; z-index: 1;"></div>
+                </div>
+            </div>
+            
+            <div class="video-highlights-modern" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="feature-card-modern" style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="feature-icon-modern" style="width: 70px; height: 70px; background: linear-gradient(135deg, #2E5A36, #4CAF50); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 1.8rem;">
+                        <i class="fas fa-helicopter"></i>
+                    </div>
+                    <h3 style="color: #2E5A36; margin-bottom: 15px; font-size: 1.3rem;">Vistas Drone</h3>
+                    <p style="color: #666; line-height: 1.6; margin: 0;">Perspectivas aéreas únicas del Valle de Cocora y paisajes cafeteros</p>
+                </div>
+                <div class="feature-card-modern" style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="feature-icon-modern" style="width: 70px; height: 70px; background: linear-gradient(135deg, #2E5A36, #4CAF50); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 1.8rem;">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 style="color: #2E5A36; margin-bottom: 15px; font-size: 1.3rem;">Paisajes</h3>
+                    <p style="color: #666; line-height: 1.6; margin: 0;">Montañas, valles y naturaleza del Eje Cafetero en su máximo esplendor</p>
+                </div>
+                <div class="feature-card-modern" style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="feature-icon-modern" style="width: 70px; height: 70px; background: linear-gradient(135deg, #2E5A36, #4CAF50); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 1.8rem;">
+                        <i class="fas fa-horse"></i>
+                    </div>
+                    <h3 style="color: #2E5A36; margin-bottom: 15px; font-size: 1.3rem;">Caballos</h3>
+                    <p style="color: #666; line-height: 1.6; margin: 0;">Cabalgatas inolvidables por los caminos tradicionales cafeteros</p>
+                </div>
+                <div class="feature-card-modern" style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="feature-icon-modern" style="width: 70px; height: 70px; background: linear-gradient(135deg, #2E5A36, #4CAF50); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 1.8rem;">
+                        <i class="fas fa-truck-monster"></i>
+                    </div>
+                    <h3 style="color: #2E5A36; margin-bottom: 15px; font-size: 1.3rem;">Jeep Willys</h3>
+                    <p style="color: #666; line-height: 1.6; margin: 0;">Aventuras 4x4 por los caminos menos transitados del Quindío</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white" id="reservas" aria-label="Sistema de reservas Quindío Travel">
+        <div class="container">
+            <h2 class="section-title">📝 Sistema de Reservas Inteligente</h2>
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 40px; color: var(--marron-madera); font-weight: 500;">
+                Cotiza y reserva tu experiencia al Eje Cafetero en tiempo real. Precios actualizados 2026.
+            </p>
+            
+            <div class="reservas-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                <div class="reservas-form-container" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="color: var(--verde-cafe); margin-bottom: 25px;">📋 Cotizador Inteligente</h3>
+                    
+                    <!-- Barra de progreso -->
+                    <div class="progress-bar-container" style="margin-bottom: 25px;">
+                        <div class="progress-bar" style="height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden;">
+                            <div class="progress-fill" style="height: 100%; background: var(--verde-cafe); width: 0%; transition: width 0.3s ease;"></div>
+                        </div>
+                        <div class="progress-steps" style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; color: #666;">
+                            <span class="step active" data-step="1">1. Plan</span>
+                            <span class="step" data-step="2">2. Fechas</span>
+                            <span class="step" data-step="3">3. Datos</span>
+                            <span class="step" data-step="4">4. Confirmar</span>
+                        </div>
+                    </div>
+                    
+                    <form id="reserva-form">
+                        <!-- Paso 1: Selección de Plan -->
+                        <div class="form-step active" data-step="1">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Plan Turístico *</label>
+                                <select id="reserva-plan" required="" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="">Selecciona un plan</option>
+                                    <option value="plan-1">Plan 1 - 2 Días / 1 Noche - Desde $425.000</option>
+                                    <option value="plan-2">Plan 2 - 3 Días / 2 Noches - Desde $430.000</option>
+                                    <option value="plan-3">Plan 3 - 4 Días / 3 Noches - Desde $570.000</option>
+                                    <option value="plan-4">Plan 4 - 4 Días / 3 Noches - Desde $570.000</option>
+                                    <option value="plan-5">Plan 5 - 4 Días / 3 Noches - Desde $777.000</option>
+                                    <option value="plan-6">Plan 6 - 5 Días / 4 Noches - Desde $820.000</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Categoría de Alojamiento *</label>
+                                <select id="reserva-categoria" required="" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="">Selecciona categoría</option>
+                                    <option value="economica">Económico - Quinta del Café, Dorada</option>
+                                    <option value="intermedia">Intermedio - Cabañas La Esmeralda, Los Aperos</option>
+                                    <option value="intermedia_vip">Intermedio VIP - Los Girasoles, La Tata, Combia</option>
+                                    <option value="vip">VIP - Hotel Campestre Camellias, Mocawa Resort</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Tipo de Transporte *</label>
+                                <select id="reserva-transporte" required="" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="sin_transporte">Sin Transporte (Precios base)</option>
+                                    <option value="radio_taxi">Radio Taxi</option>
+                                    <option value="placa_blanca">Placa Blanca</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="btn btn-green" data-step-button="next" data-target-step="2" style="width: 100%; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                Continuar <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Paso 2: Fechas y Personas -->
+                        <div class="form-step" data-step="2" style="display: none;">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Fecha de Viaje *</label>
+                                <input type="date" id="reserva-fecha" required="" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Número de Adultos *</label>
+                                <input type="number" id="reserva-adultos" min="1" max="30" value="2" required="" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Número de Niños (2-10 años)</label>
+                                <input type="number" id="reserva-ninos" min="0" max="20" value="0" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <!-- Resumen de precio en tiempo real -->
+                            <div class="price-summary" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--verde-cafe);">
+                                <h4 style="color: var(--verde-cafe); margin-bottom: 10px; font-size: 0.9rem;">💰 Estimación de Precio</h4>
+                                <div class="price-details">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #666;">Precio por persona:</span>
+                                        <span id="precio-persona" style="font-weight: 700; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #666;">Total adultos:</span>
+                                        <span id="total-adultos" style="font-weight: 700; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #666;">Total niños:</span>
+                                        <span id="total-ninos" style="font-weight: 700; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                    <div style="border-top: 1px solid #ddd; margin-top: 10px; padding-top: 10px; display: flex; justify-content: space-between;">
+                                        <span style="font-weight: 700; color: var(--texto-oscuro);">Total estimado:</span>
+                                        <span id="total-estimado" style="font-weight: 800; font-size: 1.2rem; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.75rem; color: #888; margin-top: 8px; margin-bottom: 0;">* Precios SIN TRANSPORTE según portafolio oficial 2026</p>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px;">
+                                <button type="button" class="btn btn-outline-green" data-step-button="prev" data-target-step="1" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fas fa-arrow-left"></i> Atrás
+                                </button>
+                                <button type="button" class="btn btn-green" data-step-button="next" data-target-step="3" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    Continuar <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Paso 3: Datos Personales -->
+                        <div class="form-step" data-step="3" style="display: none;">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Nombre Completo *</label>
+                                <input type="text" id="reserva-nombre" required="" placeholder="Tu nombre completo" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">WhatsApp / Celular *</label>
+                                <input type="tel" id="reserva-whatsapp" required="" placeholder="+57 3XX XXX XXXX" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Correo Electrónico *</label>
+                                <input type="email" id="reserva-email" required="" placeholder="tu@correo.com" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Método de Pago Preferido</label>
+                                <select id="reserva-pago" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="nequi">Nequi / Transferencia Bancaria</option>
+                                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                                    <option value="efectivo">Efectivo (en oficina)</option>
+                                    <option value="empresa">Facturación Empresarial</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 25px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Comentarios Adicionales</label>
+                                <textarea id="reserva-comentarios" rows="3" placeholder="Cualquier requerimiento especial, preferencias de alojamiento, etc." style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px;">
+                                <button type="button" class="btn btn-outline-green" data-step-button="prev" data-target-step="2" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fas fa-arrow-left"></i> Atrás
+                                </button>
+                                <button type="button" class="btn btn-green" data-step-button="next" data-target-step="4" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    Revisar <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Paso 4: Confirmación -->
+                        <div class="form-step" data-step="4" style="display: none;">
+                            <div class="confirmation-summary" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                                <h4 style="color: var(--verde-cafe); margin-bottom: 15px; font-size: 1rem;">📋 Resumen de tu Reserva</h4>
+                                <div id="resumen-detallado" style="font-size: 0.9rem; line-height: 1.8;">
+                                    <!-- Se llena dinámicamente -->
+                                </div>
+                            </div>
+                            
+                            <div class="terms-accept" style="margin-bottom: 20px;">
+                                <label style="display: flex; align-items: start; gap: 10px; font-size: 0.85rem; color: #666;">
+                                    <input type="checkbox" id="aceptar-terminos" required="" style="margin-top: 3px;">
+                                    <span>Acepto los <a href="#" style="color: var(--verde-cafe);">términos y condiciones</a> y la <a href="#" style="color: var(--verde-cafe);">política de privacidad</a> de Quindío Travel RNT 18152</span>
+                                </label>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px;">
+                                <button type="button" class="btn btn-outline-green" data-step-button="prev" data-target-step="3" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fas fa-arrow-left"></i> Atrás
+                                </button>
+                                <button type="submit" class="btn btn-green" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fab fa-whatsapp"></i> Enviar a WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="reservas-info" style="background: linear-gradient(135deg, var(--verde-cafe), var(--verde-claro)); padding: 30px; border-radius: 15px; color: white;">
+                    <h3 style="margin-bottom: 25px;">✅ ¿Cómo funciona tu reserva?</h3>
+                    
+                    <div class="reserva-step" style="margin-bottom: 25px; padding-left: 20px; border-left: 3px solid rgba(255,255,255,0.3);">
+                        <h4 style="margin-bottom: 10px;">1. Completa el formulario</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">Selecciona tu plan, fechas y cantidad de personas. Nosotros te contactaremos en menos de 2 horas hábiles.</p>
+                    </div>
+                    
+                    <div class="reserva-step" style="margin-bottom: 25px; padding-left: 20px; border-left: 3px solid rgba(255,255,255,0.3);">
+                        <h4 style="margin-bottom: 10px;">2. Confirmación y Pago</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">Te enviaremos la cotización detallada con disponibilidad real. Realiza el pago del 30% para confirmar tu reserva.</p>
+                    </div>
+                    
+                    <div class="reserva-step" style="margin-bottom: 25px; padding-left: 20px; border-left: 3px solid rgba(255,255,255,0.3);">
+                        <h4 style="margin-bottom: 10px;">3. ¡Viaja y Disfruta!</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">Recibirás tu itinerario completo, detalles de transporte y contactos de emergencia 24/7 durante tu viaje.</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin-top: 30px;">
+                        <h4 style="margin-bottom: 15px;"><i class="fas fa-shield-alt"></i> Garantías Quindío Travel</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Operador RNT 18152 Legal</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Pago Seguro Garantizado</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Asistencia Médica Incluida</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Cancelación Flexible</li>
+                            <li style="margin-bottom: 0;"><i class="fas fa-check" style="margin-right: 10px;"></i> Soporte 24/7</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="#" data-wa-message="Hola Quindío Travel, deseo hacer una reserva directamente por WhatsApp" target="_blank" rel="noopener" class="btn btn-white wa-cta-link" style="background: white; color: var(--verde-cafe); border: none; padding: 15px 30px; font-weight: 700; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                            <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-gray" id="blog" aria-label="Blog de viajes y guías del Eje Cafetero">
+        <div class="container">
+            <h2 class="section-title">Rutas y planes de viaje por el Eje Cafetero desde Quindío</h2>
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 40px; color: var(--marron-madera); font-weight: 500;">
+                Guía de turismo en el Eje Cafetero Quindío: consejos, rutas secretas y todo lo que debes saber antes de tu viaje.
+            </p>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-img" style="background-image: url('assets/images/hero/valle-del-cocora-placeholder.svg');"></div>
+                    <div class="blog-body">
+                        <p class="blog-date"><i class="far fa-calendar"></i> Marzo 2026 · <i class="fas fa-bookmark"></i> Guías</p>
+                        <h3>Los mejores hoteles del Quindío: guía completa 2026</h3>
+                        <p class="blog-excerpt">Fincas hotel, cabañas y alojamientos VIP en Salento, Filandia y Armenia. Comparativa de precios, servicios y categorías...</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img" style="background: linear-gradient(135deg, var(--verde-cafe), var(--marron-madera));"></div>
+                    <div class="blog-body">
+                        <p class="blog-date"><i class="far fa-calendar"></i> Febrero 2026 · <i class="fas fa-bookmark"></i> Destinos</p>
+                        <h3>Qué hacer en Salento: 5 lugares imperdibles</h3>
+                        <p class="blog-excerpt">Mirador, Calle del Tiempo Detenida, Cafeterías tradicionales, artesanías y los mejores restaurantes en este pueblo patrimonio...</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img" style="background: linear-gradient(135deg, var(--amarillo-suave), var(--verde-cafe));"></div>
+                    <div class="blog-body">
+                        <p class="blog-date"><i class="far fa-calendar"></i> Enero 2026 · <i class="fas fa-bookmark"></i> Caficultura</p>
+                        <h3>Dónde tomar el mejor café del Quindío: 5 cafeterías que NO puedes perder</h3>
+                        <p class="blog-excerpt">Desde Salento hasta Armenia, las mejores cafeterías especializadas, cultura cafetera y experiencias de cata de café orgánico...</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img" style="background: linear-gradient(135deg, var(--marron-madera), var(--verde-claro));"></div>
+                    <div class="blog-body">
+                        <p class="blog-date"><i class="far fa-calendar"></i> Diciembre 2025 · <i class="fas fa-bookmark"></i> Familiares</p>
+                        <h3>Qué hacer con niños en el Eje Cafetero: planes familiares 2026</h3>
+                        <p class="blog-excerpt">PANACA, Parque del Café, fincas hotel con zonas infantiles, actividades seguras y consejos para viajar con niños pequeños...</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img" style="background: linear-gradient(135deg, var(--verde-cafe), var(--gris-claro));"></div>
+                    <div class="blog-body">
+                        <p class="blog-date"><i class="far fa-calendar"></i> Noviembre 2025 · <i class="fas fa-bookmark"></i> Transporte</p>
+                        <h3>Cómo llegar al Quindío: guía de transporte desde Bogotá, Medellín y Cali</h3>
+                        <p class="blog-excerpt">Avianca, buses, rutas terrestres, transporte desde el aeropuerto El Edén y terminal de transportes de Armenia...</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img" style="background: linear-gradient(135deg, var(--verde-claro), var(--amarillo-suave));"></div>
+                    <div class="blog-body">
+                        <p class="blog-date"><i class="far fa-calendar"></i> Octubre 2025 · <i class="fas fa-bookmark"></i> Clima</p>
+                        <h3>Clima del Quindío: qué esperar y mejores épocas para visitar</h3>
+                        <p class="blog-excerpt">Temperatura ideal, temporadas secas y lluviosas, qué ropa empacar y cuándo disfrutar de mejor clima en cada mes del año...</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white" id="nosotros" aria-label="Sobre Quindío Travel - Nuestra historia">
+        <div class="container">
+            <h2 class="section-title">Turismo en el Eje Cafetero: experiencias en Quindío</h2>
+            <div class="nosotros-wrapper">
+                <div class="nosotros-texto">
+                    <h3>Somos viajeros locales que amamos el Quindío</h3>
+                    <p>
+                        <strong>Quindío Travel</strong> es su guía de turismo en el Eje Cafetero Quindío, un operador turístico 100% colombiano liderado por <em>Álvaro Alzate Ortiz</em>,
+                        con más de <strong>15 años</strong> diseñando planes turísticos en Quindío para recorrer el Eje Cafetero. RNT 18152 registrado ante el Ministerio de Comercio, Industria y Turismo de Colombia.
+                    </p>
+                    <p>
+                        Creemos que viajar al Quindío es mucho más que visitar parques: es conectar con la tierra,
+                        con la gente campesina, con el aroma del café recién tostado y con la calidez de un pueblo
+                        que abre sus puertas cada día a viajeros de todo el mundo. Ofrecemos viajes Eje Cafetero Quindío con itinerario
+                        diseñado para que usted disfrute de turismo en Quindío con guía del Eje Cafetero.
+                    </p>
+                    <p>
+                        Trabajamos directamente con <strong>fincas hoteles familiares, guías certificados MINCIT y transportadores legales</strong>
+                        para garantizar seguridad, comodidad y impacto positivo en las comunidades locales.
+                    </p>
+                    <p style="font-weight: 600; color: var(--verde-cafe); font-size: 1.1rem;">
+                        <i class="fas fa-quote-left" style="color: var(--amarillo-suave);"></i>
+                        &nbsp;No solo vendemos viajes; somos la guía oficial para descubrir el Quindío auténtico.
+                    </p>
+                </div>
+                <div class="nosotros-stats" aria-label="Estadísticas Quindío Travel">
+                    <div class="stat-card">
+                        <div class="stat-numero">15+</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-numero">1.200+</div>
+                        <div class="stat-label">Viajeros Satisfechos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-numero">7</div>
+                        <div class="stat-label">Hoteles Aliados Oficiales</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-numero">8</div>
+                        <div class="stat-label">Atractivos Turísticos Incluidos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section container" id="mapa" aria-label="Mapa turístico interactivo del Quindío">
+        <div class="map-banner">
+            <div class="map-grid">
+                <div class="map-info">
+                    <h2><i class="fas fa-map-marked-alt"></i> Viajes al Eje Cafetero: itinerarios desde Quindío</h2>
+                    <p>Turismo en el Eje Cafetero: qué hacer en Quindío. Explora todos los atractivos, restaurantes, fincas hoteles, parques temáticos y rutas recomendadas
+                       por municipio en nuestro mapa oficial. Descubre secretos locales y planifica tu día perfecto.</p>
+                    <div style="display:flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="https://www.mapaturisticodelquindio.com/" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: var(--blanco); color: var(--blanco);">
+                            <i class="fas fa-map-marked-alt"></i> Abrir Mapa Turístico Oficial
+                        </a>
+                        <a href="#" data-wa-message="Hola Quindío Travel, quisiera asesoría sobre el mapa turístico del Quindío y recomendaciones de rutas" target="_blank" rel="noopener" class="btn btn-whatsapp wa-cta-link">
+                            <i class="fab fa-whatsapp"></i> Pide tu ruta en WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <aside class="map-leyenda" aria-label="Leyenda del mapa turístico">
+                    <h4><i class="fas fa-map-pin"></i> ¿Qué encontrarás en el mapa?</h4>
+                    <div class="leyenda-item"><span class="leyenda-dot" style="background: #e74c3c;"></span> Parques temáticos y principales atractivos</div>
+                    <div class="leyenda-item"><span class="leyenda-dot" style="background: var(--verde-claro);"></span> Fincas hoteles y cabañas aliadas</div>
+                    <div class="leyenda-item"><span class="leyenda-dot" style="background: var(--amarillo-suave);"></span> Restaurantes y gastronomía típica</div>
+                    <div class="leyenda-item"><span class="leyenda-dot" style="background: #3498db;"></span> Pueblos patrimonio (Salento, Filandia)</div>
+                    <div class="leyenda-item"><span class="leyenda-dot" style="background: var(--marron-madera);"></span> Rutas panorámicas y miradores</div>
+                    <div class="leyenda-item"><span class="leyenda-dot" style="background: #9b59b6;"></span> Termales y zonas húmedas</div>
+                </aside>
+            </div>
+        </div>
+        
+        <div class="municipios-grid" style="margin-top: 40px;">
+            <h3 style="text-align: center; margin-bottom: 30px; color: var(--marron-madera);">🗺 Explora por Municipio</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--verde-cafe);">
+                    <h4 style="color: var(--verde-cafe); margin-bottom: 15px;">🏛 Armenia (Capital)</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Mariposario" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Mariposario</a></li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Jardín Botánico</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Restaurantes centro</li>
+                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Compras locales</li>
+                    </ul>
+                </div>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--amarillo-suave);">
+                    <h4 style="color: var(--amarillo-suave); margin-bottom: 15px;">🏘 Salento</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Valle de Cocora" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Valle de Cocora</a></li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Salento" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Salento</a></li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Calle del Tiempo Detenida</li>
+                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Cafeterías artesanales</li>
+                    </ul>
+                </div>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--marron-madera);">
+                    <h4 style="color: var(--marron-madera); margin-bottom: 15px;">🎨 Filandia</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Filandia" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Filandia</a></li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Mirador de la Carretera</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Calle del Tiempo Detenida</li>
+                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Artesanía de guadua</li>
+                    </ul>
+                </div>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #3498db;">
+                    <h4 style="color: #3498db; margin-bottom: 15px;">🎠 Montenegro</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Parque del Café" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Parque del Café</a></li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=PANACA" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> PANACA</a></li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Quinti</li>
+                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Fincas cafeteras</li>
+                    </ul>
+                </div>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #9b59b6;">
+                    <h4 style="color: #9b59b6; margin-bottom: 15px;">♨ Pereira</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="termales-santa-rosa.html" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Termales Santa Rosa</a></li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="recuca.html" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> RECUCA</a></li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Zona industrial</li>
+                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Comercio local</li>
+                    </ul>
+                </div>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #e74c3c;">
+                    <h4 style="color: #e74c3c; margin-bottom: 15px;">🏚 Buenavista</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="parque-los-arrieros.html" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Parque Los Arrieros</a></li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Parque Los Arrieros</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Fincas rurales</li>
+                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Tradición arriería</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+```
+
+Dimensions:
+- top: -3998px
+- left: 0px
+- width: 697px
+- height: 25795px
+
+CSS:
+```css
+* { margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif }
+* { margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;max-width:100% }
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+/* Inherited */
+* { font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif }
+* { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif }
+body { color:var(--texto-oscuro); line-height:1.6 }
+body { color: var(--texto-oscuro); line-height: 1.6 }
+
+/* Resolved values */
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+color: rgb(44, 62, 53);
+display: block;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+height: 25794.5px;
+line-height: 25.6px;
+max-width: 100%;
+unicode-bidi: isolate /*UA*/;
+width: 697px;
+
+/* CSS variables */
+--texto-oscuro: #2C3E35;
+```
