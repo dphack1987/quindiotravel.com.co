@@ -3,7 +3,8 @@
 **Fecha:** 2026-08-13  
 **Total de archivos de imagen:** 95 archivos  
 **Total de videos:** 19 archivos  
-**Planes turísticos:** 6 planes (eliminados Plan Premium y Plan Empresarial)
+**Planes turísticos:** 6 planes (eliminados Plan Premium y Plan Empresarial)  
+**Formato:** Todos los archivos convertidos de .jfif a .jpg para compatibilidad web
 
 ---
 
@@ -11,7 +12,7 @@
 
 | Formato | Cantidad | Ubicación Principal | Observaciones |
 |---------|----------|-------------------|---------------|
-| **.jfif** | 63 | `assets/images/` | Formato original sin optimizar |
+| **.jpg** | 63 | `assets/images/` | Formato original sin optimizar |
 | **.svg** | 7 | `assets/images/` | Placeholders y logos |
 | **.jpg** | 1 | `assets/images/fotos-para-para-quindio-travel/` | Formato estándar web |
 | **.avif** | 5 | Directorios de alojamientos | Formato optimizado moderno |
@@ -19,55 +20,55 @@
 
 ---
 
-## 🏨 Imágenes de Alojamientos (26 archivos .jfif)
+## 🏨 Imágenes de Alojamientos (26 archivos .jpg)
 
 ### **Cabañas La Esmeralda (4 archivos)**
-- `assets/images/alojamientos/finca-hotel-la-esmeralda/image-calarca-finca-hotel-la-esmeralda-casa-1-24.jfif`
-- `assets/images/alojamientos/finca-hotel-la-esmeralda/images (1).jfif`
-- `assets/images/alojamientos/finca-hotel-la-esmeralda/images (2).jfif`
-- `assets/images/alojamientos/finca-hotel-la-esmeralda/images.jfif`
+- `assets/images/alojamientos/finca-hotel-la-esmeralda/image-calarca-finca-hotel-la-esmeralda-casa-1-24.jpg`
+- `assets/images/alojamientos/finca-hotel-la-esmeralda/images (1).jpg`
+- `assets/images/alojamientos/finca-hotel-la-esmeralda/images (2).jpg`
+- `assets/images/alojamientos/finca-hotel-la-esmeralda/images.jpg`
 - **Duplicados:** ✅ Verificado - No existen duplicados en directorios raíz
 
 ### **Finca Hotel Los Girasoles (3 archivos)**
-- `assets/images/alojamientos/finca-hotel-los-girisoles/images (1).jfif`
-- `assets/images/alojamientos/finca-hotel-los-girisoles/images.jfif`
-- `assets/images/alojamientos/finca-hotel-los-girisoles/logo.jfif`
+- `assets/images/alojamientos/finca-hotel-los-girisoles/images (1).jpg`
+- `assets/images/alojamientos/finca-hotel-los-girisoles/images.jpg`
+- `assets/images/alojamientos/finca-hotel-los-girisoles/logo.jpg`
 - **Duplicados:** ✅ Verificado - No existen duplicados en directorios raíz
 
 ### **Hotel Campestre Café Café (5 archivos)**
-- `assets/images/alojamientos/hotel-campestre-cafe-cafe/images (1).jfif`
-- `assets/images/alojamientos/hotel-campestre-cafe-cafe/images (2).jfif`
-- `assets/images/alojamientos/hotel-campestre-cafe-cafe/images (3).jfif`
-- `assets/images/alojamientos/hotel-campestre-cafe-cafe/images (4).jfif`
-- `assets/images/alojamientos/hotel-campestre-cafe-cafe/images.jfif`
-- `assets/images/alojamientos/hotel-campestre-cafe-cafe/logo-cafe-cafe.jfif`
+- `assets/images/alojamientos/hotel-campestre-cafe-cafe/images (1).jpg`
+- `assets/images/alojamientos/hotel-campestre-cafe-cafe/images (2).jpg`
+- `assets/images/alojamientos/hotel-campestre-cafe-cafe/images (3).jpg`
+- `assets/images/alojamientos/hotel-campestre-cafe-cafe/images (4).jpg`
+- `assets/images/alojamientos/hotel-campestre-cafe-cafe/images.jpg`
+- `assets/images/alojamientos/hotel-campestre-cafe-cafe/logo-cafe-cafe.jpg`
 - **Duplicados:** ✅ Verificado - No existen duplicados en directorios raíz
 
 ### **Hotel Campestre La Tata (5 archivos)**
-- `assets/images/alojamientos/hotel-campestre-la-tata/images (1).jfif`
-- `assets/images/alojamientos/hotel-campestre-la-tata/images (2).jfif`
-- `assets/images/alojamientos/hotel-campestre-la-tata/images (3).jfif`
-- `assets/images/alojamientos/hotel-campestre-la-tata/images (4).jfif`
-- `assets/images/alojamientos/hotel-campestre-la-tata/images.jfif`
+- `assets/images/alojamientos/hotel-campestre-la-tata/images (1).jpg`
+- `assets/images/alojamientos/hotel-campestre-la-tata/images (2).jpg`
+- `assets/images/alojamientos/hotel-campestre-la-tata/images (3).jpg`
+- `assets/images/alojamientos/hotel-campestre-la-tata/images (4).jpg`
+- `assets/images/alojamientos/hotel-campestre-la-tata/images.jpg`
 - **Duplicados:** ✅ Verificado - No existen duplicados en directorios raíz
 
 ### **Hotel de la Vega (4 archivos)**
-- `assets/images/alojamientos/hotel-de-la-vega/image-montenegro-de-la-vega-hotel-21.jfif`
-- `assets/images/alojamientos/hotel-de-la-vega/images (1).jfif`
-- `assets/images/alojamientos/hotel-de-la-vega/images (2).jfif`
-- `assets/images/alojamientos/hotel-de-la-vega/images (3).jfif`
-- `assets/images/alojamientos/hotel-de-la-la-vega/images.jfif`
+- `assets/images/alojamientos/hotel-de-la-vega/image-montenegro-de-la-vega-hotel-21.jpg`
+- `assets/images/alojamientos/hotel-de-la-vega/images (1).jpg`
+- `assets/images/alojamientos/hotel-de-la-vega/images (2).jpg`
+- `assets/images/alojamientos/hotel-de-la-vega/images (3).jpg`
+- `assets/images/alojamientos/hotel-de-la-la-vega/images.jpg`
 - **Duplicados:** ✅ Verificado - No existen duplicados en directorios raíz
 
 ### **Hotel Campestre Las Camellias (3 archivos)**
-- `hotel-campestre-las-camelias/images (1).jfif`
-- `hotel-campestre-las-camelias/images (2).jfif`
-- `hotel-campestre-las-camelias/images (3).jfif`
-- `hotel-campestre-las-camelias/images.jfif`
+- `hotel-campestre-las-camelias/images (1).jpg`
+- `hotel-campestre-las-camelias/images (2).jpg`
+- `hotel-campestre-las-camelias/images (3).jpg`
+- `hotel-campestre-las-camelias/images.jpg`
 - **Duplicados:** ✅ Verificado - No existen duplicados en directorios raíz
 
 ### **Finca Hotel La Dorada (1 archivo)**
-- `assets/images/alojamientos/finca-hotel-la-dorada/images.jfif`
+- `assets/images/alojamientos/finca-hotel-la-dorada/images.jpg`
 - **Duplicados:** ✅ Verificado - No existen duplicados en directorios raíz
 
 ### **Placeholders (3 archivos .svg)**
@@ -77,62 +78,62 @@
 
 ---
 
-## 🌄 Imágenes de Paisajes (4 archivos .jfif)
+## 🌄 Imágenes de Paisajes (4 archivos .jpg)
 
-- `assets/images/paisajes/armenia-city-view.jfif` - Vista de Armenia
-- `assets/images/paisajes/filandia-colonial-architecture.jfif` - Arquitectura colonial Filandia
-- `assets/images/paisajes/quindio-traditional-town.jfif` - Pueblo tradicional Quindío
-- `assets/images/paisajes/salento-colorful-houses.jfif` - Casas coloridas Salento
+- `assets/images/paisajes/armenia-city-view.jpg` - Vista de Armenia
+- `assets/images/paisajes/filandia-colonial-architecture.jpg` - Arquitectura colonial Filandia
+- `assets/images/paisajes/quindio-traditional-town.jpg` - Pueblo tradicional Quindío
+- `assets/images/paisajes/salento-colorful-houses.jpg` - Casas coloridas Salento
 - `assets/images/paisajes/natural-landscapes-colombia.avif` - Paisajes naturales (optimizado)
 
 ---
 
-## 🎢 Imágenes de Atractivos Turísticos (23 archivos .jfif)
+## 🎢 Imágenes de Atractivos Turísticos (23 archivos .jpg)
 
 ### **Parque del Café (2 archivos)**
-- `parque-del-cafe/images (1).jfif`
-- `parque-del-cafe/images.jfif`
+- `parque-del-cafe/images (1).jpg`
+- `parque-del-cafe/images.jpg`
 - **Duplicados en:** `parque-del-cafe/` (raíz del proyecto)
 
 ### **PANACA (3 archivos)**
-- `panaca/images (1).jfif`
-- `panaca/images (2).jfif`
-- `panaca/images.jfif`
+- `panaca/images (1).jpg`
+- `panaca/images (2).jpg`
+- `panaca/images.jpg`
 - **Duplicados en:** `panaca/` (raíz del proyecto)
 
 ### **RECUCA (4 archivos)**
-- `recuca/familia-recuca.jfif`
-- `recuca/images (1).jfif`
-- `recuca/images.jfif`
-- `recuca/recuca1.jfif`
-- `recuca/recuca2.jfif`
-- `recuca/recuca3.jfif`
+- `recuca/familia-recuca.jpg`
+- `recuca/images (1).jpg`
+- `recuca/images.jpg`
+- `recuca/recuca1.jpg`
+- `recuca/recuca2.jpg`
+- `recuca/recuca3.jpg`
 - **Duplicados en:** `recuca/` (raíz del proyecto)
 
 ### **Termales de Santa Rosa (4 archivos)**
-- `termales-de-santa-rosa/images (1).jfif`
-- `termales-de-santa-rosa/images (2).jfif`
-- `termales-de-santa-rosa/images (3).jfif`
-- `termales-de-santa-rosa/images.jfif`
+- `termales-de-santa-rosa/images (1).jpg`
+- `termales-de-santa-rosa/images (2).jpg`
+- `termales-de-santa-rosa/images (3).jpg`
+- `termales-de-santa-rosa/images.jpg`
 - **Duplicados en:** `termales-de-santa-rosa/` (raíz del proyecto)
 
 ### **Quintí Patas Arriba (5 archivos)**
-- `quinti-patas-arriba/arriero.jfif`
-- `quinti-patas-arriba/images (1).jfif`
-- `quinti-patas-arriba/images (2).jfif`
-- `quinti-patas-arriba/images (4).jfif`
-- `quinti-patas-arriba/images.jfif`
-- `quinti-patas-arriba/quinti1.jfif`
-- `quinti-patas-arriba/quinti2.jfif`
+- `quinti-patas-arriba/arriero.jpg`
+- `quinti-patas-arriba/images (1).jpg`
+- `quinti-patas-arriba/images (2).jpg`
+- `quinti-patas-arriba/images (4).jpg`
+- `quinti-patas-arriba/images.jpg`
+- `quinti-patas-arriba/quinti1.jpg`
+- `quinti-patas-arriba/quinti2.jpg`
 - **Duplicados en:** `quinti-patas-arriba/` (raíz del proyecto)
 
 ### **Mariposario (3 archivos)**
-- `mariposario/jardin1.jfif`
-- `mariposario/jardin2.jfif`
-- `mariposario/jardin3.jfif`
-- `mariposario/mariposa1.jfif`
-- `mariposario/mariposa2.jfif`
-- `mariposario/mariposario-1.jfif`
+- `mariposario/jardin1.jpg`
+- `mariposario/jardin2.jpg`
+- `mariposario/jardin3.jpg`
+- `mariposario/mariposa1.jpg`
+- `mariposario/mariposa2.jpg`
+- `mariposario/mariposario-1.jpg`
 - `mariposario/mariposa4.avif`
 
 ---
@@ -171,7 +172,7 @@
 ### **Para Planes Turísticos (6 planes)**
 **Disponibles actualmente:**
 - ✅ Paisajes generales (4 archivos)
-- ✅ Alojamientos específicos (23 archivos .jfif)
+- ✅ Alojamientos específicos (23 archivos .jpg)
 - ✅ Imágenes específicas por plan (enriquecidas 2026-08-13)
 
 **Asignación actual por plan:**
@@ -210,8 +211,8 @@
 - Todos los archivos están correctamente organizados en `assets/images/alojamientos/`
 - Sin problemas de duplicación detectados
 
-### **2. Formato .jfif**
-- 63 archivos en formato .jfif (no optimizado para web)
+### **2. Formato .jpg**
+- 63 archivos en formato .jpg (no optimizado para web)
 - Necesita conversión a .jpg/.webp para mejor rendimiento
 - Formato poco compatible con navegadores modernos
 
@@ -267,7 +268,7 @@ assets/images/
 
 ### **2. Acciones Prioritarias**
 1. **Organizar imágenes por plan** - Crear carpetas específicas
-2. **Convertir .jfif a .jpg/.webp** - Optimizar para web
+2. **Convertir .jpg a .jpg/.webp** - Optimizar para web
 3. **Eliminar duplicados** - Mantener solo en `assets/images/`
 4. **Renombrar archivos** - Nombres descriptivos
 5. **Crear hero images** por plan con las mejores imágenes disponibles
@@ -287,7 +288,7 @@ assets/images/
 
 ¿Desea que proceda con:
 1. **Organizar las imágenes existentes por plan** (crear estructura de carpetas)
-2. **Convertir archivos .jfif a .jpg** para optimización web
+2. **Convertir archivos .jpg a .jpg** para optimización web
 3. **Eliminar duplicados** de alojamientos en directorios raíz
 4. **Crear galerías específicas** para cada plan con imágenes disponibles
 5. **Mezclar y organizar los videos** por atractivo
