@@ -143,6 +143,11 @@ const planesData = [
       triple: 1120000,
       cuadruple: 1020000
     },
+    preciosIntermedio: {
+      doble: 1360000,
+      triple: 1170000,
+      cuadruple: 1060000
+    },
     preciosNinos: {
       ninos_2_10: 998000
     }
@@ -173,6 +178,11 @@ const planesData = [
       doble: 1800000,
       triple: 1520000,
       cuadruple: 1380000
+    },
+    preciosIntermedio: {
+      doble: 1880000,
+      triple: 1580000,
+      cuadruple: 1430000
     },
     preciosNinos: {
       ninos_2_10: 1360000
