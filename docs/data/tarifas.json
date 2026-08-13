@@ -7,34 +7,34 @@
       "vip": 645000
     },
     "plan2_3d2n": {
-      "economica": 430000,
-      "intermedia": 450000,
-      "intermedia_vip": 645000,
-      "vip": 1295000
+      "economica": 562000,
+      "intermedia": 598000,
+      "intermedia_vip": 895000,
+      "vip": 1650000
     },
     "plan3_4d3n": {
-      "economica": 570000,
-      "intermedia": 613000,
-      "intermedia_vip": 1070000,
-      "vip": 2310000
-    },
-    "plan4_4d3n": {
-      "economica": 570000,
-      "intermedia": 615000,
-      "intermedia_vip": 1000000,
-      "vip": 2305000
-    },
-    "plan5_4d3n": {
       "economica": 777000,
       "intermedia": 835000,
-      "intermedia_vip": 1278000,
-      "vip": 2395000
+      "intermedia_vip": 1280000,
+      "vip": 2400000
+    },
+    "plan4_4d3n": {
+      "economica": 798000,
+      "intermedia": 860000,
+      "intermedia_vip": 1297000,
+      "vip": 2415000
+    },
+    "plan5_4d3n": {
+      "economica": 788000,
+      "intermedia": 845000,
+      "intermedia_vip": 1285000,
+      "vip": 2400000
     },
     "plan6_5d4n": {
-      "economica": 820000,
-      "intermedia": 880000,
-      "intermedia_vip": 1470000,
-      "vip": 3420000
+      "economica": 1008000,
+      "intermedia": 1090000,
+      "intermedia_vip": 1670000,
+      "vip": 3180000
     }
   },
   "categorias": {
@@ -43,7 +43,7 @@
     "intermedia_vip": ["Los Girasoles", "La Tata", "Combia"],
     "vip": ["Hotel Campestre Camellias", "Mocawa Resort", "Mocawa Plaza"]
   },
-  "nota": "Precios POR PERSONA según PORTAFOLIO PLANES NACIONALES 2026.docx - Solo por categoría, sin acomodación",
-  "fuente": "PORTAFOLIO PLANES NACIONALES 2026.docx - Precios oficiales por categoría",
-  "condiciones": "Todos los precios son por persona, sin transporte. Transporte adicional según requerimiento."
+  "nota": "Precios POR PERSONA SIN TRANSPORTE según docs/listado-completo-precios.md - Temporada Baja",
+  "fuente": "docs/listado-completo-precios.md - DOCUMENTO AUTORIZADO",
+  "condiciones": "Todos los precios son por persona, sin transporte. Precios base categoría económica temporada baja."
 }
