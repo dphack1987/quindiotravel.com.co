@@ -1,207 +1,423 @@
 {
   "tarifasOficiales": {
     "plan1_2d1n": {
-      "economica": 425000,
-      "intermedia": 442000,
-      "intermedia_vip": 590000,
-      "vip": 645000,
-      "precios_con_transporte": {
-        "economica": {
-          "doble": 796000,
-          "triple": 668000,
-          "cuadruple": 602000
+      "temporada_baja": {
+        "economica": 425000,
+        "intermedia": 442000,
+        "intermedia_vip": 590000,
+        "vip": 645000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 796000,
+            "triple": 668000,
+            "cuadruple": 602000
+          },
+          "intermedia": {
+            "doble": 815000,
+            "triple": 682000,
+            "cuadruple": 613000
+          },
+          "intermedia_vip": {
+            "doble": 962000,
+            "triple": 825000,
+            "cuadruple": 758000
+          },
+          "vip": {
+            "doble": 1020000,
+            "triple": 1164000,
+            "cuadruple": 1078000
+          }
         },
-        "intermedia": {
-          "doble": 815000,
-          "triple": 682000,
-          "cuadruple": 613000
-        },
-        "intermedia_vip": {
-          "doble": 962000,
-          "triple": 825000,
-          "cuadruple": 758000
-        },
-        "vip": {
-          "doble": 1020000,
-          "triple": 1164000,
-          "cuadruple": 1078000
+        "ninos_2_10": {
+          "economica": 596000,
+          "intermedia": 610000,
+          "intermedia_vip": 748000,
+          "vip": 935000
         }
       },
-      "ninos_2_10": {
-        "economica": 596000,
-        "intermedia": 610000,
-        "intermedia_vip": 748000,
-        "vip": 935000
+      "temporada_alta": {
+        "economica": 430000,
+        "intermedia": 450000,
+        "intermedia_vip": 962000,
+        "vip": 1295000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 800000,
+            "triple": 672000,
+            "cuadruple": 605000
+          },
+          "intermedia": {
+            "doble": 822000,
+            "triple": 690000,
+            "cuadruple": 620000
+          },
+          "intermedia_vip": {
+            "doble": 1335000,
+            "triple": 888000,
+            "cuadruple": 810000
+          },
+          "vip": {
+            "doble": 1667000,
+            "triple": 1448000,
+            "cuadruple": 1340000
+          }
+        },
+        "ninos_2_10": {
+          "economica": 599000,
+          "intermedia": 616000,
+          "intermedia_vip": 795000,
+          "vip": 1016000
+        }
       }
     },
     "plan2_3d2n": {
-      "economica": 562000,
-      "intermedia": 598000,
-      "intermedia_vip": 895000,
-      "vip": 1650000,
-      "precios_con_transporte": {
-        "economica": {
-          "doble": 935000,
-          "triple": 805000,
-          "cuadruple": 735000
+      "temporada_baja": {
+        "economica": 562000,
+        "intermedia": 598000,
+        "intermedia_vip": 895000,
+        "vip": 1650000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 935000,
+            "triple": 805000,
+            "cuadruple": 735000
+          },
+          "intermedia": {
+            "doble": 972000,
+            "triple": 835000,
+            "cuadruple": 760000
+          },
+          "intermedia_vip": {
+            "doble": 1268000,
+            "triple": 1120000,
+            "cuadruple": 1045000
+          },
+          "vip": {
+            "doble": 2015000,
+            "triple": 1800000,
+            "cuadruple": 1685000
+          }
         },
-        "intermedia": {
-          "doble": 972000,
-          "triple": 835000,
-          "cuadruple": 760000
-        },
-        "intermedia_vip": {
-          "doble": 1268000,
-          "triple": 1120000,
-          "cuadruple": 1045000
-        },
-        "vip": {
-          "doble": 2015000,
-          "triple": 1800000,
-          "cuadruple": 1685000
+        "ninos_2_10": {
+          "economica": 729000,
+          "intermedia": 759000,
+          "intermedia_vip": 1034000,
+          "vip": 1674000
         }
       },
-      "ninos_2_10": {
-        "economica": 729000,
-        "intermedia": 759000,
-        "intermedia_vip": 1034000,
-        "vip": 1674000
+      "temporada_alta": {
+        "economica": 570000,
+        "intermedia": 613000,
+        "intermedia_vip": 1070000,
+        "vip": 2310000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 945000,
+            "triple": 815000,
+            "cuadruple": 745000
+          },
+          "intermedia": {
+            "doble": 990000,
+            "triple": 850000,
+            "cuadruple": 775000
+          },
+          "intermedia_vip": {
+            "doble": 1380000,
+            "triple": 1245000,
+            "cuadruple": 1150000
+          },
+          "vip": {
+            "doble": 2680000,
+            "triple": 2370000,
+            "cuadruple": 2210000
+          }
+        },
+        "ninos_2_10": {
+          "economica": 734000,
+          "intermedia": 764000,
+          "intermedia_vip": 1139000,
+          "vip": 2198000
+        }
       }
     },
     "plan3_4d3n": {
-      "economica": 777000,
-      "intermedia": 835000,
-      "intermedia_vip": 1280000,
-      "vip": 2400000,
-      "precios_con_transporte": {
-        "economica": {
-          "doble": 1385000,
-          "triple": 1170000,
-          "cuadruple": 1050000
+      "temporada_baja": {
+        "economica": 777000,
+        "intermedia": 835000,
+        "intermedia_vip": 1280000,
+        "vip": 2400000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 1385000,
+            "triple": 1170000,
+            "cuadruple": 1050000
+          },
+          "intermedia": {
+            "doble": 1440000,
+            "triple": 1215000,
+            "cuadruple": 1150000
+          },
+          "intermedia_vip": {
+            "doble": 1885000,
+            "triple": 1650000,
+            "cuadruple": 1530000
+          },
+          "vip": {
+            "doble": 3000000,
+            "triple": 2660000,
+            "cuadruple": 2490000
+          }
         },
-        "intermedia": {
-          "doble": 1440000,
-          "triple": 1215000,
-          "cuadruple": 1150000
-        },
-        "intermedia_vip": {
-          "doble": 1885000,
-          "triple": 1650000,
-          "cuadruple": 1530000
-        },
-        "vip": {
-          "doble": 3000000,
-          "triple": 2660000,
-          "cuadruple": 2490000
+        "ninos_2_10": {
+          "economica": 1038000,
+          "intermedia": 1138000,
+          "intermedia_vip": 1515000,
+          "vip": 2470000
         }
       },
-      "ninos_2_10": {
-        "economica": 1038000,
-        "intermedia": 1138000,
-        "intermedia_vip": 1515000,
-        "vip": 2470000
+      "temporada_alta": {
+        "economica": 790000,
+        "intermedia": 860000,
+        "intermedia_vip": 1450000,
+        "vip": 3395000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 1410000,
+            "triple": 1185000,
+            "cuadruple": 1100000
+          },
+          "intermedia": {
+            "doble": 1485000,
+            "triple": 1290000,
+            "cuadruple": 1200000
+          },
+          "intermedia_vip": {
+            "doble": 2060000,
+            "triple": 1850000,
+            "cuadruple": 1690000
+          },
+          "vip": {
+            "doble": 3998000,
+            "triple": 3520000,
+            "cuadruple": 3290000
+          }
+        },
+        "ninos_2_10": {
+          "economica": 1088000,
+          "intermedia": 1180000,
+          "intermedia_vip": 1670000,
+          "vip": 3270000
+        }
       }
     },
     "plan4_4d3n": {
-      "economica": 798000,
-      "intermedia": 860000,
-      "intermedia_vip": 1297000,
-      "vip": 2415000,
-      "precios_con_transporte": {
-        "economica": {
-          "doble": 1495000,
-          "triple": 1250000,
-          "cuadruple": 1125000
+      "temporada_baja": {
+        "economica": 798000,
+        "intermedia": 860000,
+        "intermedia_vip": 1297000,
+        "vip": 2415000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 1495000,
+            "triple": 1250000,
+            "cuadruple": 1125000
+          },
+          "intermedia": {
+            "doble": 1550000,
+            "triple": 1295000,
+            "cuadruple": 1160000
+          },
+          "intermedia_vip": {
+            "doble": 1990000,
+            "triple": 1730000,
+            "cuadruple": 1590000
+          },
+          "vip": {
+            "doble": 3120000,
+            "triple": 2740000,
+            "cuadruple": 2550000
+          }
         },
-        "intermedia": {
-          "doble": 1550000,
-          "triple": 1295000,
-          "cuadruple": 1160000
-        },
-        "intermedia_vip": {
-          "doble": 1990000,
-          "triple": 1730000,
-          "cuadruple": 1590000
-        },
-        "vip": {
-          "doble": 3120000,
-          "triple": 2740000,
-          "cuadruple": 2550000
+        "ninos_2_10": {
+          "economica": 1110000,
+          "intermedia": 1145000,
+          "intermedia_vip": 1570000,
+          "vip": 2510000
         }
       },
-      "ninos_2_10": {
-        "economica": 1110000,
-        "intermedia": 1145000,
-        "intermedia_vip": 1570000,
-        "vip": 2510000
+      "temporada_alta": {
+        "economica": 820000,
+        "intermedia": 880000,
+        "intermedia_vip": 1470000,
+        "vip": 3420000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 1514000,
+            "triple": 1270000,
+            "cuadruple": 1135000
+          },
+          "intermedia": {
+            "doble": 1575000,
+            "triple": 1320000,
+            "cuadruple": 1180000
+          },
+          "intermedia_vip": {
+            "doble": 2160000,
+            "triple": 1920000,
+            "cuadruple": 1750000
+          },
+          "vip": {
+            "doble": 4130000,
+            "triple": 3595000,
+            "cuadruple": 3350000
+          }
+        },
+        "ninos_2_10": {
+          "economica": 1120000,
+          "intermedia": 1160000,
+          "intermedia_vip": 1735000,
+          "vip": 3335000
+        }
       }
     },
     "plan5_4d3n": {
-      "economica": 788000,
-      "intermedia": 845000,
-      "intermedia_vip": 1285000,
-      "vip": 2400000,
-      "precios_con_transporte": {
-        "economica": {
-          "doble": 1297000,
-          "triple": 1120000,
-          "cuadruple": 1020000
+      "temporada_baja": {
+        "economica": 788000,
+        "intermedia": 845000,
+        "intermedia_vip": 1285000,
+        "vip": 2400000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 1297000,
+            "triple": 1120000,
+            "cuadruple": 1020000
+          },
+          "intermedia": {
+            "doble": 1360000,
+            "triple": 1170000,
+            "cuadruple": 1060000
+          },
+          "intermedia_vip": {
+            "doble": 1795000,
+            "triple": 1590000,
+            "cuadruple": 1490000
+          },
+          "vip": {
+            "doble": 2920000,
+            "triple": 2600000,
+            "cuadruple": 2450000
+          }
         },
-        "intermedia": {
-          "doble": 1360000,
-          "triple": 1170000,
-          "cuadruple": 1060000
-        },
-        "intermedia_vip": {
-          "doble": 1795000,
-          "triple": 1590000,
-          "cuadruple": 1490000
-        },
-        "vip": {
-          "doble": 2920000,
-          "triple": 2600000,
-          "cuadruple": 2450000
+        "ninos_2_10": {
+          "economica": 998000,
+          "intermedia": 1040000,
+          "intermedia_vip": 1460000,
+          "vip": 2430000
         }
       },
-      "ninos_2_10": {
-        "economica": 998000,
-        "intermedia": 1040000,
+      "temporada_alta": {
+        "economica": 798000,
+        "intermedia": 870000,
         "intermedia_vip": 1460000,
-        "vip": 2430000
+        "vip": 3398000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 1310000,
+            "triple": 1135000,
+            "cuadruple": 1040000
+          },
+          "intermedia": {
+            "doble": 1390000,
+            "triple": 1190000,
+            "cuadruple": 1080000
+          },
+          "intermedia_vip": {
+            "doble": 1965000,
+            "triple": 1780000,
+            "cuadruple": 1645000
+          },
+          "vip": {
+            "doble": 3910000,
+            "triple": 3460000,
+            "cuadruple": 3250000
+          }
+        },
+        "ninos_2_10": {
+          "economica": 1010000,
+          "intermedia": 1050000,
+          "intermedia_vip": 1630000,
+          "vip": 3230000
+        }
       }
     },
     "plan6_5d4n": {
-      "economica": 1008000,
-      "intermedia": 1090000,
-      "intermedia_vip": 1670000,
-      "vip": 3180000,
-      "precios_con_transporte": {
-        "economica": {
-          "doble": 1800000,
-          "triple": 1520000,
-          "cuadruple": 1380000
+      "temporada_baja": {
+        "economica": 1008000,
+        "intermedia": 1090000,
+        "intermedia_vip": 1670000,
+        "vip": 3180000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 1800000,
+            "triple": 1520000,
+            "cuadruple": 1380000
+          },
+          "intermedia": {
+            "doble": 1880000,
+            "triple": 1580000,
+            "cuadruple": 1430000
+          },
+          "intermedia_vip": {
+            "doble": 2465000,
+            "triple": 2150000,
+            "cuadruple": 1995000
+          },
+          "vip": {
+            "doble": 3960000,
+            "triple": 3510000,
+            "cuadruple": 3280000
+          }
         },
-        "intermedia": {
-          "doble": 1880000,
-          "triple": 1580000,
-          "cuadruple": 1430000
-        },
-        "intermedia_vip": {
-          "doble": 2465000,
-          "triple": 2150000,
-          "cuadruple": 1995000
-        },
-        "vip": {
-          "doble": 3960000,
-          "triple": 3510000,
-          "cuadruple": 3280000
+        "ninos_2_10": {
+          "economica": 1360000,
+          "intermedia": 1400000,
+          "intermedia_vip": 1950000,
+          "vip": 3240000
         }
       },
-      "ninos_2_10": {
-        "economica": 1360000,
-        "intermedia": 1400000,
-        "intermedia_vip": 1950000,
-        "vip": 3240000
+      "temporada_alta": {
+        "economica": 1020000,
+        "intermedia": 1120000,
+        "intermedia_vip": 1898000,
+        "vip": 4490000,
+        "precios_con_transporte": {
+          "economica": {
+            "doble": 1820000,
+            "triple": 1550000,
+            "cuadruple": 1410000
+          },
+          "intermedia": {
+            "doble": 1920000,
+            "triple": 1610000,
+            "cuadruple": 1460000
+          },
+          "intermedia_vip": {
+            "doble": 2690000,
+            "triple": 2430000,
+            "cuadruple": 2210000
+          },
+          "vip": {
+            "doble": 5290000,
+            "triple": 4650000,
+            "cuadruple": 4330000
+          }
+        },
+        "ninos_2_10": {
+          "economica": 1385000,
+          "intermedia": 1410000,
+          "intermedia_vip": 2180000,
+          "vip": 4325000
+        }
       }
     }
   },
@@ -211,7 +427,7 @@
     "intermedia_vip": ["Los Girasoles", "La Tata", "Combia"],
     "vip": ["Hotel Campestre Camellias", "Mocawa Resort", "Mocawa Plaza"]
   },
-  "nota": "Precios POR PERSONA SIN TRANSPORTE según docs/listado-completo-precios.md - Temporada Baja",
-  "fuente": "docs/listado-completo-precios.md - DOCUMENTO AUTORIZADO",
-  "condiciones": "Todos los precios son por persona, sin transporte. Precios base categoría económica temporada baja."
+  "nota": "Precios POR PERSONA SIN TRANSPORTE según PORTAFOLIO PLANES NACIONALES 2026 - TRANSPORTE RADIO TAXI",
+  "fuente": "docs/informacion-de-precios/PORTAFOLIO PLANES NACIONALES 2026.docx - DOCUMENTO AUTORIZADO",
+  "condiciones": "Todos los precios son por persona, incluye datos de temporada baja y alta. Precios base categoría económica ambas temporadas - TRANSPORTE RADIO TAXI."
 }

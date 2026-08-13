@@ -45,7 +45,7 @@ function obtenerPrecioOficial(planKey, categoria) {
 
 window.obtenerPrecioOficial = obtenerPrecioOficial;
 
-function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, ocupacion = 'individual', incluirTransporte = false) {
+function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, ocupacion = 'individual', incluirTransporte = false, temporada = 'temporada_baja') {
   if (!window.QUINDIO_TRAVEL_DATA || !window.QUINDIO_TRAVEL_DATA.tarifasOficiales) {
     return { error: "La base de datos de tarifas no está cargada." };
   }
@@ -56,20 +56,26 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, oc
     return { error: "Datos no encontrados para el plan seleccionado." };
   }
 
+  // Obtener datos de la temporada especificada
+  const temporadaData = data[plan][temporada];
+  if (!temporadaData) {
+    return { error: "No hay datos disponibles para la temporada seleccionada." };
+  }
+
   let precioPorPersona;
   
   // Si se incluye transporte y no es individual, usar precios con transporte
-  if (incluirTransporte && ocupacion !== 'individual' && data[plan].precios_con_transporte) {
-    const preciosTransporte = data[plan].precios_con_transporte[categoria];
+  if (incluirTransporte && ocupacion !== 'individual' && temporadaData.precios_con_transporte) {
+    const preciosTransporte = temporadaData.precios_con_transporte[categoria];
     if (preciosTransporte && preciosTransporte[ocupacion]) {
       precioPorPersona = preciosTransporte[ocupacion];
     } else {
       // Fallback a precio sin transporte si no hay precio con transporte disponible
-      precioPorPersona = data[plan][categoria];
+      precioPorPersona = temporadaData[categoria];
     }
   } else {
     // Usar precio sin transporte
-    precioPorPersona = data[plan][categoria];
+    precioPorPersona = temporadaData[categoria];
   }
 
   if (!precioPorPersona) {
@@ -97,7 +103,8 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, oc
     formateadoTotal: new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(total),
     destinosExtra: destinosCount,
     ocupacion: ocupacion,
-    incluyeTransporte: incluirTransporte
+    incluyeTransporte: incluirTransporte,
+    temporada: temporada
   };
 }
 
@@ -109,6 +116,7 @@ function actualizarUI() {
   const selectDestinos = document.getElementById('select-destinos');
   const selectOcupacion = document.getElementById('select-ocupacion');
   const checkTransporte = document.getElementById('check-transporte');
+  const selectTemporada = document.getElementById('select-temporada');
 
   const displayPersona = document.getElementById('precio-persona');
   const displayTotal = document.getElementById('precio-total');
@@ -122,6 +130,9 @@ function actualizarUI() {
   
   // Obtener si incluye transporte (por defecto false)
   const incluirTransporte = checkTransporte ? checkTransporte.checked : false;
+
+  // Obtener temporada (por defecto temporada_baja)
+  const temporada = selectTemporada ? selectTemporada.value : 'temporada_baja';
 
   // Obtener destinos seleccionados si el elemento existe
   let destinosSeleccionados = [];
@@ -149,7 +160,8 @@ function actualizarUI() {
     parseInt(selectPax.value),
     destinosSeleccionados,
     ocupacion,
-    incluirTransporte
+    incluirTransporte,
+    temporada
   );
 
   if (res.error) {

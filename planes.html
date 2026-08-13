@@ -392,6 +392,19 @@
                 
                 <div class="cotizador-card-enhanced">
                     <div class="cotizador-field-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="cotizador-field-content">
+                        <label for="select-temporada">Temporada</label>
+                        <select id="select-temporada" class="cotizador-select-enhanced">
+                            <option value="temporada_baja" selected>🌤️ Temporada Baja</option>
+                            <option value="temporada_alta">☀️ Temporada Alta</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="cotizador-card-enhanced">
+                    <div class="cotizador-field-icon">
                         <i class="fas fa-hotel"></i>
                     </div>
                     <div class="cotizador-field-content">
@@ -742,7 +755,7 @@ Deseo *reservar y confirmar* la siguiente cotización:
             if (targetTotal) observer.observe(targetTotal, { childList: true, characterData: true, subtree: true });
             if (targetPersona) observer.observe(targetPersona, { childList: true, characterData: true, subtree: true });
 
-            ['select-plan','select-categoria','select-pax'].forEach(id => {
+            ['select-plan','select-categoria','select-pax','select-temporada'].forEach(id => {
                 const el = document.getElementById(id);
                 if (el) el.addEventListener('change', actualizarBotonWhatsAppCotizador);
             });
