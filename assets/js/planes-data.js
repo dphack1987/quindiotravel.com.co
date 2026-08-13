@@ -10,7 +10,7 @@ const planesData = [
     categoria: "Escapada",
     badge: "Escapada Rápida",
     detalleUrl: "plan-1.html",
-    descripcion: "2 días / 1 noche de alojamiento en finca hotel, desayuno y cena incluidos, Pasaporte Múltiple al Parque del Café y Pasaporte Terra a PANACA. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia. Ideal para fin de semana corto.",
+    descripcion: "2 días / 1 noche de alojamiento en finca hotel, desayuno y cena incluidos, Pasaporte Múltiple al Parque del Café y Pasaporte Terra a PANACA. Transporte desde el aeropuerto o terminal terrestre en Armenia. Ideal para fin de semana corto.",
     resumenPrograma: [
       "Día 1: Llegada a Armenia, check-in, tarde en PANACA",
       "Día 2: Parque del Café completo con pasaporte múltiple, regreso"
@@ -35,7 +35,7 @@ const planesData = [
     categoria: "Económico",
     badge: "Más Popular",
     detalleUrl: "plan-2.html",
-    descripcion: "3 días / 2 noches de alojamiento en finca hotel tradicional, desayunos y cenas incluidos, acceso a los parques temáticos principales y recorrido por pueblos tradicionales. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia.",
+    descripcion: "3 días / 2 noches de alojamiento en finca hotel tradicional, desayunos y cenas incluidos, acceso a los parques temáticos principales y recorrido por pueblos tradicionales. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
     resumenPrograma: [
       "Día 1: Llegada, check-in, recorrido por Pueblo Tapao o Montenegro",
       "Día 2: Parque del Café día completo + show de café",
@@ -61,7 +61,7 @@ const planesData = [
     categoria: "Estándar",
     badge: "Experiencia Completa",
     detalleUrl: "plan-3.html",
-    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Parques del Café y PANACA, Valle de Cocora, Salento, Filandia y RECUCA. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia. El programa favorito para conocer lo esencial del Quindío.",
+    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Parques del Café y PANACA, Valle de Cocora, Salento, Filandia y RECUCA. Transporte desde el aeropuerto o terminal terrestre en Armenia. El programa favorito para conocer lo esencial del Quindío.",
     resumenPrograma: [
       "Día 1: Llegada Armenia, check-in, bienvenida",
       "Día 2: Salento, Valle de Cocora con palma de cera, caminata",
@@ -88,7 +88,7 @@ const planesData = [
     categoria: "Estándar Plus",
     badge: "Termales Incluidos",
     detalleUrl: "plan-4.html",
-    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, parques temáticos combinados con un día completo de relajación en los Termales de Santa Rosa de Cabal. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia. Ideal para familias y parejas.",
+    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, parques temáticos combinados con un día completo de relajación en los Termales de Santa Rosa de Cabal. Transporte desde el aeropuerto o terminal terrestre en Armenia. Ideal para familias y parejas.",
     resumenPrograma: [
       "Día 1: Llegada, check-in, bienvenida y descanso",
       "Día 2: Termales de Santa Rosa de Cabal todo el día",
@@ -115,7 +115,7 @@ const planesData = [
     categoria: "Cultural",
     badge: "Vivencial Cultural",
     detalleUrl: "plan-5.html",
-    descripcion: "4 días / 3 noches con enfoque cultural vivencial en las raíces de la arriería quindiana, desayunos y cenas incluidos. Incluye experiencias con mulas, Finca tradicional, Recuca y Parque Los Arrieros. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia.",
+    descripcion: "4 días / 3 noches con enfoque cultural vivencial en las raíces de la arriería quindiana, desayunos y cenas incluidos. Incluye experiencias con mulas, Finca tradicional, Recuca y Parque Los Arrieros. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
     resumenPrograma: [
       "Día 1: Llegada y check-in, charla cultura cafetera",
       "Día 2: Parque Los Arrieros + experiencia de arriería con mulas",
@@ -142,11 +142,11 @@ const planesData = [
     categoria: "Premium",
     badge: "Todo Incluido VIP",
     detalleUrl: "plan-6.html",
-    descripcion: "La experiencia definitiva de 5 días y 4 noches. Abrarca TODOS los atractivos del Quindío: parques temáticos, termales, RECUCA, pueblos patrimonio, y el Valle de Cocora con caminata guiada. Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia.",
+    descripcion: "La experiencia definitiva de 5 días y 4 noches. Abrarca TODOS los atractivos del Quindío: parques temáticos, termales, RECUCA, pueblos patrimonio, y el Valle de Cocora. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
     resumenPrograma: [
       "Día 1: Llegada Armenia, check-in, noche de bienvenida",
       "Día 2: Parque del Café completo + show nocturno",
-      "Día 3: Salento + Valle de Cocora + caminata guiada palma de cera",
+      "Día 3: Salento + Valle de Cocora",
       "Día 4: PANACA + RECUCA + Termales Santa Rosa tarde/noche",
       "Día 5: Filandia + Parque Los Arrieros, almuerzo típico y regreso"
     ],
