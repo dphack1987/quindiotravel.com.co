@@ -1,4 +1,4 @@
-﻿// Base de datos oficial de 8 planes turísticos - Quindío Travel (RNT 18152)
+﻿// Base de datos oficial de 6 planes turísticos - Quindío Travel (RNT 18152)
 const planesData = [
   {
     id: "plan-1",
@@ -187,49 +187,6 @@ const planesData = [
     preciosNinos: {
       ninos_2_10: 1360000
     }
-  },
-  {
-    id: "plan-7",
-    slug: "plan-premium-vip",
-    titulo: "Plan Premium: Experiencia VIP",
-    duracion: "4d",
-    noches: 3,
-    dias: 4,
-    categoria: "Premium",
-    badge: "VIP",
-    detalleUrl: "planes.html",
-    descripcion: "4 días / 3 noches con desayunos y cenas incluidos. Experiencia premium con alojamientos VIP, transporte exclusivo placa blanca desde Aeropuerto Edén o Terminal de Transportes de Armenia, asistencia bilingüe y acceso prioritario a atractivos. Incluye experiencias exclusivas.",
-    resumenPrograma: [
-      "Día 1: Llegada VIP, check-in en hotel 5 estrellas",
-      "Día 2: Parque del Café con acceso prioritario",
-      "Día 3: Valle de Cocora con helicóptero (opcional)",
-      "Día 4: Termales exclusivos y spa, regreso"
-    ],
-    atractivosIncluidos: ["Parque del Café", "Valle de Cocora", "Termales Exclusivos"],
-    alojamientosAsociados: ["hotel-campestre-las-camelias", "hotel-campestre-cafe-cafe"],
-    precioSinTransporte: 1500000,
-    precioConTransporte: 1800000
-  },
-  {
-    id: "plan-8",
-    slug: "plan-empresarial",
-    titulo: "Plan Empresarial: Team Building",
-    duracion: "3d",
-    noches: 2,
-    dias: 3,
-    categoria: "Empresarial",
-    badge: "Corporativo",
-    detalleUrl: "planes.html",
-    descripcion: "3 días / 2 noches con desayunos y cenas incluidos. Programa especial para empresas y grupos desde Aeropuerto Edén o Terminal de Transportes de Armenia. Incluye actividades de team building, salas de conferencias, alimentación ejecutiva y transporte corporativo.",
-    resumenPrograma: [
-      "Día 1: Llegada, check-in corporativo, conferencia inaugural",
-      "Día 2: Actividades team building en finca cafetera",
-      "Día 3: Recorrido turístico y cierre corporativo, regreso"
-    ],
-    atractivosIncluidos: ["Team Building", "Conferencias", "Recorrido Turístico"],
-    alojamientosAsociados: ["finca-hotel-los-girasoles", "hotel-campestre-cafe-cafe"],
-    precioSinTransporte: 1200000,
-    precioConTransporte: 1450000
   }
 ];
 

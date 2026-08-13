@@ -42,32 +42,7 @@ class KnowledgeBase {
                     duracion: '5 días / 4 noches',
                     idealPara: 'Experiencia definitiva, sin prisa'
                 },
-                'premium': {
-                    nombre: 'Plan Premium VIP',
-                    precio: '$1.800.000',
-                    incluye: [
-                        'Alojamiento VIP',
-                        'Transporte exclusivo',
-                        'Guías bilingües',
-                        'Experiencias exclusivas',
-                        'Servicio personalizado'
-                    ],
-                    duracion: 'Personalizable',
-                    idealPara: 'Empresas, experiencias premium'
-                },
-                'empresarial': {
-                    nombre: 'Plan Empresarial',
-                    precio: 'Cotización personalizada',
-                    incluye: [
-                        'Team building',
-                        'Conferencias',
-                        'Actividades corporativas',
-                        'Alimentación ejecutiva',
-                        'Facturación oficial'
-                    ],
-                    duracion: 'Personalizable',
-                    idealPara: 'Grupos, empresas, incentivos'
-                }
+
             },
             destinos: {
                 salento: {

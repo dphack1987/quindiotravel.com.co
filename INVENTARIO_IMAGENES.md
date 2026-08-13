@@ -2,7 +2,8 @@
 
 **Fecha:** 2026-08-13  
 **Total de archivos de imagen:** 95 archivos  
-**Total de videos:** 19 archivos
+**Total de videos:** 19 archivos  
+**Planes turísticos:** 6 planes (eliminados Plan Premium y Plan Empresarial)
 
 ---
 
@@ -171,15 +172,17 @@
 **Disponibles actualmente:**
 - ✅ Paisajes generales (4 archivos)
 - ✅ Alojamientos específicos (23 archivos .jfif)
-- ❌ Imágenes específicas por plan
+- ✅ Imágenes específicas por plan (enriquecidas 2026-08-13)
 
-**Asignación recomendada por plan:**
-- **Plan 1 (2D/1N):** Parque del Café + PANACA + Hotel La Tata
-- **Plan 2 (3D/2N):** Parque del Café + PANACA + Cabañas La Esmeralda
-- **Plan 3 (4D/3N):** Valle de Cocora + Salento + Filandia + Finca Hotel Los Girasoles
-- **Plan 4 (4D/3N):** Termales Santa Rosa + Hotel Campestre Café Café
-- **Plan 5 (4D/3N):** RECUCA + Quintí Patas Arriba + Cabañas La Esmeralda
-- **Plan 6 (5D/4N):** Todos los atractivos + Hotel Campestre Las Camellias
+**Asignación actual por plan:**
+- **Plan 1 (2D/1N):** Parque del Café + PANACA + Hotel La Tata ✅ Galería enriquecida
+- **Plan 2 (3D/2N):** Parque del Café + PANACA + Cabañas La Esmeralda ✅ Galería enriquecida
+- **Plan 3 (4D/3N):** Valle de Cocora + Salento + Filandia + Finca Hotel Los Girasoles ✅ Galería enriquecida
+- **Plan 4 (4D/3N):** Termales Santa Rosa + Hotel Campestre Café Café ✅ Galería enriquecida
+- **Plan 5 (4D/3N):** RECUCA + Quintí Patas Arriba + Cabañas La Esmeralda ⏳ Pendiente
+- **Plan 6 (5D/4N):** Todos los atractivos + Hotel Campestre Las Camellias ⏳ Pendiente
+
+**Nota:** Plan Premium (plan-7) y Plan Empresarial (plan-8) fueron eliminados del proyecto.
 
 ### **Para Galerías de Destinos**
 - ✅ Salento: 1 imagen disponible
