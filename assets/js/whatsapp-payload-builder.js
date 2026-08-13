@@ -87,7 +87,7 @@ class WhatsAppPayloadBuilder {
   buildAlojamientoPayload(alojamientoId, options = {}) {
     const { fechaInicio = '', fechaFin = '', numPersonas = '', numHabitaciones = '' } = options;
     
-    // Datos de alojamientos desde el master data (precios referencia temporada baja)
+    // Datos de alojamientos desde docs/data/alojamientos (precios referencia temporada baja cuádruple radio taxi)
     const alojamientos = {
       'cabanas-la-esmeralda': {
         nombre: 'Cabañas La Esmeralda',
@@ -99,13 +99,13 @@ class WhatsAppPayloadBuilder {
         nombre: 'Hotel Campestre Los Girasoles',
         ubicacion: 'Filandia, Quindío',
         descripcion: 'Hotel campestre con zonas verdes y vistas panorámicas',
-        precioDesde: 1297000
+        precioDesde: 1588000
       },
       'hotel-campestre-cafe-cafe': {
         nombre: 'Hotel Campestre Café Café',
         ubicacion: 'Armenia, Quindío',
         descripcion: 'Hotel temático cafetero con arquitectura colonial',
-        precioDesde: 1495000
+        precioDesde: 1770000
       }
     };
 
@@ -113,7 +113,7 @@ class WhatsAppPayloadBuilder {
       nombre: 'Alojamiento en el Eje Cafetero',
       ubicacion: 'Quindío',
       descripcion: 'Experiencia auténtica en el corazón del café',
-      precioDesde: 935000
+      precioDesde: 1050000
     };
 
     let message = `🏨 *COTIZACIÓN ALOJAMIENTO*\n\n`;
