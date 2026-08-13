@@ -45,9 +45,14 @@ function obtenerPrecioOficial(planKey, categoria) {
 
 window.obtenerPrecioOficial = obtenerPrecioOficial;
 
-function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, ocupacion = 'individual', incluirTransporte = false, temporada = 'temporada_baja') {
+function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, incluirTransporte = true, temporada = 'temporada_baja') {
   if (!window.QUINDIO_TRAVEL_DATA || !window.QUINDIO_TRAVEL_DATA.tarifasOficiales) {
-    return { error: "La base de datos de tarifas no está cargada." };
+    return { error: "La base de de tarifas no está cargada." };
+  }
+
+  // Validar mínimo 2 personas
+  if (paxCount < 2) {
+    return { error: "El cotizador solo está disponible para 2 o más personas." };
   }
 
   const data = window.QUINDIO_TRAVEL_DATA.tarifasOficiales;
@@ -62,20 +67,20 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, oc
     return { error: "No hay datos disponibles para la temporada seleccionada." };
   }
 
+  // Siempre usar precios con transporte (TRANSPORTE RADIO TAXI)
   let precioPorPersona;
   
-  // Si se incluye transporte y no es individual, usar precios con transporte
-  if (incluirTransporte && ocupacion !== 'individual' && temporadaData.precios_con_transporte) {
+  if (temporadaData.precios_con_transporte && temporadaData.precios_con_transporte[categoria]) {
     const preciosTransporte = temporadaData.precios_con_transporte[categoria];
+    // Usar cuádruple como ocupación predeterminada (la más económica)
+    const ocupacion = 'cuadruple';
     if (preciosTransporte && preciosTransporte[ocupacion]) {
       precioPorPersona = preciosTransporte[ocupacion];
     } else {
-      // Fallback a precio sin transporte si no hay precio con transporte disponible
-      precioPorPersona = temporadaData[categoria];
+      return { error: "No hay tarifa de transporte disponible." };
     }
   } else {
-    // Usar precio sin transporte
-    precioPorPersona = temporadaData[categoria];
+    return { error: "No hay precios con transporte disponibles para este plan." };
   }
 
   if (!precioPorPersona) {
@@ -102,8 +107,8 @@ function calcularCotizacion(plan, categoria, paxCount, destinosSeleccionados, oc
     formateadoPersona: new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(precioPorPersona),
     formateadoTotal: new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(total),
     destinosExtra: destinosCount,
-    ocupacion: ocupacion,
-    incluyeTransporte: incluirTransporte,
+    ocupacion: 'cuadruple',
+    incluyeTransporte: true, // Siempre true
     temporada: temporada
   };
 }
@@ -114,8 +119,6 @@ function actualizarUI() {
   const selectCategoria = document.getElementById('select-categoria');
   const selectPax = document.getElementById('select-pax');
   const selectDestinos = document.getElementById('select-destinos');
-  const selectOcupacion = document.getElementById('select-ocupacion');
-  const checkTransporte = document.getElementById('check-transporte');
   const selectTemporada = document.getElementById('select-temporada');
 
   const displayPersona = document.getElementById('precio-persona');
@@ -124,12 +127,6 @@ function actualizarUI() {
   const whatsappBtn = document.getElementById('cotizador-whatsapp-btn');
 
   if (!selectPlan || !selectCategoria || !selectPax) return;
-
-  // Obtener ocupación (por defecto individual)
-  const ocupacion = selectOcupacion ? selectOcupacion.value : 'individual';
-  
-  // Obtener si incluye transporte (por defecto false)
-  const incluirTransporte = checkTransporte ? checkTransporte.checked : false;
 
   // Obtener temporada (por defecto temporada_baja)
   const temporada = selectTemporada ? selectTemporada.value : 'temporada_baja';
@@ -159,14 +156,13 @@ function actualizarUI() {
     selectCategoria.value,
     parseInt(selectPax.value),
     destinosSeleccionados,
-    ocupacion,
-    incluirTransporte,
+    true, // Siempre true
     temporada
   );
 
   if (res.error) {
     if (displayPersona) displayPersona.innerText = "N/A";
-    if (displayTotal) displayTotal.innerText = "Consulte con un asesor";
+    if (displayTotal) displayTotal.innerText = res.error;
     if (displayDestinos) displayDestinos.innerText = "";
   } else {
     if (displayPersona) displayPersona.innerText = res.formateadoPersona;
@@ -183,17 +179,13 @@ function actualizarUI() {
     const planNombre = selectPlan.options[selectPlan.selectedIndex].text;
     const categoriaNombre = selectCategoria.options[selectCategoria.selectedIndex].text;
     const paxCount = selectPax.value;
-    const ocupacionNombre = selectOcupacion ? selectOcupacion.options[selectOcupacion.selectedIndex].text : 'Individual';
     const temporadaNombre = selectTemporada ? selectTemporada.options[selectTemporada.selectedIndex].text : 'Temporada Baja';
     
     let mensaje = `Hola Quindío Travel 🌿, deseo cotizar el ${planNombre} para ${paxCount} personas.\n`;
     mensaje += `Temporada: ${temporadaNombre}\n`;
     mensaje += `Categoría de alojamiento: ${categoriaNombre}\n`;
-    mensaje += `Ocupación: ${ocupacionNombre}\n`;
-    
-    if (incluirTransporte) {
-      mensaje += `✅ Incluye transporte completo\n`;
-    }
+    mensaje += `Ocupación: Cuádruple (automática)\n`;
+    mensaje += `✅ Incluye transporte completo (RADIO TAXI)\n`;
     
     if (destinosNombres.length > 0) {
       mensaje += `Destinos adicionales seleccionados: ${destinosNombres.join(', ')}\n`;
@@ -207,7 +199,7 @@ function actualizarUI() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const inputs = ['select-plan', 'select-categoria', 'select-pax', 'select-destinos', 'select-ocupacion', 'check-transporte'];
+  const inputs = ['select-plan', 'select-categoria', 'select-pax', 'select-destinos', 'select-temporada'];
   inputs.forEach(id => {
     const el = document.getElementById(id);
     if (el) el.addEventListener('change', actualizarUI);
