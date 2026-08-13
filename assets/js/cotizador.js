@@ -184,8 +184,10 @@ function actualizarUI() {
     const categoriaNombre = selectCategoria.options[selectCategoria.selectedIndex].text;
     const paxCount = selectPax.value;
     const ocupacionNombre = selectOcupacion ? selectOcupacion.options[selectOcupacion.selectedIndex].text : 'Individual';
+    const temporadaNombre = selectTemporada ? selectTemporada.options[selectTemporada.selectedIndex].text : 'Temporada Baja';
     
     let mensaje = `Hola Quindío Travel 🌿, deseo cotizar el ${planNombre} para ${paxCount} personas.\n`;
+    mensaje += `Temporada: ${temporadaNombre}\n`;
     mensaje += `Categoría de alojamiento: ${categoriaNombre}\n`;
     mensaje += `Ocupación: ${ocupacionNombre}\n`;
     
