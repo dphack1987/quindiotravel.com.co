@@ -311,8 +311,43 @@
     </section>
 
     <section class="container section-white" style="padding: 50px 20px;">
-        <h2 style="color: var(--verde-cafe); margin-bottom: 25px; text-align: center;"><i class="fas fa-tags"></i> Tarifas por Tipo de Alojamiento</h2>
-        <p style="text-align: center; margin-bottom: 30px; color: #666;">Precios por persona en pesos colombianos (COP)</p>
+        <h2 style="color: var(--verde-cafe); margin-bottom: 25px; text-align: center;"><i class="fas fa-calendar-alt"></i> Temporadas y Tarifas</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: #666;">Seleccione la temporada para ver los precios correspondientes</p>
+        
+        <!-- Season Selector -->
+        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 40px;">
+            <button id="btn-temporada-baja" class="temporada-btn active" style="padding: 15px 30px; border: 2px solid var(--verde-cafe); background: var(--verde-cafe); color: white; border-radius: 30px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                🌤️ Temporada Baja
+            </button>
+            <button id="btn-temporada-alta" class="temporada-btn" style="padding: 15px 30px; border: 2px solid var(--verde-cafe); background: white; color: var(--verde-cafe); border-radius: 30px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                ☀️ Temporada Alta
+            </button>
+        </div>
+
+        <script>
+            document.getElementById('btn-temporada-baja').addEventListener('click', function() {
+                document.getElementById('tarifas-baja').style.display = 'block';
+                document.getElementById('tarifas-alta').style.display = 'none';
+                this.style.background = 'var(--verde-cafe)';
+                this.style.color = 'white';
+                document.getElementById('btn-temporada-alta').style.background = 'white';
+                document.getElementById('btn-temporada-alta').style.color = 'var(--verde-cafe)';
+            });
+
+            document.getElementById('btn-temporada-alta').addEventListener('click', function() {
+                document.getElementById('tarifas-alta').style.display = 'block';
+                document.getElementById('tarifas-baja').style.display = 'none';
+                this.style.background = 'var(--verde-cafe)';
+                this.style.color = 'white';
+                document.getElementById('btn-temporada-baja').style.background = 'white';
+                document.getElementById('btn-temporada-baja').style.color = 'var(--verde-cafe)';
+            });
+        </script>
+
+        <!-- Temporada Baja Content -->
+        <div id="tarifas-baja" class="temporada-content" style="display: block;">
+            <h2 style="color: var(--verde-cafe); margin-bottom: 25px; text-align: center;"><i class="fas fa-tags"></i> Tarifas por Tipo de Alojamiento - Temporada Baja</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: #666;">Precios por persona en pesos colombianos (COP)</p>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px;">
             <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid var(--verde-cafe);">
@@ -411,11 +446,122 @@
                 <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">Hotel Campestre Camellias, Mocawa Resort</p>
             </div>
         </div>
-            </div>
-        </div>
         
         <div style="background: linear-gradient(135deg, var(--verde-cafe), var(--verde-claro)); color: white; padding: 20px; border-radius: 10px; text-align: center;">
             <p style="margin: 0; font-size: 0.95rem;"><i class="fas fa-info-circle"></i> Precios incluyen alojamiento, alimentación (desayunos + cenas), entradas a parques temáticos, Valle de Cocora y visitas a pueblos. Transporte adicional según requerimiento.</p>
+        </div>
+        </div>
+
+        <!-- Temporada Alta Content -->
+        <div id="tarifas-alta" class="temporada-content" style="display: none;">
+            <h2 style="color: var(--verde-cafe); margin-bottom: 25px; text-align: center;"><i class="fas fa-tags"></i> Tarifas por Tipo de Alojamiento - Temporada Alta</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: #666;">Precios por persona en pesos colombianos (COP)</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px;">
+            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid var(--verde-cafe);">
+                <h3 style="color: var(--verde-cafe); margin-bottom: 15px; font-size: 1.3rem;">💰 Económico</h3>
+                <div style="margin-bottom: 15px; background: #fff3cd; padding: 10px; border-radius: 8px; border-left: 3px solid #ffc107;">
+                    <p style="font-size: 0.85rem; color: #856404; margin-bottom: 5px; font-weight: 600;">🚫 Sin transporte:</p>
+                    <p style="font-size: 1.3rem; font-weight: 700; color: #856404;">$570.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Doble (con transporte):</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$945.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Triple:</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$815.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Cuádruple:</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$745.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Niños (2-10 años):</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$734.000</p>
+                </div>
+                <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">Quinta del Café, Dorada</p>
+            </div>
+            
+            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid var(--amarillo-suave);">
+                <h3 style="color: var(--verde-cafe); margin-bottom: 15px; font-size: 1.3rem;">⭐ Intermedio</h3>
+                <div style="margin-bottom: 15px; background: #fff3cd; padding: 10px; border-radius: 8px; border-left: 3px solid #ffc107;">
+                    <p style="font-size: 0.85rem; color: #856404; margin-bottom: 5px; font-weight: 600;">🚫 Sin transporte:</p>
+                    <p style="font-size: 1.3rem; font-weight: 700; color: #856404;">$613.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Doble (con transporte):</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$990.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Triple:</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$850.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Cuádruple:</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$775.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Niños (2-10 años):</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$764.000</p>
+                </div>
+                <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">Cabañas La Esmeralda, Los Aperos</p>
+            </div>
+            
+            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid var(--verde-claro);">
+                <h3 style="color: var(--verde-cafe); margin-bottom: 15px; font-size: 1.3rem;">⭐⭐ Intermedio VIP</h3>
+                <div style="margin-bottom: 15px; background: #fff3cd; padding: 10px; border-radius: 8px; border-left: 3px solid #ffc107;">
+                    <p style="font-size: 0.85rem; color: #856404; margin-bottom: 5px; font-weight: 600;">🚫 Sin transporte:</p>
+                    <p style="font-size: 1.3rem; font-weight: 700; color: #856404;">$1.070.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Doble (con transporte):</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$1.380.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Triple:</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$1.245.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Cuádruple:</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$1.150.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Niños (2-10 años):</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$1.139.000</p>
+                </div>
+                <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">Los Girasoles, La Tata, Combia</p>
+            </div>
+            
+            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid var(--vip-gold);">
+                <h3 style="color: var(--verde-cafe); margin-bottom: 15px; font-size: 1.3rem;">👑 VIP</h3>
+                <div style="margin-bottom: 15px; background: #fff3cd; padding: 10px; border-radius: 8px; border-left: 3px solid #ffc107;">
+                    <p style="font-size: 0.85rem; color: #856404; margin-bottom: 5px; font-weight: 600;">🚫 Sin transporte:</p>
+                    <p style="font-size: 1.3rem; font-weight: 700; color: #856404;">$2.310.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Doble (con transporte):</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$2.680.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Triple:</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$2.370.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Cuádruple:</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$2.210.000</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">Niños (2-10 años):</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--marron-madera);">$2.198.000</p>
+                </div>
+                <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">Hotel Campestre Camellias, Mocawa Resort</p>
+            </div>
+        </div>
+        
+        <div style="background: linear-gradient(135deg, #ffc107, #ffca28); color: #333; padding: 20px; border-radius: 10px; text-align: center;">
+            <p style="margin: 0; font-size: 0.95rem;"><i class="fas fa-sun"></i> <strong>Temporada Alta:</strong> Precios aplicables durante fechas especiales, feriados y temporadas de alta demanda. Incluyen los mismos servicios que temporada baja.</p>
+        </div>
         </div>
     </section>
 
