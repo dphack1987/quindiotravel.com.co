@@ -965,16 +965,17 @@ const planesData = [
     id: "plan-1",
     titulo: "Plan 1: Vive El Eje Cafetero Temático",
     precioSinTransporte: 425000,
-    precioConTransporte: 580000
+    precioConTransporte: 796000
   }
 ];
 ```
 
 **Análisis:**
 - ✅ **Datos reales** de planes ofrecidos
-- ✅ **Precios consistentes** con tarifas.json
+- ✅ **Precios consistentes** con docs/listado-completo-precios.md (DOCUMENTO AUTORIZADO)
 - ✅ **En uso real** en la web
 - ✅ **Funcionalidad verificada** en el cotizador
+- ⚠️ **ÚNICA FUENTE DE VERDAD**: docs/listado-completo-precios.md contiene los precios oficiales
 
 ---
 
