@@ -44,7 +44,7 @@ const planesData = [
       "Día 2: PANACA con Pasaporte Terra completo",
       "Día 3: Parque del Café con Pasaporte Múltiple, regreso"
     ],
-    atractivosIncluidos: ["Parque del Café", "PANACA", "Pueblo Tapao"],
+    atractivosIncluidos: ["Parque del Café", "PANACA"],
     alojamientosAsociados: ["cabanas-la-esmeralda", "hotel-campestre-la-tata"],
     precioSinTransporte: 562000,
     precioConTransporte: 935000,
