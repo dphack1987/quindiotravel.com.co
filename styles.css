@@ -7429,6 +7429,14 @@ body {
     transition: all 0.3s ease;
 }
 
+.hotel-plans .plan-mini-card small {
+    display: block;
+    margin-top: 8px;
+    color: var(--verde-claro);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
 .hotel-plans .plan-badge {
     box-shadow: 0 12px 24px rgba(46, 90, 54, 0.16);
 }
