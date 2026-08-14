@@ -81,7 +81,6 @@
 - Hotel Plaza Verde
 - Hotel San Julián
 - Quinta Porra
-- Quintas del Café
 - Café Cafecampestre
 - Arizona
 - Karlaka

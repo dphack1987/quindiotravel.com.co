@@ -87,7 +87,7 @@
 
 
 **Categorías de Alojamiento:**
-- **Económico**: Quinta del Café, Dorada
+- **Económico**: De La Vega Hotel Campestre, Finca Hotel Dorada
 - **Intermedio**: Cabañas La Esmeralda, Los Aperos
 - **Intermedio VIP**: Los Girasoles, La Tata, Combia
 - **VIP**: Hotel Campestre Camellias, Mocawa Resort y Mocawa Plaza
