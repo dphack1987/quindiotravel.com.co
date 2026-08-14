@@ -38,11 +38,11 @@ const planesData = [
     categoria: "Económico",
     badge: "Más Popular",
     detalleUrl: "plan-2.html",
-    descripcion: "3 días / 2 noches de alojamiento en finca hotel tradicional, desayunos y cenas incluidos, acceso a los parques temáticos principales y recorrido por pueblos tradicionales. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
+    descripcion: "3 días / 2 noches de alojamiento en finca hotel tradicional, desayunos y cenas incluidos, acceso a PANACA con Pasaporte Terra y Parque del Café con Pasaporte Múltiple. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
     resumenPrograma: [
-      "Día 1: Llegada, check-in, recorrido por Pueblo Tapao o Montenegro",
-      "Día 2: Parque del Café día completo + show de café",
-      "Día 3: PANACA día completo, regreso en la tarde"
+      "Día 1: Llegada, check-in, tarde en finca hotel",
+      "Día 2: PANACA con Pasaporte Terra completo",
+      "Día 3: Parque del Café con Pasaporte Múltiple, regreso"
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Pueblo Tapao"],
     alojamientosAsociados: ["cabanas-la-esmeralda", "hotel-campestre-la-tata"],
@@ -67,12 +67,12 @@ const planesData = [
     categoria: "Estándar",
     badge: "Experiencia Completa",
     detalleUrl: "plan-3.html",
-    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Parques del Café y PANACA, Valle de Cocora, Salento, Filandia y RECUCA. Transporte desde el aeropuerto o terminal terrestre en Armenia. El programa favorito para conocer lo esencial del Quindío.",
+    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Valle de Cocora, Salento, Filandia, PANACA y Parque del Café. Transporte desde el aeropuerto o terminal terrestre en Armenia. El programa favorito para conocer lo esencial del Quindío.",
     resumenPrograma: [
-      "Día 1: Llegada Armenia, check-in, bienvenida",
-      "Día 2: Salento, Valle de Cocora con palma de cera, caminata",
-      "Día 3: Parque del Café día completo",
-      "Día 4: Filandia + RECUCA + PANACA medio día, regreso"
+      "Día 1: Llegada, check-in, tarde en finca hotel",
+      "Día 2: Valle de Cocora, Salento y Filandia",
+      "Día 3: PANACA con Pasaporte Terra",
+      "Día 4: Parque del Café con Pasaporte Múltiple, regreso"
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Salento", "Valle de Cocora", "Filandia", "RECUCA"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "cabanas-la-esmeralda", "finca-hotel-dorada"],
@@ -97,14 +97,14 @@ const planesData = [
     categoria: "Estándar Plus",
     badge: "Termales Incluidos",
     detalleUrl: "plan-4.html",
-    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, parques temáticos combinados con un día completo de relajación en los Termales de Santa Rosa de Cabal. Transporte desde el aeropuerto o terminal terrestre en Armenia. Ideal para familias y parejas.",
+    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Balneario Santa Rosa de Cabal, Parque del Café y PANACA. Transporte desde el aeropuerto o terminal terrestre en Armenia. Ideal para familias y parejas.",
     resumenPrograma: [
-      "Día 1: Llegada, check-in, bienvenida y descanso",
-      "Día 2: Termales de Santa Rosa de Cabal todo el día",
-      "Día 3: Parque del Café + Parque Los Arrieros",
-      "Día 4: PANACA medio día, regreso"
+      "Día 1: Llegada, check-in, tarde en finca hotel",
+      "Día 2: Balneario Santa Rosa de Cabal completo",
+      "Día 3: Parque del Café con Pasaporte Múltiple",
+      "Día 4: PANACA con Pasaporte Terra, regreso"
     ],
-    atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa", "Parque Los Arrieros"],
+    atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "hotel-campestre-cafe-cafe"],
     precioSinTransporte: 798000,
     precioConTransporte: 1495000,
@@ -127,14 +127,14 @@ const planesData = [
     categoria: "Cultural",
     badge: "Vivencial Cultural",
     detalleUrl: "plan-5.html",
-    descripcion: "4 días / 3 noches con enfoque cultural vivencial en las raíces de la arriería quindiana, desayunos y cenas incluidos. Incluye experiencias con mulas, Finca tradicional, Recuca y Parque Los Arrieros. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
+    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Parque Los Arrieros, PANACA y Parque del Café. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
     resumenPrograma: [
-      "Día 1: Llegada y check-in, charla cultura cafetera",
-      "Día 2: Parque Los Arrieros + experiencia de arriería con mulas",
-      "Día 3: RECUCA + Finca tradicional cafetera con almuerzo típico",
-      "Día 4: Salento pueblo + miradores, regreso"
+      "Día 1: Llegada, check-in, tarde en finca hotel",
+      "Día 2: Parque Los Arrieros",
+      "Día 3: PANACA con Pasaporte Terra",
+      "Día 4: Parque del Café con Pasaporte Múltiple, regreso"
     ],
-    atractivosIncluidos: ["RECUCA", "Parque Los Arrieros", "Salento", "Finca Cafetera Tradicional"],
+    atractivosIncluidos: ["Parque Los Arrieros", "PANACA", "Parque del Café"],
     alojamientosAsociados: ["cabanas-la-esmeralda", "finca-hotel-los-girasoles"],
     precioSinTransporte: 788000,
     precioConTransporte: 1297000,
@@ -162,15 +162,15 @@ const planesData = [
     categoria: "Premium",
     badge: "Todo Incluido VIP",
     detalleUrl: "plan-6.html",
-    descripcion: "La experiencia definitiva de 5 días y 4 noches. Abrarca TODOS los atractivos del Quindío: parques temáticos, termales, RECUCA, pueblos patrimonio, y el Valle de Cocora. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
+    descripcion: "La experiencia definitiva de 5 días y 4 noches. PANACA, Balneario Santa Rosa de Cabal, Parque del Café y RECUCA. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
     resumenPrograma: [
-      "Día 1: Llegada Armenia, check-in, noche de bienvenida",
-      "Día 2: Parque del Café completo + show nocturno",
-      "Día 3: Salento + Valle de Cocora",
-      "Día 4: PANACA + RECUCA + Termales Santa Rosa tarde/noche",
-      "Día 5: Filandia + Parque Los Arrieros, almuerzo típico y regreso"
+      "Día 1: Llegada, check-in, tarde en finca hotel",
+      "Día 2: PANACA con Pasaporte Terra",
+      "Día 3: Balneario Santa Rosa de Cabal completo",
+      "Día 4: Parque del Café con Pasaporte Múltiple",
+      "Día 5: RECUCA, regreso"
     ],
-    atractivosIncluidos: ["Parque del Café", "PANACA", "Valle de Cocora", "Salento", "Filandia", "RECUCA", "Termales Santa Rosa", "Parque Los Arrieros"],
+    atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa", "RECUCA"],
     alojamientosAsociados: ["hotel-campestre-cafe-cafe", "hotel-campestre-las-camelias", "finca-hotel-los-girasoles"],
     precioSinTransporte: 1008000,
     precioConTransporte: 1800000,
