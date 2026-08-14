@@ -195,21 +195,21 @@ const alojamientosData = [
   {
     id: "cabanas-la-esmeralda",
     nombre: "Cabañas La Esmeralda",
-    categoria: "Intermedia",
+    categoria: "Económica",
     ubicacion: "Quindío, Colombia",
     servicios: ["Piscina Adultos y Niños", "Jacuzzy", "Cancha de Microfútbol", "Cancha de Volley Playa", "Restaurante", "Bar", "Zona de Asados", "Amplias Zonas Verdes", "Kiosco", "Juegos de Mesa"]
   },
   {
     id: "de-la-vega-hotel-campestre",
     nombre: "De La Vega Hotel Campestre",
-    categoria: "Estándar",
+    categoria: "Económica",
     ubicacion: "A 200 mts del Parque del Café, Montenegro, Quindío",
     servicios: ["Zonas húmedas (Piscina, 3 jacuzzi)", "Zona de juegos (billar pool, rana, pin pon)", "Parque infantil", "Parqueadero"]
   },
   {
     id: "finca-hotel-dorada",
     nombre: "Finca Hotel Dorada",
-    categoria: "Estándar",
+    categoria: "Económica",
     ubicacion: "Km. 5 Pueblo Tapao Vía a La Tebaida, Quindío",
     servicios: ["Piscina niños y adultos", "Juegos infantiles", "Parqueadero", "Restaurante", "Lavandería", "Hamacas", "Juegos de mesa"]
   },
@@ -230,7 +230,7 @@ const alojamientosData = [
   {
     id: "hotel-campestre-la-tata",
     nombre: "Hotel Campestre La Tata",
-    categoria: "Estándar",
+    categoria: "Intermedia VIP",
     ubicacion: "A 100 mts de Parque del Café, Quindío",
     servicios: ["Piscina niños y adultos", "Jacuzzi", "Juegos infantiles", "Parqueadero", "Restaurante", "Lavandería", "Juegos de mesa"]
   },
