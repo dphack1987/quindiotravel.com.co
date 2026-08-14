@@ -7417,6 +7417,18 @@ body {
     padding: 30px 24px;
 }
 
+.hotel-plans .plan-mini-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.hotel-plans .plan-mini-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(46, 90, 54, 0.2);
+    transition: all 0.3s ease;
+}
+
 .hotel-plans .plan-badge {
     box-shadow: 0 12px 24px rgba(46, 90, 54, 0.16);
 }
