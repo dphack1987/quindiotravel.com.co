@@ -154,9 +154,18 @@
 - `palm-trees-misty-valley.jpg` - 3.3 MB → 1.1 MB (67.3% reducción)
 - `quindio-mountain-range.jpg` - 2.8 MB → 0.5 MB (81.8% reducción)
 
-**Total optimizado:** 9 imágenes
+**Total optimizado (FASE 5):** 9 imágenes
 **Reducción total de tamaño:** ~85% promedio
 **Herramienta utilizada:** Pillow (PIL) Python library
+
+**Imágenes adicionales optimizadas (alojamientos):**
+- `cafetal.jpg` - 1.4 MB → 0.3 MB (81.1% reducción)
+- `IMG_0404-scaled.jpg` - 0.4 MB → 0.3 MB (31.9% reducción)
+- `IMG_5053-scaled.jpg` - 0.7 MB → 0.4 MB (48.2% reducción)
+- `tata-anato-05-mp8qjeDV0DsVvyyX.webp` - 0.9 MB → 0.9 MB (5.8% reducción)
+
+**Total optimizado completo:** 13 imágenes
+**Ahorro total de espacio:** ~38 MB
 
 ### **Tareas Completadas:**
 - ✅ FASE 1: Eliminación de duplicados
@@ -164,5 +173,9 @@
 - ✅ FASE 3: Organización de videos por categoría
 - ✅ FASE 4: Organización de directorios y renombrado de archivos
 - ✅ FASE 5: Optimización de imágenes grandes (Pillow)
+- ✅ FASE 6: Optimización de imágenes adicionales (alojamientos)
 - ✅ Actualización de referencias HTML
-- ✅ Extracción de itinerarios oficiales
+- ✅ Extracción de itinerarios oficiales (6 planes)
+- ✅ Instalación de herramientas (Pillow)
+
+**ESTADO DEL PROYECTO: TODAS LAS TAREAS COMPLETADAS**
