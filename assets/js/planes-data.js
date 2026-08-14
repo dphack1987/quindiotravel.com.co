@@ -74,7 +74,7 @@ const planesData = [
       "Día 3: PANACA con Pasaporte Terra",
       "Día 4: Parque del Café con Pasaporte Múltiple, regreso"
     ],
-    atractivosIncluidos: ["Parque del Café", "PANACA", "Salento", "Valle de Cocora", "Filandia", "RECUCA"],
+    atractivosIncluidos: ["Parque del Café", "PANACA", "Salento", "Valle de Cocora", "Filandia"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "cabanas-la-esmeralda", "finca-hotel-dorada"],
     precioSinTransporte: 777000,
     precioConTransporte: 1385000,
@@ -101,8 +101,8 @@ const planesData = [
     resumenPrograma: [
       "Día 1: Llegada, check-in, tarde en finca hotel",
       "Día 2: Balneario Santa Rosa de Cabal completo",
-      "Día 3: Parque del Café con Pasaporte Múltiple",
-      "Día 4: PANACA con Pasaporte Terra, regreso"
+      "Día 3: PANACA con Pasaporte Terra",
+      "Día 4: Parque del Café con Pasaporte Múltiple, regreso"
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "hotel-campestre-cafe-cafe"],
@@ -162,15 +162,15 @@ const planesData = [
     categoria: "Premium",
     badge: "Todo Incluido VIP",
     detalleUrl: "plan-6.html",
-    descripcion: "La experiencia definitiva de 5 días y 4 noches. PANACA, Balneario Santa Rosa de Cabal, Parque del Café y RECUCA. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
+    descripcion: "La experiencia definitiva de 5 días y 4 noches. PANACA, Balneario Santa Rosa de Cabal, Parque del Café y RECUCA. Transporte desde el aeropuerto o terminal terrestre en Armenia. Incluye Valle de Cocora.",
     resumenPrograma: [
       "Día 1: Llegada, check-in, tarde en finca hotel",
       "Día 2: PANACA con Pasaporte Terra",
       "Día 3: Balneario Santa Rosa de Cabal completo",
       "Día 4: Parque del Café con Pasaporte Múltiple",
-      "Día 5: RECUCA, regreso"
+      "Día 5: Valle de Cocora, RECUCA, regreso"
     ],
-    atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa", "RECUCA"],
+    atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa", "RECUCA", "Valle de Cocora"],
     alojamientosAsociados: ["hotel-campestre-cafe-cafe", "hotel-campestre-las-camelias", "finca-hotel-los-girasoles"],
     precioSinTransporte: 1008000,
     precioConTransporte: 1800000,
