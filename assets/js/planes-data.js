@@ -331,7 +331,7 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
           </div>
           <div class="feature-item-enhanced">
             <i class="fas fa-utensils"></i>
-            <span>Alimentación incluida</span>
+            <span>Desayunos y cenas</span>
           </div>
           <div class="feature-item-enhanced">
             <i class="fas fa-shield-alt"></i>
