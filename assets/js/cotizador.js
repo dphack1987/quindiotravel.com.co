@@ -34,13 +34,21 @@ window.QUINDIO_TRAVEL_DATA_LOADED = fetch('docs/data/tarifas.json')
         return null;
     });
 
-function obtenerPrecioOficial(planKey, categoria) {
+function obtenerPrecioOficial(planKey, categoria, temporada = 'temporada_baja') {
   if (!window.QUINDIO_TRAVEL_DATA || !window.QUINDIO_TRAVEL_DATA.tarifasOficiales) {
     return null;
   }
   if (!planKey || !categoria) return null;
   const planData = window.QUINDIO_TRAVEL_DATA.tarifasOficiales[planKey];
-  return planData ? planData[categoria] || null : null;
+  if (!planData) return null;
+  
+  // Si el plan tiene estructura de temporada, usarla
+  if (planData[temporada]) {
+    return planData[temporada][categoria] || null;
+  }
+  
+  // Si no tiene estructura de temporada, usar la estructura directa (compatibilidad)
+  return planData[categoria] || null;
 }
 
 window.obtenerPrecioOficial = obtenerPrecioOficial;

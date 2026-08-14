@@ -1227,6 +1227,27 @@
         text-align: left;
         box-shadow: 0 16px 35px rgba(24, 57, 38, 0.08);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .flexible-step-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: var(--card-bg-image, none);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.1;
+        z-index: 0;
+    }
+
+    .flexible-step-card > * {
+        position: relative;
+        z-index: 1;
     }
     
     .flexible-step-card:hover {
@@ -3572,7 +3593,7 @@
             </div>
             
             <div class="flexible-plans-grid">
-                <div class="flexible-step-card">
+                <div class="flexible-step-card" style="--card-bg-image: url('assets/images/paisajes/valle-cocora-hero-banner.jpg');">
                     <div class="step-icon">🎯</div>
                     <h3 class="step-title">Selecciona Atractivos</h3>
                     <div class="attractions-grid-clean">
@@ -3594,7 +3615,7 @@
                     </div>
                 </div>
                 
-                <div class="flexible-step-card">
+                <div class="flexible-step-card" style="--card-bg-image: url('assets/images/paisajes/filandia-colonial-architecture.jpg');">
                     <div class="step-icon">📅</div>
                     <h3 class="step-title">Duración</h3>
                     <div class="duration-options-clean">
@@ -3604,7 +3625,7 @@
                     </div>
                 </div>
                 
-                <div class="flexible-step-card">
+                <div class="flexible-step-card" style="--card-bg-image: url('assets/images/alojamientos/finca-hotel-los-girasoles/girasoles-1.jpg');">
                     <div class="step-icon">🏨</div>
                     <h3 class="step-title">Alojamiento</h3>
                     <div class="accommodation-options-clean">
@@ -3614,7 +3635,7 @@
                     </div>
                 </div>
                 
-                <div class="flexible-step-card">
+                <div class="flexible-step-card" style="--card-bg-image: url('assets/images/paisajes/salento-colorful-houses.jpg');">
                     <div class="step-icon">👥</div>
                     <h3 class="step-title">Número de Personas</h3>
                     <div class="people-input-clean">
@@ -3622,7 +3643,7 @@
                         <small style="display:block; margin-top:8px; color:#f0f0f0; font-size:0.85rem;">Indica cuántas personas viajan</small>
                     </div>
                 </div>
-                <div class="flexible-step-card">
+                <div class="flexible-step-card" style="--card-bg-image: url('assets/images/paisajes/eje-cafetero-green-mountains.jpg');">
                     <div class="step-icon">🚐</div>
                     <h3 class="step-title">Transporte</h3>
                     <div class="accommodation-options-clean">
@@ -4594,6 +4615,10 @@
                                 <h4 style="color: var(--verde-cafe); margin-bottom: 10px; font-size: 0.9rem;">💰 Estimación de Precio</h4>
                                 <div class="price-details">
                                     <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #666;">Temporada aplicada:</span>
+                                        <span id="temporada-aplicada" style="font-weight: 700; color: var(--verde-cafe);">Temporada Baja</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
                                         <span style="font-size: 0.85rem; color: #666;">Precio por persona:</span>
                                         <span id="precio-persona" style="font-weight: 700; color: var(--verde-cafe);">$0</span>
                                     </div>
@@ -4610,7 +4635,7 @@
                                         <span id="total-estimado" style="font-weight: 800; font-size: 1.2rem; color: var(--verde-cafe);">$0</span>
                                     </div>
                                 </div>
-                                <p style="font-size: 0.75rem; color: #888; margin-top: 8px; margin-bottom: 0;">* Precios SIN TRANSPORTE según portafolio oficial 2026</p>
+                                <p style="font-size: 0.75rem; color: #888; margin-top: 8px; margin-bottom: 0;">* Precios calculados según portafolio oficial 2026 (tarifas.json)</p>
                             </div>
                             
                             <div style="display: flex; gap: 10px;">
@@ -4869,59 +4894,77 @@
         <div class="municipios-grid" style="margin-top: 40px;">
             <h3 style="text-align: center; margin-bottom: 30px; color: var(--marron-madera);">🗺 Explora por Municipio</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--verde-cafe);">
-                    <h4 style="color: var(--verde-cafe); margin-bottom: 15px;">🏛 Armenia (Capital)</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Mariposario" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Mariposario</a></li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Jardín Botánico</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Restaurantes centro</li>
-                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Compras locales</li>
-                    </ul>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--verde-cafe); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('assets/images/paisajes/eje-cafetero-landscape-colombia.jpg') center/cover; opacity: 0.08; z-index: 0;"></div>
+                    <div style="position: relative; z-index: 1;">
+                        <h4 style="color: var(--verde-cafe); margin-bottom: 15px;">🏛 Armenia (Capital)</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Mariposario" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Mariposario</a></li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Jardín Botánico</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Restaurantes centro</li>
+                            <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Compras locales</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--amarillo-suave);">
-                    <h4 style="color: var(--amarillo-suave); margin-bottom: 15px;">🏘 Salento</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Valle de Cocora" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Valle de Cocora</a></li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Salento" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Salento</a></li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Calle del Tiempo Detenida</li>
-                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Cafeterías artesanales</li>
-                    </ul>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--amarillo-suave); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('assets/images/paisajes/salento-colorful-houses.jpg') center/cover; opacity: 0.08; z-index: 0;"></div>
+                    <div style="position: relative; z-index: 1;">
+                        <h4 style="color: var(--amarillo-suave); margin-bottom: 15px;">🏘 Salento</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Valle de Cocora" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Valle de Cocora</a></li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Salento" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Salento</a></li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Calle del Tiempo Detenida</li>
+                            <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Cafeterías artesanales</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--marron-madera);">
-                    <h4 style="color: var(--marron-madera); margin-bottom: 15px;">🎨 Filandia</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Filandia" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Filandia</a></li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Mirador de la Carretera</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Calle del Tiempo Detenida</li>
-                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Artesanía de guadua</li>
-                    </ul>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--marron-madera); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('assets/images/paisajes/filandia-colonial-architecture.jpg') center/cover; opacity: 0.08; z-index: 0;"></div>
+                    <div style="position: relative; z-index: 1;">
+                        <h4 style="color: var(--marron-madera); margin-bottom: 15px;">🎨 Filandia</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Filandia" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Filandia</a></li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Mirador de la Carretera</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Calle del Tiempo Detenida</li>
+                            <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Artesanía de guadua</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #3498db;">
-                    <h4 style="color: #3498db; margin-bottom: 15px;">🎠 Montenegro</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Parque del Café" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Parque del Café</a></li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=PANACA" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> PANACA</a></li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Quinti</li>
-                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Fincas cafeteras</li>
-                    </ul>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #3498db; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('assets/images/atractivos/parque-del-cafe/cafe-1.jpg') center/cover; opacity: 0.08; z-index: 0;"></div>
+                    <div style="position: relative; z-index: 1;">
+                        <h4 style="color: #3498db; margin-bottom: 15px;">🎠 Montenegro</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=Parque del Café" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Parque del Café</a></li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="planes.html?destino=PANACA" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> PANACA</a></li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Quinti</li>
+                            <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Fincas cafeteras</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #9b59b6;">
-                    <h4 style="color: #9b59b6; margin-bottom: 15px;">♨ Pereira</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="termales-santa-rosa.html" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Termales Santa Rosa</a></li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="recuca.html" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> RECUCA</a></li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Zona industrial</li>
-                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Comercio local</li>
-                    </ul>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #9b59b6; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('assets/images/atractivos/termales-santa-rosa/termales-1.jpg') center/cover; opacity: 0.08; z-index: 0;"></div>
+                    <div style="position: relative; z-index: 1;">
+                        <h4 style="color: #9b59b6; margin-bottom: 15px;">♨ Pereira</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="termales-santa-rosa.html" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Termales Santa Rosa</a></li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="recuca.html" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> RECUCA</a></li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Zona industrial</li>
+                            <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Comercio local</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #e74c3c;">
-                    <h4 style="color: #e74c3c; margin-bottom: 15px;">🏚 Buenavista</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="parque-los-arrieros.html" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Parque Los Arrieros</a></li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Parque Los Arrieros</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Fincas rurales</li>
-                        <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Tradición arriería</li>
-                    </ul>
+                <div class="municipio-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #e74c3c; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('assets/images/atractivos/parque-los-arrieros/arrieros-1.jpg') center/cover; opacity: 0.08; z-index: 0;"></div>
+                    <div style="position: relative; z-index: 1;">
+                        <h4 style="color: #e74c3c; margin-bottom: 15px;">🏚 Buenavista</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="parque-los-arrieros.html" style="text-decoration: none; color: var(--texto-oscuro);"><i class="fas fa-external-link-alt" style="color: var(--verde-cafe); margin-right: 10px;"></i> Parque Los Arrieros</a></li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Parque Los Arrieros</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Fincas rurales</li>
+                            <li style="padding: 8px 0;"><i class="fas fa-check" style="color: var(--verde-cafe); margin-right: 10px;"></i> Tradición arriería</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -5598,23 +5641,6 @@
         let currentStepForm = 1;
         const totalStepsForm = 4;
 
-        // Agregar event listeners a los botones de pasos
-        document.addEventListener('DOMContentLoaded', function() {
-            const stepButtons = document.querySelectorAll('[data-step-button]');
-            stepButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const action = this.getAttribute('data-step-button');
-                    const targetStep = parseInt(this.getAttribute('data-target-step'));
-                    
-                    if (action === 'next') {
-                        nextStep(targetStep);
-                    } else if (action === 'prev') {
-                        prevStep(targetStep);
-                    }
-                });
-            });
-        });
-
         function nextStep(step) {
             // Validar paso actual antes de continuar
             if (!validateStep(currentStepForm)) {
@@ -5706,8 +5732,10 @@
         }
         
         function calculatePrice() {
+            const plan = document.getElementById('reserva-plan').value;
             const categoria = document.getElementById('reserva-categoria').value;
             const transporte = document.getElementById('reserva-transporte').value;
+            const fecha = document.getElementById('reserva-fecha').value;
             const adultos = parseInt(document.getElementById('reserva-adultos').value) || 0;
             const ninos = parseInt(document.getElementById('reserva-ninos').value) || 0;
             
@@ -5720,30 +5748,73 @@
                 'plan-6': 'plan6_5d4n'
             };
 
+            // Fuente de verdad: tarifas.json
             const tarifasOficialesFallback = {
-                plan1_2d1n: { economica: 425000, intermedia: 442000, intermedia_vip: 590000, vip: 645000 },
-                plan2_3d2n: { economica: 562000, intermedia: 598000, intermedia_vip: 895000, vip: 1650000 },
-                plan3_4d3n: { economica: 777000, intermedia: 835000, intermedia_vip: 1280000, vip: 2400000 },
-                plan4_4d3n: { economica: 798000, intermedia: 860000, intermedia_vip: 1297000, vip: 2415000 },
-                plan5_4d3n: { economica: 788000, intermedia: 845000, intermedia_vip: 1285000, vip: 2400000 },
-                plan6_5d4n: { economica: 1008000, intermedia: 1090000, intermedia_vip: 1670000, vip: 3180000 }
+                plan1_2d1n: { 
+                    temporada_baja: { economica: 425000, intermedia: 442000, intermedia_vip: 590000, vip: 645000 },
+                    temporada_alta: { economica: 430000, intermedia: 450000, intermedia_vip: 962000, vip: 1295000 }
+                },
+                plan2_3d2n: { 
+                    temporada_baja: { economica: 562000, intermedia: 598000, intermedia_vip: 895000, vip: 1650000 },
+                    temporada_alta: { economica: 570000, intermedia: 613000, intermedia_vip: 1070000, vip: 2310000 }
+                },
+                plan3_4d3n: { 
+                    temporada_baja: { economica: 777000, intermedia: 835000, intermedia_vip: 1280000, vip: 2400000 },
+                    temporada_alta: { economica: 790000, intermedia: 860000, intermedia_vip: 1450000, vip: 3395000 }
+                },
+                plan4_4d3n: { 
+                    temporada_baja: { economica: 798000, intermedia: 860000, intermedia_vip: 1297000, vip: 2415000 },
+                    temporada_alta: { economica: 820000, intermedia: 880000, intermedia_vip: 1470000, vip: 3420000 }
+                },
+                plan5_4d3n: { 
+                    temporada_baja: { economica: 788000, intermedia: 845000, intermedia_vip: 1285000, vip: 2400000 },
+                    temporada_alta: { economica: 788000, intermedia: 870000, intermedia_vip: 1460000, vip: 3398000 }
+                },
+                plan6_5d4n: { 
+                    temporada_baja: { economica: 1008000, intermedia: 1090000, intermedia_vip: 1670000, vip: 3180000 },
+                    temporada_alta: { economica: 1070000, intermedia: 1170000, intermedia_vip: 1850000, vip: 4490000 }
+                }
             };
+
+            // Determinar temporada basada en la fecha
+            function determinarTemporada(fechaStr) {
+                if (!fechaStr) return 'temporada_baja';
+                
+                const fecha = new Date(fechaStr);
+                const mes = fecha.getMonth() + 1; // 1-12
+                const dia = fecha.getDate();
+                
+                // Temporada alta: Semana Santa (marzo/abril), receso escolar (junio-julio), puentes, dic-ene
+                const esTemporadaAlta = 
+                    (mes === 3 && dia >= 15) || // Semana Santa aproximada
+                    (mes === 4 && dia <= 10) ||
+                    (mes >= 6 && mes <= 7) ||    // Receso escolar
+                    (mes === 12) ||              // Diciembre
+                    (mes === 1 && dia <= 10);   // Enero
+                
+                return esTemporadaAlta ? 'temporada_alta' : 'temporada_baja';
+            }
+
+            const temporada = determinarTemporada(fecha);
+            const planKey = planKeyMap[plan];
+            
+            // Obtener precio base de la fuente de verdad
+            let precioBase = null;
+            if (window.obtenerPrecioOficial) {
+                precioBase = obtenerPrecioOficial(planKey, categoria, temporada);
+            }
+            
+            if (!precioBase) {
+                const fallback = tarifasOficialesFallback[planKey] || tarifasOficialesFallback.plan4_4d3n;
+                const preciosTemporada = fallback[temporada] || fallback.temporada_baja;
+                precioBase = preciosTemporada[categoria] || 798000;
+            }
 
             const multiplicadoresTransporte = {
                 'sin_transporte': 1,
                 'radio_taxi': 1.8,
                 'placa_blanca': 2.0
             };
-
-            const planKey = planKeyMap[plan];
-            let precioBase = null;
-            if (window.obtenerPrecioOficial) {
-                precioBase = obtenerPrecioOficial(planKey, categoria);
-            }
-            if (!precioBase) {
-                const fallback = tarifasOficialesFallback[planKey] || tarifasOficialesFallback.plan4_4d3n;
-                precioBase = fallback[categoria] || 798000;
-            }
 
             const multiplicador = multiplicadoresTransporte[transporte] || 1;
             const precioPersona = Math.round(precioBase * multiplicador);
@@ -5756,6 +5827,12 @@
             const totalEstimado = totalAdultos + totalNinos;
             
             // Actualizar DOM
+            const temporadaElement = document.getElementById('temporada-aplicada');
+            if (temporadaElement) {
+                temporadaElement.textContent = temporada === 'temporada_alta' ? 'Temporada Alta' : 'Temporada Baja';
+                temporadaElement.style.color = temporada === 'temporada_alta' ? '#dc3545' : 'var(--verde-cafe)';
+            }
+            
             document.getElementById('precio-persona').textContent = formatCurrency(precioPersona);
             document.getElementById('total-adultos').textContent = formatCurrency(totalAdultos);
             document.getElementById('total-ninos').textContent = formatCurrency(totalNinos);
@@ -5830,6 +5907,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             const adultosInput = document.getElementById('reserva-adultos');
             const ninosInput = document.getElementById('reserva-ninos');
+            const fechaInput = document.getElementById('reserva-fecha');
+            const planSelect = document.getElementById('reserva-plan');
+            const categoriaSelect = document.getElementById('reserva-categoria');
+            const transporteSelect = document.getElementById('reserva-transporte');
             
             if (adultosInput) {
                 adultosInput.addEventListener('change', calculatePrice);
@@ -5841,11 +5922,139 @@
                 ninosInput.addEventListener('input', calculatePrice);
             }
 
+            if (fechaInput) {
+                fechaInput.addEventListener('change', calculatePrice);
+                fechaInput.addEventListener('input', calculatePrice);
+            }
+
+            if (planSelect) {
+                planSelect.addEventListener('change', calculatePrice);
+            }
+
+            if (categoriaSelect) {
+                categoriaSelect.addEventListener('change', calculatePrice);
+            }
+
+            if (transporteSelect) {
+                transporteSelect.addEventListener('change', calculatePrice);
+            }
+
             setupWhatsAppCTAs();
             setupStepNavigation();
             setupSearchForm();
             setupReservationForm();
         });
+
+        // Función setupReservationForm - Manejo del formulario de reserva
+        function setupReservationForm() {
+            const reservaForm = document.getElementById('reserva-form');
+            if (reservaForm) {
+                reservaForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    const plan = document.getElementById('reserva-plan').value;
+                    const categoria = document.getElementById('reserva-categoria').value;
+                    const transporte = document.getElementById('reserva-transporte').value;
+                    const fecha = document.getElementById('reserva-fecha').value;
+                    const adultos = document.getElementById('reserva-adultos').value;
+                    const ninos = document.getElementById('reserva-ninos').value;
+                    const nombre = document.getElementById('reserva-nombre').value;
+                    const whatsapp = document.getElementById('reserva-whatsapp').value;
+                    const email = document.getElementById('reserva-email').value;
+                    const pago = document.getElementById('reserva-pago').value;
+                    const comentarios = document.getElementById('reserva-comentarios').value;
+                    const aceptarTerminos = document.getElementById('aceptar-terminos').checked;
+                    
+                    if (!aceptarTerminos) {
+                        alert('Por favor acepta los términos y condiciones para continuar.');
+                        return;
+                    }
+                    
+                    const planSelect = document.getElementById('reserva-plan');
+                    const planNombre = planSelect.options[planSelect.selectedIndex].text;
+                    
+                    const categoriaSelect = document.getElementById('reserva-categoria');
+                    const categoriaNombre = categoriaSelect.options[categoriaSelect.selectedIndex].text;
+                    
+                    const transporteSelect = document.getElementById('reserva-transporte');
+                    const transporteNombre = transporteSelect.options[transporteSelect.selectedIndex].text;
+                    
+                    const precioPersona = document.getElementById('precio-persona').textContent;
+                    const totalEstimado = document.getElementById('total-estimado').textContent;
+                    
+                    const mensaje = `Hola Quindío Travel 🌿, deseo confirmar una reserva:\n\n` +
+                        `👤 Nombre: ${nombre}\n` +
+                        `📱 WhatsApp: ${whatsapp}\n` +
+                        `📧 Email: ${email}\n\n` +
+                        `🎯 Plan: ${planNombre}\n` +
+                        `🏨 Categoría: ${categoriaNombre}\n` +
+                        `🚍 Transporte: ${transporteNombre}\n` +
+                        `📅 Fecha de viaje: ${fecha}\n` +
+                        `👥 Adultos: ${adultos}\n` +
+                        `👶 Niños: ${ninos}\n\n` +
+                        `💰 Precio por persona: ${precioPersona}\n` +
+                        `💰 Total estimado: ${totalEstimado}\n` +
+                        `💳 Método de pago preferido: ${pago}\n\n` +
+                        `${comentarios ? `📝 Comentarios: ${comentarios}\n` : ''}` +
+                        `Por favor confirmen disponibilidad y envíenme los detalles para el pago del 30% de confirmación.`;
+                    
+                    const whatsappUrl = `https://wa.me/573174426044?text=${encodeURIComponent(mensaje)}`;
+                    window.open(whatsappUrl, '_blank');
+                    
+                    alert('¡Gracias! Tu solicitud de reserva ha sido enviada a WhatsApp. Te contactaremos en menos de 2 horas hábiles.');
+                });
+            }
+        }
+
+        // Función setupStepNavigation - Manejo de navegación entre pasos del formulario
+        function setupStepNavigation() {
+            const nextButtons = document.querySelectorAll('[data-step-button="next"]');
+            const prevButtons = document.querySelectorAll('[data-step-button="prev"]');
+            
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetStep = parseInt(this.getAttribute('data-target-step'));
+                    if (validateStep(currentStepForm)) {
+                        nextStep(targetStep);
+                    }
+                });
+            });
+            
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetStep = parseInt(this.getAttribute('data-target-step'));
+                    prevStep(targetStep);
+                });
+            });
+        }
+
+        // Función setupSearchForm - Manejo del formulario de búsqueda
+        function setupSearchForm() {
+            const searchForm = document.getElementById('form-buscador');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    manejarBusqueda();
+                });
+            }
+        }
+
+        // Función setupWhatsAppCTAs - Manejo de botones de WhatsApp
+        function setupWhatsAppCTAs() {
+            const waButtons = document.querySelectorAll('.wa-cta-link');
+            waButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const message = this.getAttribute('data-wa-message');
+                    const template = this.getAttribute('data-wa-template');
+                    
+                    if (message) {
+                        e.preventDefault();
+                        const whatsappUrl = `https://wa.me/573174426044?text=${encodeURIComponent(message)}`;
+                        window.open(whatsappUrl, '_blank');
+                    }
+                });
+            });
+        }
 
         // Countdown Timer para Promoción
         function startCountdown() {
