@@ -17,15 +17,15 @@ const planesData = [
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA"],
     alojamientosAsociados: ["hotel-campestre-la-tata", "de-la-vega-hotel-campestre", "finca-hotel-dorada"],
-    precioSinTransporte: 425000,
-    precioConTransporte: 796000,
+    precioSinTransporte: 430000,
+    precioConTransporte: 800000,
     preciosOcupacion: {
-      doble: 796000,
-      triple: 668000,
-      cuadruple: 602000
+      doble: 800000,
+      triple: 672000,
+      cuadruple: 605000
     },
     preciosNinos: {
-      ninos_2_10: 596000
+      ninos_2_10: 599000
     }
   },
   {
