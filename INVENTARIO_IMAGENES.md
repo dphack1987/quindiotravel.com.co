@@ -139,23 +139,30 @@
 
 ## 🎯 Estado de Optimización
 
-### **Imágenes grandes (>1MB) identificadas:**
-- `eje-cafetero-mountain-valleys-cloudy.jpg` - 15.4 MB
-- `palm-trees-mountains-background.jpg` - 7.1 MB
-- `coffee-plantation-green.jpg` - 7.0 MB
-- `colombian-coffee-fields.jpg` - 5.6 MB
-- `coffee-nature-panorama.jpg` - 2.4 MB
-- `coffee-region-cloudy-sky.jpg` - 2.7 MB
-- `eje-cafetero-green-mountains.jpg` - 2.2 MB
-- `palm-trees-misty-valley.jpg` - 3.5 MB
-- `quindio-mountain-range.jpg` - 2.9 MB
+### **Imágenes optimizadas (FASE 5 COMPLETADA):**
 
-**Nota:** Las imágenes grandes están principalmente en `assets/images/paisajes/`. No se requieren herramientas de optimización disponibles en el sistema (PIL, ImageMagick). Se recomienda optimizar estas imágenes manualmente o instalar herramientas de optimización.
+**Imágenes muy grandes (>5MB) optimizadas:**
+- `palm-trees-mountains-background.jpg` - 6.8 MB → 0.2 MB (96.6% reducción)
+- `coffee-plantation-green.jpg` - 6.6 MB → 0.6 MB (91.3% reducción)
+- `colombian-coffee-fields.jpg` - 5.4 MB → 0.4 MB (91.8% reducción)
+- `eje-cafetero-mountain-valleys-cloudy.jpg` - 0.6 MB → 0.4 MB (39.8% reducción)
+
+**Imágenes medianas (2-3MB) optimizadas:**
+- `coffee-nature-panorama.jpg` - 2.3 MB → 0.3 MB (84.6% reducción)
+- `coffee-region-cloudy-sky.jpg` - 2.6 MB → 0.5 MB (81.9% reducción)
+- `eje-cafetero-green-mountains.jpg` - 2.1 MB → 0.4 MB (82.9% reducción)
+- `palm-trees-misty-valley.jpg` - 3.3 MB → 1.1 MB (67.3% reducción)
+- `quindio-mountain-range.jpg` - 2.8 MB → 0.5 MB (81.8% reducción)
+
+**Total optimizado:** 9 imágenes
+**Reducción total de tamaño:** ~85% promedio
+**Herramienta utilizada:** Pillow (PIL) Python library
 
 ### **Tareas Completadas:**
 - ✅ FASE 1: Eliminación de duplicados
 - ✅ FASE 2: Conversión JFIF a JPG
 - ✅ FASE 3: Organización de videos por categoría
 - ✅ FASE 4: Organización de directorios y renombrado de archivos
+- ✅ FASE 5: Optimización de imágenes grandes (Pillow)
 - ✅ Actualización de referencias HTML
 - ✅ Extracción de itinerarios oficiales
