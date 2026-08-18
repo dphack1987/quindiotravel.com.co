@@ -1271,7 +1271,7 @@ body {
 }
 
 .map-banner {
-    background: linear-gradient(rgba(46,90,54,0.85), rgba(46,90,54,0.85)), url('assets/valle_del_cocora.jpg');
+    background: linear-gradient(rgba(46,90,54,0.85), rgba(46,90,54,0.85)), url('assets/images/paisajes/valle-cocora-morning-mist.jpg');
     background-size: cover;
     background-position: center;
     color: var(--blanco);
