@@ -840,7 +840,7 @@ body {
 }
 
 .nav-menu ul li a:hover, .nav-menu ul li a.active {
-    color: var(--amarillo-suave);
+    color: var(--naranja-brillante);
 }
 
 .nav-menu ul li a:hover {
@@ -6491,7 +6491,7 @@ body {
 
 .nav-menu ul li a:hover,
 .nav-menu ul li a.active {
-    color: var(--amarillo-suave);
+    color: var(--naranja-brillante);
     background: rgba(255, 255, 255, 0.12);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
     transform: translateY(-1px);
