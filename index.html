@@ -3670,37 +3670,27 @@
             <div class="flexible-plans-grid">
                 <details class="flexible-step-card">
                     <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/paisajes/valle-cocora-hero-banner.jpg');">
-                        <span class="step-icon">🎯</span>
-                        <span class="step-title">Selecciona Atractivos</span>
+                        <span class="step-icon">🧳</span>
+                        <span class="step-title">Selecciona tu Plan</span>
                     </summary>
                     <div class="attractions-grid-clean">
-                        <label class="attraction-item"><input type="checkbox" value="parque-cafe" data-name="Parque del Café">🎢 Parque del Café</label>
-                        <label class="attraction-item"><input type="checkbox" value="panaca" data-name="PANACA">🐄 PANACA</label>
-                        <label class="attraction-item"><input type="checkbox" value="valle-cocora" data-name="Valle de Cocora">🌴 Valle de Cocora</label>
-                        <label class="attraction-item"><input type="checkbox" value="salento" data-name="Salento">🏘 Salento</label>
-                        <label class="attraction-item"><input type="checkbox" value="filandia" data-name="Filandia">🏛 Filandia</label>
-                        <label class="attraction-item"><input type="checkbox" value="termales" data-name="Termales">♨ Termales</label>
-                        <label class="attraction-item"><input type="checkbox" value="recuca" data-name="RECUCA">☕ RECUCA</label>
-                        <label class="attraction-item"><input type="checkbox" value="coffee-tour" data-name="Coffee Tour Armenia">☕ Coffee Tour Armenia</label>
-                        <label class="attraction-item"><input type="checkbox" value="mariposario" data-name="Mariposario del Quindío">🦋 Mariposario del Quindío</label>
-                        <label class="attraction-item"><input type="checkbox" value="cabalgatas" data-name="Cabalgatas en el Quindío">🐴 Cabalgatas en el Quindío</label>
-                        <label class="attraction-item"><input type="checkbox" value="parque-los-arrieros" data-name="Parque Los Arrieros">🎭 Parque Los Arrieros</label>
-                        <label class="attraction-item"><input type="checkbox" value="balsaje" data-name="Balsaje Río La Vieja">🚣 Balsaje Río La Vieja</label>
-                        <label class="attraction-item"><input type="checkbox" value="laberinto" data-name="Laberinto Mil Caminos">🌿 Laberinto Mil Caminos</label>
-                        <label class="attraction-item"><input type="checkbox" value="granja-mama-lulu" data-name="Granja Mamá Lulú">🐷 Granja Mamá Lulú</label>
-                        <label class="attraction-item"><input type="checkbox" value="jeep-panoramico" data-name="Jeep Panorámico">🚙 Jeep Panorámico</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-1" data-name="Plan 1 - Escapada Cafetera de Fin de Semana" required>🧳 Plan 1 - Escapada Cafetera de Fin de Semana</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-2" data-name="Plan 2 - Aventura Natural en el Eje Cafetero">🌿 Plan 2 - Aventura Natural en el Eje Cafetero</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-3" data-name="Plan 3 - Experiencia Completa del Eje Cafetero">☕ Plan 3 - Experiencia Completa del Eje Cafetero</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-4" data-name="Plan 4 - Relax y Aventura en Termales del Eje">♨ Plan 4 - Relax y Aventura en Termales del Eje</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-5" data-name="Plan 5 - Experiencia Premium del Eje Cafetero">⭐ Plan 5 - Experiencia Premium del Eje Cafetero</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-6" data-name="Plan 6 - La Experiencia Definitiva del Eje Cafetero">🏆 Plan 6 - La Experiencia Definitiva del Eje Cafetero</label>
                     </div>
                 </details>
                 
                 <details class="flexible-step-card">
                     <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/paisajes/salento-colombia-beautiful-town.jpg');">
                         <span class="step-icon">📅</span>
-                        <span class="step-title">Duración</span>
+                        <span class="step-title">Fecha del viaje</span>
                     </summary>
                     <div class="duration-options-clean">
-                        <label class="duration-item"><input type="radio" name="duration" value="2d1n">2 Días / 1 Noche</label>
-                        <label class="duration-item"><input type="radio" name="duration" value="3d2n">3 Días / 2 Noches</label>
-                        <label class="duration-item"><input type="radio" name="duration" value="4d3n">4 Días / 3 Noches</label>
+                        <label class="duration-item" for="custom-plan-fecha">Selecciona la fecha de inicio</label>
+                        <input type="date" id="custom-plan-fecha" name="travel-date" required style="width:100%; padding: 12px 14px; border-radius: 10px; border: 2px solid #e0e0e0; background: white; color: #333; font-size: 0.95rem;">
                     </div>
                 </details>
                 
@@ -6503,24 +6493,22 @@
 
     <script>
     function generateCustomPlan() {
-        const selectedAttractions = [];
-        document.querySelectorAll('.attraction-item input:checked, .attraction-checkbox input:checked').forEach(checkbox => {
-            selectedAttractions.push(checkbox.dataset.name);
-        });
+        const selectedPlan = document.querySelector('input[name="plan"]:checked');
+        const planName = selectedPlan?.dataset.name;
+        const travelDate = document.getElementById('custom-plan-fecha')?.value;
         
-        const duration = document.querySelector('input[name="duration"]:checked')?.value;
         const accommodation = document.querySelector('input[name="accommodation"]:checked')?.value;
         const personas = document.getElementById('custom-plan-personas')?.value;
         const transport = document.querySelector('input[name="transport"]:checked')?.value;
         
-        if (selectedAttractions.length === 0 || !duration || !accommodation || !personas || !transport) {
-            alert('Por favor selecciona al menos un atractivo, duración, categoría de alojamiento, tipo de transporte y número de personas.');
+        if (!planName || !travelDate || !accommodation || !personas || !transport) {
+            alert('Por favor selecciona un plan, fecha del viaje, categoría de alojamiento, tipo de transporte y número de personas.');
             return;
         }
         
         const message = `Hola Quindío Travel, quiero armar mi propio plan personalizado:\n\n` +
-            `🎯 Atractivos: ${selectedAttractions.join(', ')}\n` +
-            `📅 Duración: ${duration}\n` +
+            `🧳 Plan seleccionado: ${planName}\n` +
+            `📅 Fecha del viaje: ${travelDate}\n` +
             `🏨 Alojamiento: ${accommodation}\n` +
             `👥 Personas: ${personas}\n` +
             `🚍 Transporte: ${transport}\n\n` +

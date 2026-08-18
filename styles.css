@@ -8208,6 +8208,125 @@ body {
     }
 }
 
+/* Configurador compacto: todas las opciones siguen disponibles */
+.flexible-plans-section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.flexible-plans-header {
+    margin-bottom: 1.25rem;
+}
+
+.flexible-plans-header h2 {
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    margin-bottom: 0.35rem;
+}
+
+.flexible-plans-grid {
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.flexible-step-card {
+    padding: 1.25rem;
+    border-radius: 18px;
+}
+
+.step-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    font-size: 1.45rem;
+    margin-bottom: 0.6rem;
+}
+
+.step-title {
+    font-size: 1.12rem;
+    margin-bottom: 0.75rem;
+}
+
+.attractions-grid-clean {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+    max-height: 360px;
+    overflow-y: auto;
+    padding-right: 3px;
+}
+
+.duration-options-clean,
+.accommodation-options-clean {
+    gap: 0.5rem;
+}
+
+.attraction-item,
+.duration-item,
+.accommodation-item {
+    gap: 0.5rem;
+    padding: 0.65rem 0.7rem;
+    border-radius: 11px;
+    font-size: 0.88rem;
+    line-height: 1.25;
+}
+
+.people-input-clean input {
+    padding: 10px 12px;
+    border-radius: 11px;
+}
+
+.people-input-clean small,
+.flexible-step-card > small {
+    color: #455a53 !important;
+    line-height: 1.35;
+}
+
+.flexible-cta {
+    margin-top: 1rem;
+}
+
+.btn-generate-plan {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .flexible-plans-section {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .flexible-step-card {
+        padding: 1rem;
+    }
+
+    .attractions-grid-clean {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flexible-plans-header {
+        margin-bottom: 1rem;
+    }
+
+    .flexible-plans-grid {
+        gap: 0.75rem;
+    }
+
+    .attraction-item,
+    .duration-item,
+    .accommodation-item {
+        padding: 0.55rem 0.6rem;
+        font-size: 0.82rem;
+    }
+
+    .attractions-grid-clean {
+        max-height: 260px;
+    }
+}
+
 /* Controles flotantes y modales seguros en pantallas pequeñas */
 @media (max-width: 768px) {
     .whatsapp-float-btn {
