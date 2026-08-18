@@ -7956,3 +7956,254 @@ body {
         padding: 1.25rem;
     }
 }
+
+/* Responsive final del home: conserva todo el contenido y evita cortes */
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body {
+        padding-top: 72px !important;
+    }
+
+    .main-header {
+        min-height: 72px;
+    }
+
+    .nav-container {
+        width: 100%;
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .logo {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .logo img {
+        max-width: min(190px, 58vw);
+        height: auto;
+        max-height: 44px;
+        object-fit: contain;
+    }
+
+    .header-actions {
+        flex: 0 0 auto;
+        gap: 8px;
+    }
+
+    .language-selector-container {
+        margin-right: 0;
+    }
+
+    .language-selector {
+        min-height: 42px;
+        max-width: 116px;
+        padding: 6px 8px;
+        font-size: 0.78rem;
+    }
+
+    .hamburger-btn,
+    .btn-whatsapp-icon {
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+        margin-right: 0;
+    }
+
+    .urgency-banner-inner {
+        width: 100%;
+        padding: 2px 0;
+        gap: 10px;
+    }
+
+    .urgency-banner-message,
+    .urgency-banner-timer,
+    .urgency-banner-cta {
+        max-width: 100%;
+    }
+
+    .urgency-banner-message span,
+    .urgency-banner-timer span,
+    .urgency-banner-cta {
+        overflow-wrap: anywhere;
+    }
+
+    .urgency-banner-message {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .breadcrumbs {
+        padding: 10px 0;
+    }
+
+    .breadcrumbs-list {
+        justify-content: center;
+        text-align: center;
+        line-height: 1.45;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0 16px 20px !important;
+    }
+
+    .hero-content h1,
+    .hero-content p,
+    .promo-title,
+    .promo-subtitle,
+    .promo-destinations,
+    .promo-description,
+    .section-title,
+    .section-subtitle {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-trust-badges {
+        width: 100%;
+    }
+
+    .trust-badge {
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-highlight-card {
+        min-height: 48px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .hero-buttons .btn,
+    .promo-cta .btn,
+    .flexible-cta button,
+    .btn-hotel-card {
+        width: 100%;
+        max-width: 100%;
+        min-height: 48px;
+    }
+
+    .plans-grid,
+    .plans-grid-enhanced,
+    .hoteles-grid,
+    .experiencias-grid,
+    .features-grid,
+    .testimonials-grid,
+    .blog-grid,
+    .corp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-card,
+    .hotel-card,
+    .experiencia-card,
+    .feature-item,
+    .testimonial-card,
+    .blog-card,
+    .corp-feature {
+        width: 100%;
+    }
+
+    .promo-details {
+        padding: 24px 18px;
+    }
+
+    .promo-timer-countdown {
+        align-items: flex-start;
+    }
+
+    .countdown-timer {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .promo-includes ul,
+    .accommodation-options,
+    .especiales-includes ul,
+    .price-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .promo-gallery-item {
+        aspect-ratio: 4 / 3;
+    }
+
+    .section-white,
+    .section-gray,
+    .plans-section,
+    .why-us,
+    .map-section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .logo img {
+        max-width: 48vw;
+        max-height: 38px;
+    }
+
+    .language-selector {
+        max-width: 96px;
+        font-size: 0.72rem;
+    }
+
+    .hamburger-btn,
+    .btn-whatsapp-icon {
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .urgency-banner {
+        padding: 10px 12px !important;
+    }
+
+    .urgency-banner-message,
+    .urgency-banner-timer,
+    .urgency-banner-cta {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .promo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-img-wrapper {
+        min-height: 240px;
+    }
+
+    .promo-details {
+        padding: 20px 14px;
+    }
+
+    .promo-includes li {
+        padding: 10px 11px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.55rem !important;
+    }
+
+    .hero-content p {
+        font-size: 0.98rem;
+    }
+}
