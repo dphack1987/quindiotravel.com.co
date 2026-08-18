@@ -8207,3 +8207,55 @@ body {
         font-size: 0.98rem;
     }
 }
+
+/* Controles flotantes y modales seguros en pantallas pequeñas */
+@media (max-width: 768px) {
+    .whatsapp-float-btn {
+        right: 14px;
+        bottom: calc(14px + env(safe-area-inset-bottom));
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+        z-index: 1002;
+    }
+
+    .don-chucho-chat-container {
+        left: 14px;
+        bottom: calc(14px + env(safe-area-inset-bottom));
+        z-index: 1000;
+    }
+
+    .don-chucho-toggle {
+        width: 52px;
+        height: 52px;
+        font-size: 25px;
+    }
+
+    .don-chucho-toggle img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .don-chucho-body {
+        width: min(350px, calc(100vw - 28px));
+        max-width: calc(100vw - 28px);
+        max-height: calc(100dvh - 112px);
+    }
+
+    .don-chucho-messages {
+        height: min(350px, 42dvh);
+    }
+
+    .lead-capture-popup {
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .popup-content {
+        width: min(100%, 520px);
+        max-height: calc(100dvh - 20px);
+        margin: 0 auto;
+        padding: 22px 18px;
+        overflow-y: auto;
+    }
+}
