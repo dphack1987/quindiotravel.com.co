@@ -5789,13 +5789,15 @@
                 alert(data.message || 'Tu solicitud ha sido enviada. Nuestro equipo te contactará pronto.');
 
                 const followUpMessage = `Hola Quindío Travel, ya envié mi solicitud de reserva inteligente. Mi ID de reserva es ${data.reservationId}. Por favor contáctenme cuando confirmen la disponibilidad.`;
-                openWhatsApp(followUpMessage);
+                const whatsappUrl = `https://wa.me/573174426044?text=${encodeURIComponent(followUpMessage)}`;
+                window.open(whatsappUrl, '_blank');
             } catch (error) {
                 console.error('Reservation submit error:', error);
                 alert('No se pudo enviar la reserva. Por favor intenta nuevamente o contáctanos por WhatsApp.');
 
                 const fallbackMessage = `Hola Quindío Travel, necesito reservar un plan turístico y tuve un problema técnico en el sitio. Por favor contáctenme.`;
-                openWhatsApp(fallbackMessage);
+                const whatsappUrl = `https://wa.me/573174426044?text=${encodeURIComponent(fallbackMessage)}`;
+                window.open(whatsappUrl, '_blank');
             } finally {
                 if (submitButton) {
                     submitButton.disabled = false;
