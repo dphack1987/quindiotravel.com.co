@@ -6460,9 +6460,9 @@ body {
 }
 
 .main-header {
-    background: linear-gradient(135deg, #2E5A36 0%, #4E8755 100%);
+    background: #FFFFFF;
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: block;
 }
@@ -7141,7 +7141,7 @@ body {
 
 @media (max-width: 768px) {
     .main-header {
-        background: linear-gradient(135deg, #2E5A36 0%, #4E8755 100%);
+        background: #FFFFFF;
     }
 
     .hero-content {
