@@ -7839,3 +7839,77 @@ body {
         margin: 0 6px;
     }
 }
+
+/* Home layout safeguards */
+.hero {
+    max-height: none !important;
+}
+
+.hero-content,
+.flexible-plans-section .container,
+.promo-content,
+.promo-details {
+    min-width: 0;
+}
+
+.flexible-step-card,
+.promo-gallery-item,
+.hotel-card,
+.experiencia-card {
+    min-width: 0;
+}
+
+@media (max-width: 992px) {
+    .flexible-plans-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .promo-content {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto !important;
+        padding: 32px 0 48px !important;
+    }
+
+    .hero-highlights {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .flexible-plans-section {
+        padding: 48px 0;
+        margin: 0;
+    }
+
+    .flexible-plans-grid,
+    .promo-content {
+        grid-template-columns: 1fr;
+    }
+
+    .flexible-step-card {
+        padding: 1.5rem;
+    }
+
+    .promo-img-wrapper {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 24px 0 36px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 1.65rem !important;
+    }
+
+    .flexible-step-card {
+        padding: 1.25rem;
+    }
+}
