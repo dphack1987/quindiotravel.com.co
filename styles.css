@@ -4160,8 +4160,9 @@ body {
     }
 
     .nav-menu {
-        position: fixed;
-        top: 72px;
+        display: none;
+        position: absolute;
+        top: 100%;
         left: 0;
         width: 100%;
         background: var(--blanco);
@@ -4170,7 +4171,6 @@ body {
         overflow: hidden;
         transition: max-height 0.4s ease, padding 0.25s ease;
         z-index: 1001;
-        display: block;
     }
     .nav-menu.nav-menu-open {
         display: block !important;
