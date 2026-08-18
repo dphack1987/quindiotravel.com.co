@@ -13,6 +13,8 @@
 |-----------|-----|--------|---------------|
 | `docs/informacion-de-precios/PORTAFOLIO PLANES NACIONALES 2026.docx` | Precios planes 1-6 | ✅ OFICIAL | Fuente de verdad definitiva |
 | `docs/PLANES_ESPECIALES_DICIEMBRE.md` | Planes especiales temporada alta | ✅ OFICIAL | Temporada alta diciembre |
+| `promo-agosto-2026.html` | Promoción del mes agosto | ✅ OFICIAL | Plan Vientos de Agosto 2026 |
+| `documentation_archive/PROMO_SEO_VISUAL_IMPROVEMENT_GUIDE.md` | Guía SEO promoción agosto | ✅ OFICIAL | Estrategia y mejoras |
 
 ---
 
@@ -85,8 +87,11 @@
 
 1. **Usar solo categoría ECONÓMICO** como precio base en website
 2. **Mostrar otras categorías** como opciones en cotizador
-3. **Temporada alta** solo disponible en documento de planes especiales diciembre
+3. **Temporada alta** disponible en:
+   - Documento de planes especiales diciembre (15 dic - 20 ene)
+   - Promoción Vientos de Agosto (1-31 agosto)
 4. **Transporte Placa Blanca** solo disponible por cotización especial
+5. **Solo planes 1-6** son autorizados para uso general en el website
 
 ---
 
@@ -97,3 +102,20 @@
 3. ✅ Verificar `assets/js/planes-data.js` contra tabla autorizada
 4. ✅ Eliminar referencias a tablas no autorizadas
 5. ✅ Actualizar documentación con fuentes de verdad claras
+
+---
+
+## 🎄 PROMOCIONES AUTORIZADAS
+
+### **Promoción Vientos de Agosto 2026:**
+- **Fuente:** `promo-agosto-2026.html` ✅ OFICIAL
+- **Documentación:** `documentation_archive/PROMO_SEO_VISUAL_IMPROVEMENT_GUIDE.md` ✅ OFICIAL
+- **Período:** 1-31 agosto 2026
+- **Cupos:** 30 cupos limitados
+- **Contenido:** Plan 4D/3N con precios especiales
+
+### **Planes Especiales Diciembre 2026:**
+- **Fuente:** `docs/PLANES_ESPECIALES_DICIEMBRE.md` ✅ OFICIAL
+- **Período:** 15 diciembre 2026 - 20 enero 2027
+- **Cupos:** 30 cupos limitados
+- **Contenido:** Plan 4D/3N temporada alta con Radio Taxi
