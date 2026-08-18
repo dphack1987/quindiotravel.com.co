@@ -8261,6 +8261,176 @@ body {
     }
 }
 
+/* Cotizador de precios autorizados compacto */
+.cotizador-section {
+    margin-top: 28px !important;
+}
+
+.cotizador-enhanced {
+    margin-bottom: 32px;
+    border-radius: 18px;
+}
+
+.cotizador-header-enhanced {
+    padding: 18px 22px;
+    gap: 16px;
+}
+
+.cotizador-header-enhanced h2 {
+    font-size: 1.45rem;
+    margin-bottom: 4px;
+}
+
+.cotizador-header-enhanced p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.cotizador-badge {
+    padding: 4px 10px;
+    margin-bottom: 6px;
+    font-size: 0.78rem;
+}
+
+.cotizador-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+}
+
+.cotizador-grid-enhanced {
+    gap: 12px;
+    padding: 18px;
+}
+
+.cotizador-card-enhanced {
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cotizador-field-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.cotizador-field-content label {
+    margin-bottom: 3px;
+    font-size: 0.78rem;
+}
+
+.cotizador-select-enhanced {
+    min-height: 40px;
+    padding: 7px 10px;
+    font-size: 0.82rem;
+}
+
+.destinos-checkbox-list {
+    gap: 5px;
+    max-height: 150px;
+    padding: 7px;
+}
+
+.destinos-checkbox {
+    gap: 7px;
+    padding: 5px 6px;
+    font-size: 0.8rem;
+    line-height: 1.25;
+}
+
+.destinos-checkbox input {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    min-width: 18px !important;
+    min-height: 18px !important;
+    margin: 0;
+}
+
+.destinos-hint {
+    margin-top: 5px;
+    font-size: 0.72rem;
+}
+
+.cotizador-results-enhanced {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 16px 18px;
+}
+
+.result-card-enhanced,
+.result-card-enhanced.total-enhanced {
+    min-width: 0;
+    margin-bottom: 0;
+    gap: 9px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.result-icon {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    font-size: 0.9rem;
+}
+
+.result-label {
+    font-size: 0.72rem;
+}
+
+.result-value,
+.result-card-enhanced.total-enhanced .result-value {
+    font-size: 1.05rem;
+    overflow-wrap: anywhere;
+}
+
+.btn-whatsapp-enhanced {
+    grid-column: 1 / -1;
+    min-height: 44px;
+    padding: 9px 14px;
+    font-size: 0.82rem;
+}
+
+@media (max-width: 768px) {
+    .cotizador-header-enhanced {
+        padding: 16px;
+    }
+
+    .cotizador-grid-enhanced {
+        padding: 14px;
+        gap: 9px;
+    }
+
+    .cotizador-results-enhanced {
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cotizador-header-enhanced h2 {
+        font-size: 1.25rem;
+    }
+
+    .cotizador-header-enhanced p {
+        font-size: 0.8rem;
+    }
+
+    .cotizador-grid-enhanced {
+        padding: 10px;
+    }
+
+    .cotizador-results-enhanced {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-whatsapp-enhanced {
+        grid-column: auto;
+    }
+}
+
 /* Configurador compacto: todas las opciones siguen disponibles */
 .flexible-plans-section {
     padding-top: 44px;
