@@ -4190,6 +4190,12 @@ body {
         display: block;
         padding: 14px 0;
         width: 100%;
+        color: var(--verde-cafe);
+        font-weight: 600;
+        transition: color 0.25s ease;
+    }
+    .nav-menu ul li a:hover, .nav-menu ul li a.active {
+        color: var(--naranja-brillante);
     }
     .nav-menu ul li:last-child {
         border-bottom: none;
