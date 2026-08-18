@@ -1249,6 +1249,75 @@
         position: relative;
         z-index: 1;
     }
+
+    .flexible-step-card {
+        padding: 0.75rem 1rem;
+    }
+
+    .flexible-step-card[open] {
+        padding-bottom: 1rem;
+    }
+
+    .flexible-step-summary {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        min-height: 56px;
+        cursor: pointer;
+        list-style: none;
+        position: relative;
+        z-index: 1;
+    }
+
+    .flexible-step-summary::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: var(--card-bg-image, none);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.08;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .flexible-step-summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .flexible-step-summary::after {
+        content: '+';
+        margin-left: auto;
+        color: #2e5a36;
+        font-size: 1.45rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .flexible-step-card[open] .flexible-step-summary::after {
+        content: '−';
+    }
+
+    .flexible-step-summary .step-icon {
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+        margin-bottom: 0;
+        font-size: 1.35rem;
+        border-radius: 12px;
+    }
+
+    .flexible-step-summary .step-title {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+
+    .flexible-step-summary:focus-visible {
+        outline: 3px solid rgba(46, 90, 54, 0.35);
+        outline-offset: 4px;
+        border-radius: 10px;
+    }
     
     .flexible-step-card:hover {
         transform: translateY(-8px);
@@ -1279,7 +1348,8 @@
     .duration-options-clean,
     .accommodation-options-clean {
         display: grid;
-        gap: 0.85rem;
+        gap: 0.55rem;
+        margin-top: 0.75rem;
     }
     
     .attraction-item,
@@ -1287,9 +1357,9 @@
     .accommodation-item {
         display: grid;
         grid-template-columns: auto 1fr;
-        gap: 1rem;
+        gap: 0.65rem;
         align-items: center;
-        padding: 1rem 1.1rem;
+        padding: 0.65rem 0.75rem;
         background: #f8fbf8;
         border: 1px solid rgba(46, 90, 54, 0.08);
         border-radius: 16px;
@@ -1319,6 +1389,11 @@
         background: white;
         color: #1f3d2d;
         font-size: 1rem;
+    }
+
+    .flexible-step-card[open] .people-input-clean,
+    .flexible-step-card[open] > small {
+        margin-top: 0.75rem;
     }
     
     .people-input-clean small {
@@ -3593,9 +3668,11 @@
             </div>
             
             <div class="flexible-plans-grid">
-                <div class="flexible-step-card" style="--card-bg-image: url('assets/images/paisajes/valle-cocora-hero-banner.jpg');">
-                    <div class="step-icon">🎯</div>
-                    <h3 class="step-title">Selecciona Atractivos</h3>
+                <details class="flexible-step-card">
+                    <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/paisajes/valle-cocora-hero-banner.jpg');">
+                        <span class="step-icon">🎯</span>
+                        <span class="step-title">Selecciona Atractivos</span>
+                    </summary>
                     <div class="attractions-grid-clean">
                         <label class="attraction-item"><input type="checkbox" value="parque-cafe" data-name="Parque del Café">🎢 Parque del Café</label>
                         <label class="attraction-item"><input type="checkbox" value="panaca" data-name="PANACA">🐄 PANACA</label>
@@ -3613,45 +3690,53 @@
                         <label class="attraction-item"><input type="checkbox" value="granja-mama-lulu" data-name="Granja Mamá Lulú">🐷 Granja Mamá Lulú</label>
                         <label class="attraction-item"><input type="checkbox" value="jeep-panoramico" data-name="Jeep Panorámico">🚙 Jeep Panorámico</label>
                     </div>
-                </div>
+                </details>
                 
-                <div class="flexible-step-card" style="--card-bg-image: url('assets/images/paisajes/salento-colombia-beautiful-town.jpg');">
-                    <div class="step-icon">📅</div>
-                    <h3 class="step-title">Duración</h3>
+                <details class="flexible-step-card">
+                    <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/paisajes/salento-colombia-beautiful-town.jpg');">
+                        <span class="step-icon">📅</span>
+                        <span class="step-title">Duración</span>
+                    </summary>
                     <div class="duration-options-clean">
                         <label class="duration-item"><input type="radio" name="duration" value="2d1n">2 Días / 1 Noche</label>
                         <label class="duration-item"><input type="radio" name="duration" value="3d2n">3 Días / 2 Noches</label>
                         <label class="duration-item"><input type="radio" name="duration" value="4d3n">4 Días / 3 Noches</label>
                     </div>
-                </div>
+                </details>
                 
-                <div class="flexible-step-card" style="--card-bg-image: url('assets/images/alojamientos/finca-hotel-los-girasoles.jpg');">
-                    <div class="step-icon">🏨</div>
-                    <h3 class="step-title">Alojamiento</h3>
+                <details class="flexible-step-card">
+                    <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/alojamientos/finca-hotel-los-girasoles.jpg');">
+                        <span class="step-icon">🏨</span>
+                        <span class="step-title">Alojamiento</span>
+                    </summary>
                     <div class="accommodation-options-clean">
                         <label class="accommodation-item"><input type="radio" name="accommodation" value="economico">💰 Económico</label>
                         <label class="accommodation-item"><input type="radio" name="accommodation" value="intermedio">⭐⭐⭐ Intermedio</label>
                         <label class="accommodation-item"><input type="radio" name="accommodation" value="vip">⭐⭐⭐⭐⭐ VIP</label>
                     </div>
-                </div>
+                </details>
                 
-                <div class="flexible-step-card" style="--card-bg-image: url('assets/images/paisajes/salento-colombia-beautiful-town.jpg');">
-                    <div class="step-icon">👥</div>
-                    <h3 class="step-title">Número de Personas</h3>
+                <details class="flexible-step-card">
+                    <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/paisajes/salento-colombia-beautiful-town.jpg');">
+                        <span class="step-icon">👥</span>
+                        <span class="step-title">Número de Personas</span>
+                    </summary>
                     <div class="people-input-clean">
                         <input type="number" id="custom-plan-personas" min="1" max="20" value="2" style="width:100%; padding: 12px 14px; border-radius: 10px; border: 2px solid #e0e0e0; background: white; color: #333; font-size: 0.95rem;" />
                         <small style="display:block; margin-top:8px; color:#f0f0f0; font-size:0.85rem;">Indica cuántas personas viajan</small>
                     </div>
-                </div>
-                <div class="flexible-step-card" style="--card-bg-image: url('assets/images/paisajes/eje-cafetero-green-mountains.jpg');">
-                    <div class="step-icon">🚐</div>
-                    <h3 class="step-title">Transporte</h3>
+                </details>
+                <details class="flexible-step-card">
+                    <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/paisajes/eje-cafetero-green-mountains.jpg');">
+                        <span class="step-icon">🚐</span>
+                        <span class="step-title">Transporte</span>
+                    </summary>
                     <div class="accommodation-options-clean">
                         <label class="accommodation-item"><input type="radio" name="transport" value="Sin transporte" checked>❌ Sin transporte</label>
                         <label class="accommodation-item"><input type="radio" name="transport" value="Con transporte">🚍 Con transporte</label>
                     </div>
                     <small style="display:block; margin-top:8px; color:#f0f0f0; font-size:0.85rem;">Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia</small>
-                </div>
+                </details>
             </div>
             
             <div class="flexible-cta">
