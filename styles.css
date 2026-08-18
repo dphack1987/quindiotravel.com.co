@@ -7840,6 +7840,41 @@ body {
     }
 }
 
+/* Contraste final del menú sobre superficies claras */
+.main-header .nav-menu ul li a {
+    color: var(--verde-cafe) !important;
+    font-weight: 700;
+}
+
+.main-header .nav-menu ul li a:hover,
+.main-header .nav-menu ul li a:focus-visible,
+.main-header .nav-menu ul li a.active {
+    color: var(--naranja-brillante) !important;
+    background: rgba(46, 90, 54, 0.08);
+}
+
+.main-header .hamburger-btn {
+    background-color: var(--verde-cafe);
+    color: var(--blanco);
+}
+
+.main-header .hamburger-btn:hover,
+.main-header .hamburger-btn:focus-visible {
+    background-color: var(--verde-claro);
+}
+
+@media (max-width: 768px) {
+    .main-header .nav-menu {
+        background: var(--blanco);
+    }
+
+    .main-header .nav-menu ul li a {
+        display: block;
+        width: 100%;
+        padding: 14px 0;
+    }
+}
+
 /* Home layout safeguards */
 .hero {
     max-height: none !important;
