@@ -50,7 +50,7 @@
     overflow: visible;
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 14px 26px rgba(126, 23, 18, 0.18) !important;
+    box-shadow: 0 14px 26px rgba(126, 23, 18, 0.18);
 }
 
 .urgency-banner-inner {
@@ -365,8 +365,8 @@
 }
 
 .plans-note {
-    background: linear-gradient(135deg, #f8fbf8 0%, #edf4ed 100%) !important;
-    border-radius: 18px !important;
+    background: linear-gradient(135deg, #f8fbf8 0%, #edf4ed 100%);
+    border-radius: 18px;
     border: var(--border-soft);
     box-shadow: 0 16px 32px rgba(23, 35, 27, 0.06);
 }
@@ -870,7 +870,7 @@ body {
     text-decoration: none;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     box-shadow: 0 10px 20px rgba(37, 211, 102, 0.18);
-    z-index: 10002 !important;
+    z-index: 10002;
     position: relative;
 }
 
@@ -941,7 +941,7 @@ body {
 
 /* Evita duplicar múltiples botones flotantes en el home */
 .whatsapp-float-btn:not(:first-of-type) {
-    display: none !important;
+    display: none;
 }
 
 @keyframes pulse {
@@ -1420,7 +1420,7 @@ body {
    MENÚ HAMBURGUESA (RESPONSIVE)
    ============================================================ */
 .hamburger-btn {
-    display: flex !important;
+    display: flex;
     background-color: var(--verde-cafe);
     color: var(--blanco);
     border: none;
@@ -1625,7 +1625,7 @@ body {
 .plan-card-dynamic {
     display: flex;
     flex-direction: column;
-    padding: 0 !important;
+    padding: 0;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -1708,7 +1708,7 @@ body {
 }
 .plan-footer .btn {
     text-align: center;
-    display: inline-flex !important;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
@@ -3186,8 +3186,8 @@ body {
 }
 
 .promo-nav {
-    color: #d32f2f !important;
-    font-weight: 700 !important;
+    color: #d32f2f;
+    font-weight: 700;
     animation: pulse 2s infinite;
 }
 
@@ -4176,7 +4176,7 @@ body {
     }
 
     .hamburger-btn {
-        display: flex !important;
+        display: flex;
     }
 
     .nav-menu {
@@ -7681,20 +7681,20 @@ body {
    HERO VISUAL FIX
    ============================================================ */
 .hero {
-    position: relative !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    min-height: 60vh !important;
-    max-height: 720px !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    max-height: 720px;
     width: 100%;
-    overflow: hidden !important;
-    text-align: center !important;
-    color: var(--blanco) !important;
-    padding: 2rem 0 !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+    overflow: hidden;
+    text-align: center;
+    color: var(--blanco);
+    padding: 2rem 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero::before {
@@ -7727,52 +7727,52 @@ body {
 
 .hero > img.content-image,
 .hero > img:not(.hero-bg-img) {
-    display: none !important;
+    display: none;
 }
 
 .hero-content {
-    position: relative !important;
-    z-index: 3 !important;
-    max-width: 980px !important;
-    margin: 0 auto !important;
-    padding: 0 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+    position: relative;
+    z-index: 3;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-buttons {
-    display: flex !important;
-    justify-content: center !important;
-    gap: 14px !important;
-    flex-wrap: wrap !important;
-    margin-top: 1.2rem !important;
-    z-index: 3 !important;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+    z-index: 3;
 }
 
 .hero-buttons .btn {
-    min-height: 50px !important;
+    min-height: 50px;
 }
 
 @media (max-width: 992px) {
     .hero {
-        min-height: 55vh !important;
-        max-height: 650px !important;
+        min-height: 55vh;
+        max-height: 650px;
     }
 }
 
 @media (max-width: 768px) {
     .hero {
-        min-height: 66vh !important;
-        padding: 40px 0 60px !important;
+        min-height: 66vh;
+        padding: 40px 0 60px;
     }
     .hero-content {
-        padding: 0 18px !important;
+        padding: 0 18px;
     }
     .hero-buttons {
-        flex-direction: column !important;
-        align-items: center !important;
+        flex-direction: column;
+        align-items: center;
     }
     .hero-buttons .btn,
     .btn-whatsapp-hero,
@@ -7780,23 +7780,23 @@ body {
     .btn-whatsapp,
     .btn-green,
     .btn-outline {
-        width: 100% !important;
-        max-width: 420px !important;
+        width: 100%;
+        max-width: 420px;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        min-height: 60vh !important;
+        min-height: 60vh;
     }
     .hero-content h1 {
-        font-size: 1.7rem !important;
+        font-size: 1.7rem;
     }
     .hero-content p {
-        font-size: 1rem !important;
+        font-size: 1rem;
     }
     .hero-buttons {
-        gap: 12px !important;
+        gap: 12px;
     }
 }
 
