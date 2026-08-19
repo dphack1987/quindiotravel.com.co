@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-08-19T17:36:02.720523",
+  "optimized_count": 11,
+  "errors_count": 0,
+  "optimized_files": [
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (58).jpg",
+      "original_mb": 20.75,
+      "new_mb": 0.47,
+      "reduction_percent": 97.7
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (59).jpg",
+      "original_mb": 27.96,
+      "new_mb": 0.58,
+      "reduction_percent": 97.9
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (60).jpg",
+      "original_mb": 16.48,
+      "new_mb": 0.31,
+      "reduction_percent": 98.1
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (61).jpg",
+      "original_mb": 6.52,
+      "new_mb": 0.14,
+      "reduction_percent": 97.8
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (63).JPG",
+      "original_mb": 8.19,
+      "new_mb": 0.12,
+      "reduction_percent": 98.5
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (64).jpg",
+      "original_mb": 10.09,
+      "new_mb": 0.14,
+      "reduction_percent": 98.6
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (65).jpg",
+      "original_mb": 15.31,
+      "new_mb": 0.21,
+      "reduction_percent": 98.6
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (66).jpg",
+      "original_mb": 10.44,
+      "new_mb": 0.36,
+      "reduction_percent": 96.6
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (4).png",
+      "original_mb": 30.29,
+      "new_mb": 0.38,
+      "reduction_percent": 98.7
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (5).png",
+      "original_mb": 51.07,
+      "new_mb": 0.35,
+      "reduction_percent": 99.3
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (6).png",
+      "original_mb": 47.99,
+      "new_mb": 0.38,
+      "reduction_percent": 99.2
+    }
+  ],
+  "errors": []
+}

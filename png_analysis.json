@@ -1,0 +1,97 @@
+{
+  "total": 20,
+  "with_transparency": [],
+  "solid_color": [
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\avatar_chucho\\chucho2.png",
+      "size_mb": 0.6209688186645508
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (1).png",
+      "size_mb": 4.961578369140625
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (2).png",
+      "size_mb": 4.667640686035156
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (3).png",
+      "size_mb": 4.456184387207031
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (4).png",
+      "size_mb": 0.37963104248046875
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (5).png",
+      "size_mb": 0.35167980194091797
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros\\1 (6).png",
+      "size_mb": 0.3788642883300781
+    }
+  ],
+  "large_files": [],
+  "logos_icons": [
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\logo_quindio_travel.png",
+      "size_mb": 0.06551742553710938,
+      "has_alpha": true
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\avatar_chucho\\Don Chucho.png",
+      "size_mb": 0.35838985443115234,
+      "has_alpha": true
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\avatar_chucho\\don-chucho-bust.png",
+      "size_mb": 0.19062137603759766,
+      "has_alpha": true
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\logos_aliados\\logo_panaca.png",
+      "size_mb": 0.055306434631347656,
+      "has_alpha": true
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\logos_aliados\\logo_parque_los_arrieros.png",
+      "size_mb": 0.22755050659179688,
+      "has_alpha": false
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\logos_aliados\\logo_recuca.png",
+      "size_mb": 0.025025367736816406,
+      "has_alpha": true
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\parque-del-cafe\\logo.png",
+      "size_mb": 0.017000198364257812,
+      "has_alpha": true
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\recuca\\Logo-Recuca-1024x455.png",
+      "size_mb": 0.025025367736816406,
+      "has_alpha": true
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\don-chucho-avatar.png",
+      "size_mb": 0.35838985443115234,
+      "has_alpha": true
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\logo_quindio_travel.png",
+      "size_mb": 0.06551742553710938,
+      "has_alpha": true
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\paisajes\\Quindío.png",
+      "size_mb": 1.7986230850219727,
+      "has_alpha": true
+    },
+    {
+      "file": "c:\\Users\\user\\Documents\\www.quindiotravel.com\\assets\\images\\promocion-mes\\promo-hero.png",
+      "size_mb": 2.0431480407714844,
+      "has_alpha": true
+    }
+  ]
+}

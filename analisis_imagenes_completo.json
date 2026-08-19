@@ -1,0 +1,79 @@
+{
+  "total": 375,
+  "by_extension": {
+    ".png": 13,
+    ".jpg": 324,
+    ".webp": 12,
+    ".avif": 6,
+    ".mp4": 20
+  },
+  "by_folder": {
+    ".": 1,
+    "avatar_chucho": 3,
+    "capturas": 13,
+    "Finca-Hotel-La-Dorada": 1,
+    "finca-hotel-la-esmeralda": 3,
+    "finca-hotel-los-girasoles": 7,
+    "hotel-campestre-cafe-cafe": 3,
+    "hotel-campestre-la-tata": 5,
+    "hotel-campestre-las-camelias": 4,
+    "hotel-de-la-vega": 5,
+    "logos_aliados": 4,
+    "mariposario": 2,
+    "panaca": 2,
+    "parque-del-cafe": 7,
+    "quinti-patas-arriba": 3,
+    "recuca": 5,
+    "termales-de-santa-rosa": 5,
+    "assets\\images": 2,
+    "assets\\qr-codes": 1,
+    "assets\\images\\alojamientos": 8,
+    "assets\\images\\atractivos": 6,
+    "assets\\images\\decoraciones": 5,
+    "assets\\images\\experiencias": 8,
+    "assets\\images\\gastronomia": 4,
+    "assets\\images\\paisajes": 25,
+    "assets\\images\\planes": 6,
+    "assets\\images\\promocion-mes": 4,
+    "assets\\images\\alojamientos\\finca-hotel-la-dorada": 1,
+    "assets\\images\\alojamientos\\finca-hotel-la-esmeralda": 6,
+    "assets\\images\\alojamientos\\finca-hotel-los-girasoles": 7,
+    "assets\\images\\alojamientos\\hotel-campestre-cafe-cafe": 3,
+    "assets\\images\\alojamientos\\hotel-campestre-la-tata": 9,
+    "assets\\images\\alojamientos\\hotel-de-la-vega": 3,
+    "assets\\images\\atractivos\\filandia": 6,
+    "assets\\images\\fotos-para-para-quindio-travel\\Fotos": 27,
+    "assets\\images\\fotos-para-para-quindio-travel\\Fotos\\CASCADAS RIO VERDE": 22,
+    "assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Fotos RECUCA": 7,
+    "assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque del Café": 15,
+    "assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Parque los arrieros": 69,
+    "assets\\images\\fotos-para-para-quindio-travel\\Fotos\\Quintas del cafe": 21,
+    "assets\\images\\fotos-para-para-quindio-travel\\Fotos\\CASCADAS RIO VERDE\\otras": 17,
+    "assets\\images\\videos\\cascadas-rio-verde": 16,
+    "assets\\images\\videos\\promocionales": 3,
+    "assets\\images\\videos\\recuca": 1
+  },
+  "large_files": [
+    {
+      "path": "assets\\images\\videos\\cascadas-rio-verde\\WhatsApp Video 2024-07-10 at 9.04.41 AM.mp4",
+      "size_mb": 7.72
+    },
+    {
+      "path": "assets\\images\\videos\\cascadas-rio-verde\\WhatsApp Video 2024-07-10 at 9.04.56 AM.mp4",
+      "size_mb": 5.58
+    },
+    {
+      "path": "assets\\images\\videos\\cascadas-rio-verde\\WhatsApp Video 2024-07-10 at 9.05.33 AM.mp4",
+      "size_mb": 8.74
+    },
+    {
+      "path": "assets\\images\\videos\\cascadas-rio-verde\\WhatsApp Video 2024-07-10 at 9.06.02 AM.mp4",
+      "size_mb": 13.31
+    },
+    {
+      "path": "assets\\images\\videos\\promocionales\\WhatsApp Video 2024-06-04 at 4.13.27 PM.mp4",
+      "size_mb": 8.09
+    }
+  ],
+  "total_large_files": 5
+}
