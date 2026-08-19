@@ -5,10 +5,10 @@
 
 .planes-especiales-diciembre {
   background: linear-gradient(135deg, #f5f5f5 0%, #e8f5e9 100%);
-  padding: 60px 0;
-  margin: 60px 0;
-  border-top: 4px solid #2E5E36;
-  border-bottom: 4px solid #2E5E36;
+  padding: 30px 0;
+  margin: 30px 0;
+  border-top: 3px solid #2E5E36;
+  border-bottom: 3px solid #2E5E36;
 }
 
 .planes-especiales-diciembre .container {
@@ -20,20 +20,20 @@
 /* Header de Planes */
 .planes-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .planes-header h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #1b5e20;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: 700;
 }
 
 .planes-header p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .badge-cupos {
@@ -49,24 +49,24 @@
 /* Detalles del Plan */
 .plan-details {
   background: white;
-  border-left: 5px solid #2E5E36;
-  padding: 30px;
-  margin-bottom: 40px;
+  border-left: 4px solid #2E5E36;
+  padding: 20px;
+  margin-bottom: 25px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .plan-details h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #2E5E36;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* Sección Incluye */
 .incluye-section-diciembre h3 {
   color: #1b5e20;
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
@@ -75,19 +75,19 @@
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
 }
 
 .incluye-list li {
   background: rgba(46, 94, 54, 0.08);
-  padding: 12px 15px;
+  padding: 8px 12px;
   border-radius: 6px;
   color: #333;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .incluye-list i {
@@ -97,21 +97,21 @@
 
 /* Contenedor de Tarifas */
 .tarifas-container {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .tarifas-section-diciembre {
   background: white;
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .tarifas-section-diciembre h3 {
   color: #2E5E36;
-  font-size: 1.3rem;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -120,7 +120,7 @@
 .tarifas-table-diciembre {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .tarifas-table-diciembre thead {
@@ -129,14 +129,14 @@
 }
 
 .tarifas-table-diciembre th {
-  padding: 15px;
+  padding: 10px;
   text-align: left;
   font-weight: 600;
   border-bottom: 2px solid #1b5e20;
 }
 
 .tarifas-table-diciembre td {
-  padding: 15px;
+  padding: 10px;
   border-bottom: 1px solid #e0e0e0;
   color: #333;
 }
@@ -158,55 +158,55 @@
 /* Nota de Transporte */
 .nota-transporte {
   background: #fff3e0;
-  border-left: 4px solid #ff9800;
-  padding: 20px;
+  border-left: 3px solid #ff9800;
+  padding: 12px;
   border-radius: 6px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .nota-transporte p {
   color: #666;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   margin: 0;
 }
 
 /* Hoteles Incluidos */
 .hoteles-incluidos {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .hoteles-incluidos h3 {
   color: #1b5e20;
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .hoteles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
 }
 
 /* Tarjeta de Hotel */
 .hotel-card-diciembre {
   background: white;
-  border-radius: 10px;
-  padding: 25px;
+  border-radius: 8px;
+  padding: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-  border-top: 4px solid #2E5E36;
+  border-top: 3px solid #2E5E36;
 }
 
 .hotel-card-diciembre:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .hotel-card-diciembre h4 {
   color: #1b5e20;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 8px;
   font-weight: 700;
 }
 
@@ -214,27 +214,27 @@
   display: inline-block;
   background: #e8f5e9;
   color: #2E5E36;
-  padding: 6px 12px;
+  padding: 4px 10px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .ubicacion {
   color: #ff6f00;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .descripcion {
   color: #666;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 15px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
   font-style: italic;
 }
 
@@ -245,17 +245,17 @@
 
 .servicios-list li {
   color: #555;
-  font-size: 0.9rem;
-  padding: 8px 0;
+  font-size: 0.8rem;
+  padding: 4px 0;
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
 }
 
 .servicios-list i {
   color: #2E5E36;
-  font-size: 0.8rem;
-  margin-top: 4px;
+  font-size: 0.7rem;
+  margin-top: 3px;
   flex-shrink: 0;
 }
 
@@ -263,29 +263,29 @@
 .contacto-cta {
   background: linear-gradient(135deg, #1b5e20 0%, #2E5E36 100%);
   color: white;
-  padding: 50px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 8px;
   text-align: center;
 }
 
 .contacto-cta h3 {
   color: white;
-  font-size: 1.8rem;
-  margin-bottom: 25px;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
 }
 
 .btn-whatsapp-grande {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   background: #25d366;
   color: white;
-  padding: 18px 40px;
+  padding: 12px 30px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
   border: 2px solid #25d366;
   cursor: pointer;
@@ -298,7 +298,7 @@
 }
 
 .btn-whatsapp-grande i {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 /* Responsive */
