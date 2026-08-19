@@ -453,7 +453,7 @@
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
             <div class="logo" style="font-size: 1.5rem; font-weight: 700; color: #2E5A36; text-decoration: none;">
                 <a href="index.html" aria-label="Inicio Quindío Travel">
-                    <img src="assets/images/logo_quindio_travel.png" alt="Quindío Travel Logo - Operador Turístico Eje Cafetero RNT 18152" style="height: 50px; width: auto;">
+                    <img src="assets/images/logo_quindio_travel.png" alt="Quindío Travel Logo - Operador Turístico Eje Cafetero RNT 18152" style="height: 50px; width: auto;" loading="lazy">
                 </a>
             </div>
             <a href="index.html" style="text-decoration: none; color: #454545; font-weight: 600;">
@@ -584,37 +584,37 @@
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="assets/images/paisajes/valle-cocora-hero-banner.webp" alt="Valle de Cocora">
+                <img src="assets/images/paisajes/valle-cocora-hero-banner.webp" alt="Valle de Cocora - Palmas de cera en el Eje Cafetero colombiano" loading="lazy">
                 <div class="gallery-overlay">
                     <strong>Valle de Cocora</strong>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/images/paisajes/palma-de-cera-y-montanas-colombia.webp" alt="Palmas de Cera">
+                <img src="assets/images/paisajes/palma-de-cera-y-montanas-colombia.webp" alt="Palmas de Cera del Quindío - Símbolo natural de Colombia" loading="lazy">
                 <div class="gallery-overlay">
                     <strong>Palmas de Cera</strong>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/images/paisajes/filandia-colonial-architecture.webp" alt="Filandia">
+                <img src="assets/images/paisajes/filandia-colonial-architecture.webp" alt="Filandia - Arquitectura colonial del Eje Cafetero" loading="lazy">
                 <div class="gallery-overlay">
                     <strong>Filandia</strong>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/images/paisajes/coffee-plantation-green.webp" alt="Cultivo de Café">
+                <img src="assets/images/paisajes/coffee-plantation-green.webp" alt="Cultivo de café en las montañas del Eje Cafetero" loading="lazy">
                 <div class="gallery-overlay">
                     <strong>Cultivo de Café</strong>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/images/paisajes/eje-cafetero-green-mountains.webp" alt="Montañas del Eje Cafetero">
+                <img src="assets/images/paisajes/eje-cafetero-green-mountains.webp" alt="Montañas verdes del Eje Cafetero colombiano" loading="lazy">
                 <div class="gallery-overlay">
                     <strong>Montañas Verdes</strong>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/images/paisajes/coffee-plantation-sunset-colombia.webp" alt="Atardecer Cafetero">
+                <img src="assets/images/paisajes/coffee-plantation-sunset-colombia.webp" alt="Atardecer cafetero en el Quindío - Paisaje natural" loading="lazy">
                 <div class="gallery-overlay">
                     <strong>Atardecer Cafetero</strong>
                 </div>
@@ -696,6 +696,70 @@
                 });
             });
         });
+    </script>
+
+    <!-- Schema.org Structured Data para Promoción Vientos de Agosto 2026 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Offer",
+        "name": "Promoción Vientos de Agosto 2026",
+        "description": "Plan exclusivo 4 días/3 noches todo incluido en el Eje Cafetero. Valle de Cocora, Salento, Filandia, Parque del Café, PANACA, RECUCA. Solo 30 cupos disponibles.",
+        "price": "1464000",
+        "priceCurrency": "COP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://quindiotravel.com.co/promo-agosto-2026.html",
+        "seller": {
+            "@type": "TravelAgency",
+            "name": "Quindío Travel",
+            "telephone": "+57-317-4426044",
+            "url": "https://quindiotravel.com.co"
+        },
+        "offeredBy": {
+            "@type": "TravelAgency",
+            "name": "Quindío Travel",
+            "telephone": "+57-317-4426044",
+            "url": "https://quindiotravel.com.co"
+        },
+        "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Plan Vientos de Agosto 2026 - Eje Cafetero Completo",
+            "description": "Experiencia completa 4D/3N en el Eje Cafetero colombiano con alojamiento, alimentación, transporte y entradas a atractivos turísticos.",
+            "touristType": ["Leisure", "Cultural", "Adventure"],
+            "duration": "P4D",
+            "itinerary": [
+                {
+                    "@type": "TouristDestination",
+                    "name": "Valle de Cocora",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressRegion": "Quindío",
+                        "addressCountry": "Colombia"
+                    }
+                },
+                {
+                    "@type": "TouristDestination",
+                    "name": "Salento",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressRegion": "Quindío",
+                        "addressCountry": "Colombia"
+                    }
+                },
+                {
+                    "@type": "TouristDestination",
+                    "name": "Filandia",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressRegion": "Quindío",
+                        "addressCountry": "Colombia"
+                    }
+                }
+            ]
+        },
+        "validFrom": "2026-08-01",
+        "validThrough": "2026-08-31"
+    }
     </script>
     <!-- Language Detector -->
     <script src="assets/js/language-detector.js" defer></script>
