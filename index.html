@@ -1447,56 +1447,9 @@
         .flexible-plans-grid {
             grid-template-columns: 1fr;
         }
-    
-    /* Responsive Urgency Banner */
-    @media (max-width: 768px) {
-        .urgency-banner {
-            padding: 12px 15px !important;
-            min-height: 90px !important;
-            margin-top: 60px !important;
-        }
-        .urgency-banner-inner {
-            gap: 8px !important;
-        }
-        .urgency-banner-message {
-            flex-basis: 100% !important;
-            order: 1;
-        }
-        .urgency-banner-timer {
-            flex-basis: 100% !important;
-            order: 2;
-            width: 100%;
-            justify-content: center !important;
-        }
-        .urgency-banner-cta {
-            flex-basis: 100% !important;
-            order: 3;
-            width: 100%;
-            max-width: 280px !important;
-        }
     }
-    
-    @media (max-width: 480px) {
-        .urgency-banner {
-            padding: 12px 12px !important;
-            min-height: 100px !important;
-        }
-        .urgency-banner-message span {
-            font-size: 0.85rem !important;
-        }
-        .urgency-banner-timer {
-            background: rgba(255,255,255,0.15) !important;
-            padding: 4px 8px !important;
-        }
-        .urgency-banner-timer span:nth-child(2) {
-            font-size: 0.95rem !important;
-        }
-        .urgency-banner-cta {
-            font-size: 0.8rem !important;
-            padding: 6px 16px !important;
-        }
-    }
-}
+
+</style>
     
     <!-- Preconnect for Edge Computing -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
@@ -3727,8 +3680,8 @@
     </section>
 
     <!-- Banner de Urgencia y Countdown Timer -->
-    <div class="urgency-banner" id="urgency-banner" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 16px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: 50px; position: relative; z-index: 999; display: flex; align-items: center; justify-content: center; min-height: 70px;">
-        <div class="urgency-banner-inner" style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 10px;">
+    <div class="urgency-banner" id="urgency-banner" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 12px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: 50px; position: relative; z-index: 999;">
+        <div class="urgency-banner-inner" style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
             <div class="urgency-banner-message" style="display: flex; align-items: center; gap: 8px;">
                 <i class="fas fa-fire" style="color: #f39c12; font-size: 1.2em;"></i>
                 <span style="font-weight: 700; font-size: 0.95rem;">¡SOLO 30 CUPOS DISPONIBLES PARA ESTA SEMANA!</span>
@@ -4119,7 +4072,7 @@
                     <a href="hotel-de-la-vega.html" class="btn btn-hotel-card">Ver detalles</a>
                 </div>
                 <div class="hotel-card" data-category="estandar">
-                    <div class="hotel-img" style="background-image: url('assets/images/alojamientos/finca-hotel-la-dorada/1414317914.webp');"></div>
+                    <div class="hotel-img" style="background-image: url('assets/images/alojamientos/finca-hotel-la-dorada/1414317914.jpg');"></div>
                     <span class="hotel-categoria">Estándar</span>
                     <h3>Finca Hotel Dorada</h3>
                     <p class="hotel-ubicacion"><i class="fas fa-map-marker-alt"></i> Km. 5 Pueblo Tapao Vía a La Tebaida</p>
