@@ -17,8 +17,26 @@ const requiredEnv = [
 const missingEnv = requiredEnv.filter((key) => !process.env[key]);
 
 if (missingEnv.length > 0) {
-    console.error('❌ Missing required environment variables:', missingEnv.join(', '));
-    process.exit(1);
+    console.warn('⚠️ Missing environment variables:', missingEnv.join(', '));
+    console.warn('⚠️ Server will start in degraded mode. Please configure .env file for full functionality.');
+    
+    // Set default values for development
+    if (!process.env.MONGODB_URI) {
+        process.env.MONGODB_URI = 'mongodb://localhost:27017/don_chucho_db';
+        console.warn('⚠️ Using default MongoDB URI for development');
+    }
+    if (!process.env.DB_NAME) {
+        process.env.DB_NAME = 'don_chucho_db';
+        console.warn('⚠️ Using default database name for development');
+    }
+    if (!process.env.API_KEY) {
+        process.env.API_KEY = 'dev-key-' + Date.now();
+        console.warn('⚠️ Using generated API key for development');
+    }
+    if (!process.env.QUINDIO_WHATSAPP) {
+        process.env.QUINDIO_WHATSAPP = '573000000000';
+        console.warn('⚠️ Using default WhatsApp number for development');
+    }
 }
 
 const app = express();

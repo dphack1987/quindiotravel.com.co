@@ -118,16 +118,18 @@
                 urgencyMessage = 'RESERVA PRONTO';
             }
 
-            if (urgencyClass) {
+            if (urgencyClass && this.bannerElement) {
                 this.bannerElement.classList.add(urgencyClass);
             }
 
-            if (urgencyMessage && this.config.showMessage) {
+            if (urgencyMessage && this.config.showMessage && this.bannerElement) {
                 this.updateUrgencyMessage(urgencyMessage);
             }
         }
 
         updateUrgencyMessage(message) {
+            if (!this.bannerElement) return;
+            
             const messageElement = this.bannerElement.querySelector('.urgency-message');
             if (messageElement) {
                 messageElement.textContent = message;
@@ -145,11 +147,13 @@
             });
 
             // Click en CTA para tracking
-            const ctaButton = this.bannerElement.querySelector('a');
-            if (ctaButton) {
-                ctaButton.addEventListener('click', (e) => {
-                    this.trackConversion('urgency_banner_click');
-                });
+            if (this.bannerElement) {
+                const ctaButton = this.bannerElement.querySelector('a');
+                if (ctaButton) {
+                    ctaButton.addEventListener('click', (e) => {
+                        this.trackConversion('urgency_banner_click');
+                    });
+                }
             }
         }
 

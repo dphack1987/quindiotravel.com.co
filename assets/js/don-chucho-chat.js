@@ -6,21 +6,60 @@ class DonChuchoChat {
         this.chatOpen = false;
         this.sessionId = null;
         this.conversationHistory = [];
-        this.backendUrl = 'http://localhost:3000'; // Backend URL por defecto
-        this.apiKey = 'don-chucho-secret-key-2024'; // API key por defecto
+        
+        // Configuración dinámica basada en entorno
+        this.backendUrl = this.getBackendUrl();
+        this.apiKey = this.getApiKey();
         
         this.init();
+    }
+    
+    getBackendUrl() {
+        // Prioridad: variable de entorno > configuración dinámica > localhost
+        if (window.DON_CHUCHO_BACKEND_URL) {
+            return window.DON_CHUCHO_BACKEND_URL;
+        }
+        
+        // Detectar entorno automáticamente
+        const hostname = window.location.hostname;
+        if (hostname === 'localhost' || hostname === '127.0.0.1') {
+            return 'http://localhost:3000';
+        } else if (hostname.includes('quindiotravel.com.co')) {
+            return 'https://api.quindiotravel.com.co';
+        } else {
+            // Fallback a localhost para desarrollo
+            return 'http://localhost:3000';
+        }
+    }
+    
+    getApiKey() {
+        // No exponer API key en código cliente
+        // En producción, la autenticación debería manejarse del lado del servidor
+        // o usando un sistema de tokens temporales
+        if (window.DON_CHUCHO_API_KEY) {
+            return window.DON_CHUCHO_API_KEY;
+        }
+        
+        // Para desarrollo, usar una key genérica que el backend debería validar
+        // En producción, esto debería ser null o un token temporal
+        return null;
     }
     
     async init() {
         try {
             // Crear sesión
+            const headers = {
+                'Content-Type': 'application/json'
+            };
+            
+            // Solo agregar API key si está configurada
+            if (this.apiKey) {
+                headers['x-api-key'] = this.apiKey;
+            }
+            
             const response = await fetch(`${this.backendUrl}/api/chat/session`, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'x-api-key': this.apiKey
-                },
+                headers: headers,
                 body: JSON.stringify({ source: 'web' })
             });
             
@@ -64,12 +103,18 @@ class DonChuchoChat {
             if (this.fallbackMode) {
                 response = await this.getFallbackResponse(message);
             } else {
+                const headers = {
+                    'Content-Type': 'application/json'
+                };
+                
+                // Solo agregar API key si está configurada
+                if (this.apiKey) {
+                    headers['x-api-key'] = this.apiKey;
+                }
+                
                 const apiResponse = await fetch(`${this.backendUrl}/api/chat/message`, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'x-api-key': this.apiKey
-                    },
+                    headers: headers,
                     body: JSON.stringify({
                         message: message,
                         sessionId: this.sessionId,

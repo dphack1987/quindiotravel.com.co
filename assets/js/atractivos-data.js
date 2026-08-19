@@ -373,47 +373,6 @@ const atractivosData = [
     keywords: ["arrieros", "mulas", "cultura", "tradición", "ganadería"]
   },
   {
-    id: "quinti-patas-arriba",
-    nombre: "Quinti Patas Arriba",
-    nombreCorto: "Quinti Patas Arriba",
-    categoria: "Experiencia Cultural",
-    ubicacion: "Pereira, Risaralda",
-    descripcion: "Parque temático de la cultura arriería y ganadera con shows tradicionales, paseo en mulas y experiencias vivenciales de la tradición.",
-    descripcionDetallada: "Quinti Patas Arriba es un parque temático dedicado a la cultura arriería y ganadera del Eje Cafetero. Los visitantes pueden experimentar la tradición de los arrieros a través de shows tradicionales, paseo en mulas, demostraciones de técnicas ganaderas y experiencias vivenciales que reviven la historia de los arrieros que conectaban las regiones.",
-    caracteristicas: [
-      "Cultura arriería tradicional",
-      "Shows tradicionales de arrieros",
-      "Paseo en mulas",
-      "Experiencias vivenciales",
-      "Historia de los arrieros",
-      "Cultura ganadera",
-      "Demostraciones tradicionales",
-      "Ambiente histórico"
-    ],
-    actividades: [
-      "Paseo en mulas por senderos",
-      "Shows tradicionales de arrieros",
-      "Demostraciones de técnicas ganaderas",
-      "Experiencia vivencial arriería",
-      "Fotografía con arrieros tradicionales",
-      "Recorridos históricos",
-      "Interacción con animales"
-    ],
-    horario: "Todos los días 9:00 AM - 5:00 PM",
-    duracionRecomendada: "4 horas",
-    temporadaRecomendada: "Todo el año",
-    nivelDificultad: "Fácil",
-    accesibilidad: "Parcialmente accesible",
-    logo: null,
-    imagenes: [
-      "assets/images/atractivos/quinti-patas-arriba.jpg",
-      "quinti-patas-arriba/qintiparque.jpg"
-    ],
-    precioEntrada: "Desde $55,000 COP",
-    planesAsociados: ["plan-5"],
-    keywords: ["arrieros", "mulas", "cultura", "tradición", "ganadería"]
-  },
-  {
     id: "mariposario",
     nombre: "Mariposario",
     nombreCorto: "Mariposario",

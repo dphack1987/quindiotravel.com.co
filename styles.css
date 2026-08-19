@@ -1,5 +1,6 @@
 /* Estilos Generales Inspirados en la Naturaleza del Quindío */
 :root {
+    /* Colores principales */
     --verde-cafe: #2E5A36;
     --verde-claro: #4E8755;
     --blanco: #FFFFFF;
@@ -10,18 +11,25 @@
     --naranja-brillante: #FF8C42;
     --azul-profundo: #4A90E2;
     --vip-gold: #D4AF37;
+    
+    /* Sombras y bordes */
+    --shadow-soft-xl: 0 22px 55px rgba(20, 35, 26, 0.12);
+    --shadow-card-hover: 0 24px 50px rgba(18, 31, 23, 0.16);
+    --border-soft: 1px solid rgba(46, 90, 54, 0.08);
+    --glass-light: rgba(255, 255, 255, 0.16);
+    
+    /* Variables premium consolidadas */
+    --qt-surface: rgba(255, 255, 255, 0.92);
+    --qt-surface-strong: rgba(255, 255, 255, 0.98);
+    --qt-border: 1px solid rgba(46, 90, 54, 0.1);
+    --qt-shadow-md: 0 16px 36px rgba(18, 31, 23, 0.08);
+    --qt-shadow-lg: 0 24px 56px rgba(18, 31, 23, 0.14);
+    --qt-shadow-green: 0 22px 44px rgba(46, 90, 54, 0.16);
 }
 
 /* ============================================================
    ENRIQUECIMIENTO VISUAL HOME - CAPA NO DESTRUCTIVA
    ============================================================ */
-
-:root {
-    --shadow-soft-xl: 0 22px 55px rgba(20, 35, 26, 0.12);
-    --shadow-card-hover: 0 24px 50px rgba(18, 31, 23, 0.16);
-    --border-soft: 1px solid rgba(46, 90, 54, 0.08);
-    --glass-light: rgba(255, 255, 255, 0.16);
-}
 
 .btn:focus-visible,
 .filter-btn:focus-visible,

@@ -1,9 +1,8 @@
-const { Configuration, OpenAIApi } = require('openai');
+const OpenAI = require('openai');
 require('dotenv').config();
 
 const apiKey = process.env.OPENAI_API_KEY;
-const configuration = new Configuration({ apiKey });
-const openai = apiKey ? new OpenAIApi(configuration) : null;
+const openai = apiKey ? new OpenAI({ apiKey }) : null;
 
 class OpenAIService {
     async generateResponse(message, conversationHistory = []) {
@@ -31,14 +30,14 @@ class OpenAIService {
                 content: message
             });
 
-            const response = await openai.createChatCompletion({
+            const response = await openai.chat.completions.create({
                 model: process.env.OPENAI_MODEL || 'gpt-3.5-turbo',
                 messages,
                 temperature: 0.8,
                 max_tokens: 500
             });
 
-            const aiMessage = response.data?.choices?.[0]?.message?.content;
+            const aiMessage = response.choices?.[0]?.message?.content;
 
             if (!aiMessage) {
                 return 'Perdón, viajero. No pude procesar tu solicitud en este momento. ¿Puedes intentar de nuevo?';
