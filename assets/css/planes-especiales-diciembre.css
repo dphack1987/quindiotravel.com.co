@@ -133,61 +133,97 @@
   letter-spacing: 0.5px;
 }
 
-/* Tabla de Tarifas */
-.tarifas-table-diciembre {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.85rem;
-  table-layout: fixed;
+/* Cards de Tarifas (sustituyen tablas) */
+.tarifas-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
-.tarifas-table-diciembre thead {
-  background: #2E5E36;
-  color: white;
+.tarifa-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-top: 4px solid #2E5E36;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.tarifas-table-diciembre th {
-  padding: 12px 8px;
-  text-align: left;
-  font-weight: 600;
-  border-bottom: 2px solid #1b5e20;
-  word-wrap: break-word;
+.tarifa-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(46, 94, 54, 0.05), transparent);
+  border-radius: 0 12px 0 80px;
 }
 
-.tarifas-table-diciembre th:nth-child(1) {
-  width: 35%;
+.tarifa-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
-.tarifas-table-diciembre th:nth-child(2) {
-  width: 25%;
+.tarifa-card-header {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(46, 94, 54, 0.1);
 }
 
-.tarifas-table-diciembre th:nth-child(3),
-.tarifas-table-diciembre th:nth-child(4),
-.tarifas-table-diciembre th:nth-child(5) {
-  width: 14%;
-  text-align: right;
-}
-
-.tarifas-table-diciembre td {
-  padding: 12px 8px;
-  border-bottom: 1px solid #e0e0e0;
-  color: #333;
-  word-wrap: break-word;
-}
-
-.tarifas-table-diciembre tbody tr:hover {
-  background-color: #f5f5f5;
-}
-
-.tarifas-table-diciembre tbody tr:nth-child(odd) {
-  background-color: #fafafa;
-}
-
-.tarifas-table-diciembre td:nth-child(n+3) {
-  text-align: right;
-  font-weight: 600;
+.tarifa-card-header h4 {
   color: #1b5e20;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.tarifa-categoria {
+  display: inline-block;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  color: #2E5E36;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tarifa-prices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: linear-gradient(135deg, rgba(46, 94, 54, 0.05), rgba(27, 94, 32, 0.02));
+  border-radius: 8px;
+  border-left: 3px solid #2E5E36;
+  transition: all 0.3s ease;
+}
+
+.price-item:hover {
+  background: linear-gradient(135deg, rgba(46, 94, 54, 0.1), rgba(27, 94, 32, 0.05));
+  transform: translateX(5px);
+}
+
+.price-label {
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.price-value {
+  color: #1b5e20;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /* Nota de Transporte */

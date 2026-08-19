@@ -220,41 +220,43 @@ function obtenerTarifa(nombreHotel, tipoTransporte, numPax) {
 }
 
 /**
- * Generar tabla HTML con tarifas
+ * Generar cards HTML con tarifas (sustituye tablas)
  */
-function generarTablaTarifas(tipoTransporte = 'radio_taxi') {
+function generarTarifasCards(tipoTransporte = 'radio_taxi') {
   const tarifas = planesEspeciales.tarifas[tipoTransporte];
   let html = `
     <div class="tarifas-section-diciembre">
       <h3>${tipoTransporte === 'radio_taxi' ? 'TEMPORADA ALTA - RADIO TAXI DEL QUINDÍO' : 'TEMPORADA ALTA - TRANSPORTE TURÍSTICO PLACA BLANCA'}</h3>
-      <table class="tarifas-table-diciembre">
-        <thead>
-          <tr>
-            <th>Hotel</th>
-            <th>Categoría</th>
-            <th>2 Pax</th>
-            <th>3 Pax</th>
-            <th>4 Pax</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div class="tarifas-cards-grid">
   `;
   
   tarifas.forEach(plan => {
     html += `
-      <tr>
-        <td>${plan.hotel}</td>
-        <td>${plan.categoria}</td>
-        <td>$${plan.pax_2.toLocaleString('es-CO')}</td>
-        <td>$${plan.pax_3.toLocaleString('es-CO')}</td>
-        <td>$${plan.pax_4.toLocaleString('es-CO')}</td>
-      </tr>
+      <div class="tarifa-card">
+        <div class="tarifa-card-header">
+          <h4>${plan.hotel}</h4>
+          <span class="tarifa-categoria">${plan.categoria}</span>
+        </div>
+        <div class="tarifa-prices">
+          <div class="price-item">
+            <span class="price-label">2 Pax</span>
+            <span class="price-value">$${plan.pax_2.toLocaleString('es-CO')}</span>
+          </div>
+          <div class="price-item">
+            <span class="price-label">3 Pax</span>
+            <span class="price-value">$${plan.pax_3.toLocaleString('es-CO')}</span>
+          </div>
+          <div class="price-item">
+            <span class="price-label">4 Pax</span>
+            <span class="price-value">$${plan.pax_4.toLocaleString('es-CO')}</span>
+          </div>
+        </div>
+      </div>
     `;
   });
   
   html += `
-        </tbody>
-      </table>
+      </div>
     </div>
   `;
   
@@ -330,8 +332,8 @@ function initPlanesEspeciales() {
         </div>
         
         <div class="tarifas-container">
-          ${generarTablaTarifas('radio_taxi')}
-          ${generarTablaTarifas('placa_blanca')}
+          ${generarTarifasCards('radio_taxi')}
+          ${generarTarifasCards('placa_blanca')}
           
           <div class="nota-transporte">
             <p><strong>📝 Nota:</strong> ${planesEspeciales.plan.incluye[planesEspeciales.plan.incluye.length - 1]}</p>
