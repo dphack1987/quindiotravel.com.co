@@ -3540,30 +3540,30 @@
     </script>
 
 
-<style id="move-logo-to-card-fix">
-  /* Eliminar espacio/franja intermedia debajo del header */
-  .hero-logo-container, .hero-top-strip, header + div:not(.hero-banner):not(.main-content) {
+<style id="logo-bottom-left-fix">
+  /* Ocultar cualquier bloque/franja beige intermedia entre el header y la tarjeta */
+  .hero-logo-container, .hero-top-strip {
     display: none !important;
   }
 
-  /* Asegurar que el banner promocional quede pegado al header */
-  .hero, .hero-banner, .promo-card-container {
+  /* Asegurar que el contenedor de la imagen tenga posicionamiento relativo */
+  .hero-banner, .hero-card, .promo-card-container, section.hero {
+    position: relative !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
-    position: relative !important;
   }
 
-  /* Estilo para superponer el logo dentro de la tarjeta de la foto */
+  /* Posicionar el logo exactamente abajo a la izquierda sobre la foto */
   .promo-logo-overlay {
     position: absolute !important;
-    top: 15px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    z-index: 10 !important;
-    max-width: 160px !important;
-    width: 45% !important;
+    bottom: 25px !important;
+    left: 20px !important;
+    top: auto !important;
+    z-index: 100 !important;
+    max-width: 140px !important;
+    width: 35% !important;
     height: auto !important;
-    filter: drop-shadow(0px 2px 6px rgba(0,0,0,0.6)) !important;
+    filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.7)) !important;
     pointer-events: none !important;
   }
 </style>
