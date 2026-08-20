@@ -3540,24 +3540,24 @@
     </script>
 
 
-<style id="sticky-nav-header-fix">
-  /* Hacer que el contenedor del menu quede siempre fijo arriba */
-  header, .main-header, .nav-container {
+<style id="nav-and-popup-definitive-fix">
+  /* Fix para que los Pop-ups no se corten y queden por encima de todo */
+  .lead-capture-popup, .promo-popup, [id*="popup"] {
     position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    z-index: 99999 !important;
-    background: #ffffff !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    z-index: 999999 !important;
+    overflow-y: auto !important;
+    max-height: 90vh !important;
+  }
+  .popup-overlay {
+    z-index: 999998 !important;
   }
 
-  /* Compensar el espacio superior en el body para evitar saltos */
-  body {
-    padding-top: 60px !important;
+  /* Header limpio */
+  header, .main-header {
+    position: relative !important;
+    z-index: 1000 !important;
   }
 
-  /* Control estricto de las imagenes de logo */
   .nav-logo img, header img[src*="logo_quindio_travel"] {
     height: 38px !important;
     max-height: 38px !important;
@@ -3565,10 +3565,22 @@
     object-fit: contain !important;
   }
 
-  /* Ajuste de despliegue en movil */
+  /* Menu movil */
   @media (max-width: 768px) {
-    .nav-menu:not(.active), #nav-menu:not(.active) {
-      display: none !important;
+    .nav-menu, .nav-links {
+      display: none;
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      width: 100% !important;
+      background: #ffffff !important;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+      z-index: 9999 !important;
+      padding: 15px 0 !important;
+    }
+    .nav-menu.is-active, .nav-links.is-active,
+    .nav-menu.active, .nav-links.active {
+      display: block !important;
     }
   }
 </style>
@@ -6471,5 +6483,20 @@
     });
     </script>
 
+<script id="burger-click-fix">
+document.addEventListener('DOMContentLoaded', function() {
+  var toggleBtn = document.querySelector('.mobile-menu-toggle, .menu-toggle, .hamburger, .nav-toggle');
+  var navMenu = document.querySelector('.nav-menu, .nav-links');
+  
+  if(toggleBtn && navMenu) {
+    toggleBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      navMenu.classList.toggle('active');
+      navMenu.classList.toggle('is-active');
+    });
+  }
+});
+</script>
 </body>
 </html>
