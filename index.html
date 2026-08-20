@@ -38,6 +38,12 @@
     <link rel="manifest" href="https://quindiotravel.com.co/site.webmanifest">
     <link rel="mask-icon" href="https://quindiotravel.com.co/safari-pinned-tab.svg" color="#2E5E36">
     <link rel="shortcut icon" href="https://quindiotravel.com.co/favicon.ico">
+
+    <!-- Critical Resources Preload for Core Web Vitals -->
+    <link rel="preload" href="assets/images/paisajes/natural-landscapes-colombia.avif" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/images/logo_quindio_travel.png" as="image" fetchpriority="high">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" fetchpriority="high">
+    <link rel="preload" href="styles.css" as="style" fetchpriority="high">
     
     <!-- Business Logo for Google Knowledge Graph -->
     <link rel="logo" type="image/png" href="https://quindiotravel.com.co/assets/images/paisajes/eje-cafetero-aerial-view.jpg">
@@ -1591,6 +1597,16 @@
             "addressRegion": "Quindio",
             "addressCountry": "CO"
           },
+          "sameAs": [
+            "https://es.wikipedia.org/wiki/Eje_Cafetero",
+            "https://es.wikipedia.org/wiki/Quind%C3%ADo",
+            "https://es.wikipedia.org/wiki/Armenia_(Quind%C3%ADo)",
+            "https://es.wikipedia.org/wiki/Salento_(Quind%C3%ADo)",
+            "https://es.wikipedia.org/wiki/Valle_del_Cocora",
+            "https://es.wikipedia.org/wiki/Parque_del_Caf%C3%A9",
+            "https://es.wikipedia.org/wiki/Cora_(p%C3%A1jaro)",
+            "https://es.wikipedia.org/wiki/Caf%C3%A9_de_Colombia"
+          ],
           "areaServed": {
             "@type": "GeoCircle",
             "geoMidpoint": {
@@ -1879,7 +1895,7 @@
     }
     </script>
 
-    <!-- FAQ Schema para preguntas frecuentes SEO -->
+    <!-- FAQ Schema optimizado para GEO y Motores Generativos (IA) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -1887,10 +1903,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "¿Cuáles son los mejores planes de turismo en el Eje Cafetero?",
+                "name": "¿Cuánto cuestan los planes turísticos en el Quindío?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Los mejores planes de turismo en el Eje Cafetero incluyen visitas al Parque del Café, PANACA, Valle de Cocora, Salento, Filandia y Termales Santa Rosa. Quindío Travel ofrece 6 planes desde 2 hasta 5 días con alojamiento y transporte."
+                    "text": "Los planes turísticos en el Quindío varían desde $425.000 COP para viajes de 1 día hasta $4.490.000 COP para experiencias VIP de 7 días. El precio incluye transporte, alojamiento, alimentación y guías certificados. Los precios varían según temporada (baja/media/alta) y categoría de alojamiento."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuántos días se necesitan para visitar el Quindío?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Para visitar el Quindío adecuadamente se recomiendan mínimo 3 días/2 noches. En 3 días puedes visitar Salento, Valle de Cocora, Parque del Café y una finca cafetera. Para una experiencia completa se recomiendan 5-7 días incluyendo Filandia, Termales Santa Rosa y otros destinos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Es seguro viajar al Quindío con planes turísticos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, es completamente seguro viajar al Quindío con planes turísticos operados por agencias certificadas RNT como Quindío Travel. El Quindío es uno de los departamentos más seguros de Colombia. Nuestros guías son locales certificados y conocen las zonas seguras para visitar."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué hacer en el Eje Cafetero en 3 días?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En 3 días en el Eje Cafetero puedes: Día 1 - Salento y Valle de Cocora (trekking de 4 horas). Día 2 - Parque del Café o PANACA con coffee tour. Día 3 - Filandia y visita a finca cafetera. Incluye transporte, guías, alojamiento y alimentación desde $1.464.000 COP."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuál es la mejor época para visitar el Quindío?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La mejor época para visitar el Quindío es enero-febrero (temporada seca) y julio-agosto (verano). Evitar marzo-mayo y octubre-noviembre (temporada de lluvias). Los fines de semana largos y festivos tienen más turistas, los días de semana son más tranquilos."
                 }
             },
             {
@@ -1898,55 +1946,23 @@
                 "name": "¿Cómo llegar al Quindío desde Bogotá?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Para llegar al Quindío desde Bogotá puede tomar un vuelo de 45 minutos al Aeropuerto El Edén en Armenia, o viajar por carretera en aproximadamente 4-5 horas por la ruta norte. También hay servicios de bus intermunicipales desde el Terminal de Transporte de Bogotá."
+                    "text": "Desde Bogotá puedes: Volar 45 minutos a Armenia ($150.000-$250.000 COP), Bus directo 6-7 horas ($85.000-$120.000 COP), o Transporte privado 5 horas ($250.000-$350.000 COP). La mejor ruta es Bogotá → Armenia → destinos Quindío. Recomendamos volar para maximizar tiempo."
                 }
             },
             {
                 "@type": "Question",
-                "name": "¿Cuál es la mejor época para visitar el Eje Cafetero?",
+                "name": "¿Qué incluye un plan turístico completo con Quindío Travel?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "La mejor época para visitar el Eje Cafetero es durante todo el año, pero especialmente de enero a marzo (temporada seca) y de julio a agosto. Estos meses ofrecen clima ideal para visitar el Valle de Cocora, Salento y disfrutar de las actividades al aire libre."
+                    "text": "Nuestros planes completos incluyen: transporte redondo, alojamiento en finca hoteles certificados, alimentación (desayuno y cena), entradas a parques temáticos, guías certificados MINCIT, asistencia médica 24/7, coordinación completa de actividades y WhatsApp de soporte durante el viaje."
                 }
             },
             {
                 "@type": "Question",
-                "name": "¿Qué servicios turísticos ofrece Quindío Travel?",
+                "name": "¿Dónde dormir en el Quindío?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Quindío Travel ofrece servicios completos de turismo: planes paquetes, transporte terrestre y aéreo, alojamiento en fincas hoteles y cabañas, entradas a parques temáticos, asistencia médica, planes empresariales y experiencias personalizadas de turismo en el Quindío."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Cuánto cuesta un plan de turismo al Eje Cafetero?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Los planes de turismo al Eje Cafetero varían según la duración, temporada, tipo de transporte y alojamiento. Quindío Travel ofrece planes desde $425.000 COP por persona (economía, temporada baja, sin transporte) hasta $4.490.000 COP (VIP, temporada alta, con transporte). Todos incluyen alojamiento, alimentación (desayuno y cena) y asistencia médica."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Dónde están los mejores termales del Eje Cafetero?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Los mejores termales del Eje Cafetero se encuentran en Santa Rosa de Cabal, Risaralda, a 30 minutos de Armenia. Los Termales Santa Rosa son los más populares, ofreciendo aguas termales volcánicas con propiedades terapéuticas, piscinas termales, masajes y servicios de wellness completos."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Qué actividades turísticas se pueden hacer en Salento?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "En Salento puede visitar el Valle de Cocora con sus palmas de cera, recorrer la Calle del Tiempo Detenida, visitar el mirador Alto de la Cruz, disfrutar de gastronomía típica, comprar artesanías en guadua, y visitar cafeterías tradicionales. Es uno de los pueblos más hermosos del Eje Cafetero."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Qué include un plan de turismo completo en el Quindío?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Un plan de turismo completo en el Quindío incluye: transporte desde el aeropuerto o terminal terrestre en Armenia, alojamiento en fincas hoteles o cabañas, alimentación (desayunos y cenas), entradas a parques temáticos, asistencia médica durante el viaje, y coordinación completa de todas las actividades turísticas."
+                    "text": "En el Quindío hay opciones desde $80.000 COP por noche en hostales hasta $250.000 COP en hoteles boutique. Recomendamos finca hoteles tradicionales (experiencia auténtica), hostales con ambiente social (mochileros), y hoteles boutique (confort y lujo). Todas incluyen desayuno, WiFi y parqueadero."
                 }
             }
         ]
@@ -3693,7 +3709,7 @@
           <div style="position: absolute; top: 16px; left: 16px; background: #E63946; color: #ffffff; padding: 8px 16px; border-radius: 8px; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.5px; text-transform: uppercase; box-shadow: 0 4px 12px rgba(230,57,70,0.4); z-index: 20;">
             🔥 14% OFF — PROMOCIÓN DEL MES
           </div>
-          <img src="assets/images/paisajes/eje-cafetero-aerial-view.jpg" alt="Vientos de Agosto Eje Cafetero" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 380px;">
+          <img src="assets/images/paisajes/eje-cafetero-aerial-view.jpg" alt="Vientos de Agosto Eje Cafetero" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 380px;" loading="lazy" width="1200" height="630">
         </div>
 
         <!-- INFORMACIÓN -->
@@ -3762,7 +3778,7 @@
       <div style="position: absolute; top: 16px; left: 16px; background: #C41E3A; color: #ffffff; padding: 8px 16px; border-radius: 8px; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.5px; text-transform: uppercase; box-shadow: 0 4px 12px rgba(196,30,58,0.4); z-index: 20;">
         🎄 PLANES ESPECIALES
       </div>
-      <img src="assets/images/paisajes/valle-cocora-hero-banner.jpg" alt="Planes Especiales Diciembre 2026 Eje Cafetero" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 380px;">
+      <img src="assets/images/paisajes/valle-cocora-hero-banner.jpg" alt="Planes Especiales Diciembre 2026 Eje Cafetero" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 380px;" loading="lazy" width="1200" height="630">
     </div>
 
     <!-- INFORMACIÓN -->
@@ -3843,6 +3859,12 @@
                 <span class="trust-badge"><i class="fas fa-star"></i> +1,200 viajeros</span>
             </div>
             <h1>Quindío Viajes Planes Turísticos: Conectamos tu corazón con el Eje Cafetero</h1>
+            
+            <!-- Resumen optimizado para GEO (300 caracteres) -->
+            <p class="geo-summary">
+Quindío Travel es operador turístico certificado RNT 18152 especializado en turismo del Eje Cafetero colombiano desde 2010. Atendemos a más de 5,000 viajeros anualmente con planes desde $425.000 COP. Ofrecemos guías certificados MINCIT, transporte, alojamiento y experiencias auténticas de cultura cafetera en Salento, Filandia, Valle de Cocora, Parque del Café y PANACA.
+            </p>
+            
             <p>No somos solo una guía de viajes; somos narradores de la cultura cafetera. Conectamos tu corazón con el Eje Cafetero a través de experiencias auténticas, grupos pequeños y conexiones reales con la tierra del mejor café del mundo.</p>
             <div class="hero-buttons">
                 <a href="promo-agosto-2026.html" class="btn btn-green-hero"><i class="fas fa-calendar-check"></i> <strong>VER PROMOCIÓN</strong></a>
@@ -5373,7 +5395,7 @@
             </div>
             <div class="promo-popup-content">
                 <div style="text-align: center; margin-bottom: 20px;">
-                    <img src="assets/images/paisajes/eje-cafetero-aerial-view.jpg" alt="Eje Cafetero" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                    <img src="assets/images/paisajes/eje-cafetero-aerial-view.jpg" alt="Eje Cafetero" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;" loading="lazy" width="1200" height="630">
                     <div style="background: #E63946; color: white; padding: 8px 16px; border-radius: 20px; display: inline-block; font-weight: 800; font-size: 0.9rem; margin-bottom: 15px;">
                         🔥 14% OFF — PROMOCIÓN DEL MES
                     </div>
@@ -5414,7 +5436,7 @@
             </div>
             <div class="promo-popup-content">
                 <div style="text-align: center; margin-bottom: 20px;">
-                    <img src="assets/images/paisajes/valle-cocora-hero-banner.jpg" alt="Navidad Eje Cafetero" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                    <img src="assets/images/paisajes/valle-cocora-hero-banner.jpg" alt="Navidad Eje Cafetero" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;" loading="lazy" width="1200" height="630">
                     <div style="background: linear-gradient(135deg, #1b4332, #2d6a4f); color: white; padding: 8px 16px; border-radius: 20px; display: inline-block; font-weight: 800; font-size: 0.9rem; margin-bottom: 15px;">
                         🎄 TEMPORADA ALTA
                     </div>

@@ -8,6 +8,12 @@
     <meta name="author" content="Quindío Travel - Operador Turístico RNT 18152">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
+    <!-- Critical Resources Preload for Core Web Vitals -->
+    <link rel="preload" href="assets/images/paisajes/valle-cocora-hero-banner.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/images/logo_quindio_travel.png" as="image" fetchpriority="high">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" fetchpriority="high">
+    <link rel="preload" href="styles.css" as="style" fetchpriority="high">
+
     <!-- Enhanced Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Planes turísticos en Quindío: Eje Cafetero | Quindío Travel RNT 18152">
@@ -190,6 +196,56 @@
     <link rel="stylesheet" href="assets/css/planes-especiales-diciembre.css">
     <link rel="prefetch" href="index.html">
     <link rel="prefetch" href="styles.css">
+
+    <!-- FAQ Schema optimizado para GEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cuánto cuestan los planes turísticos en el Quindío?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Los planes turísticos en el Quindío varían desde $425.000 COP para viajes de 1 día hasta $4.490.000 COP para experiencias VIP de 7 días. El precio incluye transporte, alojamiento, alimentación y guías certificados. Los precios varían según temporada (baja/media/alta) y categoría de alojamiento."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuántos días se necesitan para visitar el Quindío?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Para visitar el Quindío adecuadamente se recomiendan mínimo 3 días/2 noches. En 3 días puedes visitar Salento, Valle de Cocora, Parque del Café y una finca cafetera. Para una experiencia completa se recomiendan 5-7 días incluyendo Filandia, Termales Santa Rosa y otros destinos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué incluye un plan turístico completo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nuestros planes completos incluyen: transporte redondo, alojamiento en finca hoteles certificados, alimentación (desayuno y cena), entradas a parques temáticos, guías certificados MINCIT, asistencia médica 24/7, coordinación completa de actividades y WhatsApp de soporte durante el viaje."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Hay planes para familias con niños?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, ofrecemos planes específicos para familias con niños: Plan Vive El Eje Cafetero Temático y Plan Aventura Familiar. Estos planes incluyen Parque del Café, PANACA, Granja Mamá Lulú, actividades seguras para niños, menús infantiles y guías especializados en turismo familiar desde $425.000 COP."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Es seguro viajar al Quindío con planes turísticos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, es completamente seguro viajar al Quindío con planes turísticos operados por agencias certificadas RNT como Quindío Travel. El Quindío es uno de los departamentos más seguros de Colombia. Nuestros guías son locales certificados y conocen las zonas seguras para visitar."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
 
@@ -243,6 +299,12 @@
                 <span class="trust-badge"><i class="fas fa-star"></i> +1,200 Viajeros</span>
             </div>
             <h1>Planes Turísticos del Eje Cafetero</h1>
+            
+            <!-- Resumen optimizado para GEO (300 caracteres) -->
+            <p class="geo-summary">
+Descubre planes turísticos completos al Eje Cafetero desde $425.000 COP para viajes de 1 día hasta $4.490.000 COP para experiencias VIP de 7 días. Incluye transporte, alojamiento, alimentación y guías certificados. Planes disponibles para familias, parejas, grupos corporativos y aventuras personalizadas en Salento, Valle de Cocora y todo el Quindío.
+            </p>
+            
             <p>Descubre la magia del Quindío con nuestros 6 planes diseñados a tu medida. Desde escapadas cortas hasta experiencias completas de 5 días con guías certificados.</p>
             <div class="hero-buttons">
                 <a href="#catalogo-planes" class="btn btn-green-hero">

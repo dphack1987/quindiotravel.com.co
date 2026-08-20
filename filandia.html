@@ -41,9 +41,11 @@
     <!-- WhatsApp Template Handler -->
     <script src="assets/js/whatsapp-template-handler.js" defer></script>
     
-    <!-- Optimización de imágenes -->
-    <link rel="preload" href="assets/images/paisajes/valle-cocora-hero-banner.jpg" as="image">
-    <link rel="preload" href="assets/images/logo_quindio_travel.png" as="image">
+    <!-- Critical Resources Preload for Core Web Vitals -->
+    <link rel="preload" href="assets/images/paisajes/valle-cocora-hero-banner.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/images/logo_quindio_travel.png" as="image" fetchpriority="high">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" fetchpriority="high">
+    <link rel="preload" href="styles.css" as="style" fetchpriority="high">
 
     <script type="application/ld+json">
     {
@@ -100,6 +102,56 @@
     </script>
     <link rel="prefetch" href="index.html">
     <link rel="prefetch" href="styles.css">
+
+    <!-- FAQ Schema optimizado para GEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué hacer en Filandia?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En Filandia puedes: Visitar el mirador (vistas panorámicas del Quindío), Recorrer el centro histórico (balcones coloridos), Comprar artesanías en guadua, Visitar taller de madera, Comer en restaurantes tradicionales, Hacer coffee tour en fincas cercanas. Plan mínimo medio día (4 horas)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuál es la mejor época para visitar Filandia?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La mejor época para visitar Filandia es igual que el Quindío: enero-febrero (temporada seca) y julio-agosto (verano). El mirador ofrece mejores vistas en días despejados. Evitar días de neblina intensa (temporada de lluvias). Los días de semana son más tranquilos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo llegar al mirador de Filandia?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El mirador de Filandia está a 10 minutos del centro en taxi ($10.000-$15.000 COP) o caminando (20 minutos). Hay opciones de transporte local desde la plaza principal. Nuestros planes incluyen transporte al mirador con paradas fotográficas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué comprar en Filandia?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En Filandia debes comprar: Artesanías en guadua (cestos, muebles), Productos de madera tallada, Café de especialidad local, Souvenirs temáticos del Eje Cafetero, Ropa tradicional paisa. Precios: artesanías $15.000-$150.000 COP, café $25.000-$45.000 COP por kilo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Dónde comer en Filandia?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Restaurantes recomendados en Filandia: El Mirador (vistas + comida típica, $25.000-$40.000 COP), Corazón de Jesús (platos tradicionales, $20.000-$35.000 COP), Cafetería Filandia (café + postres, $15.000-$25.000 COP). Todos ofrecen comida paisa auténtica."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <header class="main-header">
@@ -160,7 +212,23 @@
                 <span class="trust-badge"><i class="fas fa-star"></i> +1,200 Viajeros</span>
             </div>
             <h1>Filandia 2026 | Tours Todo Incluido - Reserva en 48 horas</h1>
+            
+            <!-- Resumen optimizado para GEO (300 caracteres) -->
+            <p class="geo-summary">
+Filandia es conocida como el pueblo más limpio de Colombia y por su mirador con vistas panorámicas del Quindío. Visitamos Filandia con planes desde $425.000 COP que incluyen transporte, visita al mirador, compras de artesanías, gastronomía típica, coffee tours y alojamiento en hoteles boutique con arquitectura tradicional.
+            </p>
+            
             <p>Descubre el pueblo más alto del Quindío con su mirador cóndor, artesanías en guadua y arquitectura tradicional. Tours completos con Quindío Travel RNT 18152.</p>
+            
+            <!-- Enlaces contextuales para topic clusters -->
+            <div class="pillar-links" style="margin: 15px 0; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+              <p style="font-size: 0.9em; margin: 5px 0;">
+                <a href="salento.html" style="color: #F4D35E; text-decoration: none; font-weight: 600;">🏘️ Visitar Salento cercano</a> | 
+                <a href="coffee-tour-quindio-precio.html" style="color: #F4D35E; text-decoration: none; font-weight: 600;">☕ Coffee tours en la zona</a> |
+                <a href="index.html" style="color: #F4D35E; text-decoration: none; font-weight: 600;">🏠 Volver a Quindío Travel</a>
+              </p>
+            </div>
+            
             <div class="hero-buttons">
                 <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20un%20tour%20a%20Filandia%20todo%20incluido%20para%20viajar%20en%20menos%20de%2048%20horas" target="_blank" rel="noopener" class="btn btn-whatsapp-hero"><i class="fab fa-whatsapp"></i> <strong>Cotizar WhatsApp - Respuesta Inmediata</strong></a>
                 <a href="planes.html" class="btn btn-green-hero"><i class="fas fa-calendar-check"></i> <strong>Ver Planes que incluyen Filandia</strong></a>

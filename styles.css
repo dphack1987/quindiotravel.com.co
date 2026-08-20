@@ -31,6 +31,28 @@
    ENRIQUECIMIENTO VISUAL HOME - CAPA NO DESTRUCTIVA
    ============================================================ */
 
+/* Estilos para resúmenes optimizados GEO */
+.geo-summary {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #2C3E35;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #2E5A36;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .geo-summary {
+        font-size: 1em;
+        padding: 12px;
+        margin: 15px 0;
+    }
+}
+
 .btn:focus-visible,
 .filter-btn:focus-visible,
 .btn-plan-enhanced:focus-visible,

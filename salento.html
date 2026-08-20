@@ -50,9 +50,12 @@
     <!-- WhatsApp Template Handler -->
     <script src="assets/js/whatsapp-template-handler.js" defer></script>
     
-    <!-- Optimización de imágenes -->
-    <link rel="preload" href="assets/images/paisajes/valle-cocora-hero-banner.jpg" as="image">
-    <link rel="preload" href="assets/images/logo_quindio_travel.png" as="image">
+    <!-- Critical Resources Preload for Core Web Vitals -->
+    <link rel="preload" href="assets/images/paisajes/valle-cocora-hero-banner.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/images/eje-cafetero-landscape-colombia.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/images/logo_quindio_travel.png" as="image" fetchpriority="high">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" fetchpriority="high">
+    <link rel="preload" href="styles.css" as="style" fetchpriority="high">
 
     <!-- Enhanced Schema.org para Salento -->
     <script type="application/ld+json">
@@ -153,6 +156,56 @@
     </script>
     <link rel="prefetch" href="index.html">
     <link rel="prefetch" href="styles.css">
+
+    <!-- FAQ Schema optimizado para GEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué hacer en Salento en 2 días?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En 2 días en Salento puedes: Día 1 - Visita al Valle de Cocora (trekking de 4 horas), almuerzo en Salento, caminata por el centro histórico. Día 2 - Coffee tour en finca cafetera, compras de artesanías, visita al mirador al atardecer. Incluye transporte, guías y almuerzos desde $425.000 COP."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuál es la mejor época para visitar Salento?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La mejor época para visitar Salento es enero-febrero (temporada seca) y julio-agosto (verano). Evitar marzo-mayo y octubre-noviembre (temporada de lluvias). Los fines de semana largos y festivos tienen más turistas, los días de semana son más tranquilos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Dónde dormir en Salento?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En Salento hay opciones desde $80.000 COP por noche en hostales hasta $250.000 COP en hoteles boutique. Recomendamos finca hoteles tradicionales (experiencia auténtica), hostales con ambiente social (mochileros), y hoteles boutique (confort y lujo). Todas incluyen desayuno, WiFi y parqueadero."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo llegar a Salento desde Bogotá?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Desde Bogotá puedes: Volar 45 minutos a Armenia ($150.000-$250.000 COP) + bus 1 hora a Salento ($15.000 COP), Bus directo 6-7 horas ($85.000-$120.000 COP), o Transporte privado 5 horas ($250.000-$350.000 COP). Recomendamos volar para maximizar tiempo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué comer en Salento?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En Salento debes probar: Trucha con papa salada ($25.000-$35.000 COP), Arepa paisa con queso ($15.000-$20.000 COP), Café de especialidad ($8.000-$12.000 COP), Helado de mora ($10.000-$15.000 COP). Restaurantes recomendados: Brunch, El Rinconcito, Cafetería Salento."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <header class="main-header">
@@ -213,7 +266,23 @@
                 <span class="trust-badge"><i class="fas fa-star"></i> +1,200 Viajeros</span>
             </div>
             <h1>Salento 2026 | Tours Todo Incluido - Reserva en 48 horas</h1>
+            
+            <!-- Resumen optimizado para GEO (300 caracteres) -->
+            <p class="geo-summary">
+Salento es el pueblo más colorido del Quindío, famoso por sus balcones tradicionales y cercanía al Valle de Cocora. Visitamos Salento diariamente con planes desde $425.000 COP que incluyen transporte, coffee tours, caminatas por el valle de las palmas de cera, alojamiento en finca hoteles y guías locales expertos en cultura paisa.
+            </p>
+            
             <p>Descubre el pueblo patrimonio más bello del Eje Cafetero. Balcones coloridos, miradores, artesanías y gastronomía tradicional. Tours completos con Quindío Travel RNT 18152.</p>
+            
+            <!-- Enlaces contextuales para topic clusters -->
+            <div class="pillar-links" style="margin: 15px 0; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+              <p style="font-size: 0.9em; margin: 5px 0;">
+                <a href="valle-de-cocora.html" style="color: #F4D35E; text-decoration: none; font-weight: 600;">🌴 Valle de Cocora (cerca)</a> | 
+                <a href="hoteles-en-salento-economicos.html" style="color: #F4D35E; text-decoration: none; font-weight: 600;">🏨 Hoteles en Salento</a> |
+                <a href="como-llegar-salento-desde-bogota.html" style="color: #F4D35E; text-decoration: none; font-weight: 600;">🚌 Cómo llegar</a>
+              </p>
+            </div>
+            
             <div class="hero-buttons">
                 <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20quiero%20cotizar%20un%20tour%20a%20Salento%20todo%20incluido%20para%20viajar%20en%20menos%20de%2048%20horas" target="_blank" rel="noopener" class="btn btn-whatsapp-hero"><i class="fab fa-whatsapp"></i> <strong>Cotizar WhatsApp - Respuesta Inmediata</strong></a>
                 <a href="planes.html" class="btn btn-green-hero"><i class="fas fa-calendar-check"></i> <strong>Ver Planes que incluyen Salento</strong></a>
