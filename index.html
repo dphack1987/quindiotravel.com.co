@@ -3577,22 +3577,40 @@
 </style>
 <!-- /LOGO_FIX_GLOBAL -->
 <style id="custom-logo-fix">
-  header .nav-logo img, nav .nav-logo img {
-    height: 35px !important;
-    width: auto !important;
+  /* Centrado vertical perfecto en el navbar */
+  header, nav, .navbar-container, .header-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
   }
+  .nav-logo {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+  }
+  .nav-logo img {
+    height: 38px !important;
+    width: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+  
+  /* Seccion blanca e imagen del Logo Principal Centrado */
   .logo-hero-container {
     background: #ffffff !important;
     text-align: center !important;
-    padding: 20px 10px !important;
-    margin-top: 60px !important;
+    padding: 25px 15px !important;
+    margin-top: 65px !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
   .logo-hero-container img {
     height: 85px !important;
     width: auto !important;
-    max-width: 85% !important;
+    max-width: 80% !important;
     object-fit: contain !important;
     display: block !important;
     margin: 0 auto !important;
