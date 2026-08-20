@@ -3540,91 +3540,35 @@
     </script>
 
 
-<style id="header-mobile-definitive-fix">
-  /* Asegurar que la barra de navegación tenga altura y flujo correcto */
-  header.main-header, .main-header {
-    position: relative !important;
-    z-index: 9999 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 10px 15px !important;
+<style id="sticky-nav-header-fix">
+  /* Hacer que el contenedor del menu quede siempre fijo arriba */
+  header, .main-header, .nav-container {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important;
     background: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
   }
 
-  /* Ajuste estricto del logo para evitar cortes */
-  .nav-logo, header .nav-logo {
-    display: flex !important;
-    align-items: center !important;
-    max-height: 40px !important;
+  /* Compensar el espacio superior en el body para evitar saltos */
+  body {
+    padding-top: 60px !important;
   }
-  .nav-logo img, header .nav-logo img {
+
+  /* Control estricto de las imagenes de logo */
+  .nav-logo img, header img[src*="logo_quindio_travel"] {
     height: 38px !important;
     max-height: 38px !important;
     width: auto !important;
     object-fit: contain !important;
   }
 
-  /* Control estricto del menú desplegable en pantallas móviles */
+  /* Ajuste de despliegue en movil */
   @media (max-width: 768px) {
-    .nav-menu, .nav-links, header ul.nav-menu {
-      position: absolute !important;
-      top: 100% !important;
-      left: 0 !important;
-      width: 100% !important;
-      background: #ffffff !important;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
-      z-index: 9998 !important;
-      margin: 0 !important;
-      padding: 15px 0 !important;
-      /* Ocultar por defecto usando clip/opacity/display para no interferir con clases activas */
-    }
-
-    /* Ocultar el menú cuando NO tiene la clase activa */
-    .nav-menu:not(.nav-menu-open),
-    .nav-links:not(.nav-menu-open),
-    header ul.nav-menu:not(.nav-menu-open) {
+    .nav-menu:not(.active), #nav-menu:not(.active) {
       display: none !important;
-    }
-
-    /* Mostrar el menú únicamente cuando JavaScript le añade .nav-menu-open */
-    .nav-menu.nav-menu-open,
-    .nav-links.nav-menu-open,
-    header ul.nav-menu.nav-menu-open {
-      display: block !important;
-    }
-
-    /* Estilos para enlaces del menú móvil */
-    .nav-menu.nav-menu-open a,
-    .nav-links.nav-menu-open a,
-    header ul.nav-menu.nav-menu-open a {
-      color: #2C3E35 !important;
-      padding: 12px 20px !important;
-      display: block !important;
-      text-align: left !important;
-    }
-
-    .nav-menu.nav-menu-open ul,
-    .nav-links.nav-menu-open ul,
-    header ul.nav-menu.nav-menu-open ul {
-      flex-direction: column !important;
-      gap: 0 !important;
-    }
-  }
-
-  /* Asegurar que el menú se muestre en desktop */
-  @media (min-width: 769px) {
-    .nav-menu, .nav-links, header ul.nav-menu {
-      display: flex !important;
-      position: relative !important;
-      top: auto !important;
-      left: auto !important;
-      width: auto !important;
-      background: transparent !important;
-      box-shadow: none !important;
-      z-index: auto !important;
-      margin: 0 !important;
-      padding: 0 !important;
     }
   }
 </style>
