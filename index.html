@@ -3539,6 +3539,18 @@
     }
     </script>
 
+
+<style id="clean-floating-bar">
+  body > div[style*="fixed"],
+  body > div[style*="sticky"],
+  .floating-bar, .sticky-bar, .urgency-bar, .timer-bar-wrapper {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+</style>
+
 </head>
 <body>
 
