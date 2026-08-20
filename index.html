@@ -3577,40 +3577,50 @@
 </style>
 <!-- /LOGO_FIX_GLOBAL -->
 <style id="custom-logo-fix">
-  /* Centrado vertical perfecto en el navbar */
-  header, nav, .navbar-container, .header-container {
+  /* 1. Header flexible */
+  header, nav, .site-header, .navbar {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    padding: 8px 15px !important;
+    min-height: 65px !important;
+    height: auto !important;
+    box-sizing: border-box !important;
   }
-  .nav-logo {
+
+  /* 2. Logo Navbar desplazado ligeramente a la derecha */
+  .nav-logo, header a[href="index.html"] {
     display: flex !important;
     align-items: center !important;
-    margin: 0 !important;
+    align-self: center !important;
+    margin-left: 15px !important;
+    padding: 0 !important;
   }
-  .nav-logo img {
+  .nav-logo img, header a[href="index.html"] img {
     height: 38px !important;
+    max-height: 38px !important;
     width: auto !important;
-    display: block !important;
     object-fit: contain !important;
+    display: block !important;
   }
-  
-  /* Seccion blanca e imagen del Logo Principal Centrado */
+
+  /* 3. Logo Central más grande y bien proporcionado */
   .logo-hero-container {
     background: #ffffff !important;
-    text-align: center !important;
-    padding: 25px 15px !important;
-    margin-top: 65px !important;
     width: 100% !important;
+    padding: 25px 15px !important;
+    margin-top: 15px !important;
     box-sizing: border-box !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    clear: both !important;
   }
   .logo-hero-container img {
-    height: 85px !important;
+    height: 110px !important;
+    max-height: 110px !important;
     width: auto !important;
-    max-width: 80% !important;
+    max-width: 90% !important;
     object-fit: contain !important;
     display: block !important;
     margin: 0 auto !important;
