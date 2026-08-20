@@ -51,8 +51,426 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Mobile Menu Styles -->
+    <style>
+        .mobile-menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--verde-cafe);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            font-size: 1.5rem;
+        }
+        
+        .mobile-menu-toggle:hover {
+            background: #2d5a27;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background: linear-gradient(135deg, #1b4332 0%, #2d5a27 100%);
+            z-index: 999;
+            padding: 80px 30px 30px;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            transition: right 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+        
+        .mobile-menu a:hover {
+            background: rgba(255,255,255,0.1);
+            padding-left: 10px;
+        }
+        
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 998;
+        }
+        
+        .mobile-menu-overlay.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+            text-decoration: none;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background: #1DA851;
+            transform: scale(1.05);
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(37,211,102,0.6);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 18px;
+                font-size: 0.9rem;
+            }
+            
+            .whatsapp-text {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .whatsapp-text {
+                display: inline;
+            }
+        }
+        
+        /* Touch Optimization */
+        .btn, button, a {
+            min-height: 44px;
+            min-width: 44px;
+            -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+        }
+        
+        /* Micro-interactions and Animations */
+        .btn {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .btn:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .day, .faq-item, .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .day:hover, .faq-item:hover, .testimonial-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature {
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Fade in animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .plan-details > div {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .plan-details > div:nth-child(1) { animation-delay: 0.1s; }
+        .plan-details > div:nth-child(2) { animation-delay: 0.2s; }
+        .plan-details > div:nth-child(3) { animation-delay: 0.3s; }
+        .plan-details > div:nth-child(4) { animation-delay: 0.4s; }
+        .plan-details > div:nth-child(5) { animation-delay: 0.5s; }
+        
+        @media (max-width: 768px) {
+            .btn-primary, .btn-secondary {
+                padding: 18px 30px;
+                font-size: 1.1rem;
+                min-height: 50px;
+            }
+            
+            .gallery-item {
+                aspect-ratio: 16/9;
+            }
+            
+            .day, .faq-item, .testimonial-card {
+                padding: 20px;
+            }
+        }
+    </style>
+    
     <!-- Script de detección de idioma -->
     <script src="assets/js/language-detector.js" defer></script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'page_title': 'Plan Exclusivo Salento, Filandia y Coffee Tour El Ocaso',
+            'page_location': 'https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html',
+            'custom_map': {
+                'plan_type': 'Plan Exclusivo',
+                'market_target': 'Spain',
+                'price_eur': '280-390'
+            }
+        });
+        
+        // Custom Events
+        function trackEvent(eventName, parameters) {
+            gtag('event', eventName, parameters);
+            console.log('GA4 Event:', eventName, parameters);
+        }
+        
+        // View Item Event (Product View)
+        function trackPlanView() {
+            trackEvent('view_item', {
+                'item_id': 'plan-exclusivo-salento-filandia-ocaso',
+                'item_name': 'Plan Exclusivo Salento, Filandia y Coffee Tour El Ocaso',
+                'category': 'Tours',
+                'price': '280',
+                'currency': 'EUR',
+                'market': 'Spain',
+                'duration': '4D3N'
+            });
+        }
+        
+        // Add to Cart Event (Contact Request)
+        function trackContactRequest(source) {
+            trackEvent('generate_lead', {
+                'form_name': 'WhatsApp Contact',
+                'source': source,
+                'item_id': 'plan-exclusivo-salento-filandia-ocaso',
+                'currency': 'EUR',
+                'value': 280
+            });
+        }
+        
+        // Scroll Depth Tracking
+        function trackScrollDepth() {
+            var scrollDepth = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+            
+            if (scrollDepth >= 25 && !window.scroll25Tracked) {
+                trackEvent('scroll_tracking', {'percent_scrolled': 25});
+                window.scroll25Tracked = true;
+            }
+            if (scrollDepth >= 50 && !window.scroll50Tracked) {
+                trackEvent('scroll_tracking', {'percent_scrolled': 50});
+                window.scroll50Tracked = true;
+            }
+            if (scrollDepth >= 75 && !window.scroll75Tracked) {
+                trackEvent('scroll_tracking', {'percent_scrolled': 75});
+                window.scroll75Tracked = true;
+            }
+            if (scrollDepth >= 90 && !window.scroll90Tracked) {
+                trackEvent('scroll_tracking', {'percent_scrolled': 90});
+                window.scroll90Tracked = true;
+            }
+        }
+        
+        // Time on Page Tracking
+        function trackTimeOnPage() {
+            var timeSpent = Math.floor((Date.now() - window.pageLoadTime) / 1000);
+            
+            if (timeSpent >= 30 && !window.time30Tracked) {
+                trackEvent('engagement', {'time_on_page': 30});
+                window.time30Tracked = true;
+            }
+            if (timeSpent >= 60 && !window.time60Tracked) {
+                trackEvent('engagement', {'time_on_page': 60});
+                window.time60Tracked = true;
+            }
+            if (timeSpent >= 120 && !window.time120Tracked) {
+                trackEvent('engagement', {'time_on_page': 120});
+                window.time120Tracked = true;
+            }
+        }
+        
+        // Initialize tracking
+        window.addEventListener('load', function() {
+            window.pageLoadTime = Date.now();
+            trackPlanView();
+            
+            // Scroll tracking
+            window.addEventListener('scroll', trackScrollDepth);
+            
+            // Time on page tracking (check every 10 seconds)
+            setInterval(trackTimeOnPage, 10000);
+        });
+    </script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        
+        fbq('init', 'XXXXXXXXXXXXXXXX'); // Replace with your Pixel ID
+        fbq('track', 'PageView');
+        
+        // Custom Events
+        function trackFBEvent(eventName, parameters) {
+            fbq('track', eventName, parameters);
+            console.log('FB Event:', eventName, parameters);
+        }
+        
+        // ViewContent Event (Plan View)
+        function trackFBPlanView() {
+            trackFBEvent('ViewContent', {
+                'content_name': 'Plan Exclusivo Salento, Filandia y Coffee Tour El Ocaso',
+                'content_category': 'Tour Packages',
+                'content_ids': ['plan-exclusivo-salento-filandia-ocaso'],
+                'content_type': 'product',
+                'value': 280,
+                'currency': 'EUR',
+                'market': 'Spain'
+            });
+        }
+        
+        // Lead Event (WhatsApp Contact)
+        function trackFBLead(source) {
+            trackFBEvent('Lead', {
+                'content_name': 'Plan Exclusivo WhatsApp Contact',
+                'content_category': 'Contact Form',
+                'source': source,
+                'value': 280,
+                'currency': 'EUR'
+            });
+        }
+        
+        // InitiateCheckout Event (Intent to Book)
+        function trackFBInitiateCheckout() {
+            trackFBEvent('InitiateCheckout', {
+                'content_name': 'Plan Exclusivo Booking Intent',
+                'content_category': 'Tour Booking',
+                'value': 280,
+                'currency': 'EUR',
+                'num_items': 1
+            });
+        }
+        
+        // Initialize FB tracking
+        window.addEventListener('load', function() {
+            trackFBPlanView();
+        });
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
     
     <!-- WhatsApp Template Handler -->
     <script src="assets/js/whatsapp-template-handler.js" defer></script>
@@ -507,21 +925,27 @@
         function trackWhatsAppClick(source) {
             console.log('WhatsApp click tracked from:', source);
             
-            // Google Analytics Event (placeholder - replace with actual GA code)
+            // Google Analytics Event
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'whatsapp_click', {
                     'event_category': 'contact',
                     'event_label': source,
                     'value': 1
                 });
+                
+                // Generate Lead Event
+                trackContactRequest(source);
             }
             
-            // Facebook Pixel Event (placeholder - replace with actual Pixel code)
+            // Facebook Pixel Event
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Contact', {
                     'content_name': 'Plan Exclusivo WhatsApp',
                     'content_category': 'Contact Form'
                 });
+                
+                // Lead Event
+                trackFBLead(source);
             }
             
             return true;
@@ -534,14 +958,78 @@
                 link.addEventListener('click', function(e) {
                     var source = this.closest('.hero') ? 'hero' : 
                                this.closest('.plan-cta') ? 'cta_section' : 
-                               this.closest('.plan-europe-pricing') ? 'europe_pricing' : 'other';
+                               this.closest('.plan-europe-pricing') ? 'europe_pricing' : 
+                               this.closest('.whatsapp-float') ? 'floating_button' : 'other';
                     trackWhatsAppClick(source);
                 });
+            });
+            
+            // Mobile Menu Functionality
+            var mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            var mobileMenuClose = document.getElementById('mobileMenuClose');
+            var mobileMenu = document.getElementById('mobileMenu');
+            var mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            
+            function openMobileMenu() {
+                mobileMenu.classList.add('active');
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeMobileMenu() {
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', openMobileMenu);
+            }
+            
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', closeMobileMenu);
+            }
+            
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            }
+            
+            // Close menu when clicking on menu items
+            var mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(function(link) {
+                link.addEventListener('click', closeMobileMenu);
             });
         });
     </script>
 </head>
 <body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Cerrar menú">
+            <i class="fas fa-times"></i>
+        </button>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="assets/images/logo_quindio_travel.png" alt="Quindío Travel" style="width: 80px; height: auto;">
+        </div>
+        <a href="index.html">Inicio</a>
+        <a href="planes.html">Planes</a>
+        <a href="salento.html">Salento</a>
+        <a href="valle-de-cocora.html">Valle de Cocora</a>
+        <a href="parque-del-cafe.html">Parque del Café</a>
+        <a href="blog.html">Blog</a>
+        <a href="https://wa.me/573174426044" target="_blank" style="background: #25D366; padding: 15px; border-radius: 8px; text-align: center; margin-top: 20px;">
+            <i class="fab fa-whatsapp"></i> Contactar
+        </a>
+    </nav>
+
     <!-- Header -->
     <header>
         <div class="container header-content">
@@ -912,6 +1400,64 @@
                     </div>
                 </div>
 
+                <div class="policies-section" style="background: #fff; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <h3>📜 Políticas y Condiciones - Mercado Español</h3>
+                    <p style="margin-bottom: 20px; color: #666;">Términos específicos para turistas desde Madrid y Barcelona:</p>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--verde-cafe); margin-bottom: 10px;">💶 Precios y Pagos en Euros</h4>
+                        <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">✅ <strong>Precios en EUR:</strong> Desde 280€ por persona (sujeto a tipo de cambio oficial)</li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">✅ <strong>Reserva:</strong> 30% de anticipo para confirmar reserva</li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">✅ <strong>Pago restante:</strong> 7 días antes del inicio del viaje</li>
+                                <li style="padding: 8px 0;">✅ <strong>Métodos de pago:</strong> Transferencia bancaria, tarjeta de crédito (Visa/Mastercard), PayPal</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--verde-cafe); margin-bottom: 10px;">🔄 Política de Cancelación (EUR)</h4>
+                        <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">📅 <strong>Más de 30 días:</strong> Reembolso completo (100%)</li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">📅 <strong>15-30 días:</strong> Reembolso del 50%</li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">📅 <strong>7-14 días:</strong> Reembolso del 25%</li>
+                                <li style="padding: 8px 0;">📅 <strong>Menos de 7 días:</strong> Sin reembolso</li>
+                            </ul>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #666; font-style: italic;">* Se permiten cambios de fecha sin costo con 15 días de antelación.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--verde-cafe); margin-bottom: 10px;">🛡️ Garantías y Seguros</h4>
+                        <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">✅ <strong>Asistencia médica:</strong> Incluida durante el viaje</li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">✅ <strong>Seguro de viaje:</strong> Recomendado para cobertura adicional</li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">✅ <strong>Garantía de servicio:</strong> Operador turístico RNT 18152 regulado</li>
+                                <li style="padding: 8px 0;">✅ <strong>Reembolso garantizado:</strong> Política transparente de devoluciones</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--verde-cafe); margin-bottom: 10px;">📞 Soporte para Clientes Españoles</h4>
+                        <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">🇪🇸 <strong>Atención en español:</strong> WhatsApp +57 317 442 6044</li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">⏰ <strong>Horario:</strong> Lunes a viernes 8:00-18:00 (UTC-5)</li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #eee;">📧 <strong>Email:</strong> info@quindiotravel.com.co</li>
+                                <li style="padding: 8px 0;">🌐 <strong>Soporte online:</strong> Respuesta en menos de 24 horas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #e7f3ff; padding: 15px; border-radius: 8px; border-left: 4px solid #2196F3;">
+                        <p><strong>💱 Tipo de cambio:</strong> Los precios en EUR se basan en el tipo de cambio oficial del día de la reserva. Quindío Travel se reserva el derecho de ajustar precios si el tipo de cambio varía significativamente (±5%).</p>
+                    </div>
+                </div>
+
                 <div class="gallery-section">
                     <h3>📸 Galería del Plan Exclusivo</h3>
                     <p>Imágenes de las experiencias y destinos que vivirás en este plan:</p>
@@ -989,6 +1535,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573174426044?text=Hola,%20quiero%20cotizar%20el%20Plan%20Exclusivo%20Salento,%20Filandia%20y%20Coffee%20Tour%20El%20Ocaso" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i>
+        <span class="whatsapp-text">Cotizar Plan</span>
+    </a>
 
     <script src="assets/js/whatsapp-template-handler.js"></script>
 </body>
