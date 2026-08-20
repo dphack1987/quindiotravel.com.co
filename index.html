@@ -3642,21 +3642,12 @@
     background-repeat: no-repeat !important;
   }
 </style>
-<style id="nav-menu-visibility-fix">
-  /* Ocultar el menu colapsado por defecto en pantallas pequeñas */
-  @media (max-width: 768px) {
-    .nav-menu:not(.active),
-    .mobile-menu:not(.active),
-    .nav-links:not(.active) {
-      display: none !important;
-    }
-  }
-  
-  /* Asegurar que la barra de navegacion mantenga su flujo y altura limpia */
-  header.main-header, .main-header {
-    position: relative !important;
-    z-index: 1000 !important;
-    overflow: visible !important;
+<style id="nav-header-clean-fix">
+  /* Fix exclusivo para el logo sin afectar la apertura del menú */
+  .nav-logo img, header .nav-logo img {
+    max-height: 38px !important;
+    width: auto !important;
+    object-fit: contain !important;
   }
 </style>
 </head>
