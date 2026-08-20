@@ -3540,45 +3540,31 @@
     </script>
 
 
-<style id="header-white-clean-fix">
-  html, body {
+<style id="move-logo-to-card-fix">
+  /* Eliminar espacio/franja intermedia debajo del header */
+  .hero-logo-container, .hero-top-strip, header + div:not(.hero-banner):not(.main-content) {
+    display: none !important;
+  }
+
+  /* Asegurar que el banner promocional quede pegado al header */
+  .hero, .hero-banner, .promo-card-container {
     margin-top: 0 !important;
     padding-top: 0 !important;
+    position: relative !important;
   }
 
-  /* Header flexible sin desbordes */
-  header, .main-header, .nav-container {
-    background: #ffffff !important;
-    margin: 0 !important;
-    padding: 8px 12px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    overflow: visible !important;
-  }
-
-  /* Contenedor del logo con espacio suficiente */
-  .nav-logo, header .nav-logo {
-    display: flex !important;
-    align-items: center !important;
-    flex-shrink: 0 !important;
-    margin-right: 10px !important;
-  }
-
-  /* Tamaño proporcional del logo sin recortes */
-  .nav-logo img, header img[src*="logo_quindio_travel"] {
-    height: 48px !important;
-    max-height: 48px !important;
-    width: auto !important;
-    object-fit: contain !important;
-    display: block !important;
-  }
-
-  /* Ajuste de controles de la derecha */
-  header .nav-controls, header .nav-right, header select {
-    font-size: 13px !important;
+  /* Estilo para superponer el logo dentro de la tarjeta de la foto */
+  .promo-logo-overlay {
+    position: absolute !important;
+    top: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 10 !important;
+    max-width: 160px !important;
+    width: 45% !important;
+    height: auto !important;
+    filter: drop-shadow(0px 2px 6px rgba(0,0,0,0.6)) !important;
+    pointer-events: none !important;
   }
 </style>
 </head>
