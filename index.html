@@ -3642,6 +3642,23 @@
     background-repeat: no-repeat !important;
   }
 </style>
+<style id="nav-menu-visibility-fix">
+  /* Ocultar el menu colapsado por defecto en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .nav-menu:not(.active),
+    .mobile-menu:not(.active),
+    .nav-links:not(.active) {
+      display: none !important;
+    }
+  }
+  
+  /* Asegurar que la barra de navegacion mantenga su flujo y altura limpia */
+  header.main-header, .main-header {
+    position: relative !important;
+    z-index: 1000 !important;
+    overflow: visible !important;
+  }
+</style>
 </head>
 <body>
 
