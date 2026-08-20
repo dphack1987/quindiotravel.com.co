@@ -3540,121 +3540,66 @@
     </script>
 
 
-<style id="clean-floating-bar">
-  body > div[style*="fixed"],
-  body > div[style*="sticky"],
-  .floating-bar, .sticky-bar, .urgency-bar, .timer-bar-wrapper {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    overflow: hidden !important;
-  }
-</style>
-
-<!-- LOGO_FIX_GLOBAL -->
-<style>
-  header img, .nav-logo img {
-    height: 35px !important;
-    width: auto !important;
-    max-height: 35px !important;
-    object-fit: contain !important;
-  }
-  .logo-hero-container img {
-    height: 75px !important;
-    width: auto !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    display: block !important;
-    margin: 0 auto !important;
-  }
-  .logo-hero-container {
-    background: #ffffff !important;
-    text-align: center !important;
-    padding: 12px 10px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-</style>
-<!-- /LOGO_FIX_GLOBAL -->
-<style id="custom-logo-fix">
-  /* 1. Header flexible */
-  header, nav, .site-header, .navbar {
+<style id="header-mobile-definitive-fix">
+  /* Asegurar que la barra de navegación tenga altura y flujo correcto */
+  header.main-header, .main-header {
+    position: relative !important;
+    z-index: 9999 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 8px 15px !important;
-    min-height: 65px !important;
-    height: auto !important;
-    box-sizing: border-box !important;
+    padding: 10px 15px !important;
+    background: #ffffff !important;
   }
 
-  /* 2. Logo Navbar desplazado ligeramente a la derecha */
-  .nav-logo, header a[href="index.html"] {
+  /* Ajuste estricto del logo para evitar cortes */
+  .nav-logo, header .nav-logo {
     display: flex !important;
     align-items: center !important;
-    align-self: center !important;
-    margin-left: 15px !important;
-    padding: 0 !important;
+    max-height: 40px !important;
   }
-  .nav-logo img, header a[href="index.html"] img {
+  .nav-logo img, header .nav-logo img {
     height: 38px !important;
     max-height: 38px !important;
     width: auto !important;
     object-fit: contain !important;
-    display: block !important;
   }
 
-  /* 3. Logo Central más grande y bien proporcionado */
-  .logo-hero-container {
-    background: #ffffff !important;
-    width: 100% !important;
-    padding: 25px 15px !important;
-    margin-top: 15px !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    clear: both !important;
-  }
-  .logo-hero-container img {
-    height: 110px !important;
-    max-height: 110px !important;
-    width: auto !important;
-    max-width: 90% !important;
-    object-fit: contain !important;
-    display: block !important;
-    margin: 0 auto !important;
-  }
-</style>
-<style id="hotel-card-fix">
-  .hotel-img {
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    width: 100% !important;
-    height: 180px !important;
-  }
-</style>
-<style id="experiencia-card-fix">
-  .experiencia-card {
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-  }
-</style>
-<style id="nav-header-clean-fix">
-  /* Fix exclusivo para el logo sin afectar la apertura del menú */
-  .nav-logo img, header .nav-logo img {
-    max-height: 38px !important;
-    width: auto !important;
-    object-fit: contain !important;
+  /* Control estricto del menú desplegable en pantallas móviles */
+  @media (max-width: 768px) {
+    .nav-menu, .nav-links, header ul.nav-menu {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      width: 100% !important;
+      background: #ffffff !important;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+      z-index: 9998 !important;
+      margin: 0 !important;
+      padding: 15px 0 !important;
+      /* Ocultar por defecto usando clip/opacity/display para no interferir con clases activas */
+    }
+
+    /* Ocultar el menú cuando NO tiene la clase activa */
+    .nav-menu:not(.active), 
+    .nav-links:not(.active), 
+    header ul.nav-menu:not(.active) {
+      display: none !important;
+    }
+
+    /* Mostrar el menú únicamente cuando JavaScript le añade .active */
+    .nav-menu.active, 
+    .nav-links.active, 
+    header ul.nav-menu.active {
+      display: block !important;
+    }
   }
 </style>
 </head>
 <body>
 
     <header class="main-header">
-  <a href="index.html" class="nav-logo"><img src="assets/images/logo_quindio_travel.png" alt="Quindío Travel"></a>
+  <a href="index.html" class="nav-logo"><img src="assets/images/logo_quindio_travel.png" alt="Quindío Travel" style="max-height: 38px; width: auto; object-fit: contain;"></a>
   
   
         <div class="container nav-container">
