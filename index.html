@@ -3541,27 +3541,44 @@
 
 
 <style id="header-white-clean-fix">
-  /* Reset de márgenes del body para eliminar la franja gris superior */
   html, body {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
 
-  /* Header principal con fondo blanco solido */
+  /* Header flexible sin desbordes */
   header, .main-header, .nav-container {
-    background-color: #ffffff !important;
     background: #ffffff !important;
     margin: 0 !important;
-    padding: 8px 15px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    padding: 8px 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    overflow: visible !important;
   }
 
-  /* Aumento de tamaño del logo superior a 52px */
+  /* Contenedor del logo con espacio suficiente */
+  .nav-logo, header .nav-logo {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    margin-right: 10px !important;
+  }
+
+  /* Tamaño proporcional del logo sin recortes */
   .nav-logo img, header img[src*="logo_quindio_travel"] {
-    height: 52px !important;
-    max-height: 52px !important;
+    height: 48px !important;
+    max-height: 48px !important;
     width: auto !important;
     object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Ajuste de controles de la derecha */
+  header .nav-controls, header .nav-right, header select {
+    font-size: 13px !important;
   }
 </style>
 </head>
