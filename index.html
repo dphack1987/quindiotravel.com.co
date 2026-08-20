@@ -3557,9 +3557,7 @@
     <header class="main-header">
         <div class="container nav-container">
             <div class="logo">
-                <a href="index.html" aria-label="Inicio Quindío Travel" style="display: flex; align-items: center; text-decoration: none;">
-                    <img src="logo_quindio_travel.png" alt="Quindío Travel Logo" style="height: 50px; width: auto; max-width: 220px; display: block; object-fit: contain;">
-                </a>
+                
             </div>
             <nav class="nav-menu" id="nav-menu" aria-label="Menú principal">
                 <ul>
@@ -3601,9 +3599,9 @@
     <!-- Sección Promoción del Mes - Vientos de Agosto 2026 -->
     
 <!-- LOGO CENTRADO EN ESPACIO INTERMEDIO -->
-<div class="logo-hero-container" style="text-align: center; padding: 20px 0 10px 0; margin-top: 80px; position: relative; z-index: 10;">
+<div class="logo-hero-container" style="text-align: center; padding: 15px 0; margin-top: 70px; position: relative; z-index: 10;">
   <a href="index.html" style="display: inline-block;">
-    <img src="assets/images/logo.png" alt="Quindío Travel Operador Turístico" style="max-height: 75px; width: auto; display: block; margin: 0 auto;">
+    <img src="assets/images/logo_quindio_travel.png" alt="Quindío Travel Operador Turístico" style="max-height: 85px; width: auto; display: block; margin: 0 auto;">
   </a>
 </div>
 <section id="promocion-mes" style="position: relative; z-index: 2; max-width: 1100px; margin: 180px auto 40px auto; background: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
@@ -5213,7 +5211,7 @@
     </footer>
 
     <!-- Popup de Captura de Leads - Quiz de Viajero -->
-    <div id="lead-capture-popup" class="lead-capture-popup">
+    <div id="lead-capture-popup" class="lead-capture-popup" data-popup-type="quiz" style="display: none;">
         <div class="popup-overlay" data-popup-close onclick="closePopup(); return false;"></div>
         <div class="popup-content">
             <button class="popup-close" data-popup-close aria-label="Cerrar popup" onclick="closePopup(); return false;">&times;</button>
@@ -5285,27 +5283,146 @@
         </div>
     </div>
 
+    <!-- Popup Promoción del Mes - Vientos de Agosto -->
+    <div id="promo-popup" class="lead-capture-popup" data-popup-type="promo" style="display: none;">
+        <div class="popup-overlay" data-popup-close onclick="closePopup(); return false;"></div>
+        <div class="popup-content">
+            <button class="popup-close" data-popup-close aria-label="Cerrar popup" onclick="closePopup(); return false;">&times;</button>
+            <div class="popup-header">
+                <h3>🔥 ¡OFERTA EXCLUSIVA AGOSTO 2026!</h3>
+                <p>Vientos de Agosto: 14% OFF en tu viaje al Eje Cafetero</p>
+            </div>
+            <div class="promo-popup-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="assets/images/paisajes/eje-cafetero-aerial-view.jpg" alt="Eje Cafetero" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                    <div style="background: #E63946; color: white; padding: 8px 16px; border-radius: 20px; display: inline-block; font-weight: 800; font-size: 0.9rem; margin-bottom: 15px;">
+                        🔥 14% OFF — PROMOCIÓN DEL MES
+                    </div>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h4 style="color: #1b4332; margin-bottom: 10px;">4 Días / 3 Noches (Todo Incluido)</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;">🏨 Alojamiento campestre con desayuno</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;">🎟️ Pasaportes a parques incluidos</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;">🚐 Traslados privados y asistencia</li>
+                        <li style="padding: 8px 0;">📍 Valle de Cocora, Salento, Filandia, Parque del Café, PANACA, RECUCA</li>
+                    </ul>
+                </div>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                    <div style="color: #888; text-decoration: line-through; font-size: 0.9rem; margin-bottom: 5px;">Precio regular: $1.700.000 COP</div>
+                    <div style="color: #1b4332; font-size: 1.8rem; font-weight: 800;">$1.464.000 <span style="font-size: 0.8rem; color: #666;">/ persona</span></div>
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <a href="https://wa.me/573174426044?text=Hola,%20quiero%20aprovechar%20la%20promoción%20Vientos%20de%20Agosto" target="_blank" style="flex: 1; background: #25D366; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                        💬 Reservar Ahora
+                    </a>
+                    <a href="plan-1.html" style="flex: 1; background: transparent; border: 2px solid #1b4332; color: #1b4332; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center;">
+                        Ver Detalles
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Planes Especiales Diciembre -->
+    <div id="diciembre-popup" class="lead-capture-popup" data-popup-type="diciembre" style="display: none;">
+        <div class="popup-overlay" data-popup-close onclick="closePopup(); return false;"></div>
+        <div class="popup-content">
+            <button class="popup-close" data-popup-close aria-label="Cerrar popup" onclick="closePopup(); return false;">&times;</button>
+            <div class="popup-header">
+                <h3>🎄 PLANES ESPECIALES DICIEMBRE 2026</h3>
+                <p>Vive la magia navideña del Eje Cafetero</p>
+            </div>
+            <div class="promo-popup-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="assets/images/paisajes/valle-cocora-hero-banner.jpg" alt="Navidad Eje Cafetero" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                    <div style="background: linear-gradient(135deg, #1b4332, #2d6a4f); color: white; padding: 8px 16px; border-radius: 20px; display: inline-block; font-weight: 800; font-size: 0.9rem; margin-bottom: 15px;">
+                        🎄 TEMPORADA ALTA
+                    </div>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h4 style="color: #1b4332; margin-bottom: 10px;">4 Días / 3 Noches (Todo Incluido)</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;">🏨 Cabañas y hoteles campestres</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;">🎟️ Parque del Café, PANACA, RECUCA</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #eee;">🚐 Transporte incluido</li>
+                        <li style="padding: 8px 0;">📍 Valle de Cocora, Salento, Filandia decorados navideños</li>
+                    </ul>
+                </div>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                    <div style="color: #1b4332; font-size: 0.9rem; font-weight: 600; margin-bottom: 5px;">Válido: 15 Dic - 20 Ene</div>
+                    <div style="color: #1b4332; font-size: 1.8rem; font-weight: 800;">Desde $1.464.000 <span style="font-size: 0.8rem; color: #666;">/ persona</span></div>
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <a href="https://wa.me/573174426044?text=Hola,%20quiero%20cotizar%20el%20Plan%20Especial%20Diciembre%202026" target="_blank" style="flex: 1; background: #25D366; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                        💬 Cotizar Ahora
+                    </a>
+                    <a href="planes-especiales-diciembre-2026.html" style="flex: 1; background: transparent; border: 2px solid #1b4332; color: #1b4332; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center;">
+                        Ver Detalles
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Variables del quiz
         let quizAnswers = {};
         let currentStep = 1;
         const totalSteps = 4;
 
-        // Mostrar popup después de 30 segundos
-        setTimeout(() => {
-            if (!localStorage.getItem('quizCompleted')) {
-                document.getElementById('lead-capture-popup').style.display = 'block';
+        // Sistema de rotación de popups
+        const popups = [
+            { id: 'lead-capture-popup', type: 'quiz' },
+            { id: 'promo-popup', type: 'promo' },
+            { id: 'diciembre-popup', type: 'diciembre' }
+        ];
+
+        function getPopupToShow() {
+            // Obtener índice almacenado o iniciar en 0
+            let popupIndex = parseInt(localStorage.getItem('popupRotationIndex')) || 0;
+            
+            // Si el usuario completó el quiz, saltar el popup de quiz
+            if (localStorage.getItem('quizCompleted') && popups[popupIndex].type === 'quiz') {
+                popupIndex = (popupIndex + 1) % popups.length;
             }
+            
+            // Guardar el nuevo índice para la próxima visita
+            localStorage.setItem('popupRotationIndex', (popupIndex + 1) % popups.length);
+            
+            return popups[popupIndex];
+        }
+
+        function showRotatedPopup() {
+            // Primero ocultar todos los popups para asegurar que solo uno esté visible
+            const allPopups = document.querySelectorAll('.lead-capture-popup');
+            allPopups.forEach(popup => {
+                popup.style.display = 'none';
+            });
+
+            const popupToShow = getPopupToShow();
+            const popupElement = document.getElementById(popupToShow.id);
+            
+            if (popupElement) {
+                popupElement.style.display = 'block';
+                console.log(`Mostrando popup: ${popupToShow.type}`);
+            }
+        }
+
+        // Mostrar popup después de 30 segundos con rotación
+        setTimeout(() => {
+            showRotatedPopup();
         }, 30000);
 
         // Función closePopup será sobrescrita por el script robusto más abajo
         // Esta función temporal asegura compatibilidad si el script principal no carga
         function closePopup() {
-            const popup = document.getElementById('lead-capture-popup');
-            if (popup) {
+            // Cerrar todos los popups
+            const allPopups = document.querySelectorAll('.lead-capture-popup');
+            allPopups.forEach(popup => {
                 popup.style.display = 'none';
-                document.body.style.overflow = '';
-            }
+            });
+            document.body.style.overflow = '';
         }
 
         // Hacer las funciones del quiz globales para que puedan ser llamadas desde otros scripts
@@ -6219,17 +6336,19 @@
 
 
     <script>
-    // Script CORREGIDO para asegurar que el popup se pueda cerrar correctamente
+    // Script CORREGIDO para asegurar que los popups se puedan cerrar correctamente
     document.addEventListener('DOMContentLoaded', function() {
-        const popup = document.getElementById('lead-capture-popup');
+        const allPopups = document.querySelectorAll('.lead-capture-popup');
         
-        // Función robusta para cerrar popup
+        // Función robusta para cerrar todos los popups
         function closePopup() {
-            if (popup) {
-                popup.style.display = 'none';
-                document.body.style.overflow = ''; // Restaurar scroll del body
-                console.log('Popup cerrado correctamente');
-            }
+            allPopups.forEach(popup => {
+                if (popup) {
+                    popup.style.display = 'none';
+                }
+            });
+            document.body.style.overflow = ''; // Restaurar scroll del body
+            console.log('Todos los popups cerrados correctamente');
         }
         
         // Hacer la función global para que pueda ser llamada desde otros scripts
@@ -6257,8 +6376,8 @@
         });
         
         // Cerrar al hacer click en el overlay (fuera del contenido)
-        const overlay = document.querySelector('.popup-overlay');
-        if (overlay) {
+        const overlays = document.querySelectorAll('.popup-overlay');
+        overlays.forEach(overlay => {
             overlay.addEventListener('click', function(e) {
                 // Solo cerrar si el clic es directamente en el overlay, no en elementos hijos
                 if (e.target === overlay) {
@@ -6268,21 +6387,24 @@
                     closePopup();
                 }
             }, true);
-        }
+        });
         
         // Permitir cerrar con tecla ESC
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && popup && popup.style.display === 'block') {
-                e.preventDefault();
-                console.log('Tecla ESC presionada');
-                closePopup();
+            if (e.key === 'Escape') {
+                const anyPopupVisible = Array.from(allPopups).some(popup => popup.style.display === 'block');
+                if (anyPopupVisible) {
+                    e.preventDefault();
+                    console.log('Tecla ESC presionada');
+                    closePopup();
+                }
             }
         });
         
-        // Asegurar que el popup tenga z-index suficiente
-        if (popup) {
+        // Asegurar que los popups tengan z-index suficiente
+        allPopups.forEach(popup => {
             popup.style.zIndex = '9999';
-        }
+        });
         
         // ===========================
         // FUNCIONALIDAD DEL QUIZ
