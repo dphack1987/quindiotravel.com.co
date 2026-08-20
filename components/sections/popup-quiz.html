@@ -1,0 +1,71 @@
+        <div class="popup-overlay" data-popup-close onclick="closePopup(); return false;"></div>
+        <div class="popup-content">
+            <button class="popup-close" data-popup-close aria-label="Cerrar popup" onclick="closePopup(); return false;">&times;</button>
+            <div class="popup-header">
+                <h3>🎯 Descubre tu Plan Ideal en 2 Minutos</h3>
+                <p>Responde 4 preguntas y recibe una cotización personalizada con -15% de descuento</p>
+            </div>
+            <div class="quiz-container" id="quiz-container">
+                <!-- Pregunta 1 -->
+                <div class="quiz-step active" data-step="1">
+                    <h4>1. ¿Cuántas personas viajarán?</h4>
+                    <div class="quiz-options">
+                        <button type="button" class="quiz-btn" data-quiz-step="1" data-quiz-value="1-2">1-2 personas</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="1" data-quiz-value="3-4">3-4 personas</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="1" data-quiz-value="5-10">5-10 personas</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="1" data-quiz-value="10+">Más de 10 personas</button>
+                    </div>
+                </div>
+                <!-- Pregunta 2 -->
+                <div class="quiz-step" data-step="2">
+                    <h4>2. ¿Cuántos días quieres viajar?</h4>
+                    <div class="quiz-options">
+                        <button type="button" class="quiz-btn" data-quiz-step="2" data-quiz-value="2d">2 días / 1 noche</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="2" data-quiz-value="3d">3 días / 2 noches</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="2" data-quiz-value="4d">4 días / 3 noches</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="2" data-quiz-value="5d">5 días / 4 noches</button>
+                    </div>
+                </div>
+                <!-- Pregunta 3 -->
+                <div class="quiz-step" data-step="3">
+                    <h4>3. ¿Qué experiencia te interesa más?</h4>
+                    <div class="quiz-options">
+                        <button type="button" class="quiz-btn" data-quiz-step="3" data-quiz-value="parques">Parques temáticos (Café, PANACA)</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="3" data-quiz-value="naturaleza">Naturaleza (Valle de Cocora, senderismo)</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="3" data-quiz-value="cultura">Cultura (pueblos, café tradicional)</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="3" data-quiz-value="todo">¡Todo lo anterior!</button>
+                    </div>
+                </div>
+                <!-- Pregunta 4 -->
+                <div class="quiz-step" data-step="4">
+                    <h4>4. ¿Cuándo planeas viajar?</h4>
+                    <div class="quiz-options">
+                        <button type="button" class="quiz-btn" data-quiz-step="4" data-quiz-value="pronto">Esta semana</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="4" data-quiz-value="mes">Próximo mes</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="4" data-quiz-value="temporada">Temporada alta (diciembre-enero)</button>
+                        <button type="button" class="quiz-btn" data-quiz-step="4" data-quiz-value="flexible">Fecha flexible</button>
+                    </div>
+                </div>
+                <!-- Formulario Final -->
+                <div class="quiz-step" data-step="5">
+                    <h4>🎉 ¡Excelente! Último paso:</h4>
+                    <p>Ingresa tus datos para recibir tu cotización personalizada con -15% de descuento</p>
+                    <form class="quiz-form" id="quiz-form">
+                        <input type="text" id="quiz-nombre" placeholder="Tu nombre" required>
+                        <input type="email" id="quiz-email" placeholder="Tu correo electrónico" required>
+                        <input type="tel" id="quiz-whatsapp" placeholder="Tu WhatsApp" required>
+                        <button type="submit" class="btn btn-whatsapp-hero">
+                            <i class="fab fa-whatsapp"></i> Recibir Cotización con Descuento
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text">Pregunta <span id="current-step">1</span> de 4</div>
+            </div>
+        </div>
+    </div>
+

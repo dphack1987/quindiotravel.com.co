@@ -1,0 +1,229 @@
+        <div class="container">
+            <h2 class="section-title">📝 Sistema de Reservas Inteligente</h2>
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 40px; color: var(--marron-madera); font-weight: 500;">
+                Cotiza y reserva tu experiencia al Eje Cafetero en tiempo real. Precios actualizados 2026.
+            </p>
+            
+            <div class="reservas-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                <div class="reservas-form-container" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="color: var(--verde-cafe); margin-bottom: 25px;">📋 Cotizador Inteligente</h3>
+                    
+                    <!-- Barra de progreso -->
+                    <div class="progress-bar-container" style="margin-bottom: 25px;">
+                        <div class="progress-bar" style="height: 6px; background: #e0e0e0; border-radius: 3px; overflow: visible;">
+                            <div class="progress-fill" style="height: 100%; background: var(--verde-cafe); width: 0%; transition: width 0.3s ease;"></div>
+                        </div>
+                        <div class="progress-steps" style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; color: #454545;">
+                            <span class="step active" data-step="1">1. Plan</span>
+                            <span class="step" data-step="2">2. Fechas</span>
+                            <span class="step" data-step="3">3. Datos</span>
+                            <span class="step" data-step="4">4. Confirmar</span>
+                        </div>
+                    </div>
+                    
+                    <form id="reserva-form">
+                        <!-- Paso 1: Selección de Plan -->
+                        <div class="form-step active" data-step="1">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Plan Turístico *</label>
+                                <select id="reserva-plan" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="">Selecciona un plan</option>
+                                    <option value="plan-1">Plan 1 - 2 Días / 1 Noche - Desde $425.000 (Temporada Baja)</option>
+                                    <option value="plan-2">Plan 2 - 3 Días / 2 Noches - Desde $562.000 (Temporada Baja)</option>
+                                    <option value="plan-3">Plan 3 - 4 Días / 3 Noches - Desde $777.000 (Temporada Baja)</option>
+                                    <option value="plan-4">Plan 4 - 4 Días / 3 Noches - Desde $798.000 (Temporada Baja)</option>
+                                    <option value="plan-5">Plan 5 - 4 Días / 3 Noches - Desde $788.000 (Temporada Baja)</option>
+                                    <option value="plan-6">Plan 6 - 5 Días / 4 Noches - Desde $1.008.000 (Temporada Baja)</option>
+                                </select>
+                                <small style="color: #454545; font-size: 0.85rem;">* Precios base temporada baja. Temporada alta (Semanas Santa, receso escolar, puentes, dic-ene) tiene tarifas especiales.</small>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Categoría de Alojamiento *</label>
+                                <select id="reserva-categoria" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="">Selecciona categoría</option>
+                                    <option value="economica">Económico - De La Vega Hotel Campestre, Finca Hotel Dorada</option>
+                                    <option value="intermedia">Intermedio - Cabañas La Esmeralda, Los Aperos</option>
+                                    <option value="intermedia_vip">Intermedio VIP - Los Girasoles, La Tata, Combia</option>
+                                    <option value="vip">VIP - Hotel Campestre Camellias, Mocawa Resort</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Tipo de Transporte *</label>
+                                <select id="reserva-transporte" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="sin_transporte">Sin Transporte (Precios base)</option>
+                                    <option value="radio_taxi">Radio Taxi</option>
+                                    <option value="placa_blanca">Placa Blanca</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="btn btn-green" data-step-button="next" data-target-step="2" style="width: 100%; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                Continuar <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Paso 2: Fechas y Personas -->
+                        <div class="form-step" data-step="2" style="display: none;">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Fecha de Viaje *</label>
+                                <input type="date" id="reserva-fecha" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Número de Adultos *</label>
+                                <input type="number" id="reserva-adultos" min="1" max="30" value="2" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Número de Niños (2-10 años)</label>
+                                <input type="number" id="reserva-ninos" min="0" max="20" value="0" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <!-- Resumen de precio en tiempo real -->
+                            <div class="price-summary" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--verde-cafe);">
+                                <h4 style="color: var(--verde-cafe); margin-bottom: 10px; font-size: 0.9rem;">💰 Estimación de Precio</h4>
+                                <div class="price-details">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #454545;">Temporada aplicada:</span>
+                                        <span id="temporada-aplicada" style="font-weight: 700; color: var(--verde-cafe);">Temporada Baja</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #454545;">Precio por persona:</span>
+                                        <span id="precio-persona" style="font-weight: 700; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #454545;">Total adultos:</span>
+                                        <span id="total-adultos" style="font-weight: 700; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span style="font-size: 0.85rem; color: #454545;">Total niños:</span>
+                                        <span id="total-ninos" style="font-weight: 700; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                    <div style="border-top: 1px solid #ddd; margin-top: 10px; padding-top: 10px; display: flex; justify-content: space-between;">
+                                        <span style="font-weight: 700; color: var(--texto-oscuro);">Total estimado:</span>
+                                        <span id="total-estimado" style="font-weight: 800; font-size: 1.2rem; color: var(--verde-cafe);">$0</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.75rem; color: #888; margin-top: 8px; margin-bottom: 0;">* Precios calculados según portafolio oficial 2026 (tarifas.json)</p>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px;">
+                                <button type="button" class="btn btn-outline-green" data-step-button="prev" data-target-step="1" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fas fa-arrow-left"></i> Atrás
+                                </button>
+                                <button type="button" class="btn btn-green" data-step-button="next" data-target-step="3" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    Continuar <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Paso 3: Datos Personales -->
+                        <div class="form-step" data-step="3" style="display: none;">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Nombre Completo *</label>
+                                <input type="text" id="reserva-nombre" required placeholder="Tu nombre completo" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">WhatsApp / Celular *</label>
+                                <input type="tel" id="reserva-whatsapp" required placeholder="+57 3XX XXX XXXX" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Correo Electrónico *</label>
+                                <input type="email" id="reserva-email" required placeholder="tu@correo.com" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Método de Pago Preferido</label>
+                                <select id="reserva-pago" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                                    <option value="nequi">Nequi / Transferencia Bancaria</option>
+                                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                                    <option value="efectivo">Efectivo (en oficina)</option>
+                                    <option value="empresa">Facturación Empresarial</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 25px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--marron-madera);">Comentarios Adicionales</label>
+                                <textarea id="reserva-comentarios" rows="3" placeholder="Cualquier requerimiento especial, preferencias de alojamiento, etc." style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px;">
+                                <button type="button" class="btn btn-outline-green" data-step-button="prev" data-target-step="2" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fas fa-arrow-left"></i> Atrás
+                                </button>
+                                <button type="button" class="btn btn-green" data-step-button="next" data-target-step="4" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    Revisar <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Paso 4: Confirmación -->
+                        <div class="form-step" data-step="4" style="display: none;">
+                            <div class="confirmation-summary" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                                <h4 style="color: var(--verde-cafe); margin-bottom: 15px; font-size: 1rem;">📋 Resumen de tu Reserva</h4>
+                                <div id="resumen-detallado" style="font-size: 0.9rem; line-height: 1.8;">
+                                    <!-- Se llena dinámicamente -->
+                                </div>
+                            </div>
+                            
+                            <div class="terms-accept" style="margin-bottom: 20px;">
+                                <label style="display: flex; align-items: start; gap: 10px; font-size: 0.85rem; color: #454545;">
+                                    <input type="checkbox" id="aceptar-terminos" required style="margin-top: 3px;">
+                                    <span>Acepto los términos y condiciones y la política de privacidad de Quindío Travel RNT 18152</span>
+                                </label>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px;">
+                                <button type="button" class="btn btn-outline-green" data-step-button="prev" data-target-step="3" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fas fa-arrow-left"></i> Atrás
+                                </button>
+                                <button type="submit" class="btn btn-green" style="flex: 1; padding: 12px; font-size: 1rem; font-weight: 700;">
+                                    <i class="fab fa-whatsapp"></i> Enviar a WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="reservas-info" style="background: linear-gradient(135deg, var(--verde-cafe), var(--verde-claro)); padding: 30px; border-radius: 15px; color: white;">
+                    <h3 style="margin-bottom: 25px;">✅ ¿Cómo funciona tu reserva?</h3>
+                    
+                    <div class="reserva-step" style="margin-bottom: 25px; padding-left: 20px; border-left: 3px solid rgba(255,255,255,0.3);">
+                        <h4 style="margin-bottom: 10px;">1. Completa el formulario</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">Selecciona tu plan, fechas y cantidad de personas. Nosotros te contactaremos en menos de 2 horas hábiles.</p>
+                    </div>
+                    
+                    <div class="reserva-step" style="margin-bottom: 25px; padding-left: 20px; border-left: 3px solid rgba(255,255,255,0.3);">
+                        <h4 style="margin-bottom: 10px;">2. Confirmación y Pago</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">Te enviaremos la cotización detallada con disponibilidad real. Realiza el pago del 30% para confirmar tu reserva.</p>
+                    </div>
+                    
+                    <div class="reserva-step" style="margin-bottom: 25px; padding-left: 20px; border-left: 3px solid rgba(255,255,255,0.3);">
+                        <h4 style="margin-bottom: 10px;">3. ¡Viaja y Disfruta!</h4>
+                        <p style="opacity: 0.9; line-height: 1.6;">Recibirás tu itinerario completo, detalles de transporte y contactos de emergencia 24/7 durante tu viaje.</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin-top: 30px;">
+                        <h4 style="margin-bottom: 15px;"><i class="fas fa-shield-alt"></i> Garantías Quindío Travel</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Operador RNT 18152 Legal</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Pago Seguro Garantizado</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Asistencia Médica Incluida</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check" style="margin-right: 10px;"></i> Cancelación Flexible</li>
+                            <li style="margin-bottom: 0;"><i class="fas fa-check" style="margin-right: 10px;"></i> Soporte 24/7</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="#" data-wa-message="Hola Quindío Travel, deseo hacer una reserva directamente por WhatsApp" target="_blank" rel="noopener" class="btn btn-white wa-cta-link" style="background: white; color: var(--verde-cafe); border: none; padding: 15px 30px; font-weight: 700; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                            <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+

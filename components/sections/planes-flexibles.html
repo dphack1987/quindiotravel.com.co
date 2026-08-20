@@ -1,0 +1,76 @@
+        <div class="container">
+            <div class="flexible-plans-header">
+                <h2 class="section-title">🔧 Personaliza tu Experiencia</h2>
+                <p class="section-subtitle">Crea tu plan ideal según tus preferencias</p>
+            </div>
+            
+            <div class="flexible-plans-grid">
+                <details class="flexible-step-card">
+                    <summary class="flexible-step-summary" style="--card-bg-image: linear-gradient(135deg, #2E5A36, #8D5B4C);">
+                        <span class="step-icon">🧳</span>
+                        <span class="step-title">Selecciona tu Plan</span>
+                    </summary>
+                    <div class="attractions-grid-clean">
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-1" data-name="Plan 1 - Escapada Cafetera de Fin de Semana" required>🧳 Plan 1 - Escapada Cafetera de Fin de Semana</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-2" data-name="Plan 2 - Aventura Natural en el Eje Cafetero">🌿 Plan 2 - Aventura Natural en el Eje Cafetero</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-3" data-name="Plan 3 - Experiencia Completa del Eje Cafetero">☕ Plan 3 - Experiencia Completa del Eje Cafetero</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-4" data-name="Plan 4 - Relax y Aventura en Termales del Eje">♨ Plan 4 - Relax y Aventura en Termales del Eje</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-5" data-name="Plan 5 - Experiencia Premium del Eje Cafetero">⭐ Plan 5 - Experiencia Premium del Eje Cafetero</label>
+                        <label class="attraction-item"><input type="radio" name="plan" value="plan-6" data-name="Plan 6 - La Experiencia Definitiva del Eje Cafetero">🏆 Plan 6 - La Experiencia Definitiva del Eje Cafetero</label>
+                    </div>
+                </details>
+                
+                <details class="flexible-step-card">
+                    <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/paisajes/salento-colombia-beautiful-town.jpg');">
+                        <span class="step-icon">📅</span>
+                        <span class="step-title">Fecha del viaje</span>
+                    </summary>
+                    <div class="duration-options-clean">
+                        <label class="duration-item" for="custom-plan-fecha">Selecciona la fecha de inicio</label>
+                        <input type="date" id="custom-plan-fecha" name="travel-date" required style="width:100%; padding: 12px 14px; border-radius: 10px; border: 2px solid #e0e0e0; background: white; color: #333; font-size: 0.95rem;">
+                    </div>
+                </details>
+                
+                <details class="flexible-step-card">
+                    <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/alojamientos/finca-hotel-los-girasoles.jpg');">
+                        <span class="step-icon">🏨</span>
+                        <span class="step-title">Alojamiento</span>
+                    </summary>
+                    <div class="accommodation-options-clean">
+                        <label class="accommodation-item"><input type="radio" name="accommodation" value="economico">💰 Económico</label>
+                        <label class="accommodation-item"><input type="radio" name="accommodation" value="intermedio">⭐⭐⭐ Intermedio</label>
+                        <label class="accommodation-item"><input type="radio" name="accommodation" value="vip">⭐⭐⭐⭐⭐ VIP</label>
+                    </div>
+                </details>
+                
+                <details class="flexible-step-card">
+                    <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/paisajes/salento-colombia-beautiful-town.jpg');">
+                        <span class="step-icon">👥</span>
+                        <span class="step-title">Número de Personas</span>
+                    </summary>
+                    <div class="people-input-clean">
+                        <input type="number" id="custom-plan-personas" min="1" max="20" value="2" style="width:100%; padding: 12px 14px; border-radius: 10px; border: 2px solid #e0e0e0; background: white; color: #333; font-size: 0.95rem;" />
+                        <small style="display:block; margin-top:8px; color:#f0f0f0; font-size:0.85rem;">Indica cuántas personas viajan</small>
+                    </div>
+                </details>
+                <details class="flexible-step-card">
+                    <summary class="flexible-step-summary" style="--card-bg-image: url('assets/images/paisajes/eje-cafetero-green-mountains.jpg');">
+                        <span class="step-icon">🚐</span>
+                        <span class="step-title">Transporte</span>
+                    </summary>
+                    <div class="accommodation-options-clean">
+                        <label class="accommodation-item"><input type="radio" name="transport" value="Sin transporte" checked>❌ Sin transporte</label>
+                        <label class="accommodation-item"><input type="radio" name="transport" value="Con transporte">🚍 Con transporte</label>
+                    </div>
+                    <small style="display:block; margin-top:8px; color:#f0f0f0; font-size:0.85rem;">Transporte desde Aeropuerto Edén o Terminal de Transportes de Armenia</small>
+                </details>
+            </div>
+            
+            <div class="flexible-cta">
+                <button class="btn-generate-plan" onclick="generateCustomPlan()">
+                    <i class="fas fa-magic"></i> Generar mi Plan Personalizado
+                </button>
+            </div>
+        </div>
+    </section>
+

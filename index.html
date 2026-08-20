@@ -3566,6 +3566,68 @@
     filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.7)) !important;
     pointer-events: none !important;
   }
+
+  /* Control estricto del menú desplegable en pantallas móviles */
+  @media (max-width: 768px) {
+    .nav-menu, .nav-links, header ul.nav-menu {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      width: 100% !important;
+      background: #ffffff !important;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+      z-index: 9998 !important;
+      margin: 0 !important;
+      padding: 15px 0 !important;
+    }
+
+    /* Ocultar el menú cuando NO tiene la clase activa */
+    .nav-menu:not(.nav-menu-open),
+    .nav-links:not(.nav-menu-open),
+    header ul.nav-menu:not(.nav-menu-open) {
+      display: none !important;
+    }
+
+    /* Mostrar el menú únicamente cuando JavaScript le añade .nav-menu-open */
+    .nav-menu.nav-menu-open,
+    .nav-links.nav-menu-open,
+    header ul.nav-menu.nav-menu-open {
+      display: block !important;
+    }
+
+    /* Estilos para enlaces del menú móvil */
+    .nav-menu.nav-menu-open a,
+    .nav-links.nav-menu-open a,
+    header ul.nav-menu.nav-menu-open a {
+      color: #2C3E35 !important;
+      padding: 12px 20px !important;
+      display: block !important;
+      text-align: left !important;
+    }
+
+    .nav-menu.nav-menu-open ul,
+    .nav-links.nav-menu-open ul,
+    header ul.nav-menu.nav-menu-open ul {
+      flex-direction: column !important;
+      gap: 0 !important;
+    }
+  }
+
+  /* Asegurar que el menú se muestre en desktop */
+  @media (min-width: 769px) {
+    .nav-menu, .nav-links, header ul.nav-menu {
+      display: flex !important;
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      width: auto !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      z-index: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
 </style>
 </head>
 <body>
