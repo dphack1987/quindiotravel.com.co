@@ -53,6 +53,100 @@
     }
 }
 
+/* ============================================================
+   MEJORAS DE ACCESIBILIDAD - NAVEGACIÓN POR TECLADO
+   ============================================================ */
+
+/* Skip Link Styles */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #2E5A36;
+    color: white;
+    padding: 8px 16px;
+    z-index: 10000;
+    transition: top 0.3s;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid #F4D35E;
+    outline-offset: 2px;
+}
+
+/* Focus Visible Improvements */
+*:focus-visible {
+    outline: 3px solid #F4D35E;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.btn:focus-visible,
+.filter-btn:focus-visible,
+.btn-plan-enhanced:focus-visible,
+.btn-hotel-card:focus-visible,
+.breadcrumb-link:focus-visible,
+.urgency-banner-cta:focus-visible,
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(244, 211, 94, 0.9);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(46, 90, 54, 0.3);
+}
+
+/* High Contrast Focus for Better Visibility */
+a:focus,
+button:focus,
+select:focus,
+input:focus {
+    outline: 3px solid #F4D35E;
+    outline-offset: 2px;
+}
+
+/* Remove default outline only when mouse is used */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Keyboard Navigation Improvements */
+.main-nav a:focus,
+.blog-card a:focus,
+.language-selector:focus {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+/* Ensure interactive elements are clearly identifiable */
+button, 
+a[href], 
+input[type="submit"], 
+input[type="button"], 
+[role="button"] {
+    cursor: pointer;
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .skip-link {
+        transition: none;
+    }
+}
+
 .btn:focus-visible,
 .filter-btn:focus-visible,
 .btn-plan-enhanced:focus-visible,
