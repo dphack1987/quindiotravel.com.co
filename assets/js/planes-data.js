@@ -292,22 +292,17 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
     // Obtener foto del primer alojamiento asociado
     const primerAlojamiento = plan.alojamientosAsociados[0];
     const fotosAlojamiento = {
-      "hotel-campestre-la-tata": "assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata.jpg",
-      "de-la-vega-hotel-campestre": "assets/images/alojamientos/hotel-de-la-vega/hotel-campestre-de-la-vega-3.webp",
-      "finca-hotel-dorada": "assets/images/alojamientos/finca-hotel-la-dorada/1414317914.webp",
-      "cabanas-la-esmeralda": "assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.jpg",
-      "finca-hotel-los-girasoles": "assets/images/alojamientos/finca-hotel-los-girasoles/Finca-los-Girasoles-7.jpg",
-      "hotel-campestre-cafe-cafe": "assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.jpg",
-      "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-las-camelias.jpg"
+      "de-la-vega-hotel-campestre": "assets/images/alojamientos/hotel-de-la-vega/eaa775d5.avif",
+      "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-campestre-las-camelias/hotel-campestre-las-camelias.avif"
     };
     
-    const fotoAlojamiento = fotosAlojamiento[primerAlojamiento] || "assets/images/alojamientos/cafetal.jpg";
+    const fotoAlojamiento = fotosAlojamiento[primerAlojamiento] || null;
     
     const card = document.createElement("div");
     card.className = "plan-card-enhanced";
     card.innerHTML = `
       <div class="plan-card-image-enhanced">
-        <img src="${fotoAlojamiento}" alt="${plan.titulo}">
+        ${fotoAlojamiento ? `<img src="${fotoAlojamiento}" alt="${plan.titulo}">` : '<div class="plan-card-placeholder"></div>'}
         <div class="plan-badge-overlay">
           <div class="plan-badge-enhanced">${plan.badge}</div>
         </div>

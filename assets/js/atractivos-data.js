@@ -32,13 +32,8 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año",
     nivelDificultad: "Fácil",
     accesibilidad: "Totalmente accesible",
-    logo: "assets/images/destinos/logo_parque_del_cafe.jpg",
-    imagenes: [
-      "assets/images/atractivos/parque-del-cafe.jpg",
-      "parque-del-cafe/PDC_ParqueDelCafe_001.jpg",
-      "parque-del-cafe/parque-del-cafe-20-870x555.jpg",
-      "parque-del-cafe/caption.jpg"
-    ],
+    logo: null,
+    imagenes: [],
     precioEntrada: "Desde $75,000 COP",
     planesAsociados: ["plan-1", "plan-2", "plan-3", "plan-4", "plan-6"],
     keywords: ["parque temático", "café", "montenegro", "atracciones mecánicas", "shows culturales"]
@@ -75,12 +70,8 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año",
     nivelDificultad: "Fácil",
     accesibilidad: "Totalmente accesible",
-    logo: "assets/images/destinos/logo_panaca.png",
-    imagenes: [
-      "assets/images/atractivos/panaca.jpg",
-      "panaca/panaca-imagen.jpg",
-      "panaca/ZIP-LINE.webp"
-    ],
+    logo: null,
+    imagenes: [],
     precioEntrada: "Desde $45,000 COP",
     planesAsociados: ["plan-1", "plan-2"],
     keywords: ["parque agropecuario", "animales", "quimbaya", "educación", "familia"]
@@ -118,10 +109,7 @@ const atractivosData = [
     nivelDificultad: "Moderado",
     accesibilidad: "Parcialmente accesible",
     logo: null,
-    imagenes: [
-      "assets/images/paisajes/foto_hero1.jpg",
-      "assets/images/planes/plan-3.jpg"
-    ],
+    imagenes: [],
     precioEntrada: "Entrada gratuita",
     planesAsociados: ["plan-3", "plan-4", "plan-6"],
     keywords: ["palma de cera", "senderismo", "salento", "naturaleza", "patrimonio"]
@@ -159,9 +147,7 @@ const atractivosData = [
     nivelDificultad: "Fácil",
     accesibilidad: "Parcialmente accesible",
     logo: null,
-    imagenes: [
-      "assets/images/paisajes/foto_hero1.jpg"
-    ],
+    imagenes: [],
     precioEntrada: "Acceso gratuito",
     planesAsociados: ["plan-2", "plan-3", "plan-6"],
     keywords: ["pueblo patrimonio", "arquitectura", "artesanías", "balcones", "cultura"]
@@ -199,9 +185,7 @@ const atractivosData = [
     nivelDificultad: "Fácil",
     accesibilidad: "Parcialmente accesible",
     logo: null,
-    imagenes: [
-      "assets/images/paisajes/foto_hero1.jpg"
-    ],
+    imagenes: [],
     precioEntrada: "Acceso gratuito",
     planesAsociados: ["plan-3", "plan-6"],
     keywords: ["mirador cóndor", "artesanías", "guadua", "pueblo colonial", "vistas"]
@@ -240,9 +224,7 @@ const atractivosData = [
     accesibilidad: "Totalmente accesible",
     logo: null,
     imagenes: [
-      "assets/images/atractivos/termales-santa-rosa.jpg",
-      "termales-de-santa-rosa/termales-santa-rosa-cabal-hotel-2k1-scaled.jpg",
-      "termales-de-santa-rosa/termales-santa-rosa-03.jpg"
+      "assets/images/atractivos/termales-santa-rosa/termales-santa-rosa.avif"
     ],
     precioEntrada: "Desde $120,000 COP",
     planesAsociados: ["plan-4", "plan-6"],
@@ -280,12 +262,8 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año (mejor en cosecha)",
     nivelDificultad: "Moderado",
     accesibilidad: "Parcialmente accesible",
-    logo: "assets/images/destinos/logo_recuca.png",
-    imagenes: [
-      "assets/images/atractivos/recuca.jpg",
-      "recuca/recuca-sendero-cafetero.jpg",
-      "recuca/recuca7.jpg"
-    ],
+    logo: null,
+    imagenes: [],
     precioEntrada: "Desde $60,000 COP",
     planesAsociados: ["plan-2", "plan-3", "plan-5"],
     keywords: ["café", "cultura", "sendero", "cata", "tradición"]
@@ -324,8 +302,7 @@ const atractivosData = [
     accesibilidad: "Parcialmente accesible",
     logo: null,
     imagenes: [
-      "assets/images/atractivos/quinti-patas-arriba.jpg",
-      "quinti-patas-arriba/qintiparque.jpg"
+      "assets/images/atractivos/quinti-patas-arriba/quinti-patas-arriba.avif"
     ],
     precioEntrada: "Desde $55,000 COP",
     planesAsociados: ["plan-5"],
@@ -363,11 +340,8 @@ const atractivosData = [
     temporadaRecomendada: "Todo el año",
     nivelDificultad: "Fácil",
     accesibilidad: "Parcialmente accesible",
-    logo: "assets/images/destinos/logo_parque_los_arrieros.png",
-    imagenes: [
-      "assets/images/destinos/logo_parque_los_arrieros.png",
-      "quinti-patas-arriba/qintiparque.jpg"
-    ],
+    logo: null,
+    imagenes: [],
     precioEntrada: "Desde $55,000 COP",
     planesAsociados: [],
     keywords: ["arrieros", "mulas", "cultura", "tradición", "ganadería"]
@@ -406,12 +380,47 @@ const atractivosData = [
     accesibilidad: "Totalmente accesible",
     logo: null,
     imagenes: [
-      "assets/images/atractivos/mariposario.jpg",
-      "mariposario/contamos-con-el-mariposario.jpg"
+      "assets/images/atractivos/mariposario/mariposa4.avif"
     ],
     precioEntrada: "Desde $25,000 COP",
     planesAsociados: [],
     keywords: ["mariposas", "naturaleza", "educación", "jardines", "conservación"]
+  },
+  {
+    id: "cabalgatas",
+    nombre: "Cabalgatas",
+    nombreCorto: "Cabalgatas",
+    categoria: "Experiencia",
+    ubicacion: "Quindío",
+    descripcion: "Recorridos a caballo por paisajes cafeteros del Quindío.",
+    descripcionDetallada: "Experiencias de cabalgata por los hermosos paisajes cafeteros del Quindío con guías locales.",
+    caracteristicas: [
+      "Recorridos guiados",
+      "Paisajes cafeteros",
+      "Caballos entrenados",
+      "Experiencia segura",
+      "Diferentes rutas"
+    ],
+    actividades: [
+      "Cabalgata por paisajes cafeteros",
+      "Recorridos con guía",
+      "Fotografía de paisajes",
+      "Experiencia ecoturística"
+    ],
+    horario: "Cita previa",
+    duracionRecomendada: "2-4 horas",
+    temporadaRecomendada: "Todo el año",
+    nivelDificultad: "Fácil",
+    accesibilidad: "Parcialmente accesible",
+    logo: null,
+    imagenes: [
+      "assets/images/atractivos/cabalgatas/cabalgatas card.jfif",
+      "assets/images/atractivos/cabalgatas/images (2).jfif",
+      "assets/images/atractivos/cabalgatas/images.jfif"
+    ],
+    precioEntrada: "Desde $80,000 COP",
+    planesAsociados: [],
+    keywords: ["cabalgatas", "caballos", "paisajes", "ecoturismo", "guías"]
   }
 ];
 

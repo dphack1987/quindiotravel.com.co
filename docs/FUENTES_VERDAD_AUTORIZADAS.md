@@ -12,6 +12,7 @@
 | Documento | Uso | Estado | Observaciones |
 |-----------|-----|--------|---------------|
 | `docs/informacion-de-precios/PORTAFOLIO PLANES NACIONALES 2026.docx` | Precios planes 1-6 | ✅ OFICIAL | Fuente de verdad definitiva |
+| `docs/plan_turistico_exclusivo/Plan salento filandia Y ocaso.docx` | Plan Exclusivo Salento-Filandia-Ocaso | ✅ OFICIAL | Plan especial 4D/3N inmersión cafetera |
 | `docs/PLANES_ESPECIALES_DICIEMBRE.md` | Planes especiales temporada alta | ✅ OFICIAL | Temporada alta diciembre |
 | `promo-agosto-2026.html` | Promoción del mes agosto | ✅ OFICIAL | Plan Vientos de Agosto 2026 |
 | `documentation_archive/PROMO_SEO_VISUAL_IMPROVEMENT_GUIDE.md` | Guía SEO promoción agosto | ✅ OFICIAL | Estrategia y mejoras |
@@ -71,6 +72,25 @@
 | Intermedio VIP | 1.670.000 | 2.465.000 | 2.150.000 | 1.995.000 | 1.950.000 |
 | VIP | 3.180.000 | 3.960.000 | 3.510.000 | 3.280.000 | 3.240.000 |
 
+### **PLAN EXCLUSIVO SALENTO-FILANDIA-OCASO (4D/3N):**
+**Fuente:** `docs/plan_turistico_exclusivo/Plan salento filandia Y ocaso.docx`
+
+| Alojamiento | Doble | Triple | Cuádruple |
+|------------|-------|--------|-----------|
+| Hotel Vista Hermosa o similar | $1.830.000 | $1.480.000 | $1.310.000 |
+
+**Incluye:**
+- 3 noches de alojamiento en Hotel Vista Hermosa o similar en Salento
+- 3 desayunos (SOLO INCLUYE DESAYUNOS)
+- Valle de Cocora con Mirador el Bosque
+- Filandia: Mirador, Museo del Canasto y Calle del Tiempo Detenida
+- Coffee Tour El Ocaso
+- Asistencia médica
+- Transporte desde aeropuerto de Pereira o Armenia al hotel en Salento
+- Transporte a los atractivos propuestos
+- Regreso a aeropuerto de Pereira o Armenia
+- Comisión del 10%
+
 ---
 
 ## ❌ TABLAS NO AUTORIZADAS PARA USO EN WEBSITE
@@ -85,13 +105,14 @@
 
 ## ✅ REGLAS DE IMPLEMENTACIÓN
 
-1. **Usar solo categoría ECONÓMICO** como precio base en website
+1. **Usar solo categoría ECONÓMICO** como precio base en website (planes 1-6)
 2. **Mostrar otras categorías** como opciones en cotizador
-3. **Temporada alta** disponible en:
+3. **Plan Exclusivo Salento-Filandia-Ocaso** usa precios desde acomodación cuádruple como base
+4. **Temporada alta** disponible en:
    - Documento de planes especiales diciembre (15 dic - 20 ene)
    - Promoción Vientos de Agosto (1-31 agosto)
-4. **Transporte Placa Blanca** solo disponible por cotización especial
-5. **Solo planes 1-6** son autorizados para uso general en el website
+5. **Transporte Placa Blanca** solo disponible por cotización especial
+6. **Planes autorizados** para uso general en el website: planes 1-6 + Plan Exclusivo Salento-Filandia-Ocaso
 
 ---
 

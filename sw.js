@@ -104,8 +104,8 @@ self.addEventListener('install', (event) => {
       // Cachear imágenes principales
       caches.open(IMAGE_CACHE).then(cache => {
         return cache.addAll([
-          '/assets/images/hero/quindio-hero.jpg',
-          '/assets/images/paisajes/foto_hero1.jpg'
+          '/assets/images/paisajes/valle-cocora-hero-banner.jpg',
+          '/assets/images/paisajes/eje-cafetero-aerial-view.webp'
         ]);
       })
     ])
