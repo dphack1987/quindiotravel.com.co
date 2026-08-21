@@ -13,6 +13,7 @@
 |-----------|-----|--------|---------------|
 | `docs/informacion-de-precios/PORTAFOLIO PLANES NACIONALES 2026.docx` | Precios planes 1-6 | ✅ OFICIAL | Fuente de verdad definitiva |
 | `docs/plan_turistico_exclusivo/Plan salento filandia Y ocaso.docx` | Plan Exclusivo Salento-Filandia-Ocaso | ✅ OFICIAL | Plan especial 4D/3N inmersión cafetera |
+| `docs/promocion del mes/promocion del mes vientos de agosto.docx` | Promoción Vientos de Agosto 2026 | ✅ OFICIAL | Promoción especial agosto 2026 |
 | `docs/PLANES_ESPECIALES_DICIEMBRE.md` | Planes especiales temporada alta | ✅ OFICIAL | Temporada alta diciembre |
 | `promo-agosto-2026.html` | Promoción del mes agosto | ✅ OFICIAL | Plan Vientos de Agosto 2026 |
 | `documentation_archive/PROMO_SEO_VISUAL_IMPROVEMENT_GUIDE.md` | Guía SEO promoción agosto | ✅ OFICIAL | Estrategia y mejoras |
@@ -91,6 +92,24 @@
 - Regreso a aeropuerto de Pereira o Armenia
 - Comisión del 10%
 
+### **PROMOCIÓN VIENTOS DE AGOSTO 2026:**
+**Fuente:** `docs/promocion del mes/promocion del mes vientos de agosto.docx`
+
+|| Alojamiento | Doble | Triple | Cuádruple ||
+||------------|-------|--------|-----------||
+|| Cabañas La Esmeralda | $1.479.000 | $1.261.000 | $1.152.000 ||
+|| Hotel Campestre Los Girasoles | $1.915.000 | $1.697.000 | $1.588.000 ||
+|| Hotel Campestre Café Café | $2.097.000 | $1.879.000 | $1.770.000 ||
+
+**Incluye:**
+- 3 noches de alojamiento
+- 3 desayunos y 3 cenas
+- Pasaporte al Parque del Café
+- Valle de Cocora, Salento y Filandia (mirador, museo del canasto, calle del tiempo detenida)
+- Parque PANACA y Parque RECUCA
+- Asistencia médica
+- Transporte desde terminal de transporte hasta alojamiento y atractivos propuestos
+
 ---
 
 ## ❌ TABLAS NO AUTORIZADAS PARA USO EN WEBSITE
@@ -110,9 +129,10 @@
 3. **Plan Exclusivo Salento-Filandia-Ocaso** usa precios desde acomodación cuádruple como base
 4. **Temporada alta** disponible en:
    - Documento de planes especiales diciembre (15 dic - 20 ene)
+5. **Promociones especiales** disponibles en:
    - Promoción Vientos de Agosto (1-31 agosto)
-5. **Transporte Placa Blanca** solo disponible por cotización especial
-6. **Planes autorizados** para uso general en el website: planes 1-6 + Plan Exclusivo Salento-Filandia-Ocaso
+6. **Transporte Placa Blanca** solo disponible por cotización especial
+7. **Planes autorizados** para uso general en el website: planes 1-6 + Plan Exclusivo Salento-Filandia-Ocaso + Promoción Vientos de Agosto
 
 ---
 
