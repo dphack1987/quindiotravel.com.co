@@ -1,8 +1,9 @@
-// Base de datos oficial de 6 planes turísticos - Quindío Travel (RNT 18152)
+﻿// Base de datos oficial de 6 planes turísticos - Quindío Travel (RNT 18152)
 const planesData = [
   {
     id: "plan-1",
     slug: "plan-vive-eje-cafetero-tematico",
+    imagen: "assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata-2.avif",
     titulo: "Escapada Cafetera de Fin de Semana",
     duracion: "2d",
     noches: 1,
@@ -31,6 +32,7 @@ const planesData = [
   {
     id: "plan-2",
     slug: "plan-naturaleza-y-diversion-cafetera",
+    imagen: "assets/images/alojamientos/cabanas-la-esmeralda/finca-hotel-cabanas-la-esmeralda.avif",
     titulo: "Aventura Natural en el Eje Cafetero",
     duracion: "3d",
     noches: 2,
@@ -60,6 +62,7 @@ const planesData = [
   {
     id: "plan-3",
     slug: "plan-experiencia-completa-eje",
+    imagen: "assets/images/alojamientos/finca-hotel-los-girasoles/finca-hotel-los-girasoles-quindio.avif",
     titulo: "Experiencia Completa del Eje Cafetero",
     duracion: "4d",
     noches: 3,
@@ -90,6 +93,7 @@ const planesData = [
   {
     id: "plan-4",
     slug: "plan-aventura-y-relax-termal",
+    imagen: "assets/images/alojamientos/hotel-campestre-las-camelias/hotel-campestre-las-camelias.avif",
     titulo: "Relax y Aventura en Termales del Eje",
     duracion: "4d",
     noches: 3,
@@ -120,6 +124,7 @@ const planesData = [
   {
     id: "plan-5",
     slug: "plan-tradicion-y-raices-arrieria",
+    imagen: "assets/images/alojamientos/finca-hotel-dorada/finca-hotel-dorada.avif",
     titulo: "Experiencia Premium del Eje Cafetero",
     duracion: "4d",
     noches: 3,
@@ -155,6 +160,7 @@ const planesData = [
   {
     id: "plan-6",
     slug: "plan-gran-quindio-integral",
+    imagen: "assets/images/alojamientos/hotel-campestre-cafe-cafe/hotel-campestre-cafe-cafe-quindio.avif",
     titulo: "La Experiencia Definitiva del Eje Cafetero",
     duracion: "5d",
     noches: 4,
@@ -292,11 +298,16 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
     // Obtener foto del primer alojamiento asociado
     const primerAlojamiento = plan.alojamientosAsociados[0];
     const fotosAlojamiento = {
-      "de-la-vega-hotel-campestre": "assets/images/alojamientos/hotel-de-la-vega/eaa775d5.avif",
-      "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-campestre-las-camelias/hotel-campestre-las-camelias.avif"
-    };
+        "de-la-vega-hotel-campestre": "assets/images/alojamientos/hotel-de-la-vega/eaa775d5.avif",
+        "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-campestre-las-camelias/hotel-campestre-las-camelias.avif",
+        "hotel-campestre-la-tata": "assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata-2.avif",
+        "cabanas-la-esmeralda": "assets/images/alojamientos/cabanas-la-esmeralda/finca-hotel-cabanas-la-esmeralda.avif",
+        "finca-hotel-los-girasoles": "assets/images/alojamientos/finca-hotel-los-girasoles/finca-hotel-los-girasoles-quindio.avif",
+        "hotel-campestre-cafe-cafe": "assets/images/alojamientos/hotel-campestre-cafe-cafe/hotel-campestre-cafe-cafe-quindio.avif",
+        "finca-hotel-dorada": "assets/images/alojamientos/finca-hotel-dorada/finca-hotel-dorada.avif"
+      };
     
-    const fotoAlojamiento = fotosAlojamiento[primerAlojamiento] || null;
+    const fotoAlojamiento = plan.imagen || fotosAlojamiento[primerAlojamiento] || "assets/images/alojamientos/hotel-de-la-vega/eaa775d5.avif";
     
     const card = document.createElement("div");
     card.className = "plan-card-enhanced";
@@ -419,3 +430,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+
+
