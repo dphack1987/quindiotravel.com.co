@@ -3,7 +3,7 @@ const planesData = [
   {
     id: "plan-1",
     slug: "plan-vive-eje-cafetero-tematico",
-    imagen: "assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata-2.avif",
+    imagen: "assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata-1.webp",
     titulo: "Escapada Cafetera de Fin de Semana",
     duracion: "2d",
     noches: 1,
@@ -11,7 +11,7 @@ const planesData = [
     categoria: "Escapada",
     badge: "Escapada Rápida",
     detalleUrl: "plan-1.html",
-    descripcion: "2 días / 1 noche de alojamiento en finca hotel, desayuno y cena incluidos, Pasaporte Múltiple al Parque del Café y Pasaporte Terra a PANACA. Transporte desde el aeropuerto o terminal terrestre en Armenia. Ideal para fin de semana corto.",
+    descripcion: "2 días / 1 noche de alojamiento en finca hotel, desayuno y cena incluidos, Pasaporte Múltiple al Parque del Café y Pasaporte Terra a PANACA. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. Ideal para fin de semana corto. *Precio para acomodación cuádruple.",
     resumenPrograma: [
       "Día 1: Llegada a Armenia, check-in, tarde en PANACA",
       "Día 2: Parque del Café completo con pasaporte múltiple, regreso"
@@ -19,7 +19,7 @@ const planesData = [
     atractivosIncluidos: ["Parque del Café", "PANACA"],
     alojamientosAsociados: ["hotel-campestre-la-tata", "de-la-vega-hotel-campestre", "finca-hotel-dorada"],
     precioSinTransporte: 425000,
-    precioConTransporte: 796000,
+    precioConTransporte: 602000,
     preciosOcupacion: {
       doble: 796000,
       triple: 668000,
@@ -32,7 +32,7 @@ const planesData = [
   {
     id: "plan-2",
     slug: "plan-naturaleza-y-diversion-cafetera",
-    imagen: "assets/images/alojamientos/cabanas-la-esmeralda/finca-hotel-cabanas-la-esmeralda.avif",
+    imagen: "assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.webp",
     titulo: "Aventura Natural en el Eje Cafetero",
     duracion: "3d",
     noches: 2,
@@ -40,16 +40,16 @@ const planesData = [
     categoria: "Económico",
     badge: "Más Popular",
     detalleUrl: "plan-2.html",
-    descripcion: "3 días / 2 noches de alojamiento en finca hotel tradicional, desayunos y cenas incluidos, acceso a PANACA con Pasaporte Terra y Parque del Café con Pasaporte Múltiple. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
+    descripcion: "3 días / 2 noches de alojamiento en finca hotel tradicional, desayunos y cenas incluidos, acceso a PANACA con Pasaporte Terra y Parque del Café con Pasaporte Múltiple. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. *Precio para acomodación cuádruple.",
     resumenPrograma: [
       "Día 1: Llegada, check-in, tarde en finca hotel",
       "Día 2: PANACA con Pasaporte Terra completo",
       "Día 3: Parque del Café con Pasaporte Múltiple, regreso"
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA"],
-    alojamientosAsociados: ["cabanas-la-esmeralda", "hotel-campestre-la-tata"],
+    alojamientosAsociados: ["finca-hotel-la-esmeralda", "hotel-campestre-la-tata"],
     precioSinTransporte: 562000,
-    precioConTransporte: 935000,
+    precioConTransporte: 735000,
     preciosOcupacion: {
       doble: 935000,
       triple: 805000,
@@ -62,7 +62,7 @@ const planesData = [
   {
     id: "plan-3",
     slug: "plan-experiencia-completa-eje",
-    imagen: "assets/images/alojamientos/finca-hotel-los-girasoles/finca-hotel-los-girasoles-quindio.avif",
+    imagen: "assets/images/alojamientos/finca-hotel-los-girasoles/fincalosgirasoles25.webp",
     titulo: "Experiencia Completa del Eje Cafetero",
     duracion: "4d",
     noches: 3,
@@ -70,7 +70,7 @@ const planesData = [
     categoria: "Estándar",
     badge: "Experiencia Completa",
     detalleUrl: "plan-3.html",
-    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Valle de Cocora, Salento, Filandia, PANACA y Parque del Café. Transporte desde el aeropuerto o terminal terrestre en Armenia. El programa favorito para conocer lo esencial del Quindío.",
+    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Valle de Cocora, Salento, Filandia, PANACA y Parque del Café. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. El programa favorito para conocer lo esencial del Quindío. *Precio para acomodación cuádruple.",
     resumenPrograma: [
       "Día 1: Llegada, check-in, tarde en finca hotel",
       "Día 2: Valle de Cocora, Salento y Filandia",
@@ -78,9 +78,9 @@ const planesData = [
       "Día 4: Parque del Café con Pasaporte Múltiple, regreso"
     ],
     atractivosIncluidos: ["Parque del Café", "PANACA", "Salento", "Valle de Cocora", "Filandia"],
-    alojamientosAsociados: ["finca-hotel-los-girasoles", "cabanas-la-esmeralda", "finca-hotel-dorada"],
+    alojamientosAsociados: ["finca-hotel-los-girasoles", "finca-hotel-la-esmeralda", "finca-hotel-la-dorada"],
     precioSinTransporte: 777000,
-    precioConTransporte: 1385000,
+    precioConTransporte: 1050000,
     preciosOcupacion: {
       doble: 1385000,
       triple: 1170000,
@@ -93,7 +93,7 @@ const planesData = [
   {
     id: "plan-4",
     slug: "plan-aventura-y-relax-termal",
-    imagen: "assets/images/alojamientos/hotel-campestre-las-camelias/hotel-campestre-las-camelias.avif",
+    imagen: "assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.webp",
     titulo: "Relax y Aventura en Termales del Eje",
     duracion: "4d",
     noches: 3,
@@ -101,7 +101,7 @@ const planesData = [
     categoria: "Estándar Plus",
     badge: "Termales Incluidos",
     detalleUrl: "plan-4.html",
-    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Balneario Santa Rosa de Cabal, Parque del Café y PANACA. Transporte desde el aeropuerto o terminal terrestre en Armenia. Ideal para familias y parejas.",
+    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Balneario Santa Rosa de Cabal, Parque del Café y PANACA. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. Ideal para familias y parejas. *Precio para acomodación cuádruple.",
     resumenPrograma: [
       "Día 1: Llegada, check-in, tarde en finca hotel",
       "Día 2: Balneario Santa Rosa de Cabal completo",
@@ -111,7 +111,7 @@ const planesData = [
     atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa"],
     alojamientosAsociados: ["finca-hotel-los-girasoles", "hotel-campestre-cafe-cafe"],
     precioSinTransporte: 798000,
-    precioConTransporte: 1495000,
+    precioConTransporte: 1125000,
     preciosOcupacion: {
       doble: 1495000,
       triple: 1250000,
@@ -124,7 +124,7 @@ const planesData = [
   {
     id: "plan-5",
     slug: "plan-tradicion-y-raices-arrieria",
-    imagen: "assets/images/alojamientos/finca-hotel-dorada/finca-hotel-dorada.avif",
+    imagen: "assets/images/alojamientos/finca-hotel-la-dorada/1414317914.webp",
     titulo: "Experiencia Premium del Eje Cafetero",
     duracion: "4d",
     noches: 3,
@@ -132,7 +132,7 @@ const planesData = [
     categoria: "Cultural",
     badge: "Vivencial Cultural",
     detalleUrl: "plan-5.html",
-    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Parque Los Arrieros, PANACA y Parque del Café. Transporte desde el aeropuerto o terminal terrestre en Armenia.",
+    descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Parque Los Arrieros, PANACA y Parque del Café. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. *Precio para acomodación cuádruple.",
     resumenPrograma: [
       "Día 1: Llegada, check-in, tarde en finca hotel",
       "Día 2: Parque Los Arrieros",
@@ -140,9 +140,9 @@ const planesData = [
       "Día 4: Parque del Café con Pasaporte Múltiple, regreso"
     ],
     atractivosIncluidos: ["Parque Los Arrieros", "PANACA", "Parque del Café"],
-    alojamientosAsociados: ["cabanas-la-esmeralda", "finca-hotel-los-girasoles"],
+    alojamientosAsociados: ["finca-hotel-la-esmeralda", "finca-hotel-los-girasoles"],
     precioSinTransporte: 788000,
-    precioConTransporte: 1297000,
+    precioConTransporte: 1020000,
     preciosOcupacion: {
       doble: 1297000,
       triple: 1120000,
@@ -160,7 +160,7 @@ const planesData = [
   {
     id: "plan-6",
     slug: "plan-gran-quindio-integral",
-    imagen: "assets/images/alojamientos/hotel-campestre-cafe-cafe/hotel-campestre-cafe-cafe-quindio.avif",
+    imagen: "assets/images/alojamientos/hotel-campestre-cafe-cafe/IMG_0404-scaled.webp",
     titulo: "La Experiencia Definitiva del Eje Cafetero",
     duracion: "5d",
     noches: 4,
@@ -168,7 +168,7 @@ const planesData = [
     categoria: "Premium",
     badge: "Todo Incluido VIP",
     detalleUrl: "plan-6.html",
-    descripcion: "La experiencia definitiva de 5 días y 4 noches. PANACA, Balneario Santa Rosa de Cabal, Parque del Café y RECUCA. Transporte desde el aeropuerto o terminal terrestre en Armenia. Incluye Valle de Cocora.",
+    descripcion: "La experiencia definitiva de 5 días y 4 noches. PANACA, Balneario Santa Rosa de Cabal, Parque del Café y RECUCA. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. Incluye Valle de Cocora. *Precio para acomodación cuádruple.",
     resumenPrograma: [
       "Día 1: Llegada, check-in, tarde en finca hotel",
       "Día 2: PANACA con Pasaporte Terra",
@@ -179,7 +179,7 @@ const planesData = [
     atractivosIncluidos: ["Parque del Café", "PANACA", "Termales Santa Rosa", "RECUCA", "Valle de Cocora"],
     alojamientosAsociados: ["hotel-campestre-cafe-cafe", "hotel-campestre-las-camelias", "finca-hotel-los-girasoles"],
     precioSinTransporte: 1008000,
-    precioConTransporte: 1800000,
+    precioConTransporte: 1380000,
     preciosOcupacion: {
       doble: 1800000,
       triple: 1520000,
@@ -199,8 +199,8 @@ const planesData = [
 // Base de datos de alojamientos aliados importados desde docs/data/alojamientos
 const alojamientosData = [
   {
-    id: "cabanas-la-esmeralda",
-    nombre: "Cabañas La Esmeralda",
+    id: "finca-hotel-la-esmeralda",
+    nombre: "Finca Hotel La Esmeralda",
     categoria: "Económica",
     ubicacion: "Quindío, Colombia",
     servicios: ["Piscina Adultos y Niños", "Jacuzzy", "Cancha de Microfútbol", "Cancha de Volley Playa", "Restaurante", "Bar", "Zona de Asados", "Amplias Zonas Verdes", "Kiosco", "Juegos de Mesa"]
@@ -213,8 +213,8 @@ const alojamientosData = [
     servicios: ["Zonas húmedas (Piscina, 3 jacuzzi)", "Zona de juegos (billar pool, rana, pin pon)", "Parque infantil", "Parqueadero"]
   },
   {
-    id: "finca-hotel-dorada",
-    nombre: "Finca Hotel Dorada",
+    id: "finca-hotel-la-dorada",
+    nombre: "Finca Hotel La Dorada",
     categoria: "Económica",
     ubicacion: "Km. 5 Pueblo Tapao Vía a La Tebaida, Quindío",
     servicios: ["Piscina niños y adultos", "Juegos infantiles", "Parqueadero", "Restaurante", "Lavandería", "Hamacas", "Juegos de mesa"]
@@ -299,12 +299,12 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
     const primerAlojamiento = plan.alojamientosAsociados[0];
     const fotosAlojamiento = {
         "de-la-vega-hotel-campestre": "assets/images/alojamientos/hotel-de-la-vega/eaa775d5.avif",
-        "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-campestre-las-camelias/hotel-campestre-las-camelias.avif",
-        "hotel-campestre-la-tata": "assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata-2.avif",
-        "cabanas-la-esmeralda": "assets/images/alojamientos/cabanas-la-esmeralda/finca-hotel-cabanas-la-esmeralda.avif",
-        "finca-hotel-los-girasoles": "assets/images/alojamientos/finca-hotel-los-girasoles/finca-hotel-los-girasoles-quindio.avif",
-        "hotel-campestre-cafe-cafe": "assets/images/alojamientos/hotel-campestre-cafe-cafe/hotel-campestre-cafe-cafe-quindio.avif",
-        "finca-hotel-dorada": "assets/images/alojamientos/finca-hotel-dorada/finca-hotel-dorada.avif"
+        "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.webp",
+        "hotel-campestre-la-tata": "assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata-1.webp",
+        "finca-hotel-la-esmeralda": "assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.webp",
+        "finca-hotel-los-girasoles": "assets/images/alojamientos/finca-hotel-los-girasoles/fincalosgirasoles25.webp",
+        "hotel-campestre-cafe-cafe": "assets/images/alojamientos/hotel-campestre-cafe-cafe/IMG_0404-scaled.webp",
+        "finca-hotel-la-dorada": "assets/images/alojamientos/finca-hotel-la-dorada/1414317914.webp"
       };
     
     const fotoAlojamiento = plan.imagen || fotosAlojamiento[primerAlojamiento] || "assets/images/alojamientos/hotel-de-la-vega/eaa775d5.avif";
@@ -358,11 +358,11 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
         
         <div class="plan-pricing-enhanced">
           <div class="price-item-enhanced">
-            <span class="price-label-enhanced">Sin transporte</span>
+            <span class="price-label-enhanced">Sin transporte (Cuádruple)</span>
             <span class="price-value-enhanced">$${plan.precioSinTransporte.toLocaleString('es-CO')}</span>
           </div>
           <div class="price-item-enhanced featured">
-            <span class="price-label-enhanced">Con transporte</span>
+            <span class="price-label-enhanced">Transporte interno (Cuádruple)</span>
             <span class="price-value-enhanced">$${plan.precioConTransporte.toLocaleString('es-CO')}</span>
           </div>
         </div>

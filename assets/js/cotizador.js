@@ -195,7 +195,7 @@ function actualizarUI() {
     mensaje += `Temporada: ${temporadaNombre}\n`;
     mensaje += `Categoría de alojamiento: ${categoriaNombre}\n`;
     mensaje += `Ocupación: Cuádruple (automática)\n`;
-    mensaje += `✅ Incluye transporte completo (RADIO TAXI)\n`;
+    mensaje += `✅ Incluye transporte interno (recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos)\n`;
     
     if (destinosNombres.length > 0) {
       mensaje += `Destinos adicionales seleccionados: ${destinosNombres.join(', ')}\n`;
