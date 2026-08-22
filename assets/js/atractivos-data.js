@@ -414,7 +414,7 @@ const atractivosData = [
     accesibilidad: "Parcialmente accesible",
     logo: null,
     imagenes: [
-      "assets/images/atractivos/cabalgatas/cabalgatas card.jfif",
+      "assets/images/atractivos/cabalgatas/cabalgatas.webp card.jfif",
       "assets/images/atractivos/cabalgatas/images (2).jfif",
       "assets/images/atractivos/cabalgatas/images.jfif"
     ],

@@ -16,10 +16,10 @@ function fixLogoInDirectory(dir) {
                 
                 // Fix logo paths
                 let newContent = content
-                    .replace(/src="\/logo_quindio_travel\.webp"/g, 'src="../assets/images/logo_quindio_travel.webp"')
-                    .replace(/src="logo_quindio_travel\.webp"/g, 'src="../assets/images/logo_quindio_travel.webp"')
-                    .replace(/"logo": "https:\/\/quindiotravel\.com\.co\/logo\.webp"/g, '"logo": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.webp"')
-                    .replace(/src="\/assets\/images\/logo_quindio_travel\.webp"/g, 'src="../assets/images/logo_quindio_travel.webp');
+                    .replace(/src="\/logo_quindio_travel\.webp"/g, 'src="../assets/images/logo.png"')
+                    .replace(/src="logo_quindio_travel\.webp"/g, 'src="../assets/images/logo.png"')
+                    .replace(/"logo": "https:\/\/quindiotravel\.com\.co\/logo\.webp"/g, '"logo": "https://quindiotravel.com.co/assets/images/logo.png"')
+                    .replace(/src="\/assets\/images\/logo_quindio_travel\.webp"/g, 'src="../assets/images/logo.png');
                 
                 if (content !== newContent) {
                     fs.writeFileSync(filePath, newContent);

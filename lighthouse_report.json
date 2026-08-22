@@ -1422,7 +1422,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/logo_quindio_travel.webp",
+            "url": "http://127.0.0.1:8000/assets/images/logo.png",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1603,7 +1603,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/logo_quindio_travel.webp",
+            "url": "http://127.0.0.1:8000/assets/images/logo.png",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -7664,7 +7664,7 @@
             "wastedBytes": 68889
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/logo_quindio_travel.webp",
+            "url": "http://127.0.0.1:8000/assets/images/logo.png",
             "cacheLifetimeMs": 0,
             "totalBytes": 68889,
             "wastedBytes": 68889

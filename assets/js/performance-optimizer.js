@@ -51,7 +51,7 @@ class PerformanceOptimizer {
     const criticalResources = [
       { href: '/assets/css/critical.css', as: 'style' },
       { href: '/assets/js/whatsapp-payload-builder.js', as: 'script' },
-      { href: '/assets/images/logo_quindio_travel.webp', as: 'image' }
+      { href: '/assets/images/logo.png', as: 'image' }
     ];
 
     criticalResources.forEach(resource => {
