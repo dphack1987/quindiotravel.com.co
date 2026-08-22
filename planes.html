@@ -196,6 +196,136 @@
         background: rgba(46, 90, 54, 0.9);
         border-color: #2E5E36;
     }
+
+    /* Estilos para Planes Promocionales */
+    .promocionales-section {
+        padding: 40px 0;
+    }
+
+    .promocionales-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .promocional-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .promocional-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .promocional-image {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .promocional-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 100%);
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .promocional-content {
+        padding: 25px;
+    }
+
+    .promocional-content h3 {
+        color: var(--verde-cafe);
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .promocional-duration {
+        color: var(--marron-madera);
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .promocional-description {
+        color: var(--texto-oscuro);
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+    }
+
+    .promocional-price {
+        background: linear-gradient(135deg, var(--verde-cafe), var(--verde-claro));
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .promocional-price .price-label {
+        display: block;
+        font-size: 0.85rem;
+        opacity: 0.9;
+    }
+
+    .promocional-price .price-value {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin: 5px 0;
+    }
+
+    .promocional-price .price-note {
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.8;
+    }
+
+    .promocional-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .promocional-features li {
+        padding: 8px 0;
+        color: var(--texto-oscuro);
+        font-size: 0.9rem;
+    }
+
+    .promocional-features li i {
+        color: var(--verde-cafe);
+        margin-right: 10px;
+    }
+
+    .btn-promocional {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--naranja-brillante), #FF6B6B);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .btn-promocional:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    }
     </style>
     
     <link rel="stylesheet" href="styles.css">
@@ -598,6 +728,64 @@ Descubre planes turísticos completos al Eje Cafetero desde $425.000 COP para vi
 
     <!-- Contenedor para Planes Especiales de Diciembre -->
     <div id="planes-especiales-container"></div>
+
+    <!-- Sección de Planes Promocionales -->
+    <section class="promocionales-section container" style="margin-top: 60px;">
+        <div class="section-header">
+            <h2 class="section-title">🔥 Planes Promocionales Especiales</h2>
+            <p class="section-subtitle">Ofertas exclusivas por tiempo limitado para maximizar tu experiencia en el Eje Cafetero</p>
+        </div>
+        
+        <div class="promocionales-grid">
+            <!-- Plan Promo del Mes -->
+            <div class="promocional-card">
+                <div class="promocional-image" style="background-image: url('assets/images/paisajes/palma-cera-sunlight.webp');">
+                    <div class="promocional-badge">🔥 Promo del Mes</div>
+                </div>
+                <div class="promocional-content">
+                    <h3>Promoción Vientos de Agosto 2026</h3>
+                    <p class="promocional-duration">4 Días / 3 Noches</p>
+                    <p class="promocional-description">Plan exclusivo todo incluido: Valle de Cocora, Salento, Filandia, Parque del Café, PANACA y RECUCA. Solo 30 cupos disponibles.</p>
+                    <div class="promocional-price">
+                        <span class="price-label">Desde</span>
+                        <span class="price-value">$1.152.000 COP</span>
+                        <span class="price-note">(Cuádruple)</span>
+                    </div>
+                    <ul class="promocional-features">
+                        <li><i class="fas fa-check"></i> Alojamiento 3 noches</li>
+                        <li><i class="fas fa-check"></i> Alimentación completa</li>
+                        <li><i class="fas fa-check"></i> Transporte interno</li>
+                        <li><i class="fas fa-check"></i> Entradas a parques</li>
+                    </ul>
+                    <a href="promo-agosto-2026.html" class="btn btn-promocional">Ver Detalles</a>
+                </div>
+            </div>
+
+            <!-- Plan Exclusivo -->
+            <div class="promocional-card">
+                <div class="promocional-image" style="background-image: url('assets/images/plan-exclusivo-salento-filandia-ocaso.webp');">
+                    <div class="promocional-badge">⭐ Plan Exclusivo</div>
+                </div>
+                <div class="promocional-content">
+                    <h3>Plan Turístico con Inmersión Cafetera</h3>
+                    <p class="promocional-duration">4 Días / 3 Noches</p>
+                    <p class="promocional-description">Experiencia premium: Salento, Valle de Cocora, Filandia y Coffee Tour El Ocaso. Alojamiento Hotel Vista Hermosa y transporte privado.</p>
+                    <div class="promocional-price">
+                        <span class="price-label">Desde</span>
+                        <span class="price-value">$1.310.000 COP</span>
+                        <span class="price-note">(Cuádruple)</span>
+                    </div>
+                    <ul class="promocional-features">
+                        <li><i class="fas fa-check"></i> Hotel Vista Hermosa Salento</li>
+                        <li><i class="fas fa-check"></i> Coffee Tour El Ocaso</li>
+                        <li><i class="fas fa-check"></i> Transporte privado</li>
+                        <li><i class="fas fa-check"></i> Asistencia médica</li>
+                    </ul>
+                    <a href="plan-exclusivo-salento-filandia-ocaso.html" class="btn btn-promocional">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="main-footer-section" id="contacto">
         <div class="container footer-grid">

@@ -93,7 +93,7 @@ const planesData = [
   {
     id: "plan-4",
     slug: "plan-aventura-y-relax-termal",
-    imagen: "assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.webp",
+    imagen: "assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.jpg",
     titulo: "Relax y Aventura en Termales del Eje",
     duracion: "4d",
     noches: 3,
@@ -299,7 +299,7 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
     const primerAlojamiento = plan.alojamientosAsociados[0];
     const fotosAlojamiento = {
         "de-la-vega-hotel-campestre": "assets/images/alojamientos/hotel-de-la-vega/eaa775d5.avif",
-        "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.webp",
+        "hotel-campestre-las-camelias": "assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.jpg",
         "hotel-campestre-la-tata": "assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata-1.webp",
         "finca-hotel-la-esmeralda": "assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.webp",
         "finca-hotel-los-girasoles": "assets/images/alojamientos/finca-hotel-los-girasoles/fincalosgirasoles25.webp",
