@@ -245,7 +245,7 @@
             "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
             "sourceLocation": {
               "type": "source-location",
-              "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.jpg",
+              "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.webp",
               "urlProvider": "network",
               "line": 0,
               "column": 0
@@ -267,7 +267,7 @@
             "description": "Failed to load resource: the server responded with a status of 404 (File not found)",
             "sourceLocation": {
               "type": "source-location",
-              "url": "http://127.0.0.1:8000/assets/valle_del_cocora.jpg",
+              "url": "http://127.0.0.1:8000/assets/valle_del_cocora.webp",
               "urlProvider": "network",
               "line": 0,
               "column": 0
@@ -933,7 +933,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/foto_hero1.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/foto_hero1.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -952,7 +952,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/logo_quindio_travel.png",
+            "url": "http://127.0.0.1:8000/logo_quindio_travel.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -971,7 +971,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/promocion-mes/promo-hero.png",
+            "url": "http://127.0.0.1:8000/assets/images/promocion-mes/promo-hero.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1098,7 +1098,7 @@
             "experimentalFromMainFrame": true
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/10834.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/10834.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1116,7 +1116,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/56855.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/56855.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1134,7 +1134,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/D5VTOP7OQ5EYDJZUEMFDPXZ22E.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/D5VTOP7OQ5EYDJZUEMFDPXZ22E.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1152,7 +1152,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/alojamientos/finca-hotel-los-girasoles/Finca-los-Girasoles-7.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/alojamientos/finca-hotel-los-girasoles/Finca-los-Girasoles-7.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1170,7 +1170,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1188,7 +1188,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1206,7 +1206,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1224,7 +1224,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1278,7 +1278,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_parque_del_cafe.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_parque_del_cafe.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1296,7 +1296,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_panaca.png",
+            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_panaca.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1314,7 +1314,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_recuca.png",
+            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_recuca.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1332,7 +1332,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_parque_los_arrieros.png",
+            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_parque_los_arrieros.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1422,7 +1422,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/logo_quindio_travel.png",
+            "url": "http://127.0.0.1:8000/assets/images/logo_quindio_travel.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1512,7 +1512,7 @@
             "experimentalFromMainFrame": true
           },
           {
-            "url": "http://127.0.0.1:8000/assets/valle_del_cocora.jpg",
+            "url": "http://127.0.0.1:8000/assets/valle_del_cocora.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1603,7 +1603,7 @@
             "entity": "127.0.0.1"
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/logo_quindio_travel.png",
+            "url": "http://127.0.0.1:8000/assets/images/logo_quindio_travel.webp",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "cache": "none",
@@ -1695,7 +1695,7 @@
             "entity": "quindiotravel.com.co"
           },
           {
-            "url": "https://quindiotravel.com.co/favicon-32x32.png",
+            "url": "https://quindiotravel.com.co/favicon-32x32.webp",
             "sessionTargetType": "page",
             "protocol": "",
             "cache": "none",
@@ -1713,7 +1713,7 @@
             "entity": "quindiotravel.com.co"
           },
           {
-            "url": "https://quindiotravel.com.co/favicon-16x16.png",
+            "url": "https://quindiotravel.com.co/favicon-16x16.webp",
             "sessionTargetType": "page",
             "protocol": "",
             "cache": "none",
@@ -2555,7 +2555,7 @@
                 "width": 412,
                 "height": 658
               },
-              "snippet": "<section class=\"hero\" style=\"background-image: url('assets/images/paisajes/foto_hero1.jpg');\" aria-label=\"Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia\">",
+              "snippet": "<section class=\"hero\" style=\"background-image: url('assets/images/paisajes/foto_hero1.webp');\" aria-label=\"Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia\">",
               "nodeLabel": "RNT 18152\nOperador Local\n+1,200 viajeros\nVivimos el Quindío y te lo mostramos e…"
             },
             "score": 0.1121884972871453
@@ -6595,27 +6595,27 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/foto_hero1.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/foto_hero1.webp",
             "totalBytes": 3087698
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/10834.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/10834.webp",
             "totalBytes": 2479198
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/promocion-mes/promo-hero.png",
+            "url": "http://127.0.0.1:8000/assets/images/promocion-mes/promo-hero.webp",
             "totalBytes": 2142587
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/56855.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/56855.webp",
             "totalBytes": 1384993
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/D5VTOP7OQ5EYDJZUEMFDPXZ22E.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/D5VTOP7OQ5EYDJZUEMFDPXZ22E.webp",
             "totalBytes": 462931
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_parque_los_arrieros.png",
+            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_parque_los_arrieros.webp",
             "totalBytes": 238794
           },
           {
@@ -6627,7 +6627,7 @@
             "totalBytes": 192707
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.webp",
             "totalBytes": 175853
           },
           {
@@ -7604,37 +7604,37 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/foto_hero1.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/foto_hero1.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 3087698,
             "wastedBytes": 3087698
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/10834.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/10834.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 2479198,
             "wastedBytes": 2479198
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/promocion-mes/promo-hero.png",
+            "url": "http://127.0.0.1:8000/assets/images/promocion-mes/promo-hero.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 2142587,
             "wastedBytes": 2142587
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/56855.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/56855.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 1384993,
             "wastedBytes": 1384993
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/D5VTOP7OQ5EYDJZUEMFDPXZ22E.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/D5VTOP7OQ5EYDJZUEMFDPXZ22E.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 462931,
             "wastedBytes": 462931
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_parque_los_arrieros.png",
+            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_parque_los_arrieros.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 238794,
             "wastedBytes": 238794
@@ -7646,7 +7646,7 @@
             "wastedBytes": 192707
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 175853,
             "wastedBytes": 175853
@@ -7658,49 +7658,49 @@
             "wastedBytes": 127645
           },
           {
-            "url": "http://127.0.0.1:8000/logo_quindio_travel.png",
+            "url": "http://127.0.0.1:8000/logo_quindio_travel.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 68889,
             "wastedBytes": 68889
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/logo_quindio_travel.png",
+            "url": "http://127.0.0.1:8000/assets/images/logo_quindio_travel.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 68889,
             "wastedBytes": 68889
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/alojamientos/finca-hotel-los-girasoles/Finca-los-Girasoles-7.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/alojamientos/finca-hotel-los-girasoles/Finca-los-Girasoles-7.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 66709,
             "wastedBytes": 66709
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 61911,
             "wastedBytes": 61911
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_panaca.png",
+            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_panaca.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 58182,
             "wastedBytes": 58182
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 46143,
             "wastedBytes": 46143
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_parque_del_cafe.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_parque_del_cafe.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 34477,
             "wastedBytes": 34477
           },
           {
-            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_recuca.png",
+            "url": "http://127.0.0.1:8000/assets/images/destinos/logo_recuca.webp",
             "cacheLifetimeMs": 0,
             "totalBytes": 26430,
             "wastedBytes": 26430
@@ -7841,7 +7841,7 @@
                     "width": 412,
                     "height": 658
                   },
-                  "snippet": "<section class=\"hero\" style=\"background-image: url('assets/images/paisajes/foto_hero1.jpg');\" aria-label=\"Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia\">",
+                  "snippet": "<section class=\"hero\" style=\"background-image: url('assets/images/paisajes/foto_hero1.webp');\" aria-label=\"Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia\">",
                   "nodeLabel": "RNT 18152\nOperador Local\n+1,200 viajeros\nVivimos el Quindío y te lo mostramos e…"
                 },
                 "score": 0.1121884972871453
@@ -8320,10 +8320,10 @@
                 "width": 412,
                 "height": 658
               },
-              "snippet": "<section class=\"hero\" style=\"background-image: url('assets/images/paisajes/foto_hero1.jpg');\" aria-label=\"Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia\">",
+              "snippet": "<section class=\"hero\" style=\"background-image: url('assets/images/paisajes/foto_hero1.webp');\" aria-label=\"Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia\">",
               "nodeLabel": "RNT 18152\nOperador Local\n+1,200 viajeros\nVivimos el Quindío y te lo mostramos e…"
             },
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/foto_hero1.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/foto_hero1.webp",
             "totalBytes": 3087506,
             "wastedBytes": 2643173,
             "subItems": {
@@ -8350,10 +8350,10 @@
                 "width": 353,
                 "height": 180
               },
-              "snippet": "<div class=\"plan-img\" style=\"background-image: url('assets/images/paisajes/10834.jpg');\" role=\"img\" aria-label=\"Plan Premium VIP - Experiencia Exclusiva Eje Cafetero Colombia Hoteles de …\">",
+              "snippet": "<div class=\"plan-img\" style=\"background-image: url('assets/images/paisajes/10834.webp');\" role=\"img\" aria-label=\"Plan Premium VIP - Experiencia Exclusiva Eje Cafetero Colombia Hoteles de …\">",
               "nodeLabel": "Plan Premium VIP - Experiencia Exclusiva Eje Cafetero Colombia Hoteles de Lujo"
             },
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/10834.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/10834.webp",
             "totalBytes": 2479006,
             "wastedBytes": 2034673,
             "subItems": {
@@ -8380,10 +8380,10 @@
                 "width": 415,
                 "height": 300
               },
-              "snippet": "<div class=\"promo-img-wrapper\" style=\"background-image: url('assets/images/promocion-mes/promo-hero.png');\" alt=\"Plan turístico Vientos de Agosto 2026 en el Quindío con hospedaje en cabañ…\">",
+              "snippet": "<div class=\"promo-img-wrapper\" style=\"background-image: url('assets/images/promocion-mes/promo-hero.webp');\" alt=\"Plan turístico Vientos de Agosto 2026 en el Quindío con hospedaje en cabañ…\">",
               "nodeLabel": "AGO\n2026"
             },
-            "url": "http://127.0.0.1:8000/assets/images/promocion-mes/promo-hero.png",
+            "url": "http://127.0.0.1:8000/assets/images/promocion-mes/promo-hero.webp",
             "totalBytes": 2142396,
             "wastedBytes": 1901423,
             "subItems": {
@@ -8410,10 +8410,10 @@
                 "width": 353,
                 "height": 180
               },
-              "snippet": "<div class=\"plan-img\" style=\"background-image: url('assets/images/paisajes/56855.jpg');\" role=\"img\" aria-label=\"Plan Empresarial - Team Building Corporativo Eje Cafetero Colombia\">",
+              "snippet": "<div class=\"plan-img\" style=\"background-image: url('assets/images/paisajes/56855.webp');\" role=\"img\" aria-label=\"Plan Empresarial - Team Building Corporativo Eje Cafetero Colombia\">",
               "nodeLabel": "Plan Empresarial - Team Building Corporativo Eje Cafetero Colombia"
             },
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/56855.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/56855.webp",
             "totalBytes": 1384801,
             "wastedBytes": 718134,
             "subItems": {
@@ -8443,7 +8443,7 @@
               "snippet": "<div class=\"plan-img\" style=\"background-image: url(&quot;assets/images/paisajes/D5VTOP7OQ5EYDJZUEMFDPXZ22E.j…&quot;);\" role=\"img\" aria-label=\"Plan 5 Días 4 Noches - Experiencia Definitiva Eje Cafetero Colombia Termal…\">",
               "nodeLabel": "Plan 5 Días 4 Noches - Experiencia Definitiva Eje Cafetero Colombia Termales Va…"
             },
-            "url": "http://127.0.0.1:8000/assets/images/paisajes/D5VTOP7OQ5EYDJZUEMFDPXZ22E.jpg",
+            "url": "http://127.0.0.1:8000/assets/images/paisajes/D5VTOP7OQ5EYDJZUEMFDPXZ22E.webp",
             "totalBytes": 462740,
             "wastedBytes": 117140,
             "subItems": {
@@ -8470,10 +8470,10 @@
                 "width": 95,
                 "height": 40
               },
-              "snippet": "<img src=\"logo_quindio_travel.png\" alt=\"Quindío Travel Logo - Operador Turístico Eje Cafetero RNT 18152\" loading=\"eager\" width=\"200\" height=\"60\" fetchpriority=\"high\">",
+              "snippet": "<img src=\"logo_quindio_travel.webp\" alt=\"Quindío Travel Logo - Operador Turístico Eje Cafetero RNT 18152\" loading=\"eager\" width=\"200\" height=\"60\" fetchpriority=\"high\">",
               "nodeLabel": "Quindío Travel Logo - Operador Turístico Eje Cafetero RNT 18152"
             },
-            "url": "http://127.0.0.1:8000/logo_quindio_travel.png",
+            "url": "http://127.0.0.1:8000/logo_quindio_travel.webp",
             "totalBytes": 68700,
             "wastedBytes": 68258,
             "subItems": {
@@ -8564,7 +8564,7 @@
               "width": 412,
               "height": 658
             },
-            "snippet": "<section class=\"hero\" style=\"background-image: url('assets/images/paisajes/foto_hero1.jpg');\" aria-label=\"Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia\">",
+            "snippet": "<section class=\"hero\" style=\"background-image: url('assets/images/paisajes/foto_hero1.webp');\" aria-label=\"Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia\">",
             "nodeLabel": "RNT 18152\nOperador Local\n+1,200 viajeros\nVivimos el Quindío y te lo mostramos e…"
           }
         ]
@@ -8613,7 +8613,7 @@
               "width": 412,
               "height": 658
             },
-            "snippet": "<section class=\"hero\" style=\"background-image: url('assets/images/paisajes/foto_hero1.jpg');\" aria-label=\"Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia\">",
+            "snippet": "<section class=\"hero\" style=\"background-image: url('assets/images/paisajes/foto_hero1.webp');\" aria-label=\"Valle del Cocora Quindío - Palma de Cera - Eje Cafetero Colombia\">",
             "nodeLabel": "RNT 18152\nOperador Local\n+1,200 viajeros\nVivimos el Quindío y te lo mostramos e…"
           }
         ]

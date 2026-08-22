@@ -24,9 +24,9 @@ rootFiles.forEach(file => {
         
         // Fix logo paths for root level files
         let newContent = content
-            .replace(/src="logo_quindio_travel\.png"/g, 'src="assets/images/logo_quindio_travel.png"')
-            .replace(/src="\/logo_quindio_travel\.png"/g, 'src="assets/images/logo_quindio_travel.png"')
-            .replace(/"logo": "https:\/\/quindiotravel\.com\.co\/logo\.png"/g, '"logo": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png"');
+            .replace(/src="logo_quindio_travel\.webp"/g, 'src="assets/images/logo_quindio_travel.webp"')
+            .replace(/src="\/logo_quindio_travel\.webp"/g, 'src="assets/images/logo_quindio_travel.webp"')
+            .replace(/"logo": "https:\/\/quindiotravel\.com\.co\/logo\.webp"/g, '"logo": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.webp"');
         
         if (content !== newContent) {
             fs.writeFileSync(file, newContent);

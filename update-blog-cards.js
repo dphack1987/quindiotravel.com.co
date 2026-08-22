@@ -48,7 +48,7 @@ const oldBlogGrid = `<div class="blog-grid">
 const newBlogGrid = `<div class="blog-grid">
                 <a href="blog/hoteles-economicos-salento-familias-2026.html" class="blog-card-link">
                     <article class="blog-card">
-                        <div class="blog-img" style="background-image: url('assets/images/paisajes/valle-cocoro-hero-banner.jpg');"></div>
+                        <div class="blog-img" style="background-image: url('assets/images/paisajes/valle-cocoro-hero-banner.webp');"></div>
                         <div class="blog-body">
                             <p class="blog-date"><i class="far fa-calendar"></i> Marzo 2026 · <i class="fas fa-bookmark"></i> Guías</p>
                             <h3>Los mejores hoteles del Quindío: guía completa 2026</h3>
@@ -58,7 +58,7 @@ const newBlogGrid = `<div class="blog-grid">
                 </a>
                 <a href="blog/guia-compras-salento-2026.html" class="blog-card-link">
                     <article class="blog-card">
-                        <div class="blog-img" style="background-image: url('assets/images/paisajes/salento-town.jpg');"></div>
+                        <div class="blog-img" style="background-image: url('assets/images/paisajes/salento-town.webp');"></div>
                         <div class="blog-body">
                             <p class="blog-date"><i class="far fa-calendar"></i> Febrero 2026 · <i class="fas fa-bookmark"></i> Destinos</p>
                             <h3>Qué hacer en Salento: 5 lugares imperdibles</h3>
@@ -68,7 +68,7 @@ const newBlogGrid = `<div class="blog-grid">
                 </a>
                 <a href="blog/turismo-familiar-ninos-2026.html" class="blog-card-link">
                     <article class="blog-card">
-                        <div class="blog-img" style="background-image: url('assets/images/destinos/logo_panaca.png');"></div>
+                        <div class="blog-img" style="background-image: url('assets/images/destinos/logo_panaca.webp');"></div>
                         <div class="blog-body">
                             <p class="blog-date"><i class="far fa-calendar"></i> Diciembre 2025 · <i class="fas fa-bookmark"></i> Familiares</p>
                             <h3>Qué hacer con niños en el Eje Cafetero: planes familiares 2026</h3>
@@ -78,7 +78,7 @@ const newBlogGrid = `<div class="blog-grid">
                 </a>
                 <a href="blog/guia-transporte-eje-cafetero-bogota-2026.html" class="blog-card-link">
                     <article class="blog-card">
-                        <div class="blog-img" style="background-image: url('assets/images/paisajes/eje-cafetero-sunset-hills.jpg');"></div>
+                        <div class="blog-img" style="background-image: url('assets/images/paisajes/eje-cafetero-sunset-hills.webp');"></div>
                         <div class="blog-body">
                             <p class="blog-date"><i class="far fa-calendar"></i> Noviembre 2025 · <i class="fas fa-bookmark"></i> Transporte</p>
                             <h3>Cómo llegar al Quindío: guía de transporte desde Bogotá, Medellín y Cali</h3>
@@ -88,7 +88,7 @@ const newBlogGrid = `<div class="blog-grid">
                 </a>
                 <a href="blog/mejor-epoca-visitar-quindio-2026.html" class="blog-card-link">
                     <article class="blog-card">
-                        <div class="blog-img" style="background-image: url('assets/images/paisajes/coffee-plantation-green.jpg');"></div>
+                        <div class="blog-img" style="background-image: url('assets/images/paisajes/coffee-plantation-green.webp');"></div>
                         <div class="blog-body">
                             <p class="blog-date"><i class="far fa-calendar"></i> Octubre 2025 · <i class="fas fa-bookmark"></i> Clima</p>
                             <h3>Clima del Quindío: qué esperar y mejores épocas para visitar</h3>

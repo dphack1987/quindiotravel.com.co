@@ -13,8 +13,8 @@ planFiles.forEach(file => {
     try {
         const content = fs.readFileSync(file, 'utf8');
         const newContent = content.replace(
-            /src="logo_quindio_travel\.png"/g,
-            'src="assets/images/logo_quindio_travel.png"'
+            /src="logo_quindio_travel\.webp"/g,
+            'src="assets/images/logo_quindio_travel.webp"'
         );
         
         if (content !== newContent) {

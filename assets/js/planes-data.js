@@ -1,4 +1,4 @@
-﻿// Base de datos oficial de 6 planes turísticos - Quindío Travel (RNT 18152)
+// Base de datos oficial de 6 planes turísticos - Quindío Travel (RNT 18152)
 const planesData = [
   {
     id: "plan-1",

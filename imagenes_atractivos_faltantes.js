@@ -3,17 +3,17 @@ const path = require('path');
 
 // Lista de imágenes de atractivos referenciadas en index.html
 const requiredImages = [
-    'assets/images/destinos/logo_parque_del_cafe.jpg',
-    'assets/images/destinos/logo_panaca.png',
-    'assets/images/destinos/logo_valle_cocora.jpg',
-    'assets/images/destinos/logo_salento.jpg',
-    'assets/images/destinos/logo_filandia.jpg',
-    'assets/images/destinos/logo_termales.jpg',
-    'assets/images/destinos/logo_recuca.png',
-    'assets/images/destinos/logo_mariposario.jpg',
-    'assets/images/destinos/logo_cabalgatas.jpg',
-    'assets/images/destinos/logo_parque_los_arrieros.png',
-    'assets/images/destinos/logo_balsaje.jpg'
+    'assets/images/destinos/logo_parque_del_cafe.webp',
+    'assets/images/destinos/logo_panaca.webp',
+    'assets/images/destinos/logo_valle_cocora.webp',
+    'assets/images/destinos/logo_salento.webp',
+    'assets/images/destinos/logo_filandia.webp',
+    'assets/images/destinos/logo_termales.webp',
+    'assets/images/destinos/logo_recuca.webp',
+    'assets/images/destinos/logo_mariposario.webp',
+    'assets/images/destinos/logo_cabalgatas.webp',
+    'assets/images/destinos/logo_parque_los_arrieros.webp',
+    'assets/images/destinos/logo_balsaje.webp'
 ];
 
 console.log('Verificando imágenes de atractivos turísticos...\n');

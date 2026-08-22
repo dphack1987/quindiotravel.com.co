@@ -2,13 +2,13 @@ const fs = require('fs');
 
 // Mapeo de imágenes faltantes a imágenes existentes como fallback
 const imageMapping = {
-    'assets/images/destinos/logo_valle_cocora.jpg': 'assets/images/paisajes/valle-cocoro-hero-banner.jpg',
-    'assets/images/destinos/logo_salento.jpg': 'assets/images/paisajes/salento-colorful-houses.jfif',
-    'assets/images/destinos/logo_filandia.jpg': 'assets/images/paisajes/filandia-colonial-architecture.jfif',
-    'assets/images/destinos/logo_termales.jpg': 'assets/images/paisajes/coffee-plantation-green.jpg',
-    'assets/images/destinos/logo_mariposario.jpg': 'assets/images/paisajes/armenia-city-view.jfif',
-    'assets/images/destinos/logo_cabalgatas.jpg': 'assets/images/paisajes/quindio-traditional-town.jfif',
-    'assets/images/destinos/logo_balsaje.jpg': 'assets/images/paisajes/natural-landscapes-colombia.avif'
+    'assets/images/destinos/logo_valle_cocora.webp': 'assets/images/paisajes/valle-cocoro-hero-banner.webp',
+    'assets/images/destinos/logo_salento.webp': 'assets/images/paisajes/salento-colorful-houses.jfif',
+    'assets/images/destinos/logo_filandia.webp': 'assets/images/paisajes/filandia-colonial-architecture.jfif',
+    'assets/images/destinos/logo_termales.webp': 'assets/images/paisajes/coffee-plantation-green.webp',
+    'assets/images/destinos/logo_mariposario.webp': 'assets/images/paisajes/armenia-city-view.jfif',
+    'assets/images/destinos/logo_cabalgatas.webp': 'assets/images/paisajes/quindio-traditional-town.jfif',
+    'assets/images/destinos/logo_balsaje.webp': 'assets/images/paisajes/natural-landscapes-colombia.avif'
 };
 
 const filesToUpdate = ['index.html'];

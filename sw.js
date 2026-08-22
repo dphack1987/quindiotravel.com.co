@@ -20,9 +20,9 @@ const STATIC_URLS = [
   '/assets/js/atractivos-data.js',
   '/assets/js/whatsapp-payload-builder.js',
   '/assets/js/performance-optimizer.js',
-  '/logo_quindio_travel.png',
+  '/logo_quindio_travel.webp',
   '/favicon.ico',
-  '/apple-touch-icon.png',
+  '/apple-touch-icon.webp',
   '/site.webmanifest'
 ];
 
@@ -104,7 +104,7 @@ self.addEventListener('install', (event) => {
       // Cachear imágenes principales
       caches.open(IMAGE_CACHE).then(cache => {
         return cache.addAll([
-          '/assets/images/paisajes/valle-cocora-hero-banner.jpg',
+          '/assets/images/paisajes/valle-cocora-hero-banner.webp',
           '/assets/images/paisajes/eje-cafetero-aerial-view.webp'
         ]);
       })
@@ -208,7 +208,7 @@ self.addEventListener('push', (event) => {
   
   const options = {
     body: event.data ? event.data.text() : 'Nueva promoción disponible en Quindío Travel',
-    icon: '/logo_quindio_travel.png',
+    icon: '/logo_quindio_travel.webp',
     badge: '/favicon.ico',
     vibrate: [200, 100, 200],
     data: {
@@ -218,7 +218,7 @@ self.addEventListener('push', (event) => {
       {
         action: 'explore',
         title: 'Ver Promoción',
-        icon: '/logo_quindio_travel.png'
+        icon: '/logo_quindio_travel.webp'
       },
       {
         action: 'close',
