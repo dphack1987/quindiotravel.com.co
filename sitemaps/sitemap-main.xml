@@ -46,6 +46,18 @@
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>https://quindiotravel.com.co/en/booking-usa.html</loc>
+        <lastmod>2026-08-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://quindiotravel.com.co/en/booking-europe.html</loc>
+        <lastmod>2026-08-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://quindiotravel.com.co/blog-mejor-epoca-eje-cafetero.html</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>monthly</changefreq>
