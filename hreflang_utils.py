@@ -1,20 +1,31 @@
 """
-Process only blog files to debug the issue
+Hreflang Utils - Common functions for language detection and hreflang tags
+Provides reusable functionality for multilingual SEO
 """
 
 import re
 from pathlib import Path
 
-def add_hreflang_tags(html_content, file_name):
-    """Add hreflang tags to HTML"""
+
+def add_hreflang_tags(html_content: str, file_name: str, base_domain: str = "quindiotravel.com.co") -> str:
+    """
+    Add hreflang tags to HTML content for multilingual SEO
     
+    Args:
+        html_content: HTML content to modify
+        file_name: Relative file path/name
+        base_domain: Base domain for URLs (default: quindiotravel.com.co)
+        
+    Returns:
+        Modified HTML content with hreflang tags
+    """
     # Generate base URL according to file location
     if '/' in file_name:
         # File in subdirectory
-        base_url = f"https://quindiotravel.com.co/{file_name}"
+        base_url = f"https://{base_domain}/{file_name}"
     else:
         # File in root
-        base_url = f"https://quindiotravel.com.co/{file_name}"
+        base_url = f"https://{base_domain}/{file_name}"
     
     hreflang_tags = f'''
 
@@ -44,9 +55,18 @@ def add_hreflang_tags(html_content, file_name):
     
     return html_content
 
-def add_language_detector(html_content):
-    """Add language detector script before </body>"""
+
+def add_language_detector(html_content: str, script_path: str = "assets/js/language-detector.js") -> str:
+    """
+    Add language detector script before </body> tag
     
+    Args:
+        html_content: HTML content to modify
+        script_path: Path to the language detector script (default: assets/js/language-detector.js)
+        
+    Returns:
+        Modified HTML content with language detector script
+    """
     # First check if it already has the script
     if 'language-detector.js' in html_content:
         return html_content
@@ -54,16 +74,52 @@ def add_language_detector(html_content):
     # Pattern to find </body>
     pattern = r'(</body>)'
     
-    script_tag = r'''    <!-- Language Detector -->
-    <script src="assets/js/language-detector.js" defer></script>
+    script_tag = f'''    <!-- Language Detector -->
+    <script src="{script_path}" defer></script>
     
-\1'''
+\\1'''
     
     html_content = re.sub(pattern, script_tag, html_content)
     return html_content
 
-def process_file(file_path):
-    """Process individual HTML file"""
+
+def has_hreflang_tags(html_content: str) -> bool:
+    """
+    Check if HTML content already has hreflang tags
+    
+    Args:
+        html_content: HTML content to check
+        
+    Returns:
+        True if hreflang tags exist, False otherwise
+    """
+    return bool(re.search(r'<link rel="alternate" hreflang=', html_content))
+
+
+def has_language_detector(html_content: str) -> bool:
+    """
+    Check if HTML content already has language detector script
+    
+    Args:
+        html_content: HTML content to check
+        
+    Returns:
+        True if language detector script exists, False otherwise
+    """
+    return 'language-detector.js' in html_content
+
+
+def process_file_with_hreflang(file_path: Path, base_domain: str = "quindiotravel.com.co") -> bool:
+    """
+    Process a single HTML file to add hreflang tags and language detector
+    
+    Args:
+        file_path: Path to the HTML file
+        base_domain: Base domain for URLs (default: quindiotravel.com.co)
+        
+    Returns:
+        True if successful, False otherwise
+    """
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -72,7 +128,7 @@ def process_file(file_path):
         relative_path = str(file_path.relative_to(Path.cwd())).replace('\\', '/')
         
         # Add hreflang tags
-        content = add_hreflang_tags(content, relative_path)
+        content = add_hreflang_tags(content, relative_path, base_domain)
         
         # Add language detector script
         content = add_language_detector(content)
@@ -85,35 +141,3 @@ def process_file(file_path):
     except Exception as e:
         print(f"Error processing {file_path.name}: {e}")
         return False
-
-def main():
-    base_dir = Path.cwd()
-    blog_dir = base_dir / 'blog'
-    
-    if not blog_dir.exists():
-        print("Blog directory not found")
-        return
-    
-    blog_files = sorted(list(blog_dir.glob('*.html')))
-    print(f"Found {len(blog_files)} blog files")
-    
-    success_count = 0
-    fail_count = 0
-    
-    for i, html_file in enumerate(blog_files, 1):
-        print(f"[{i}/{len(blog_files)}] Processing {html_file.name}...")
-        try:
-            if process_file(html_file):
-                success_count += 1
-                print(f"  OK")
-            else:
-                fail_count += 1
-                print(f"  FAIL")
-        except Exception as e:
-            fail_count += 1
-            print(f"  ERROR: {e}")
-    
-    print(f"\nCompleted: {success_count} successful, {fail_count} failed out of {len(blog_files)} total")
-
-if __name__ == "__main__":
-    main()
