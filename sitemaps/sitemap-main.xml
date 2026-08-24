@@ -17,7 +17,31 @@
     </url>
     <url>
         <loc>https://quindiotravel.com.co/planes.html</loc>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://quindiotravel.com.co/operador-turistico-quindio.html</loc>
+        <lastmod>2026-08-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://quindiotravel.com.co/en/</loc>
+        <lastmod>2026-08-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://quindiotravel.com.co/en/plans.html</loc>
+        <lastmod>2026-08-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://quindiotravel.com.co/en/salento.html</loc>
+        <lastmod>2026-08-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
