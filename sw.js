@@ -4,10 +4,10 @@
  * Estrategia: Cache-First para estáticos, Network-First para dinámicos
  */
 
-const CACHE_NAME = 'quindio-travel-v2';
-const STATIC_CACHE = 'quindio-static-v2';
-const DYNAMIC_CACHE = 'quindio-dynamic-v2';
-const IMAGE_CACHE = 'quindio-images-v2';
+const CACHE_NAME = 'quindio-travel-v3';
+const STATIC_CACHE = 'quindio-static-v3';
+const DYNAMIC_CACHE = 'quindio-dynamic-v3';
+const IMAGE_CACHE = 'quindio-images-v3';
 
 // URLs que deben cachearse estáticamente
 const STATIC_URLS = [
@@ -310,29 +310,31 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Estadísticas de cache
-self.addEventListener('fetch', (event) => {
-  // Logging de cache hits/misses para debugging
-  event.respondWith(
-    (async () => {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      const cached = await cache.match(event.request);
-      
-      if (cached) {
-        console.log('Cache HIT:', event.request.url);
-        return cached;
-      }
-      
-      console.log('Cache MISS:', event.request.url);
-      const response = await fetch(event.request);
-      
-      if (response.ok) {
-        await cache.put(event.request, response.clone());
-      }
-      
-      return response;
-    })()
-  );
-});
+// Estadísticas de cache (desactivado en producción para mejor rendimiento)
+if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+  self.addEventListener('fetch', (event) => {
+    // Logging de cache hits/misses para debugging
+    event.respondWith(
+      (async () => {
+        const cache = await caches.open(DYNAMIC_CACHE);
+        const cached = await cache.match(event.request);
+        
+        if (cached) {
+          console.log('Cache HIT:', event.request.url);
+          return cached;
+        }
+        
+        console.log('Cache MISS:', event.request.url);
+        const response = await fetch(event.request);
+        
+        if (response.ok) {
+          await cache.put(event.request, response.clone());
+        }
+        
+        return response;
+      })()
+    );
+  });
+}
 
 console.log('Service Worker: Cargado correctamente');

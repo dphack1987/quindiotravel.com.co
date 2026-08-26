@@ -4326,8 +4326,8 @@ body {
         display: block;
         padding: 14px 0;
         width: 100%;
-        color: var(--verde-cafe);
-        font-weight: 600;
+        color: var(--texto-oscuro) !important;
+        font-weight: 700;
         transition: color 0.25s ease;
     }
     .nav-menu ul li a:hover, .nav-menu ul li a.active {
@@ -7294,7 +7294,6 @@ body {
     .reservas-wrapper {
         grid-template-columns: 1fr !important;
     }
-}
 
     .plan-card,
     .hotel-card,
@@ -7978,14 +7977,14 @@ body {
 
 /* Contraste final del menú sobre superficies claras */
 .main-header .nav-menu ul li a {
-    color: var(--verde-cafe) !important;
+    color: var(--texto-oscuro) !important;
     font-weight: 700;
 }
 
 .main-header .nav-menu ul li a:hover,
 .main-header .nav-menu ul li a:focus-visible,
 .main-header .nav-menu ul li a.active {
-    color: var(--naranja-brillante) !important;
+    color: var(--verde-cafe) !important;
     background: rgba(46, 90, 54, 0.08);
 }
 
@@ -8016,6 +8015,15 @@ body {
     .main-header .nav-menu ul li a.active {
         color: var(--verde-cafe) !important;
         background: rgba(46, 90, 54, 0.08);
+    }
+    
+    /* Estilos especiales para enlaces promocionales en móvil */
+    .main-header .nav-menu ul li a.promo-link {
+        color: #c0392b !important; /* Rojo oscuro para mejor contraste */
+    }
+    
+    .main-header .nav-menu ul li a.vip-link {
+        color: #d4a017 !important; /* Dorado oscuro para mejor contraste */
     }
 }
 
