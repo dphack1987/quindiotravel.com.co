@@ -4,7 +4,7 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-    <!-- Páginas Principales -->
+    <!-- Páginas Principales - Alta Prioridad para Local SEO y GEO -->
     <url>
         <loc>https://quindiotravel.com.co/</loc>
         <lastmod>2026-08-26</lastmod>
@@ -33,7 +33,7 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- Destinos Principales -->
+    <!-- Destinos Principales - Alta Prioridad para Local SEO -->
     <url>
         <loc>https://quindiotravel.com.co/salento.html</loc>
         <lastmod>2026-08-26</lastmod>
