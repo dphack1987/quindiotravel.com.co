@@ -1,7 +1,6 @@
 # robots.txt para Quindío Travel
 # Operador Turístico Oficial RNT 18152
 # Optimizado para Local SEO y GEO (Generative Engine Optimization)
-# Fase 4: Local SEO & Authority
 
 User-agent: *
 Allow: /
@@ -54,6 +53,3 @@ Sitemap: https://quindiotravel.com.co/sitemap.xml
 
 # Sitemap específico para contenido estructurado (GEO)
 Sitemap: https://quindiotravel.com.co/sitemap-content.xml
-
-# Sitemap específico para ubicaciones locales (Fase 4 Local SEO)
-Sitemap: https://quindiotravel.com.co/sitemap-local.xml
