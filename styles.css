@@ -8762,3 +8762,24 @@ body {
         max-width: 100%;
     }
 }
+
+/* Lazy Loading Images */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* Lazy Loading para background images */
+.lazy-bg {
+    background-image: none !important;
+    background-color: #f0f0f0;
+    transition: background-image 0.3s;
+}
+
+.lazy-bg.loaded {
+    background-image: var(--bg-image) !important;
+}
