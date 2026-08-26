@@ -7,6 +7,28 @@
     <!-- Sitemap de Contenido Estructurado para GEO (Generative Engine Optimization) -->
     <!-- Prioriza contenido optimizado para respuestas de IA y featured snippets -->
 
+    <!-- Landing Pages Transaccionales - Alta Prioridad para Conversión -->
+    <url>
+        <loc>https://quindiotravel.com.co/planes-turisticos-quindio-comprar.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/precios-planes-turisticos-quindio.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/reservar-plan-eje-cafetero.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
     <!-- Páginas con FAQ Schema optimizadas para IA -->
     <url>
         <loc>https://quindiotravel.com.co/planes.html</loc>
