@@ -1,6 +1,7 @@
 # robots.txt para Quindío Travel
 # Operador Turístico Oficial RNT 18152
 # Optimizado para Local SEO y GEO (Generative Engine Optimization)
+# Fase 4: Local SEO & Authority
 
 User-agent: *
 Allow: /
@@ -26,7 +27,7 @@ Disallow: /*.md$
 Disallow: /*.txt$
 Disallow: /*.git*
 
-# Optimización para Local SEO - Permitir crawling de ubicaciones importantes
+# Optimización para Local SEO - Priorizar páginas de ubicaciones (Fase 4)
 Allow: /salento.html
 Allow: /filandia.html
 Allow: /valle-de-cocora.html
@@ -35,14 +36,24 @@ Allow: /armenia.html
 Allow: /finca-hoteles-en-el-quindio.html
 Allow: /operador-turistico-quindio.html
 
+# Optimización para transporte local (Fase 4)
+Allow: /como-llegar-salento-desde-bogota.html
+Allow: /como-llegar-*.html
+
 # Optimización para GEO - Priorizar contenido estructurado
 Allow: /planes.html
 Allow: /blog/
 Allow: /coffee-tour-*.html
-Allow: /como-llegar-*.html
+
+# Bloquear páginas duplicadas o de baja prioridad
+Disallow: /en/plan-*.html
+Disallow: /programmatic-pages/temp-*.html
 
 # Sitemap principal
 Sitemap: https://quindiotravel.com.co/sitemap.xml
 
 # Sitemap específico para contenido estructurado (GEO)
 Sitemap: https://quindiotravel.com.co/sitemap-content.xml
+
+# Sitemap específico para ubicaciones locales (Fase 4 Local SEO)
+Sitemap: https://quindiotravel.com.co/sitemap-local.xml

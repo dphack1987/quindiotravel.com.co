@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Sitemap Local SEO - Fase 4: Local SEO & Authority -->
+    <!-- Páginas optimizadas para búsquedas locales y geográficas -->
+
+    <!-- Operador Turístico - Autoridad Local -->
+    <url>
+        <loc>https://quindiotravel.com.co/operador-turistico-quindio.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Destinos Principales - Optimizados Local SEO -->
+    <url>
+        <loc>https://quindiotravel.com.co/salento.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/filandia.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/valle-de-cocora.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Atractivos Principales - Local SEO -->
+    <url>
+        <loc>https://quindiotravel.com.co/parque-del-cafe.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/panaca.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/termales-santa-rosa.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Transporte Local - Fase 4 -->
+    <url>
+        <loc>https://quindiotravel.com.co/como-llegar-salento-desde-bogota.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Alojamientos - Local SEO -->
+    <url>
+        <loc>https://quindiotravel.com.co/finca-hoteles-en-el-quindio.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/cabanas-la-esmeralda.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/finca-hotel-la-dorada.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/finca-hotel-los-girasoles.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Experiencias Locales -->
+    <url>
+        <loc>https://quindiotravel.com.co/coffee-tour-armenia.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/coffee-tour-quindio-precio.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/cabalgatas-quindio.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/balsaje-rio-la-vieja.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Blog Local - SEO Local -->
+    <url>
+        <loc>https://quindiotravel.com.co/blog/mejor-epoca-visitar-quindio-2026.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/blog/que-llevar-maleta-viaje-quindio-2026.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/blog/guia-transporte-eje-cafetero-bogota-2026.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://quindiotravel.com.co/blog/gastronomia-autentica-quindio-2026.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+</urlset>
