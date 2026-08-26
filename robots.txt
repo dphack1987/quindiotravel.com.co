@@ -5,9 +5,6 @@
 User-agent: *
 Allow: /
 
-# Priorizar contenido principal para crawling
-Crawl-delay: 1
-
 # Bloquear archivos innecesarios
 Disallow: /node_modules/
 Disallow: /components/
@@ -23,19 +20,17 @@ Disallow: /.vscode/
 # Bloquear archivos de configuración
 Disallow: /*.json$
 Disallow: /*.md$
-Disallow: /*.txt$
 Disallow: /*.git*
 
-# Optimización para Local SEO - Priorizar páginas de ubicaciones (Fase 4)
+# Optimización para Local SEO - Priorizar páginas de ubicaciones
 Allow: /salento.html
 Allow: /filandia.html
 Allow: /valle-de-cocora.html
 Allow: /parque-del-cafe.html
-Allow: /armenia.html
 Allow: /finca-hoteles-en-el-quindio.html
 Allow: /operador-turistico-quindio.html
 
-# Optimización para transporte local (Fase 4)
+# Optimización para transporte local
 Allow: /como-llegar-salento-desde-bogota.html
 Allow: /como-llegar-*.html
 
