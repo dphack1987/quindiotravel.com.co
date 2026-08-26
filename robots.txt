@@ -1,22 +1,29 @@
-# Robots.txt para Quindío Travel
-# Optimizado para rastreo masivo de Google
+# robots.txt para Quindío Travel
+# Operador Turístico Oficial RNT 18152
 
 User-agent: *
 Allow: /
 
-# Permitir acceso a contenido importante
-Allow: /sitemap.xml
-Allow: /llms.txt
-Allow: /programmatic-pages/
-Allow: /blog/
+# Bloquear archivos innecesarios
+Disallow: /node_modules/
+Disallow: /components/
+Disallow: /docs/
+Disallow: /generated-pages/
+Disallow: /competitive-engine/
+Disallow: /don-chucho-backend/
+Disallow: /assets/data/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.vscode/
 
-# Bloquear solo archivos Python (scripts de trabajo)
-Disallow: /*.py
-
-# Bloquear archivos de documentación
-Disallow: /*.md
-Disallow: /outreach_data/
-Disallow: /directories_data/
+# Bloquear archivos de configuración
+Disallow: /*.json$
+Disallow: /*.md$
+Disallow: /*.txt$
+Disallow: /*.git*
 
 # Sitemap
 Sitemap: https://quindiotravel.com.co/sitemap.xml
+
+# Crawl-delay para evitar sobrecarga del servidor
+Crawl-delay: 1
