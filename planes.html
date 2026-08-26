@@ -521,7 +521,7 @@ Descubre planes turísticos completos al Eje Cafetero desde $425.000 COP para vi
             
             <div class="atractivo-galeria">
                 <div class="galeria-principal">
-                    <img id="atractivo-imagen-principal" src="" loading="lazy" alt="Imagen principal del atractivo turístico" class="imagen-principal">
+                    <img id="atractivo-imagen-principal" src="" loading="lazy" alt="Imagen principal del atractivo turístico" class="imagen-principal" width="1200" height="800">
                 </div>
                 <div class="galeria-miniaturas" id="atractivo-miniaturas">
                     <!-- Miniaturas se generan dinámicamente -->
@@ -927,7 +927,7 @@ Descubre planes turísticos completos al Eje Cafetero desde $425.000 COP para vi
                     atractivo.imagenes.forEach((imagen, index) => {
                         const miniatura = document.createElement('div');
                         miniatura.className = 'miniatura';
-                        miniatura.innerHTML = `<img src="${imagen}" loading="lazy" alt="${atractivo.nombre} - Imagen ${index + 1}">`;
+                        miniatura.innerHTML = `<img src="${imagen}" loading="lazy" alt="${atractivo.nombre} - Imagen ${index + 1}" width="100" height="100">`;
                         miniatura.addEventListener('click', () => {
                             imagenPrincipal.src = imagen;
                         });
