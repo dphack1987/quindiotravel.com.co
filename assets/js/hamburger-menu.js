@@ -5,9 +5,9 @@
 
 class HamburgerMenu {
     constructor(options = {}) {
-        this.toggleSelector = options.toggleSelector || '.hamburger-toggle';
-        this.menuSelector = options.menuSelector || '.nav-menu';
-        this.activeClass = options.activeClass || 'active';
+        this.toggleSelector = options.toggleSelector || '#hamburger-btn';
+        this.menuSelector = options.menuSelector || '#nav-menu';
+        this.activeClass = options.activeClass || 'nav-menu-open';
         this.bodyClass = options.bodyClass || 'menu-open';
         
         this.toggle = document.querySelector(this.toggleSelector);
@@ -51,6 +51,18 @@ class HamburgerMenu {
         
         // Close menu on window resize
         window.addEventListener('resize', this.handleResize.bind(this));
+        
+        // Close menu when clicking on menu links
+        if (this.menu) {
+            const menuLinks = this.menu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (this.isMenuOpen()) {
+                        this.closeMenu();
+                    }
+                });
+            });
+        }
     }
     
     setupARIA() {

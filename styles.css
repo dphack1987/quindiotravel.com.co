@@ -1554,6 +1554,15 @@ body {
     background-color: var(--verde-claro);
 }
 
+.hamburger-btn.active {
+    background-color: var(--naranja-brillante);
+    transform: rotate(90deg);
+}
+
+.hamburger-btn.active i::before {
+    content: "\f00d"; /* FontAwesome close icon */
+}
+
 .header-actions {
     display: flex;
     align-items: center;
