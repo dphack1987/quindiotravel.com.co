@@ -4390,12 +4390,12 @@ body {
 .main-header .nav-menu.nav-menu-open ul li a[href="#promocion-mes"] {
     color: #e74c3c !important;
     font-weight: 700;
-    background-color: rgba(231, 76, 60, 0.05);
+    background-color: rgba(231, 76, 60, 0.12);
 }
 
 .nav-menu.nav-menu-open ul li a[href="#promocion-mes"]:hover,
 .main-header .nav-menu.nav-menu-open ul li a[href="#promocion-mes"]:hover {
-    background-color: rgba(231, 76, 60, 0.1);
+    background-color: rgba(231, 76, 60, 0.18);
 }
 
 /* Estado abierto del menú - móvil (dentro del media query existente) */
