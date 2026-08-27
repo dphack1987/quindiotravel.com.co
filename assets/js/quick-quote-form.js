@@ -26,6 +26,9 @@
                 box-shadow: 0 4px 20px rgba(0,0,0,0.15);
                 z-index: 9999;
                 width: 300px;
+                max-height: calc(100vh - 110px);
+                overflow-y: auto;
+                box-sizing: border-box;
                 display: none;
                 border: 2px solid #2E5A36;
             `;

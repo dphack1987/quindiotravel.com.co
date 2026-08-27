@@ -8893,6 +8893,18 @@ body {
     z-index: 1200;
     }
 
+.footer-brand-logo {
+    display: inline-flex;
+    margin-bottom: 14px;
+}
+
+.footer-brand-logo img {
+    display: block;
+    width: min(185px, 100%);
+    height: auto;
+    object-fit: contain;
+}
+
     .don-chucho-toggle {
         width: 52px;
         height: 52px;
