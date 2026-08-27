@@ -1,22 +1,72 @@
-# Robots.txt para Quindío Travel
-# Optimizado para rastreo masivo de Google
+# robots.txt - Quindío Travel - Crawl Budget Optimization
+# Prioriza rastreo de páginas de conversión y optimiza indexación
 
 User-agent: *
 Allow: /
 
-# Permitir acceso a contenido importante
-Allow: /sitemap.xml
-Allow: /llms.txt
-Allow: /programmatic-pages/
-Allow: /blog/
+# Priorizar páginas de conversión principales
+Allow: /index.html
+Allow: /salento.html
+Allow: /parque-del-cafe.html
+Allow: /valle-de-cocora.html
+Allow: /filandia.html
+Allow: /panaca.html
+Allow: /cabanas-la-esmeralda.html
+Allow: /finca-hotel-los-girasoles.html
+Allow: /hotel-campestre-las-camelias.html
 
-# Bloquear solo archivos Python (scripts de trabajo)
-Disallow: /*.py
+# Páginas de alojamientos (prioridad media)
+Allow: /hotel-campestre-la-tata.html
+Allow: /hotel-campestre-cafe-cafe.html
+Allow: /finca-hotel-la-dorada.html
+Allow: /hotel-de-la-vega.html
 
-# Bloquear archivos de documentación
-Disallow: /*.md
-Disallow: /outreach_data/
-Disallow: /directories_data/
+# Bloquear rastreo de páginas de baja conversión
+Disallow: /planes.html?filter=
+Disallow: /planes.html?sort=
+Disallow: /blog.html?page=
+Disallow: /blog.html?category=
 
-# Sitemap
+# Bloquear rastreo de recursos estáticos (ahorro de crawl budget)
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/images/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env/
+Disallow: /generated-pages/
+
+# Bloquear páginas administrativas y de desarrollo
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /api/
+
+# Sitemap XML
 Sitemap: https://quindiotravel.com.co/sitemap.xml
+
+# Crawl-delay para optimizar uso de recursos (5 segundos entre peticiones)
+Crawl-delay: 5
+
+# Googlebot específico - sin delays para páginas principales
+User-agent: Googlebot
+Crawl-delay: 0
+Allow: /index.html
+Allow: /salento.html
+Allow: /parque-del-cafe.html
+Allow: /valle-de-cocora.html
+Allow: /filandia.html
+Allow: /panaca.html
+
+# Bingbot específico
+User-agent: Bingbot
+Crawl-delay: 3
+Allow: /
+
+# Facebook crawler (para Open Graph)
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter crawler (para Twitter Cards)
+User-agent: Twitterbot
+Allow: /

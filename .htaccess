@@ -1,0 +1,44 @@
+# SEO Crawl Budget Optimization - X-Robots-Tag Configuration
+# Prioriza rastreo de páginas de conversión y bloquea páginas de baja valor
+
+# Bloquear rastreo de páginas de búsqueda/filtros (baja conversión)
+<FilesMatch "planes\.html">
+    Header set X-Robots-Tag "index, follow, noarchive"
+</FilesMatch>
+
+# Priorizar rastreo de páginas de conversión (paquetes, hoteles)
+<FilesMatch "(index\.html|cabanas-la-esmeralda\.html|finca-hotel-los-girasoles\.html|hotel-campestre-las-camelias\.html|salento\.html|parque-del-cafe\.html|valle-de-cocora\.html)">
+    Header set X-Robots-Tag "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+</FilesMatch>
+
+# Bloquear rastreo de páginas administrativas y de desarrollo
+<FilesMatch "(\.git|\.env|\.config|\.xml|admin|login|dashboard)">
+    Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+</FilesMatch>
+
+# Optimización para archivos de recursos (no rastrear)
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|eot)$">
+    Header set X-Robots-Tag "noindex"
+</FilesMatch>
+
+# Cache control para recursos estáticos
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Cache control para HTML
+<FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600"
+</FilesMatch>
+
+# Habilitar compresión GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Redireccionar HTTP a HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
