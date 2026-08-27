@@ -73,6 +73,40 @@
         ]
     }
     </script>
+
+    <!-- Schema.org Product para Planes Grupos Amigos -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Planes para Grupos de Amigos en Quindío",
+        "description": "Paquetes turísticos para grupos de amigos en el Eje Cafetero. Valle de Cocora, Termales, rutas de café con precios verificados desde $425.000 COP.",
+        "image": "https://quindiotravel.com.co/assets/images/paisajes/valle-cocora-hero-banner.webp",
+        "brand": {
+            "@type": "Brand",
+            "name": "Quindío Travel",
+            "url": "https://quindiotravel.com.co"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "425000",
+            "priceCurrency": "COP",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-01-01",
+            "validThrough": "2026-12-31",
+            "seller": {
+                "@type": "TravelAgency",
+                "name": "Quindío Travel",
+                "telephone": "+57-317-4426044"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "150"
+        }
+    }
+    </script>
 </head>
 <body>
     <header class="main-header">
@@ -240,6 +274,21 @@
             </div>
         </section>
     </main>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20quiero%20información%20sobre%20planes%20para%20grupos%20de%20amigos" 
+       class="whatsapp-float pulse" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>¡Cotiza Ahora!</span>
+    </a>
+
+    <link rel="stylesheet" href="assets/css/whatsapp-float.css">
+    <link rel="stylesheet" href="assets/css/fixed-navigation.css">
+    <script src="assets/js/fixed-navigation.js" defer></script>
+    <script src="assets/js/optimize-images.js" defer></script>
 
     <footer class="main-footer-section">
         <div class="container">
