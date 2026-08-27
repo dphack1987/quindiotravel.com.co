@@ -149,6 +149,15 @@ this.activeClass = options.activeClass || 'nav-menu-open';
 - **Páginas nuevas:** Componente estructurado (index.html, blog.html, páginas en inglés, páginas de alojamientos, blog completo)
 - **Beneficio:** Consistencia en páginas nuevas, mantenimiento de funcionalidad existente
 
+### 1.5. Visibilidad Permanente del Menú Hamburguesa
+**Estado:** ✅ COMPLETADO (27 de Agosto 2026)
+**Cambios CSS realizados:**
+- `.hamburger-btn`: Agregado `display: flex !important`, `visibility: visible !important`, `opacity: 1 !important`
+- Media query móvil: Mantenido `display: flex !important`
+- Media query desktop (min-width: 769px): Agregado reglas de visibilidad forzada
+- **Resultado:** El botón hamburguesa ahora es visible en todos los tamaños de pantalla
+- **Beneficio:** Los usuarios pueden acceder al menú desplegable en cualquier dispositivo
+
 ### 2. Verificación de Paginas Restantes
 **Estado:** ✅ COMPLETADO
 - [x] Verificar funcionalidad en páginas de destinos (5 páginas verificadas)

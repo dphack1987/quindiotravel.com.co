@@ -1533,10 +1533,10 @@ body {
 }
 
 /* ============================================================
-   MENÚ HAMBURGUESA (RESPONSIVE)
+   MENÚ HAMBURGUESA (SIEMPRE VISIBLE)
    ============================================================ */
 .hamburger-btn {
-    display: flex;
+    display: flex !important;
     background-color: var(--verde-cafe);
     color: var(--blanco);
     border: none;
@@ -1549,6 +1549,8 @@ body {
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 .hamburger-btn:hover {
     background-color: var(--verde-claro);
@@ -1561,6 +1563,15 @@ body {
 
 .hamburger-btn.active i::before {
     content: "\f00d"; /* FontAwesome close icon */
+}
+
+/* Asegurar visibilidad en todos los tamaños de pantalla */
+@media (min-width: 769px) {
+    .hamburger-btn {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
 }
 
 .header-actions {
@@ -4297,7 +4308,7 @@ body {
     }
 
     .hamburger-btn {
-        display: flex;
+        display: flex !important;
     }
 
     .nav-menu {
