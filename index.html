@@ -580,7 +580,7 @@
         position: fixed;
         bottom: 20px;
         left: 20px;
-        z-index: 1000;
+        z-index: 1200;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -647,20 +647,49 @@
         background: white;
         border-radius: 18px;
         box-shadow: 0 5px 25px rgba(0,0,0,0.15);
-        overflow: visible;
+        overflow: hidden;
         max-width: 350px;
-        max-height: 450px;
+        max-height: min(450px, calc(100vh - 90px));
+        flex-direction: column;
+    }
+    .don-chucho-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 15px;
+        background: #8B4513;
+        color: white;
+        flex: 0 0 auto;
+    }
+    .don-chucho-title {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+    .don-chucho-close {
+        width: 32px;
+        height: 32px;
+        border: 1px solid rgba(255,255,255,0.7);
+        border-radius: 50%;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 1;
     }
     .don-chucho-body.opened {
-        display: block;
+        display: flex;
     }
 
     .don-chucho-open .don-chucho-body {
-        display: block;
+        display: flex;
     }
 
     .don-chucho-messages {
-        height: 350px;
+        height: auto;
+        min-height: 0;
+        flex: 1 1 auto;
         overflow-y: auto;
         padding: 15px;
         background: #f8f9fa;
@@ -760,11 +789,11 @@
 
         .don-chucho-body {
             max-width: 300px;
-            max-height: 400px;
+            max-height: calc(100vh - 90px);
         }
 
         .don-chucho-messages {
-            height: 300px;
+            height: auto;
         }
     }
     
@@ -5239,10 +5268,14 @@ Quindío Travel es operador turístico certificado RNT 18152 especializado en tu
     <!-- Don Chucho Chat Container -->
     <div class="don-chucho-chat-container" id="don-chucho-chat">
         <div class="don-chucho-body" id="don-chucho-body">
+            <div class="don-chucho-header">
+                <h2 class="don-chucho-title">Don Chucho · Asistente virtual</h2>
+                <button class="don-chucho-close" type="button" aria-label="Cerrar ventana de Don Chucho" onclick="toggleDonChucho()">&times;</button>
+            </div>
             <div class="don-chucho-messages" id="don-chucho-messages">
                 <div class="message bot-message">
                     <div class="message-content">
-                        <p>🤠 ¡Hola, compadre! Soy Don Chucho, tu guía del Eje Cafetero. Aquí te ayudo a encontrar el mejor plan, precio y plan de viaje para tu ruta en el Quindío.</p>
+                        <p>🤠 ¡Hola, compadre! Soy Don Chucho, el asistente virtual de Quindío Travel. Estoy aquí para ayudarte a explorar planes, destinos y opciones de viaje por el Quindío.</p>
                     </div>
                 </div>
             </div>
@@ -5741,7 +5774,7 @@ Quindío Travel es operador turístico certificado RNT 18152 especializado en tu
 
             const hambBtn = document.getElementById('hamburger-btn');
             const navMenu = document.getElementById('nav-menu');
-            if (hambBtn && navMenu) {
+            if (hambBtn && navMenu && !window.hamburgerMenu) {
                 hambBtn.addEventListener('click', () => {
                     const abierto = navMenu.classList.toggle('nav-menu-open');
                     hambBtn.setAttribute('aria-expanded', abierto ? 'true' : 'false');

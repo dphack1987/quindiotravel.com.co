@@ -18,7 +18,7 @@
             formContainer.id = 'quick-quote-form';
             formContainer.style.cssText = `
                 position: fixed;
-                bottom: 20px;
+                bottom: 90px;
                 right: 20px;
                 background: white;
                 padding: 20px;
@@ -73,7 +73,7 @@
             floatingButton.innerHTML = '<i class="fas fa-calculator"></i> Cotizar Rápido';
             floatingButton.style.cssText = `
                 position: fixed;
-                bottom: 20px;
+                bottom: 90px;
                 right: 20px;
                 background: linear-gradient(135deg, #2E5A36 0%, #1a3a1f 100%);
                 color: white;

@@ -8890,7 +8890,7 @@ body {
 .don-chucho-chat-container {
         left: 14px;
         bottom: calc(14px + env(safe-area-inset-bottom));
-        z-index: 500;
+    z-index: 1200;
     }
 
     .don-chucho-toggle {

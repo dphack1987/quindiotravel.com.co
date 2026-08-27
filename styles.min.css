@@ -8694,7 +8694,7 @@ body {
         width: 52px;
         height: 52px;
         font-size: 24px;
-        z-index: 500;
+        z-index: 1200;
     }
 
     .don-chucho-chat-container {

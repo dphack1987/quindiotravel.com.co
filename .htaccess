@@ -1,44 +1,67 @@
-# SEO Crawl Budget Optimization - X-Robots-Tag Configuration
-# Prioriza rastreo de páginas de conversión y bloquea páginas de baja valor
-
-# Bloquear rastreo de páginas de búsqueda/filtros (baja conversión)
-<FilesMatch "planes\.html">
-    Header set X-Robots-Tag "index, follow, noarchive"
-</FilesMatch>
-
-# Priorizar rastreo de páginas de conversión (paquetes, hoteles)
-<FilesMatch "(index\.html|cabanas-la-esmeralda\.html|finca-hotel-los-girasoles\.html|hotel-campestre-las-camelias\.html|salento\.html|parque-del-cafe\.html|valle-de-cocora\.html)">
-    Header set X-Robots-Tag "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-</FilesMatch>
-
-# Bloquear rastreo de páginas administrativas y de desarrollo
-<FilesMatch "(\.git|\.env|\.config|\.xml|admin|login|dashboard)">
-    Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
-</FilesMatch>
-
-# Optimización para archivos de recursos (no rastrear)
-<FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|eot)$">
-    Header set X-Robots-Tag "noindex"
-</FilesMatch>
-
-# Cache control para recursos estáticos
-<FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|eot)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
-</FilesMatch>
-
-# Cache control para HTML
-<FilesMatch "\.html$">
-    Header set Cache-Control "public, max-age=3600"
-</FilesMatch>
-
-# Habilitar compresión GZIP
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+# Performance Optimization
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
 </IfModule>
 
-# Redireccionar HTTP a HTTPS
+# Gzip Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
+</IfModule>
+
+# Browser Caching
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|css|js|ico)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Force HTTPS
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
+
+# Remove WWW
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+</IfModule>
+
+# Remove Trailing Slash
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+</IfModule>
+
+# Protect Files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|sql)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Custom Error Pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html

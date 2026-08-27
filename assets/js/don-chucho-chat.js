@@ -195,7 +195,7 @@ class DonChuchoChat {
         } else if (lowerMessage.includes('reserva') || lowerMessage.includes('cotizar')) {
             return '🤠 ¡Perfecto, viajero! Para cotizar tu viaje necesito:\n\n👤 ¿Cuántas personas viajan?\n📅 ¿Cuándo quieres viajar?\n🎯 ¿Qué te interesa más? (café, naturaleza, pueblos, termales)\n💰 ¿Qué presupuesto tienes en mente?\n\nCuéntame estos detalles y te preparo una cotización especial con descuento.';
         } else if (lowerMessage.includes('hola') || lowerMessage.includes('buenos') || lowerMessage.includes('buenas')) {
-            return '🤠 ¡Hola, compadre! Soy Don Chucho, tu guía del Eje Cafetero. Estoy aquí para ayudarte a planear el viaje perfecto al Quindío.\n\nPuedo ayudarte con:\n• Planes turísticos\n• Precios y cotizaciones\n• Destinos y atractivos\n• Alojamiento y transporte\n\n¿Qué te gustaría saber?';
+            return '🤠 ¡Hola, compadre! Soy Don Chucho, el asistente virtual de Quindío Travel. Estoy aquí para ayudarte a explorar planes, destinos y opciones de viaje por el Quindío.\n\nPuedo ayudarte con:\n• Planes turísticos\n• Precios y cotizaciones\n• Destinos y atractivos\n• Alojamiento y transporte\n\n¿Qué te gustaría saber?';
         } else if (lowerMessage.includes('gracias') || lowerMessage.includes('muchas gracias')) {
             return '🤠 ¡De nada, compadre! Es un placer ayudarte a descubrir la magia del Eje Cafetero.\n\n¿Hay algo más en lo que pueda ayudarte para tu viaje?';
         } else if (lowerMessage.includes('filandia')) {

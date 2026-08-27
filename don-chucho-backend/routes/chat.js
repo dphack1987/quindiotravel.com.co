@@ -116,7 +116,7 @@ router.post('/session', async (req, res) => {
 
         res.json({ 
             sessionId,
-            message: '¡Buenos días, viajero! 👋 Soy Don Chucho, tu arriero guía local del Eje Cafetero. ¿En qué puedo ayudarte hoy?'
+            message: '¡Buenos días, viajero! 👋 Soy Don Chucho, el asistente virtual de Quindío Travel. ¿En qué puedo ayudarte hoy?'
         });
 
     } catch (error) {
