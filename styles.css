@@ -943,7 +943,7 @@ body {
 }
 
 .nav-menu {
-    display: flex;
+    display: none; /* Ocultar menú horizontal por defecto */
     list-style: none;
     align-items: center;
     position: relative;
@@ -4298,6 +4298,108 @@ body {
     }
 }
 
+/* Estado abierto del menú - para todos los dispositivos */
+.nav-menu.nav-menu-open,
+.main-header .nav-menu.nav-menu-open {
+    display: flex !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: var(--blanco) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+    flex-direction: column !important;
+    padding: 15px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 0 0 12px 12px;
+    z-index: 9998;
+}
+
+/* Scrollbar personalizado para el menú */
+.nav-menu.nav-menu-open::-webkit-scrollbar,
+.main-header .nav-menu.nav-menu-open::-webkit-scrollbar {
+    width: 8px;
+}
+
+.nav-menu.nav-menu-open::-webkit-scrollbar-track,
+.main-header .nav-menu.nav-menu-open::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.nav-menu.nav-menu-open::-webkit-scrollbar-thumb,
+.main-header .nav-menu.nav-menu-open::-webkit-scrollbar-thumb {
+    background: var(--verde-cafe);
+    border-radius: 4px;
+}
+
+.nav-menu.nav-menu-open::-webkit-scrollbar-thumb:hover,
+.main-header .nav-menu.nav-menu-open::-webkit-scrollbar-thumb:hover {
+    background: var(--verde-claro);
+}
+
+.nav-menu.nav-menu-open ul,
+.main-header .nav-menu.nav-menu-open ul {
+    flex-direction: column !important;
+    gap: 0 !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nav-menu.nav-menu-open ul li,
+.main-header .nav-menu.nav-menu-open ul li {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.nav-menu.nav-menu-open ul li:last-child,
+.main-header .nav-menu.nav-menu-open ul li:last-child {
+    border-bottom: none;
+}
+
+.nav-menu.nav-menu-open ul li a,
+.main-header .nav-menu.nav-menu-open ul li a {
+    display: block !important;
+    padding: 12px 16px !important;
+    width: 100% !important;
+    color: var(--texto-oscuro) !important;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-align: left;
+    min-height: auto !important;
+    border-radius: 6px !important;
+    font-size: 0.95rem;
+}
+
+.nav-menu.nav-menu-open ul li a:hover,
+.nav-menu.nav-menu-open ul li a.active,
+.main-header .nav-menu.nav-menu-open ul li a:hover,
+.main-header .nav-menu.nav-menu-open ul li a.active {
+    background-color: rgba(46, 90, 54, 0.08) !important;
+    color: var(--verde-cafe) !important;
+    transform: none !important;
+    padding-left: 20px !important;
+}
+
+/* Estilo especial para enlaces promocionales */
+.nav-menu.nav-menu-open ul li a[href="#promocion-mes"],
+.main-header .nav-menu.nav-menu-open ul li a[href="#promocion-mes"] {
+    color: #e74c3c !important;
+    font-weight: 700;
+    background-color: rgba(231, 76, 60, 0.05);
+}
+
+.nav-menu.nav-menu-open ul li a[href="#promocion-mes"]:hover,
+.main-header .nav-menu.nav-menu-open ul li a[href="#promocion-mes"]:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* Estado abierto del menú - móvil (dentro del media query existente) */
+
 @media(max-width: 768px) {
     .nav-container {
         padding: 12px 0;
@@ -4312,7 +4414,6 @@ body {
     }
 
     .nav-menu {
-        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -4322,14 +4423,14 @@ body {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease, padding 0.25s ease;
-        z-index: 1000;
     }
+    
     .nav-menu.nav-menu-open {
-        display: block !important;
         max-height: 85vh;
         padding-bottom: 20px;
         overflow-y: auto;
     }
+    
     .nav-menu ul {
         flex-direction: column;
         padding: 15px 5%;
