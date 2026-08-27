@@ -4,13 +4,13 @@
     --verde-cafe: #2E5A36;
     --verde-claro: #4E8755;
     --blanco: #FFFFFF;
-    --amarillo-suave: #F4D35E;
+    --amarillo-suave: #E6B800; /* Mejorado para contraste WCAG AA */
     --marron-madera: #8D5B4C;
     --gris-claro: #F4F6F4;
     --texto-oscuro: #2C3E35;
-    --naranja-brillante: #FF8C42;
+    --naranja-brillante: #E67300; /* Mejorado para contraste WCAG AA+ */
     --azul-profundo: #4A90E2;
-    --vip-gold: #D4AF37;
+    --vip-gold: #B8960C; /* Mejorado para contraste WCAG AA */
     
     /* Sombras y bordes */
     --shadow-soft-xl: 0 22px 55px rgba(20, 35, 26, 0.12);
