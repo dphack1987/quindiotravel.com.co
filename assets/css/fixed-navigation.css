@@ -1,0 +1,134 @@
+/* Fixed Navigation Styles */
+.fixed-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.fixed-navigation .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.fixed-navigation .logo img {
+    max-height: 35px;
+    width: auto;
+    object-fit: contain;
+}
+
+.fixed-navigation .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.fixed-navigation .nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+.fixed-navigation .nav-menu ul li {
+    margin: 0;
+}
+
+.fixed-navigation .nav-menu ul li a {
+    color: var(--texto-oscuro);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+}
+
+.fixed-navigation .nav-menu ul li a:hover {
+    color: var(--naranja-brillante);
+    background: rgba(230, 184, 0, 0.1);
+}
+
+.fixed-navigation .nav-menu ul li a.cta-btn {
+    background: var(--naranja-brillante);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.fixed-navigation .nav-menu ul li a.cta-btn:hover {
+    background: var(--verde-cafe);
+    color: white;
+}
+
+/* Hide hamburger button in fixed nav on desktop */
+.fixed-navigation .hamburger-btn {
+    display: none;
+}
+
+/* Spacer to prevent content from being hidden behind fixed nav */
+body {
+    padding-top: 0;
+}
+
+body.with-fixed-nav {
+    padding-top: 60px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .fixed-navigation .nav-menu {
+        display: none;
+    }
+    
+    .fixed-navigation .hamburger-btn {
+        display: block;
+        background: var(--verde-cafe);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    body.with-fixed-nav {
+        padding-top: 50px;
+    }
+    
+    .fixed-navigation .logo img {
+        max-height: 30px;
+    }
+}
+
+/* Mobile menu styles for fixed nav */
+.fixed-navigation .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.fixed-navigation .nav-menu.active ul {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fixed-navigation .nav-menu.active ul li a {
+    padding: 0.8rem;
+    display: block;
+    border-radius: 5px;
+}
