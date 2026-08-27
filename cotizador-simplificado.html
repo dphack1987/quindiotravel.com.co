@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 Cotizador de Planes | Selección Visual | Quindío Travel</title>
+    <meta name="description" content="Cotizador simplificado de planes turísticos en Quindío. Selecciona tu duración preferida y ve los planes disponibles con precios exactos. RNT 18152.">
+    <meta name="author" content="Quindío Travel - Álvaro Alzate Ortiz">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://quindiotravel.com.co/cotizador-simplificado.html">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/cotizador-simplificado.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo_quindio_travel.png" alt="Quindío Travel Logo">
+                </a>
+            </div>
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="planes.html">Planes</a></li>
+                    <li><a href="precios-completos-planes-quindio.html">Precios Completos</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-white">
+            <div class="container">
+                <div class="cotizador-simplificado">
+                    <div class="cotizador-simplificado-header">
+                        <h2>💰 Cotizador de Planes Simplificado</h2>
+                        <p>Selecciona tu duración preferida y descubre los planes disponibles con precios exactos</p>
+                    </div>
+                    
+                    <!-- Selector de Duración -->
+                    <div class="duracion-selector">
+                        <div class="duracion-card" data-duracion="2d1n">
+                            <div style="font-size: 2rem; color: var(--naranja-brillante); margin-bottom: 0.5rem;">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>2 Días / 1 Noche</h3>
+                            <div class="price">Desde $425.000</div>
+                            <div class="duration">Escapada rápida</div>
+                        </div>
+                        
+                        <div class="duracion-card" data-duracion="3d2n">
+                            <div style="font-size: 2rem; color: var(--naranja-brillante); margin-bottom: 0.5rem;">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h3>3 Días / 2 Noches</h3>
+                            <div class="price">Desde $562.000</div>
+                            <div class="duration">⭐ Recomendado</div>
+                        </div>
+                        
+                        <div class="duracion-card" data-duracion="4d3n">
+                            <div style="font-size: 2rem; color: var(--naranja-brillante); margin-bottom: 0.5rem;">
+                                <i class="fas fa-calendar-week"></i>
+                            </div>
+                            <h3>4 Días / 3 Noches</h3>
+                            <div class="price">Desde $777.000</div>
+                            <div class="duration">Experiencia completa</div>
+                        </div>
+                        
+                        <div class="duracion-card" data-duracion="5d4n">
+                            <div style="font-size: 2rem; color: var(--naranja-brillante); margin-bottom: 0.5rem;">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h3>5 Días / 4 Noches</h3>
+                            <div class="price">Desde $1.008.000</div>
+                            <div class="duration">Gran Quindío Integral</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenedores de Planes -->
+                    <div id="planes-2d1n" class="plans-container"></div>
+                    <div id="planes-3d2n" class="plans-container"></div>
+                    <div id="planes-4d3n" class="plans-container"></div>
+                    <div id="planes-5d4n" class="plans-container"></div>
+                    
+                    <!-- Enlace a precios completos -->
+                    <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                        <p style="color: var(--texto-oscuro); margin-bottom: 1rem;">¿Necesitas ver todos los precios por acomodación?</p>
+                        <a href="precios-completos-planes-quindio.html" class="btn" style="background: var(--verde-cafe); color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 25px;">
+                            <i class="fas fa-table"></i> Ver Tabla Completa de Precios
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Quindío Travel</h3>
+                    <p>Operador turístico certificado RNT 18152 especializado en turismo del Eje Cafetero colombiano.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="planes.html">Planes</a></li>
+                        <li><a href="precios-completos-planes-quindio.html">Precios Completos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-phone"></i> +57-317-4426044</p>
+                    <p><i class="fas fa-envelope"></i> gerencia@quindiotravel.net</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Quindío Travel. Todos los derechos reservados. RNT 18152.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/hamburger-menu.js" defer></script>
+    <script src="assets/js/cotizador-simplificado.js" defer></script>
+</body>
+</html>
