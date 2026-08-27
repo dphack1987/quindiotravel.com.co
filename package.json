@@ -4,19 +4,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "optimize:css": "npx cssnano-cli styles.css styles.min.css",
-    "optimize:html": "npx html-minifier-terser --collapse-whitespace --remove-comments --minify-css true --minify-js true"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:analyze": "vite build --mode analyze",
+    "optimize:assets": "node scripts/optimize-assets.js"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
+    "vite": "^5.4.11",
+    "vite-plugin-static-copy": "^2.0.0",
+    "terser": "^5.36.0",
     "cssnano": "^7.0.6",
     "postcss": "^8.4.47",
-    "terser": "^5.36.0"
+    "autoprefixer": "^10.4.20",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-commonjs": "^28.0.1"
   },
-  "dependencies": {
-    "autoprefixer-cli": "^1.0.0",
-    "cssnano-cli": "^1.0.5",
-    "html-minifier-terser": "^7.2.0",
-    "postcss-cli": "^11.0.1"
-  }
+  "dependencies": {}
 }

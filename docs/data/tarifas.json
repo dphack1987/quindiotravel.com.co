@@ -422,12 +422,12 @@
     }
   },
   "categorias": {
-    "economica": ["De La Vega Hotel Campestre", "Finca Hotel La Dorada"],
-    "intermedia": ["Finca Hotel La Esmeralda", "Los Aperos"],
-    "intermedia_vip": ["Finca Hotel Los Girasoles", "Hotel Campestre La Tata", "Combia"],
-    "vip": ["Hotel Campestre Las Camelias", "Mocawa Resort", "Mocawa Plaza"]
+    "economica": ["Quinta del Café", "Dorada"],
+    "intermedia": ["Cabañas La Esmeralda", "Los Aperos"],
+    "intermedia_vip": ["Los Girasoles", "La Tata", "Combia"],
+    "vip": ["Hotel Campestre Camellias", "Mocawa Resort", "Mocawa Plaza"]
   },
-  "nota": "Precios POR PERSONA según PORTAFOLIO PLANES NACIONALES 2026 - TRANSPORTE INTERNO (recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos)",
+  "nota": "Precios POR PERSONA SIN TRANSPORTE según PORTAFOLIO PLANES NACIONALES 2026 - TRANSPORTE RADIO TAXI",
   "fuente": "docs/informacion-de-precios/PORTAFOLIO PLANES NACIONALES 2026.docx - DOCUMENTO AUTORIZADO",
-  "condiciones": "Todos los precios son por persona, incluye datos de temporada baja y alta. Precios base categoría económica ambas temporadas - TRANSPORTE INTERNO. Precios calculados para acomodación cuádruple."
+  "condiciones": "Todos los precios son por persona, incluye datos de temporada baja y alta. Precios base categoría económica ambas temporadas - TRANSPORTE RADIO TAXI."
 }

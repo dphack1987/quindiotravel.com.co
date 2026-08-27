@@ -13,8 +13,8 @@
 ¿Planeas tu viaje a Colombia desde Madrid o Barcelona? Vive 4 días de pura magia en el Paisaje Cultural Cafetero.
 
 🌿 **Incluye:**
-• Transporte interno cuádruple desde Aeropuerto Matecaña (Pereira)
-• 3 noches de hospedaje con desayuno y cena
+• Traslados privados desde Aeropuerto Matecaña (Pereira)
+• 3 noches de hospedaje con vistas panorámicas
 • Recorrido en Willys tradicional por Valle de Cocora
 • Experiencia cafetera auténtica en Finca El Ocaso + Filandia colonial
 • Entradas, guías y asistencia médica integral
@@ -28,7 +28,7 @@
 
 **Secondary Text:**
 ✅ No necesitas visa (estancia hasta 90 días)
-✅ Alojamiento premium con desayuno y cena
+✅ Alojamiento premium con desayuno
 ✅ Atención en español desde Colombia
 ✅ Precio tipo de cambio favorable
 
@@ -44,11 +44,11 @@
 ¿Buscas un destino único para tu próxima escapada romántica? El Eje Cafetero colombiano es perfecto para ti.
 
 💑 **Lo que ofrece nuestro plan exclusivo:**
-• Alojamiento en Hotel Vista Hermosa con desayuno y cena y vistas panorámicas
+• Alojamiento en Hotel Vista Hermosa con vistas panorámicas
 • Atardeceres mágicos en Valle de Cocora (Patrimonio UNESCO)
 • Paseo colonial por Filandia - arquitectura tradicional
 • Coffee Tour romántico en finca cafetera premium
-• Transporte interno cuádruple para máxima comodidad
+• Transporte privado para máxima comodidad
 
 🏨 **Precios para parejas:**
 • Doble (2 personas): 390€ cada uno
@@ -73,7 +73,7 @@
 • Valle de Cocora: naturaleza pura y senderismo fácil
 • Filandia: arquitectura colonial y cultura
 • Asistencia médica 24/7 para tranquilidad total
-• Transporte interno cuádruple sin complicaciones
+• Transporte privado sin complicaciones
 
 🏨 **Precios por habitación:**
 • Cuádruple (4 personas): 280€ cada uno
@@ -98,7 +98,7 @@
 • Coffee Tour activo en finca cafetera
 • Salento: pueblo cafetero auténtico
 • Filandia: mirador panorámico y arquitectura colonial
-• Transporte interno cuádruple para terrenos difíciles
+• Transporte 4x4 para terrenos difíciles
 
 💰 **Precio increíble:** 280€ por persona (4 personas)
 
@@ -181,8 +181,8 @@ Gracias por tu interés en nuestro Plan Exclusivo Salento, Filandia y Coffee Tou
 
 📋 **Plan Exclusivo 4D/3N:**
 • Salento + Valle de Cocora + Filandia + Coffee Tour
-• Alojamiento Hotel Vista Hermosa con desayuno y cena
-• Transporte interno cuádruple desde aeropuerto de Pereira
+• Alojamiento Hotel Vista Hermosa con desayuno
+• Transporte privado desde aeropuerto de Pereira
 • Asistencia médica 24/7
 
 💶 **Para turistas españoles:**
@@ -201,8 +201,8 @@ Gracias por tu interés en nuestro Plan Exclusivo Salento, Filandia y Coffee Tou
 
 Nuestro Plan Exclusivo incluye:
 
-🏨 **Alojamiento:** Hotel Vista Hermosa en Salento con desayuno y cena
-🚐 **Transporte:** Interno cuádruple desde aeropuerto de Pereira
+🏨 **Alojamiento:** Hotel Vista Hermosa en Salento
+🚐 **Transporte:** Privado desde aeropuerto de Pereira
 ☕ **Coffee Tour:** Experiencia premium en Finca El Ocaso
 🏔️ **Valle de Cocora:** Recorrido en Jeep Willy + Mirador
 🏛️ **Filandia:** Mirador + Museo del Canasto + Calle del Tiempo Detenida
@@ -248,11 +248,11 @@ Te escribo porque nuestro **Plan Exclusivo Salento, Filandia y Coffee Tour El Oc
 
 **🎯 Lo que te ofrece:**
 • 4 días / 3 noches en el corazón del Eje Cafetero
-• Alojamiento premium con desayuno y cena y vistas panorámicas
+• Alojamiento premium con vistas panorámicas
 • Coffee Tour auténtico en finca tradicional
 • Valle de Cocora - Patrimonio UNESCO
 • Filandia colonial - arquitectura tradicional
-• Transporte interno cuádruple y asistencia médica
+• Transporte privado y asistencia médica
 
 **💶 Precios para españoles:**
 • Cuádruple: 280€ / persona
@@ -283,8 +283,8 @@ Equipo Quindío Travel
 
 Nuestro Plan Exclusivo Salento, Filandia y Coffee Tour tiene **últimos cupos disponibles** para este mes.
 
-✅ Alojamiento premium con desayuno y cena
-✅ Transporte interno cuádruple desde aeropuerto
+✅ Alojamiento premium con desayuno
+✅ Transporte privado desde aeropuerto
 ✅ Coffee Tour en finca tradicional
 ✅ Valle de Cocora y Filandia
 ✅ Asistencia médica 24/7

@@ -1,50 +1,22 @@
-# robots.txt para Quindío Travel
-# Operador Turístico Oficial RNT 18152
-# Optimizado para Local SEO y GEO (Generative Engine Optimization)
+# Robots.txt para Quindío Travel
+# Optimizado para rastreo masivo de Google
 
 User-agent: *
 Allow: /
 
-# Bloquear archivos innecesarios
-Disallow: /node_modules/
-Disallow: /components/
-Disallow: /docs/
-Disallow: /generated-pages/
-Disallow: /competitive-engine/
-Disallow: /don-chucho-backend/
-Disallow: /assets/data/
-Disallow: /.git/
-Disallow: /.github/
-Disallow: /.vscode/
-
-# Bloquear archivos de configuración
-Disallow: /*.json$
-Disallow: /*.md$
-Disallow: /*.git*
-
-# Optimización para Local SEO - Priorizar páginas de ubicaciones
-Allow: /salento.html
-Allow: /filandia.html
-Allow: /valle-de-cocora.html
-Allow: /parque-del-cafe.html
-Allow: /finca-hoteles-en-el-quindio.html
-Allow: /operador-turistico-quindio.html
-
-# Optimización para transporte local
-Allow: /como-llegar-salento-desde-bogota.html
-Allow: /como-llegar-*.html
-
-# Optimización para GEO - Priorizar contenido estructurado
-Allow: /planes.html
+# Permitir acceso a contenido importante
+Allow: /sitemap.xml
+Allow: /llms.txt
+Allow: /programmatic-pages/
 Allow: /blog/
-Allow: /coffee-tour-*.html
 
-# Bloquear páginas duplicadas o de baja prioridad
-Disallow: /en/plan-*.html
-Disallow: /programmatic-pages/temp-*.html
+# Bloquear solo archivos Python (scripts de trabajo)
+Disallow: /*.py
 
-# Sitemap principal
+# Bloquear archivos de documentación
+Disallow: /*.md
+Disallow: /outreach_data/
+Disallow: /directories_data/
+
+# Sitemap
 Sitemap: https://quindiotravel.com.co/sitemap.xml
-
-# Sitemap específico para contenido estructurado (GEO)
-Sitemap: https://quindiotravel.com.co/sitemap-content.xml

@@ -4,10 +4,10 @@
  * Estrategia: Cache-First para estáticos, Network-First para dinámicos
  */
 
-const CACHE_NAME = 'quindio-travel-v3';
-const STATIC_CACHE = 'quindio-static-v3';
-const DYNAMIC_CACHE = 'quindio-dynamic-v3';
-const IMAGE_CACHE = 'quindio-images-v3';
+const CACHE_NAME = 'quindio-travel-v2';
+const STATIC_CACHE = 'quindio-static-v2';
+const DYNAMIC_CACHE = 'quindio-dynamic-v2';
+const IMAGE_CACHE = 'quindio-images-v2';
 
 // URLs que deben cachearse estáticamente
 const STATIC_URLS = [
@@ -20,9 +20,9 @@ const STATIC_URLS = [
   '/assets/js/atractivos-data.js',
   '/assets/js/whatsapp-payload-builder.js',
   '/assets/js/performance-optimizer.js',
-  '/logo_quindio_travel.webp',
+  '/logo_quindio_travel.png',
   '/favicon.ico',
-  '/apple-touch-icon.webp',
+  '/apple-touch-icon.png',
   '/site.webmanifest'
 ];
 
@@ -104,7 +104,7 @@ self.addEventListener('install', (event) => {
       // Cachear imágenes principales
       caches.open(IMAGE_CACHE).then(cache => {
         return cache.addAll([
-          '/assets/images/paisajes/valle-cocora-hero-banner.webp',
+          '/assets/images/paisajes/valle-cocora-hero-banner.jpg',
           '/assets/images/paisajes/eje-cafetero-aerial-view.webp'
         ]);
       })
@@ -208,7 +208,7 @@ self.addEventListener('push', (event) => {
   
   const options = {
     body: event.data ? event.data.text() : 'Nueva promoción disponible en Quindío Travel',
-    icon: '/logo_quindio_travel.webp',
+    icon: '/logo_quindio_travel.png',
     badge: '/favicon.ico',
     vibrate: [200, 100, 200],
     data: {
@@ -218,7 +218,7 @@ self.addEventListener('push', (event) => {
       {
         action: 'explore',
         title: 'Ver Promoción',
-        icon: '/logo_quindio_travel.webp'
+        icon: '/logo_quindio_travel.png'
       },
       {
         action: 'close',
@@ -310,31 +310,29 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Estadísticas de cache (desactivado en producción para mejor rendimiento)
-if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-  self.addEventListener('fetch', (event) => {
-    // Logging de cache hits/misses para debugging
-    event.respondWith(
-      (async () => {
-        const cache = await caches.open(DYNAMIC_CACHE);
-        const cached = await cache.match(event.request);
-        
-        if (cached) {
-          console.log('Cache HIT:', event.request.url);
-          return cached;
-        }
-        
-        console.log('Cache MISS:', event.request.url);
-        const response = await fetch(event.request);
-        
-        if (response.ok) {
-          await cache.put(event.request, response.clone());
-        }
-        
-        return response;
-      })()
-    );
-  });
-}
+// Estadísticas de cache
+self.addEventListener('fetch', (event) => {
+  // Logging de cache hits/misses para debugging
+  event.respondWith(
+    (async () => {
+      const cache = await caches.open(DYNAMIC_CACHE);
+      const cached = await cache.match(event.request);
+      
+      if (cached) {
+        console.log('Cache HIT:', event.request.url);
+        return cached;
+      }
+      
+      console.log('Cache MISS:', event.request.url);
+      const response = await fetch(event.request);
+      
+      if (response.ok) {
+        await cache.put(event.request, response.clone());
+      }
+      
+      return response;
+    })()
+  );
+});
 
 console.log('Service Worker: Cargado correctamente');
