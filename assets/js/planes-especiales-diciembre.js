@@ -16,21 +16,25 @@ const planesEspeciales = {
     tarifa_por_persona: true,
     max_cupos: 30,
     incluye: [
-      "3 noches de alojamiento",
-      "3 desayunos",
-      "3 cenas",
-      "Pasaporte al Parque del Café",
-      "Visita a Valle de Cocora",
-      "Visita a Salento y Filandia",
-      "Mirador de Filandia",
-      "Museo del Canasto",
-      "Calle del Tiempo Detenida",
-      "Parque PANACA",
-      "Parque RECUCA",
-      "Asistencia médica",
-      "Transporte desde terminal hasta alojamiento",
-      "Transporte a los atractivos propuestos"
-    ]
+      "Alojamiento 3 noches con desayuno y cena",
+      "Transporte interno",
+      "Entradas a Parque del Café",
+      "Entradas a PANACA",
+      "Entradas a RECUCA",
+      "Valle de Cocora a las 10:30",
+      "Traslado a Salento (no incluye almuerzo)",
+      "12:30 m. traslado a Filandia",
+      "Conocer mirador de Filandia",
+      "Museo del canasto",
+      "Calle del tiempo",
+      "Asistencia médica 24/7"
+    ],
+    itinerario: {
+      dia1: "9:00 a.m. - Llegada al terminal o aeropuerto de Armenia, registro en alojamiento y traslado al Parque del Café con pasaporte múltiple. No incluye almuerzo. 5:00 p.m. - Regreso al alojamiento elegido y cena.",
+      dia2: "8:00 a.m. - Desayuno. 10:30 a.m. - Traslado a Valle de Cocora. Traslado a Salento (no incluye almuerzo). 12:30 p.m. - Traslado a Filandia para conocer el mirador de Filandia, museo del canasto y la calle del tiempo detenida. 5:00 p.m. - Regreso al alojamiento.",
+      dia3: "9:00 a.m. - Desayuno. Traslado al Parque PANACA con pasaporte TERRA. No incluye almuerzo. 5:00 p.m. - Regreso al alojamiento elegido y cena.",
+      dia4: "8:00 a.m. - Desayuno. Traslado al Parque RECUCA con experiencia Bogadera. A medio día traslado al alojamiento y traslado al aeropuerto o terminal de Armenia."
+    }
   },
   tarifas: {
     radio_taxi: [

@@ -1,72 +1,261 @@
-# robots.txt - Quindío Travel - Crawl Budget Optimization
-# Prioriza rastreo de páginas de conversión y optimiza indexación
+# robots.txt - Quindío Travel - SEO Internacional Global
+# Indexación completa para todos los motores de búsqueda mundiales
 
 User-agent: *
 Allow: /
 
-# Priorizar páginas de conversión principales
-Allow: /index.html
-Allow: /salento.html
-Allow: /parque-del-cafe.html
-Allow: /valle-de-cocora.html
-Allow: /filandia.html
-Allow: /panaca.html
-Allow: /cabanas-la-esmeralda.html
-Allow: /finca-hotel-los-girasoles.html
-Allow: /hotel-campestre-las-camelias.html
+# Permitir indexación completa de todo el contenido
+Allow: /*.html
+Allow: /blog/
+Allow: /components/
+Allow: /en/
 
-# Páginas de alojamientos (prioridad media)
-Allow: /hotel-campestre-la-tata.html
-Allow: /hotel-campestre-cafe-cafe.html
-Allow: /finca-hotel-la-dorada.html
-Allow: /hotel-de-la-vega.html
-
-# Bloquear rastreo de páginas de baja conversión
-Disallow: /planes.html?filter=
-Disallow: /planes.html?sort=
-Disallow: /blog.html?page=
-Disallow: /blog.html?category=
-
-# Bloquear rastreo de recursos estáticos (ahorro de crawl budget)
-Disallow: /assets/css/
-Disallow: /assets/js/
-Disallow: /assets/images/
+# Bloquear solo recursos de desarrollo y archivos temporales
 Disallow: /node_modules/
 Disallow: /.git/
 Disallow: /.env/
+Disallow: /docs/
+Disallow: /documentation_archive/
+Disallow: /competitive-engine/
+Disallow: /don-chucho-backend/
 Disallow: /generated-pages/
+Disallow: /outreach_data/
+Disallow: /pseo-engine/
+Disallow: /programmatic-pages/
+Disallow: /scripts/
+Disallow: /sitemaps/
+Disallow: /promocion-del-mes/
 
-# Bloquear páginas administrativas y de desarrollo
-Disallow: /admin/
-Disallow: /login/
-Disallow: /dashboard/
-Disallow: /api/
-
-# Sitemap XML
+# Sitemaps para diferentes motores de búsqueda
 Sitemap: https://quindiotravel.com.co/sitemap.xml
+Sitemap: https://quindiotravel.com.co/sitemap-main.xml
+Sitemap: https://quindiotravel.com.co/sitemap-content.xml
+Sitemap: https://quindiotravel.com.co/sitemap-alojamientos.xml
+Sitemap: https://quindiotravel.com.co/sitemap-atractivos.xml
+Sitemap: https://quindiotravel.com.co/sitemap-municipios.xml
+Sitemap: https://quindiotravel.com.co/sitemap-tipos-viaje.xml
+Sitemap: https://quindiotravel.com.co/sitemap-amenidades.xml
 
-# Crawl-delay para optimizar uso de recursos (5 segundos entre peticiones)
-Crawl-delay: 5
-
-# Googlebot específico - sin delays para páginas principales
+# Google - Prioridad máxima
 User-agent: Googlebot
+Allow: /
 Crawl-delay: 0
-Allow: /index.html
-Allow: /salento.html
-Allow: /parque-del-cafe.html
-Allow: /valle-de-cocora.html
-Allow: /filandia.html
-Allow: /panaca.html
 
-# Bingbot específico
-User-agent: Bingbot
-Crawl-delay: 3
+# Googlebot-Image
+User-agent: Googlebot-Image
 Allow: /
 
-# Facebook crawler (para Open Graph)
+# Googlebot-News
+User-agent: Googlebot-News
+Allow: /
+
+# Bing - Microsoft
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# MSNBot
+User-agent: msnbot
+Allow: /
+Crawl-delay: 1
+
+# Yahoo - Slurp
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Yandex - Rusia y mercados de habla rusa
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# YandexImages
+User-agent: YandexImages
+Allow: /
+
+# YandexMedia
+User-agent: YandexMedia
+Allow: /
+
+# Baidu - China y Asia
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Baidu Mobile
+User-agent: Baiduspider-mobile
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# DuckDuckGo-Favicons
+User-agent: DuckDuckBot-Favicons
+Allow: /
+
+# Baidu - Image
+User-agent: Baiduspider-image
+Allow: /
+
+# Sogou - China
+User-agent: Sogou web spider
+Allow: /
+
+# Sogou Orion
+User-agent: Sogou Orion
+Allow: /
+
+# Naver - Corea del Sur
+User-agent: Yeti
+Allow: /
+Crawl-delay: 2
+
+# Naver Blog
+User-agent: NaverBot
+Allow: /
+
+# Seznam - República Checa
+User-agent: SeznamBot
+Allow: /
+Crawl-delay: 2
+
+# Ecosia - Motor de búsqueda ecológico
+User-agent: Ecosia
+Allow: /
+
+# Qwant - Motor de búsqueda europeo
+User-agent: Qwant
+Allow: /
+
+# Yandex Blogs
+User-agent: YandexBlog
+Allow: /
+
+# Facebook - Open Graph
 User-agent: facebookexternalhit
 Allow: /
 
-# Twitter crawler (para Twitter Cards)
+# Facebook - Crawler
+User-agent: Facebot
+Allow: /
+
+# Twitter - Twitter Cards
 User-agent: Twitterbot
+Allow: /
+
+# LinkedIn - Sharing
+User-agent: LinkedInBot
+Allow: /
+
+# Pinterest - Sharing
+User-agent: Pinterest
+Allow: /
+
+# Instagram - Crawler
+User-agent: Instagram
+Allow: /
+
+# WhatsApp - Crawler
+User-agent: WhatsApp
+Allow: /
+
+# Apple - Siri
+User-agent: Applebot
+Allow: /
+
+# Amazon - Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Baidu - Spider
+User-agent: Baiduspider-ads
+Allow: /
+
+# Soso - China
+User-agent: Sosospider
+Allow: /
+
+# Youdao - China
+User-agent: YoudaoBot
+Allow: /
+
+# Jike Spider - China
+User-agent: JikeSpider
+Allow: /
+
+# HaoSou Spider - China
+User-agent: HaoSouSpider
+Allow: /
+
+# YisouSpider - China
+User-agent: YisouSpider
+Allow: /
+
+# 360 Spider - China
+User-agent: 360Spider
+Allow: /
+
+# SMTBot
+User-agent: SMTBot
+Allow: /
+
+# SemrushBot
+User-agent: SemrushBot
+Allow: /
+
+# AhrefsBot
+User-agent: AhrefsBot
+Allow: /
+
+# MJ12bot
+User-agent: MJ12bot
+Allow: /
+
+# DotBot
+User-agent: DotBot
+Allow: /
+
+# AspiegelBot
+User-agent: AspiegelBot
+Allow: /
+
+# PetalBot
+User-agent: PetalBot
+Allow: /
+
+# Seekport Crawler
+User-agent: Seekport Crawler
+Allow: /
+
+# Amazonbot
+User-agent: Amazonbot
+Allow: /
+
+# Neevabot
+User-agent: Neevabot
+Allow: /
+
+# Alexabot
+User-agent: Alexabot
+Allow: /
+
+# Telegram
+User-agent: TelegramBot
+Allow: /
+
+# Viber
+User-agent: Viberbot
+Allow: /
+
+# WeChat
+User-agent: WeChat
+Allow: /
+
+# TikTok
+User-agent: TikTok
+Allow: /
+
+# Snapchat
+User-agent: Snapchat
 Allow: /
