@@ -300,6 +300,11 @@
 - ✅ `en/index.html` - Versión en inglés
 - ✅ `en/plans.html` - Planes en inglés
 - ✅ `en/salento.html` - Salento en inglés
+- ✅ `balsaje-rio-la-vieja.html` - Balsaje Río La Vieja
+- ✅ `cabalgatas-quindio.html` - Cabalgatas Quindío
+- ✅ `coffee-tour-armenia.html` - Coffee Tour Armenia
+- ✅ `en/booking-europe.html` - Booking Europa
+- ✅ `en/booking-usa.html` - Booking USA
 
 ### **Archivo de Verificación Yandex:**
 - ✅ `yandex_05c13632a16e2bef.html` - Archivo de verificación HTML
