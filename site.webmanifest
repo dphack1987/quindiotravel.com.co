@@ -1,58 +1,50 @@
 {
-  "name": "Quindío Travel - Operador Turístico Eje Cafetero",
+  "name": "Quindío Travel - Paquetes Turísticos Eje Cafetero",
   "short_name": "Quindío Travel",
-  "description": "Líder en turismo del Eje Cafetero. Operador turístico local RNT 18152 con más de 15 años de experiencia. Planes turísticos 2D-5D todo incluido.",
+  "description": "Paquetes turísticos al Eje Cafetero colombiano. Planes desde $425.000 COP. Salento, Valle de Cocora, Parque del Café, PANACA.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2E5E36",
-  "theme_color": "#2E5E36",
+  "background_color": "#2E5A36",
+  "theme_color": "#2E5A36",
   "orientation": "portrait-primary",
+  "scope": "/",
   "icons": [
     {
-      "src": "logo_quindio_travel.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
     },
     {
-      "src": "apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any"
-    }
-  ],
-  "categories": ["travel", "tourism", "business"],
-  "screenshots": [
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
     {
-      "src": "assets/images/paisajes/foto_hero1.jpg",
-      "sizes": "1200x630",
-      "type": "image/jpeg",
-      "label": "Paisaje del Eje Cafetero - Valle de Cocora"
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
     }
   ],
-  "related_applications": [],
-  "prefer_related_applications": false,
+  "categories": ["travel", "tourism", "hotels"],
   "shortcuts": [
     {
-      "name": "Ver Planes Turísticos",
-      "short_name": "Planes",
-      "description": "Explora nuestros 6 planes turísticos del Eje Cafetero",
-      "url": "/planes.html",
-      "icons": [{ "src": "logo_quindio_travel.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "Cotizar Viaje",
+      "name": "Cotizar Plan",
       "short_name": "Cotizar",
-      "description": "Obtén una cotización personalizada para tu viaje",
-      "url": "/#cotizador",
-      "icons": [{ "src": "logo_quindio_travel.png", "sizes": "96x96" }]
+      "description": "Cotiza tu plan turístico al Quindío",
+      "url": "/planes.html",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
     },
     {
-      "name": "Contactar WhatsApp",
-      "short_name": "WhatsApp",
-      "description": "Contáctanos directamente por WhatsApp",
-      "url": "https://wa.me/573174426044",
-      "icons": [{ "src": "logo_quindio_travel.png", "sizes": "96x96" }]
+      "name": "Ver Destinos",
+      "short_name": "Destinos",
+      "description": "Explora destinos turísticos del Eje Cafetero",
+      "url": "/salento.html",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
     }
   ]
 }
