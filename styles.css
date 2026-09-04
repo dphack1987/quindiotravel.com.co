@@ -8291,11 +8291,29 @@ body {
 
 @media (max-width: 768px) {
     .hero {
-        min-height: 66vh;
-        padding: 40px 0 60px;
+        min-height: auto;
+        max-height: none;
+        padding: 32px 0 42px;
     }
     .hero-content {
+        width: 100%;
+        max-width: none;
         padding: 0 18px;
+        box-sizing: border-box;
+    }
+
+    .planes-hero .hero-content {
+        width: 100%;
+        max-width: none;
+        padding: 0 18px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .planes-hero .hero-content h1,
+    .planes-hero .hero-content p {
+        width: 100%;
+        max-width: 640px;
     }
     .hero-buttons {
         flex-direction: column;

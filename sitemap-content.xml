@@ -1,164 +1,108 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-    <!-- Sitemap de Contenido Estructurado para GEO (Generative Engine Optimization) -->
-    <!-- Prioriza contenido optimizado para respuestas de IA y featured snippets -->
-
-    <!-- Landing Pages Transaccionales - Alta Prioridad para Conversión -->
-    <url>
-        <loc>https://quindiotravel.com.co/planes-turisticos-quindio-comprar.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/precios-planes-turisticos-quindio.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/reservar-plan-eje-cafetero.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/plan-exclusivo-meta-ads.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Páginas con FAQ Schema optimizadas para IA -->
-    <url>
-        <loc>https://quindiotravel.com.co/planes.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <!-- Guías prácticas optimizadas para extracción de IA -->
-    <url>
-        <loc>https://quindiotravel.com.co/como-llegar-salento-desde-bogota.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/coffee-tour-quindio-precio.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/coffee-tour-armenia.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <!-- Blog con contenido estructurado para IA -->
-    <url>
-        <loc>https://quindiotravel.com.co/blog/mejor-epoca-visitar-quindio-2026.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/blog/que-llevar-maleta-viaje-quindio-2026.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/blog/guia-transporte-eje-cafetero-bogota-2026.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/blog/tips-ahorrar-dinero-viaje-eje-cafetero-2026.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/blog/guia-fotografia-eje-cafetero-2026.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/blog/gastronomia-autentica-quindio-2026.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Páginas de destinos con contenido optimizado para featured snippets -->
-    <url>
-        <loc>https://quindiotravel.com.co/salento.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/filandia.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/valle-de-cocora.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/parque-del-cafe.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <!-- Páginas de alojamiento con schema estructurado -->
-    <url>
-        <loc>https://quindiotravel.com.co/finca-hoteles-en-el-quindio.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <!-- Experiencias especializadas -->
-    <url>
-        <loc>https://quindiotravel.com.co/cabalgatas-quindio.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://quindiotravel.com.co/balsaje-rio-la-vieja.html</loc>
-        <lastmod>2026-09-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Sitemap de Contenido Estructurado para GEO (Generative Engine Optimization) -->
+  <!-- Prioriza contenido optimizado para respuestas de IA y featured snippets -->
+  <!-- Landing Pages Transaccionales - Alta Prioridad para Conversión -->
+  <url>
+    <loc>https://quindiotravel.com.co/planes-turisticos-quindio-comprar.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/precios-planes-turisticos-quindio.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/reservar-plan-eje-cafetero.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/plan-exclusivo-meta-ads.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Páginas con FAQ Schema optimizadas para IA -->
+  <!-- Guías prácticas optimizadas para extracción de IA -->
+  <url>
+    <loc>https://quindiotravel.com.co/como-llegar-salento-desde-bogota.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/coffee-tour-quindio-precio.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/coffee-tour-armenia.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Blog con contenido estructurado para IA -->
+  <url>
+    <loc>https://quindiotravel.com.co/blog/mejor-epoca-visitar-quindio-2026.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/blog/que-llevar-maleta-viaje-quindio-2026.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/blog/guia-transporte-eje-cafetero-bogota-2026.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/blog/tips-ahorrar-dinero-viaje-eje-cafetero-2026.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/blog/guia-fotografia-eje-cafetero-2026.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/blog/gastronomia-autentica-quindio-2026.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Páginas de destinos con contenido optimizado para featured snippets -->
+  <!-- Páginas de alojamiento con schema estructurado -->
+  <url>
+    <loc>https://quindiotravel.com.co/finca-hoteles-en-el-quindio.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Experiencias especializadas -->
+  <url>
+    <loc>https://quindiotravel.com.co/cabalgatas-quindio.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quindiotravel.com.co/balsaje-rio-la-vieja.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
