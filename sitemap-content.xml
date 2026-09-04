@@ -29,6 +29,13 @@
         <priority>1.0</priority>
     </url>
 
+    <url>
+        <loc>https://quindiotravel.com.co/plan-exclusivo-meta-ads.html</loc>
+        <lastmod>2026-09-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- Páginas con FAQ Schema optimizadas para IA -->
     <url>
         <loc>https://quindiotravel.com.co/planes.html</loc>

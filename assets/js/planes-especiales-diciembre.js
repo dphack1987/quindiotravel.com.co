@@ -88,6 +88,7 @@ const planesEspeciales = {
     "cabanas_la_esmeralda": {
       nombre: "CABAÑAS LA ESMERALDA",
       categoria: "Intermedia",
+      imagen: "assets/images/alojamientos/finca-hotel-la-esmeralda/finca-hotel-cabanas-la.webp",
       servicios: [
         "Habitaciones y Cabañas con baño privado y T.V",
         "Piscina Adultos - Niños",
@@ -110,6 +111,7 @@ const planesEspeciales = {
     "finca_hotel_los_girasoles": {
       nombre: "FINCA HOTEL LOS GIRASOLES",
       categoria: "Intermedia VIP",
+      imagen: "assets/images/alojamientos/finca-hotel-los-girasoles/Finca-los-Girasoles-7.webp",
       servicios: [
         "Recepción y lobby",
         "Zona de juegos ping pong",
@@ -130,6 +132,7 @@ const planesEspeciales = {
     "hotel_campestre_cafe_cafe": {
       nombre: "HOTEL CAMPESTRE CAFÉ CAFÉ",
       categoria: "Intermedia VIP",
+      imagen: "assets/images/alojamientos/hotel-campestre-cafe-cafe/406282624.webp",
       descripcion: "Un lugar mágico donde se mezcla el colorido y el aroma de nuestros cafetales, las costumbres de la cultura Quindiana, la arquitectura colonial y la calidez de nuestra gente.",
       servicios: [
         "WiFi",
@@ -148,6 +151,7 @@ const planesEspeciales = {
     "hotel_campestre_la_tata": {
       nombre: "HOTEL CAMPESTRE LA TATA",
       categoria: "Intermedia",
+      imagen: "assets/images/alojamientos/hotel-campestre-la-tata/finca-hotel-la-tata.webp",
       ubicacion: "A 100 mts de Parque del Café",
       servicios: [
         "Piscina niños y adultos",
@@ -162,6 +166,7 @@ const planesEspeciales = {
     "de_la_vega_hotel_campestre": {
       nombre: "DE LA VEGA HOTEL CAMPESTRE",
       categoria: "Intermedia",
+      imagen: "assets/images/alojamientos/hotel-de-la-vega/hotel-campestre-de-la-vega-3.webp",
       ubicacion: "A 200 mts del Parque el Café en Montenegro, Quindío",
       servicios: [
         "Zonas húmedas (Piscina, 3 jacuzzi)",
@@ -173,6 +178,7 @@ const planesEspeciales = {
     "finca_hotel_dorada": {
       nombre: "FINCA HOTEL DORADA",
       categoria: "Económica",
+      imagen: "assets/images/alojamientos/finca-hotel-la-dorada/1414317914.webp",
       ubicacion: "Km. 5 Pueblo Tapao, Vía a la Tebadia",
       servicios: [
         "Piscina niños y adultos",
@@ -187,6 +193,7 @@ const planesEspeciales = {
     "hotel_campestre_las_camelias": {
       nombre: "HOTEL CAMPESTRE LAS CAMELIAS",
       categoria: "VIP",
+      imagen: "assets/images/alojamientos/hotel-campestre-las-camelias/las-camelias-hotel-campestre.jpg",
       servicios: [
         "Capilla",
         "Tienda de regalos",
@@ -292,6 +299,9 @@ function generarTarjetaHotel(hotelKey) {
   
   let html = `
     <div class="hotel-card-diciembre">
+      <div class="hotel-card-media">
+        <img src="${hotel.imagen}" alt="${hotel.nombre} en el Quindío" loading="lazy" width="800" height="450">
+      </div>
       <h4>${hotel.nombre}</h4>
       <p class="categoria-badge">${hotel.categoria}</p>
   `;
@@ -327,7 +337,7 @@ function initPlanesEspeciales() {
         <div class="planes-header">
           <h2>🎄 Planes Especiales Temporada Alta</h2>
           <p>${planesEspeciales.plan.temporada}</p>
-          <span class="badge-cupos">Máximo ${planesEspeciales.plan.max_cupos} cupos</span>
+          <span class="badge-cupos">Consulta disponibilidad para tu fecha</span>
         </div>
         
         <div class="plan-details">

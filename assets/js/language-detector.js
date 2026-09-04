@@ -121,10 +121,47 @@ const translations = {
         'chat.quick.contacto': "📞 Contact",
         'breadcrumb.home': "Accueil",
         'breadcrumb.hotels': "Hôtels"
+    },
+    ru: {
+        'nav.inicio': "Главная",
+        'nav.promo': "🔥 Акции",
+        'nav.planes': "Туры",
+        'nav.hoteles': "Отели",
+        'nav.experiencias': "Впечатления",
+        'nav.destinos': "Направления",
+        'nav.blog': "Блог",
+        'nav.nosotros': "О нас",
+        'nav.contacto': "Контакты",
+        'experiencias.title': "✨ Незабываемые впечатления Кофейного региона",
+        'experiencias.subtitle': "Откройте знаковые места Киндио с местными гидами, которые знают каждый уголок региона.",
+        'footer.quindio_travel': "Quindío Travel",
+        'footer.description': "Мы не просто продаём путешествия; мы помогаем открыть настоящий Киндио.",
+        'footer.manager': "Менеджер:",
+        'footer.phone': "Телефон / WhatsApp:",
+        'footer.email': "Электронная почта:",
+        'footer.rnt': "RNT:",
+        'footer.location': "Местоположение:",
+        'footer.quick_links': "Быстрые ссылки",
+        'footer.destinations': "Популярные направления",
+        'chat.greeting': "🤠 Здравствуйте! Я Дон Чучо, ваш гид по Кофейному региону. Помогу спланировать идеальное путешествие в Киндио. Что вы хотели бы узнать?",
+        'chat.placeholder': "Напишите сообщение...",
+        'chat.quick.planes': "🗺️ Посмотреть туры",
+        'chat.quick.precios': "💰 Цены",
+        'chat.quick.destinos': "🏛️ Направления",
+        'chat.quick.contacto': "📞 Контакты",
+        'breadcrumb.home': "Главная",
+        'breadcrumb.hotels': "Отели"
     }
 };
 
-const supportedLangs = ['es', 'en', 'pt', 'fr'];
+const supportedLangs = ['es', 'en', 'pt', 'fr', 'ru'];
+const languageLabels = {
+    es: '🇪🇸 Español',
+    en: '🇺🇸 English',
+    pt: '🇧🇷 Português',
+    fr: '🇫🇷 Français',
+    ru: '🇷🇺 Русский'
+};
 
 // Detectar idioma del navegador
 function detectBrowserLanguage() {
@@ -163,6 +200,7 @@ function setLanguage(lang) {
     localStorage.setItem('quindio-language', lang);
     applyLanguage(lang);
     updateLanguageSelector(lang);
+    updateMetaTags(lang);
 }
 
 // Aplicar idioma al contenido
@@ -205,13 +243,18 @@ function applyLanguage(lang) {
     translateAttribute('[data-i18n-href]', 'data-i18n-href', 'href');
     translateAttribute('[data-i18n-src]', 'data-i18n-src', 'src');
 
-    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en' : lang === 'fr' ? 'fr' : 'es';
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en' : lang === 'fr' ? 'fr' : lang === 'ru' ? 'ru' : 'es';
 }
 
 // Actualizar selector de idioma visual
 function updateLanguageSelector(lang) {
     const selector = document.getElementById('language-selector');
     if (selector) {
+        Object.entries(languageLabels).forEach(([value, label]) => {
+            if (!selector.querySelector(`option[value="${value}"]`)) {
+                selector.appendChild(new Option(label, value));
+            }
+        });
         selector.value = lang;
     }
 }
@@ -221,20 +264,23 @@ function updateMetaTags(lang) {
     const langMap = {
         es: 'es_CO',
         en: 'en_US',
-        pt: 'pt_BR'
+        pt: 'pt_BR',
+        fr: 'fr_FR',
+        ru: 'ru_RU'
     };
     
     const langCode = langMap[lang] || 'es_CO';
     
     // Actualizar hreflang
-    let hreflang = document.querySelector('link[hreflang]');
+    let hreflang = document.querySelector('link[data-dynamic-hreflang]');
     if (!hreflang) {
         hreflang = document.createElement('link');
         hreflang.rel = 'alternate';
-        hreflang.hreflang = langCode;
+        hreflang.dataset.dynamicHreflang = 'true';
         document.head.appendChild(hreflang);
     }
     hreflang.hreflang = langCode;
+    hreflang.href = window.location.href.split('?')[0] + `?lang=${lang}`;
 }
 
 // Inicializar sistema de idioma
@@ -247,11 +293,13 @@ function initLanguageSystem() {
         document.addEventListener('DOMContentLoaded', () => {
             applyLanguage(currentLang);
             updateLanguageSelector(currentLang);
+            updateMetaTags(currentLang);
             setupLanguageSelector();
         });
     } else {
         applyLanguage(currentLang);
         updateLanguageSelector(currentLang);
+        updateMetaTags(currentLang);
         setupLanguageSelector();
     }
 }
@@ -263,6 +311,12 @@ function setupLanguageSelector() {
         // Remover event listeners anteriores
         const newSelector = selector.cloneNode(true);
         selector.parentNode.replaceChild(newSelector, selector);
+        Object.entries(languageLabels).forEach(([value, label]) => {
+            if (!newSelector.querySelector(`option[value="${value}"]`)) {
+                newSelector.appendChild(new Option(label, value));
+            }
+        });
+        newSelector.value = getLanguage();
         
         // Agregar nuevo event listener
         newSelector.addEventListener('change', function() {

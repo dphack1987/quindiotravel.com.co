@@ -4491,7 +4491,7 @@ body {
 .plans-hero {
     min-height: 70vh;
     background: linear-gradient(135deg, rgba(46, 90, 54, 0.9), rgba(141, 91, 76, 0.8)), 
-                url('assets/valle_del_cocora.jpg') center/cover no-repeat;
+                url('assets/images/paisajes/valle-cocora-hero-banner.webp') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
