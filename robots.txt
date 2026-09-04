@@ -23,13 +23,10 @@ Disallow: /outreach_data/
 Disallow: /pseo-engine/
 Disallow: /programmatic-pages/
 Disallow: /scripts/
-Disallow: /sitemaps/
 Disallow: /promocion-del-mes/
 
-# Sitemaps para diferentes motores de búsqueda (solo sitemaps válidos)
+# Índice único de sitemaps para todos los motores de búsqueda
 Sitemap: https://quindiotravel.com.co/sitemap.xml
-Sitemap: https://quindiotravel.com.co/sitemap-main.xml
-Sitemap: https://quindiotravel.com.co/sitemap-content.xml
 
 # Google - Prioridad máxima
 User-agent: Googlebot

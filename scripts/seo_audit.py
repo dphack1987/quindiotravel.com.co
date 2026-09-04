@@ -117,7 +117,10 @@ def load_sitemap_urls(root: Path) -> tuple[set[str], list[str], dict[str, int]]:
         except ElementTree.ParseError as error:
             errors.append(f"{sitemap.name}: XML inválido ({error})")
             continue
-        for loc in tree.findall(".//{*}loc"):
+        sitemap_root = tree.getroot().tag.rsplit("}", 1)[-1]
+        if sitemap_root != "urlset":
+            continue
+        for loc in tree.findall("./{*}url/{*}loc"):
             if loc.text and loc.text.startswith(SITE_URL):
                 url = loc.text.strip()
                 urls.add(url)
