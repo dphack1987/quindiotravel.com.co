@@ -1,8 +1,16 @@
-
-# Dependencias y salidas generadas localmente
+﻿# Dependencias y salidas generadas localmente
 node_modules/
 dist/
+.vite/
 scripts/__pycache__/
 *.pyc
 seo-audit*.json
+*.log
 
+# Archivos temporales
+Untitled-*.md
+blog/test.html
+
+# Reportes generados
+docs/*.json
+docs/*report*.json
