@@ -2,30 +2,10 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <sitemap>
         <loc>https://quindiotravel.com.co/sitemap-main.xml</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-15</lastmod>
     </sitemap>
     <sitemap>
         <loc>https://quindiotravel.com.co/sitemap-content.xml</loc>
-        <lastmod>2026-09-04</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://quindiotravel.com.co/sitemaps/sitemap-alojamientos.xml</loc>
-        <lastmod>2026-09-04</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://quindiotravel.com.co/sitemaps/sitemap-amenidades.xml</loc>
-        <lastmod>2026-09-04</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://quindiotravel.com.co/sitemaps/sitemap-atractivos.xml</loc>
-        <lastmod>2026-09-04</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://quindiotravel.com.co/sitemaps/sitemap-municipios.xml</loc>
-        <lastmod>2026-09-04</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://quindiotravel.com.co/sitemaps/sitemap-tipos-viaje.xml</loc>
-        <lastmod>2026-09-04</lastmod>
+        <lastmod>2026-09-15</lastmod>
     </sitemap>
 </sitemapindex>

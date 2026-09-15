@@ -1,16 +1,10 @@
-# robots.txt - Quindío Travel - SEO Internacional Global
-# Indexación completa para todos los motores de búsqueda mundiales
+# robots.txt - Quindío Travel
+# Permisos abiertos para indexación completa
 
 User-agent: *
 Allow: /
 
-# Permitir indexación completa de todo el contenido
-Allow: /*.html
-Allow: /blog/
-Allow: /components/
-Allow: /en/
-
-# Bloquear solo recursos de desarrollo y archivos temporales
+# Bloquear solo recursos internos de desarrollo
 Disallow: /node_modules/
 Disallow: /.git/
 Disallow: /.env/
@@ -18,17 +12,15 @@ Disallow: /docs/
 Disallow: /documentation_archive/
 Disallow: /competitive-engine/
 Disallow: /don-chucho-backend/
-Disallow: /generated-pages/
 Disallow: /outreach_data/
-Disallow: /pseo-engine/
-Disallow: /programmatic-pages/
 Disallow: /scripts/
-Disallow: /promocion-del-mes/
+Disallow: /components/
+Disallow: /dist/
 
-# Índice único de sitemaps para todos los motores de búsqueda
+# Sitemap principal
 Sitemap: https://quindiotravel.com.co/sitemap.xml
 
-# Google - Prioridad máxima
+# Googlebot
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
@@ -37,225 +29,31 @@ Crawl-delay: 0
 User-agent: Googlebot-Image
 Allow: /
 
-# Googlebot-News
-User-agent: Googlebot-News
-Allow: /
-
-# Bing - Microsoft
+# Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-# MSNBot
-User-agent: msnbot
-Allow: /
-Crawl-delay: 1
-
-# Yahoo - Slurp
-User-agent: Slurp
-Allow: /
-Crawl-delay: 2
-
-# Yandex - Rusia y mercados de habla rusa
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 1
-
-# Permitir acceso a favicon para Yandex
-Allow: /favicon.ico
-Allow: /favicon-16x16.png
-Allow: /favicon-32x32.png
-Allow: /apple-touch-icon.png
-Allow: /safari-pinned-tab.svg
-Allow: /site.webmanifest
-
-# YandexImages
-User-agent: YandexImages
-Allow: /
-
-# YandexMedia
-User-agent: YandexMedia
-Allow: /
-
-# Baidu - China y Asia
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 2
-
-# Baidu Mobile
-User-agent: Baiduspider-mobile
-Allow: /
-
-# DuckDuckGo
-User-agent: DuckDuckBot
-Allow: /
-
-# DuckDuckGo-Favicons
-User-agent: DuckDuckBot-Favicons
-Allow: /
-
-# Baidu - Image
-User-agent: Baiduspider-image
-Allow: /
-
-# Sogou - China
-User-agent: Sogou web spider
-Allow: /
-
-# Sogou Orion
-User-agent: Sogou Orion
-Allow: /
-
-# Naver - Corea del Sur
-User-agent: Yeti
-Allow: /
-Crawl-delay: 2
-
-# Naver Blog
-User-agent: NaverBot
-Allow: /
-
-# Seznam - República Checa
-User-agent: SeznamBot
-Allow: /
-Crawl-delay: 2
-
-# Ecosia - Motor de búsqueda ecológico
-User-agent: Ecosia
-Allow: /
-
-# Qwant - Motor de búsqueda europeo
-User-agent: Qwant
-Allow: /
-
-# Yandex Blogs
-User-agent: YandexBlog
-Allow: /
-
-# Facebook - Open Graph
+# Facebook
 User-agent: facebookexternalhit
 Allow: /
 
-# Facebook - Crawler
-User-agent: Facebot
-Allow: /
-
-# Twitter - Twitter Cards
+# Twitter
 User-agent: Twitterbot
 Allow: /
 
-# LinkedIn - Sharing
+# LinkedIn
 User-agent: LinkedInBot
 Allow: /
 
-# Pinterest - Sharing
-User-agent: Pinterest
+# Pinterest
+User-agent: PinterestBot
 Allow: /
 
-# Instagram - Crawler
-User-agent: Instagram
-Allow: /
-
-# WhatsApp - Crawler
+# WhatsApp
 User-agent: WhatsApp
-Allow: /
-
-# Apple - Siri
-User-agent: Applebot
-Allow: /
-
-# Amazon - Alexa
-User-agent: Amazonbot
-Allow: /
-
-# Baidu - Spider
-User-agent: Baiduspider-ads
-Allow: /
-
-# Soso - China
-User-agent: Sosospider
-Allow: /
-
-# Youdao - China
-User-agent: YoudaoBot
-Allow: /
-
-# Jike Spider - China
-User-agent: JikeSpider
-Allow: /
-
-# HaoSou Spider - China
-User-agent: HaoSouSpider
-Allow: /
-
-# YisouSpider - China
-User-agent: YisouSpider
-Allow: /
-
-# 360 Spider - China
-User-agent: 360Spider
-Allow: /
-
-# SMTBot
-User-agent: SMTBot
-Allow: /
-
-# SemrushBot
-User-agent: SemrushBot
-Allow: /
-
-# AhrefsBot
-User-agent: AhrefsBot
-Allow: /
-
-# MJ12bot
-User-agent: MJ12bot
-Allow: /
-
-# DotBot
-User-agent: DotBot
-Allow: /
-
-# AspiegelBot
-User-agent: AspiegelBot
-Allow: /
-
-# PetalBot
-User-agent: PetalBot
-Allow: /
-
-# Seekport Crawler
-User-agent: Seekport Crawler
-Allow: /
-
-# Amazonbot
-User-agent: Amazonbot
-Allow: /
-
-# Neevabot
-User-agent: Neevabot
-Allow: /
-
-# Alexabot
-User-agent: Alexabot
 Allow: /
 
 # Telegram
 User-agent: TelegramBot
-Allow: /
-
-# Viber
-User-agent: Viberbot
-Allow: /
-
-# WeChat
-User-agent: WeChat
-Allow: /
-
-# TikTok
-User-agent: TikTok
-Allow: /
-
-# Snapchat
-User-agent: Snapchat
 Allow: /
