@@ -1,338 +1,162 @@
 /**
  * Quindío Travel Service Worker
- * Edge Computing y Caching Inteligente
- * Estrategia: Cache-First para estáticos, Network-First para dinámicos
+ * Estrategia: Cache-First para estáticos, Network-First para HTML
+ * v3 — Corregido: eliminado handler fetch duplicado y activate duplicado
  */
 
-const CACHE_NAME = 'quindio-travel-v2';
-const STATIC_CACHE = 'quindio-static-v2';
-const DYNAMIC_CACHE = 'quindio-dynamic-v2';
-const IMAGE_CACHE = 'quindio-images-v2';
+const CACHE_VERSION = 'v3';
+const STATIC_CACHE = `quindio-static-${CACHE_VERSION}`;
+const DYNAMIC_CACHE = `quindio-dynamic-${CACHE_VERSION}`;
+const IMAGE_CACHE = `quindio-images-${CACHE_VERSION}`;
 
-// URLs que deben cachearse estáticamente
 const STATIC_URLS = [
   '/',
   '/index.html',
   '/planes.html',
-  '/styles.css',
-  '/assets/css/critical.css',
+  '/styles.min.css',
+  '/assets/css/critical.min.css',
   '/assets/js/planes-data.js',
   '/assets/js/atractivos-data.js',
-  '/assets/js/whatsapp-payload-builder.js',
-  '/assets/js/performance-optimizer.js',
   '/logo_quindio_travel.png',
   '/favicon.ico',
   '/apple-touch-icon.png',
   '/site.webmanifest'
 ];
 
-// Estrategias de caching
-const CACHE_STRATEGIES = {
-  // Cache-First: Ideal para assets estáticos
-  cacheFirst: async (request, cacheName) => {
-    const cache = await caches.open(cacheName);
-    const cached = await cache.match(request);
-    
-    if (cached) {
-      // Actualizar cache en background
-      fetch(request).then(response => {
-        if (response.ok) {
-          cache.put(request, response.clone());
-        }
+// Instalación: cachear recursos estáticos
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(STATIC_CACHE).then(cache => {
+      return cache.addAll(STATIC_URLS).catch(err => {
+        console.warn('SW: Error cacheando estáticos:', err);
       });
-      return cached;
-    }
-    
+    })
+  );
+  self.skipWaiting();
+});
+
+// Activación: limpiar caches antiguos
+self.addEventListener('activate', (event) => {
+  const VALID_CACHES = [STATIC_CACHE, DYNAMIC_CACHE, IMAGE_CACHE];
+
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames
+          .filter(name => !VALID_CACHES.includes(name))
+          .map(name => {
+            console.log('SW: Eliminando cache antiguo:', name);
+            return caches.delete(name);
+          })
+      );
+    }).then(() => self.clients.claim())
+  );
+});
+
+// Interceptación de requests — un solo handler
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  if (request.method !== 'GET') return;
+
+  // No interceptar requests a otros dominios
+  if (url.origin !== location.origin) return;
+
+  // HTML: Network-First (siempre contenido fresco para crawlers)
+  if (request.headers.get('accept')?.includes('text/html') ||
+      url.pathname.endsWith('.html') ||
+      url.pathname === '/') {
+    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
+    return;
+  }
+
+  // Imágenes: Cache-First (agresivo)
+  if (/\.(jpg|jpeg|png|gif|webp|avif|svg|ico)$/i.test(url.pathname)) {
+    event.respondWith(cacheFirst(request, IMAGE_CACHE));
+    return;
+  }
+
+  // CSS/JS/Fuentes: Stale-While-Revalidate (fresco pero rápido)
+  if (/\.(css|js|woff2?|ttf|otf)$/i.test(url.pathname)) {
+    event.respondWith(staleWhileRevalidate(request, STATIC_CACHE));
+    return;
+  }
+
+  // Default: stale-while-revalidate
+  event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE));
+});
+
+// ── Estrategias de caching ──────────────────────────────────────
+
+async function networkFirst(request, cacheName) {
+  const cache = await caches.open(cacheName);
+  try {
     const response = await fetch(request);
     if (response.ok) {
       cache.put(request, response.clone());
     }
     return response;
-  },
-
-  // Network-First: Ideal para contenido dinámico
-  networkFirst: async (request, cacheName) => {
-    const cache = await caches.open(cacheName);
-    
-    try {
-      const response = await fetch(request);
-      if (response.ok) {
-        cache.put(request, response.clone());
-      }
-      return response;
-    } catch (error) {
-      const cached = await cache.match(request);
-      if (cached) {
-        return cached;
-      }
-      throw error;
-    }
-  },
-
-  // Stale-While-Revalidate: Balance entre velocidad y frescura
-  staleWhileRevalidate: async (request, cacheName) => {
-    const cache = await caches.open(cacheName);
+  } catch {
     const cached = await cache.match(request);
-    
-    const fetchPromise = fetch(request).then(response => {
-      if (response.ok) {
-        cache.put(request, response.clone());
-      }
-      return response;
-    });
-    
-    return cached || fetchPromise;
-  },
+    if (cached) return cached;
+    return new Response('Offline', { status: 503 });
+  }
+}
 
-  // Network-Only: Para contenido que nunca debe cachearse
-  networkOnly: async (request) => {
-    return fetch(request);
+async function cacheFirst(request, cacheName) {
+  const cache = await caches.open(cacheName);
+  const cached = await cache.match(request);
+  if (cached) {
+    // Actualizar en background sin bloquear
+    fetch(request).then(response => {
+      if (response.ok) cache.put(request, response);
+    }).catch(() => {});
+    return cached;
   }
-};
+  const response = await fetch(request);
+  if (response.ok) {
+    cache.put(request, response.clone());
+  }
+  return response;
+}
 
-// Instalación del Service Worker
-self.addEventListener('install', (event) => {
-  console.log('Service Worker: Instalando...');
-  
-  event.waitUntil(
-    Promise.all([
-      // Cachear recursos estáticos
-      caches.open(STATIC_CACHE).then(cache => {
-        console.log('Service Worker: Cacheando recursos estáticos');
-        return cache.addAll(STATIC_URLS);
-      }),
-      // Cachear imágenes principales
-      caches.open(IMAGE_CACHE).then(cache => {
-        return cache.addAll([
-          '/assets/images/paisajes/valle-cocora-hero-banner.jpg',
-          '/assets/images/paisajes/eje-cafetero-aerial-view.webp'
-        ]);
-      })
-    ])
-  );
-  
-  // Forzar activación inmediata
-  self.skipWaiting();
-});
+async function staleWhileRevalidate(request, cacheName) {
+  const cache = await caches.open(cacheName);
+  const cached = await cache.match(request);
 
-// Activación del Service Worker
-self.addEventListener('activate', (event) => {
-  console.log('Service Worker: Activando...');
-  
-  event.waitUntil(
-    Promise.all([
-      // Limpiar caches antiguos
-      caches.keys().then(cacheNames => {
-        return Promise.all(
-          cacheNames.map(cacheName => {
-            if (cacheName !== CACHE_NAME && 
-                cacheName !== STATIC_CACHE && 
-                cacheName !== DYNAMIC_CACHE && 
-                cacheName !== IMAGE_CACHE) {
-              console.log('Service Worker: Eliminando cache antiguo:', cacheName);
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      }),
-      // Reclamar clientes inmediatamente
-      self.clients.claim()
-    ])
-  );
-});
+  const fetchPromise = fetch(request).then(response => {
+    if (response.ok) cache.put(request, response.clone());
+    return response;
+  }).catch(() => cached);
 
-// Interceptación de requests
-self.addEventListener('fetch', (event) => {
-  const request = event.request;
-  const url = new URL(request.url);
-  
-  // Ignorar requests que no son GET
-  if (request.method !== 'GET') {
-    return;
-  }
-  
-  // Ignorar requests a otros dominios (excepto CDN y APIs permitidas)
-  if (url.origin !== location.origin && 
-      !url.hostname.includes('googletagmanager.com') &&
-      !url.hostname.includes('google-analytics.com') &&
-      !url.hostname.includes('fonts.googleapis.com') &&
-      !url.hostname.includes('fonts.gstatic.com')) {
-    return;
-  }
-  
-  // Estrategia según el tipo de recurso
-  let strategy;
-  
-  // CSS y JS estáticos
-  if (request.url.match(/\.(css|js)$/)) {
-    strategy = CACHE_STRATEGIES.staleWhileRevalidate(request, STATIC_CACHE);
-  }
-  // Imágenes
-  else if (request.url.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
-    strategy = CACHE_STRATEGIES.cacheFirst(request, IMAGE_CACHE);
-  }
-  // HTML
-  else if (request.url.match(/\.html$/)) {
-    strategy = CACHE_STRATEGIES.networkFirst(request, DYNAMIC_CACHE);
-  }
-  // Fuentes
-  else if (request.url.match(/\.(woff|woff2|ttf|otf)$/)) {
-    strategy = CACHE_STRATEGIES.cacheFirst(request, STATIC_CACHE);
-  }
-  // Páginas principales
-  else if (url.pathname === '/' || url.pathname === '/index.html') {
-    strategy = CACHE_STRATEGIES.networkFirst(request, DYNAMIC_CACHE);
-  }
-  // APIs y contenido dinámico
-  else if (request.url.includes('/api/') || request.url.includes('/data/')) {
-    strategy = CACHE_STRATEGIES.networkFirst(request, DYNAMIC_CACHE);
-  }
-  // Default: Stale-While-Revalidate
-  else {
-    strategy = CACHE_STRATEGIES.staleWhileRevalidate(request, DYNAMIC_CACHE);
-  }
-  
-  event.respondWith(strategy);
-});
-
-// Background Sync reservado para flujos propios del dominio.
-// Se desactiva la sincronización a WhatsApp porque `wa.me` no expone
-// un endpoint POST compatible con Background Sync del navegador.
-self.addEventListener('sync', (event) => {
-  console.log('Service Worker: Background Sync ignorado:', event.tag);
-});
+  return cached || fetchPromise;
+}
 
 // Push Notifications
 self.addEventListener('push', (event) => {
-  console.log('Service Worker: Push recibido');
-  
   const options = {
     body: event.data ? event.data.text() : 'Nueva promoción disponible en Quindío Travel',
     icon: '/logo_quindio_travel.png',
     badge: '/favicon.ico',
     vibrate: [200, 100, 200],
-    data: {
-      url: '/'
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'Ver Promoción',
-        icon: '/logo_quindio_travel.png'
-      },
-      {
-        action: 'close',
-        title: 'Cerrar',
-        icon: '/favicon.ico'
-      }
-    ]
+    data: { url: '/' }
   };
-  
   event.waitUntil(
     self.registration.showNotification('Quindío Travel', options)
   );
 });
 
-// Click en notificaciones
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-  
-  if (event.action === 'explore') {
-    event.waitUntil(
-      clients.openWindow(event.notification.data.url || '/')
-    );
-  }
+  event.waitUntil(clients.openWindow(event.notification.data?.url || '/'));
 });
 
-// Cache dinámico inteligente
-async function cacheDynamicResponse(request, response) {
-  const cache = await caches.open(DYNAMIC_CACHE);
-  
-  // Solo cachear respuestas exitosas
-  if (response.ok) {
-    // Clonar la respuesta antes de cachearla
-    const responseToCache = response.clone();
-    
-    // Determinar tiempo de expiración según el tipo de contenido
-    const url = new URL(request.url);
-    let maxAge = 3600; // 1 hora por defecto
-    
-    if (url.pathname.includes('/api/')) {
-      maxAge = 300; // 5 minutos para APIs
-    } else if (url.pathname.includes('/planes/')) {
-      maxAge = 7200; // 2 horas para planes
-    }
-    
-    // Agregar headers de cache
-    const headers = new Headers(responseToCache.headers);
-    headers.set('Cache-Control', `max-age=${maxAge}`);
-    
-    const cachedResponse = new Response(responseToCache.body, {
-      status: responseToCache.status,
-      statusText: responseToCache.statusText,
-      headers: headers
-    });
-    
-    await cache.put(request, cachedResponse);
-  }
-  
-  return response;
-}
-
-// Precaching inteligente de páginas visitadas
+// Precache bajo demanda
 self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'CACHE_URLS') {
+  if (event.data?.type === 'CACHE_URLS') {
     event.waitUntil(
-      caches.open(DYNAMIC_CACHE).then(cache => {
-        return cache.addAll(event.data.urls);
-      })
+      caches.open(DYNAMIC_CACHE).then(cache => cache.addAll(event.data.urls))
     );
   }
 });
-
-// Limpieza periódica de cache
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cacheName => {
-          // Eliminar caches que no se han usado recientemente
-          return caches.open(cacheName).then(cache => {
-            return cache.keys().then(keys => {
-              if (keys.length === 0) {
-                return caches.delete(cacheName);
-              }
-            });
-          });
-        })
-      );
-    })
-  );
-});
-
-// Estadísticas de cache
-self.addEventListener('fetch', (event) => {
-  // Logging de cache hits/misses para debugging
-  event.respondWith(
-    (async () => {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      const cached = await cache.match(event.request);
-      
-      if (cached) {
-        console.log('Cache HIT:', event.request.url);
-        return cached;
-      }
-      
-      console.log('Cache MISS:', event.request.url);
-      const response = await fetch(event.request);
-      
-      if (response.ok) {
-        await cache.put(event.request, response.clone());
-      }
-      
-      return response;
-    })()
-  );
-});
-
-console.log('Service Worker: Cargado correctamente');
