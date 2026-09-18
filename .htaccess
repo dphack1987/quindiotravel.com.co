@@ -56,6 +56,12 @@
     RewriteRule ^(.*)$ https://quindiotravel.com.co/$1 [L,R=301]
 </IfModule>
 
+# Redirect /blog/ and /planes/ to .html versions (FIX 404 GSC)
+<IfModule mod_rewrite.c>
+    RewriteRule ^blog/?$ /blog.html [R=301,L]
+    RewriteRule ^planes/?$ /planes.html [R=301,L]
+</IfModule>
+
 # Remove Trailing Slash
 <IfModule mod_rewrite.c>
     RewriteCond %{REQUEST_FILENAME} !-d
