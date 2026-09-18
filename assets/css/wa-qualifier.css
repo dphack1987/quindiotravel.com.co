@@ -1,0 +1,233 @@
+/* WhatsApp Qualifier Bot - Chat UI */
+.wa-qualifier-widget {
+    max-width: 420px;
+    margin: 0 auto;
+    background: #e5ddd5;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9c2ba' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.wa-qualifier-header {
+    background: linear-gradient(135deg, #075e54, #128c7e);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wa-qualifier-header-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.wa-qualifier-header-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.wa-qualifier-header-info p {
+    margin: 2px 0 0;
+    font-size: 0.78rem;
+    opacity: 0.85;
+}
+
+.wa-qualifier-body {
+    padding: 16px;
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Bot messages */
+.wa-bot-message {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+}
+
+.wa-bot-avatar {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.wa-bot-bubble {
+    background: white;
+    border-radius: 0 12px 12px 12px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #303030;
+    max-width: 85%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.wa-bot-bubble::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 6px solid white;
+    border-left: 6px solid transparent;
+}
+
+/* Question label */
+.wa-bot-question {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #667781;
+    margin: 8px 0 8px 40px;
+}
+
+/* Option buttons */
+.wa-bot-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 40px;
+    margin-bottom: 16px;
+}
+
+.wa-bot-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 10px 16px;
+    background: white;
+    border: 2px solid #25d366;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #075e54;
+    transition: all 0.2s;
+    text-align: left;
+}
+
+.wa-bot-btn:hover {
+    background: #dcf8c6;
+    transform: translateX(4px);
+}
+
+.wa-bot-sub {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 400;
+}
+
+/* Summary */
+.wa-bot-summary {
+    background: white;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 12px 40px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.wa-summary-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 0.88rem;
+    color: #303030;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.wa-summary-item:last-child {
+    border-bottom: none;
+}
+
+/* CTA button */
+.wa-bot-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 40px;
+    padding: 14px;
+    background: #25d366;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+}
+
+.wa-bot-cta:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37,211,102,0.4);
+    color: white;
+}
+
+/* Restart button */
+.wa-bot-restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 0 40px 16px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #666;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.wa-bot-restart:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .wa-qualifier-widget {
+        border-radius: 0;
+        margin: 0 -20px;
+        max-width: 100%;
+    }
+    
+    .wa-bot-options {
+        margin-left: 0;
+    }
+    
+    .wa-bot-summary {
+        margin: 12px 0;
+    }
+    
+    .wa-bot-cta {
+        margin: 16px 0;
+    }
+    
+    .wa-bot-restart {
+        margin: 0 0 16px;
+    }
+}

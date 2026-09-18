@@ -136,8 +136,15 @@
                 </ul>
             </nav>
             <div class="header-actions">
+                <!-- Google Reviews Badge -->
+                <a href="https://g.page/quindiotravel/review" target="_blank" rel="noopener" class="google-reviews-badge" aria-label="Ver reseñas en Google">
+                    <span class="g-icon">G</span>
+                    <span class="stars">★★★★★</span>
+                    <span>4.7</span>
+                    <span class="count">(150+)</span>
+                </a>
                 <!-- Language Selector -->
-                <div class="language-selector-container" style="margin-right: 15px; display: inline-block; max-width: 180px;">
+                <div class="language-selector-container" style="margin-left: 10px; display: inline-block; max-width: 180px;">
                     <select id="language-selector" class="language-selector" aria-label="Seleccionar idioma / Select language" style="padding: 8px 12px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.5); background: rgba(46, 90, 54, 0.9); color: white; font-size: 14px; cursor: pointer; font-weight: 600; backdrop-filter: blur(10px); box-shadow: 0 2px 8px rgba(0,0,0,0.2); max-width: 100%; width: auto;">
                         <option value="es">🇪🇸 Español</option>
                         <option value="en">🇺🇸 English</option>
@@ -174,12 +181,40 @@
     <section class="hero" style="height: 50vh; background: linear-gradient(135deg, rgba(46, 90, 54, 0.85), rgba(141, 91, 76, 0.75)), url('assets/images/paisajes/eje-cafetero-landscape-colombia.jpg') center/cover no-repeat;">
         <div class="hero-overlay"></div>
         <div class="hero-content container">
-            <span class="badge-plan" style="font-size:0.9rem;">Más Popular · 3 Días / 2 Noches</span>
+            <div class="hero-trust-badges">
+                <span class="trust-badge"><i class="fas fa-award"></i> RNT 18152</span>
+                <span class="trust-badge"><i class="fas fa-shield-alt"></i> Asistencia Local</span>
+                <span class="trust-badge"><i class="fab fa-google"></i> 4.7★</span>
+            </div>
+            <span class="badge-plan" style="font-size:0.9rem; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 8px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.3); display: inline-block; margin-top: 15px;">Más Popular · 3 Días / 2 Noches</span>
             <h1 style="margin-top: 15px;">Aventura Natural en el Eje Cafetero</h1>
             <p>Parque del Café + PANACA + Alojamiento + Desayunos y Cenas</p>
-            <div class="hero-buttons" style="margin-top: 20px;">
-                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20cotizar%20el%20Plan%20%20(3d%2F2n)%20Naturaleza%20y%20Diversi%C3%B3n%20Cafetera"
-                   target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Cotizar este plan</a>
+            
+            <div style="display: flex; align-items: center; gap: 10px; margin-top: 15px; background: rgba(255, 68, 68, 0.9); padding: 8px 16px; border-radius: 10px; display: inline-flex;">
+                <i class="fas fa-fire" style="animation: pulse-urgency 1.5s infinite;"></i>
+                <span style="font-weight: 700; font-size: 0.9rem;">MÁS POPULAR - CUPOS LIMITADOS</span>
+            </div>
+
+            <div class="hero-steps" style="margin-top: 20px;">
+                <div class="hero-step">
+                    <div class="hero-step-num">1</div>
+                    <div class="hero-step-text"><strong>Escríbenos</strong><br>Cuéntanos qué buscas</div>
+                </div>
+                <div class="hero-step-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="hero-step">
+                    <div class="hero-step-num">2</div>
+                    <div class="hero-step-text"><strong>Te armamos el plan</strong><br>Opciones en minutos</div>
+                </div>
+                <div class="hero-step-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="hero-step">
+                    <div class="hero-step-num">3</div>
+                    <div class="hero-step-text"><strong>Viaja</strong><br>Reserva y disfruta</div>
+                </div>
+            </div>
+
+            <div class="hero-buttons" style="margin-top: 25px;">
+                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel%20%F0%9F%8C%BF%0A%0AQuiero%20el%20plan%20Aventura%20Natural%20(3D%2F2N).%0A%F0%9F%91%A5%202%20personas%0A%F0%9F%93%85%20Fechas%3A%20Por%20confirmar%0A%0A%C2%BFTienen%20disponibilidad%3F%0A%0ARNT%2018152"
+                   target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Cotizar ahora</a>
                 <a href="planes.html" class="btn btn-outline"><i class="fas fa-list"></i> Todos los planes</a>
             </div>
         </div>

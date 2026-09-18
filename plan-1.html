@@ -146,8 +146,15 @@
                 </ul>
             </nav>
             <div class="header-actions">
+                <!-- Google Reviews Badge -->
+                <a href="https://g.page/quindiotravel/review" target="_blank" rel="noopener" class="google-reviews-badge" aria-label="Ver reseñas en Google">
+                    <span class="g-icon">G</span>
+                    <span class="stars">★★★★★</span>
+                    <span>4.7</span>
+                    <span class="count">(150+)</span>
+                </a>
                 <!-- Language Selector -->
-                <div class="language-selector-container" style="margin-right: 15px; display: inline-block; max-width: 180px;">
+                <div class="language-selector-container" style="margin-left: 10px; display: inline-block; max-width: 180px;">
                     <select id="language-selector" class="language-selector" aria-label="Seleccionar idioma / Select language" style="padding: 8px 12px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.5); background: rgba(46, 90, 54, 0.9); color: white; font-size: 14px; cursor: pointer; font-weight: 600; backdrop-filter: blur(10px); box-shadow: 0 2px 8px rgba(0,0,0,0.2); max-width: 100%; width: auto;">
                         <option value="es">🇪🇸 Español</option>
                         <option value="en">🇺🇸 English</option>
@@ -184,12 +191,40 @@
     <section class="hero" style="height: 60vh; background: linear-gradient(135deg, rgba(46, 90, 54, 0.7), rgba(141, 91, 76, 0.6)), url('assets/images/paisajes/colombian-coffee-fields.jpg') center/cover no-repeat; background-attachment: fixed;">
         <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5));"></div>
         <div class="hero-content container" style="position: relative; z-index: 2;">
-            <span class="badge-plan" style="font-size:0.9rem; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 8px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.3);">Escapada Rápida · 2 Días / 1 Noche</span>
+            <div class="hero-trust-badges">
+                <span class="trust-badge"><i class="fas fa-award"></i> RNT 18152</span>
+                <span class="trust-badge"><i class="fas fa-shield-alt"></i> Asistencia Local</span>
+                <span class="trust-badge"><i class="fab fa-google"></i> 4.7★</span>
+            </div>
+            <span class="badge-plan" style="font-size:0.9rem; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 8px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.3); display: inline-block; margin-top: 15px;">Escapada Rápida · 2 Días / 1 Noche</span>
             <h1 style="margin-top: 15px; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Escapada Cafetera de Fin de Semana</h1>
             <p style="font-size: 1.1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Pasaporte Múltiple Parque del Café + Pasaporte Terra PANACA + Alojamiento + Desayunos y Cenas</p>
+            
+            <div style="display: flex; align-items: center; gap: 10px; margin-top: 15px; background: rgba(255, 68, 68, 0.9); padding: 8px 16px; border-radius: 10px; display: inline-flex;">
+                <i class="fas fa-fire" style="animation: pulse-urgency 1.5s infinite;"></i>
+                <span style="font-weight: 700; font-size: 0.9rem;">ÚLTIMOS CUPOS DISPONIBLES</span>
+            </div>
+
+            <div class="hero-steps" style="margin-top: 20px;">
+                <div class="hero-step">
+                    <div class="hero-step-num">1</div>
+                    <div class="hero-step-text"><strong>Escríbenos</strong><br>Cuéntanos qué buscas</div>
+                </div>
+                <div class="hero-step-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="hero-step">
+                    <div class="hero-step-num">2</div>
+                    <div class="hero-step-text"><strong>Te armamos el plan</strong><br>Opciones en minutos</div>
+                </div>
+                <div class="hero-step-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="hero-step">
+                    <div class="hero-step-num">3</div>
+                    <div class="hero-step-text"><strong>Viaja</strong><br>Reserva y disfruta</div>
+                </div>
+            </div>
+
             <div class="hero-buttons" style="margin-top: 25px;">
-                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel,%20deseo%20cotizar%20el%20Escapada%20Cafetera%20de%20Fin%20de%20Semana%20(2d%2F1n)%20con%20Parque%20del%20Caf%C3%A9%20y%20PANACA"
-                   target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding: 12px 30px; font-size: 1rem; border-radius: 25px; background: #25D366; color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; margin-right: 10px; transition: transform 0.3s;"><i class="fab fa-whatsapp"></i> Cotizar este plan</a>
+                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel%20%F0%9F%8C%BF%0A%0AQuiero%20el%20plan%20Escapada%20Cafetera%20(2D%2F1N).%0A%F0%9F%91%A5%202%20personas%0A%F0%9F%93%85%20Fechas%3A%20Por%20confirmar%0A%0A%C2%BFTienen%20disponibilidad%3F%0A%0ARNT%2018152"
+                   target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding: 12px 30px; font-size: 1rem; border-radius: 25px; background: #25D366; color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; margin-right: 10px; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(37,211,102,0.3);"><i class="fab fa-whatsapp"></i> Cotizar ahora</a>
                 <a href="planes.html" class="btn btn-outline" style="padding: 12px 30px; font-size: 1rem; border-radius: 25px; border: 2px solid white; color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.3s;"><i class="fas fa-list"></i> Todos los planes</a>
             </div>
         </div>
@@ -551,26 +586,101 @@
     </section>
 
     <section class="container section-white" style="padding: 50px 20px;">
-        <div style="background: var(--gris-claro); padding: 30px; border-radius: 12px; margin-bottom: 40px;">
-            <h2 style="color: var(--verde-cafe); margin-bottom: 15px;"><i class="fas fa-info-circle"></i> ¿Qué incluye este programa?</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px;">
-                <div style="padding: 15px; background: white; border-radius: 8px;">
-                    <p><i class="fas fa-bed" style="color: var(--verde-claro);"></i> <strong>1 noche</strong> de alojamiento en Finca Hotel estándar</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 40px;">
+            <!-- INCLUYE -->
+            <div style="background: #f0f7f0; padding: 30px; border-radius: 16px; border: 2px solid #d4e8d4;">
+                <h2 style="color: var(--verde-cafe); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-size: 1.3rem;">
+                    <span style="background: #25D366; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem;"><i class="fas fa-check"></i></span>
+                    ¿Qué incluye?
+                </h2>
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-bed" style="color: var(--verde-claro); font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">1 noche de alojamiento</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">Finca Hotel estándar o superior</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-utensils" style="color: var(--verde-claro); font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">Alimentación</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">1 desayuno + 1 cena</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-ticket-alt" style="color: var(--verde-claro); font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">Pasaporte Múltiple Parque del Café</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">24 atracciones mecánicas y acuáticas</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-ticket-alt" style="color: var(--verde-claro); font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">Pasaporte Terra PANACA</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">Exhibiciones animales y espectáculos</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-user-tie" style="color: var(--verde-claro); font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">Asistencia local personalizada</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">Guía durante toda la estadía</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-heartbeat" style="color: var(--verde-claro); font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">Asistencia médica</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">Cobertura durante el viaje</p>
+                        </div>
+                    </div>
                 </div>
-                <div style="padding: 15px; background: white; border-radius: 8px;">
-                    <p><i class="fas fa-utensils" style="color: var(--verde-claro);"></i> <strong>Alimentación:</strong> 1 desayuno + 1 cena</p>
-                </div>
-                <div style="padding: 15px; background: white; border-radius: 8px;">
-                    <p><i class="fas fa-ticket-alt" style="color: var(--verde-claro);"></i> <strong>Pasaporte Múltiple</strong> Parque del Café</p>
-                </div>
-                <div style="padding: 15px; background: white; border-radius: 8px;">
-                    <p><i class="fas fa-ticket-alt" style="color: var(--verde-claro);"></i> <strong>Pasaporte Terra</strong> PANACA</p>
-                </div>
-                <div style="padding: 15px; background: white; border-radius: 8px;">
-                    <p><i class="fas fa-user-tie" style="color: var(--verde-claro);"></i> <strong>Asistencia local personalizada</strong> + Asistencia médica</p>
-                </div>
-                <div style="padding: 15px; background: white; border-radius: 8px;">
-                    <p><i class="fas fa-shuttle-van" style="color: var(--verde-claro);"></i> <strong>Transporte</strong> opcional (Radio Taxi / Placa Blanca)</p>
+            </div>
+
+            <!-- NO INCLUYE -->
+            <div style="background: #fff8f0; padding: 30px; border-radius: 16px; border: 2px solid #f0e0cc;">
+                <h2 style="color: #cc6600; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-size: 1.3rem;">
+                    <span style="background: #ff8800; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem;"><i class="fas fa-times"></i></span>
+                    ¿Qué NO incluye?
+                </h2>
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-plane-departure" style="color: #cc6600; font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">Pasaje aéreo o terrestre</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">Hasta Armenia / Montenegro</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-shuttle-van" style="color: #cc6600; font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">Transporte interno</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">Disponible como adicional (Radio Taxi / Placa Blanca)</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-hamburger" style="color: #cc6600; font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">Almuerzo</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">No incluido en el programa</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-spa" style="color: #cc6600; font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">Servicios de spa o wellness</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">Disponible en hoteles VIP</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: white; border-radius: 10px;">
+                        <i class="fas fa-shopping-bag" style="color: #cc6600; font-size: 1.2rem; width: 24px; text-align: center;"></i>
+                        <div>
+                            <strong style="color: #333;">Propinas y gastos personales</strong>
+                            <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #666;">Souvenirs, bebidas adicionales, etc.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -625,6 +735,59 @@
                     <li>Botiquín básico personal con medicamentos de uso frecuente.</li>
                     <li>Dinero en efectivo para souvenirs y gastos menores.</li>
                 </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px 20px; background: #f0faf2; border-radius: 12px; border: 1px solid #e0f0e3;">
+            <h3 style="color: var(--verde-cafe); margin-bottom: 10px;"><i class="fab fa-whatsapp" style="color: #25D366;"></i> Así te enviamos el itinerario por WhatsApp</h3>
+            <p style="color: #666; font-size: 0.9rem; margin-bottom: 16px;">Sin PDFs, sin correos. Recibe tu plan directo en el chat:</p>
+            <div class="whatsapp-itinerary-preview">
+                <div class="wa-header"><i class="fab fa-whatsapp" style="color: #25D366;"></i> Quindío Travel - Tu plan Escapada Cafetera 2D/1N</div>
+                <div class="wa-day">📍 Día 1: Llegada + PANACA</div>
+                <div class="wa-item">Recepción en Armenia</div>
+                <div class="wa-item">Check-in Finca Hotel</div>
+                <div class="wa-item">PANACA con Pasaporte Terra (9am-5pm)</div>
+                <div class="wa-item">Cena incluida</div>
+                <div class="wa-day">📍 Día 2: Parque del Café + Regreso</div>
+                <div class="wa-item">Desayuno completo</div>
+                <div class="wa-item">Parque del Café - 24 atracciones</div>
+                <div class="wa-item">Regreso 5pm</div>
+                <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.1);">
+                    <strong>💰 Desde $425.000/persona</strong><br>
+                    <span style="font-size: 0.8rem; color: #666;">Incluye: Alojamiento, Desayunos, Cenas, Entradas, Asistencia</span>
+                </div>
+            </div>
+            <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel%20%F0%9F%8C%BF%0A%0AQuiero%20el%20itinerario%20completo%20del%20plan%20Escapada%20Cafetera%20(2D%2F1N).%0A%F0%9F%91%A5%202%20personas%0A%F0%9F%93%85%20Fechas%3A%20Por%20confirmar%0A%0A%C2%BFMe%20lo%20pueden%20enviar%3F" target="_blank" rel="noopener" class="btn-whatsapp-flow" style="margin-top: 16px;">
+                <i class="fab fa-whatsapp"></i> Recibir itinerario completo por WhatsApp
+            </a>
+        </div>
+
+        <!-- Upsell WhatsApp -->
+        <div style="margin-top: 40px; background: #f8f9fa; border-radius: 12px; padding: 24px; border: 1px solid #e0e0e0;">
+            <h3 style="color: var(--verde-cafe); margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-plus-circle" style="color: #25D366;"></i> Mejora tu experiencia</h3>
+            <p style="color: #666; font-size: 0.9rem; margin-bottom: 16px;">Agrega estos servicios al reservation WhatsApp:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel%20%F0%9F%8C%BF%0A%0AQuiero%20el%20plan%20Escapada%20Cafetera%20(2D%2F1N)%20CON%20transporte%20desde%20aeropuerto%2Fterminal.%0A%F0%9F%91%A5%202%20personas%0A%F0%9F%93%85%20Fechas%3A%20Por%20confirmar%0A%0A%C2%BFTienen%20disponibilidad%3F%0A%0ARNT%2018152" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; padding: 12px; background: white; border: 2px solid #e0e0e0; border-radius: 10px; text-decoration: none; transition: all 0.3s;">
+                    <span style="font-size: 1.3rem;">🚐</span>
+                    <div>
+                        <strong style="color: #333; font-size: 0.9rem;">+ Transporte</strong>
+                        <span style="color: #888; font-size: 0.78rem; display: block;">Radio Taxi o Placa Blanca</span>
+                    </div>
+                </a>
+                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel%20%F0%9F%8C%BF%0A%0AQuiero%20el%20plan%20Escapada%20Cafetera%20(2D%2F1N)%20CON%20alojamiento%20VIP.%0A%F0%9F%91%A5%202%20personas%0A%F0%9F%93%85%20Fechas%3A%20Por%20confirmar%0A%0A%C2%BFTienen%20disponibilidad%3F%0A%0ARNT%2018152" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; padding: 12px; background: white; border: 2px solid #e0e0e0; border-radius: 10px; text-decoration: none; transition: all 0.3s;">
+                    <span style="font-size: 1.3rem;">🏨</span>
+                    <div>
+                        <strong style="color: #333; font-size: 0.9rem;">+ Hotel VIP</strong>
+                        <span style="color: #888; font-size: 0.78rem; display: block;">Mocawa Resort o similar</span>
+                    </div>
+                </a>
+                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel%20%F0%9F%8C%BF%0A%0AQuiero%20el%20plan%20Escapada%20Cafetera%20(2D%2F1N)%20CON%20tour%20adicional%20de%20cabalgata.%0A%F0%9F%91%A5%202%20personas%0A%F0%9F%93%85%20Fechas%3A%20Por%20confirmar%0A%0A%C2%BFTienen%20disponibilidad%3F%0A%0ARNT%2018152" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; padding: 12px; background: white; border: 2px solid #e0e0e0; border-radius: 10px; text-decoration: none; transition: all 0.3s;">
+                    <span style="font-size: 1.3rem;">🐴</span>
+                    <div>
+                        <strong style="color: #333; font-size: 0.9rem;">+ Cabalgata</strong>
+                        <span style="color: #888; font-size: 0.78rem; display: block;">Tour por cafetales</span>
+                    </div>
+                </a>
             </div>
         </div>
 

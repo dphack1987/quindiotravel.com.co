@@ -17,6 +17,12 @@ Disallow: /scripts/
 Disallow: /components/
 Disallow: /dist/
 
+# Bloquear motor pSEO y archivos auxiliares (evitar 404 por crawleo de JSON)
+Disallow: /pseo-engine/
+Disallow: /generated-pages/
+Disallow: /programmatic-pages/
+Disallow: /sitemaps/
+
 # Sitemap principal
 Sitemap: https://quindiotravel.com.co/sitemap.xml
 

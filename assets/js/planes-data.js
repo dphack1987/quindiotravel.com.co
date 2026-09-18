@@ -10,6 +10,9 @@ const planesData = [
     dias: 2,
     categoria: "Escapada",
     badge: "Escapada Rápida",
+    badgeUrgencia: "Últimos cupos",
+    disponibilidad: 4,
+    grupoIdeal: "Parejas, Familias pequeñas",
     detalleUrl: "plan-1.html",
     descripcion: "2 días / 1 noche de alojamiento en finca hotel, desayuno y cena incluidos, Pasaporte Múltiple al Parque del Café y Pasaporte Terra a PANACA. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. Ideal para fin de semana corto. *Precio para acomodación cuádruple.",
     resumenPrograma: [
@@ -39,6 +42,9 @@ const planesData = [
     dias: 3,
     categoria: "Económico",
     badge: "Más Popular",
+    badgeUrgencia: "Más vendido",
+    disponibilidad: 6,
+    grupoIdeal: "Familias, Amigos",
     detalleUrl: "plan-2.html",
     descripcion: "3 días / 2 noches de alojamiento en finca hotel tradicional, desayunos y cenas incluidos, acceso a PANACA con Pasaporte Terra y Parque del Café con Pasaporte Múltiple. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. *Precio para acomodación cuádruple.",
     resumenPrograma: [
@@ -69,6 +75,9 @@ const planesData = [
     dias: 4,
     categoria: "Estándar",
     badge: "Experiencia Completa",
+    badgeUrgencia: "Favorito",
+    disponibilidad: 8,
+    grupoIdeal: "Familias, Grupos",
     detalleUrl: "plan-3.html",
     descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Valle de Cocora, Salento, Filandia, PANACA y Parque del Café. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. El programa favorito para conocer lo esencial del Quindío. *Precio para acomodación cuádruple.",
     resumenPrograma: [
@@ -100,6 +109,9 @@ const planesData = [
     dias: 4,
     categoria: "Estándar Plus",
     badge: "Termales Incluidos",
+    badgeUrgencia: "Temporada alta",
+    disponibilidad: 5,
+    grupoIdeal: "Parejas, Familias",
     detalleUrl: "plan-4.html",
     descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Balneario Santa Rosa de Cabal, Parque del Café y PANACA. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. Ideal para familias y parejas. *Precio para acomodación cuádruple.",
     resumenPrograma: [
@@ -131,6 +143,9 @@ const planesData = [
     dias: 4,
     categoria: "Cultural",
     badge: "Vivencial Cultural",
+    badgeUrgencia: "Experiencia única",
+    disponibilidad: 3,
+    grupoIdeal: "Amigos, Familias",
     detalleUrl: "plan-5.html",
     descripcion: "4 días / 3 noches de alojamiento, desayunos y cenas incluidos, Parque Los Arrieros, PANACA y Parque del Café. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. *Precio para acomodación cuádruple.",
     resumenPrograma: [
@@ -167,6 +182,9 @@ const planesData = [
     dias: 5,
     categoria: "Premium",
     badge: "Todo Incluido VIP",
+    badgeUrgencia: "Máxima experiencia",
+    disponibilidad: 2,
+    grupoIdeal: "Parejas, Grupos VIP",
     detalleUrl: "plan-6.html",
     descripcion: "La experiencia definitiva de 5 días y 4 noches. PANACA, Balneario Santa Rosa de Cabal, Parque del Café y RECUCA. Transporte interno: recogida en aeropuerto/terminal de Armenia al alojamiento y del alojamiento a destinos turísticos. Incluye Valle de Cocora. *Precio para acomodación cuádruple.",
     resumenPrograma: [
@@ -309,6 +327,37 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
     
     const fotoAlojamiento = plan.imagen || fotosAlojamiento[primerAlojamiento] || "assets/images/alojamientos/hotel-de-la-vega/eaa775d5.avif";
     
+    const paxParam = obtenerParametroURL('personas') || 2;
+    const fechaParam = obtenerParametroURL('fecha') || 'Por confirmar';
+    const precioDesde = plan.precioSinTransporte;
+    
+    // Badge de urgencia basado en disponibilidad
+    const urgenciaMap = {
+      1: { icon: 'fa-fire', cls: 'urgency-hot', text: '¡ÚLTIMO CUPO!' },
+      2: { icon: 'fa-fire', cls: 'urgency-hot', text: '¡Últimos 2 cupos!' },
+      3: { icon: 'fa-fire', cls: 'urgency-hot', text: '¡Últimos 3 cupos!' },
+      4: { icon: 'fa-bolt', cls: 'urgency-popular', text: 'Cupos limitados' },
+      5: { icon: 'fa-bolt', cls: 'urgency-popular', text: 'Cupos limitados' },
+      6: { icon: 'fa-star', cls: 'urgency-deal', text: 'Disponible' },
+      7: { icon: 'fa-star', cls: 'urgency-deal', text: 'Disponible' },
+      8: { icon: 'fa-star', cls: 'urgency-deal', text: 'Disponible' },
+    };
+    const disponibilidad = plan.disponibilidad || 5;
+    const urgencia = urgenciaMap[disponibilidad] || { icon: 'fa-star', cls: 'urgency-deal', text: 'Disponible' };
+
+    // Mensaje pre-llenado detallado para WhatsApp
+    const msgWhatsApp = `Hola Quindío Travel 🌿
+
+Quiero cotizar este plan:
+📋 Plan: ${plan.titulo} (${plan.dias}D/${plan.noches}N)
+👥 Personas: ${paxParam}
+📅 Fecha: ${fechaParam}
+💰 Presupuesto: Consultar
+
+¿Podrían enviarme disponibilidad y precio final?
+
+RNT 18152`;
+
     const card = document.createElement("div");
     card.className = "plan-card-enhanced";
     card.innerHTML = `
@@ -317,6 +366,23 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
         <div class="plan-badge-overlay">
           <div class="plan-badge-enhanced">${plan.badge}</div>
         </div>
+        <div class="plan-urgency-badge ${urgencia.cls}">
+          <i class="fas ${urgencia.icon}"></i>
+          <span>${urgencia.text}</span>
+        </div>
+        <div class="plan-price-from">
+          <span class="price-from-label">Desde</span>
+          <span class="price-from-value">$${precioDesde.toLocaleString('es-CO')}</span>
+          <span class="price-from-unit">/persona</span>
+        </div>
+        ${disponibilidad <= 4 ? `
+        <div class="plan-seats-left">
+          <div class="seats-bar">
+            <div class="seats-fill" style="width: ${(disponibilidad/10)*100}%"></div>
+          </div>
+          <span class="seats-text"><i class="fas fa-users"></i> Solo ${disponibilidad} cupos esta semana</span>
+        </div>
+        ` : ''}
       </div>
       
       <div class="plan-card-header-enhanced">
@@ -324,11 +390,17 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
           <i class="fas fa-clock"></i>
           <span>${plan.dias}D/${plan.noches}N</span>
         </div>
+        <div class="plan-category-enhanced">${plan.categoria}</div>
       </div>
       
       <div class="plan-card-body-enhanced">
         <h3 class="plan-title-enhanced">${plan.titulo}</h3>
         <p class="plan-description-enhanced">${plan.descripcion}</p>
+        
+        <div class="plan-grupo-ideal">
+          <i class="fas fa-heart"></i>
+          <span>Ideal para: <strong>${plan.grupoIdeal}</strong></span>
+        </div>
         
         <div class="plan-features-enhanced">
           <div class="feature-item-enhanced">
@@ -343,10 +415,21 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
             <i class="fas fa-shield-alt"></i>
             <span>Asistencia médica</span>
           </div>
+          <div class="feature-item-enhanced">
+            <i class="fas fa-user-tie"></i>
+            <span>Asistencia local</span>
+          </div>
         </div>
         
         <div class="plan-destinations-enhanced">
-          ${plan.atractivosIncluidos.map(a => `<span class="destination-tag-enhanced">${a}</span>`).join("")}
+          ${plan.atractivosIncluidos.map(a => `<span class="destination-tag-enhanced"><i class="fas fa-check-circle"></i> ${a}</span>`).join("")}
+        </div>
+
+        <div class="plan-incluye-resumen">
+          <div class="incluye-item"><i class="fas fa-bed"></i> Alojamiento</div>
+          <div class="incluye-item"><i class="fas fa-utensils"></i> Desayuno y cena</div>
+          <div class="incluye-item"><i class="fas fa-ticket-alt"></i> Entradas a atractivos</div>
+          <div class="incluye-item"><i class="fas fa-user-tie"></i> Asistencia local</div>
         </div>
         
         <div class="plan-programa-enhanced">
@@ -362,7 +445,7 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
             <span class="price-value-enhanced">$${plan.precioSinTransporte.toLocaleString('es-CO')}</span>
           </div>
           <div class="price-item-enhanced featured">
-            <span class="price-label-enhanced">Transporte interno (Cuádruple)</span>
+            <span class="price-label-enhanced"><i class="fas fa-shuttle-van"></i> Transporte interno (Cuádruple)</span>
             <span class="price-value-enhanced">$${plan.precioConTransporte.toLocaleString('es-CO')}</span>
           </div>
         </div>
@@ -371,11 +454,11 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
       <div class="plan-card-footer-enhanced">
         <a href="${plan.detalleUrl}" class="btn-plan-enhanced btn-outline-plan">
           <i class="fas fa-file-alt"></i>
-          <span>Ver detalles</span>
+          <span>Ver itinerario</span>
         </a>
-        <a href="https://wa.me/573174426044?text=${encodeURIComponent('Hola Quindío Travel 🌿, deseo cotizar el ' + plan.titulo + ' para ' + (obtenerParametroURL('personas') || 2) + ' personas. Fecha aproximada: ' + (obtenerParametroURL('fecha') || 'Por confirmar') + '. ¿Podrían ayudarme con la disponibilidad?')}" class="btn-plan-enhanced btn-whatsapp-plan" target="_blank" rel="noopener">
+        <a href="https://wa.me/573174426044?text=${encodeURIComponent(msgWhatsApp)}" class="btn-plan-enhanced btn-whatsapp-plan" target="_blank" rel="noopener">
           <i class="fab fa-whatsapp"></i>
-          <span>Cotizar ahora</span>
+          <span>Cotizar por WhatsApp</span>
         </a>
       </div>
     `;

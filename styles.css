@@ -5518,6 +5518,179 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* Badges de urgencia */
+.plan-urgency-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulse-urgency 2s ease-in-out infinite;
+}
+
+.plan-urgency-badge.urgency-hot {
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
+}
+
+.plan-urgency-badge.urgency-popular {
+    background: linear-gradient(135deg, #ff8800, #cc6600);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 136, 0, 0.4);
+}
+
+.plan-urgency-badge.urgency-deal {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+@keyframes pulse-urgency {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Precio "desde" en tarjeta */
+.plan-price-from {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    text-align: right;
+    line-height: 1.2;
+}
+
+.price-from-label {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.price-from-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #ffc107;
+}
+
+.price-from-unit {
+    display: block;
+    font-size: 0.65rem;
+    opacity: 0.7;
+}
+
+/* Categoría en header */
+.plan-category-enhanced {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+}
+
+/* Resumen de incluye en tarjeta */
+.plan-incluye-resumen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 12px;
+    background: #f0f7f0;
+    border-radius: 10px;
+    border: 1px solid #d4e8d4;
+}
+
+.incluye-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--verde-cafe);
+    font-weight: 500;
+}
+
+.incluye-item i {
+    color: var(--verde-claro);
+    font-size: 0.85rem;
+    width: 16px;
+    text-align: center;
+}
+
+/* Indicador de disponibilidad */
+.plan-seats-left {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 10px;
+    max-width: 180px;
+}
+
+.seats-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+
+.seats-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff4444, #ff8800);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.seats-text {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #ffcc00;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Grupo ideal */
+.plan-grupo-ideal {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #fff8f0;
+    border-radius: 8px;
+    border: 1px solid #ffe0b2;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.plan-grupo-ideal i {
+    color: #ff6b6b;
+}
+
 .plan-card-header-enhanced {
     background: linear-gradient(135deg, var(--verde-cafe), var(--verde-claro));
     padding: 15px 20px;
@@ -5751,6 +5924,78 @@ body {
         margin-bottom: -12px;
         padding: 12px;
     }
+    
+    .plan-incluye-resumen {
+        grid-template-columns: 1fr;
+    }
+    
+    .plan-urgency-badge {
+        font-size: 0.65rem;
+        padding: 4px 10px;
+    }
+    
+    .plan-price-from {
+        bottom: 10px;
+        right: 10px;
+        padding: 6px 10px;
+    }
+    
+    .price-from-value {
+        font-size: 1rem;
+    }
+    
+    .plan-seats-left {
+        bottom: 8px;
+        left: 8px;
+        padding: 4px 8px;
+        max-width: 150px;
+    }
+    
+    .seats-text {
+        font-size: 0.6rem;
+    }
+    
+    .plan-grupo-ideal {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animaciones de entrada para tarjetas de plan */
+.plan-card-enhanced {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.plan-card-enhanced:nth-child(1) { animation-delay: 0.1s; }
+.plan-card-enhanced:nth-child(2) { animation-delay: 0.2s; }
+.plan-card-enhanced:nth-child(3) { animation-delay: 0.3s; }
+.plan-card-enhanced:nth-child(4) { animation-delay: 0.4s; }
+.plan-card-enhanced:nth-child(5) { animation-delay: 0.5s; }
+.plan-card-enhanced:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll reveal animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* No Results Enhanced */
@@ -9298,4 +9543,531 @@ img.loaded {
 
 .lazy-bg.loaded {
     background-image: var(--bg-image) !important;
+}
+
+/* ============================================
+   8 PATRONES GLOBALES - CLASES POR DEFECTO
+   ============================================ */
+
+/* --- Hero Subtitle --- */
+.hero-subtitle {
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
+    color: rgba(255,255,255,0.92);
+    margin: 12px 0 28px;
+    line-height: 1.6;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Hero 3 Steps --- */
+.hero-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+}
+
+.hero-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 14px;
+    padding: 14px 20px;
+    min-width: 180px;
+}
+
+.hero-step-num {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-step-text {
+    color: #fff;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.hero-step-text strong {
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.hero-step-arrow {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.9rem;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hero-step-arrow {
+        display: block;
+    }
+}
+
+/* --- Hero Social Proof --- */
+.hero-social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.hero-reviews-badge,
+.hero-bookers {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.hero-reviews-badge .stars {
+    color: #F5A623;
+    font-size: 0.9rem;
+}
+
+.hero-reviews-badge i {
+    color: #4285F4;
+}
+
+.hero-bookers i {
+    color: #25D366;
+}
+
+/* --- Hero Outline Button --- */
+.btn-outline-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 25px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-hero:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: #fff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* --- Google Reviews Badge (header/cards) --- */
+.google-reviews-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    color: #333;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.google-reviews-badge:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+}
+
+.google-reviews-badge .g-icon {
+    color: #4285F4;
+    font-weight: 700;
+}
+
+.google-reviews-badge .stars {
+    color: #F5A623;
+}
+
+.google-reviews-badge .count {
+    color: #666;
+    font-weight: 400;
+}
+
+/* --- "Más Reservado" Ranking --- */
+.most-booked-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #E67300, #FF9800);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(230,115,0,0.4);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.most-booked-badge.rank-1 {
+    background: linear-gradient(135deg, #B8860B, #FFD700);
+    box-shadow: 0 2px 8px rgba(184,134,11,0.4);
+}
+
+.most-booked-badge.rank-2 {
+    background: linear-gradient(135deg, #555, #888);
+}
+
+.most-booked-badge.rank-3 {
+    background: linear-gradient(135deg, #8B4513, #CD853F);
+}
+
+.most-booked-badge i {
+    font-size: 0.85rem;
+}
+
+/* --- Ranking Section (planes.html) --- */
+.ranking-section {
+    padding: 40px 0 20px;
+}
+
+.ranking-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .ranking-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+.ranking-card {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.ranking-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.ranking-card.rank-1 {
+    border-color: #FFD700;
+}
+
+.ranking-card.rank-2 {
+    border-color: #C0C0C0;
+}
+
+.ranking-card.rank-3 {
+    border-color: #CD853F;
+}
+
+.ranking-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+    z-index: 2;
+}
+
+.rank-1 .ranking-number {
+    background: linear-gradient(135deg, #B8860B, #FFD700);
+}
+
+.rank-2 .ranking-number {
+    background: linear-gradient(135deg, #555, #888);
+}
+
+.rank-3 .ranking-number {
+    background: linear-gradient(135deg, #8B4513, #CD853F);
+}
+
+.ranking-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.ranking-info {
+    padding: 14px;
+}
+
+.ranking-info h4 {
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    color: var(--texto-oscuro);
+}
+
+.ranking-info .ranking-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.ranking-info .ranking-meta i {
+    color: var(--verde-claro);
+}
+
+.ranking-info .ranking-price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--verde-cafe);
+}
+
+.ranking-info .ranking-price span {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #888;
+}
+
+/* --- WhatsApp Pre-filled Flow Button --- */
+.btn-whatsapp-flow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(37,211,102,0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-whatsapp-flow:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+    color: #fff;
+}
+
+/* --- Zero Forms Badge --- */
+.zero-forms-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(37,211,102,0.1);
+    border: 1px solid rgba(37,211,102,0.2);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    color: var(--verde-cafe);
+    font-weight: 600;
+}
+
+/* --- Post-Viaje Follow-up Section --- */
+.followup-section {
+    background: linear-gradient(135deg, var(--verde-cafe), var(--verde-claro));
+    color: #fff;
+    padding: 50px 0;
+}
+
+.followup-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .followup-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+.followup-step {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 14px;
+    backdrop-filter: blur(5px);
+}
+
+.followup-step-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.followup-step h4 {
+    margin: 0 0 6px;
+    font-size: 1rem;
+}
+
+.followup-step p {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* --- Itinerary WhatsApp Preview --- */
+.whatsapp-itinerary-preview {
+    background: #DCF8C6;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 0.85rem;
+    color: #303030;
+    line-height: 1.6;
+    max-width: 480px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.whatsapp-itinerary-preview::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #DCF8C6;
+}
+
+.whatsapp-itinerary-preview .wa-header {
+    font-weight: 700;
+    color: var(--verde-cafe);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.whatsapp-itinerary-preview .wa-day {
+    margin: 8px 0 4px;
+    font-weight: 700;
+}
+
+.whatsapp-itinerary-preview .wa-item {
+    padding-left: 16px;
+    position: relative;
+}
+
+.whatsapp-itinerary-preview .wa-item::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #25D366;
+    font-weight: 700;
+}
+
+/* --- Responsive for new hero elements --- */
+@media (max-width: 600px) {
+    .hero-steps {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-step {
+        min-width: auto;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .hero-social-proof {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ranking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .followup-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+    .ranking-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .followup-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #don-chucho-widget {
+        left: 10px !important;
+        right: 10px !important;
+        bottom: 80px !important;
+    }
+    
+    #don-chucho-widget > div {
+        width: 100% !important;
+        max-width: none !important;
+    }
 }

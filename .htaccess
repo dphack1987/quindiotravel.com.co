@@ -63,6 +63,77 @@
     RewriteRule ^ %1 [L,R=301]
 </IfModule>
 
+# Redirect pSEO 404 URLs - Municipios (e.g., /armenia/viajes-economicos → /armenia.html)
+<IfModule mod_rewrite.c>
+    RewriteRule ^armenia/(.+)$ /armenia.html [R=301,L]
+    RewriteRule ^salento/(.+)$ /salento.html [R=301,L]
+    RewriteRule ^filandia/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^buenavista/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^montengro/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^circasia/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^quimbaya/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^giroidionisio/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^calarca/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^tebaida/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^pijao/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^bugalagrande/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^la-tebaida/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^cupica/(.+)$ /filandia.html [R=301,L]
+    RewriteRule ^urrao/(.+)$ /filandia.html [R=301,L]
+</IfModule>
+
+# Redirect pSEO 404 URLs - Tipos de viaje (e.g., /viajes/viajes-culturales → /planes.html)
+<IfModule mod_rewrite.c>
+    RewriteRule ^viajes/(.+)$ /planes.html [R=301,L]
+</IfModule>
+
+# Redirect pSEO 404 URLs - Alojamientos (e.g., /alojamiento/jacuzzi → /alojamientos.html)
+<IfModule mod_rewrite.c>
+    RewriteRule ^alojamiento/(.+)$ /alojamientos.html [R=301,L]
+</IfModule>
+
+# Redirect pSEO 404 URLs - Atractivos (e.g., /atractivos/panaca → /panaca.html)
+<IfModule mod_rewrite.c>
+    RewriteRule ^atractivos/panaca$ /panaca.html [R=301,L]
+    RewriteRule ^atractivos/termales-santa-rosa$ /termales-santa-rosa.html [R=301,L]
+    RewriteRule ^atractivos/recuca$ /recuca.html [R=301,L]
+    RewriteRule ^atractivos/parque-del-cafe$ /parque-del-cafe.html [R=301,L]
+    RewriteRule ^atractivos/mariposario-quindio$ /mariposario-quindio.html [R=301,L]
+    RewriteRule ^atractivos/granja-mama-lulu$ /granja-mama-lulu.html [R=301,L]
+    RewriteRule ^atractivos/parque-los-arrieros$ /parque-los-arrieros.html [R=301,L]
+    RewriteRule ^atractivos/laberinto-mil-caminos$ /laberinto-mil-caminos.html [R=301,L]
+    RewriteRule ^atractivos/(.+)$ /experiencias.html [R=301,L]
+</IfModule>
+
+# Redirect pSEO 404 URLs - Blog (e.g., /blog/viajes-bienestar-2026.html → /blog.html)
+<IfModule mod_rewrite.c>
+    RewriteRule ^blog/viajes-(.+)$ /blog.html [R=301,L]
+</IfModule>
+
+# Redirect generated-pages and programmatic-pages to homepage
+<IfModule mod_rewrite.c>
+    RewriteRule ^generated-pages/(.+)$ / [R=301,L]
+    RewriteRule ^programmatic-pages/(.+)$ / [R=301,L]
+</IfModule>
+
+# Redirect duplicate "mejor época" pages to primary blog post
+<IfModule mod_rewrite.c>
+    RewriteRule ^mejor-epoca-para-visitar-quindio\.html$ /blog/mejor-epoca-visitar-quindio-2026.html [R=301,L]
+    RewriteRule ^blog-mejor-epoca-eje-cafetero\.html$ /blog/mejor-epoca-visitar-quindio-2026.html [R=301,L]
+    RewriteRule ^blog/mejor-epoca-para-visitar-quindio-en-2026-guia-completa\.html$ /blog/mejor-epoca-visitar-quindio-2026.html [R=301,L]
+</IfModule>
+
+# Redirect duplicate "planes turísticos" thin pages to primary
+<IfModule mod_rewrite.c>
+    RewriteRule ^viajes-economicos-quindio\.html$ /precios-planes-turisticos-quindio.html [R=301,L]
+    RewriteRule ^quindio-viajes-planes-turisticos\.html$ /precios-planes-turisticos-quindio.html [R=301,L]
+</IfModule>
+
+# Redirect duplicate "turismo familiar" to primary
+<IfModule mod_rewrite.c>
+    RewriteRule ^turismo-familiar-eje-cafetero\.html$ /planes-familiares-quindio.html [R=301,L]
+</IfModule>
+
 # Protect Files
 <FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|sql|env)$">
     Order Allow,Deny
