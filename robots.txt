@@ -17,49 +17,5 @@ Disallow: /scripts/
 Disallow: /components/
 Disallow: /dist/
 
-# Bloquear motor pSEO y archivos auxiliares (evitar 404 por crawleo de JSON)
-Disallow: /pseo-engine/
-Disallow: /generated-pages/
-Disallow: /programmatic-pages/
-Disallow: /sitemaps/
-
 # Sitemap principal
 Sitemap: https://quindiotravel.com.co/sitemap.xml
-
-# Googlebot
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Googlebot-Image
-User-agent: Googlebot-Image
-Allow: /
-
-# Bing
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Facebook
-User-agent: facebookexternalhit
-Allow: /
-
-# Twitter
-User-agent: Twitterbot
-Allow: /
-
-# LinkedIn
-User-agent: LinkedInBot
-Allow: /
-
-# Pinterest
-User-agent: PinterestBot
-Allow: /
-
-# WhatsApp
-User-agent: WhatsApp
-Allow: /
-
-# Telegram
-User-agent: TelegramBot
-Allow: /

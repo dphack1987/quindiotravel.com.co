@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoría SEO Completa | Quindío Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f6f4f0;
+  --surface: #ffffff;
+  --ink: #1a1816;
+  --muted: #5c5752;
+  --accent: #2d6a4f;
+  --accent-light: #d8f3dc;
+  --accent-weak: rgba(45,106,79,0.08);
+  --warning: #b23a2e;
+  --warning-light: #fde8e4;
+  --line: rgba(26,24,22,0.08);
+  --step-0: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+  --step-1: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  --step-2: clamp(1.4rem, 1.15rem + 1.2vw, 2rem);
+  --step-3: clamp(1.9rem, 1.4rem + 2.5vw, 3.2rem);
+  --space: clamp(1.2rem, 1rem + 1vw, 2rem);
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 24px -10px rgba(0,0,0,0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  font-size: var(--step-0);
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* Hero */
+header {
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #40916c 100%);
+  color: #fff;
+  padding: clamp(3rem, 8vw, 6rem) var(--space);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.6;
+}
+header > * { position: relative; z-index: 1; }
+header h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: var(--step-3);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 900px;
+  margin: 0 auto 0.6em;
+}
+header .subtitle {
+  font-size: var(--step-1);
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+header .meta {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Layout */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 var(--space);
+}
+
+main {
+  padding: calc(var(--space) * 2.5) 0;
+}
+
+/* Sections */
+section {
+  margin-bottom: calc(var(--space) * 2.5);
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--accent);
+}
+.section-number {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.section-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: var(--step-2);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: calc(var(--space) * 1.2);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  margin-bottom: 1.2rem;
+}
+.card-warning {
+  border-left: 4px solid var(--warning);
+  background: var(--warning-light);
+}
+.card-accent {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-weak);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92em;
+  margin: 1rem 0;
+}
+th, td {
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+th {
+  background: var(--accent-weak);
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+tr:hover td { background: rgba(45,106,79,0.03); }
+
+/* Lists */
+ul, ol {
+  margin: 0.8rem 0 0.8rem 1.4rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-right: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+.tag-priority { background: var(--warning-light); color: var(--warning); }
+.tag-medium { background: #fff3cd; color: #856404; }
+.tag-done { background: var(--accent-light); color: var(--accent); }
+.tag-keyword { background: #e3f2fd; color: #1565c0; }
+
+/* Score boxes */
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.score-box {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+.score-value {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.score-value.low { color: var(--warning); }
+.score-value.medium { color: #c79100; }
+.score-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Keyword tables */
+.keyword-section h4 {
+  font-size: var(--step-1);
+  font-weight: 600;
+  margin: 1.5rem 0 0.8rem;
+  color: var(--accent);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Code / meta tags */
+.meta-tag {
+  background: #f1f3f4;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: "SF Mono", Monaco, monospace;
+  font-size: 0.85em;
+  color: #c53929;
+}
+
+/* Action plan */
+.action-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  margin-bottom: 0.8rem;
+  border: 1px solid var(--line);
+}
+.action-num {
+  min-width: 32px;
+  height: 32px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.action-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.action-content p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Footer */
+footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.6);
+  padding: 2rem var(--space);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Print */
+@media print {
+  body { background: #fff; }
+  header { background: #1b4332 !important; -webkit-print-color-adjust: exact; }
+  .card, .score-box, .action-item { break-inside: avoid; }
+}
+@page { size: A4; margin: 15mm; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .section-header { flex-direction: column; gap: 0.3rem; }
+  th, td { padding: 0.5rem 0.6rem; font-size: 0.85rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Auditoría SEO Estratégica<br>Quindío Travel</h1>
+  <p class="subtitle">Plan completo de optimización para posicionar quindiotravel.com.co en el Eje Cafetero y toda Colombia</p>
+  <p class="meta">Análisis realizado · Septiembre 2026</p>
+</header>
+
+<main class="container">
+
+<!-- RESUMEN EJECUTIVO -->
+<section>
+  <div class="section-header">
+    <span class="section-number">01</span>
+    <h2 class="section-title">Resumen Ejecutivo</h2>
+  </div>
+  <div class="card">
+    <p><strong>Quindío Travel</strong> es una agencia operadora local con buena reputación (RNT 18152, 4.7/5, 150+ reseñas), pero su presencia orgánica en buscadores tiene <strong>margen significativo de mejora</strong>. El sitio depende casi exclusivamente de tráfico directo y WhatsApp, sin una estrategia de contenido SEO estructurada ni páginas de aterrizaje por destino o intención de búsqueda.</p>
+    <p style="margin-top:1rem">La competencia en el nicho del Eje Cafetero es intensa: existen al menos <strong>15 agencias</strong> posicionadas con contenido optimizado, blogs activos y páginas específicas por destino. Quindío Travel compite en precio y servicio, pero no en visibilidad orgánica.</p>
+  </div>
+
+  <div class="score-grid">
+    <div class="score-box">
+      <div class="score-value low">42</div>
+      <div class="score-label">SEO Técnico</div>
+    </div>
+    <div class="score-box">
+      <div class="score-value low">35</div>
+      <div class="score-label">Contenido On-Page</div>
+    </div>
+    <div class="score-box">
+      <div class="score-value medium">58</div>
+      <div class="score-label">Autoridad Local</div>
+    </div>
+    <div class="score-box">
+      <div class="score-value low">28</div>
+      <div class="score-label">Link Building</div>
+    </div>
+    <div class="score-box">
+      <div class="score-value medium">55</div>
+      <div class="score-label">Experiencia Usuario</div>
+    </div>
+    <div class="score-box">
+      <div class="score-value low">38</div>
+      <div class="score-label">Estrategia de Keywords</div>
+    </div>
+  </div>
+</section>
+
+<!-- ANÁLISIS TÉCNICO -->
+<section>
+  <div class="section-header">
+    <span class="section-number">02</span>
+    <h2 class="section-title">Auditoría Técnica SEO</h2>
+  </div>
+
+  <div class="card card-warning">
+    <h4 style="color:var(--warning);margin-bottom:0.6rem;">Problemas críticos detectados</h4>
+    <ul>
+      <li><strong>Estructura de URLs:</strong> No se observan URLs amigables por destino (ej. <code>/valle-del-cocora/</code>, <code>/salento/</code>). Todo parece concentrado en la home.</li>
+      <li><strong>Etiquetas H1 duplicadas o ausentes:</strong> El contenido recuperado muestra múltiples H1 sin jerarquía clara por página.</li>
+      <li><strong>Meta descriptions genéricas:</strong> El title es largo y repetitivo; falta optimización por página.</li>
+      <li><strong>Sin blog ni seccin de guías:</strong> No hay contenido de valor que capture búsquedas informativas ("qué hacer en Salento", "mejores fincas Quindío").</li>
+      <li><strong>Schema markup ausente:</strong> No se detecta datos estructurados para TravelAgency, Offer, Review, FAQPage ni LocalBusiness.</li>
+      <li><strong>Sitemap XML:</strong> Probablemente no existe o no está optimizado para las páginas de destino.</li>
+      <li><strong>Velocidad de carga:</strong> Sitios con WhatsApp widgets, imágenes no optimizadas y scripts externos suelen tener LCP bajo.</li>
+      <li><strong>Contenido duplicado:</strong> Múltiples secciones repiten el mismo texto con variaciones mínimas.</li>
+    </ul>
+  </div>
+
+  <h4 style="margin-top:1.5rem;margin-bottom:0.6rem;">Recomendaciones técnicas prioritarias</h4>
+  <table>
+    <tr>
+      <th>Elemento</th>
+      <th>Estado actual</th>
+      <th>Acción requerida</th>
+      <th>Prioridad</th>
+    </tr>
+    <tr>
+      <td>URLs amigables</td>
+      <td>No detectadas</td>
+      <td>Crear slugs por destino y plan</td>
+      <td><span class="tag tag-priority">Alta</span></td>
+    </tr>
+    <tr>
+      <td>Title tags</td>
+      <td>Genéricos y largos</td>
+      <td>Optimizar por página (50-60 chars)</td>
+      <td><span class="tag tag-priority">Alta</span></td>
+    </tr>
+    <tr>
+      <td>Meta description</td>
+      <td>Posiblemente duplicada</td>
+      <td>Únicas por página (150-160 chars)</td>
+      <td><span class="tag tag-priority">Alta</span></td>
+    </tr>
+    <tr>
+      <td>Datos estructurados</td>
+      <td>Ausentes</td>
+      <td>Implementar Schema.org</td>
+      <td><span class="tag tag-priority">Alta</span></td>
+    </tr>
+    <tr>
+      <td>Sitemap XML</td>
+      <td>No confirmado</td>
+      <td>Crear y enviar a Search Console</td>
+      <td><span class="tag tag-priority">Alta</span></td>
+    </tr>
+    <tr>
+      <td>Canonical tags</td>
+      <td>No confirmados</td>
+      <td>Implementar en todas las páginas</td>
+      <td><span class="tag tag-medium">Media</span></td>
+    </tr>
+    <tr>
+      <td>Open Graph / Twitter Cards</td>
+      <td>No confirmados</td>
+      <td>Agregar meta tags sociales</td>
+      <td><span class="tag tag-medium">Media</span></td>
+    </tr>
+    <tr>
+      <td>Imágenes (alt text)</td>
+      <td>Probablemente ausente</td>
+      <td>Descriptivo con keywords</td>
+      <td><span class="tag tag-priority">Alta</span></td>
+    </tr>
+    <tr>
+      <td>Core Web Vitals</td>
+      <td>No medido</td>
+      <td>Auditar LCP, INP, CLS</td>
+      <td><span class="tag tag-medium">Media</span></td>
+    </tr>
+  </table>
+</section>
+
+<!-- KEYWORDS -->
+<section>
+  <div class="section-header">
+    <span class="section-number">03</span>
+    <h2 class="section-title">Estrategia de Keywords</h2>
+  </div>
+
+  <div class="card card-accent">
+    <p><strong>Principio:</strong> No se trata de rankear por "Eje Cafetero" solamente. Hay que capturar toda la <em>long tail</em> de búsquedas con intención comercial e informativa. El usuario que busca "Valle del Cocora precio entrada 2026" o "fincas hoteles Salento con piscina" está mucho más cerca de comprar.</p>
+  </div>
+
+  <div class="keyword-section">
+    <h4>Keywords principales (alto volumen, alta competencia)</h4>
+    <table>
+      <tr><th>Keyword</th><th>Volumen estimado</th><th>Dificultad</th><th>Intención</th></tr>
+      <tr><td>paquetes turísticos eje cafetero</td><td>Alto</td><td>Alta</td><td>Transaccional</td></tr>
+      <tr><td>planes turísticos quindío</td><td>Alto</td><td>Alta</td><td>Transaccional</td></tr>
+      <tr><td>viajes eje cafetero todo incluido</td><td>Alto</td><td>Alta</td><td>Transaccional</td></tr>
+      <tr><td>quindío travel</td><td>Medio</td><td>Baja</td><td>Marca</td></tr>
+      <tr><td>tour valle del cocora</td><td>Alto</td><td>Media</td><td>Transaccional</td></tr>
+      <tr><td>parque del café paquetes</td><td>Medio</td><td>Media</td><td>Transaccional</td></tr>
+    </table>
+
+    <h4>Keywords long-tail (baja competencia, alta conversión)</h4>
+    <table>
+      <tr><th>Keyword</th><th>Volumen</th><th>Dificultad</th><th>Página sugerida</th></tr>
+      <tr><td>paquetes eje cafetero 4 días 3 noches</td><td>Medio</td><td>Media</td><td>/planes/4-dias-3-noches-eje-cafetero/</td></tr>
+      <tr><td>fincas hoteles quindío con piscina</td><td>Medio</td><td>Baja</td><td>/alojamiento/fincas-hoteles-quindio/</td></tr>
+      <tr><td>qué hacer en salento en 2 días</td><td>Medio</td><td>Baja</td><td>/guia/salento-que-hacer/</td></tr>
+      <tr><td>valle del cocora entrada precio 2026</td><td>Medio</td><td>Baja</td><td>/destinos/valle-del-cocora/</td></tr>
+      <tr><td>filandia mirador del tiempo detenido</td><td>Bajo</td><td>Baja</td><td>/destinos/filandia/</td></tr>
+      <tr><td>panaca quindío precio pasaporte 2026</td><td>Medio</td><td>Baja</td><td>/parques/panaca/</td></tr>
+      <tr><td>recuca tour café quindío</td><td>Bajo</td><td>Baja</td><td>/experiencias/recuca-coffee-tour/</td></tr>
+      <tr><td>viaje eje cafetero desde bogotá precio</td><td>Medio</td><td>Media</td><td>/planes/desde-bogota/</td></tr>
+      <tr><td>viaje eje cafetero desde medellín</td><td>Medio</td><td>Media</td><td>/planes/desde-medellin/</td></tr>
+      <tr><td>terminales santa rosa de cabal eje cafetero</td><td>Bajo</td><td>Baja</td><td>/destinos/termales-santa-rosa/</td></tr>
+      <tr><td>mejor época para visitar eje cafetero</td><td>Medio</td><td>Baja</td><td>/blog/mejor-epoca-eje-cafetero/</td></tr>
+      <tr><td>cuánto cuesta un viaje al eje cafetero</td><td>Medio</td><td>Baja</td><td>/blog/cuanto-cuesta-viaje-eje-cafetero/</td></tr>
+    </table>
+
+    <h4>Keywords por temporada y eventos</h4>
+    <table>
+      <tr><th>Keyword</th><th>Temporada</th><th>Página sugerida</th></tr>
+      <tr><td>plan eje cafetero diciembre 2026</td><td>Navidad / Fin de año</td><td>/temporada/diciembre-2026/</td></tr>
+      <tr><td>viaje eje cafetero semana santa 2027</td><td>Semana Santa</td><td>/temporada/semana-santa-2027/</td></tr>
+      <tr><td>eje cafetero plan fin de semana</td><td>Todo el año</td><td>/planes/fin-de-semana/</td></tr>
+      <tr><td>plan romántico eje cafetero parejas</td><td>San Valentín</td><td>/planes/romantico-parejas/</td></tr>
+      <tr><td>viaje eje cafetero familia con niños</td><td>Todo el año</td><td>/planes/familiar-ninos/</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ARQUITECTURA DE CONTENIDO -->
+<section>
+  <div class="section-header">
+    <span class="section-number">04</span>
+    <h2 class="section-title">Arquitectura de Información y URLs</h2>
+  </div>
+
+  <div class="card">
+    <p>El sitio actual parece ser de <strong>una sola página</strong> o pocas páginas. Para competir, se necesita una <strong>estructura de sitio amplia</strong> con páginas específicas por destino, plan y guía. Aquí la arquitectura recomendada:</p>
+  </div>
+
+  <table>
+    <tr><th>Tipo de página</th><th>URL ejemplo</th><th>Propósito SEO</th></tr>
+    <tr><td>Home</td><td>/</td><td>Marca + keywords generales</td></tr>
+    <tr><td>Página de planes</td><td>/planes-turisticos-eje-cafetero/</td><td>Hub de productos</td></tr>
+    <tr><td>Plan específico</td><td>/planes/5-dias-4-noches-eje-cafetero/</td><td>Captura búsquedas por duración</td></tr>
+    <tr><td>Destino</td><td>/destinos/valle-del-cocora/</td><td>Contenido informativo + CTA</td></tr>
+    <tr><td>Destino</td><td>/destinos/salento-quindio/</td><td>Guía completa del pueblo</td></tr>
+    <tr><td>Destino</td><td>/destinos/filandia-quindio/</td><td>Miradores, calle del tiempo detenido</td></tr>
+    <tr><td>Parque</td><td>/parques/parque-nacional-del-cafe/</td><td>Información + venta de pasaportes</td></tr>
+    <tr><td>Parque</td><td>/parques/panaca/</td><td>Interacción con animales</td></tr>
+    <tr><td>Parque</td><td>/parques/recuca/</td><td>Experiencia cafetera</td></tr>
+    <tr><td>Alojamiento</td><td>/alojamiento/fincas-hoteles-quindio/</td><td>Comparativa de fincas</td></tr>
+    <tr><td>Origen</td><td>/planes/desde-bogota-eje-cafetero/</td><td>Viajeros de Bogotá</td></tr>
+    <tr><td>Origen</td><td>/planes/desde-medellin-eje-cafetero/</td><td>Viajeros de Medellín</td></tr>
+    <tr><td>Origen</td><td>/planes/desde-cali-eje-cafetero/</td><td>Viajeros de Cali</td></tr>
+    <tr><td>Corporativo</td><td>/empresas/incentivos-eje-cafetero/</td><td>B2B, team building</td></tr>
+    <tr><td>Blog / Guía</td><td>/blog/mejor-epoca-viajar-eje-cafetero/</td><td>Tráfico informativo</td></tr>
+    <tr><td>Blog / Guía</td><td>/blog/que-hacer-en-salento-2-dias/</td><td>Captura early-funnel</td></tr>
+    <tr><td>Blog / Guía</td><td>/blog/ruta-del-cafe-quindio/</td><td>Contenido experiencial</td></tr>
+    <tr><td>FAQ</td><td>/preguntas-frecuentes-eje-cafetero/</td><td>Rich snippets FAQ</td></tr>
+    <tr><td>Testimonios</td><td>/opiniones-viajeros-eje-cafetero/</td><td>Prueba social + SEO</td></tr>
+  </table>
+</section>
+
+<!-- ON-PAGE SEO -->
+<section>
+  <div class="section-header">
+    <span class="section-number">05</span>
+    <h2 class="section-title">On-Page SEO por Página</h2>
+  </div>
+
+  <div class="card card-accent">
+    <h4 style="margin-bottom:0.6rem;">Title tag y Meta Description óptimos</h4>
+    <p>Cada página debe tener un title único de 50-60 caracteres y una meta description de 150-160 caracteres que incluya la keyword principal y un call-to-action.</p>
+  </div>
+
+  <table>
+    <tr><th>Página</th><th>Title sugerido</th><th>Meta description sugerida</th></tr>
+    <tr>
+      <td>Home</td>
+      <td class="meta-tag">Paquetes Turísticos Eje Cafetero 2026 | Quindío Travel</td>
+      <td>Planes todo incluido al Eje Cafetero desde $425.000 COP. Valle de Cocora, Salento, Filandia, Parque del Café. Operador local RNT 18152. Cotiza por WhatsApp.</td>
+    </tr>
+    <tr>
+      <td>Plan 5D/4N</td>
+      <td class="meta-tag">Plan 5 Días Eje Cafetero Todo Incluido | Quindío Travel</td>
+      <td>5 días / 4 noches en el Eje Cafetero: Cocora, Salento, Filandia, Parque del Café, PANACA y RECUCA. Desde $1.200.000 COP. Reserva tu cupo ahora.</td>
+    </tr>
+    <tr>
+      <td>Valle Cocora</td>
+      <td class="meta-tag">Valle del Cocora Quindío | Tour, Precio y Cómo Llegar 2026</td>
+      <td>Descubre el Valle del Cocora con guías locales. Palma de cera, caminatas y miradores. Incluido en nuestros paquetes al Eje Cafetero. Cotiza aquí.</td>
+    </tr>
+    <tr>
+      <td>Salento</td>
+      <td class="meta-tag">Qué Hacer en Salento Quindío | Guía Completa 2026</td>
+      <td>Salento: calle real, miradores, artesanías y gastronomía. Todo lo que necesitas saber + paquetes con hospedaje incluido. Quindío Travel RNT 18152.</td>
+    </tr>
+    <tr>
+      <td>Filandia</td>
+      <td class="meta-tag">Filandia Quindío | Mirador, Museo y Calle del Tiempo Detenido</td>
+      <td>Visita Filandia en el Eje Cafetero. Mirador colina iluminada, museo del canasto y arquitectura colonial. Incluido en planes todo incluido.</td>
+    </tr>
+    <tr>
+      <td>Desde Bogotá</td>
+      <td class="meta-tag">Viaje Eje Cafetero desde Bogotá | Paquetes Todo Incluido 2026</td>
+      <td>Salidas desde Bogotá al Eje Cafetero. Transporte, hotel, parques y guía incluidos. 4 y 5 días disponibles. Cotiza tu plan con Quindío Travel.</td>
+    </tr>
+    <tr>
+      <td>Desde Medellín</td>
+      <td class="meta-tag">Tour Eje Cafetero desde Medellín | Planes 4 y 5 Días</td>
+      <td>Viaja desde Medellín al Eje Cafetero. Paquetes con transporte terrestre, alojamiento campestre y entradas a parques. Reserva fácil por WhatsApp.</td>
+    </tr>
+    <tr>
+      <td>Fincas hoteles</td>
+      <td class="meta-tag">Fincas Hoteles Quindío | Alojamiento Campestre Eje Cafetero</td>
+      <td>Las mejores fincas hoteles del Quindío verificadas por nuestro equipo. Piscina, zonas verdes y restaurante. Incluidas en paquetes todo incluido.</td>
+    </tr>
+  </table>
+
+  <div class="card" style="margin-top:1.5rem;">
+    <h4 style="margin-bottom:0.6rem;">Estructura de encabezados (H1-H6) recomendada</h4>
+    <p>Cada página de destino debe seguir esta jerarquía:</p>
+    <ul>
+      <li><strong>H1:</strong> Un solo H1 por página, con la keyword principal. Ej: "Valle del Cocora: Guía Completa para Visitar el Quindío"</li>
+      <li><strong>H2:</strong> Secciones principales. Ej: "Qué hacer en el Valle del Cocora", "Cómo llegar", "Precios y entradas 2026", "Paquetes que incluyen Cocora"</li>
+      <li><strong>H3:</strong> Subsecciones. Ej: "Caminata a la Palma de Cera", "Mirador el Bosque", "Recomendaciones para familias"</li>
+      <li><strong>H4-H6:</strong> Detalles, listas, preguntas específicas dentro de FAQ.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTENIDO Y BLOG -->
+<section>
+  <div class="section-header">
+    <span class="section-number">06</span>
+    <h2 class="section-title">Estrategia de Contenidos (Blog / Guía)</h2>
+  </div>
+
+  <div class="card card-accent">
+    <p><strong>La regla de oro:</strong> El 70% del tráfico orgánico de turismo viene de búsquedas informativas. Un usuario que lee "qué hacer en Salento" hoy, puede comprar un paquete mañana. El blog no es opcional: es el motor de crecimiento SEO.</p>
+  </div>
+
+  <h4 style="margin-top:1.5rem;margin-bottom:0.8rem;">Calendario editorial sugerido (12 artículos iniciales)</h4>
+  <table>
+    <tr><th>#</th><th>Título del artículo</th><th>Keyword principal</th><th>Palabras</th><th>Prioridad</th></tr>
+    <tr><td>1</td><td>Qué hacer en Salento: guía completa para 1, 2 o 3 días</td><td>qué hacer en salento</td><td>2.500</td><td><span class="tag tag-priority">Alta</span></td></tr>
+    <tr><td>2</td><td>Valle del Cocora: todo lo que debes saber antes de ir</td><td>valle del cocora guia</td><td>2.000</td><td><span class="tag tag-priority">Alta</span></td></tr>
+    <tr><td>3</td><td>Filandia Quindío: mirador, museo y calle del tiempo detenido</td><td>filandia quindio que hacer</td><td>1.800</td><td><span class="tag tag-priority">Alta</span></td></tr>
+    <tr><td>4</td><td>Cuánto cuesta un viaje al Eje Cafetero (presupuesto 2026)</td><td>cuanto cuesta viaje eje cafetero</td><td>2.200</td><td><span class="tag tag-priority">Alta</span></td></tr>
+    <tr><td>5</td><td>Mejor época para visitar el Eje Cafetero: clima y temporadas</td><td>mejor epoca eje cafetero</td><td>1.500</td><td><span class="tag tag-medium">Media</span></td></tr>
+    <tr><td>6</td><td>Parque del Café vs PANACA: cuál elegir para tu viaje</td><td>parque del cafe o panaca</td><td>1.500</td><td><span class="tag tag-medium">Media</span></td></tr>
+    <tr><td>7</td><td>Las mejores fincas hoteles del Quindío con piscina</td><td>fincas hoteles quindio piscina</td><td>1.800</td><td><span class="tag tag-medium">Media</span></td></tr>
+    <tr><td>8</td><td>Ruta del Café en el Quindío: RECUCA y coffee tours</td><td>recuca tour cafe quindio</td><td>1.600</td><td><span class="tag tag-medium">Media</span></td></tr>
+    <tr><td>9</td><td>Viaje al Eje Cafetero con niños: guía para familias</td><td>eje cafetero con niños</td><td>2.000</td><td><span class="tag tag-medium">Media</span></td></tr>
+    <tr><td>10</td><td>Termales de Santa Rosa de Cabal: cómo llegar desde el Quindío</td><td>termales santa rosa cabal</td><td>1.500</td><td><span class="tag tag-medium">Media</span></td></tr>
+    <tr><td>11</td><td>Salento vs Filandia: diferencias y cuál visitar primero</td><td>salento o filandia</td><td>1.400</td><td><span class="tag tag-medium">Media</span></td></tr>
+    <tr><td>12</td><td>Consejos para viajar al Eje Cafetero en diciembre y fin de año</td><td>eje cafetero diciembre</td><td>1.600</td><td><span class="tag tag-medium">Media</span></td></tr>
+  </table>
+
+  <div class="card" style="margin-top:1.2rem;">
+    <h4 style="margin-bottom:0.6rem;">Formato recomendado para cada artículo</h4>
+    <ul>
+      <li><strong>Introducción atractiva (150-200 palabras):</strong> Hook emocional + promesa de valor + keyword principal en los primeros 100 caracteres.</li>
+      <li><strong>Tabla de contenidos con anclas:</strong> Mejora la navegación y permite rich snippets de "Jump to".</li>
+      <li><strong>Imágenes originales con alt text:</strong> Mínimo 3 imágenes por artículo. Nunca stock genérico. Alt: "valle del cocora palma de cera quindio".</li>
+      <li><strong>CTA contextual:</strong> Al final de cada sección, un botón o enlace a la página de planes relacionada. Ej: "Reserva un plan que incluye Valle del Cocora".</li>
+      <li><strong>FAQ al final:</strong> 3-5 preguntas con respuestas breves para capturar rich snippets.</li>
+      <li><strong>Enlaces internos:</strong> Mínimo 3 enlaces a otras páginas del sitio (destinos, planes, otros artículos).</li>
+      <li><strong>Enlaces externos de autoridad:</strong> 1-2 enlaces a fuentes oficiales (Parque del Café, MINCIT, UNESCO Paisaje Cultural Cafetero).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SEO LOCAL -->
+<section>
+  <div class="section-header">
+    <span class="section-number">07</span>
+    <h2 class="section-title">SEO Local y Google Business Profile</h2>
+  </div>
+
+  <div class="card card-warning">
+    <h4 style="color:var(--warning);margin-bottom:0.6rem;">Problema detectado</h4>
+    <p>El sitio menciona Armenia y el Quindío, pero no se observa una estrategia de SEO local estructurada. Para turismo local, <strong>Google Business Profile</strong> es tan importante como el sitio web.</p>
+  </div>
+
+  <h4 style="margin-top:1.5rem;margin-bottom:0.8rem;">Acciones prioritarias de SEO local</h4>
+  <table>
+    <tr><th>Acción</th><th>Descripción</th><th>Prioridad</th></tr>
+    <tr><td>Google Business Profile</td><td>Crear/optimizar ficha con categoría "Agencia de viajes", dirección Armenia, fotos, horarios, servicios, Q&A</td><td><span class="tag tag-priority">Alta</span></td></tr>
+    <tr><td>Publicaciones GBP</td><td>Publicar semanalmente ofertas, nuevos planes y artículos del blog en la ficha de Google</td><td><span class="tag tag-priority">Alta</span></td></tr>
+    <tr><td>Reseñas Google</td><td>Solicitar reseñas a cada viajero post-viaje. Meta: 200+ reseñas con 4.8 estrellas en 6 meses</td><td><span class="tag tag-priority">Alta</span></td></tr>
+    <tr><td>NAP consistente</td><td>Nombre, dirección y teléfono idénticos en web, GBP, redes sociales y directorios</td><td><span class="tag tag-priority">Alta</span></td></tr>
+    <tr><td>Directorios locales</td><td>Registrarse en: TripAdvisor, Colombia Travel, ProColombia, MinCIT, cámaras de comercio</td><td><span class="tag tag-medium">Media</span></td></tr>
+    <tr><td>Página de contacto</td><td>Crear /contacto/ con mapa embebido, dirección completa, teléfono, WhatsApp y formulario</td><td><span class="tag tag-priority">Alta</span></td></tr>
+    <tr><td>Schema LocalBusiness</td><td>Implementar JSON-LD con @type TravelAgency, geo coordinates, address, openingHours</td><td><span class="tag tag-priority">Alta</span></td></tr>
+  </table>
+
+  <div class="card" style="margin-top:1.2rem;">
+    <h4 style="margin-bottom:0.6rem;">Schema.org JSON-LD recomendado (insertar en &lt;head&gt;)</h4>
+    <pre style="background:#f1f3f4;padding:1rem;border-radius:6px;overflow-x:auto;font-size:0.82rem;">{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Quindío Travel",
+  "description": "Operador turístico local en el Eje Cafetero con más de 15 años de experiencia.",
+  "url": "https://quindiotravel.com.co",
+  "logo": "https://quindiotravel.com.co/logo.png",
+  "telephone": "+57-XXX-XXXXXXX",
+  "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8fe6e1e9e0cffefae6e1ebe6e0fbfdeef9eae3a1ece0e2a1ece0">[email&#160;protected]</a>",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Dirección completa]",
+    "addressLocality": "Armenia",
+    "addressRegion": "Quindío",
+    "addressCountry": "CO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "4.5339",
+    "longitude": "-75.6816"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "150"
+  },
+  "priceRange": "$$",
+  "openingHours": "Mo-Sa 08:00-18:00"
+}</pre>
+  </div>
+</section>
+
+<!-- LINK BUILDING -->
+<section>
+  <div class="section-header">
+    <span class="section-number">08</span>
+    <h2 class="section-title">Link Building y Autoridad de Dominio</h2>
+  </div>
+
+  <div class="card">
+    <p>La competencia (TurismoQuindio.com, Aviatur, RutasColombianas) tiene años de backlinks acumulados. Quindío Travel necesita una <strong>estrategia proactiva de adquisición de enlaces</strong> de calidad, no cantidad.</p>
+  </div>
+
+  <h4 style="margin-top:1.5rem;margin-bottom:0.8rem;">Estrategias de link building para turismo</h4>
+  <table>
+    <tr><th>Estrategia</th><th>Descripción</th><th>Dificultad</th><th>Impacto</th></tr>
+    <tr><td>Guest posts en blogs de viaje</td><td>Escribir artículos para: Viajero por Colombia, Rutas por Colombia, blogs de turismo regional</td><td>Media</td><td>Alto</td></tr>
+    <tr><td>Prensa local y regional</td><td>Notas en: El Espectador (sección viajes), periódicos de Armenia, Quindío, Pereira</td><td>Media</td><td>Alto</td></tr>
+    <tr><td>Directorios de turismo</td><td>Registro en: TripAdvisor, Booking.com Experiences, Viator, GetYourGuide, Colombia Travel</td><td>Baja</td><td>Medio</td></tr>
+    <tr><td>Alianzas con influencers</td><td>Colaboraciones con travel influencers colombianos que generen backlinks y tráfico</td><td>Media</td><td>Alto</td></tr>
+    <tr><td>Contenido enlazable</td><td>Crear guías descargables, mapas del Eje Cafetero, infografías que otros sitios quieran citar</td><td>Media</td><td>Alto</td></tr>
+    <tr><td>Asociaciones gremiales</td><td>CAFETUR, ANATO, Cámara de Comercio de Armenia: enlaces desde sitios .gov.co y .org</td><td>Baja</td><td>Muy alto</td></tr>
+    <tr><td>Universidades y colegios</td><td>Tours educativos: pedir mención en sitios de instituciones educativas aliadas</td><td>Baja</td><td>Medio</td></tr>
+    <tr><td>Broken link building</td><td>Encontrar enlaces rotos en blogs de turismo y ofrecer contenido de Quindío Travel como reemplazo</td><td>Alta</td><td>Medio</td></tr>
+  </table>
+</section>
+
+<!-- VELOCIDAD Y CWV -->
+<section>
+  <div class="section-header">
+    <span class="section-number">09</span>
+    <h2 class="section-title">Velocidad y Core Web Vitals</h2>
+  </div>
+
+  <div class="card card-warning">
+    <p>Los sitios de turismo suelen ser lentos por <strong>imágenes pesadas, widgets de WhatsApp, scripts de chat y trackers</strong>. Google penaliza sitios lentos desde 2021 con Core Web Vitals como factor de ranking.</p>
+  </div>
+
+  <table>
+    <tr><th>Métrica</th><th>Objetivo</th><th>Acciones</th></tr>
+    <tr><td>LCP (Largest Contentful Paint)</td><td>&lt; 2.5 segundos</td><td>Optimizar imágenes (WebP, lazy loading), usar CDN, precargar fuentes críticas</td></tr>
+    <tr><td>INP (Interaction to Next Paint)</td><td>&lt; 200 ms</td><td>Reducir JavaScript no crítico, diferir scripts de WhatsApp y analytics</td></tr>
+    <tr><td>CLS (Cumulative Layout Shift)</td><td>&lt; 0.1</td><td>Dimensiones explícitas en imágenes, evitar inserción dinámica de contenido</td></tr>
+    <tr><td>TTFB (Time to First Byte)</td><td>&lt; 600 ms</td><td>Hosting optimizado para Colombia, caching, compresión Brotli/Gzip</td></tr>
+    <tr><td>FCP (First Contentful Paint)</td><td>&lt; 1.8 segundos</td><td>Inline CSS crítico, eliminar render-blocking resources</td></tr>
+  </table>
+
+  <div class="card" style="margin-top:1.2rem;">
+    <h4 style="margin-bottom:0.6rem;">Checklist técnico de velocidad</h4>
+    <ul>
+      <li>Convertir todas las imágenes a formato <strong>WebP</strong> con fallback JPG</li>
+      <li>Implementar <strong>lazy loading</strong> en imágenes below-the-fold</li>
+      <li>Usar un <strong>CDN</strong> (Cloudflare gratuito es suficiente para empezar)</li>
+      <li>Minificar CSS y JavaScript</li>
+      <li>Activar compresión Brotli o Gzip en el servidor</li>
+      <li>Configurar <strong>caching de navegador</strong> para assets estáticos (1 año)</li>
+      <li>Diferir carga del widget de WhatsApp hasta después de la interacción del usuario</li>
+      <li>Preconnect a dominios externos: fonts.googleapis.com, wa.me</li>
+      <li>Auditar con PageSpeed Insights y corregir errores rojos primero</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EXPERIENCIA USUARIO Y CONVERSION -->
+<section>
+  <div class="section-header">
+    <span class="section-number">10</span>
+    <h2 class="section-title">UX, Conversión y SEO</h2>
+  </div>
+
+  <div class="card">
+    <p>SEO sin conversión es tráfico vacío. El modelo actual de Quindío Travel (WhatsApp directo) es bueno para cerrar, pero <strong>pierde tráfico de usuarios que prefieren autogestionar</strong>. La solución: mantener WhatsApp como canal principal, pero agregar opciones de auto-cotización.</p>
+  </div>
+
+  <h4 style="margin-top:1.5rem;margin-bottom:0.8rem;">Recomendaciones de UX para SEO y conversión</h4>
+  <table>
+    <tr><th>Elemento</th><th>Problema actual</th><th>Solución</th></tr>
+    <tr><td>Formulario de cotización</td><td>No existe</td><td>Formulario simple con fecha, número de personas y destinos deseados</td></tr>
+    <tr><td>Botón WhatsApp</td><td>Probablemente fijo</td><td>Mantener sticky pero con delay de 5 segundos y opción de cerrar</td></tr>
+    <tr><td>Precios</td><td>Desde $425.000 pero poco claros</td><td>Tabla comparativa de planes con precios por categoría visible</td></tr>
+    <tr><td>Itinerarios</td><td>"Ver itinerario" sin detalle</td><td>Páginas de itinerario descargables en PDF por cada plan</td></tr>
+    <tr><td>Testimonios</td><td>3 reseñas genéricas</td><td>Video-testimonios, fotos de viajeros, reseñas con fecha y ciudad</td></tr>
+    <tr><td>Galería</td><td>No detectada</td><td>Galería por destino con fotos reales de viajeros (con permiso)</td></tr>
+    <tr><td>Chat en vivo</td><td>No detectado</td><td>Chatbot para responder FAQs 24/7 y derivar a WhatsApp</td></tr>
+    <tr><td>Pago online</td><td>No detectado</td><td>Botón de pago parcial (separar/reservar) con Wompi, PayU o MercadoPago</td></tr>
+  </table>
+</section>
+
+<!-- REDES SOCIALES -->
+<section>
+  <div class="section-header">
+    <span class="section-number">11</span>
+    <h2 class="section-title">SEO Social y Señales Indirectas</h2>
+  </div>
+
+  <div class="card">
+    <p>Las redes sociales no son un factor de ranking directo, pero generan <strong>tráfico de referencia, brand searches y backlinks naturales</strong>. Una estrategia de contenido social fortalece el SEO indirectamente.</p>
+  </div>
+
+  <table>
+    <tr><th>Red</th><th>Estrategia</th><th>Contenido sugerido</th></tr>
+    <tr><td>Instagram</td><td>Reels diarios de destinos, historias de viajeros, guías en carruseles</td><td>"3 días en el Eje Cafetero", "Salento vs Filandia", "Qué empacar"</td></tr>
+    <tr><td>TikTok</td><td>Videos cortos de experiencias: llegada a Cocora, coffee tour, reacciones</td><td>Tendencias de audio + contenido local</td></tr>
+    <tr><td>Facebook</td><td>Grupos de viajeros Colombia, publicaciones en comunidades de turismo</td><td>Ofertas semanales, testimonios en video</td></tr>
+    <tr><td>YouTube</td><td>Vlogs de 3-5 minutos por destino, testimoniales, guías prácticas</td><td>"Valle del Cocora en 2 minutos", "Tour completo Eje Cafetero"</td></tr>
+    <tr><td>Pinterest</td><td>Infografías de rutas, tableros por destino, guías visuales</td><td>"Ruta 4 días Eje Cafetero", "Mapa Salento-Filandia-Cocora"</td></tr>
+  </table>
+</section>
+
+<!-- ANÁLISIS COMPETENCIA -->
+<section>
+  <div class="section-header">
+    <span class="section-number">12</span>
+    <h2 class="section-title">Análisis de Competidores</h2>
+  </div>
+
+  <table>
+    <tr><th>Competidor</th><th>Fortalezas</th><th>Debilidades</th><th>Qué aprender</th></tr>
+    <tr><td>TurismoQuindio.com</td><td>15+ años online, blog activo, muchas páginas de destino</td><td>Diseño anticuado, UX confusa</td><td>Estructura de contenido por municipio</td></tr>
+    <tr><td>Aviatur.com</td><td>Autoridad de marca masiva, backlinks de prensa, SEO técnico sólido</td><td>No es especialista en Eje Cafetero</td><td>Optimización de titles y schema</td></tr>
+    <tr><td>CocoraTours.com.co</td><td>Nicho específico Cocora, buen posicionamiento local</td><td>Alcance geográfico limitado</td><td>Páginas específicas por tour</td></tr>
+    <tr><td>RutasColombianas.com</td><td>Contenido por ciudad de origen (Bogotá, Medellín)</td><td>Contenido genérico, poca autoridad local</td><td>Estrategia "desde X ciudad"</td></tr>
+    <tr><td>Mundoturs.com</td><td>Buenas páginas de destino, precios claros</td><td>Poco contenido informativo</td><td>Claridad en precios y duración</td></tr>
+    <tr><td>DestinoEjeCafetero.com</td><td>Diseño limpio, segmentación por ciudad de origen</td><td>Poco contenido SEO profundo</td><td>Diseño minimalista y CTA claros</td></tr>
+  </table>
+
+  <div class="card" style="margin-top:1.2rem;">
+    <h4 style="margin-bottom:0.6rem;">Diferenciadores competitivos de Quindío Travel</h4>
+    <ul>
+      <li><strong>Operador local real:</strong> No intermediario. Eso es una ventaja que la mayoría de competidores no puede replicar.</li>
+      <li><strong>Gerente disponible directamente:</strong> "Atención directa con el gerente" es un diferenciador de confianza.</li>
+      <li><strong>Hoteles verificados personalmente:</strong> Contenido único que nadie más tiene.</li>
+      <li><strong>15 años de experiencia:</strong> Historia que genera confianza y autoridad.</li>
+      <li><strong>RNT real y verificable:</strong> Ventaja frente a operadores informales.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PLAN DE ACCIÓN -->
+<section>
+  <div class="section-header">
+    <span class="section-number">13</span>
+    <h2 class="section-title">Plan de Acción Priorizado (90 Días)</h2>
+  </div>
+
+  <h4 style="margin-bottom:0.8rem;">Fase 1: Fundamentos (Días 1-30)</h4>
+  <div class="action-item">
+    <span class="action-num">1</span>
+    <div class="action-content">
+      <h4>Crear Google Business Profile y optimizar ficha</h4>
+      <p>Categoría TravelAgency, fotos de calidad, descripción con keywords, horarios, servicios, Q&A iniciales.</p>
+    </div>
+  </div>
+  <div class="action-item">
+    <span class="action-num">2</span>
+    <div class="action-content">
+      <h4>Auditoría técnica completa con Screaming Frog o Sitebulb</h4>
+      <p>Detectar todos los errores técnicos: URLs rotas, redirects, meta duplicadas, imágenes sin alt, velocidad.</p>
+    </div>
+  </div>
+  <div class="action-item">
+    <span class="action-num">3</span>
+    <div class="action-content">
+      <h4>Implementar Schema.org (LocalBusiness, TravelAgency, Review, FAQPage)</h4>
+      <p>En home, página de contacto, planes y testimoniales.</p>
+    </div>
+  </div>
+  <div class="action-item">
+    <span class="action-num">4</span>
+    <div class="action-content">
+      <h4>Crear Sitemap XML y enviar a Google Search Console</h4>
+      <p>Incluir todas las URLs nuevas de destinos y planes.</p>
+    </div>
+  </div>
+  <div class="action-item">
+    <span class="action-num">5</span>
+    <div class="action-content">
+      <h4>Optimizar title tags y meta descriptions de todas las páginas existentes</h4>
+      <p>Usar las recomendaciones de la tabla de On-Page SEO.</p>
+    </div>
+  </div>
+
+  <h4 style="margin:1.5rem 0 0.8rem;">Fase 2: Contenido (Días 31-60)</h4>
+  <div class="action-item">
+    <span class="action-num">6</span>
+    <div class="action-content">
+      <h4>Crear las 6 páginas de destino principales</h4>
+      <p>Valle del Cocora, Salento, Filandia, Parque del Café, PANACA, RECUCA. Mínimo 1.500 palabras cada una.</p>
+    </div>
+  </div>
+  <div class="action-item">
+    <span class="action-num">7</span>
+    <div class="action-content">
+      <h4>Publicar los primeros 4 artículos del blog</h4>
+      <p>Priorizar: "Qué hacer en Salento", "Valle del Cocora guía", "Filandia qué hacer", "Cuánto cuesta viaje Eje Cafetero".</p>
+    </div>
+  </div>
+  <div class="action-item">
+    <span class="action-num">8</span>
+    <div class="action-content">
+      <h4>Crear página /faq/ con 15 preguntas frecuentes optimizadas</h4>
+      <p>Objetivo: capturar rich snippets de preguntas frecuentes en Google.</p>
+    </div>
+  </div>
+
+  <h4 style="margin:1.5rem 0 0.8rem;">Fase 3: Autoridad (Días 61-90)</h4>
+  <div class="action-item">
+    <span class="action-num">9</span>
+    <div class="action-content">
+      <h4>Campaña de solicitud de reseñas Google</h4>
+      <p>Enviar enlace directo de reseña a los últimos 100 clientes. Meta: +50 reseñas en 30 días.</p>
+    </div>
+  </div>
+  <div class="action-item">
+    <span class="action-num">10</span>
+    <div class="action-content">
+      <h4>Primeras 3 colaboraciones: guest post o mención en prensa</h4>
+      <p>Objetivo: obtener los primeros backlinks de dominios con DA > 30.</p>
+    </div>
+  </div>
+  <div class="action-item">
+    <span class="action-num">11</span>
+    <div class="action-content">
+      <h4>Registro en 5 directorios de turismo relevantes</h4>
+      <p>TripAdvisor, Colombia Travel, 2 blogs de viajes, 1 directorio gremial.</p>
+    </div>
+  </div>
+  <div class="action-item">
+    <span class="action-num">12</span>
+    <div class="action-content">
+      <h4>Auditoría de Core Web Vitals y corrección de problemas críticos</h4>
+      <p>Usar PageSpeed Insights y Search Console para identificar páginas lentas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTRICAS Y KPIs -->
+<section>
+  <div class="section-header">
+    <span class="section-number">14</span>
+    <h2 class="section-title">KPIs y Métricas de Seguimiento</h2>
+  </div>
+
+  <table>
+    <tr><th>KPI</th><th>Actual estimado</th><th>Meta 3 meses</th><th>Meta 6 meses</th><th>Meta 12 meses</th></tr>
+    <tr><td>Tráfico orgánico mensual</td><td>&lt; 500</td><td>2.000</td><td>5.000</td><td>12.000</td></tr>
+    <tr><td>Keywords posicionadas (top 100)</td><td>&lt; 20</td><td>100</td><td>300</td><td>800</td></tr>
+    <tr><td>Keywords top 10</td><td>&lt; 5</td><td>15</td><td>40</td><td>100</td></tr>
+    <tr><td>Reseñas Google</td><td>150</td><td>200</td><td>300</td><td>500</td></tr>
+    <tr><td>Backlinks de referencia</td><td>&lt; 30</td><td>60</td><td>120</td><td>250</td></tr>
+    <tr><td>Domain Authority (Moz)</td><td>&lt; 20</td><td>25</td><td>30</td><td>38</td></tr>
+    <tr><td>Conversiones orgánicas (cotizaciones)</td><td>&lt; 10/mes</td><td>30/mes</td><td>80/mes</td><td>200/mes</td></tr>
+    <tr><td>Páginas indexadas</td><td>&lt; 10</td><td>25</td><td>50</td><td>100</td></tr>
+  </table>
+
+  <div class="card" style="margin-top:1.2rem;">
+    <h4 style="margin-bottom:0.6rem;">Herramientas recomendadas (gratuitas y de pago)</h4>
+    <ul>
+      <li><strong>Google Search Console:</strong> Imprescindible. Monitorear impresiones, clicks, posiciones y errores de indexación.</li>
+      <li><strong>Google Analytics 4:</strong> Trackear tráfico orgánico, conversiones y comportamiento de usuarios.</li>
+      <li><strong>PageSpeed Insights:</strong> Medir Core Web Vitals y recibir recomendaciones específicas.</li>
+      <li><strong>Ubersuggest o Ahrefs (gratuito limitado):</strong> Análisis de keywords y backlinks de competidores.</li>
+      <li><strong>MozBar (extensión gratuita):</strong> Ver Domain Authority de cualquier página.</li>
+      <li><strong>Screaming Frog (gratuito hasta 500 URLs):</strong> Auditoría técnica completa del sitio.</li>
+      <li><strong>AnswerThePublic:</strong> Descubrir preguntas reales que hacen los usuarios sobre el Eje Cafetero.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONCLUSIONES -->
+<section>
+  <div class="section-header">
+    <span class="section-number">15</span>
+    <h2 class="section-title">Conclusiones y Prioridades</h2>
+  </div>
+
+  <div class="card card-accent">
+    <p><strong>Quindío Travel tiene todos los ingredientes para dominar el SEO del Eje Cafetero:</strong> experiencia real, operación local, buena reputación y precios competitivos. Lo que le falta es una <em>infraestructura digital</em> que traduzca esa ventaja operativa en visibilidad orgánica.</p>
+    <p style="margin-top:0.8rem">Las 3 acciones que generarán más impacto en los próximos 90 días son:</p>
+    <ol style="margin-top:0.5rem;">
+      <li><strong>Crear páginas de destino específicas</strong> (Cocora, Salento, Filandia) con contenido útil y CTAs claros.</li>
+      <li><strong>Implementar Google Business Profile + Schema + Sitemap</strong> para que Google entienda quién es Quindío Travel.</li>
+      <li><strong>Iniciar el blog con 4 artículos pilares</strong> que capturen la long tail de búsquedas informativas.</li>
+    </ol>
+  </div>
+
+  <div class="card" style="margin-top:1.2rem;">
+    <p style="font-style:italic;color:var(--muted);">Esta auditoría fue elaborada a partir del análisis del sitio quindiotravel.com.co y benchmarking contra los principales competidores del Eje Cafetero. Las recomendaciones están priorizadas por impacto SEO y facilidad de implementación.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Auditoría SEO Estratégica · Quindío Travel · quindiotravel.com.co</p>
+  <p style="opacity:0.6;margin-top:0.3rem;">Documento generado en septiembre de 2026</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
