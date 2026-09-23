@@ -17,3 +17,14 @@ docs/*report*.json
 
 # Backups locales del .htaccess
 .htaccess.backup-*
+
+# Sistema de automatizacion de leads - Datos sensibles
+lead_automation_system/data/*.json
+lead_automation_system/config.py
+lead_automation_system/.env
+lead_automation_system/__pycache__/
+lead_automation_system/**/__pycache__/
+lead_automation_system/**/*.pyc
+lead_automation_system/venv/
+lead_automation_system/.venv/
+lead_automation_system/*.log
