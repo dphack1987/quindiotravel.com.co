@@ -1,0 +1,27 @@
+# Sistema de Automatización de Leads - Quindío Travel
+# Requisitos para lograr 4+ reservas mensuales
+
+# Core
+requests>=2.31.0
+schedule>=1.2.0
+
+# WhatsApp Business API
+# Necesitas obtener un token de Facebook Developers
+# https://developers.facebook.com/docs/whatsapp/business-api
+
+# Data processing
+python-dateutil>=2.8.2
+
+# Web framework (opcional para integración con web)
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# Database (opcional para producción)
+sqlite3  # Incluido en Python standard library
+
+# Logging
+python-dotenv>=1.0.0
+
+# Testing (opcional)
+pytest>=7.4.0
+pytest-cov>=4.1.0

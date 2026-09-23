@@ -1,0 +1,31 @@
+{
+  "interest_signals": {
+    "specific_plan_mentioned": 15,
+    "date_range_provided": 12,
+    "guest_count_provided": 10,
+    "budget_mentioned": 12,
+    "question_asked": 8,
+    "whatsapp_clicked": 20
+  },
+  "quality_signals": {
+    "complete_sentence": 5,
+    "relevant_destination": 10,
+    "reasonable_budget": 15,
+    "realistic_dates": 10,
+    "contact_provided": 8
+  },
+  "behavioral_signals": {
+    "page_views": 2,
+    "time_on_site": 3,
+    "return_visitor": 15,
+    "mobile_device": 5,
+    "desktop_device": 7
+  },
+  "timing_signals": {
+    "response_under_1hr": 10,
+    "response_1_24hr": 5,
+    "response_24_72hr": 2,
+    "weekend_inquiry": 8,
+    "holiday_season": 12
+  }
+}
