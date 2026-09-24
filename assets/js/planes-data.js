@@ -327,8 +327,6 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
     
     const fotoAlojamiento = plan.imagen || fotosAlojamiento[primerAlojamiento] || "assets/images/alojamientos/hotel-de-la-vega/eaa775d5.avif";
     
-    const paxParam = obtenerParametroURL('personas') || 2;
-    const fechaParam = obtenerParametroURL('fecha') || 'Por confirmar';
     const precioDesde = plan.precioSinTransporte;
     
     // Badge de urgencia basado en disponibilidad
@@ -344,19 +342,6 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
     };
     const disponibilidad = plan.disponibilidad || 5;
     const urgencia = urgenciaMap[disponibilidad] || { icon: 'fa-star', cls: 'urgency-deal', text: 'Disponible' };
-
-    // Mensaje pre-llenado detallado para WhatsApp
-    const msgWhatsApp = `Hola Quindío Travel 🌿
-
-Quiero cotizar este plan:
-📋 Plan: ${plan.titulo} (${plan.dias}D/${plan.noches}N)
-👥 Personas: ${paxParam}
-📅 Fecha: ${fechaParam}
-💰 Presupuesto: Consultar
-
-¿Podrían enviarme disponibilidad y precio final?
-
-RNT 18152`;
 
     const card = document.createElement("div");
     card.className = "plan-card-enhanced";
@@ -452,13 +437,9 @@ RNT 18152`;
       </div>
       
       <div class="plan-card-footer-enhanced">
-        <a href="${plan.detalleUrl}" class="btn-plan-enhanced btn-outline-plan">
+        <a href="${plan.detalleUrl}" class="btn-plan-enhanced btn-outline-plan" style="width: 100%; justify-content: center;">
           <i class="fas fa-file-alt"></i>
-          <span>Ver itinerario</span>
-        </a>
-        <a href="https://wa.me/573174426044?text=${encodeURIComponent(msgWhatsApp)}" class="btn-plan-enhanced btn-whatsapp-plan" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i>
-          <span>Cotizar por WhatsApp</span>
+          <span>Ver itinerario y precios</span>
         </a>
       </div>
     `;

@@ -60,6 +60,7 @@
 <IfModule mod_rewrite.c>
     RewriteRule ^blog/?$ /blog.html [R=301,L]
     RewriteRule ^planes/?$ /planes.html [R=301,L]
+    RewriteRule ^planes/?index\.html?$ /planes.html [R=301,L]
 </IfModule>
 
 # Remove Trailing Slash

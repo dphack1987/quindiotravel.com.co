@@ -20,7 +20,7 @@
   - Colores corporativos: verde (#2E5E36) y marrón madera
 
 #### 2. Planes (planes.html)
-- **Archivo actual**: `assets/images/planes/plan1.jpg`
+- **Archivo actual**: `assets/images/planes/plan-1.jpg`
 - **Nombre sugerido**: `og-planes-1200x630.jpg`
 - **Contenido sugerido**:
   - Collage de los 6 planes principales

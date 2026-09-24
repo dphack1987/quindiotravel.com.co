@@ -223,26 +223,50 @@ const planesEspeciales = {
 function obtenerTarifa(nombreHotel, tipoTransporte, numPax) {
   const tarifas = planesEspeciales.tarifas[tipoTransporte];
   const plan = tarifas.find(p => p.hotel === nombreHotel);
-  
+
   if (!plan) return null;
-  
+
   const paxKey = `pax_${numPax}`;
   return plan[paxKey] || null;
 }
 
 /**
- * Generar cards HTML con tarifas (sustituye tablas)
+ * Tarjeta de hotel compacta para el teaser (sin lista interminable de servicios)
  */
-function generarTarifasCards(tipoTransporte = 'radio_taxi') {
-  const tarifas = planesEspeciales.tarifas[tipoTransporte];
-  let html = `
-    <div class="tarifas-section-diciembre">
-      <h3>${tipoTransporte === 'radio_taxi' ? 'TEMPORADA ALTA - RADIO TAXI DEL QUINDÍO' : 'TEMPORADA ALTA - TRANSPORTE TURÍSTICO PLACA BLANCA'}</h3>
-      <div class="tarifas-cards-grid">
-  `;
-  
-  tarifas.forEach(plan => {
-    html += `
+function generarTarjetaHotel(hotelKey) {
+  const hotel = planesEspeciales.hoteles[hotelKey];
+  if (!hotel) return '';
+
+  const serviciosTop = hotel.servicios.slice(0, 4);
+
+  return `
+    <div class="hotel-card-diciembre">
+      <div class="hotel-card-media">
+        <img src="${hotel.imagen}" alt="${hotel.nombre} en el Quindío" loading="lazy" width="800" height="450">
+      </div>
+      <h4>${hotel.nombre}</h4>
+      <p class="categoria-badge">${hotel.categoria}</p>
+      ${hotel.ubicacion ? `<p class="ubicacion"><i class="fas fa-map-marker-alt"></i> ${hotel.ubicacion}</p>` : ''}
+      <ul class="servicios-list servicios-list-compact">
+        ${serviciosTop.map(s => `<li><i class="fas fa-check-circle"></i> ${s}</li>`).join('')}
+      </ul>
+    </div>`;
+}
+
+/**
+ * Teaser compacto de temporada alta (15 dic – 20 ene).
+ * Solo tarifas Radio Taxi autorizadas; Placa Blanca solo por cotización.
+ * Sin CTA propio (la página usa un único CTA WhatsApp).
+ */
+function initPlanesEspeciales() {
+  const container = document.getElementById('planes-especiales-container');
+  if (!container) return;
+
+  const tarifas = planesEspeciales.tarifas.radio_taxi;
+  const incluyeTop = planesEspeciales.plan.incluye.slice(0, 6);
+  const hotelesClave = ['cabanas_la_esmeralda', 'finca_hotel_los_girasoles', 'hotel_campestre_cafe_cafe'];
+
+  const tarifasHtml = tarifas.map(plan => `
       <div class="tarifa-card">
         <div class="tarifa-card-header">
           <h4>${plan.hotel}</h4>
@@ -262,116 +286,48 @@ function generarTarifasCards(tipoTransporte = 'radio_taxi') {
             <span class="price-value">$${plan.pax_4.toLocaleString('es-CO')}</span>
           </div>
         </div>
-      </div>
-    `;
-  });
-  
-  html += `
-      </div>
-    </div>
-  `;
-  
-  return html;
-}
+      </div>`).join('');
 
-/**
- * Generar lista de servicios incluidos
- */
-function generarListaIncluye() {
-  let html = '<div class="incluye-section-diciembre"><h3>✅ Incluye:</h3><ul class="incluye-list">';
-  
-  planesEspeciales.plan.incluye.forEach(item => {
-    html += `<li><i class="fas fa-check"></i> ${item}</li>`;
-  });
-  
-  html += '</ul></div>';
-  
-  return html;
-}
+  const hotelesHtml = hotelesClave.map(key => generarTarjetaHotel(key)).join('');
 
-/**
- * Generar tarjeta de hotel
- */
-function generarTarjetaHotel(hotelKey) {
-  const hotel = planesEspeciales.hoteles[hotelKey];
-  
-  if (!hotel) return '';
-  
-  let html = `
-    <div class="hotel-card-diciembre">
-      <div class="hotel-card-media">
-        <img src="${hotel.imagen}" alt="${hotel.nombre} en el Quindío" loading="lazy" width="800" height="450">
-      </div>
-      <h4>${hotel.nombre}</h4>
-      <p class="categoria-badge">${hotel.categoria}</p>
-  `;
-  
-  if (hotel.ubicacion) {
-    html += `<p class="ubicacion"><i class="fas fa-map-marker-alt"></i> ${hotel.ubicacion}</p>`;
-  }
-  
-  if (hotel.descripcion) {
-    html += `<p class="descripcion">${hotel.descripcion}</p>`;
-  }
-  
-  html += '<ul class="servicios-list">';
-  hotel.servicios.forEach(servicio => {
-    html += `<li><i class="fas fa-check-circle"></i> ${servicio}</li>`;
-  });
-  html += '</ul></div>';
-  
-  return html;
-}
-
-/**
- * Inicializar sección de planes especiales
- */
-function initPlanesEspeciales() {
-  const container = document.getElementById('planes-especiales-container');
-  
-  if (!container) return;
-  
-  let html = `
-    <section class="planes-especiales-diciembre">
+  container.innerHTML = `
+    <section class="planes-especiales-diciembre planes-especiales-compact">
       <div class="container">
         <div class="planes-header">
           <h2>🎄 Planes Especiales Temporada Alta</h2>
-          <p>${planesEspeciales.plan.temporada}</p>
+          <p>${planesEspeciales.plan.temporada} · 4 Días / 3 Noches · Tarifa por persona</p>
           <span class="badge-cupos">Consulta disponibilidad para tu fecha</span>
         </div>
-        
-        <div class="plan-details">
-          <h3>Duración: ${planesEspeciales.plan.duracion.dias} Días / ${planesEspeciales.plan.duracion.noches} Noches</h3>
-          ${generarListaIncluye()}
+
+        <div class="plan-details plan-details-compact">
+          <h3>Incluye</h3>
+          <ul class="incluye-list incluye-list-compact">
+            ${incluyeTop.map(item => `<li><i class="fas fa-check"></i> ${item}</li>`).join('')}
+          </ul>
+          <p class="incluye-mas">+ Salento, Filandia, PANACA, RECUCA y asistencia médica 24/7</p>
         </div>
-        
+
         <div class="tarifas-container">
-          ${generarTarifasCards('radio_taxi')}
-          ${generarTarifasCards('placa_blanca')}
-          
+          <div class="tarifas-section-diciembre">
+            <h3>Temporada Alta — Radio Taxi del Quindío</h3>
+            <div class="tarifas-cards-grid">
+              ${tarifasHtml}
+            </div>
+          </div>
           <div class="nota-transporte">
-            <p><strong>📝 Nota:</strong> ${planesEspeciales.plan.incluye[planesEspeciales.plan.incluye.length - 1]}</p>
+            <p><strong>📝 Nota:</strong> Precios con Radio Taxi (conductores capacitados en turismo). Transporte Placa Blanca solo por cotización especial.</p>
           </div>
         </div>
-        
+
         <div class="hoteles-incluidos">
-          <h3>🏨 Hoteles Incluidos en el Plan</h3>
-          <div class="hoteles-grid">
-            ${Object.keys(planesEspeciales.hoteles).map(key => generarTarjetaHotel(key)).join('')}
+          <h3>🏨 Alojamiento disponible</h3>
+          <div class="hoteles-grid hoteles-grid-compact">
+            ${hotelesHtml}
           </div>
-        </div>
-        
-        <div class="contacto-cta">
-          <h3>¿Listo para tu aventura en diciembre?</h3>
-          <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20me%20interesa%20un%20plan%20especial%20para%20diciembre" target="_blank" class="btn btn-whatsapp-grande">
-            <i class="fab fa-whatsapp"></i> Cotizar Plan de Diciembre
-          </a>
         </div>
       </div>
     </section>
   `;
-  
-  container.innerHTML = html;
 }
 
 // Ejecutar cuando el DOM esté listo

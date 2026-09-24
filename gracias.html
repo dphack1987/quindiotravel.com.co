@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por contactarnos! | Quindío Travel</title>
+    <meta name="description" content="Hemos recibido tu mensaje. Te responderemos en menos de 1 hora por WhatsApp.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://quindiotravel.com.co/gracias.html">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gracias-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f8fdf9 0%, #e8f5e9 100%);
+        }
+        .gracias-card {
+            background: white;
+            border-radius: 24px;
+            padding: 60px 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(46, 90, 54, 0.12);
+            border: 1px solid rgba(46, 90, 54, 0.08);
+        }
+        .gracias-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+        .gracias-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1a3d2e;
+            margin-bottom: 16px;
+        }
+        .gracias-subtitle {
+            font-size: 1.1rem;
+            color: #5a7a6a;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .gracias-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        .gracias-step {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            background: #f8fdf9;
+            border-radius: 12px;
+            border: 1px solid rgba(46, 90, 54, 0.1);
+        }
+        .gracias-step-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .gracias-step-text {
+            font-size: 0.95rem;
+            color: #3a5a4a;
+            line-height: 1.4;
+        }
+        .gracias-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 36px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+        .gracias-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+        .gracias-trust {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(46, 90, 54, 0.1);
+        }
+        .gracias-trust p {
+            font-size: 0.9rem;
+            color: #888;
+            margin: 0;
+        }
+        @media (max-width: 480px) {
+            .gracias-card { padding: 40px 24px; }
+            .gracias-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" aria-label="Inicio Quindío Travel">
+                    <img src="assets/images/logo_quindio_travel.png" alt="Quindío Travel Logo" loading="eager" width="200" height="60">
+                </a>
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="planes.html">Planes</a></li>
+                    <li><a href="index.html#hoteles">Hoteles</a></li>
+                    <li><a href="index.html#experiencias">Experiencias</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="https://wa.me/573174426044" target="_blank" rel="noopener" class="btn-whatsapp-icon" aria-label="Contacto WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="gracias-hero">
+            <div class="gracias-card">
+                <div class="gracias-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h1 class="gracias-title">¡Gracias por escribirnos!</h1>
+                <p class="gracias-subtitle">Hemos recibido tu solicitud. Nuestro equipo la está revisando y te responderá por WhatsApp en menos de 1 hora.</p>
+                
+                <div class="gracias-steps">
+                    <div class="gracias-step">
+                        <span class="gracias-step-num">1</span>
+                        <span class="gracias-step-text"><strong>Revisamos</strong> tu mensaje y preparamos opciones personalizadas</span>
+                    </div>
+                    <div class="gracias-step">
+                        <span class="gracias-step-num">2</span>
+                        <span class="gracias-step-text"><strong>Te escribimos</strong> por WhatsApp con planes, precios y disponibilidad</span>
+                    </div>
+                    <div class="gracias-step">
+                        <span class="gracias-step-num">3</span>
+                        <span class="gracias-step-text"><strong>Eliges y reservas</strong> directo con nosotros, sin intermediarios</span>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel%2C%20acabo%20de%20enviar%20un%20formulario%20y%20quiero%20agilizar%20mi%20cotizaci%C3%B3n.%20RNT%2018152" target="_blank" rel="noopener" class="gracias-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Ir a WhatsApp ahora
+                </a>
+
+                <div class="gracias-trust">
+                    <p><i class="fas fa-shield-alt"></i> Operador certificado RNT 18152 · 150+ reseñas Google 4.7★ · 1,200+ viajeros al año</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer-section" style="padding: 40px 20px; text-align: center; background: #1a3d2e; color: white;">
+        <div class="container">
+            <p>Quindío Travel - Operador Turístico RNT 18152</p>
+            <p>Gerente: Álvaro Alzate Ortiz | WhatsApp: +57 317 442 6044 | gerencia@quindiotravel.net</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/hamburger-menu.js" defer></script>
+    <script src="assets/js/language-detector.js" defer></script>
+    <script src="assets/js/back-to-top.js" defer></script>
+</body>
+</html>

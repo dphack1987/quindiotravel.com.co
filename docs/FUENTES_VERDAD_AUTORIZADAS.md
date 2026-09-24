@@ -15,6 +15,8 @@
 | `docs/plan_turistico_exclusivo/Plan salento filandia Y ocaso.docx` | Plan Exclusivo Salento-Filandia-Ocaso | ✅ OFICIAL | Plan especial 4D/3N inmersión cafetera |
 | `docs/promocion del mes/promocion del mes vientos de agosto.docx` | Promoción Vientos de Agosto 2026 | ✅ OFICIAL | Promoción especial agosto 2026 |
 | `docs/PLANES_ESPECIALES_DICIEMBRE.md` | Planes especiales temporada alta | ✅ OFICIAL | Temporada alta diciembre |
+| `docs/PROMPTS_IA_BIBLIOTECA_WHATSAPP.md` | Prompt maestro WhatsApp segmentado | ✅ OFICIAL | Anti-alucinación precios |
+| `docs/biblioteca-whatsapp-planes.md` | Respuestas WhatsApp por plan | ✅ OFICIAL | v1 P/F/I/G |
 | `promo-agosto-2026.html` | Promoción del mes agosto | ✅ OFICIAL | Plan Vientos de Agosto 2026 |
 | `documentation_archive/PROMO_SEO_VISUAL_IMPROVEMENT_GUIDE.md` | Guía SEO promoción agosto | ✅ OFICIAL | Estrategia y mejoras |
 
@@ -160,3 +162,14 @@
 - **Período:** 15 diciembre 2026 - 20 enero 2027
 - **Cupos:** 30 cupos limitados
 - **Contenido:** Plan 4D/3N temporada alta con Radio Taxi
+
+---
+
+## 📱 BIBLIOTECA WHATSAPP / TEXTOS IA
+
+| Documento | Uso | Estado |
+|-----------|-----|--------|
+| `docs/PROMPTS_IA_BIBLIOTECA_WHATSAPP.md` | Prompt maestro + bloques de datos por plan para ChatGPT/DeepSeek | ✅ OFICIAL (reglas anti-alucinación) |
+| `docs/biblioteca-whatsapp-planes.md` | Respuestas pre-aprobadas por plan × segmento (P/F/I/G) | ✅ OFICIAL (v1, precios verificados) |
+
+**Regla:** La IA solo adapta tono. Precios, incluye y hoteles salen de los bloques bloqueados en `PROMPTS_IA_BIBLIOTECA_WHATSAPP.md` §4. Checklist de 6 ítems antes de publicar cualquier variante.
