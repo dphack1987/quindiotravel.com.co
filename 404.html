@@ -6,6 +6,45 @@
     <title>404 - Página No Encontrada | Quindío Travel</title>
     <meta name="description" content="La página que buscas no existe. Descubre nuestros planes turísticos al Eje Cafetero colombiano.">
     <meta name="robots" content="noindex, nofollow">
+    <script>
+        (function () {
+            var raw = window.location.pathname;
+            var path = raw.replace(/\/+$/, '') || '/';
+            var exact = {
+                '/atractivos/panaca': '/panaca.html',
+                '/atractivos/termales-santa-rosa': '/termales-santa-rosa.html',
+                '/atractivos/recuca': '/recuca.html',
+                '/atractivos/parque-del-cafe': '/parque-del-cafe.html',
+                '/atractivos/mariposario-quindio': '/mariposario-quindio.html',
+                '/atractivos/granja-mama-lulu': '/granja-mama-lulu.html',
+                '/atractivos/parque-los-arrieros': '/parque-los-arrieros.html',
+                '/atractivos/laberinto-mil-caminos': '/laberinto-mil-caminos.html'
+            };
+            if (exact[path]) { window.location.replace(exact[path]); return; }
+            var rules = [
+                [/^\/armenia(\/.*)?$/i, '/armenia.html'],
+                [/^\/salento(\/.*)?$/i, '/salento.html'],
+                [/^\/(filandia|buenavista|montengro|circasia|quimbaya|giroidionisio|calarca|tebaida|pijao|bugalagrande|la-tebaida|cupica|urrao)(\/.*)?$/i, '/filandia.html'],
+                [/^\/viajes(\/.*)?$/i, '/planes.html'],
+                [/^\/alojamiento(\/.*)?$/i, '/alojamientos.html'],
+                [/^\/atractivos(\/.*)?$/i, '/experiencias.html'],
+                [/^\/blog\/viajes-.+$/i, '/blog.html'],
+                [/^\/generated-pages(\/.*)?$/i, '/'],
+                [/^\/programmatic-pages(\/.*)?$/i, '/']
+            ];
+            for (var i = 0; i < rules.length; i++) {
+                if (rules[i][0].test(path)) { window.location.replace(rules[i][1]); return; }
+            }
+
+            // Trailing slash: /experiencias/ -> /experiencias.html (solo si el destino existe)
+            if (raw.length > 1 && raw.charAt(raw.length - 1) === '/') {
+                var candidate = path + '.html';
+                fetch(candidate, { method: 'HEAD', redirect: 'manual' })
+                    .then(function (res) { if (res.ok) { window.location.replace(candidate); } })
+                    .catch(function () { /* sin redireccion: se muestra la pagina 404 */ });
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">

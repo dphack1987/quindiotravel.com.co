@@ -18,7 +18,7 @@ function getAllHtmlFiles(dir, fileList = []) {
     if (stat.isDirectory()) {
       if (!['node_modules', '.git', 'docs', 'competitive-engine', 'don-chucho-backend', 
             'generated-pages', 'outreach_data', 'pseo-engine', 'programmatic-pages', 
-            'scripts', 'sitemaps', 'promocion-del-mes', 'components', 'blog', 'tests'].includes(file)) {
+            'scripts', 'sitemaps', 'promocion-del-mes', 'components', 'tests', 'dist'].includes(file)) {
         getAllHtmlFiles(filePath, fileList);
       }
     } else if (file.endsWith('.html')) {
@@ -61,7 +61,11 @@ htmlFiles.forEach(filePath => {
       const linkPath = match[1];
       // Ignorar enlaces externos y anclas
       if (!linkPath.startsWith('http') && !linkPath.startsWith('#') && !linkPath.startsWith('mailto:') && !linkPath.startsWith('tel:')) {
-        const fullPath = path.join(path.dirname(filePath), linkPath);
+        // Rutas absolutas (/foo.html) se resuelven contra la raiz del sitio;
+        // rutas relativas se resuelven contra el directorio del archivo.
+        const fullPath = linkPath.startsWith('/')
+          ? path.join(rootDir, linkPath)
+          : path.join(path.dirname(filePath), linkPath);
         if (!fs.existsSync(fullPath)) {
           linkIssues.brokenLinks.push({
             file: relativePath,
@@ -76,6 +80,10 @@ htmlFiles.forEach(filePath => {
     const imgRegex = /<img[^>]*>/g;
     while ((match = imgRegex.exec(content)) !== null) {
       const imgTag = match[0];
+      // Pixeles de seguimiento 1x1 ocultos: son decorativos, alt vacio es lo correcto
+      if (imgTag.includes('display:none')) {
+        continue;
+      }
       if (!imgTag.includes('alt=') || imgTag.includes('alt=""') || imgTag.includes("alt=''")) {
         linkIssues.missingAltText.push({
           file: relativePath,
@@ -124,15 +132,16 @@ if (linkIssues.missingAltText.length > 0 && linkIssues.missingAltText.length <= 
   });
 }
 
-console.log(`\n🌐 Enlaces Externos: ${linkIssues.externalLinks.length}`);
+console.log(`\nℹ️  Enlaces Externos (informativo, no es error): ${linkIssues.externalLinks.length}`);
 if (linkIssues.externalLinks.length > 0 && linkIssues.externalLinks.length <= 10) {
   linkIssues.externalLinks.forEach(item => {
     console.log(`   - ${item.file}: ${item.url}`);
   });
 }
 
+// Los enlaces externos son informativos: no cuentan como errores.
 const totalIssues = linkIssues.brokenLinks.length + linkIssues.emptyLinks.length + 
-                     linkIssues.missingAltText.length + linkIssues.externalLinks.length;
+                     linkIssues.missingAltText.length;
 
 console.log(`\n📊 TOTAL DE ISSUES: ${totalIssues}`);
 

@@ -54,11 +54,14 @@ jobs:
           if [ -d docs ]; then
             find docs -mindepth 1 -maxdepth 1 ! -name data -exec rm -rf {} +
           fi
-          # Archivos internos sueltos en la raiz
+          # Archivos internos sueltos en la raiz (se conservan en el repo, no se publican)
           rm -f REPORTE-COMPETITIVO-VENTAS-ONLINE.md \
                 Untitled-1.md \
                 auditoria_seo_quindio_travel.html \
-                package.json package-lock.json postcss.config.js
+                package.json package-lock.json postcss.config.js \
+                .htaccess .htpasswd .gitignore .gitattributes .editorconfig .npmrc
+          # Variables de entorno jamas se publican
+          rm -f .env .env.* 2>/dev/null || true
           echo "Contenido que se publica:"
           ls -la
 
