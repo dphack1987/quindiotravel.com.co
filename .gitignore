@@ -2,7 +2,7 @@
 node_modules/
 dist/
 .vite/
-scripts/__pycache__/
+__pycache__/
 *.pyc
 seo-audit*.json
 *.log

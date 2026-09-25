@@ -46,10 +46,14 @@ jobs:
             .devin
             node_modules
             dist
+            __pycache__
           )
           for d in "${EXCLUDE_DIRS[@]}"; do
             rm -rf "$d"
           done
+          # Bytes compilados de Python jamas se publican
+          find . -type d -name '__pycache__' -prune -exec rm -rf {} + 2>/dev/null || true
+          find . -type f -name '*.pyc' -delete 2>/dev/null || true
           # docs/ -> conservar solo docs/data (datos que consume el cotizador en runtime)
           if [ -d docs ]; then
             find docs -mindepth 1 -maxdepth 1 ! -name data -exec rm -rf {} +
