@@ -21,6 +21,47 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Excluir carpetas internas del sitio publico
+        run: |
+          set -euo pipefail
+          # Estas carpetas/archivos se conservan en el repositorio pero NO se publican.
+          # docs/data se preserva: cotizador.js hace fetch('docs/data/tarifas.json')
+          EXCLUDE_DIRS=(
+            documentation_archive
+            lead_automation_system
+            outreach_data
+            social_media_content
+            don-chucho-backend
+            competitive-engine
+            pseo-engine
+            scripts
+            components
+            tests
+            sitemaps
+            directories_data
+            datos
+            promocion-del-mes
+            .github
+            .vscode
+            .devin
+            node_modules
+            dist
+          )
+          for d in "${EXCLUDE_DIRS[@]}"; do
+            rm -rf "$d"
+          done
+          # docs/ -> conservar solo docs/data (datos que consume el cotizador en runtime)
+          if [ -d docs ]; then
+            find docs -mindepth 1 -maxdepth 1 ! -name data -exec rm -rf {} +
+          fi
+          # Archivos internos sueltos en la raiz
+          rm -f REPORTE-COMPETITIVO-VENTAS-ONLINE.md \
+                Untitled-1.md \
+                auditoria_seo_quindio_travel.html \
+                package.json package-lock.json postcss.config.js
+          echo "Contenido que se publica:"
+          ls -la
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
