@@ -1,6 +1,7 @@
 # 📋 Fuentes de Verdad Autorizadas - Quindío Travel
 
 **Fecha:** 2026-08-13  
+**Última actualización:** 2026-09-25 (promoción del mes: septiembre 2026)  
 **Estado:** Documentación Oficial
 
 ---
@@ -13,12 +14,13 @@
 |-----------|-----|--------|---------------|
 | `docs/informacion-de-precios/PORTAFOLIO PLANES NACIONALES 2026.docx` | Precios planes 1-6 | ✅ OFICIAL | Fuente de verdad definitiva |
 | `docs/plan_turistico_exclusivo/Plan salento filandia Y ocaso.docx` | Plan Exclusivo Salento-Filandia-Ocaso | ✅ OFICIAL | Plan especial 4D/3N inmersión cafetera |
-| `docs/promocion del mes/promocion del mes vientos de agosto.docx` | Promoción Vientos de Agosto 2026 | ✅ OFICIAL | Promoción especial agosto 2026 |
+| `docs/promocion del mes/promocion del mes-septiembre-2026.docx` | Promoción Septiembre 2026 | ✅ OFICIAL | Promoción del mes vigente (5D/4N) |
+| `docs/promociones y precios para diciembre/planes especiales para diciembre con oferta max 30 cupos.docx` | Planes Especiales Diciembre (original) | ✅ OFICIAL | Temporada alta, máx. 30 cupos |
 | `docs/PLANES_ESPECIALES_DICIEMBRE.md` | Planes especiales temporada alta | ✅ OFICIAL | Temporada alta diciembre |
 | `docs/PROMPTS_IA_BIBLIOTECA_WHATSAPP.md` | Prompt maestro WhatsApp segmentado | ✅ OFICIAL | Anti-alucinación precios |
 | `docs/biblioteca-whatsapp-planes.md` | Respuestas WhatsApp por plan | ✅ OFICIAL | v1 P/F/I/G |
-| `promo-agosto-2026.html` | Promoción del mes agosto | ✅ OFICIAL | Plan Vientos de Agosto 2026 |
-| `documentation_archive/PROMO_SEO_VISUAL_IMPROVEMENT_GUIDE.md` | Guía SEO promoción agosto | ✅ OFICIAL | Estrategia y mejoras |
+| `promo-septiembre-2026.html` | Promoción del mes septiembre | ✅ OFICIAL | Plan Septiembre 2026 (5D/4N) |
+| `documentation_archive/PROMO_SEO_VISUAL_IMPROVEMENT_GUIDE.md` | Guía SEO promoción (histórico agosto) | 📁 HISTÓRICO | No usar para precios |
 
 ---
 
@@ -94,23 +96,23 @@
 - Regreso a aeropuerto de Pereira o Armenia
 - Comisión del 10%
 
-### **PROMOCIÓN VIENTOS DE AGOSTO 2026:**
-**Fuente:** `docs/promocion del mes/promocion del mes vientos de agosto.docx`
+### **PROMOCIÓN SEPTIEMBRE 2026 (5 Días / 4 Noches):**
+**Fuente:** `docs/promocion del mes/promocion del mes-septiembre-2026.docx`
 
 || Alojamiento | Doble | Triple | Cuádruple ||
 ||------------|-------|--------|-----------||
-|| Cabañas La Esmeralda | $1.479.000 | $1.261.000 | $1.152.000 ||
-|| Hotel Campestre Los Girasoles | $1.915.000 | $1.697.000 | $1.588.000 ||
-|| Hotel Campestre Café Café | $2.097.000 | $1.879.000 | $1.770.000 ||
+|| Cabañas La Esmeralda | $1.577.000 | $1.340.000 | $1.200.000 ||
+|| Hotel Campestre Los Girasoles | $2.085.000 | $1.820.000 | $1.690.000 ||
+|| Hotel Campestre Café Café | $2.350.000 | $2.035.000 | $1.915.000 ||
 
 **Incluye:**
-- 3 noches de alojamiento
-- 3 desayunos y 3 cenas
+- 4 noches de alojamiento
+- 4 desayunos y 4 cenas
 - Pasaporte al Parque del Café
 - Valle de Cocora, Salento y Filandia (mirador, museo del canasto, calle del tiempo detenida)
 - Parque PANACA y Parque RECUCA
 - Asistencia médica
-- Transporte desde terminal de transporte hasta alojamiento y atractivos propuestos
+- Transporte desde terminal de transporte o aeropuerto de Armenia hasta el alojamiento y atractivos propuestos (Radio Taxi del Quindío)
 
 ---
 
@@ -132,9 +134,9 @@
 4. **Temporada alta** disponible en:
    - Documento de planes especiales diciembre (15 dic - 20 ene)
 5. **Promociones especiales** disponibles en:
-   - Promoción Vientos de Agosto (1-31 agosto)
+   - Promoción Septiembre 2026 (5D/4N, según DOCX de septiembre)
 6. **Transporte Placa Blanca** solo disponible por cotización especial
-7. **Planes autorizados** para uso general en el website: planes 1-6 + Plan Exclusivo Salento-Filandia-Ocaso + Promoción Vientos de Agosto
+7. **Planes autorizados** para uso general en el website: planes 1-6 + Plan Exclusivo Salento-Filandia-Ocaso + Promoción Septiembre 2026
 
 ---
 
@@ -150,18 +152,18 @@
 
 ## 🎄 PROMOCIONES AUTORIZADAS
 
-### **Promoción Vientos de Agosto 2026:**
-- **Fuente:** `promo-agosto-2026.html` ✅ OFICIAL
-- **Documentación:** `documentation_archive/PROMO_SEO_VISUAL_IMPROVEMENT_GUIDE.md` ✅ OFICIAL
-- **Período:** 1-31 agosto 2026
-- **Cupos:** 30 cupos limitados
-- **Contenido:** Plan 4D/3N con precios especiales
+### **Promoción Septiembre 2026 (vigente):**
+- **Fuente:** `docs/promocion del mes/promocion del mes-septiembre-2026.docx` ✅ OFICIAL
+- **Página:** `promo-septiembre-2026.html` ✅ OFICIAL
+- **Período:** septiembre 2026
+- **Contenido:** Plan 5D/4N, tarifa por persona, Radio Taxi del Quindío
+- **Desde:** $1.200.000 (cuádruple, Cabañas La Esmeralda)
 
 ### **Planes Especiales Diciembre 2026:**
-- **Fuente:** `docs/PLANES_ESPECIALES_DICIEMBRE.md` ✅ OFICIAL
+- **Fuente:** `docs/PLANES_ESPECIALES_DICIEMBRE.md` ✅ OFICIAL (original DOCX: `docs/promociones y precios para diciembre/...docx`)
 - **Período:** 15 diciembre 2026 - 20 enero 2027
 - **Cupos:** 30 cupos limitados
-- **Contenido:** Plan 4D/3N temporada alta con Radio Taxi
+- **Contenido:** Plan 4D/3N temporada alta con Radio Taxi (Placa Blanca solo por cotización especial)
 
 ---
 
