@@ -30,8 +30,10 @@ if (missingEnv.length > 0) {
         console.warn('⚠️ Using default database name for development');
     }
     if (!process.env.API_KEY) {
-        process.env.API_KEY = 'dev-key-' + Date.now();
-        console.warn('⚠️ Using generated API key for development');
+        console.error('❌ API_KEY environment variable is required for security');
+        console.error('❌ Please set API_KEY in .env file before starting the server');
+        process.env.API_KEY = 'dev-key-' + Date.now(); // Fallback for development only
+        console.warn('⚠️ Using temporary generated API key for development - DO NOT USE IN PRODUCTION');
     }
     if (!process.env.QUINDIO_WHATSAPP) {
         process.env.QUINDIO_WHATSAPP = '573000000000';
@@ -42,8 +44,8 @@ if (missingEnv.length > 0) {
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
 
-// Middleware
-app.use(cors({ origin: process.env.FRONTEND_URL || '*' }));
+// Middleware - Restringir CORS para seguridad
+app.use(cors({ origin: process.env.FRONTEND_URL || 'https://quindiotravel.com.co' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(rateLimitMiddleware);

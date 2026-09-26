@@ -7,7 +7,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const DRY = process.argv.includes('--dry');
+// Seguridad: modo dry-run por defecto para evitar cambios accidentales
+const DRY = !process.argv.includes('--execute');
 const SKIP_DIRS = new Set(['dist', 'node_modules', '.git', '.vite']);
 
 const cache = new Map(); // ruta absoluta -> {w,h} | null
@@ -165,7 +166,7 @@ for (const file of walk(rootDir)) {
   }
 }
 
-console.log(`modo: ${DRY ? 'DRY-RUN' : 'ejecutar'}`);
+console.log(`modo: ${DRY ? 'DRY-RUN (agrega --execute para aplicar cambios)' : 'ejecutar'}`);
 console.log(`archivos modificados: ${filesChanged}`);
 console.log(`img con prioridad/lazy anadido: ${imgsLazy}  |  con width/height: ${imgsDim}  |  omitidas: ${imgsSkip}`);
 report.slice(0, 25).forEach(r => console.log(r));

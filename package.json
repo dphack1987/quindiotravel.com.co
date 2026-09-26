@@ -11,6 +11,10 @@
     "seo:audit": "python scripts/seo_audit.py",
     "seo:audit:published": "python scripts/seo_audit.py --published-only",
     "optimize:assets": "node scripts/optimize-assets.js",
+    "optimize:images": "node scripts/compress-images.mjs --execute",
+    "optimize:images:dry": "node scripts/compress-images.mjs",
+    "optimize:img-tags": "node scripts/optimize-img-tags.mjs --execute",
+    "optimize:img-tags:dry": "node scripts/optimize-img-tags.mjs",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand tests",
     "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch tests"
   },

@@ -4,7 +4,13 @@
 const authMiddleware = (req, res, next) => {
     // Verificar API key básica
     const apiKey = req.headers['x-api-key'];
-    const validApiKey = process.env.API_KEY || 'don-chucho-secret-key-2024';
+    const validApiKey = process.env.API_KEY;
+    
+    if (!validApiKey) {
+        console.warn('⚠️ API_KEY environment variable not set');
+        res.status(500).json({ error: 'Server configuration error' });
+        return;
+    }
     
     if (apiKey && apiKey === validApiKey) {
         next();

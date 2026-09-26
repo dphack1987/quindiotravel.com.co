@@ -12,7 +12,8 @@ const MIN_ARG = process.argv.find(a => a.startsWith('--min='));
 const MIN_BYTES = MIN_ARG ? parseInt(MIN_ARG.split('=')[1], 10) : 1_000_000;
 const MAX_WIDTH = 1920;           // no ampliar (full-width hero / retina razonable)
 const QUALITY  = 80;
-const DRY = process.argv.includes('--dry');
+// Seguridad: modo dry-run por defecto para evitar cambios accidentales
+const DRY = !process.argv.includes('--execute');
 
 const IMAGE_RE = /\.(jpe?g|png|webp)$/i;
 const SKIP_DIRS = new Set(['dist', 'node_modules', '.git', '.vite']);
@@ -66,7 +67,7 @@ try {
   }
 } catch { /* sin git: sin guarda */ }
 
-console.log(`imagenes .jpg/.jpeg/.png/.webp: ${files.length}  |  >${MIN_BYTES} bytes: ${targets.length}  |  ya comprimidas: ${already.size}  |  modo: ${DRY ? 'DRY-RUN' : 'ejecutar'}\n`);
+console.log(`imagenes .jpg/.jpeg/.png/.webp: ${files.length}  |  >${MIN_BYTES} bytes: ${targets.length}  |  ya comprimidas: ${already.size}  |  modo: ${DRY ? 'DRY-RUN (agrega --execute para aplicar cambios)' : 'ejecutar'}\n`);
 
 let before = 0, after = 0, done = 0, skipped = 0, failed = 0;
 const unused = [];

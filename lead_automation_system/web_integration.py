@@ -16,7 +16,8 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from main import LeadAutomationSystem
 
 app = Flask(__name__)
-CORS(app)  # Habilitar CORS para peticiones desde el sitio web
+# Restringir CORS al dominio del proyecto para seguridad
+CORS(app, origins=['https://quindiotravel.com.co', 'http://localhost:3000', 'http://127.0.0.1:3000'])
 
 # Inicializar sistema de automatización
 automation_system = LeadAutomationSystem()
@@ -304,4 +305,4 @@ if __name__ == '__main__':
     print("   GET  /api/health - Verificar estado")
     print("   POST /api/quote - Procesar cotización")
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000)
