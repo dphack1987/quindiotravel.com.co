@@ -17,7 +17,7 @@ flask>=3.0.0
 flask-cors>=4.0.0
 
 # Database (opcional para producción)
-sqlite3  # Incluido en Python standard library
+# sqlite3 está incluido en Python standard library, no requiere instalación
 
 # Logging
 python-dotenv>=1.0.0

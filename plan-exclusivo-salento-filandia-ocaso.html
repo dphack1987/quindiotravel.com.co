@@ -324,22 +324,12 @@
     <!-- Script de detección de idioma -->
     <script src="assets/js/language-detector.js" defer></script>
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Medición vía Google Tag Manager (GTM-NVCL3PV4): shim gtag() ->
+         los eventos de abajo se empujan a dataLayer; el contenedor GTM
+         decide a qué propiedad GA4/Ads van. No hardcodear IDs aquí. -->
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX', {
-            'page_title': 'Plan Turístico con Inmersión Cafetera, Paisajes y Pueblos Quindianos',
-            'page_location': 'https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html',
-            'custom_map': {
-                'plan_type': 'Plan Turístico con Inmersión Cafetera',
-                'market_target': 'Spain',
-                'price_eur': '280-390'
-            }
-        });
+        window.gtag = window.gtag || function () { dataLayer.push(arguments); };
         
         // Custom Events
         function trackEvent(eventName, parameters) {
@@ -424,18 +414,26 @@
         });
     </script>
     
-    <!-- Facebook Pixel -->
+    <!-- Facebook Pixel — PENDIENTE de configurar con el ID real de Meta.
+         Antes cargaba fbevents.js con un ID ficticio de 16 caracteres: los hits
+         no llegaban a ninguna propiedad y la petición a facebook.com/tr se perdía.
+         Para activarlo, sustituir el shim de abajo por:
+           !function(f,b,e,v,n,t,s){...}(window, document,'script',
+           'https://connect.facebook.net/en_US/fbevents.js');
+           fbq('init', '<PIXEL_ID_REAL>'); fbq('track', 'PageView');
+         y añadir <noscript><img src="https://www.facebook.com/tr?id=<PIXEL_ID_REAL>&ev=PageView&noscript=1"/></noscript>
+         El shim no hace peticiones de red, pero mantiene vivas las funciones
+         de seguimiento y copia cada evento a dataLayer para que GTM lo enrute. -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        
-        fbq('init', 'XXXXXXXXXXXXXXXX'); // Replace with your Pixel ID
+        window.fbq = window.fbq || function () {
+            (window.fbq.q = window.fbq.q || []).push(arguments);
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    event: 'fb_' + (arguments[0] || ''),
+                    fbParams: Array.prototype.slice.call(arguments, 1)
+                });
+            }
+        };
         fbq('track', 'PageView');
         
         // Custom Events
@@ -484,7 +482,6 @@
             trackFBPlanView();
         });
     </script>
-    <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
     
     <!-- WhatsApp Template Handler -->
     <script src="assets/js/whatsapp-template-handler.js" defer></script>
@@ -807,130 +804,144 @@
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TouristTrip",
-      "name": "Plan Turístico con Inmersión Cafetera, Paisajes y Pueblos Quindianos",
-      "description": "Plan turístico con inmersión cafetera, paisajes y pueblos quindianos. 4 días 3 noches en el Eje Cafetero: Salento, Valle de Cocora, Filandia y Coffee Tour El Ocaso. Alojamiento Hotel Vista Hermosa, transporte desde aeropuerto de Pereira o Armenia y asistencia médica. Viajes Colombia desde Madrid y Barcelona desde 280€ por persona.",
-      "touristType": "Cultural Tour",
-      "duration": "P4D3N",
-      "offers": [
         {
-          "@type": "Offer",
-          "name": "Cuádruple",
-          "price": "280",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
-        },
-        {
-          "@type": "Offer",
-          "name": "Triple",
-          "price": "315",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
-        },
-        {
-          "@type": "Offer",
-          "name": "Doble",
-          "price": "390",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": "Plan Turístico con Inmersión Cafetera, Paisajes y Pueblos Quindianos",
+            "description": "Plan turístico con inmersión cafetera, paisajes y pueblos quindianos. 4 días 3 noches en el Eje Cafetero: Salento, Valle de Cocora, Filandia y Coffee Tour El Ocaso. Alojamiento Hotel Vista Hermosa, transporte desde aeropuerto de Pereira o Armenia y asistencia médica. Viajes Colombia desde Madrid y Barcelona desde 280€ por persona.",
+            "touristType": "Cultural Tour",
+            "duration": "P4D3N",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "Cuádruple",
+                    "price": "280",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Triple",
+                    "price": "315",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Doble",
+                    "price": "390",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
+                }
+            ],
+            "provider": {
+                "@type": "TravelAgency",
+                "name": "Quindío Travel",
+                "telephone": "+573174426044",
+                "url": "https://quindiotravel.com.co",
+                "logo": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Armenia",
+                    "addressRegion": "Quindío",
+                    "addressCountry": "CO"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 4.5338,
+                    "longitude": -75.6811
+                },
+                "image": "https://quindiotravel.com.co/apple-touch-icon.png"
+            },
+            "location": [
+                {
+                    "@type": "Place",
+                    "name": "Salento",
+                    "description": "Pueblo cafetero tradicional en el corazón del Eje Cafetero",
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 4.6378,
+                        "longitude": -75.568
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Salento",
+                        "addressRegion": "Quindío",
+                        "addressCountry": "CO"
+                    }
+                },
+                {
+                    "@type": "Place",
+                    "name": "Valle de Cocora",
+                    "description": "Valle natural con palmas de cera gigantes, Patrimonio UNESCO",
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 4.683,
+                        "longitude": -75.633
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Salento",
+                        "addressRegion": "Quindío",
+                        "addressCountry": "CO"
+                    }
+                },
+                {
+                    "@type": "Place",
+                    "name": "Filandia",
+                    "description": "Pueblo colonial con arquitectura tradicional y mirador panorámico",
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 4.6717,
+                        "longitude": -75.6172
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Filandia",
+                        "addressRegion": "Quindío",
+                        "addressCountry": "CO"
+                    }
+                },
+                {
+                    "@type": "Place",
+                    "name": "Coffee Tour El Ocaso",
+                    "description": "Experiencia cafetera premium en finca tradicional",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Salento",
+                        "addressRegion": "Quindío",
+                        "addressCountry": "CO"
+                    }
+                }
+            ],
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "International Tourists",
+                "geographicArea": [
+                    "Madrid",
+                    "Barcelona",
+                    "Spain",
+                    "European Union"
+                ]
+            },
+            "inLanguage": "es",
+            "availableLanguage": [
+                "es",
+                "en"
+            ],
+            "areaServed": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 4.6378,
+                    "longitude": -75.568
+                },
+                "geoRadius": "50000"
+            }
         }
-      ],
-      "provider": {
-        "@type": "TravelAgency",
-        "name": "Quindío Travel",
-        "telephone": "+573174426044",
-        "url": "https://quindiotravel.com.co",
-        "logo": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Armenia",
-          "addressRegion": "Quindío",
-          "addressCountry": "CO"
-        }
-      },
-      "location": [
-        {
-          "@type": "Place",
-          "name": "Salento",
-          "description": "Pueblo cafetero tradicional en el corazón del Eje Cafetero",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 4.6378,
-            "longitude": -75.5680
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Salento",
-            "addressRegion": "Quindío",
-            "addressCountry": "CO"
-          }
-        },
-        {
-          "@type": "Place",
-          "name": "Valle de Cocora",
-          "description": "Valle natural con palmas de cera gigantes, Patrimonio UNESCO",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 4.6830,
-            "longitude": -75.6330
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Salento",
-            "addressRegion": "Quindío",
-            "addressCountry": "CO"
-          }
-        },
-        {
-          "@type": "Place",
-          "name": "Filandia",
-          "description": "Pueblo colonial con arquitectura tradicional y mirador panorámico",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 4.6717,
-            "longitude": -75.6172
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Filandia",
-            "addressRegion": "Quindío",
-            "addressCountry": "CO"
-          }
-        },
-        {
-          "@type": "Place",
-          "name": "Coffee Tour El Ocaso",
-          "description": "Experiencia cafetera premium en finca tradicional",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Salento",
-            "addressRegion": "Quindío",
-            "addressCountry": "CO"
-          }
-        }
-      ],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "International Tourists",
-        "geographicArea": ["Madrid", "Barcelona", "Spain", "European Union"]
-      },
-      "inLanguage": "es",
-      "availableLanguage": ["es", "en"],
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 4.6378,
-          "longitude": -75.5680
-        },
-        "geoRadius": "50000"
-      }
-    }
     </script>
 
     <!-- Conversion Tracking -->

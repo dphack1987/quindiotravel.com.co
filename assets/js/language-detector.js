@@ -259,28 +259,17 @@ function updateLanguageSelector(lang) {
     }
 }
 
-// Actualizar meta tags para SEO
+// Meta tags de idioma
+//
+// IMPORTANTE: este bloque inyectaba en <head> un <link rel="alternate">
+// dinámico con hreflang="es_CO" (código inválido: BCP47 exige "es-CO") apuntando
+// a la misma URL con ?lang=, lo que DUPLICABA la etiqueta hreflang="es" ya
+// declarada de forma estática en el HTML y creaba un conflicto de anuncios de
+// hreflang en Search Console. Los hreflang los define únicamente el HTML.
+// Se conserva la función como no-op para no romper a los llamadores
+// (initLanguageSystem / setLanguage).
 function updateMetaTags(lang) {
-    const langMap = {
-        es: 'es_CO',
-        en: 'en_US',
-        pt: 'pt_BR',
-        fr: 'fr_FR',
-        ru: 'ru_RU'
-    };
-    
-    const langCode = langMap[lang] || 'es_CO';
-    
-    // Actualizar hreflang
-    let hreflang = document.querySelector('link[data-dynamic-hreflang]');
-    if (!hreflang) {
-        hreflang = document.createElement('link');
-        hreflang.rel = 'alternate';
-        hreflang.dataset.dynamicHreflang = 'true';
-        document.head.appendChild(hreflang);
-    }
-    hreflang.hreflang = langCode;
-    hreflang.href = window.location.href.split('?')[0] + `?lang=${lang}`;
+    return;
 }
 
 // Inicializar sistema de idioma

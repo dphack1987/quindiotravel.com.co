@@ -47,28 +47,43 @@
     
     <!-- Schema Reservation -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "TravelAgency",
-        "name": "Quindío Travel",
-        "description": "Operador turístico certificado RNT 18152 especializado en reservas de planes al Eje Cafetero",
-        "url": "https://quindiotravel.com.co/reservar-plan-eje-cafetero.html",
-        "telephone": "+57-317-4426044",
-        "email": "gerencia@quindiotravel.net",
-        "makesReservation": [
-            {
-                "@type": "Reservation",
-                "name": "Reserva Plan Eje Cafetero",
-                "reservationFor": {
-                    "@type": "TouristTrip",
-                    "name": "Plan Eje Cafetero Completo"
-                },
-                "priceCurrency": "COP",
-                "price": "425000",
-                "availability": "https://schema.org/InStock"
-            }
-        ]
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Quindío Travel",
+            "description": "Operador turístico certificado RNT 18152 especializado en reservas de planes al Eje Cafetero",
+            "url": "https://quindiotravel.com.co/reservar-plan-eje-cafetero.html",
+            "telephone": "+57-317-4426044",
+            "email": "gerencia@quindiotravel.net",
+            "makesReservation": [
+                {
+                    "@type": "Reservation",
+                    "name": "Reserva Plan Eje Cafetero",
+                    "reservationFor": {
+                        "@type": "TouristTrip",
+                        "name": "Plan Eje Cafetero Completo",
+                        "description": "Reservar plan Eje Cafetero al mejor precio. Cotización rápida con Quindío Travel RNT 18152. Planes desde $425.000 COP con disponibilidad en tiempo real. Reserva ahora y confirma en 2 horas."
+                    },
+                    "priceCurrency": "COP",
+                    "price": "425000",
+                    "availability": "https://schema.org/InStock"
+                }
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Cra 19 21N-79 Bloque 4 Apto 202",
+                "addressLocality": "Armenia",
+                "addressRegion": "Quindío",
+                "postalCode": "630001",
+                "addressCountry": "CO"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 4.5338,
+                "longitude": -75.6811
+            },
+            "image": "https://quindiotravel.com.co/apple-touch-icon.png"
+        }
     </script>
     <link rel="stylesheet" href="assets/css/back-to-top.css">
 </head>

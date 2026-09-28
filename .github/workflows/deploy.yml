@@ -47,6 +47,8 @@ jobs:
             node_modules
             dist
             __pycache__
+            programmatic-pages
+            generated-pages
           )
           for d in "${EXCLUDE_DIRS[@]}"; do
             rm -rf "$d"

@@ -225,10 +225,11 @@ class WhatsAppPayloadBuilder {
 
   // Método para tracking de conversión
   trackConversion(type, planId, metadata = {}) {
-    // Enviar evento a analytics
+    // Enviar evento a analytics (via dataLayer/GTM)
     if (typeof gtag !== 'undefined') {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-CONVERSION_ID',
+      gtag('event', 'qt_whatsapp_conversion', {
+        'conversion_type': type,
+        'plan_id': planId,
         'value': metadata.precio || 0,
         'currency': 'COP',
         'transaction_id': `${type}_${planId}_${Date.now()}`

@@ -13,7 +13,7 @@ const STATIC_URLS = [
   '/',
   '/index.html',
   '/planes.html',
-  '/styles.min.css',
+  '/styles.css',
   '/assets/css/critical.min.css',
   '/assets/js/planes-data.js',
   '/assets/js/atractivos-data.js',

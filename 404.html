@@ -18,8 +18,21 @@
                 '/atractivos/mariposario-quindio': '/mariposario-quindio.html',
                 '/atractivos/granja-mama-lulu': '/granja-mama-lulu.html',
                 '/atractivos/parque-los-arrieros': '/parque-los-arrieros.html',
-                '/atractivos/laberinto-mil-caminos': '/laberinto-mil-caminos.html'
+                '/atractivos/laberinto-mil-caminos': '/laberinto-mil-caminos.html',
+                // Paginas duplicadas eliminadas (antes con noindex + canonical)
+                '/blog-mejor-epoca-eje-cafetero.html': '/blog/mejor-epoca-visitar-quindio-2026.html',
+                '/mejor-epoca-para-visitar-quindio.html': '/blog/mejor-epoca-visitar-quindio-2026.html',
+                '/quindio-viajes-planes-turisticos.html': '/precios-planes-turisticos-quindio.html',
+                '/viajes-economicos-quindio.html': '/precios-planes-turisticos-quindio.html',
+                '/turismo-familiar-eje-cafetero.html': '/planes-familiares-quindio.html',
+                '/blog/mejor-epoca-para-visitar-quindio-en-2026-guia-completa.html': '/blog/mejor-epoca-visitar-quindio-2026.html'
             };
+            // Archivo del blog con acentos en el nombre (URL codificada)
+            try {
+                if (decodeURIComponent(path).indexOf('mejor-\u00e9poca-para-visitar-quind\u00edo-en-2026') === 0) {
+                    window.location.replace('/blog/mejor-epoca-visitar-quindio-2026.html'); return;
+                }
+            } catch (e) { /* decodificacion invalida */ }
             if (exact[path]) { window.location.replace(exact[path]); return; }
             var rules = [
                 [/^\/armenia(\/.*)?$/i, '/armenia.html'],
