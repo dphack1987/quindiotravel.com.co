@@ -25,7 +25,29 @@
                 '/quindio-viajes-planes-turisticos.html': '/precios-planes-turisticos-quindio.html',
                 '/viajes-economicos-quindio.html': '/precios-planes-turisticos-quindio.html',
                 '/turismo-familiar-eje-cafetero.html': '/planes-familiares-quindio.html',
-                '/blog/mejor-epoca-para-visitar-quindio-en-2026-guia-completa.html': '/blog/mejor-epoca-visitar-quindio-2026.html'
+                '/blog/mejor-epoca-para-visitar-quindio-en-2026-guia-completa.html': '/blog/mejor-epoca-visitar-quindio-2026.html',
+                // Redirecciones para programmatic-pages (excluidas del deploy)
+                '/programmatic-pages/alojamiento-economico-salento-2026.html': '/hoteles-en-salento-economicos.html',
+                '/programmatic-pages/alojamiento-lujo-quindio-2026.html': '/alojamientos.html',
+                '/programmatic-pages/hoteles-economicos-salento-2026.html': '/hoteles-en-salento-economicos.html',
+                '/programmatic-pages/valle-cocora-caminata-2026.html': '/valle-de-cocora.html',
+                '/programmatic-pages/tour-salento-desde-bogota-2026.html': '/salento.html',
+                '/programmatic-pages/mejor-epoca-visitar-filandia-2026.html': '/filandia.html',
+                '/programmatic-pages/hoteles-familiares-salento-2026.html': '/hoteles-en-salento-para-familias.html',
+                '/programmatic-pages/termales-santa-rosa-plan-2026.html': '/termales-santa-rosa.html',
+                '/programmatic-pages/parque-cafe-entradas-2026.html': '/parque-del-cafe.html',
+                '/programmatic-pages/finca-cafe-salento-2026.html': '/finca-hoteles-en-el-quindio.html',
+                '/programmatic-pages/planes-grupos-4-personas-quindio-2026.html': '/planes-grupos-amigos-quindio.html',
+                '/programmatic-pages/tour-eje-cafetero-sin-transporte-2026.html': '/planes.html',
+                '/programmatic-pages/hoteles-cerca-parque-cafe-2026.html': '/alojamientos.html',
+                // Redirecciones para generated-pages (excluidas del deploy)
+                '/generated-pages/alojamiento/cabanas-la-esmeralda.html': '/cabanas-la-esmeralda.html',
+                '/generated-pages/alojamiento/finca-hotel-la-dorada.html': '/finca-hotel-la-dorada.html',
+                '/generated-pages/alojamiento/hotel-campestre-cafe-cafe.html': '/hotel-campestre-cafe-cafe.html',
+                '/generated-pages/alojamiento/hotel-campestre-la-tata.html': '/hotel-campestre-la-tata.html',
+                '/generated-pages/alojamiento/hotel-campestre-las-camelias.html': '/hotel-campestre-las-camelias.html',
+                '/generated-pages/alojamiento/hotel-campestre-los-girasoles.html': '/finca-hotel-los-girasoles.html',
+                '/generated-pages/alojamiento/hotel-de-la-vega.html': '/hotel-de-la-vega.html'
             };
             // Archivo del blog con acentos en el nombre (URL codificada)
             try {
@@ -43,7 +65,18 @@
                 [/^\/atractivos(\/.*)?$/i, '/experiencias.html'],
                 [/^\/blog\/viajes-.+$/i, '/blog.html'],
                 [/^\/generated-pages(\/.*)?$/i, '/'],
-                [/^\/programmatic-pages(\/.*)?$/i, '/']
+                [/^\/programmatic-pages(\/.*)?$/i, '/'],
+                // Redirecciones específicas para patrones comunes en programmatic-pages
+                [/^\/programmatic-pages\/.*salento.*\.html$/i, '/salento.html'],
+                [/^\/programmatic-pages\/.*filandia.*\.html$/i, '/filandia.html'],
+                [/^\/programmatic-pages\/.*valle-cocora.*\.html$/i, '/valle-de-cocora.html'],
+                [/^\/programmatic-pages\/.*hotel.*\.html$/i, '/alojamientos.html'],
+                [/^\/programmatic-pages\/.*alojamiento.*\.html$/i, '/alojamientos.html'],
+                [/^\/programmatic-pages\/.*termales.*\.html$/i, '/termales-santa-rosa.html'],
+                [/^\/programmatic-pages\/.*parque-cafe.*\.html$/i, '/parque-del-cafe.html'],
+                [/^\/programmatic-pages\/.*panaca.*\.html$/i, '/panaca.html'],
+                [/^\/programmatic-pages\/.*finca.*\.html$/i, '/finca-hoteles-en-el-quindio.html'],
+                [/^\/programmatic-pages\/.*planes.*\.html$/i, '/planes.html']
             ];
             for (var i = 0; i < rules.length; i++) {
                 if (rules[i][0].test(path)) { window.location.replace(rules[i][1]); return; }
