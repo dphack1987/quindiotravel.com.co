@@ -28,3 +28,10 @@ lead_automation_system/**/*.pyc
 lead_automation_system/venv/
 lead_automation_system/.venv/
 lead_automation_system/*.log
+
+# Archivos temporales de diagnostico
+*.bak
+jsonld_*.txt
+googlebot-*.html
+publico-*.html
+prod-*.html
