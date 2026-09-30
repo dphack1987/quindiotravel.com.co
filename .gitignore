@@ -35,3 +35,7 @@ jsonld_*.txt
 googlebot-*.html
 publico-*.html
 prod-*.html
+# Carpetas de trabajo temporales
+_redirects-pSEO/
+backup-microdata-*/
+planes.html.bak-imagen*
