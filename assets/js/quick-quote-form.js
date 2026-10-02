@@ -155,6 +155,14 @@
         }
 
         trackConversion(eventType) {
+            if (Array.isArray(window.dataLayer)) {
+                window.dataLayer.push({
+                    event: eventType,
+                    event_category: 'quick_quote',
+                    event_label: 'form_submission',
+                    page_path: window.location.pathname
+                });
+            }
             if (typeof gtag !== 'undefined') {
                 gtag('event', eventType, {
                     'event_category': 'quick_quote',

@@ -158,7 +158,16 @@
         }
 
         trackConversion(eventType) {
-            // Tracking de conversiones (puedes integrar con Google Analytics)
+            // Tracking de conversiones (GTM via dataLayer)
+            if (Array.isArray(window.dataLayer)) {
+                window.dataLayer.push({
+                    event: eventType,
+                    event_category: 'urgency_banner',
+                    event_label: 'countdown_timer',
+                    value: this.remainingTime,
+                    page_path: window.location.pathname
+                });
+            }
             if (typeof gtag !== 'undefined') {
                 gtag('event', eventType, {
                     'event_category': 'urgency_banner',

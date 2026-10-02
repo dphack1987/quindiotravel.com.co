@@ -226,6 +226,16 @@ class WhatsAppPayloadBuilder {
   // Método para tracking de conversión
   trackConversion(type, planId, metadata = {}) {
     // Enviar evento a analytics (via dataLayer/GTM)
+    if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: 'qt_whatsapp_conversion',
+        conversion_type: type,
+        plan_id: planId || '',
+        value: metadata.precio || 0,
+        currency: 'COP',
+        page_path: window.location.pathname
+      });
+    }
     if (typeof gtag !== 'undefined') {
       gtag('event', 'qt_whatsapp_conversion', {
         'conversion_type': type,
