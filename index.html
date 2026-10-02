@@ -3885,14 +3885,20 @@
         let currentStep = 1;
         const totalSteps = 4;
 
-        // Sistema de rotación de popups
+        // Sistema de rotación de popups (octubre: la promoción del mes va primero)
         const popups = [
-            { id: 'lead-capture-popup', type: 'quiz' },
             { id: 'promo-popup', type: 'promo' },
+            { id: 'lead-capture-popup', type: 'quiz' },
             { id: 'diciembre-popup', type: 'diciembre' }
         ];
 
         function getPopupToShow() {
+            // Reinicio único de la rotación para que en octubre todos empiecen por la promo
+            if (localStorage.getItem('popupRotationVersion') !== 'oct2026') {
+                localStorage.setItem('popupRotationVersion', 'oct2026');
+                localStorage.setItem('popupRotationIndex', '0');
+            }
+
             // Obtener índice almacenado o iniciar en 0
             let popupIndex = parseInt(localStorage.getItem('popupRotationIndex')) || 0;
             
@@ -3923,10 +3929,10 @@
             }
         }
 
-        // Mostrar popup después de 30 segundos con rotación
+        // Mostrar popup después de 15 segundos con rotación
         setTimeout(() => {
             showRotatedPopup();
-        }, 30000);
+        }, 15000);
 
         // Función closePopup será sobrescrita por el script robusto más abajo
         // Esta función temporal asegura compatibilidad si el script principal no carga
