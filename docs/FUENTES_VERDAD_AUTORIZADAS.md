@@ -1,7 +1,7 @@
 # 📋 Fuentes de Verdad Autorizadas - Quindío Travel
 
 **Fecha:** 2026-08-13  
-**Última actualización:** 2026-09-25 (promoción del mes: septiembre 2026)  
+**Última actualización:** 2026-10-02 (promoción del mes: octubre 2026)  
 **Estado:** Documentación Oficial
 
 ---
@@ -14,12 +14,12 @@
 |-----------|-----|--------|---------------|
 | `docs/informacion-de-precios/PORTAFOLIO PLANES NACIONALES 2026.docx` | Precios planes 1-6 | ✅ OFICIAL | Fuente de verdad definitiva |
 | `docs/plan_turistico_exclusivo/Plan salento filandia Y ocaso.docx` | Plan Exclusivo Salento-Filandia-Ocaso | ✅ OFICIAL | Plan especial 4D/3N inmersión cafetera |
-| `docs/promocion del mes/promocion del mes-septiembre-2026.docx` | Promoción Septiembre 2026 | ✅ OFICIAL | Promoción del mes vigente (5D/4N) |
+| `promocion-del-mes/plan-octubre-solo-parques.docx` | Promoción Octubre 2026 | ✅ OFICIAL | Promoción del mes vigente (5D/4N Solo Parques) |
 | `docs/promociones y precios para diciembre/planes especiales para diciembre con oferta max 30 cupos.docx` | Planes Especiales Diciembre (original) | ✅ OFICIAL | Temporada alta, máx. 30 cupos |
 | `docs/PLANES_ESPECIALES_DICIEMBRE.md` | Planes especiales temporada alta | ✅ OFICIAL | Temporada alta diciembre |
 | `docs/PROMPTS_IA_BIBLIOTECA_WHATSAPP.md` | Prompt maestro WhatsApp segmentado | ✅ OFICIAL | Anti-alucinación precios |
 | `docs/biblioteca-whatsapp-planes.md` | Respuestas WhatsApp por plan | ✅ OFICIAL | v1 P/F/I/G |
-| `promo-septiembre-2026.html` | Promoción del mes septiembre | ✅ OFICIAL | Plan Septiembre 2026 (5D/4N) |
+| `promo-octubre-2026.html` | Promoción del mes octubre | ✅ OFICIAL | Plan Octubre 2026 (5D/4N Solo Parques) |
 | `documentation_archive/PROMO_SEO_VISUAL_IMPROVEMENT_GUIDE.md` | Guía SEO promoción (histórico agosto) | 📁 HISTÓRICO | No usar para precios |
 
 ---
@@ -96,23 +96,30 @@
 - Regreso a aeropuerto de Pereira o Armenia
 - Comisión del 10%
 
-### **PROMOCIÓN SEPTIEMBRE 2026 (5 Días / 4 Noches):**
-**Fuente:** `docs/promocion del mes/promocion del mes-septiembre-2026.docx`
+### **PROMOCIÓN OCTUBRE 2026 (5 Días / 4 Noches - Solo Parques):**
+**Fuente:** `promocion-del-mes/plan-octubre-solo-parques.docx`
 
 || Alojamiento | Doble | Triple | Cuádruple ||
 ||------------|-------|--------|-----------||
-|| Cabañas La Esmeralda | $1.577.000 | $1.340.000 | $1.200.000 ||
-|| Hotel Campestre Los Girasoles | $2.085.000 | $1.820.000 | $1.690.000 ||
-|| Hotel Campestre Café Café | $2.350.000 | $2.035.000 | $1.915.000 ||
+|| Cabañas La Esmeralda | $1.440.000 | $1.260.000 | $1.125.000 ||
+|| Hotel Campestre Los Girasoles | $1.940.000 | $1.765.000 | $1.615.000 ||
+|| Hotel Campestre Café Café | $2.204.000 | $2.030.000 | $1.840.000 ||
 
 **Incluye:**
 - 4 noches de alojamiento
 - 4 desayunos y 4 cenas
-- Pasaporte al Parque del Café
-- Valle de Cocora, Salento y Filandia (mirador, museo del canasto, calle del tiempo detenida)
-- Parque PANACA y Parque RECUCA
+- Pasaporte al Parque del Café (múltiple)
+- Pasaporte PANACA (TERRA)
+- Parque los Arrieros y Parque RECUCA (con Bogadera)
 - Asistencia médica
-- Transporte desde terminal de transporte o aeropuerto de Armenia hasta el alojamiento y atractivos propuestos (Radio Taxi del Quindío)
+- Transporte desde terminal de transporte o aeropuerto de Armenia hasta el alojamiento elegido y los atractivos propuestos (Radio Taxi del Quindío)
+
+**Itinerario:**
+- Día 1: Llegada al terminal/aeropuerto de Armenia, traslado al alojamiento, registro, disfrute de instalaciones y cena
+- Día 2: Traslado al Parque los Arrieros (8:00 a.m. - 9:00 a.m.), almuerzo no incluido, regreso 5:00 p.m. y cena
+- Día 3: Desayuno 9:00 a.m., Parque del Café con pasaporte múltiple, almuerzo no incluido, regreso 5:00 p.m. y cena
+- Día 4: Desayuno 9:00 a.m., PANACA con pasaporte TERRA, almuerzo no incluido, regreso 5:00 p.m. y cena
+- Día 5: Desayuno 8:00 a.m., RECUCA con Bogadera, a medio día traslado al alojamiento y al aeropuerto o terminal de Armenia
 
 ---
 
@@ -134,9 +141,9 @@
 4. **Temporada alta** disponible en:
    - Documento de planes especiales diciembre (15 dic - 20 ene)
 5. **Promociones especiales** disponibles en:
-   - Promoción Septiembre 2026 (5D/4N, según DOCX de septiembre)
+   - Promoción Octubre 2026 (5D/4N Solo Parques, según DOCX `promocion-del-mes/plan-octubre-solo-parques.docx`)
 6. **Transporte Placa Blanca** solo disponible por cotización especial
-7. **Planes autorizados** para uso general en el website: planes 1-6 + Plan Exclusivo Salento-Filandia-Ocaso + Promoción Septiembre 2026
+7. **Planes autorizados** para uso general en el website: planes 1-6 + Plan Exclusivo Salento-Filandia-Ocaso + Promoción Octubre 2026
 
 ---
 
@@ -152,12 +159,12 @@
 
 ## 🎄 PROMOCIONES AUTORIZADAS
 
-### **Promoción Septiembre 2026 (vigente):**
-- **Fuente:** `docs/promocion del mes/promocion del mes-septiembre-2026.docx` ✅ OFICIAL
-- **Página:** `promo-septiembre-2026.html` ✅ OFICIAL
-- **Período:** septiembre 2026
-- **Contenido:** Plan 5D/4N, tarifa por persona, Radio Taxi del Quindío
-- **Desde:** $1.200.000 (cuádruple, Cabañas La Esmeralda)
+### **Promoción Octubre 2026 (vigente):**
+- **Fuente:** `promocion-del-mes/plan-octubre-solo-parques.docx` ✅ OFICIAL
+- **Página:** `promo-octubre-2026.html` ✅ OFICIAL
+- **Período:** octubre 2026
+- **Contenido:** Plan 5D/4N Solo Parques (Parque del Café, PANACA, Parque los Arrieros, RECUCA), tarifa por persona, Radio Taxi del Quindío
+- **Desde:** $1.125.000 (cuádruple, Cabañas La Esmeralda)
 
 ### **Planes Especiales Diciembre 2026:**
 - **Fuente:** `docs/PLANES_ESPECIALES_DICIEMBRE.md` ✅ OFICIAL (original DOCX: `docs/promociones y precios para diciembre/...docx`)
