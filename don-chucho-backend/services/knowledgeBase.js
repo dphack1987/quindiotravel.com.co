@@ -133,7 +133,7 @@ class KnowledgeBase {
             },
             clima: {
                 'mejor epoca': {
-                    seco: ['Enero', 'Febrero', 'Julio', 'Agosto'],
+                    seco: ['Enero', 'Febrero', 'Julio'],
                     lluvioso: ['Abril', 'Mayo', 'Octubre', 'Noviembre'],
                     recomendacion: 'Enero-febrero para clima perfecto, septiembre para menos turistas'
                 },

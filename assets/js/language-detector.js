@@ -1,5 +1,5 @@
 // Sistema de detección y selección de idioma - Quindío Travel
-// Updated: 2026-08-06 - Simplificado para mejor funcionamiento
+// Updated: 2026-10-02 - Simplificado para mejor funcionamiento
 
 const translations = {
     es: {
