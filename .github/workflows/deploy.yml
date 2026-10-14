@@ -64,6 +64,10 @@ jobs:
           rm -f REPORTE-COMPETITIVO-VENTAS-ONLINE.md \
                 Untitled-1.md \
                 auditoria_seo_quindio_travel.html \
+                DIAGNOSTICO-VENTAS-2026.md \
+                DIAGNOSTICO-DEPLOYMENT-2026.md \
+                SEGUIMIENTO-METRICAS-2026.md \
+                GUIA-RESEÑAS-REALES.md \
                 package.json package-lock.json postcss.config.js \
                 .htaccess .htpasswd .gitignore .gitattributes .editorconfig .npmrc
           # Variables de entorno jamas se publican
