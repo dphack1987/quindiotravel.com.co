@@ -1,4 +1,5 @@
 ﻿// Base de datos oficial de 6 planes turísticos - Quindío Travel (RNT 18152)
+// Última actualización: 14 Octubre 2026 - Forzar deploy de GitHub Pages
 const planesData = [
   {
     id: "plan-1",
