@@ -1,0 +1,4 @@
+# Este archivo desactiva Jekyll en GitHub Pages
+# GitHub Pages por defecto usa Jekyll para procesar sitios estáticos
+# Al desactivarlo, los archivos se sirven tal cual sin procesamiento
+# Esto evita problemas con archivos que empiezan con _ o con ciertos caracteres
