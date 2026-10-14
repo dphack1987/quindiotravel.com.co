@@ -326,8 +326,9 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
       };
     
     const fotoAlojamiento = plan.imagen || fotosAlojamiento[primerAlojamiento] || "assets/images/alojamientos/hotel-de-la-vega/eaa775d5.avif";
-    
-    const precioDesde = plan.precioSinTransporte;
+
+    // Usar precio con transporte en ocupación cuádruple (la más económica y común)
+    const precioDesde = plan.preciosOcupacion ? plan.preciosOcupacion.cuadruple : plan.precioConTransporte;
     
     // Badge de urgencia basado en disponibilidad
     const urgenciaMap = {

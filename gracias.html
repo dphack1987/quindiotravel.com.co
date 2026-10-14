@@ -128,6 +128,14 @@
             .gracias-card { padding: 40px 24px; }
             .gracias-title { font-size: 1.6rem; }
         }
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3); transform: scale(1); }
+            50% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5); transform: scale(1.02); }
+        }
+        @keyframes pulse-fire {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
     </style>
 </head>
 <body>
@@ -187,15 +195,42 @@
                     </div>
                 </div>
 
-                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel%2C%20acabo%20de%20enviar%20un%20formulario%20y%20quiero%20agilizar%20mi%20cotizaci%C3%B3n.%20RNT%2018152" target="_blank" rel="noopener" class="gracias-whatsapp">
+                <a href="https://wa.me/573174426044?text=Hola%20Quind%C3%ADo%20Travel%2C%20acabo%20de%20enviar%20un%20formulario%20y%20quiero%20agilizar%20mi%20cotizaci%C3%B3n.%20RNT%2018152" target="_blank" rel="noopener" class="gracias-whatsapp" style="animation: pulse-green 2s infinite;">
                     <i class="fab fa-whatsapp"></i> Ir a WhatsApp ahora
                 </a>
+
+                <!-- CTA adicional para explorar planes -->
+                <div style="margin-top: 25px; padding-top: 25px; border-top: 1px solid rgba(46, 90, 54, 0.1);">
+                    <p style="font-size: 0.95rem; color: #666; margin-bottom: 15px;">Mientras esperas, explora nuestros planes:</p>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+                        <a href="planes.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: white; border: 2px solid var(--verde-cafe); color: var(--verde-cafe); border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+                            <i class="fas fa-list"></i> Ver todos los planes
+                        </a>
+                        <a href="comparar-planes.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--amarillo-suave); color: var(--verde-cafe); border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+                            <i class="fas fa-balance-scale"></i> Comparar planes
+                        </a>
+                    </div>
+                </div>
 
                 <div class="gracias-trust">
                     <p><i class="fas fa-shield-alt"></i> Operador certificado RNT 18152 · 150+ reseñas Google 4.7★ · 1,200+ viajeros al año</p>
                 </div>
             </div>
         </section>
+
+        <!-- Banner de urgencia -->
+        <div style="background: linear-gradient(135deg, rgba(255, 68, 68, 0.95), rgba(220, 53, 69, 0.95)); color: white; padding: 20px; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <i class="fas fa-fire" style="font-size: 1.5rem; animation: pulse-fire 1.5s infinite;"></i>
+                <div>
+                    <p style="margin: 0; font-weight: 700; font-size: 1.1rem;">¡Últimos cupos disponibles para esta semana!</p>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; opacity: 0.9;">Reserva ahora para asegurar tu lugar</p>
+                </div>
+                <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20quiero%20reservar%20mi%20lugar%20ahora%20para%20asegurar%20disponibilidad.%20RNT%2018152" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 25px; background: white; color: #dc3545; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s;">
+                    <i class="fab fa-whatsapp"></i> Reservar ahora
+                </a>
+            </div>
+        </div>
     </main>
 
     <footer class="main-footer-section" style="padding: 40px 20px; text-align: center; background: #1a3d2e; color: white;">

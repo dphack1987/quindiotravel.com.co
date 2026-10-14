@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Planes | Quindío Travel - Eje Cafetero</title>
+    <meta name="description" content="Compara nuestros 3 planes principales: Escapada Cafetera (2D/1N), Aventura Natural (3D/2N) y Experiencia Completa (4D/3N). Encuentra el plan perfecto para ti.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://quindiotravel.com.co/comparar-planes.html">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .comparison-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--verde-cafe), var(--verde-claro));
+            color: white;
+        }
+        .comparison-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .comparison-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px auto;
+            max-width: 1200px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .comparison-table th {
+            background: #f8f9fa;
+            font-weight: 700;
+            color: var(--verde-cafe);
+            font-size: 1.1rem;
+        }
+        .comparison-table th:first-child {
+            text-align: left;
+            background: var(--verde-cafe);
+            color: white;
+            width: 25%;
+        }
+        .comparison-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .comparison-table .plan-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--verde-cafe);
+            margin-bottom: 10px;
+        }
+        .comparison-table .plan-duration {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .comparison-table .plan-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--marron-madera);
+            margin-bottom: 15px;
+        }
+        .comparison-table .plan-price span {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #888;
+        }
+        .comparison-table .btn-compare {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--verde-cafe);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .comparison-table .btn-compare:hover {
+            background: var(--verde-claro);
+            transform: translateY(-2px);
+        }
+        .comparison-table .check {
+            color: #25D366;
+            font-size: 1.5rem;
+        }
+        .comparison-table .cross {
+            color: #dc3545;
+            font-size: 1.5rem;
+        }
+        .comparison-table .partial {
+            color: #ffc107;
+            font-size: 1.5rem;
+        }
+        .comparison-table .highlight {
+            background: #e8f5e9;
+        }
+        .comparison-table .highlight th {
+            background: #d4e8d4;
+        }
+        @media (max-width: 768px) {
+            .comparison-table {
+                display: block;
+            }
+            .comparison-table th, .comparison-table td {
+                padding: 15px 10px;
+                font-size: 0.9rem;
+            }
+            .comparison-header h1 {
+                font-size: 1.8rem;
+            }
+            .comparison-table .plan-price {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-qt.png" alt="Quindío Travel Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="planes.html">Planes</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="https://wa.me/573174426044" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header de Comparación -->
+    <section class="comparison-header">
+        <div class="container">
+            <h1>Comparación de Planes</h1>
+            <p>Encuentra el plan perfecto para tu viaje al Eje Cafetero</p>
+        </div>
+    </section>
+
+    <!-- Tabla de Comparación -->
+    <section class="container">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>
+                        <div class="plan-name">Escapada Cafetera</div>
+                        <div class="plan-duration">2 Días / 1 Noche</div>
+                        <div class="plan-price">$602.000 <span>/persona</span></div>
+                        <a href="plan-1.html" class="btn-compare">Ver Plan</a>
+                    </th>
+                    <th class="highlight">
+                        <div class="plan-name">Aventura Natural</div>
+                        <div class="plan-duration">3 Días / 2 Noches</div>
+                        <div class="plan-price">$758.000 <span>/persona</span></div>
+                        <a href="plan-2.html" class="btn-compare">Ver Plan</a>
+                    </th>
+                    <th>
+                        <div class="plan-name">Experiencia Completa</div>
+                        <div class="plan-duration">4 Días / 3 Noches</div>
+                        <div class="plan-price">$1.078.000 <span>/persona</span></div>
+                        <a href="plan-3.html" class="btn-compare">Ver Plan</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="fas fa-calendar-alt"></i> Duración</td>
+                    <td>2 Días / 1 Noche</td>
+                    <td class="highlight">3 Días / 2 Noches</td>
+                    <td>4 Días / 3 Noches</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-money-bill-wave"></i> Precio (cuádruple)</td>
+                    <td>$602.000</td>
+                    <td class="highlight">$758.000</td>
+                    <td>$1.078.000</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-utensils"></i> Alojamiento</td>
+                    <td>1 noche</td>
+                    <td class="highlight">2 noches</td>
+                    <td>3 noches</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-utensils"></i> Alimentación</td>
+                    <td>Desayuno + Cena</td>
+                    <td class="highlight">Desayuno + Cena</td>
+                    <td>Desayuno + Cena</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-ticket-alt"></i> Parque del Café</td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td class="highlight"><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-horse"></i> PANACA</td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td class="highlight"><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-tree"></i> Valle de Cocora</td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td class="highlight"><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-church"></i> Salento</td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td class="highlight"><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-house"></i> Filandia</td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td class="highlight"><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-hot-tub"></i> Termales Santa Rosa</td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td class="highlight"><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-times cross"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-bus"></i> Transporte incluido</td>
+                    <td><i class="fas fa-partial partial"></i> Opcional</td>
+                    <td class="highlight"><i class="fas fa-partial partial"></i> Opcional</td>
+                    <td><i class="fas fa-partial partial"></i> Opcional</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-user-tie"></i> Asistencia local</td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td class="highlight"><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-heartbeat"></i> Asistencia médica</td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td class="highlight"><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-users"></i> Ideal para</td>
+                    <td>Fin de semana rápido</td>
+                    <td class="highlight">Primera vez en el Eje</td>
+                    <td>Experiencia completa</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-star"></i> Nivel de intensidad</td>
+                    <td>Bajo</td>
+                    <td class="highlight">Medio</td>
+                    <td>Alto</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- CTA WhatsApp -->
+        <div style="text-align: center; margin: 60px 0; padding: 40px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 16px; color: white;">
+            <h2 style="margin-bottom: 15px;">¿Necesitas ayuda para elegir?</h2>
+            <p style="margin-bottom: 25px; font-size: 1.1rem; opacity: 0.95;">Escríbenos por WhatsApp y te ayudamos a encontrar el plan perfecto para ti</p>
+            <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20quiero%20ayuda%20para%20elegir%20el%20plan%20perfecto%20para%20mi%20viaje" target="_blank" rel="noopener" class="btn" style="background: white; color: #25D366; padding: 15px 40px; font-size: 1.1rem;">
+                <i class="fab fa-whatsapp"></i> Ayúdame a elegir
+            </a>
+        </div>
+
+        <!-- Regresar -->
+        <div style="text-align: center; margin-bottom: 40px;">
+            <a href="planes.html" style="color: var(--verde-cafe); font-weight: 600; text-decoration: none;">
+                <i class="fas fa-arrow-left"></i> Volver al listado de planes
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer-section" id="contacto">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Quindío Travel</h3>
+                <p>No solo vendemos viajes; somos la guía oficial para descubrir el Quindío.</p>
+                <p><strong>Gerente:</strong> Álvaro Alzate Ortiz</p>
+                <p><strong>Celular / WhatsApp:</strong> (317) 442-6044</p>
+                <p><strong>Correo:</strong> gerencia@quindiotravel.net</p>
+                <p><strong>RNT:</strong> 18152</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="planes.html">Planes Turísticos</a></li>
+                    <li><a href="index.html#hoteles">Alojamientos</a></li>
+                    <li><a href="index.html#mapa">Mapa Turístico</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <div class="social-icons">
+                    <a href="https://wa.me/573174426044" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/quindiotravel" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/quindiotravel" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quindío Travel. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20quiero%20ayuda%20para%20elegir%20un%20plan" class="whatsapp-float pulse" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Escríbenos</span>
+    </a>
+    <link rel="stylesheet" href="assets/css/whatsapp-float.css">
+</body>
+</html>

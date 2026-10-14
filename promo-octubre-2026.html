@@ -300,7 +300,16 @@
         .gallery-item:hover .gallery-overlay {
             transform: translateY(0);
         }
-        
+
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); transform: scale(1); }
+            50% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); transform: scale(1.02); }
+        }
+        @keyframes pulse-fire {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+
         .pricing-section {
             background: linear-gradient(135deg, #2E5A36, #4CAF50);
             padding: 80px 20px;
@@ -507,9 +516,27 @@
             </div>
             <h1>🌴 Receso y Puente de Octubre 2026: Plan Solo Parques 5D/4N</h1>
             <p>Solo Parques del Eje Cafetero - 5 Días / 4 Noches Plan Completo</p>
-            <div class="urgency-box">
-                <span><i class="fas fa-exclamation-triangle"></i> CONSULTA DISPONIBILIDAD ACTUAL</span>
-                <span style="display:block; margin-top:10px;"><i class="fas fa-calendar-check"></i> FECHA LÍMITE: 13 DE OCTUBRE DE 2026 · VUELTA A CLASES</span>
+
+            <!-- Banner de urgencia mejorado -->
+            <div class="urgency-box" style="background: rgba(255, 68, 68, 0.95); border: 3px solid white; animation: pulse-fire 2s infinite;">
+                <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 1.5rem;"></i>
+                        <span style="font-weight: 700; font-size: 1.1rem;">¡ÚLTIMOS CUPOS DISPONIBLES!</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>FECHA LÍMITE: 31 DE OCTUBRE DE 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA WhatsApp destacado -->
+            <div style="margin-top: 25px;">
+                <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20quiero%20consultar%20disponibilidad%20para%20la%20Promoción%20Octubre%202026%20-%20Solo%20Parques%205D%2F4N.%20RNT%2018152" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; padding: 15px 40px; background: #25D366; color: white; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); animation: pulse-green 2s infinite;">
+                    <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i>
+                    Consultar disponibilidad ahora
+                </a>
             </div>
         </div>
     </section>
