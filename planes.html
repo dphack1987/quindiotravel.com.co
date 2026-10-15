@@ -391,11 +391,11 @@
             </div>
 
             <div class="hero-buttons">
-                <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20quiero%20información%20sobre%20un%20plan%20turístico%20del%20Eje%20Cafetero" target="_blank" rel="noopener" class="btn btn-whatsapp-hero">
-                    <i class="fab fa-whatsapp"></i> Escríbenos ahora
+                <a href="https://wa.me/573174426044?text=Hola%20Quindío%20Travel,%20quiero%20información%20sobre%20un%20plan%20turístico%20del%20Eje%20Cafetero" target="_blank" rel="noopener" class="btn btn-whatsapp-hero" aria-label="Contactar por WhatsApp para información sobre planes turísticos">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Escríbenos ahora
                 </a>
-                <a href="#catalogo-planes" class="btn btn-outline-hero">
-                    <i class="fas fa-eye"></i> Ver los planes
+                <a href="#catalogo-planes" class="btn btn-outline-hero" aria-label="Ver catálogo de planes turísticos">
+                    <i class="fas fa-eye" aria-hidden="true"></i> Ver los planes
                 </a>
             </div>
 
@@ -953,7 +953,7 @@
                         card.className = "plan-card-enhanced";
                         card.innerHTML = `
                           <div class="plan-card-image-enhanced">
-                            ${fotoAlojamiento ? `<img src="${fotoAlojamiento}" alt="${plan.titulo}">` : '<div class="plan-card-placeholder"></div>'}
+                            ${fotoAlojamiento ? `<img src="${fotoAlojamiento}" alt="${plan.titulo} - Plan turístico en el Eje Cafetero" loading="lazy">` : '<div class="plan-card-placeholder" aria-label="Imagen no disponible"></div>'}
                             <div class="plan-badge-overlay">
                               <div class="plan-badge-enhanced">${plan.badge}</div>
                             </div>
