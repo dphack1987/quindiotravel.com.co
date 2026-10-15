@@ -331,13 +331,13 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
     // Usar precio con transporte en ocupación cuádruple (la más económica y común)
     const precioDesde = plan.preciosOcupacion ? plan.preciosOcupacion.cuadruple : plan.precioConTransporte;
     
-    // Badge de urgencia basado en disponibilidad
+    // Badge de urgencia basado en popularidad (truthful)
     const urgenciaMap = {
-      1: { icon: 'fa-fire', cls: 'urgency-hot', text: '¡ÚLTIMO CUPO!' },
-      2: { icon: 'fa-fire', cls: 'urgency-hot', text: '¡Últimos 2 cupos!' },
-      3: { icon: 'fa-fire', cls: 'urgency-hot', text: '¡Últimos 3 cupos!' },
-      4: { icon: 'fa-bolt', cls: 'urgency-popular', text: 'Cupos limitados' },
-      5: { icon: 'fa-bolt', cls: 'urgency-popular', text: 'Cupos limitados' },
+      1: { icon: 'fa-fire', cls: 'urgency-hot', text: 'Más vendido' },
+      2: { icon: 'fa-fire', cls: 'urgency-hot', text: 'Muy popular' },
+      3: { icon: 'fa-bolt', cls: 'urgency-popular', text: 'Popular' },
+      4: { icon: 'fa-star', cls: 'urgency-deal', text: 'Recomendado' },
+      5: { icon: 'fa-star', cls: 'urgency-deal', text: 'Disponible' },
       6: { icon: 'fa-star', cls: 'urgency-deal', text: 'Disponible' },
       7: { icon: 'fa-star', cls: 'urgency-deal', text: 'Disponible' },
       8: { icon: 'fa-star', cls: 'urgency-deal', text: 'Disponible' },
@@ -362,14 +362,10 @@ function renderizarPlanes(filtroDuracion = "all", filtroAtractivo = "all", conte
           <span class="price-from-value">$${precioDesde.toLocaleString('es-CO')}</span>
           <span class="price-from-unit">/persona</span>
         </div>
-        ${disponibilidad <= 4 ? `
-        <div class="plan-seats-left">
-          <div class="seats-bar">
-            <div class="seats-fill" style="width: ${(disponibilidad/10)*100}%"></div>
-          </div>
-          <span class="seats-text"><i class="fas fa-users"></i> Solo ${disponibilidad} cupos esta semana</span>
+        <div class="plan-urgency-service">
+          <i class="fas fa-bolt"></i>
+          <span>Respuesta en &lt;1 hora</span>
         </div>
-        ` : ''}
       </div>
       
       <div class="plan-card-header-enhanced">
