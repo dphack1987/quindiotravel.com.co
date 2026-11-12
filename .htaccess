@@ -141,9 +141,9 @@
     RewriteRule ^turismo-familiar-eje-cafetero\.html$ /planes-familiares-quindio.html [R=301,L]
 </IfModule>
 
-# Redirect August offers to October promotion (agosto -> octubre 2026)
+# Redirect August offers to current promotion (agosto -> noviembre 2026)
 <IfModule mod_rewrite.c>
-    RewriteRule ^blog/ofertas-temporada-agosto-2026\.html$ /promo-octubre-2026.html [R=301,L]
+    RewriteRule ^blog/ofertas-temporada-agosto-2026\.html$ /promo-noviembre-2026.html [R=301,L]
 </IfModule>
 
 # Protect Files

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var DISMISS_KEY = 'qt_promo_oct2026_closed';
+    var DISMISS_KEY = 'qt_promo_nov2026_closed';
     var DISMISS_HOURS = 24;
     var SHOW_DELAY_MS = 15000;
 
@@ -9,7 +9,7 @@
         var d = new Date();
         var m = d.getMonth() + 1;
         var y = d.getFullYear();
-        return (y === 2026 && m === 10);
+        return (y === 2026 && m === 11);
     }
 
     function recentlyDismissed() {
@@ -28,29 +28,29 @@
             '  <div class="popup-content">' +
             '    <button class="popup-close" data-popup-close aria-label="Cerrar popup">&times;</button>' +
             '    <div class="popup-header">' +
-            '      <h3>&#128293; &iexcl;OFERTA EXCLUSIVA OCTUBRE 2026!</h3>' +
-            '      <p>Plan Octubre: 5 D&iacute;as / 4 Noches Solo Parques</p>' +
+            '      <h3>&#128293; &iexcl;OFERTA EXCLUSIVA NOVIEMBRE 2026!</h3>' +
+            '      <p>Plan Eje Cafetero Quind&iacute;o: 4 D&iacute;as / 3 Noches</p>' +
             '    </div>' +
             '    <div class="promo-popup-content">' +
             '      <div style="text-align: center; margin-bottom: 20px;">' +
-            '        <img src="assets/images/atractivos/parque-del-cafe.jpg" alt="Plan Octubre 2026 - Parques del Eje Cafetero" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;" loading="lazy">' +
+            '        <img src="assets/images/promocion-mes/promo-noviembre.webp" alt="Promoci&oacute;n Noviembre 2026 - Plan Eje Cafetero Quind&iacute;o" style="width: 100%; max-height: 200px; object-fit: cover; object-position: center top; border-radius: 10px; margin-bottom: 15px;" loading="lazy">' +
             '        <div style="background: #E63946; color: white; padding: 8px 16px; border-radius: 20px; display: inline-block; font-weight: 800; font-size: 0.9rem; margin-bottom: 15px;">&#128293; PROMOCI&Oacute;N DEL MES</div>' +
             '      </div>' +
             '      <div style="margin-bottom: 20px;">' +
-            '        <h4 style="color: #1b4332; margin-bottom: 10px;">5 D&iacute;as / 4 Noches (4 desayunos y 4 cenas incluidos)</h4>' +
+            '        <h4 style="color: #1b4332; margin-bottom: 10px;">4 D&iacute;as / 3 Noches (m&iacute;nimo 2 personas)</h4>' +
             '        <ul style="list-style: none; padding: 0; margin: 0;">' +
-            '          <li style="padding: 8px 0; border-bottom: 1px solid #eee;">&#127976; 4 noches de alojamiento con desayuno y cena</li>' +
-            '          <li style="padding: 8px 0; border-bottom: 1px solid #eee;">&#127915; Pasaportes a Parque del Caf&eacute;, PANACA, Parque los Arrieros y RECUCA</li>' +
-            '          <li style="padding: 8px 0; border-bottom: 1px solid #eee;">&#128666; Traslados y asistencia m&eacute;dica</li>' +
-            '          <li style="padding: 8px 0;">&#128205; Parque del Caf&eacute;, PANACA, Parque los Arrieros y RECUCA</li>' +
+            '          <li style="padding: 8px 0; border-bottom: 1px solid #eee;">&#127976; Alojamiento en Salento en hotel t&iacute;pico</li>' +
+            '          <li style="padding: 8px 0; border-bottom: 1px solid #eee;">&#127796; Valle de Cocora y Mirador El Bosque</li>' +
+            '          <li style="padding: 8px 0; border-bottom: 1px solid #eee;">&#127968; Filandia y Coffee Tour en la finca El Ocaso</li>' +
+            '          <li style="padding: 8px 0;">&#128666; Transporte desde Pereira o Armenia y asistencia m&eacute;dica</li>' +
             '        </ul>' +
             '      </div>' +
             '      <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center;">' +
-            '        <div style="color: #1b4332; font-size: 1.8rem; font-weight: 800;">Desde $1.125.000 <span style="font-size: 0.8rem; color: #666;">/ persona (cu&aacute;druple)</span></div>' +
+            '        <div style="color: #1b4332; font-size: 1.8rem; font-weight: 800;">$1.545.000 <span style="font-size: 0.8rem; color: #666;">/ persona (m&iacute;nimo 2 pax)</span></div>' +
             '      </div>' +
             '      <div style="display: flex; gap: 10px; flex-wrap: wrap;">' +
-            '        <a href="https://wa.me/573174426044?text=Hola,%20quiero%20aprovechar%20la%20promoci%C3%B3n%20Octubre%202026" target="_blank" rel="noopener" style="flex: 1; background: #25D366; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">&#128172; Reservar Ahora</a>' +
-            '        <a href="promo-octubre-2026.html" style="flex: 1; background: transparent; border: 2px solid #1b4332; color: #1b4332; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center;">Ver Detalles</a>' +
+            '        <a href="https://wa.me/573174426044?text=Hola,%20quiero%20aprovechar%20la%20promoci%C3%B3n%20Noviembre%202026" target="_blank" rel="noopener" style="flex: 1; background: #25D366; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">&#128172; Reservar Ahora</a>' +
+            '        <a href="promo-noviembre-2026.html" style="flex: 1; background: transparent; border: 2px solid #1b4332; color: #1b4332; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center;">Ver Detalles</a>' +
             '      </div>' +
             '    </div>' +
             '  </div>' +
@@ -64,6 +64,7 @@
         if (recentlyDismissed()) return;
 
         var path = window.location.pathname;
+        if (path.indexOf('promo-noviembre-2026.html') !== -1) return;
         if (path.indexOf('promo-octubre-2026.html') !== -1) return;
 
         document.body.insertAdjacentHTML('beforeend', buildMarkup());
