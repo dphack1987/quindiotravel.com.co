@@ -1,0 +1,339 @@
+# Auditoría de Enlazado Interno — Quindío Travel
+
+**Páginas analizadas:** 335
+**Huérfanas (0 inlinks):** 238
+**Poca autoridad interna (1-2 inlinks):** 51
+
+## Páginas huérfanas
+
+- `404.html` — 404 - Página No Encontrada | Quindío Travel
+- `500.html` — 500 - Error del Servidor | Quindío Travel
+- `_redirects-pSEO/alojamiento/hotel-campestre-cafe-cafe/index.html` — Redirigiendo a Hotel Campestre Cafe Cafe | Quindio Travel
+- `_redirects-pSEO/alojamiento/hotel-campestre-la-tata/index.html` — Redirigiendo a Hotel Campestre La Tata | Quindio Travel
+- `_redirects-pSEO/alojamiento/jacuzzi/index.html` — Redirigiendo a Alojamientos con jacuzzi | Quindio Travel
+- `_redirects-pSEO/alojamiento/jardin/index.html` — Redirigiendo a Alojamientos con jardin | Quindio Travel
+- `_redirects-pSEO/alojamiento/tv-cable/index.html` — Redirigiendo a Alojamientos con TV cable | Quindio Travel
+- `_redirects-pSEO/armenia/viajes-aventura/index.html` — Redirigiendo a Viajes de aventura en Armenia | Quindio Travel
+- `_redirects-pSEO/armenia/viajes-bienestar/index.html` — Redirigiendo a Viajes de bienestar en Armenia | Quindio Travel
+- `_redirects-pSEO/armenia/viajes-culturales/index.html` — Redirigiendo a Viajes culturales en Armenia | Quindio Travel
+- `_redirects-pSEO/armenia/viajes-economicos/index.html` — Redirigiendo a Viajes economicos a Armenia | Quindio Travel
+- `_redirects-pSEO/armenia/viajes-familiares/index.html` — Redirigiendo a Viajes familiares en Armenia | Quindio Travel
+- `_redirects-pSEO/armenia/viajes-gourmet/index.html` — Redirigiendo a Viajes gourmet en Armenia | Quindio Travel
+- `_redirects-pSEO/armenia/viajes-grupo/index.html` — Redirigiendo a Viajes en grupo a Armenia | Quindio Travel
+- `_redirects-pSEO/armenia/viajes-parejas/index.html` — Redirigiendo a Viajes para parejas en Armenia | Quindio Travel
+- `_redirects-pSEO/atractivos/mariposario/index.html` — Redirigiendo a Mariposario del Quindio | Quindio Travel
+- `_redirects-pSEO/atractivos/panaca/index.html` — Redirigiendo a PANACA | Quindio Travel
+- `_redirects-pSEO/atractivos/parque-del-cafe/index.html` — Redirigiendo a Parque del Cafe | Quindio Travel
+- `_redirects-pSEO/atractivos/recuca/index.html` — Redirigiendo a RECUCA | Quindio Travel
+- `_redirects-pSEO/atractivos/termales-santa-rosa/index.html` — Redirigiendo a Termales Santa Rosa | Quindio Travel
+- `_redirects-pSEO/atractivos/valle-de-cocora/index.html` — Redirigiendo a Valle de Cocora | Quindio Travel
+- `_redirects-pSEO/blog/viajes-bienestar-2026.html` — Redirigiendo a Blog de viajes de bienestar | Quindio Travel
+- `_redirects-pSEO/blog/viajes-economicos-2026.html` — Redirigiendo a Blog de viajes economicos | Quindio Travel
+- `_redirects-pSEO/buenavista/viajes-aventura/index.html` — Redirigiendo a Viajes de aventura en Buenavista | Quindio Travel
+- `_redirects-pSEO/buenavista/viajes-bienestar/index.html` — Redirigiendo a Viajes de bienestar en Buenavista | Quindio Travel
+- `_redirects-pSEO/buenavista/viajes-culturales/index.html` — Redirigiendo a Viajes culturales en Buenavista | Quindio Travel
+- `_redirects-pSEO/buenavista/viajes-economicos/index.html` — Redirigiendo a Viajes economicos a Buenavista | Quindio Travel
+- `_redirects-pSEO/buenavista/viajes-familiares/index.html` — Redirigiendo a Viajes familiares en Buenavista | Quindio Travel
+- `_redirects-pSEO/buenavista/viajes-gourmet/index.html` — Redirigiendo a Viajes gourmet en Buenavista | Quindio Travel
+- `_redirects-pSEO/buenavista/viajes-grupo/index.html` — Redirigiendo a Viajes en grupo a Buenavista | Quindio Travel
+- `_redirects-pSEO/buenavista/viajes-parejas/index.html` — Redirigiendo a Viajes para parejas en Buenavista | Quindio Travel
+- `_redirects-pSEO/filandia/viajes-aventura/index.html` — Redirigiendo a Viajes de aventura en Filandia | Quindio Travel
+- `_redirects-pSEO/filandia/viajes-bienestar/index.html` — Redirigiendo a Viajes de bienestar en Filandia | Quindio Travel
+- `_redirects-pSEO/filandia/viajes-culturales/index.html` — Redirigiendo a Viajes culturales en Filandia | Quindio Travel
+- `_redirects-pSEO/filandia/viajes-economicos/index.html` — Redirigiendo a Viajes economicos a Filandia | Quindio Travel
+- `_redirects-pSEO/filandia/viajes-familiares/index.html` — Redirigiendo a Viajes familiares en Filandia | Quindio Travel
+- `_redirects-pSEO/filandia/viajes-gourmet/index.html` — Redirigiendo a Viajes gourmet en Filandia | Quindio Travel
+- `_redirects-pSEO/filandia/viajes-grupo/index.html` — Redirigiendo a Viajes en grupo a Filandia | Quindio Travel
+- `_redirects-pSEO/filandia/viajes-parejas/index.html` — Redirigiendo a Viajes para parejas en Filandia | Quindio Travel
+- `_redirects-pSEO/mariposario-jardin-botanico.html` — Redirigiendo a Mariposario Jardin Botanico | Quindio Travel
+- `_redirects-pSEO/mariposario.html` — Redirigiendo a Mariposario del Quindio | Quindio Travel
+- `_redirects-pSEO/pijao/index.html` — Redirigiendo a Pijao | Quindio Travel
+- `_redirects-pSEO/quimbaya/index.html` — Redirigiendo a Quimbaya | Quindio Travel
+- `_redirects-pSEO/quindio.html` — Redirigiendo a Quindio | Quindio Travel
+- `_redirects-pSEO/salento/viajes-aventura/index.html` — Redirigiendo a Viajes de aventura en Salento | Quindio Travel
+- `_redirects-pSEO/salento/viajes-bienestar/index.html` — Redirigiendo a Viajes de bienestar en Salento | Quindio Travel
+- `_redirects-pSEO/salento/viajes-culturales/index.html` — Redirigiendo a Viajes culturales en Salento | Quindio Travel
+- `_redirects-pSEO/salento/viajes-economicos/index.html` — Redirigiendo a Viajes economicos a Salento | Quindio Travel
+- `_redirects-pSEO/salento/viajes-familiares/index.html` — Redirigiendo a Viajes familiares en Salento | Quindio Travel
+- `_redirects-pSEO/salento/viajes-gourmet/index.html` — Redirigiendo a Viajes gourmet en Salento | Quindio Travel
+- `_redirects-pSEO/salento/viajes-grupo/index.html` — Redirigiendo a Viajes en grupo a Salento | Quindio Travel
+- `_redirects-pSEO/salento/viajes-parejas/index.html` — Redirigiendo a Viajes para parejas en Salento | Quindio Travel
+- `_redirects-pSEO/viajes/viajes-culturales/index.html` — Redirigiendo a Viajes culturales | Quindio Travel
+- `_redirects-pSEO/viajes/viajes-economicos/index.html` — Redirigiendo a Viajes economicos | Quindio Travel
+- `_redirects-pSEO/viajes/viajes-parejas/index.html` — Redirigiendo a Viajes para parejas | Quindio Travel
+- `alojamiento/hotel-campestre-cafe-cafe/index.html` — Redirigiendo a Hotel Campestre Cafe Cafe | Quindio Travel
+- `alojamiento/hotel-campestre-la-tata/index.html` — Redirigiendo a Hotel Campestre La Tata | Quindio Travel
+- `alojamiento/jacuzzi/index.html` — Redirigiendo a Alojamientos con jacuzzi | Quindio Travel
+- `alojamiento/jardin/index.html` — Redirigiendo a Alojamientos con jardin | Quindio Travel
+- `alojamiento/tv-cable/index.html` — Redirigiendo a Alojamientos con TV cable | Quindio Travel
+- `armenia/viajes-aventura/index.html` — Redirigiendo a Viajes de aventura en Armenia | Quindio Travel
+- `armenia/viajes-bienestar/index.html` — Redirigiendo a Viajes de bienestar en Armenia | Quindio Travel
+- `armenia/viajes-culturales/index.html` — Redirigiendo a Viajes culturales en Armenia | Quindio Travel
+- `armenia/viajes-economicos/index.html` — Redirigiendo a Viajes economicos a Armenia | Quindio Travel
+- `armenia/viajes-familiares/index.html` — Redirigiendo a Viajes familiares en Armenia | Quindio Travel
+- `armenia/viajes-gourmet/index.html` — Redirigiendo a Viajes gourmet en Armenia | Quindio Travel
+- `armenia/viajes-grupo/index.html` — Redirigiendo a Viajes en grupo a Armenia | Quindio Travel
+- `armenia/viajes-parejas/index.html` — Redirigiendo a Viajes para parejas en Armenia | Quindio Travel
+- `atractivos/mariposario/index.html` — Redirigiendo a Mariposario del Quindio | Quindio Travel
+- `atractivos/panaca/index.html` — Redirigiendo a PANACA | Quindio Travel
+- `atractivos/parque-del-cafe/index.html` — Redirigiendo a Parque del Cafe | Quindio Travel
+- `atractivos/recuca/index.html` — Redirigiendo a RECUCA | Quindio Travel
+- `atractivos/termales-santa-rosa/index.html` — Redirigiendo a Termales Santa Rosa | Quindio Travel
+- `atractivos/valle-de-cocora/index.html` — Redirigiendo a Valle de Cocora | Quindio Travel
+- `auditoria_seo_quindio_travel.html` — Auditoría SEO Completa | Quindío Travel
+- `blog/index.html` — Blog de Viajes al Eje Cafetero | Quindío Travel
+- `blog/test.html` — Test Blog | Quindío Travel
+- `blog/viajes-bienestar-2026.html` — Redirigiendo a Blog de viajes de bienestar | Quindio Travel
+- `blog/viajes-economicos-2026.html` — Redirigiendo a Blog de viajes economicos | Quindio Travel
+- `buenavista/viajes-aventura/index.html` — Redirigiendo a Viajes de aventura en Buenavista | Quindio Travel
+- `buenavista/viajes-bienestar/index.html` — Redirigiendo a Viajes de bienestar en Buenavista | Quindio Travel
+- `buenavista/viajes-culturales/index.html` — Redirigiendo a Viajes culturales en Buenavista | Quindio Travel
+- `buenavista/viajes-economicos/index.html` — Redirigiendo a Viajes economicos a Buenavista | Quindio Travel
+- `buenavista/viajes-familiares/index.html` — Redirigiendo a Viajes familiares en Buenavista | Quindio Travel
+- `buenavista/viajes-gourmet/index.html` — Redirigiendo a Viajes gourmet en Buenavista | Quindio Travel
+- `buenavista/viajes-grupo/index.html` — Redirigiendo a Viajes en grupo a Buenavista | Quindio Travel
+- `buenavista/viajes-parejas/index.html` — Redirigiendo a Viajes para parejas en Buenavista | Quindio Travel
+- `en/index.html` — Coffee Triangle Colombia Tours - Book Online | Quindío Travel RNT 18152
+- `filandia/viajes-aventura/index.html` — Redirigiendo a Viajes de aventura en Filandia | Quindio Travel
+- `filandia/viajes-bienestar/index.html` — Redirigiendo a Viajes de bienestar en Filandia | Quindio Travel
+- `filandia/viajes-culturales/index.html` — Redirigiendo a Viajes culturales en Filandia | Quindio Travel
+- `filandia/viajes-economicos/index.html` — Redirigiendo a Viajes economicos a Filandia | Quindio Travel
+- `filandia/viajes-familiares/index.html` — Redirigiendo a Viajes familiares en Filandia | Quindio Travel
+- `filandia/viajes-gourmet/index.html` — Redirigiendo a Viajes gourmet en Filandia | Quindio Travel
+- `filandia/viajes-grupo/index.html` — Redirigiendo a Viajes en grupo a Filandia | Quindio Travel
+- `filandia/viajes-parejas/index.html` — Redirigiendo a Viajes para parejas en Filandia | Quindio Travel
+- `generated-pages/alojamiento/cabanas-la-esmeralda.html` — Cabañas La Esmeralda - Salento - Quindío Travel
+- `generated-pages/alojamiento/finca-hotel-la-dorada.html` — Finca Hotel La Dorada - La Tebaida - Quindío Travel
+- `generated-pages/alojamiento/hotel-campestre-cafe-cafe.html` — Hotel Campestre Café Café - Armenia - Quindío Travel
+- `generated-pages/alojamiento/hotel-campestre-la-tata.html` — Hotel Campestre La Tata - Montenegro - Quindío Travel
+- `generated-pages/alojamiento/hotel-campestre-las-camelias.html` — Hotel Campestre Las Camelias - Calarcá - Quindío Travel
+- `generated-pages/alojamiento/hotel-campestre-los-girasoles.html` — Hotel Campestre Los Girasoles - Filandia - Quindío Travel
+- `generated-pages/alojamiento/hotel-de-la-vega.html` — De La Vega Hotel Campestre - Montenegro - Quindío Travel
+- `generated-pages/atractivo/mariposario.html` — Mariposario - Calarcá - Quindío Travel
+- `generated-pages/atractivo/panaca.html` — PANACA - Montenegro - Quindío Travel
+- `generated-pages/atractivo/parque-del-cafe.html` — Parque del Café - Montenegro - Quindío Travel
+- `generated-pages/atractivo/recuca.html` — RECUCA - Calarcá - Quindío Travel
+- `generated-pages/atractivo/termales-santa-rosa.html` — Termales de Santa Rosa - La Tebaida - Quindío Travel
+- `generated-pages/atractivo/valle-de-cocora.html` — Valle de Cocora - Salento - Quindío Travel
+- `gracias.html` — ¡Gracias por contactarnos! | Quindío Travel
+- `hoteles-en-salento-para-familias.html` — 🏨 Hoteles en Salento para Familias 2026 | 7 Alojamientos Kids-Friendly + Piscinas + Actividades
+- `mariposario-jardin-botanico.html` — Redirigiendo a Mariposario Jardin Botanico | Quindio Travel
+- `mariposario.html` — Redirigiendo a Mariposario del Quindio | Quindio Travel
+- `pijao/index.html` — Redirigiendo a Pijao | Quindio Travel
+- `programmatic-pages/agricultura-sostenible-2026.html` — Agricultura Sostenible Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/alojamiento-cerca-terminal-2026.html` — Alojamiento Cerca Terminal Armenia 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/alojamiento-economico-salento-2026.html` — Alojamiento Económico en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/alojamiento-lujo-quindio-2026.html` — Alojamiento de Lujo en el Quindío 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/artes-visuales-eje-cafetero-2026.html` — Artes Visuales Eje Cafetero 2026 - Galerías y Talleres | Quindío Travel
+- `programmatic-pages/artesania-cuero-salento-2026.html` — Artesanía de Cuero en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/artesania-tradicional-quindio-2026.html` — Artesanía Tradicional Quindío 2026 - Talleres Locales | Quindío Travel
+- `programmatic-pages/artesanias-salento-filandia-2026.html` — Artesanías de Salento y Filandia 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/birdwatching-eje-cafetero-2026.html` — Birdwatching Eje Cafetero 2026 - Observación de Aves | Quindío Travel
+- `programmatic-pages/cafeteria-especializada-salento-2026.html` — Cafetería Especializada en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/cafeteria-luz-nocturna-salento-2026.html` — Cafetería Luz Nocturna en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/cafeteria-organica-salento-2026.html` — Cafetería Orgánica en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/cafeteria-tradicional-quindio-2026.html` — Cafetería Tradicional del Quindío 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/caminata-nocturna-valle-cocora-2026.html` — Caminata Nocturna Valle de Cocora 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/clima-actual-quindio-2026.html` — Clima Actual del Quindío 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/clima-octubre-quindio-2026.html` — Clima Octubre en el Quindío 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/clima-quindio-meses-2026.html` — Clima del Quindío por Meses 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/comida-tipica-quindio-2026.html` — Comida Típica del Quindío 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/comida-vegana-eje-cafetero-2026.html` — Comida Vegana en el Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/compras-artesania-filandia-2026.html` — Compras de Artesanía en Filandia 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/compras-cacao-salento-2026.html` — Compras de Cacao en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/compras-souvenirs-salento-2026.html` — Compras de Souvenirs en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/compras-textiles-salento-2026.html` — Compras de Textiles en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/cultura-paisa-eje-cafetero-2026.html` — Cultura Paisa del Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/cultura-paisa-musica-2026.html` — Cultura Paisa y Música Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/deportes-extremos-controlados-2026.html` — Deportes Extremos Controlados Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/destinos-cercanos-salento-2026.html` — Destinos Cercanos a Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/experiencias-locales-autenticas-2026.html` — Experiencias Locales Auténticas 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/experiencias-romanticas-parejas-2026.html` — Experiencias Románticas para Parejas Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/experiencias-romanticas-quindio-2026.html` — Experiencias Románticas en el Quindío 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/festival-cultura-2026.html` — Festival de Cultura 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/festival-flores-regionales-2026.html` — Festival de las Flores Regionales 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/festival-musica-regional-2026.html` — Festival de Música Regional 2026 - Guída Completa | Quindío Travel
+- `programmatic-pages/festival-tradicional-quindio-2026.html` — Festival Tradicional del Quindío 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/festivales-musica-regionales-2026.html` — Festivales de Música Regionales Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/fiestas-diciembre-quindio-2026.html` — Fiestas de Diciembre en el Quindío 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/finca-cafe-salento-2026.html` — Finca Café en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/finca-hotel-campestre-quindio-2026.html` — Finca Hotel Campestre Quindío 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/fotografia-avanzada-palmas-2026.html` — Fotografía Avanzada Palmas de Cera 2026 | Quindío Travel
+- `programmatic-pages/guia-turistica-salento-2026.html` — Guía Turística de Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-4-estrellas-salento-2026.html` — Hoteles 4 Estrellas en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-acceso-discapacitados-2026.html` — Hoteles con Acceso Discapacitados 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-balcon-vista-salento-2026.html` — Hoteles con Balcón y Vista en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-boutique-quindio-2026.html` — Hoteles Boutique en el Quindío 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-campestres-eje-cafetero-2026.html` — Hoteles Campestres Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-cocina-tradicional-2026.html` — Hoteles con Cocina Tradicional 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-con-desayuno-salento-2026.html` — Hoteles con Desayuno en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-con-kitchen-salento-2026.html` — Hoteles con Kitchen en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-estudio-salento-2026.html` — Hoteles con Estudio en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-familiares-salento-2026.html` — Hoteles Familiares en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-jacuzzi-salento-2026.html` — Hoteles con Jacuzzi en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-pareja-salento-2026.html` — Hoteles para Parejas en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-pet-friendly-salento-2026.html` — Hoteles Pet Friendly en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-piscina-climatizada-2026.html` — Hoteles con Piscina Climatizada 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-piscina-infantil-2026.html` — Hoteles con Piscina Infantil 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-piscina-salento-2026.html` — Hoteles con Piscina en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-sala-reuniones-2026.html` — Hoteles con Sala de Reuniones 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-spa-salento-2026.html` — Hoteles con Spa en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/hoteles-terraza-vista-2026.html` — Hoteles con Terraza y Vista 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/luna-de-miel-eje-cafetero-2026.html` — Luna de Miel Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/mejor-periodo-viajar-colombia-2026.html` — Mejor Período para Viajar a Colombia 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/mejores-fotos-eje-cafetero-2026.html` — Mejores Fotos del Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/mejores-miradores-filandia-2026.html` — Mejores Miradores de Filandia 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/mirador-filandia-360-grados-2026.html` — Mirador Filandia 360 Grados 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/mirador-salento-casas-coloniales-2026.html` — Mirador Salento Casas Coloniales 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/mirador-salento-sunset-2026.html` — Mirador Salento Sunset 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/miradores-salento-2026.html` — Miradores de Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/mujeres-empresarias-cafe-2026.html` — Mujeres Empresarias del Café Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/noches-estrellas-cocora-2026.html` — Noches de Estrellas Valle de Cocora 2026 | Quindío Travel
+- `programmatic-pages/panaca-plan-2-dias-2026.html` — PANACA Plan 2 Días 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/parque-cafe-entradas-2026.html` — Parque del Café Entradas y Precios 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/planes-grupos-4-personas-quindio-2026.html` — Planes para Grupos de 4 Personas Quindío 2026 | Quindío Travel
+- `programmatic-pages/presupuesto-viaje-eje-cafetero-2026.html` — Presupuesto de Viaje al Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/produccion-cafe-organico-2026.html` — Producción de Café Orgánico Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/pueblos-magicos-quindio-2026.html` — Pueblos Mágicos del Quindío 2026 - Pueblos Pueblitos | Quindío Travel
+- `programmatic-pages/recorrido-guidado-salento-2026.html` — Recorrido Guiado de Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/restaurantes-armenia-gastronomia-2026.html` — Restaurantes en Armenia Gastronomía 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/ruta-cafetera-salento-armenia-2026.html` — Ruta Cafetera Salento a Armenia 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/ruta-historica-eje-cafetero-2026.html` — Ruta Histórica Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/ruta-triloagismo-eje-cafetero-2026.html` — Ruta de Triloagismo Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/rutas-moto-turismo-2026.html` — Rutas en Moto Turismo Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/seguridad-turismo-eje-cafetero-2026.html` — Seguridad en Turismo Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/senderismo-avanzado-quindio-2026.html` — Senderismo Avanzado Quindío 2026 - Rutas Desafiantes | Quindío Travel
+- `programmatic-pages/termales-santa-rosa-plan-2026.html` — Termales Santa Rosa Plan 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/tour-eje-cafetero-ciclismo-2026.html` — Tour Eje Cafetero en Ciclismo 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/tour-motociclista-eje-cafetero-2026.html` — Tour Motociclista Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/tour-privado-eje-cafetero-2026.html` — Tour Privado Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/tour-privado-salento-2026.html` — Tour Privado en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/tour-salento-desde-bogota-2026.html` — Tour a Salento desde Bogotá 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/transporte-barato-eje-cafetero-2026.html` — Transporte Barato al Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/transporte-colectivo-eje-cafetero-2026.html` — Transporte Colectivo Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/transporte-colombia-eje-cafetero-2026.html` — Transporte por Colombia al Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/transporte-taxi-eje-cafetero-2026.html` — Transporte Taxi Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/turismo-gastronomico-aroma-cafe-2026.html` — Turismo Gastronómico Aroma de Café Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/turismo-negocios-2026.html` — Turismo de Negocios Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/turismo-salud-bienestar-2026.html` — Turismo Salud y Bienestar Eje Cafetero 2026 | Quindío Travel
+- `programmatic-pages/turismo-senior-2026.html` — Turismo Senior Eje Cafetero 2026 - Viajes para Adultos Mayores | Quindío Travel
+- `programmatic-pages/turismo-spiritual-2026.html` — Turismo Espiritual Eje Cafetero 2026 - Retiros | Quindío Travel
+- `programmatic-pages/valle-cocora-alberque-2026.html` — Valle de Cocora Arquitectura Bahareque 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/valle-cocora-caminata-2026.html` — Caminata Valle de Cocora 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/valle-cocora-cerro-murillo-2026.html` — Valle de Cocora Cerro Murillo 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/valle-cocora-estado-actual-2026.html` — Valle de Cocora Estado Actual 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/valle-cocora-pajaros-2026.html` — Valle de Cocora Pájaros 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/valle-cocora-una-dia-2026.html` — Valle de Cocora en un Día 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/viaje-familiar-quindio-ninos-2026.html` — Viaje Familiar al Quindío con Niños 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/viaje-solo-eje-cafetero-2026.html` — Viaje Solo al Eje Cafetero 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/visita-guirrera-salento-2026.html` — Visita Guirrera en Salento 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/vistas-panoramicas-filandia-2026.html` — Vistas Panorámicas de Filandia 2026 - Guía Completa | Quindío Travel
+- `programmatic-pages/vuelo-barato-armenia-2026.html` — Vuelo Barato a Armenia 2026 - Guía Completa | Quindío Travel
+- `quimbaya/index.html` — Redirigiendo a Quimbaya | Quindio Travel
+- `quindio.html` — Redirigiendo a Quindio | Quindio Travel
+- `salento/viajes-aventura/index.html` — Redirigiendo a Viajes de aventura en Salento | Quindio Travel
+- `salento/viajes-bienestar/index.html` — Redirigiendo a Viajes de bienestar en Salento | Quindio Travel
+- `salento/viajes-culturales/index.html` — Redirigiendo a Viajes culturales en Salento | Quindio Travel
+- `salento/viajes-economicos/index.html` — Redirigiendo a Viajes economicos a Salento | Quindio Travel
+- `salento/viajes-familiares/index.html` — Redirigiendo a Viajes familiares en Salento | Quindio Travel
+- `salento/viajes-gourmet/index.html` — Redirigiendo a Viajes gourmet en Salento | Quindio Travel
+- `salento/viajes-grupo/index.html` — Redirigiendo a Viajes en grupo a Salento | Quindio Travel
+- `salento/viajes-parejas/index.html` — Redirigiendo a Viajes para parejas en Salento | Quindio Travel
+- `viajes/viajes-culturales/index.html` — Redirigiendo a Viajes culturales | Quindio Travel
+- `viajes/viajes-economicos/index.html` — Redirigiendo a Viajes economicos | Quindio Travel
+- `viajes/viajes-parejas/index.html` — Redirigiendo a Viajes para parejas | Quindio Travel
+- `yandex_05c13632a16e2bef.html` — Yandex Verification
+- `zh/index.html` — 哥伦比亚咖啡三角区旅游 | 萨伦托与科科拉山谷 | Quindío Travel
+
+## Páginas con poca autoridad interna
+
+- `balsaje-rio-la-vieja.html` (2 inlinks) — 🚣 Balsaje Río La Vieja 2026 | Experiencia Cultural | Quindío Travel
+- `blog-viajes-colombia-desde-espana-plan-exclusivo.html` (1 inlinks) — Viajes Colombia desde España: Guía Completa del Eje Cafetero desde 280€ | Quindío Travel
+- `blog/conferencias-eventos-quindio-2026.html` (1 inlinks) — Conferencias Eventos Corporativos Quindío 2026 | Quindío Travel
+- `blog/diferencias-salento-filandia-destino-2026.html` (1 inlinks) — Diferencias entre Salento y Filandia 2026 | Quindío Travel
+- `blog/festividades-temporada-quindio-2026.html` (1 inlinks) — Festividades por Temporada Quindío 2026 | Quindío Travel
+- `blog/gastronomia-autentica-quindio-2026.html` (1 inlinks) — Gastronomía Auténtica Quindío 2026 | Quindío Travel
+- `blog/guia-fotografia-eje-cafetero-2026.html` (1 inlinks) — Guía de Fotografía Eje Cafetero 2026 | Quindío Travel
+- `blog/guia-transporte-eje-cafetero-bogota-2026.html` (1 inlinks) — Guía de transporte al Eje Cafetero desde Bogotá 2026 | Quindío Travel
+- `blog/hoteles-economicos-salento-familias-2026.html` (1 inlinks) — Hoteles económicos en Salento para familias grandes 2026 | Quindío Travel
+- `blog/mejores-fotos-influencers-eje-cafetero-2026.html` (2 inlinks) — Mejores Lugares Fotos Influencers Eje Cafetero 2026 | Quindío Travel
+- `blog/mejores-restaurantes-salento-comida-paisa-2026.html` (1 inlinks) — Mejores restaurantes Salento 2026 | Quindío Travel
+- `blog/presupuesto-mensual-vivir-salento-2026.html` (1 inlinks) — Presupuesto mensual Salento 2026 | Quindío Travel
+- `blog/que-hacer-quindio-octubre-2026.html` (1 inlinks) — Qué Hacer en Quindío en Octubre 2026: Receso y Puente | Quindío Travel
+- `blog/que-llevar-maleta-viaje-quindio-2026.html` (1 inlinks) — Qué llevar en maleta para viaje al Quindío 2026 | Quindío Travel
+- `blog/rutas-cafe-menos-conocidas-2026.html` (2 inlinks) — Rutas de Café Menos Conocidas Quindío 2026 | Quindío Travel
+- `blog/rutas-senderismo-eje-cafetero-principiantes-2026.html` (1 inlinks) — Rutas de senderismo Eje Cafetero 2026 | Quindío Travel
+- `blog/tips-ahorrar-dinero-viaje-eje-cafetero-2026.html` (2 inlinks) — Tips para ahorrar dinero en viaje al Eje Cafetero 2026 | Quindío Travel
+- `blog/transporte-medellin-eje-cafetero-2026.html` (1 inlinks) — Transporte Medellín Eje Cafetero 2026 | Quindío Travel
+- `blog/turismo-accesible-discapacitados-2026.html` (2 inlinks) — Turismo Accesible Discapacidad Eje Cafetero 2026 | Quindío Travel
+- `blog/turismo-romantico-luna-miel-2026.html` (2 inlinks) — Turismo Romántico Luna de Miel Eje Cafetero 2026 | Quindío Travel
+- `blog/turismo-solo-soltera-2026.html` (1 inlinks) — Turismo Solo Soltera Eje Cafetero 2026 | Quindío Travel
+- `blog/turismo-sostenible-eco-2026.html` (1 inlinks) — Turismo Sostenible Ecológico Eje Cafetero 2026 | Quindío Travel
+- `blog/voluntariado-turismo-quindio-2026.html` (1 inlinks) — Voluntariado Turístico Quindío 2026 | Quindío Travel
+- `cabalgatas-quindio.html` (2 inlinks) — 🐴 Cabalgatas en el Quindío 2026 | Ecoturismo | Quindío Travel
+- `como-llegar-salento-desde-bogota.html` (2 inlinks) — Cómo Llegar a Salento desde Bogotá - Guía Completa 2026 | Quindío Travel RNT 18152
+- `comparar-planes.html` (2 inlinks) — Comparar Planes | Quindío Travel - Eje Cafetero
+- `cotizador-simplificado.html` (1 inlinks) — 💰 Cotizador de Planes | Selección Visual | Quindío Travel
+- `experiencias.html` (2 inlinks) — Experiencias Eje Cafetero - Tours y Actividades | Quindío Travel
+- `granja-mama-lulu.html` (1 inlinks) — 🌱 Granja Mamá Lulú 2026 | Agroturismo Sostenible | Quindío Travel
+- `hotel-campestre-la-tata.html` (2 inlinks) — Hotel Campestre La Tata Quindío: Alojamiento cerca Parque del Café | Quindío Travel RNT 18152
+- `hotel-de-la-vega.html` (2 inlinks) — De La Vega Hotel Campestre Quindío: Alojamiento cerca Parque del Café | Quindío Travel RNT 18152
+- `hoteles-en-salento-economicos.html` (1 inlinks) — Hoteles en Salento Económicos - Guía Completa 2026 | Quindío Travel RNT 18152
+- `jeep-panoramico.html` (1 inlinks) — 🚙 Jeep Panorámico 2026 | Rutas Eje Cafetero | Quindío Travel
+- `jeep-willys-valle-cocora.html` (1 inlinks) — Jeep Willys Valle de Cocora - Experiencia Completa 2026 | Quindío Travel RNT 18152
+- `laberinto-mil-caminos.html` (1 inlinks) — 🌿 Laberinto Mil Caminos 2026 | Aventura Natural | Quindío Travel
+- `mariposario-quindio.html` (1 inlinks) — 🦋 Mariposario Jardín Botánico del Quindío 2026 | Naturaleza | Quindío Travel
+- `mejor-epoca-visitar-salento.html` (1 inlinks) — Mejor Época para Visitar Salento - Guía Completa 2026 | Quindío Travel RNT 18152
+- `parapente.html` (1 inlinks) — 🪂 Parapente Eje Cafetero 2026 | Vuelos con Quindío Travel
+- `plan-4.html` (2 inlinks) — Plan 4 Días / 3 Noches Termales Santa Rosa y Eje Cafetero | Quindío Travel
+- `plan-5.html` (2 inlinks) — Plan 4 Días / 3 Noches Tradición y Raíces de la Arriería | Quindío Travel
+- `plan-exclusivo-meta-ads.html` (1 inlinks) — Viaje a Quindío desde España 4D/3N | Salento, Filandia y Coffee Tour El Ocaso | Quindío Travel
+- `plan-exclusivo-salento-filandia-ocaso.html` (2 inlinks) — Plan Turístico con Inmersión Cafetera, Paisajes y Pueblos Quindianos | Desde $1.310.000 COP (Acomodación Cuádruple) | Qu
+- `planes-familiares-quindio.html` (1 inlinks) — 👨‍👩‍👧‍👦 Planes Familiares Quindío 2026 | Viajes con Niños | Parques Temáticos | Quindío Travel
+- `planes-grupos-amigos-quindio.html` (1 inlinks) — 🎉 Planes Grupos Amigos Quindío 2026 | Viajes con Amigos | Aventura | Quindío Travel
+- `planes-romanticos-para-parejas.html` (2 inlinks) — 💕 Planes Románticos para Parejas en Quindío 2026 | San Valentín + Aniversarios + Luna de Miel | Quindío Travel
+- `planes-turisticos-quindio-comprar.html` (2 inlinks) — Comprar Planes Turísticos Quindío - Reserva Online 24/7 | RNT 18152
+- `programmatic-pages/mejor-epoca-visitar-filandia-2026.html` (1 inlinks) — Mejor Época para Visitar Filandia 2026 | Quindío Travel
+- `promociones-urgentes-hoy.html` (1 inlinks) — 🔥 Promociones Urgentes HOY | Planes Verificados | Ofertas Limitadas | Quindío Travel
+- `reservar-plan-eje-cafetero.html` (1 inlinks) — Reservar Plan Eje Cafetero - Cotización Rápida | RNT 18152
+- `reservar-plan-quindio-ahora.html` (1 inlinks) — 🔥 Reservar Plan Quindío AHORA | Planes Verificados | WhatsApp Directo | Quindío Travel
+- `rutas-desde-bogota-al-quindio.html` (2 inlinks) — 🚗 Rutas desde Bogotá al Quindío 2026 | Cómo Llegar + Transporte + Distancias + Horarios | Quindío Travel
+
+## Anclas repetidas excesivamente
+
+- **426x** "Inicio" → `index.html`
+- **333x** "Planes" → `planes.html`
+- **88x** "Tour Eje Cafetero Sin Transporte" → `programmatic-pages/tour-eje-cafetero-sin-transporte-2026.html`
+- **79x** "Experiencias Cafeteras" → `blog/experiencias-cafeteras-autenticas-quindio-2026.html`
+- **79x** "Hoteles Cerca Parque Cafe" → `programmatic-pages/hoteles-cerca-parque-cafe-2026.html`
+- **63x** "Promoción Noviembre 2026 🎉" → `promo-noviembre-2026.html`
+- **51x** "Blog" → `blog.html`
+- **50x** "Salento" → `salento.html`
+- **36x** "Valle de Cocora" → `valle-de-cocora.html`
+- **33x** "Parque del Café" → `parque-del-cafe.html`
+- **28x** "Filandia" → `filandia.html`
+- **13x** "Home" → `en/`
+- **10x** "Tour Packages" → `en/plans.html`
+
+## Top 20 páginas con más inlinks
+
+- `index.html` — 994 inlinks
+- `planes.html` — 599 inlinks
+- `promo-noviembre-2026.html` — 116 inlinks
+- `programmatic-pages/tour-eje-cafetero-sin-transporte-2026.html` — 88 inlinks
+- `salento.html` — 86 inlinks
+- `blog/experiencias-cafeteras-autenticas-quindio-2026.html` — 83 inlinks
+- `programmatic-pages/hoteles-cerca-parque-cafe-2026.html` — 79 inlinks
+- `blog.html` — 52 inlinks
+- `valle-de-cocora.html` — 48 inlinks
+- `filandia.html` — 45 inlinks
+- `parque-del-cafe.html` — 40 inlinks
+- `en/plans.html` — 19 inlinks
+- `armenia.html` — 11 inlinks
+- `blog/mejor-epoca-visitar-quindio-2026.html` — 10 inlinks
+- `blog/museos-cultura-quindio-2026.html` — 10 inlinks
+- `cabanas-la-esmeralda.html` — 10 inlinks
+- `finca-hotel-la-dorada.html` — 10 inlinks
+- `finca-hotel-los-girasoles.html` — 10 inlinks
+- `hotel-campestre-cafe-cafe.html` — 10 inlinks
+- `plan-3.html` — 10 inlinks

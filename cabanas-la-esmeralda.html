@@ -145,6 +145,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/back-to-top.css">
+    <link rel="stylesheet" href="assets/css/diciembre-theme.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -339,9 +340,8 @@
     <section class="hotel-pricing container">
         <h2 class="section-title">💰 Tarifas de Referencia</h2>
         <div class="pricing-tabs">
-            <button class="pricing-tab active" data-tab="temporada_baja">Temporada Baja</button>
-            <button class="pricing-tab" data-tab="temporada_media">Temporada Media</button>
-            <button class="pricing-tab" data-tab="temporada_alta">Temporada Alta</button>
+            
+            <button class="pricing-tab active" data-tab="temporada_alta">Temporada Alta · 15 dic – 20 ene</button>
         </div>
         <div class="pricing-content">
             <div class="pricing-table" id="pricing-table">
@@ -413,7 +413,7 @@
             <div class="footer-col">
                 <h3>Enlaces</h3>
                 <ul>
-                    <li><a href="promo-noviembre-2026.html">Promoción Noviembre 2026 🎉</a></li>
+                    <li><a href="planes-especiales-diciembre-2026.html">Planes Diciembre 2026 🎄</a></li>
                     <li><a href="planes.html">Planes Turísticos</a></li>
                     <li><a href="index.html#hoteles">Todos los Hoteles</a></li>
                     <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
@@ -428,14 +428,6 @@
     <script>
         // Datos de tarifas
         const tarifas = {
-            temporada_baja: {
-                radio_taxi: { "2_pax": "$1.600.000", "3_pax": "$1.382.000", "4_pax": "$1.273.000" },
-                placa_blanca: { "2_pax": "$2.117.000", "3_pax": "$1.688.000", "4_pax": "$1.473.000" }
-            },
-            temporada_media: {
-                radio_taxi: { "2_pax": "$1.600.000", "3_pax": "$1.382.000", "4_pax": "$1.273.000" },
-                placa_blanca: { "2_pax": "$2.238.000", "3_pax": "$1.809.000", "4_pax": "$1.594.000" }
-            },
             temporada_alta: {
                 radio_taxi: { "2_pax": "$1.840.000", "3_pax": "$1.589.000", "4_pax": "$1.464.000" },
                 placa_blanca: { "2_pax": "$2.574.000", "3_pax": "$2.080.000", "4_pax": "$1.833.000" }
@@ -445,6 +437,7 @@
         function renderPricingTable(temporada) {
             const table = document.getElementById('pricing-table');
             const data = tarifas[temporada];
+            if (!data) return;
             
             table.innerHTML = `
                 <table>
@@ -484,7 +477,7 @@
         });
 
         // Renderizar tabla inicial
-        renderPricingTable('temporada_baja');
+        renderPricingTable('temporada_alta');
 
         // Menú hamburguesa
         const hambBtn = document.getElementById('hamburger-btn');
@@ -780,5 +773,7 @@
     <script src="assets/js/wa-track.js" defer></script>
     <script src="assets/js/i18n.js" defer></script>
     <script src="assets/js/back-to-top.js" defer></script>
+    <script src="assets/js/diciembre-theme.js" defer></script>
+    <script src="assets/js/related-links.js" defer></script>
 </body>
 </html>

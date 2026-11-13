@@ -1,0 +1,155 @@
+/* ============================================
+   QUINDÍO TRAVEL — Temática Diciembre 2026
+   Pill navideño flotante + nieve ambiental
+   ============================================ */
+
+/* --- Pill flotante de temporada (esquina inferior central) --- */
+.qt-diciembre-pill {
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9990;
+    max-width: min(560px, calc(100vw - 32px));
+    background: linear-gradient(90deg, #1b4332 0%, #2d6a4f 55%, #9d174d 100%);
+    color: #fff;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px 10px 18px;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    animation: qt-pill-entrada 0.5s ease both;
+}
+
+@keyframes qt-pill-entrada {
+    from { opacity: 0; transform: translate(-50%, 16px); }
+    to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.qt-diciembre-pill__text {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.qt-diciembre-pill__text strong {
+    color: #ffd97a;
+}
+
+.qt-diciembre-pill__cta {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #fff;
+    color: #1b4332;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.82rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.qt-diciembre-pill__cta:hover,
+.qt-diciembre-pill__cta:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    color: #1b4332;
+}
+
+.qt-diciembre-pill__close {
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.18);
+    border: none;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.75rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.qt-diciembre-pill__close:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* --- Nieve ambiental --- */
+.qt-nieve {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9996;
+    overflow: hidden;
+}
+
+.qt-nieve__flake {
+    position: absolute;
+    top: -12px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    animation-name: qt-nieve-caer;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes qt-nieve-caer {
+    0% {
+        transform: translate3d(0, -12px, 0);
+        opacity: 0;
+    }
+    8% {
+        opacity: var(--flake-opacity, 0.7);
+    }
+    85% {
+        opacity: var(--flake-opacity, 0.7);
+    }
+    100% {
+        transform: translate3d(var(--flake-drift, 30px), 105vh, 0);
+        opacity: 0;
+    }
+}
+
+/* Móvil: pill inferior ocupando el ancho, dejando libre el botón de WhatsApp */
+@media (max-width: 600px) {
+    .qt-diciembre-pill {
+        left: 10px;
+        right: 86px;
+        transform: none;
+        max-width: none;
+        border-radius: 18px;
+        padding: 10px 12px;
+        font-size: 0.78rem;
+        gap: 8px;
+    }
+
+    .qt-diciembre-pill__text {
+        white-space: normal;
+    }
+
+    .qt-diciembre-pill__cta {
+        padding: 7px 12px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Accesibilidad: sin movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .qt-nieve,
+    .qt-diciembre-pill {
+        display: none;
+    }
+}
