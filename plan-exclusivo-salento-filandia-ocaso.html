@@ -802,144 +802,151 @@
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "TouristTrip",
-            "name": "Plan Turístico con Inmersión Cafetera, Paisajes y Pueblos Quindianos",
-            "description": "Plan turístico con inmersión cafetera, paisajes y pueblos quindianos. 4 días 3 noches en el Eje Cafetero: Salento, Valle de Cocora, Filandia y Coffee Tour El Ocaso. Alojamiento Hotel Vista Hermosa, transporte desde aeropuerto de Pereira o Armenia y asistencia médica. Viajes Colombia desde Madrid y Barcelona desde 280€ por persona.",
-            "touristType": "Cultural Tour",
-            "duration": "P4D3N",
-            "offers": [
-                {
-                    "@type": "Offer",
-                    "name": "Cuádruple",
-                    "price": "280",
-                    "priceCurrency": "EUR",
-                    "availability": "https://schema.org/InStock",
-                    "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Triple",
-                    "price": "315",
-                    "priceCurrency": "EUR",
-                    "availability": "https://schema.org/InStock",
-                    "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Doble",
-                    "price": "390",
-                    "priceCurrency": "EUR",
-                    "availability": "https://schema.org/InStock",
-                    "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
-                }
-            ],
-            "provider": {
-                "@type": "TravelAgency",
-                "name": "Quindío Travel",
-                "telephone": "+573174426044",
-                "url": "https://quindiotravel.com.co",
-                "logo": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Armenia",
-                    "addressRegion": "Quindío",
-                    "addressCountry": "CO"
-                },
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 4.5338,
-                    "longitude": -75.6811
-                },
-                "image": "https://quindiotravel.com.co/apple-touch-icon.png"
-            },
-            "location": [
-                {
-                    "@type": "Place",
-                    "name": "Salento",
-                    "description": "Pueblo cafetero tradicional en el corazón del Eje Cafetero",
-                    "geo": {
-                        "@type": "GeoCoordinates",
-                        "latitude": 4.6378,
-                        "longitude": -75.568
-                    },
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Salento",
-                        "addressRegion": "Quindío",
-                        "addressCountry": "CO"
-                    }
-                },
-                {
-                    "@type": "Place",
-                    "name": "Valle de Cocora",
-                    "description": "Valle natural con palmas de cera gigantes, Patrimonio UNESCO",
-                    "geo": {
-                        "@type": "GeoCoordinates",
-                        "latitude": 4.683,
-                        "longitude": -75.633
-                    },
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Salento",
-                        "addressRegion": "Quindío",
-                        "addressCountry": "CO"
-                    }
-                },
-                {
-                    "@type": "Place",
-                    "name": "Filandia",
-                    "description": "Pueblo colonial con arquitectura tradicional y mirador panorámico",
-                    "geo": {
-                        "@type": "GeoCoordinates",
-                        "latitude": 4.6717,
-                        "longitude": -75.6172
-                    },
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Filandia",
-                        "addressRegion": "Quindío",
-                        "addressCountry": "CO"
-                    }
-                },
-                {
-                    "@type": "Place",
-                    "name": "Coffee Tour El Ocaso",
-                    "description": "Experiencia cafetera premium en finca tradicional",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Salento",
-                        "addressRegion": "Quindío",
-                        "addressCountry": "CO"
-                    }
-                }
-            ],
-            "audience": {
-                "@type": "Audience",
-                "audienceType": "International Tourists",
-                "geographicArea": [
-                    "Madrid",
-                    "Barcelona",
-                    "Spain",
-                    "European Union"
-                ]
-            },
-            "inLanguage": "es",
-            "availableLanguage": [
-                "es",
-                "en"
-            ],
-            "areaServed": {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 4.6378,
-                    "longitude": -75.568
-                },
-                "geoRadius": "50000"
-            }
-        }
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "Plan Turístico con Inmersión Cafetera, Paisajes y Pueblos Quindianos",
+ "description": "Plan turístico con inmersión cafetera, paisajes y pueblos quindianos. 4 días 3 noches en el Eje Cafetero: Salento, Valle de Cocora, Filandia y Coffee Tour El Ocaso. Alojamiento Hotel Vista Hermosa, transporte desde aeropuerto de Pereira o Armenia y asistencia médica. Viajes Colombia desde Madrid y Barcelona desde 280€ por persona.",
+ "touristType": "Cultural Tour",
+ "duration": "P4D3N",
+ "offers": [
+  {
+   "@type": "Offer",
+   "name": "Cuádruple",
+   "price": "280",
+   "priceCurrency": "EUR",
+   "availability": "https://schema.org/InStock",
+   "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
+  },
+  {
+   "@type": "Offer",
+   "name": "Triple",
+   "price": "315",
+   "priceCurrency": "EUR",
+   "availability": "https://schema.org/InStock",
+   "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
+  },
+  {
+   "@type": "Offer",
+   "name": "Doble",
+   "price": "390",
+   "priceCurrency": "EUR",
+   "availability": "https://schema.org/InStock",
+   "url": "https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html"
+  }
+ ],
+ "provider": {
+  "@type": "TravelAgency",
+  "name": "Quindío Travel",
+  "telephone": "+573174426044",
+  "url": "https://quindiotravel.com.co",
+  "logo": "https://quindiotravel.com.co/assets/images/logo_quindio_travel.png",
+  "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Armenia",
+   "addressRegion": "Quindío",
+   "addressCountry": "CO"
+  },
+  "geo": {
+   "@type": "GeoCoordinates",
+   "latitude": 4.5338,
+   "longitude": -75.6811
+  },
+  "image": "https://quindiotravel.com.co/apple-touch-icon.png"
+ },
+ "location": [
+  {
+   "@type": "Place",
+   "name": "Salento",
+   "description": "Pueblo cafetero tradicional en el corazón del Eje Cafetero",
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 4.6378,
+    "longitude": -75.568
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Salento",
+    "addressRegion": "Quindío",
+    "addressCountry": "CO"
+   }
+  },
+  {
+   "@type": "Place",
+   "name": "Valle de Cocora",
+   "description": "Valle natural con palmas de cera gigantes, Patrimonio UNESCO",
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 4.683,
+    "longitude": -75.633
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Salento",
+    "addressRegion": "Quindío",
+    "addressCountry": "CO"
+   }
+  },
+  {
+   "@type": "Place",
+   "name": "Filandia",
+   "description": "Pueblo colonial con arquitectura tradicional y mirador panorámico",
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 4.6717,
+    "longitude": -75.6172
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Filandia",
+    "addressRegion": "Quindío",
+    "addressCountry": "CO"
+   }
+  },
+  {
+   "@type": "Place",
+   "name": "Coffee Tour El Ocaso",
+   "description": "Experiencia cafetera premium en finca tradicional",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Salento",
+    "addressRegion": "Quindío",
+    "addressCountry": "CO"
+   }
+  }
+ ],
+ "audience": {
+  "@type": "Audience",
+  "audienceType": "International Tourists",
+  "geographicArea": [
+   "Madrid",
+   "Barcelona",
+   "Spain",
+   "European Union"
+  ]
+ },
+ "inLanguage": "es",
+ "availableLanguage": [
+  "es",
+  "en"
+ ],
+ "areaServed": {
+  "@type": "GeoCircle",
+  "geoMidpoint": {
+   "@type": "GeoCoordinates",
+   "latitude": 4.6378,
+   "longitude": -75.568
+  },
+  "geoRadius": "50000"
+ },
+ "image": "https://quindiotravel.com.co/assets/images/paisajes/valle-cocora-palmas-cera-sunset.webp",
+ "aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.7",
+  "reviewCount": "150",
+  "bestRating": "5"
+ }
+}
     </script>
 
     <!-- Conversion Tracking -->

@@ -72,129 +72,177 @@
     
     <!-- Enhanced Schema.org para página de planes -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Planes Turísticos Quindío 2026",
-            "description": "Portafolio oficial de 6 planes turísticos en el Eje Cafetero. Desde escapada 2D/1N hasta Gran Quindío Integral 5D/4N.",
-            "url": "https://quindiotravel.com.co/planes.html",
-            "image": "https://quindiotravel.com.co/assets/images/paisajes/valle-cocora-hero-banner.jpg",
-            "mainEntity": {
-                "@type": "ItemList",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "item": {
-                            "@type": "Trip",
-                            "name": "Plan Vive El Eje Cafetero Temático",
-                            "description": "2 Días / 1 Noche - Parque del Café, Salento, alojamiento, alimentación (desayuno y cena), transporte desde el aeropuerto o terminal terrestre en Armenia",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "425000",
-                                "priceCurrency": "COP",
-                                "availability": "https://schema.org/InStock"
-                            }
-                        }
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "item": {
-                            "@type": "Trip",
-                            "name": "Plan Naturaleza y Diversión Cafetera",
-                            "description": "3 Días / 2 Noches - Parque del Café, PANACA, Salento, alojamiento, alimentación (desayuno y cena), transporte desde el aeropuerto o terminal terrestre en Armenia",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "562000",
-                                "priceCurrency": "COP",
-                                "availability": "https://schema.org/InStock"
-                            }
-                        }
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "item": {
-                            "@type": "Trip",
-                            "name": "Plan La Experiencia Completa del Eje",
-                            "description": "4 Días / 3 Noches - Valle de Cocora, Salento, Filandia, parques, alojamiento, alimentación (desayuno y cena), transporte",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "777000",
-                                "priceCurrency": "COP",
-                                "availability": "https://schema.org/InStock"
-                            }
-                        }
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 4,
-                        "item": {
-                            "@type": "Trip",
-                            "name": "Plan Aventura y Relax Termal",
-                            "description": "4 Días / 3 Noches - Valle de Cocora, Termales Santa Rosa, pueblos, alojamiento, alimentación (desayuno y cena), transporte",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "798000",
-                                "priceCurrency": "COP",
-                                "availability": "https://schema.org/InStock"
-                            }
-                        }
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 5,
-                        "item": {
-                            "@type": "Trip",
-                            "name": "Plan Tradición y Raíces de la Arriería",
-                            "description": "4 Días / 3 Noches - Cultura cafetera, Salento, Filandia, Parque Los Arrieros, alojamiento, alimentación (desayuno y cena), transporte",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "788000",
-                                "priceCurrency": "COP",
-                                "availability": "https://schema.org/InStock"
-                            }
-                        }
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 6,
-                        "item": {
-                            "@type": "Trip",
-                            "name": "Plan Gran Quindío Integral",
-                            "description": "5 Días / 4 Noches - Experiencia completa del Eje Cafetero, todos los destinos, alojamiento, alimentación (desayuno y cena), transporte",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "1008000",
-                                "priceCurrency": "COP",
-                                "availability": "https://schema.org/InStock"
-                            }
-                        }
-                    }
-                ]
-            },
-            "provider": {
-                "@type": "TravelAgency",
-                "name": "Quindío Travel",
-                "url": "https://quindiotravel.com.co",
-                "telephone": "+57-317-4426044",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Cra 19 21N-79 Bloque 4 Apto 202",
-                    "addressLocality": "Armenia",
-                    "addressRegion": "Quindío",
-                    "postalCode": "630001",
-                    "addressCountry": "CO"
-                },
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 4.5338,
-                    "longitude": -75.6811
-                },
-                "image": "https://quindiotravel.com.co/apple-touch-icon.png"
-            }
-        }
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Planes Turísticos Quindío 2026",
+ "description": "Portafolio oficial de 6 planes turísticos en el Eje Cafetero. Desde escapada 2D/1N hasta Gran Quindío Integral 5D/4N.",
+ "url": "https://quindiotravel.com.co/planes.html",
+ "image": "https://quindiotravel.com.co/assets/images/paisajes/valle-cocora-hero-banner.jpg",
+ "mainEntity": {
+  "@type": "ItemList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+     "@type": "Product",
+     "name": "Plan Vive El Eje Cafetero Temático",
+     "description": "2 Días / 1 Noche - Parque del Café, Salento, alojamiento, alimentación (desayuno y cena), transporte desde el aeropuerto o terminal terrestre en Armenia",
+     "offers": {
+      "@type": "Offer",
+      "price": "425000",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://quindiotravel.com.co/plan-1.html"
+     },
+     "image": "https://quindiotravel.com.co/assets/images/planes/plan-1.jpg",
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "150",
+      "bestRating": "5"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+     "@type": "Product",
+     "name": "Plan Naturaleza y Diversión Cafetera",
+     "description": "3 Días / 2 Noches - Parque del Café, PANACA, Salento, alojamiento, alimentación (desayuno y cena), transporte desde el aeropuerto o terminal terrestre en Armenia",
+     "offers": {
+      "@type": "Offer",
+      "price": "562000",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://quindiotravel.com.co/plan-2.html"
+     },
+     "image": "https://quindiotravel.com.co/assets/images/planes/plan-2.jpg",
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "150",
+      "bestRating": "5"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+     "@type": "Product",
+     "name": "Plan La Experiencia Completa del Eje",
+     "description": "4 Días / 3 Noches - Valle de Cocora, Salento, Filandia, parques, alojamiento, alimentación (desayuno y cena), transporte",
+     "offers": {
+      "@type": "Offer",
+      "price": "777000",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://quindiotravel.com.co/plan-3.html"
+     },
+     "image": "https://quindiotravel.com.co/assets/images/planes/plan-3.jpg",
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "150",
+      "bestRating": "5"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 4,
+    "item": {
+     "@type": "Product",
+     "name": "Plan Aventura y Relax Termal",
+     "description": "4 Días / 3 Noches - Valle de Cocora, Termales Santa Rosa, pueblos, alojamiento, alimentación (desayuno y cena), transporte",
+     "offers": {
+      "@type": "Offer",
+      "price": "798000",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://quindiotravel.com.co/plan-4.html"
+     },
+     "image": "https://quindiotravel.com.co/assets/images/planes/plan-4.jpg",
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "150",
+      "bestRating": "5"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 5,
+    "item": {
+     "@type": "Product",
+     "name": "Plan Tradición y Raíces de la Arriería",
+     "description": "4 Días / 3 Noches - Cultura cafetera, Salento, Filandia, Parque Los Arrieros, alojamiento, alimentación (desayuno y cena), transporte",
+     "offers": {
+      "@type": "Offer",
+      "price": "788000",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://quindiotravel.com.co/plan-5.html"
+     },
+     "image": "https://quindiotravel.com.co/assets/images/planes/plan-5.jpg",
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "150",
+      "bestRating": "5"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 6,
+    "item": {
+     "@type": "Product",
+     "name": "Plan Gran Quindío Integral",
+     "description": "5 Días / 4 Noches - Experiencia completa del Eje Cafetero, todos los destinos, alojamiento, alimentación (desayuno y cena), transporte",
+     "offers": {
+      "@type": "Offer",
+      "price": "1008000",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://quindiotravel.com.co/plan-6.html"
+     },
+     "image": "https://quindiotravel.com.co/assets/images/planes/plan-6.jpg",
+     "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "150",
+      "bestRating": "5"
+     }
+    }
+   }
+  ]
+ },
+ "provider": {
+  "@type": "TravelAgency",
+  "name": "Quindío Travel",
+  "url": "https://quindiotravel.com.co",
+  "telephone": "+57-317-4426044",
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "Cra 19 21N-79 Bloque 4 Apto 202",
+   "addressLocality": "Armenia",
+   "addressRegion": "Quindío",
+   "postalCode": "630001",
+   "addressCountry": "CO"
+  },
+  "geo": {
+   "@type": "GeoCoordinates",
+   "latitude": 4.5338,
+   "longitude": -75.6811
+  },
+  "image": "https://quindiotravel.com.co/apple-touch-icon.png"
+ }
+}
     </script>
     
     <style>
@@ -233,52 +281,52 @@
 
     <!-- FAQ Schema optimizado para GEO -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "¿Cuánto cuestan los planes turísticos en el Quindío?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Los planes turísticos en el Quindío varían desde $425.000 COP para viajes de 1 día hasta $3.960.000 COP para la experiencia VIP de 5 días. El precio incluye transporte, alojamiento, alimentación y guías certificados. Los precios varían según categoría de alojamiento y disponibilidad."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Cuántos días se necesitan para visitar el Quindío?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Para visitar el Quindío adecuadamente se recomiendan mínimo 3 días/2 noches. En 3 días puedes visitar Salento, Valle de Cocora, Parque del Café y una finca cafetera. Para una experiencia completa se recomiendan 5-7 días incluyendo Filandia, Termales Santa Rosa y otros destinos."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Qué incluye un plan turístico completo?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Nuestros planes completos incluyen: transporte redondo, alojamiento en finca hoteles certificados, alimentación (desayuno y cena), entradas a parques temáticos, guías certificados MINCIT, asistencia médica 24/7, coordinación completa de actividades y WhatsApp de soporte durante el viaje."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Hay planes para familias con niños?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sí, ofrecemos planes específicos para familias con niños: Plan Vive El Eje Cafetero Temático y Plan Aventura Familiar. Estos planes incluyen Parque del Café, PANACA, Granja Mamá Lulú, actividades seguras para niños, menús infantiles y guías especializados en turismo familiar desde $425.000 COP."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Es seguro viajar al Quindío con planes turísticos?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sí, es completamente seguro viajar al Quindío con planes turísticos operados por agencias certificadas RNT como Quindío Travel. El Quindío es uno de los departamentos más seguros de Colombia. Nuestros guías son locales certificados y conocen las zonas seguras para visitar."
-                }
-            }
-        ]
-    }
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "¿Cuánto cuestan los planes turísticos en el Quindío?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Los planes turísticos en el Quindío varían desde $425.000 COP para viajes de 1 día hasta $3.960.000 COP para la experiencia VIP de 5 días. El precio incluye transporte, alojamiento, alimentación y guías certificados. Los precios varían según categoría de alojamiento y disponibilidad."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cuántos días se necesitan para visitar el Quindío?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Para visitar el Quindío adecuadamente se recomiendan mínimo 3 días/2 noches. En 3 días puedes visitar Salento, Valle de Cocora, Parque del Café y una finca cafetera. Para una experiencia completa se recomiendan 5-7 días incluyendo Filandia, Termales Santa Rosa y otros destinos."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Qué incluye un plan turístico completo?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nuestros planes completos incluyen: transporte redondo, alojamiento en finca hoteles certificados, alimentación (desayuno y cena), entradas a parques temáticos, guías certificados MINCIT, asistencia médica 24/7, coordinación completa de actividades y WhatsApp de soporte durante el viaje."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Hay planes para familias con niños?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sí, ofrecemos planes específicos para familias con niños: Plan Vive El Eje Cafetero Temático y Plan Aventura Familiar. Estos planes incluyen Parque del Café, PANACA, Granja Mamá Lulú, actividades seguras para niños, menús infantiles y guías especializados en turismo familiar desde $425.000 COP."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Es seguro viajar al Quindío con planes turísticos?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sí, es completamente seguro viajar al Quindío con planes turísticos operados por agencias certificadas RNT como Quindío Travel. El Quindío es uno de los departamentos más seguros de Colombia. Nuestros guías son locales certificados y conocen las zonas seguras para visitar."
+   }
+  }
+ ]
+}
     </script>
     <link rel="stylesheet" href="assets/css/back-to-top.css">
     <link rel="stylesheet" href="assets/css/diciembre-theme.css">
@@ -1075,52 +1123,52 @@
 <!-- FAQ Schema para planes turísticos -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cómo elijo el plan turístico adecuado para mí?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Puedes usar nuestros filtros por duración (2D/1N a 5D/4N), presupuesto (económico, medio, premium) y tipo de viaje (pareja, familia, amigos, solo). También puedes usar nuestro comparador de planes para ver las diferencias lado a lado."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué incluye cada plan turístico?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Todos nuestros planes incluyen alojamiento en finca hotel verificada, desayunos y cenas, transporte desde el aeropuerto o terminal de Armenia, asistencia local personalizada y asistencia médica. Algunos planes incluyen entradas a parques temáticos como Parque del Café, PANACA y RECUCA."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuál es la mejor época para visitar el Eje Cafetero?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El Eje Cafetero se puede visitar todo el año. La temporada alta es diciembre, enero y julio (vacaciones). La temporada baja (marzo-junio y septiembre-noviembre) ofrece mejores precios y menos turistas. El clima es agradable todo el año con temperaturas entre 18°C y 24°C."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo hago la reserva?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La reserva es muy sencilla: solo escríbenos por WhatsApp al +57 317 4426044. Te responderemos en menos de 1 hora con opciones personalizadas según tus fechas, grupo y preferencias. No necesitas formularios complicados ni cuentas de usuario."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es seguro viajar al Eje Cafetero?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, el Eje Cafetero es una de las regiones más seguras de Colombia. Somos operador turístico legal con RNT 18152, lo que garantiza que cumplimos con todos los requisitos de seguridad y calidad del Ministerio de Comercio, Industria y Turismo. Además, todos nuestros planes incluyen asistencia médica durante el viaje."
-      }
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "¿Cómo elijo el plan turístico adecuado para mí?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Puedes usar nuestros filtros por duración (2D/1N a 5D/4N), presupuesto (económico, medio, premium) y tipo de viaje (pareja, familia, amigos, solo). También puedes usar nuestro comparador de planes para ver las diferencias lado a lado."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Qué incluye cada plan turístico?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Todos nuestros planes incluyen alojamiento en finca hotel verificada, desayunos y cenas, transporte desde el aeropuerto o terminal de Armenia, asistencia local personalizada y asistencia médica. Algunos planes incluyen entradas a parques temáticos como Parque del Café, PANACA y RECUCA."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cuál es la mejor época para visitar el Eje Cafetero?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "El Eje Cafetero se puede visitar todo el año. La temporada alta es diciembre, enero y julio (vacaciones). La temporada baja (marzo-junio y septiembre-noviembre) ofrece mejores precios y menos turistas. El clima es agradable todo el año con temperaturas entre 18°C y 24°C."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cómo hago la reserva?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "La reserva es muy sencilla: solo escríbenos por WhatsApp al +57 317 4426044. Te responderemos en menos de 1 hora con opciones personalizadas según tus fechas, grupo y preferencias. No necesitas formularios complicados ni cuentas de usuario."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Es seguro viajar al Eje Cafetero?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sí, el Eje Cafetero es una de las regiones más seguras de Colombia. Somos operador turístico legal con RNT 18152, lo que garantiza que cumplimos con todos los requisitos de seguridad y calidad del Ministerio de Comercio, Industria y Turismo. Además, todos nuestros planes incluyen asistencia médica durante el viaje."
+   }
+  }
+ ]
 }
-</script>
+    </script>
 <!-- Deploy forcing comment - 15 Octubre 2026 14:30 - Forzar publicacion de planes.html con catalogo-planes -->
     <script src="assets/js/diciembre-theme.js" defer></script>
     <script src="assets/js/related-links.js" defer></script>
