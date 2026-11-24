@@ -113,12 +113,27 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
 
-            <h1 style="color: var(--verde-cafe); font-size: 2.5rem; margin-bottom: 20px;">Armenia Quindío - Capital del Eje Cafetero</h1>
-            <p style="font-size: 1.2rem; color: var(--texto-oscuro); margin-bottom: 30px;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Armenia Quindío - Capital del Eje Cafetero</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">
                 Aeropuerto El Edén, punto de partida para Salento, Valle de Cocora, Parque del Café y PANACA
             </p>
-        
-    </div>
+            <div class="hero-quote" id="hero-quote">
+                <label class="hero-quote-label" for="hero-quote-destino">¿A dónde quieres viajar?</label>
+                <div class="hero-quote-row">
+                    <select id="hero-quote-destino" class="hero-quote-select" aria-label="Elige tu destino">
+                        <option value="Armenia">☕ Armenia</option>
+                        <option value="Valle de Cocorá">🏔️ Valle de Cocorá</option>
+                        <option value="Salento">🏘️ Salento</option>
+                        <option value="Filandia">🎨 Filandia</option>
+                        <option value="Termales de Santa Rosa">♨️ Termales de Santa Rosa</option>
+                        <option value="Parque del Café">☕ Parque del Café</option>
+                        <option value="Plan completo Eje Cafetero">🗺️ Plan completo Eje Cafetero</option>
+                    </select>
+                    <button type="button" id="hero-quote-btn" class="hero-quote-btn"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                </div>
+            </div>
+            <script>(function(){var b=document.getElementById('hero-quote-btn'),s=document.getElementById('hero-quote-destino');if(!b||!s)return;b.addEventListener('click',function(){var d=s.value||'el Eje Cafetero';var m='Hola Quindío Travel 🌿\n\nQuiero cotizar un viaje a '+d+'.\n\n¿Me pueden ayudar con opciones y precios?';window.open('https://wa.me/573174426044?text='+encodeURIComponent(m),'_blank','noopener');});})();</script>
+        </div>
 </section>
 
     <main class="container" style="padding: 40px 20px;">

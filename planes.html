@@ -427,6 +427,37 @@
                 </a>
             </div>
 
+            <div class="hero-quote" id="hero-quote">
+                <label class="hero-quote-label" for="hero-quote-destino">¿A dónde quieres viajar?</label>
+                <div class="hero-quote-row">
+                    <select id="hero-quote-destino" class="hero-quote-select" aria-label="Elige tu destino">
+                        <option value="Valle de Cocorá">🏔️ Valle de Cocorá</option>
+                        <option value="Salento">🏘️ Salento</option>
+                        <option value="Filandia">🎨 Filandia</option>
+                        <option value="Armenia">☕ Armenia</option>
+                        <option value="Termales de Santa Rosa">♨️ Termales de Santa Rosa</option>
+                        <option value="Parque del Café">☕ Parque del Café</option>
+                        <option value="Plan completo Eje Cafetero">🗺️ Plan completo Eje Cafetero</option>
+                    </select>
+                    <button type="button" id="hero-quote-btn" class="hero-quote-btn">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Cotizar
+                    </button>
+                </div>
+            </div>
+            <script>
+            (function () {
+                var btn = document.getElementById('hero-quote-btn');
+                var sel = document.getElementById('hero-quote-destino');
+                if (!btn || !sel) return;
+                btn.addEventListener('click', function () {
+                    var destino = sel.value || 'el Eje Cafetero';
+                    var msg = 'Hola Quindío Travel 🌿\n\nQuiero cotizar un viaje a ' + destino + '.\n\n¿Me pueden ayudar con opciones y precios?';
+                    var url = 'https://wa.me/573174426044?text=' + encodeURIComponent(msg);
+                    window.open(url, '_blank', 'noopener');
+                });
+            })();
+            </script>
+
             <div class="hero-social-proof">
                 <span class="hero-reviews-badge">
                     <i class="fab fa-google"></i> 4.7/5 <span class="stars">★★★★★</span> · 150+ reseñas verificadas
