@@ -4,7 +4,7 @@
  * v3 — Corregido: eliminado handler fetch duplicado y activate duplicado
  */
 
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 const STATIC_CACHE = `quindio-static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `quindio-dynamic-${CACHE_VERSION}`;
 const IMAGE_CACHE = `quindio-images-${CACHE_VERSION}`;
