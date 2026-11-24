@@ -10229,3 +10229,36 @@ img.hero-bg-img {
         animation: none;
     }
 }
+
+/* Heroes simples convertidos a cinematográficos (páginas de contenido) */
+.hero-plain {
+    min-height: 72svh;
+}
+.hero-plain .hero-content h1 {
+    color: #fff !important;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.55);
+    margin-bottom: 0.6rem;
+}
+.hero-plain .hero-content p {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Pan sutil en heroes que usan background-image en la sección */
+.hero {
+    animation: heroPan 44s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero { animation: none; }
+}
+
+/* Heroes de hoteles individuales: mismo tratamiento cinematográfico */
+section.hotel-hero {
+    min-height: 100svh;
+    animation: heroPan 44s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+    section.hotel-hero { animation: none; }
+}
