@@ -10174,3 +10174,16 @@ img.loaded {
 
 /* Scroll offset para anchors bajo header fijo */
 html{scroll-padding-top:90px}
+
+/* Eyebrow labels sobre títulos de sección */
+.section-eyebrow {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--verde-claro, #4E8755);
+    margin: 0 auto 10px;
+    max-width: 820px;
+}
