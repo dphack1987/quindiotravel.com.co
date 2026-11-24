@@ -1,0 +1,40 @@
+# Redirects 404 para Search Console - generado 2026-11-14
+# URLs publicas que existieron y fueron eliminadas (git log --diff-filter=D).
+# Usar en Cloudflare: Rules > Redirect Rules > Bulk Redirects (import CSV)
+# o crear Redirect Rules manuales. GitHub Pages no soporta redirects.
+# Columnas: source_url,target_url,status(301),preserve_query_string
+source_url,target_url,status,preserve_query_string
+https://quindiotravel.com.co/authority_content.html,https://quindiotravel.com.co/blog.html,301,false
+https://quindiotravel.com.co/blog-mejor-epoca-eje-cafetero.html,https://quindiotravel.com.co/blog/mejor-epoca-visitar-quindio-2026.html,301,false
+https://quindiotravel.com.co/clima-eventos-armenia.html,https://quindiotravel.com.co/blog/festividades-temporada-quindio-2026.html,301,false
+https://quindiotravel.com.co/clima-eventos-calarca.html,https://quindiotravel.com.co/blog/festividades-temporada-quindio-2026.html,301,false
+https://quindiotravel.com.co/clima-eventos-circasia.html,https://quindiotravel.com.co/blog/festividades-temporada-quindio-2026.html,301,false
+https://quindiotravel.com.co/clima-eventos-filandia.html,https://quindiotravel.com.co/blog/festividades-temporada-quindio-2026.html,301,false
+https://quindiotravel.com.co/clima-eventos-montenegro.html,https://quindiotravel.com.co/blog/festividades-temporada-quindio-2026.html,301,false
+https://quindiotravel.com.co/clima-eventos-parque-cafe.html,https://quindiotravel.com.co/blog/festividades-temporada-quindio-2026.html,301,false
+https://quindiotravel.com.co/clima-eventos-salento.html,https://quindiotravel.com.co/blog/festividades-temporada-quindio-2026.html,301,false
+https://quindiotravel.com.co/clima-eventos-valle-cocora.html,https://quindiotravel.com.co/blog/festividades-temporada-quindio-2026.html,301,false
+https://quindiotravel.com.co/generate-qr-online.html,https://quindiotravel.com.co/,301,false
+https://quindiotravel.com.co/index_enhanced.html,https://quindiotravel.com.co/,301,false
+https://quindiotravel.com.co/mejor-epoca-para-visitar-quindio.html,https://quindiotravel.com.co/blog/mejor-epoca-visitar-quindio-2026.html,301,false
+https://quindiotravel.com.co/paquetes-todo-incluido-quindio.html,https://quindiotravel.com.co/planes.html,301,false
+https://quindiotravel.com.co/plan-1.html,https://quindiotravel.com.co/comparar-planes.html,301,false
+https://quindiotravel.com.co/plan-2.html,https://quindiotravel.com.co/comparar-planes.html,301,false
+https://quindiotravel.com.co/plan-3.html,https://quindiotravel.com.co/comparar-planes.html,301,false
+https://quindiotravel.com.co/plan-4.html,https://quindiotravel.com.co/comparar-planes.html,301,false
+https://quindiotravel.com.co/plan-5.html,https://quindiotravel.com.co/comparar-planes.html,301,false
+https://quindiotravel.com.co/plan-6.html,https://quindiotravel.com.co/comparar-planes.html,301,false
+https://quindiotravel.com.co/plan-exclusivo-meta-ads.html,https://quindiotravel.com.co/promo-noviembre-2026.html,301,false
+https://quindiotravel.com.co/plan-exclusivo-salento-filandia-ocaso.html,https://quindiotravel.com.co/planes-romanticos-para-parejas.html,301,false
+https://quindiotravel.com.co/planes-especiales-diciembre-2026.html,https://quindiotravel.com.co/promo-noviembre-2026.html,301,false
+https://quindiotravel.com.co/planes-turisticos-salento-economicos.html,https://quindiotravel.com.co/hoteles-en-salento-economicos.html,301,false
+https://quindiotravel.com.co/preview-planes-diciembre.html,https://quindiotravel.com.co/promo-noviembre-2026.html,301,false
+https://quindiotravel.com.co/promo-agosto-2026.html,https://quindiotravel.com.co/promo-noviembre-2026.html,301,false
+https://quindiotravel.com.co/que-hacer-en-quindio-hoy.html,https://quindiotravel.com.co/experiencias.html,301,false
+https://quindiotravel.com.co/quindio-viajes-planes-turisticos.html,https://quindiotravel.com.co/planes.html,301,false
+https://quindiotravel.com.co/turismo-familiar-eje-cafetero.html,https://quindiotravel.com.co/planes-familiares-quindio.html,301,false
+https://quindiotravel.com.co/viajes-economicos-quindio.html,https://quindiotravel.com.co/precios-completos-planes-quindio.html,301,false
+https://quindiotravel.com.co/blog/ofertas-temporada-agosto-2026.html,https://quindiotravel.com.co/promo-noviembre-2026.html,301,false
+https://quindiotravel.com.co/blog/test.html,https://quindiotravel.com.co/blog.html,301,false
+https://quindiotravel.com.co/planes/,https://quindiotravel.com.co/planes.html,301,false
+https://quindiotravel.com.co/programmatic-pages/paquetes-salento-2-dias-economicos-2026.html,https://quindiotravel.com.co/planes.html,301,false

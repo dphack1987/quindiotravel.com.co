@@ -49,6 +49,8 @@ jobs:
             __pycache__
             programmatic-pages
             generated-pages
+            _redirects-pSEO
+            backup-microdata-20260930-102216
           )
           for d in "${EXCLUDE_DIRS[@]}"; do
             rm -rf "$d"
@@ -70,6 +72,8 @@ jobs:
                 GUIA-RESEÑAS-REALES.md \
                 package.json package-lock.json postcss.config.js \
                 .htaccess .htpasswd .gitignore .gitattributes .editorconfig .npmrc
+          # Archivos de respaldo jamas se publican
+          find . -type f -name '*.bak*' -delete 2>/dev/null || true
           # Variables de entorno jamas se publican
           rm -f .env .env.* 2>/dev/null || true
           echo "Contenido que se publica:"
