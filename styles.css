@@ -10171,3 +10171,6 @@ img.loaded {
         max-width: none !important;
     }
 }
+
+/* Scroll offset para anchors bajo header fijo */
+html{scroll-padding-top:90px}
